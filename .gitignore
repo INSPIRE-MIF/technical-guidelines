@@ -1,0 +1,4 @@
+# Ignore Eclipse project file
+.project
+# Markdown -> HTML preview
+.*.md.html
