@@ -68,7 +68,7 @@ assignees: ''
 <!-- If an issue for the impact already is present on https://github.com/INSPIRE-MIF/application-schemas/, add a link to it here. -->
 
 ## Impact on INSPIRE code lists
-<!-- Specify if and how this change proposal impacts the contents of the INSPIRE registry(https://inspire.ec.europa.eu/registry), such as the code lists(https://inspire.ec.europa.eu/codelist). -->
+<!-- Specify if and how this change proposal impacts the contents of the INSPIRE registry (https://inspire.ec.europa.eu/registry), such as the code lists (https://inspire.ec.europa.eu/codelist). -->
 
 ### Linked issue
 <!-- If an issue for the impact already is present on https://github.com/INSPIRE-MIF/helpdesk-registry, add a link to it here. -->
