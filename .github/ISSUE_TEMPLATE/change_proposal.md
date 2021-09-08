@@ -1,6 +1,6 @@
 ---
 name: Change proposal
-about: Use this template to propose a change to a Technical Guidance doument.
+about: Use this template to propose a change to a Technical Guidance document.
 title: "TG short name (data theme in case of data specification) - main problem addressed"
 labels: ''
 assignees: ''
