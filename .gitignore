@@ -2,3 +2,5 @@
 .project
 # Markdown -> HTML preview
 .*.md.html
+# Ignore docx-asciidoc-conversion file
+./docx-asciidoc-conversion/1
