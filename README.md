@@ -1,12 +1,12 @@
 # INSPIRE Technical Guidance documents
 
-The purpose of this repository is host the INSPIRE Technical Guidance documents (hereafter INSPIRE TGs) and manage the changes to them.
+The purpose of this repository is to host the INSPIRE Technical Guidance documents (hereafter INSPIRE TGs) and manage the changes to them.
 
 The INSPIRE TGs describe detailed implementation aspects and relations with existing standards, technologies, and practices, see also https://inspire.ec.europa.eu/inspire-technical-guidance/57753.
 
 ## Status
 
-The INSPIRE TGs will be converted from the [current pdf format](https://inspire.ec.europa.eu/Technical-guidelines3) to the Markdown or AsciiDoc format and published in this repository. The first TG will be available here soon.
+All INSPIRE TGs will be converted from the [current pdf format](https://inspire.ec.europa.eu/Technical-guidelines3) to the Markdown or AsciiDoc format and published in this repository. Currently, the [TG metadata](/metadata/metadata-iso19139/metadata-iso19139.adoc) has been converted.
 
 ## Governance and release process
 
