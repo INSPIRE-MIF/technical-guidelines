@@ -31,29 +31,29 @@ assignees: ''
 
 # Additional information
 
-## Kind of issue
-<!-- Specify whether the issue is technical or editorial. -->
-
 ## Relevant legislation
 <!-- Specify the relevant text and a direct link to the relevant text in the legislation, if applicable. -->
 
-<!-- Tip: the links to the consolidated versions in HTML format of the legal documents relevant for the TG are listed below. A direct link to a specific section can be obtained by clicking on the relevant section in the table of contents on the left and copy-pasting that URL here. Remove the redundant links. -->
+<!-- Tip: the links to the consolidated versions in HTML format of the legal documents relevant for the TG are listed below. A direct link to a specific section can be obtained by clicking on the relevant section in the table of contents on the left and copy-pasting that URL here. Copy the relevant link(s) and paste it/them under this comment.
 
 - [INSPIRE Directive](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02007L0002-20190626)
 - [IR network services](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02009R0976-20141231)
 - [IR metadata](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02008R1205-20081224)
 - [IR interoperability spatial data sets and services](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02010R1089-20141231)
+
+-->
 
 ## Impact on IR
 <!-- Specify if and how this change proposal impact the Implementing Rules. -->
 
-<!-- See the list of IRs below. Remove the redundant links. -->
+<!-- See the list of IRs below. Copy the relevant link(s) and paste it/them under this comment.
 
 - [INSPIRE Directive](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02007L0002-20190626)
 - [IR network services](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02009R0976-20141231)
 - [IR metadata](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02008R1205-20081224)
 - [IR interoperability spatial data sets and services](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02010R1089-20141231)
 
+-->
 
 ## Impact on INSPIRE validator
 <!-- Specify if and how this change proposal impacts tests in the Abstract and Executable Test Suites, see also https://github.com/inspire-eu-validation/ and https://inspire.ec.europa.eu/validator/about/. This section is especially relevant when the issue affects TG requirements. -->
