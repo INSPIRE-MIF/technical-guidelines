@@ -7175,4 +7175,4 @@ TG Requirement 7.2
 
 == Annex G Examples of complete INSPIRE metadata records
 
-A web site with examples of complete metadata records compliant with this technical guidance is available at http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0/examples.
+Examples of complete metadata records compliant with this technical guidance are available at https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/examples.
