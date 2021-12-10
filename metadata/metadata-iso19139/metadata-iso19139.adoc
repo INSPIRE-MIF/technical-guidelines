@@ -1,6 +1,6 @@
-:important-caption: :closed_book:
-:tip-caption: :ledger:
-:note-caption: :blue_book:
+:important-caption: 📕
+:tip-caption: 📒
+:note-caption: 📘
 :toc: macro
 :toc-title:
 :toclevels: 4
