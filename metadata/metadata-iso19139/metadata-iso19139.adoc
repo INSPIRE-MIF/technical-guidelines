@@ -27,8 +27,9 @@ This document has been endorsed by the INSPIRE maintenance and implementation gr
 |*Description* |Implementation specification for defining metadata for INSPIRE datasets and services in ISO/TS 19139 based XML format in compliance with the INSPIRE Implementing Rules for metadata.
 |*Format* |AsciiDoc
 |*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
-|*TG Identifier* a|
-http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139
+|*Identifier* a|
+http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0.1 (v.2.0.1)
+http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.1.0 (this version)
 |*Changelog* |https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.1
 |*Language* |EN
 |===
