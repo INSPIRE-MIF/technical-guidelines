@@ -1,6 +1,6 @@
-:important-caption: :closed_book:
-:tip-caption: :ledger:
-:note-caption: :blue_book:
+:important-caption: 📕
+:tip-caption: 📒
+:note-caption: 📘
 :toc: macro
 :toc-title:
 :toclevels: 4
@@ -16,25 +16,21 @@ image:.\media/image1.png[image,width=107,height=107]
 [width="100%",cols="24%,76%",]
 |===
 |*Title* |Technical Guidelines for implementing dataset and service metadata based on ISO/TS 19139:2007
-|*Creator* |Temporary MIG subgroup for action MIWP-8
-|*Date of publication* |2017-03-02
+|*Creator* |Temporary MIWP 2021-2024 sub-group 2.3.1
+|*Date of publication* |2022-01-31
 |*Subject* |Technical Guidance for INSPIRE metadata for datasets and services
-|*Status* a|
-Version 2.0.1
+|*Status* a|Version 2.1.0
 
-This document has been endorsed by the INSPIRE maintenance and implementation group (MIG) in its meeting on 30/11-1/12/2016 (see meeting minutes at https://ies-svn.jrc.ec.europa.eu/projects/mig-p/wiki/5th_MIG-P_meeting).
-
+This document has been endorsed by the INSPIRE maintenance and implementation group (MIG).
 |*Publisher* |INSPIRE Maintenance and Implementation Group (MIG)
 |*Type* |Text
 |*Description* |Implementation specification for defining metadata for INSPIRE datasets and services in ISO/TS 19139 based XML format in compliance with the INSPIRE Implementing Rules for metadata.
-|*Format* |MS Word (doc)
+|*Format* |AsciiDoc
 |*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
 |*Identifier* a|
-http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0 (latest bugfix version of v2.0)
-
-http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0.1 (this bugfix version)
-
-|*Corrigenda* |http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0/corrigenda
+http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0.1 (v.2.0.1)
+http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.1.0 (this version)
+|*Changelog* |https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.1
 |*Language* |EN
 |===
 
@@ -897,11 +893,21 @@ The code list value shall be encoded using the _codeListValue_ attribute of the 
 
 Note that [ISO 19115] allows code lists to be extended. In cases, where, for the INSPIRE metadata elements, only the values defined in [ISO 19115, Annex B] (or a subset thereof), can or should be used, this is stated in the relevant requirement or recommendation. Additional extended values may still be used, but may be ignored by INSPIRE metadata clients.
 
-Both the value of the codeList attribute (a URL that references a code list definition within a register or a code list catalogue) and the textual content of the ISO 19139 element are purely informative. The codeList value may e.g. point to the code list dictionary in the ISO 19139 repository at http://standards.iso.org/iso/19139/resources/codelist/, and if a text is provided, it may contain the translation of the code list value in the language of the metadata.
+Both the value of the codeList attribute (a URL that references a code list definition within a register or a code list catalogue) and the textual content of the ISO 19139 element are purely informative. The codeList value may e.g. point to the code list dictionary in the ISO 19139 repository at https://schemas.isotc211.org/schemas/19139/-/resources/codelist/gmxCodelists.xml or http://standards.iso.org/iso/19139/resources/gmxCodelists.xml, and if a text is provided, it may contain the translation of the code list value in the language of the metadata.
+
+Examples of code list URLs that can be used in the codeList attribute:
+
+* http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode
+* http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode
+* http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode
+* http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode
+* http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_SpatialRepresentationTypeCode
+* http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode
+* http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#DQ_EvaluationMethodTypeCode
 
 [source,xml,subs="+quotes"]
 ----
-<ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode" codelistvalue="creation">
+<ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codelistvalue="creation">
   Creazione
 </ci_datetypecode>
 ----
@@ -1037,7 +1043,7 @@ In the Tables 1 and 2 of [Regulation 1205/2008], Part C, the multiplicity of thi
 ====
 *TG Requirement C.5: metadata/2.0/req/common/metadata-language-code*
 
-The language of the provided metadata content shall be given. It shall be encoded using _gmd:MD_Metadata_/_gmd:language_/_gmd:LanguageCode_ element pointing to one of the three-letter language codes of the ISO 639-2/B code listfootnote:[Attribute codeList shall be "http://www.loc.gov/standards/iso639-2/" and the attribute codeListValue shall contain one of the three-letter bibliographic language code values.].
+The language of the provided metadata content shall be given. It shall be encoded using _gmd:MD_Metadata_/_gmd:language_/_gmd:LanguageCode_ element. The attribute codeListValue shall contain one of the three-letter language codes of the ISO 639-2/B code list. The attribute codeList shall be either http://www.loc.gov/standards/iso639-2/ or http://id.loc.gov/vocabulary/iso639-2.
 
 Only the code values for the official languages of the European Unionfootnote:[At the time of writing there are 24 official languages of the EU, see http://ec.europa.eu/languages/policy/linguistic-diversity/official-languages-eu_en.htm] shall be used.
 
@@ -1076,7 +1082,7 @@ In the Tables 1 and 2 of [Regulation 1205/2008], Part C, the multiplicity of thi
 
 Point of contact for the responsible party for the provided metadata shall be given using element _gmd:MD_metadata_/__gmd:__contact/_gmd:CI_ResponsibleParty_.The multiplicity of this element is 1..*.The _gmd:CI_ResponsibleParty_ element shall contain the following child elements: The name of the responsible organisation shall be provided as the value of _gmd:organisationName_ element with a Non-empty Free Text Element content.
 
-The email address of the organisation shall be provided as the value of _gmd:contactInfo_/_gmd:CI_Contact_/_gmd:address_/_gmd:CI_Address_/_gmd:electronicMailAddress_ element with a Non-empty Free Text Element containing a functioning email address of the responsible party. The value of _gmd:role_/_gmd:CI_RoleCode_ shall point to the value "pointOfContact" of [ISO 19139] code list CI_RoleCodefootnote:[Attribute codeList shall be "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" and value of codeListValue attribute "pointOfContact"].
+The email address of the organisation shall be provided as the value of _gmd:contactInfo_/_gmd:CI_Contact_/_gmd:address_/_gmd:CI_Address_/_gmd:electronicMailAddress_ element with a Non-empty Free Text Element containing a functioning email address of the responsible party. The value of _gmd:role_/_gmd:CI_RoleCode_ shall point to the value "pointOfContact" of [ISO 19139] code list CI_RoleCode.
 ====
 
 [TIP]
@@ -1246,7 +1252,7 @@ The point of contact for the organisation responsible for the establishment, man
 
 The email address of the organisation shall be provided as the value of _gmd:pointOfContact_/_gmd:CI_ResponsibleParty_/_gmd:contactInfo_/_gmd:CI_Contact_/_gmd:address_/_gmd:CI_Address_/_gmd:electronicMailAddress_ element with a Non-empty Free Text Element containing a functioning email address of the responsible party.
 
-The value of _gmd:pointOfContact_/_gmd:CI_ResponsibleParty_/_gmd:role_/_gmd:CI_RoleCode_ shall point to the most relevant value of ISO 19139 code list CI_RoleCodefootnote:[Attribute codeList shall be "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode".].
+The value of _gmd:pointOfContact_/_gmd:CI_ResponsibleParty_/_gmd:role_/_gmd:CI_RoleCode_ shall point to the most relevant value of ISO 19139 code list CI_RoleCode.
 ====
 
 [TIP]
@@ -1300,7 +1306,7 @@ To fulfil both INSPIRE and ISO 19115/19139 requirements the following is require
 ====
 *TG Requirement C.11: metadata/2.0/req/common/temporal-reference*
 
-At least one temporal reference describing the resource shall be given using _gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date_ element, with one of the following date types:- _publication_ for date of publication of the resource,- _revision_ for the date of last revision of the resource, or- _creation_ for the date of creation of the resource__.__The date type shall be given using the _gmd:citation_/_gmd:CI_Citation_/_gmd:date_/_gmd:CI_Date_/_gmd:dateType_/_gmd:CI_DateTypeCode_ element and it shall point to the corresponding value of [ISO 19139] code list CI_DateTypeCode mentioned abovefootnote:[Attribute codeList shall have value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" and the attribute codeListValue one of "publication", "revision" or "creation".].
+At least one temporal reference describing the resource shall be given using _gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date_ element, with one of the following date types:- _publication_ for date of publication of the resource,- _revision_ for the date of last revision of the resource, or- _creation_ for the date of creation of the resource__.__The date type shall be given using the _gmd:citation_/_gmd:CI_Citation_/_gmd:date_/_gmd:CI_Date_/_gmd:dateType_/_gmd:CI_DateTypeCode_ element and it shall point to the corresponding value of [ISO 19139] code list CI_DateTypeCode mentioned above.
 
 The date values shall be expressed using Gregorian calendar and in accordance with [ISO 8601] with either date precision or date and time precision. For date precision the _gmd:CI_Date_/_gmd:date_/_gco:Date_ element, and for date and time precision _gmd:CI_Date_/_gmd:date_/_gco:DateTime_ element shall be used.
 ====
@@ -1417,12 +1423,14 @@ ____
 ====
 *TG Requirement C.15: metadata/2.0/req/common/keyword-originating-cv*
 
-When using keywords originating from a controlled vocabulary, the originating controlled vocabulary shall be cited using _gmd:descriptiveKeywords_/_gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation_ element.
+When using keywords originating from a controlled vocabulary, the originating controlled vocabulary shall be cited using the _gmd:descriptiveKeywords_/_gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation_ element.
 
-The title of the vocabulary shall be given using _gmd:title element_ with a Non-empty Free Text Element content. _The publication date of the vocabulary shall be given using the gmd:date/gmd:CI_Date/gmd:date/gco:Date_ and __gmd:dateType/gmd:CI_DateTypeCode__footnote:[Attribute codeList shall have value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" and the attribute codeListValue value "publication".] elements.
+The title of the vocabulary shall be given using the _gmd:title element_ with a Non-empty Free Text Element content.
+
+The date of the vocabulary shall be given using the _gmd:date/gmd:CI_Date/gmd:date/gco:Date_ element. The date type of the vocabulary shall be given using the _gmd:dateType/gmd:CI_DateTypeCode_ element, and shall be one of the following values of [ISO 19139] code list CI_DateTypeCode: _publication_, _revision_ or _creation_.
 ====
 
-NOTE Specifying the correct publication date of the thesaurus is important for knowing which version of the thesaurus has been used.
+NOTE Specifying the correct reference date of the thesaurus is important for knowing which version of the thesaurus has been used.
 
 [TIP]
 ====
@@ -1638,7 +1646,7 @@ Limitations on public access (or lack of such limitations) for the described res
 
 The limitations on public access (or lack of such limitations) based on reasons referred to in point (a) or in points (c) to (h) of Article 13(1) of INSPIRE Directive quoted above, the gmd:resourceConstraints/gmd:MD_LegalConstraints element shall include a combination of
 
-- one instance of _gmd:accessConstraints_/_gmd:MD_RestrictionCode_ element with code list value "otherRestrictions"footnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml" and attribute codeListValue "otherRestrictions".] and- at least one instance of _gmd:otherConstraints_/_gmx:Anchor_ pointing to one of the values from the code list for LimitationsOnPublicAccessfootnote:[INSPIRE Registry, attribute xlink:href with URL value starting with "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/" and postfixed with one of values of code list LimitationsOnPublicAccess, see Annex D.1]. If there are no limitations on public access, the element shall point to the code list value "noLimitations".
+- one instance of _gmd:accessConstraints_/_gmd:MD_RestrictionCode_ element with code list value "otherRestrictions" and- at least one instance of _gmd:otherConstraints_/_gmx:Anchor_ pointing to one of the values from the code list for LimitationsOnPublicAccessfootnote:[INSPIRE Registry, attribute xlink:href with URL value starting with "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/" and postfixed with one of values of code list LimitationsOnPublicAccess, see Annex D.1]. If there are no limitations on public access, the element shall point to the code list value "noLimitations".
 ====
 
 Example 2.13 shows a fragment of the metadata document declaring limitation on public access based on Article 13(1) a of the [INSPIRE Directive].
@@ -1697,7 +1705,7 @@ In the Tables 1 and 2 of [Regulation 1205/2008], Part C, the multiplicity of thi
 
 Conditions for access and use of the described resource shall be described using exactly one _gmd:resourceConstraints/gmd:MD_LegalConstraints_ element. This element shall not be the same used for describing limitations on public access (see 2.4.6).
 
-The _gmd:resourceConstraints/gmd:MD_LegalConstraints_ element for conditions for access and use shall be encoded as follows:One instance of either _gmd:accessConstraints_ or _gmd:useConstraints_ element shall be given. In both cases this element shall contain a _gmd:MD_RestrictionCode element_ with code list value "otherRestrictions"footnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml" and attribute codeListValue "otherRestrictions".].
+The _gmd:resourceConstraints/gmd:MD_LegalConstraints_ element for conditions for access and use shall be encoded as follows:One instance of either _gmd:accessConstraints_ or _gmd:useConstraints_ element shall be given. In both cases this element shall contain a _gmd:MD_RestrictionCode element_ with code list value "otherRestrictions".
 
 Additionally at least one instance of _gmd:otherConstraints shall be given_ describing the actual conditions.
 
@@ -1917,7 +1925,7 @@ The title shall be given using the _gmd:title_ child element of the citation ele
 
 The publication date of the cited document shall be given using _gmd:date_ child element. The date value shall be expressed in accordance with ISO 8601 with only the date part included.
 
-The date type code element _gmd:date_/_gmd:CI_Date_/_gmd:dateType_/_gmd:CI_DateTypeCode_ shall be given and it shall point to the value "publication" of the ISO 19139 code list CI_DateTypeCodefootnote:[Attribute codeList shall have value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" and the attribute codeListValue value "publication".].
+The date type code element _gmd:date_/_gmd:CI_Date_/_gmd:dateType_/_gmd:CI_DateTypeCode_ shall be given and it shall point to the value "publication" of the ISO 19139 code list CI_DateTypeCode.
 ====
 
 [TIP]
@@ -2049,7 +2057,7 @@ Table 1 contained in Part C of the same document defines the multiplicity of thi
 ====
 *TG Requirement 1.1: metadata/2.0/req/datasets-and-series/resource-type*
 
-The resource type shall be declared as "dataset" or "series" using the first _gmd:hierarchyLevel_ child element of _gmd:MD_Metadata._ The _gmd:hierarchyLevel_ shall contain a _gmd:MD_ScopeCode_ elementfootnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" and the attribute codeListValue with value "dataset" or "series".].
+The resource type shall be declared as "dataset" or "series" using the first _gmd:hierarchyLevel_ child element of _gmd:MD_Metadata._ The _gmd:hierarchyLevel_ shall contain a _gmd:MD_ScopeCode_ element.
 ====
 
 [source,xml,subs="+quotes"]
@@ -2387,7 +2395,7 @@ Table 1 contained in Part C of [Regulation 1205/2008] defines the multiplicity o
 ====
 *TG Requirement 1.6: metadata/2.0/req/datasets-and-series/resource-language*
 
-For data sets or data set series containing textual information, the language(s) used in the resource shall be given. The language(s) used shall be encoded using one or more _gmd:language_/_gmd:LanguageCode_ elements pointing to one of the three-letter language codes of the ISO 639-2/B code listfootnote:[attribute codeList shall be "http://www.loc.gov/standards/iso639-2/" and the attribute codeListValue shall contain one of the three-letter bibliographic language code values.].
+For data sets or data set series containing textual information, the language(s) used in the resource shall be given. The language(s) used shall be encoded using one or more _gmd:language_/_gmd:LanguageCode_ elements. The attribute codeListValue shall contain one of the three-letter language codes of the ISO 639-2/B code list. The attribute codeList shall be either http://www.loc.gov/standards/iso639-2/ or http://id.loc.gov/vocabulary/iso639-2.
 
 The multiplicity of the _gmd:language_ element is 1..*.If the described resource does not contain textual information expressed in a natural language the special code value "zxx" of the ISO 639-2/B reserved for "no linguistic content; not applicable" shall be used.
 ====
@@ -2497,7 +2505,7 @@ A Resource Locator encoded using the gmd:CI_OnlineResource element may also incl
 
 The _gmd:name_, _gmd:description_, and _gmd:function_/_gmd:CI_OnLineFunctionCode_ child elements of _gmd:CI_OnlineResource_ element containing the given _gmd:linkage_ element should also be provided, if possible, to give additional information about the provided URL link. The _gmd:name_ and the _gmd:description_ elements should contain Non-empty Free Text Elements.
 
-If provided, the _gmd:CI_OnLineFunctionCode_ element should point to one of the values of the ISO 19139 code list CI_OnLineFunctionCodefootnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode".]_._
+If provided, the _gmd:CI_OnLineFunctionCode_ element should point to one of the values of the ISO 19139 code list CI_OnLineFunctionCode_._
 ====
 
 [TIP]
@@ -2561,7 +2569,7 @@ The metadata elements described in this section are contained within the _gmd:da
 
 There shall be exactly one _gmd:dataQualityInfo/gmd:DQ_DataQuality_ element scoped to the entire described data set or data set series.
 
-The scoping shall be encoded using _gmd:scope_/_gmd:DQ_Scope_/_gmd:level/gmd:MD_ScopeCode_ element referring to value "dataset" or "series" of ISO 19139 code list MD_ScopeCodefootnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" and the attribute codeListValue with "service".].
+The scoping shall be encoded using _gmd:scope_/_gmd:DQ_Scope_/_gmd:level/gmd:MD_ScopeCode_ element referring to value "dataset" or "series" of ISO 19139 code list MD_ScopeCode.
 ====
 
 ===== Conformity
@@ -2917,7 +2925,7 @@ The multiplicity of this element is one or more. From the values allowed in [ISO
 ====
 *TG Requirement 2.4:* *metadata/2.0/req/isdss/spatial-representation-type*
 
-The spatial representation type shall be given using element _gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode_ referring to one of the values of ISO 19139 code list MD_SpatialRepresentationTypeCode and one of the code list values "vector", "grid", "tin" or “textTable”footnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_SpatialRepresentationTypeCode" and attribute codeListValue with value "vector", "grid", "tin" or “textTable”.].
+The spatial representation type shall be given using element _gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode_ referring to one of the values of ISO 19139 code list MD_SpatialRepresentationTypeCode and one of the code list values "vector", "grid", "tin" or “textTable”.
 
 Multiplicity of this element is 1..*.
 ====
@@ -2950,7 +2958,7 @@ The multiplicity of this element is zero or more: this element is only required 
 ====
 *TG Requirement 2.5: metadata/2.0/req/isdss/character-encoding*
 
-The character encoding(s) shall be given for data sets and data sets series which use encodings not based on UTF-8 by using element _gmd:characterSet/gmd:MD_CharacterSetCode_ referring to one of the values of ISO 19139 code list MD_CharacterSetCodefootnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode".].
+The character encoding(s) shall be given for data sets and data sets series which use encodings not based on UTF-8 by using element _gmd:characterSet/gmd:MD_CharacterSetCode_ referring to one of the values of ISO 19139 code list MD_CharacterSetCode.
 
 The multiplicity of this element is 0..n.
 
@@ -3076,7 +3084,7 @@ The name of the topology consistency measure should be provided using the _gmd:n
 
 It is recommended to provide a short description of the evaluation method used for topological consistency check using the gmd:evaluationMethodDescription child element of _gmd:DQ_QuantitativeResult_ element__.__ This element is a Non-empty Free Text Element.
 
-If applicable, the evaluation method type should be declared using the _gmd:evaluationMethodType/gmd:DQ_EvaluationMethodTypeCode_ child element of _gmd:DQ_QuantitativeResult_ element referring to one of the values of ISO 19139 code list DQ_EvaluationMethodTypeCodefootnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#DQ_EvaluationMethodTypeCode"].
+If applicable, the evaluation method type should be declared using the _gmd:evaluationMethodType/gmd:DQ_EvaluationMethodTypeCode_ child element of _gmd:DQ_QuantitativeResult_ element referring to one of the values of ISO 19139 code list DQ_EvaluationMethodTypeCode.
 ====
 
 [TIP]
@@ -3279,7 +3287,7 @@ To comply with ISO 19115 the _hierarchyLevelName_ element shall also be given, i
 ====
 *TG Requirement 3.1: metadata/2.0/req/sds/resource-type*
 
-Resource type shall be declared as "service" using _gmd:hierarchyLevel/gmd:MD_ScopeCode_ elementfootnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" and the attribute codeListValue with value "service".].
+Resource type shall be declared as "service" using _gmd:hierarchyLevel/gmd:MD_ScopeCode_ element.
 
 Additionally the name of the hierarchy level shall be given using element _gmd:hierarchyLevelName_ element with a Non-empty Free Text Element containing the term "service" in the language of the metadata.
 
@@ -3572,7 +3580,7 @@ A Resource Locator encoded using the _gmd:CI_OnlineResource_ element may also in
 
 It is recommended that in addition to the mandatory _gmd:linkage_ element also _gmd:name_, _gmd:description_, and _gmd:function_/_gmd:CI_OnLineFunctionCode_ child elements of _gmd:CI_OnlineResource_ element are provided to give additional information about the provided URL link. The _gmd:name_ and the _gmd:description_ elements should contain Non-empty Free Text Elements.
 
-If provided, the _gmd:CI_OnLineFunctionCode_ element should point to one of the values of the ISO 19139 code list CI_OnLineFunctionCodefootnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode".]_._
+If provided, the _gmd:CI_OnLineFunctionCode_ element should point to one of the values of the ISO 19139 code list CI_OnLineFunctionCode_._
 
 *_TG Recommendation 3.5: metadata/2.0/rec/sds/resource-type-url-target_*
 
@@ -3621,7 +3629,7 @@ The metadata elements described in this section are contained within the _gmd:da
 
 There shall be exactly one _gmd:dataQualityInfo/gmd:DQ_DataQuality_ element scoped to the entire described service.
 
-The scoping shall be encoded using _gmd:scope_/_gmd:DQ_Scope_/_gmd:level_/_gmd:MD_ScopeCode_ element referring to value "service" of [ISO 19139] code list MD_ScopeCodefootnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" and the attribute codeListValue with value "service".].
+The scoping shall be encoded using _gmd:scope_/_gmd:DQ_Scope_/_gmd:level_/_gmd:MD_ScopeCode_ element referring to value "service" of [ISO 19139] code list MD_ScopeCode.
 
 Additionally the level shall be named using element _gmd:scope/gmd:DQ_Scope/gmd:levelDescription/gmd:MD_ScopeDescription/gmd:other_ element with a Non-empty Free Text Element containing the term "service" in the language of the metadata.
 ====
@@ -3871,7 +3879,7 @@ gmd:CI_OnlineResource_ element used for the above purpose is 1..*.
 
 It is recommended that in addition to the mandatory _gmd:linkage_ and _gmd:description_ elements, also the _gmd:name_, the _gmd:function_/_gmd:CI_OnLineFunctionCode_ child elements of _gmd:CI_OnlineResource_ element are provided to give additional information about the provided URL link. The _gmd:name_ element should contain a Non-empty Free Text Element.
 
-If provided, the _gmd:CI_OnLineFunctionCode_ element should point to value "information" of the ISO 19139 code list CI_OnLineFunctionCodefootnote:[Attribute codeList with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode" and the attribute codeListValue with "information".]_._
+If provided, the _gmd:CI_OnLineFunctionCode_ element should point to value "information" of the ISO 19139 code list CI_OnLineFunctionCode_._
 ====
 
 [source,xml,subs="+quotes"]
@@ -4256,7 +4264,7 @@ ____
 The responsible party for the Interoperable Spatial Data Service in the role of the custodian shall be given. This element shall be encoded as described in TG Requirement C.10.
 
 The value of _gmd:pointOfContact_/_gmd:CI_ResponsibleParty_/_gmd:role_/ +
-_gmd:CI_RoleCode_ shall point to the value "custodian" of ISO 19139 code list CI_RoleCodefootnote:[Attribute codeList shall be "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" and the attribute codeListValue shall be "custodian".]The multiplicity of the _gmd:pointOfContact/gmd:CI_ResponsibleParty_ element used for the above purpose is 1..*.
+_gmd:CI_RoleCode_ shall point to the value "custodian" of ISO 19139 code list CI_RoleCode. The multiplicity of the _gmd:pointOfContact/gmd:CI_ResponsibleParty_ element used for the above purpose is 1..*.
 ====
 
 In the TG Requirement C.9 the freedom of selecting the best fitting code for the responsible party role is left to the metadata provider. In cases when the responsible organisation responsible for the establishment, management, maintenance and distribution of the Spatial Data Service, is also responsible for the service in the role of the custodian, it may be sufficient to use the same responsible party element with only the role code custodian to represent the responsible party for both roles. Note that if it is desirable to express all of the distinct roles, a separate _gmd:pointOfContact/gmd:CI_ResponsibleParty_ element must be used for each role as only one _gmd:role_ child element is allowed for _gmd:CI_ResponsibleParty by the [ISO 19139] XML Schema_.
@@ -7175,4 +7183,4 @@ TG Requirement 7.2
 
 == Annex G Examples of complete INSPIRE metadata records
 
-A web site with examples of complete metadata records compliant with this technical guidance is available at http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0/examples.
+Examples of complete metadata records compliant with this technical guidance are available at https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/examples.

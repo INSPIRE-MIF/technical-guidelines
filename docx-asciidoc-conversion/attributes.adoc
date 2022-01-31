@@ -1,10 +1,10 @@
 // Admonition icons:
 // TG Requirement
-:important-caption: :closed_book:
+:important-caption: 📕
 // TG Recommendation
-:tip-caption: :ledger:
+:tip-caption: 📒
 // Conformance class
-:note-caption: :blue_book:
+:note-caption: 📘
 
 // TOC placement using macro (manual)
 :toc: macro
