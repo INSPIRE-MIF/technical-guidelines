@@ -16,25 +16,21 @@ image:.\media/image1.png[image,width=107,height=107]
 [width="100%",cols="24%,76%",]
 |===
 |*Title* |Technical Guidelines for implementing dataset and service metadata based on ISO/TS 19139:2007
-|*Creator* |Temporary MIG subgroup for action MIWP-8
-|*Date of publication* |2017-03-02
+|*Creator* |Temporary MIWP 2021-2024 sub-group 2.3.1
+|*Date of publication* |2022-01-31
 |*Subject* |Technical Guidance for INSPIRE metadata for datasets and services
-|*Status* a|
-Version 2.0.1
+|*Status* a|Version 2.1.0
 
-This document has been endorsed by the INSPIRE maintenance and implementation group (MIG) in its meeting on 30/11-1/12/2016 (see meeting minutes at https://ies-svn.jrc.ec.europa.eu/projects/mig-p/wiki/5th_MIG-P_meeting).
-
+This document has been endorsed by the INSPIRE maintenance and implementation group (MIG).
 |*Publisher* |INSPIRE Maintenance and Implementation Group (MIG)
 |*Type* |Text
 |*Description* |Implementation specification for defining metadata for INSPIRE datasets and services in ISO/TS 19139 based XML format in compliance with the INSPIRE Implementing Rules for metadata.
-|*Format* |MS Word (doc)
+|*Format* |AsciiDoc
 |*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
 |*Identifier* a|
-http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0 (latest bugfix version of v2.0)
-
-http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0.1 (this bugfix version)
-
-|*Corrigenda* |http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0/corrigenda
+http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0.1 (v.2.0.1)
+http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.1.0 (this version)
+|*Changelog* |https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.1
 |*Language* |EN
 |===
 
