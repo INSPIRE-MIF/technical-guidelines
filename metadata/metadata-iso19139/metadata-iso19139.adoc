@@ -1423,12 +1423,14 @@ ____
 ====
 *TG Requirement C.15: metadata/2.0/req/common/keyword-originating-cv*
 
-When using keywords originating from a controlled vocabulary, the originating controlled vocabulary shall be cited using _gmd:descriptiveKeywords_/_gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation_ element.
+When using keywords originating from a controlled vocabulary, the originating controlled vocabulary shall be cited using the _gmd:descriptiveKeywords_/_gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation_ element.
 
-The title of the vocabulary shall be given using _gmd:title element_ with a Non-empty Free Text Element content. _The publication date of the vocabulary shall be given using the gmd:date/gmd:CI_Date/gmd:date/gco:Date_ and __gmd:dateType/gmd:CI_DateTypeCode__ elements.
+The title of the vocabulary shall be given using the _gmd:title element_ with a Non-empty Free Text Element content.
+
+The date of the vocabulary shall be given using the _gmd:date/gmd:CI_Date/gmd:date/gco:Date_ element. The date type of the vocabulary shall be given using the _gmd:dateType/gmd:CI_DateTypeCode_ element, and shall be one of the following values of [ISO 19139] code list CI_DateTypeCode: _publication_, _revision_ or _creation_.
 ====
 
-NOTE Specifying the correct publication date of the thesaurus is important for knowing which version of the thesaurus has been used.
+NOTE Specifying the correct reference date of the thesaurus is important for knowing which version of the thesaurus has been used.
 
 [TIP]
 ====
