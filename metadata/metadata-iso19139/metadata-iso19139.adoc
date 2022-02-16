@@ -1644,7 +1644,7 @@ Limitations on public access (or lack of such limitations) for the described res
 
 The limitations on public access (or lack of such limitations) based on reasons referred to in point (a) or in points (c) to (h) of Article 13(1) of INSPIRE Directive quoted above, the gmd:resourceConstraints/gmd:MD_LegalConstraints element shall include a combination of
 
-- one instance of _gmd:accessConstraints_/_gmd:MD_RestrictionCode_ element with code list value "otherRestrictions" and- at least one instance of _gmd:otherConstraints_/_gmx:Anchor_ pointing to one of the values from the code list for LimitationsOnPublicAccessfootnote:[INSPIRE Registry, attribute xlink:href with URL value starting with "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/" and postfixed with one of values of code list LimitationsOnPublicAccess, see Annex D.1]. If there are no limitations on public access, the element shall point to the code list value "noLimitations".
+- one instance of _gmd:accessConstraints_/_gmd:MD_RestrictionCode_ element with a relevant code list value (default: "otherRestrictions") and- at least one instance of _gmd:otherConstraints_/_gmx:Anchor_ pointing to one of the values from the code list for LimitationsOnPublicAccessfootnote:[INSPIRE Registry, attribute xlink:href with URL value starting with "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/" and postfixed with one of values of code list LimitationsOnPublicAccess, see Annex D.1]. If there are no limitations on public access, the element shall point to the code list value "noLimitations".
 ====
 
 Example 2.13 shows a fragment of the metadata document declaring limitation on public access based on Article 13(1) a of the [INSPIRE Directive].
@@ -1703,7 +1703,7 @@ In the Tables 1 and 2 of [Regulation 1205/2008], Part C, the multiplicity of thi
 
 Conditions for access and use of the described resource shall be described using exactly one _gmd:resourceConstraints/gmd:MD_LegalConstraints_ element. This element shall not be the same used for describing limitations on public access (see 2.4.6).
 
-The _gmd:resourceConstraints/gmd:MD_LegalConstraints_ element for conditions for access and use shall be encoded as follows:One instance of either _gmd:accessConstraints_ or _gmd:useConstraints_ element shall be given. In both cases this element shall contain a _gmd:MD_RestrictionCode element_ with code list value "otherRestrictions".
+The _gmd:resourceConstraints/gmd:MD_LegalConstraints_ element for conditions for access and use shall be encoded as follows:One instance of either _gmd:accessConstraints_ or _gmd:useConstraints_ element shall be given. In both cases this element shall contain a _gmd:MD_RestrictionCode element_ with a relevant code list value (default: "otherRestrictions").
 
 Additionally at least one instance of _gmd:otherConstraints shall be given_ describing the actual conditions.
 
