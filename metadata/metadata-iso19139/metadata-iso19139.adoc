@@ -2182,7 +2182,7 @@ The persistence and process of preventing breaking the identifier resolvability 
       <gmd:identifier>
         <gmd:md_identifier>
           <gmd:code>
-            <gmx:anchor <="" gmx:anchor="" xlink:href="https://registry.gdi-de.org/id/de.nw/inspire-cp-alkis">
+            <gmx:anchor xlink:href="https://registry.gdi-de.org/id/de.nw/inspire-cp-alkis">
             </gmx:anchor>
           </gmd:code>
         </gmd:md_identifier>
