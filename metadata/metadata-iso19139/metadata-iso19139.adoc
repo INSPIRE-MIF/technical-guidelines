@@ -1338,9 +1338,9 @@ In case of spatial data set, at least the date of the last revision of the spati
 ====
 *TG Requirement C.14: metadata/2.0/req/common/temporal-extent*
 
-If a temporal reference is provided using the temporal extent, it shall be encoded using the _gmd:extent/gmd:EX_Extent_ element with one or more _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ child elements. The value of each of these element may be an individual date or a time period between two dates.
-
-The multiplicity of this element is 0..*.A single individual date or a time period shall be encoded using one _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ element. For individual dates this element shall contain a _gml:TimeInstant/gml:timePosition_ element with the date value given according to [ISO 8601].
+If a temporal reference is provided using the temporal extent, it shall be encoded using the _gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ element . The value of each of these element may be an individual date or a time period between two dates.
+The multiplicity of this element is 0..*. Multiplicity greater than one is achieved by repeating the MD_DataIdentification/gmd:extent element. 
+A single individual date or a time period shall be encoded using one _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ element. For individual dates this element shall contain a _gml:TimeInstant/gml:timePosition_ element with the date value given according to [ISO 8601].
 
 For a single time period the _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ element shall contain a _gml:TimePeriod_ element containing start and end dates of the period. In case the time period is open-ended with either the start or the end date unknown, the elements _gml:startPosition_ or _gml:endPosition_ may be used with an empty value and the attribute _indeterminatePosition_ with value "unknown". If the temporal extent is on-going, the _gml:endPosition_ may be used with an empty value and the attribute _indeterminatePosition_ with value "now".Individual dates and time periods may be combined to form a complex temporal extent using multiple _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ elements.
 ====
