@@ -2,7 +2,7 @@
 
 The purpose of this repository is to host the INSPIRE Technical Guidance documents (hereafter INSPIRE TGs) and manage the changes to them.
 
-The [issue tracker](https://github.com/INSPIRE-MIF/technical-guidelines/issues) of this repository should only be used to submit and discuss change proposals to the TGs. Any questions relating to the use of the TGs or relating to general INSPIRE matters should be posted in the [INSPIRE helpdesk](https://github.com/INSPIRE-MIF/helpdesk). 
+The [issue tracker](https://github.com/INSPIRE-MIF/technical-guidelines/issues) of this repository should only be used to submit and discuss change proposals to the TGs. Should you have any questions relating to the use of the TGs or relating to general INSPIRE matters please use the [INSPIRE helpdesk](https://github.com/INSPIRE-MIF/helpdesk). 
 
 The INSPIRE TGs describe detailed implementation aspects and relations with existing standards, technologies, and practices, see also https://inspire.ec.europa.eu/inspire-technical-guidance/57753.
 
