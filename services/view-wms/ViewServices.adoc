@@ -39,13 +39,13 @@ image:./media/image1.jpeg[width=108,height=108] **INSPIRE** *Infrastructure for 
 |*Type* |Text
 |*Description* |This document defines the implementation requirements and recommendations and describes the implementation guidelines for INSPIRE View Services to fulfil the requirements of the INSPIRE directive and the Regulation on INSPIRE Network Services, Annex III View Services.
 |*Contributor* |Members of the INSPIRE Drafting Team for Network Services, members of the INSPIRE IOC Task Force for Network Services and the Initial Operating Capability Task Force Service Team.
-|*Format* |PDF
-|*Source* |Technical Guidance for the implementation of INSPIRE View Services v3.1
+|*Format* |AsciiDoc
+|*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
 |*Rights* |Public
 |*Identifier* |Technical Guidance View Services v3.11
+|*Changelog* |
 |*Language* |EN
 |*Relation* |Commission Regulation (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
-|*Coverage* |Project duration
 |===
 
 [discrete]
