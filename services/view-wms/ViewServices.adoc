@@ -2365,7 +2365,7 @@ Regional languages also are included in this list.
 
 |===
 
-Schema: +
+|Schema: +
 [OCG-GetCapabilities-Request]&LANGUAGE=<ISO639-2/B alpha 3 code>
 
 Example: +
