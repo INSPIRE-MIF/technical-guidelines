@@ -23,28 +23,40 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:author: Members of the INSPIRE Drafting Team for Network Services, members of the INSPIRE IOC Task Force for Network Services and the Initial Operating Capability Task Force Service Team.
+:copyright: Public
+:creator: Initial Operating Capability Task Force Network Services
+:description: This document defines the implementation requirements and recommendations and describes the implementation guidelines for INSPIRE View Services to fulfil the requirements of the INSPIRE directive and the Regulation on INSPIRE Network Services, Annex III View Services.
+:keywords: INSPIRE View Services
+:lang: en
+:producer: IOC Task Force for Network Services
+:revdate: 2013-04-04
+:revremark: 
+:title: Technical Guidance for the implementation of INSPIRE View Services
+
 image:./media/image1.jpeg[width=108,height=108] **INSPIRE** *Infrastructure for Spatial Information in Europe*
 
 [discrete]
-= Technical Guidance for the implementation of INSPIRE View Services
+= {doctitle}
 
 [width="100%",cols="29%,71%",]
 |===
-|*Title* |Technical Guidance for the implementation of INSPIRE View Services
-|*Creator* |Initial Operating Capability Task Force Network Services
-|*Date* |2013-04-04
-|*Subject* |INSPIRE View Services
+|*Title* |{doctitle}
+|*Creator* |{creator}
+|*Date* |{revdate}
+|*Subject* |{keywords}
 |*Status* |Version 3.11
-|*Publisher* |IOC Task Force for Network Services
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document defines the implementation requirements and recommendations and describes the implementation guidelines for INSPIRE View Services to fulfil the requirements of the INSPIRE directive and the Regulation on INSPIRE Network Services, Annex III View Services.
-|*Contributor* |Members of the INSPIRE Drafting Team for Network Services, members of the INSPIRE IOC Task Force for Network Services and the Initial Operating Capability Task Force Service Team.
+|*Description* |{description}
+|*Contributor* |{author}
 |*Format* |AsciiDoc
 |*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
-|*Rights* |Public
+|*Rights* |{copyright}
 |*Identifier* |Technical Guidance View Services v3.11
-|*Changelog* |
-|*Language* |EN
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Commission Regulation (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
 |===
 
