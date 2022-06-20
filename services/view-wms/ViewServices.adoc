@@ -32,7 +32,7 @@ image:./media/image1.jpeg[width=108,height=108] **INSPIRE** *Infrastructure for 
 |===
 |*Title* |Technical Guidance for the implementation of INSPIRE View Services
 |*Creator* |Initial Operating Capability Task Force Network Services
-|*Date* |2013-04-04
+|*Date of publication* |2013-04-04
 |*Subject* |INSPIRE View Services
 |*Status* |Version 3.11
 |*Publisher* |IOC Task Force for Network Services
