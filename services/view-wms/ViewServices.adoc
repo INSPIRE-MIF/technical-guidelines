@@ -646,7 +646,7 @@ This is a characteristic and often-unique name by which the resource is known. I
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
 <wms:service>
   <wms:name>
     WMS
@@ -667,7 +667,7 @@ This is a brief narrative summary of the content of the resource. It is mapped w
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
 <wms:service>
   <wms:name>
     WMS
@@ -738,7 +738,7 @@ http://.../discovery?Service=CSW&Request=GetRecordById&Version=2.0.2&[http://...
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:wms_capabilities gemet"="" version="1.3.0" xmlns:wms="http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
   <wms:Service>
     ...
   </wms:Service>
@@ -751,7 +751,7 @@ http://.../discovery?Service=CSW&Request=GetRecordById&Version=2.0.2&[http://...
       View Service for making available a road transport network...
     </wms:Abstract>
     <wms:KeywordList>
-      <wms:Keyword vocabulary=”GEMET”>GEMET keyword</wms:Keyword>
+      <wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
       ...
      </wms:KeywordList>
      ...
@@ -762,7 +762,7 @@ http://.../discovery?Service=CSW&Request=GetRecordById&Version=2.0.2&[http://...
       <wms:northBoundLatitude>90</wms:northBoundLatitude>
      </wms:ex_geographicboundingbox>
      ...
-      <MetadataURL type="ISO19115:2003”>
+      <MetadataURL type="ISO19115:2003">
         <Format>text/xml</Format>
           <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"
             xlink:type="simple"
@@ -807,7 +807,7 @@ Commonly used word(s), formalized word(s) or phrase(s) used to describe the reso
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:wms_capabilities iso"="" version="1.3.0" xmlns:wms="http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
   <wms:Service>
     <wms:Name>WMS</wms:Name>
     <wms:Title>Member State INSPIRE View Service</wms:Title>
@@ -845,7 +845,7 @@ Note that this metadata element is different to the Layer Metadata Geographic Bo
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0” xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
   <wms:Service>
     ...
   </wms:Service>
@@ -856,7 +856,7 @@ Note that this metadata element is different to the Layer Metadata Geographic Bo
       <wms:Title>Transport networks: Road Area</wms:Title>
       <wms:Abstract>View Service for making available a road transport network…</wms:Abstract>
       <wms:KeywordList>
-        <wms:Keyword vocabulary=”GEMET”>GEMET keyword</wms:Keyword>
+        <wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
         ...
       </wms:KeywordList>
       ...
@@ -933,7 +933,7 @@ Defines the conditions for access and use of spatial data sets and services, and
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
 <wms:service>
   <wms:name>
     WMS
@@ -973,7 +973,7 @@ No precise syntax has been defined for the text content of these elements in [*I
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
 <wms:service>
   <wms:name>
     WMS
@@ -1026,7 +1026,7 @@ Personal email addresses are not recommended.
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version="1.3.0" xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		<wms:Name>WMS</wms:Name>
 		<wms:Title>Member State INSPIRE View Service</wms:Title>
@@ -1107,7 +1107,7 @@ The third mandatory operation "Link View Service", which allows a Public Authori
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0” xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1151,8 +1151,8 @@ The third mandatory operation "Link View Service", which allows a Public Authori
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0”
- xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0"
+ xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1217,7 +1217,7 @@ The metadata elements listed in Table 3 of the INSPIRE Network Services regulati
 [source,xml,subs="+quotes",align=center]
 ----
 <wms:WMS_Capabilities version="1.3.0"
-xmlns:wms=”http://www.opengis.net/wms>
+xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1269,7 +1269,7 @@ The title of the layer, used for human communication, for presentation of the la
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version="1.3.0"  xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0"  xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1298,7 +1298,7 @@ Layer abstract.
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version="1.3.0" xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1335,7 +1335,7 @@ Additional Keywords describing the layer.
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0” xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0" xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1348,7 +1348,7 @@ Additional Keywords describing the layer.
 				View Service for making available a road transport network…
 			</wms:Abstract>
 			<wms:KeywordList>
-				<wms:Keyword vocabulary=”GEMET”> GEMET keyword</wms:Keyword>
+				<wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
 				...
 			</wms:KeywordList>
 			...
@@ -1371,8 +1371,8 @@ Minimum bounding rectangle in all supported Coordinate reference systems (CRS) o
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0”
- xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0"
+ xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1385,7 +1385,7 @@ Minimum bounding rectangle in all supported Coordinate reference systems (CRS) o
 				...
 			</wms:Abstract>
 			<wms:KeywordList>
-				<wms:Keyword vocabulary=”GEMET”> GEMET keyword</wms:Keyword>
+				<wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
 				...
 			</wms:KeywordList>
 			...
@@ -1472,8 +1472,8 @@ _Sample from INS MD Regulation demonstrating this concept:_
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0”
- xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0"
+ xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1487,7 +1487,7 @@ _Sample from INS MD Regulation demonstrating this concept:_
           xlink:type="simple"
           xlink:href="http://www.agiv.be/index.html"/>
        </AuthorityURL>
-			<MetadataURL type="ISO19115:2003”>
+			<MetadataURL type="ISO19115:2003">
 	     	<Format>text/xml</Format>
    	     	<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"                    
      	          xlink:type="simple"
@@ -1503,7 +1503,7 @@ _Sample from INS MD Regulation demonstrating this concept:_
 				</wms:Title>
 				<wms:Abstract>As defined by TWG</wms:Abstract>
 				<wms:KeywordList>
-					<wms:Keyword vocabulary=”GEMET”>GEMET keyword</wms:Keyword>
+					<wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
 					...
 				</wms:KeywordList>
 				...
@@ -1519,7 +1519,7 @@ _Sample from INS MD Regulation demonstrating this concept:_
 <Identifier authority="AGIVId">
   06B42F5-9971-441B-BB4B-5B382388D534
 </Identifier>
-				<MetadataURL type="ISO19115:2003”>
+				<MetadataURL type="ISO19115:2003">
 	         <Format>text/xml</Format>
    	         <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"                    
      	          xlink:type="simple"
@@ -1537,7 +1537,7 @@ _Sample from INS MD Regulation demonstrating this concept:_
 				</wms:Title>
 				<wms:Abstract>As defined by TWG</wms:Abstract>
 				<wms:KeywordList>
-					<wms:Keyword vocabulary=”GEMET”>GEMET keyword</wms:Keyword>
+					<wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
 					...
 				</wms:KeywordList>
 				...
@@ -1551,7 +1551,7 @@ _Sample from INS MD Regulation demonstrating this concept:_
 <Identifier authority="AGIVId">
   0245A84E-15B8-4228-B11E-334C91ABA34F
 </Identifier>
-				<MetadataURL type="ISO19115:2003”>
+				<MetadataURL type="ISO19115:2003">
 	         <Format>text/xml</Format>
    	         <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"                    
      	          xlink:type="simple"
@@ -1594,8 +1594,8 @@ The harmonised name of a layer for an INSPIRE spatial data theme as defined by [
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0”
- xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0"
+ xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1606,7 +1606,7 @@ The harmonised name of a layer for an INSPIRE spatial data theme as defined by [
 			<wms:Title> Transport networks : Road Area</wms:Title>
 			<wms:Abstract>As defined by TWG</wms:Abstract>
 			<wms:KeywordList>
-				<wms:Keyword vocabulary=”GEMET”> GEMET keyword</wms:Keyword>
+				<wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
 				...
 			</wms:KeywordList>
 			...
@@ -1617,7 +1617,7 @@ The harmonised name of a layer for an INSPIRE spatial data theme as defined by [
 				<wms:northBoundLatitude>90</wms:northBoundLatitude>
 			</wms:EX_GeographicBoundingBox>
 			...
-       <MetadataURL type="ISO19115:2003”>
+       <MetadataURL type="ISO19115:2003">
          <Format>text/xml</Format>
             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"                    
                xlink:type="simple"
@@ -1662,8 +1662,8 @@ The value of the CRS parameter depends on the coordinate reference systems catal
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0”
- xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0"
+ xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1674,7 +1674,7 @@ The value of the CRS parameter depends on the coordinate reference systems catal
 			<wms:Title>Transport networks : Road Area</wms:Title>
 			<wms:Abstract>As defined by TWG</wms:Abstract>
 			<wms:KeywordList>
-				<wms:Keyword vocabulary=”GEMET”> GEMET keyword</wms:Keyword>
+				<wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
 				...
 			</wms:KeywordList>
 			<wms:CRS>EPSG:4258</wms:CRS>
@@ -1688,7 +1688,7 @@ The value of the CRS parameter depends on the coordinate reference systems catal
 				<wms:northBoundLatitude>90</wms:northBoundLatitude>
 			</wms:EX_GeographicBoundingBox>
 			...
-       <MetadataURL type="ISO19115:2003”>
+       <MetadataURL type="ISO19115:2003">
          <Format>text/xml</Format>
             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"                    
                xlink:type="simple"
@@ -1745,7 +1745,7 @@ List of the rendering styles available for the layer. A style shall be composed 
 [source,xml,subs="+quotes",align=center]
 ----
 <wms:WMS_Capabilities version="1.3.0"
- xmlns:wms=”http://www.opengis.net/wms>
+ xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1798,8 +1798,8 @@ Location of the legend for each style, language and dimension pairs.
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0”
- xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0"
+ xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>...</wms:Service>
 	<wms:Capability>
 		...
@@ -1808,7 +1808,7 @@ Location of the legend for each style, language and dimension pairs.
 			<wms:Title>Transport networks : Road Area</wms:Title>
 			<wms:Abstract>As defined by TWG</wms:Abstract>
 			<wms:KeywordList>
-				<wms:Keyword vocabulary=”GEMET”> GEMET keyword</wms:Keyword>
+				<wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
 				...
 			</wms:KeywordList>			
 			<wms:CRS>EPSG:4258</wms:CRS>
@@ -1821,7 +1821,7 @@ Location of the legend for each style, language and dimension pairs.
 				<wms:northBoundLatitude>90</wms:northBoundLatitude>
 			</wms:EX_GeographicBoundingBox>
 			...
-       <MetadataURL type="ISO19115:2003”>
+       <MetadataURL type="ISO19115:2003">
          <Format>text/xml</Format>
             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"                    
                xlink:type="simple"
@@ -1872,8 +1872,8 @@ For more information, refer to [*ISO 19128*, Annex C].
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0”
- xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0"
+ xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1885,7 +1885,7 @@ For more information, refer to [*ISO 19128*, Annex C].
 				...
 			</wms:Abstract>
 			<wms:KeywordList>
-				<wms:Keyword vocabulary=”GEMET”> GEMET keyword</wms:Keyword>
+				<wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
 				...
 			</wms:KeywordList>
 			<wms:CRS>EPSG:4258</wms:CRS>
@@ -1901,7 +1901,7 @@ For more information, refer to [*ISO 19128*, Annex C].
 				2005-01-01/2012-01-01/PID
 			</wms:Dimension>
 			...
-			<MetadataURL type="ISO19115:2003”>
+			<MetadataURL type="ISO19115:2003">
 				<Format>text/xml</Format>
 					<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"                    
                xlink:type="simple"
@@ -1944,8 +1944,8 @@ For instance, the Category Layer Hydrography Physical Waters Waterbodies could c
 
 [source,xml,subs="+quotes",align=center]
 ----
-<wms:WMS_Capabilities version=“1.3.0”
- xmlns:wms=”http://www.opengis.net/wms>
+<wms:WMS_Capabilities version="1.3.0"
+ xmlns:wms="http://www.opengis.net/wms">
 	<wms:Service>
 		...
 	</wms:Service>
@@ -1954,7 +1954,7 @@ For instance, the Category Layer Hydrography Physical Waters Waterbodies could c
 		<wms:Layer>
 			<wms:Name>HY.PHYSICALWATERS.WATERBODIES</wms:Name>
 			<wms:Title>Hydrography Physical Waters : Waterbodies</wms:Title>
-			<MetadataURL type="ISO19115:2003”>
+			<MetadataURL type="ISO19115:2003">
 	     	<Format>text/xml</Format>
    	     	<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"                    
      	          xlink:type="simple"
@@ -1971,7 +1971,7 @@ For instance, the Category Layer Hydrography Physical Waters Waterbodies could c
 					...
 				</wms:Abstract>
 				<wms:KeywordList>
-					<wms:Keyword vocabulary=”GEMET”>GEMET keyword</wms:Keyword>
+					<wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
 					...
 				</wms:KeywordList>
 				...
@@ -1982,7 +1982,7 @@ For instance, the Category Layer Hydrography Physical Waters Waterbodies could c
 					<wms:northBoundLatitude>90</wms:northBoundLatitude>
 				</wms:EX_GeographicBoundingBox>
 				...
- 				<MetadataURL type="ISO19115:2003”>
+ 				<MetadataURL type="ISO19115:2003">
 	         <Format>text/xml</Format>
    	         <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"                    
      	          xlink:type="simple"
@@ -2001,7 +2001,7 @@ For instance, the Category Layer Hydrography Physical Waters Waterbodies could c
 					...
 				</wms:Abstract>
 				<wms:KeywordList>
-					<wms:Keyword vocabulary=”GEMET”>GEMET keyword</wms:Keyword>
+					<wms:Keyword vocabulary="GEMET">GEMET keyword</wms:Keyword>
 					...
 				</wms:KeywordList>
 				...
@@ -2012,7 +2012,7 @@ For instance, the Category Layer Hydrography Physical Waters Waterbodies could c
 					<wms:northBoundLatitude>90</wms:northBoundLatitude>
 				</wms:EX_GeographicBoundingBox>
 				...
-				<MetadataURL type="ISO19115:2003”>
+				<MetadataURL type="ISO19115:2003">
 	         <Format>text/xml</Format>
    	         <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink"                    
      	          xlink:type="simple"
