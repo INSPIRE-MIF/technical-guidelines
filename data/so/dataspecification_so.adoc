@@ -25,14 +25,13 @@
 
 // Document properties
 :title: D2.8.III.3 INSPIRE Data Specification on Soil – Draft Guidelines
-:creator: INSPIRE Thematic Working Group Soil
-:revdate: 2013-12-10
+:revdate: 2022-08-01
 :keywords: INSPIRE Data Specification for the spatial data theme Soil
-:producer: European Commission Joint Research Centre
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Soil
-:author: Members of the INSPIRE Thematic Working Group Soil
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: 
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.2
 :lang: en
 
 image::./media/image2.jpeg[image,width=131,height=90,align=center]
@@ -45,20 +44,19 @@ image:./media/image3.png[image,width=93,height=93] **INSPIRE** - *Infrastructure
 [width="100%",cols="17%,83%",]
 |===
 |*Title* |D2.8.III.3 INSPIRE Data Specification on Soil – Draft Guidelines
-|*Creator* |{creator}
-|*Date* |{revdate}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
 |*Subject* |{keywords}
 |*Publisher* |{producer}
 |*Type* |Text
 |*Description* |{description}
-|*Contributor* |{author}
-|*Format* |Portable Document Format (pdf)
-|*Source* |
+|*Format* |AsciiDoc
+|*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
 |*Rights* |{copyright}
-|*Identifier* |D2.8.III.3_v3.0
+|*Identifier* |D2.8.III.3_v3.1.0
+|*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
 
 <<<
