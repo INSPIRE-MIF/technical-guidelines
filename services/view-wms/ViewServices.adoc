@@ -1261,7 +1261,7 @@ The title of the layer, used for human communication, for presentation of the la
 
 [IMPORTANT]
 ====
-*Implementation Requirement 33* It is mapped with <wms:Title>. The harmonised title of a layer for an INSPIRE spatial data theme is defined by [*INS DS*] and shall be subject to multilingualism (translations shall appear in each mono-lingual capabilities localised documents).
+*Implementation Requirement 33* It is mapped with <wms:Title>. For each harmonised layer according to [*INS DS*] the title is mapped to the harmonised title defined by [*INS DS*] and shall be subject to multilingualism (translations shall appear in each mono-lingual capabilities localized documents).
 ====
 
 [.text-center]
@@ -1571,8 +1571,15 @@ The harmonised name of a layer for an INSPIRE spatial data theme as defined by [
 
 [IMPORTANT]
 ====
-*Implementation Requirement 39* Name shall be mapped with the <wms:Name> element. The harmonised name of a layer shall comply with the Layer requirements of the [*INS DS,* Article 14]
+*Implementation Requirement 39* Name shall be mapped with the <wms:Name> element.
 ====
+
+[IMPORTANT]
+====
+*Implementation Requirement 39 bis* In case a layer is a harmonised layer according to [*INS DS*], the layer name shall comply with the harmonised layer name defined in Article 14 of *[INS DS*].
+====
+
+Note: A view service may contain one or more harmonised and/or one or more non-harmonised layers.
 
 [.text-center]
 *Table 5*: Annexes I harmonised name examples
@@ -1711,7 +1718,7 @@ List of the rendering styles available for the layer. A style shall be composed 
 
 [IMPORTANT]
 ====
-*Implementation Requirement 42* An <inspire_common:DEFAULT> style for each theme shall be as defined in the "Portrayal" section of the [*INS DS,* Article 14].
+*Implementation Requirement 42* For each harmonised layer according to [*INS DS*] an <inspire_common:DEFAULT> style shall be as defined in the "Portrayal" section of the [*INS DS*, Article 14].
 ====
 
 [IMPORTANT]
@@ -3063,7 +3070,7 @@ These metadata are mapped with the <Layer> element of the <Contents> structure.
 
 [IMPORTANT]
 ====
-*Implementation Requirement 85* The Resource title of the layer, used for human communication, for exmple presentation of the layer in a menu. It is mapped with <ows:Title>. The harmonised title of a layer for an INSPIRE spatial data theme is defined by [*Directive 2007/2/EC*] and shall be subject to multilingualism (translations shall appear in each mono-lingual capabilities localized documents).
+*Implementation Requirement 85* The Resource title of the layer, used for human communication, for example presentation of the layer in a menu. It is mapped with <ows:Title>. For each harmonised layer according to [*INS DS*] the title is mapped to the harmonised title defined by [*INS DS*] and shall be subject of multilingualism (translations shall appear in each mono-lingual capabilites localized documents).
 ====
 
 
