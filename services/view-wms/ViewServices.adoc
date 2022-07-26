@@ -24,15 +24,14 @@
 :appendix-caption: Annex
 
 // Document properties
-:author: Members of the INSPIRE Drafting Team for Network Services, members of the INSPIRE IOC Task Force for Network Services and the Initial Operating Capability Task Force Service Team.
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:creator: Initial Operating Capability Task Force Network Services
 :description: This document defines the implementation requirements and recommendations and describes the implementation guidelines for INSPIRE View Services to fulfil the requirements of the INSPIRE directive and the Regulation on INSPIRE Network Services, Annex III View Services.
 :keywords: INSPIRE View Services
 :lang: en
-:producer: IOC Task Force for Network Services
-:revdate: 2013-04-04
-:revremark: 
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:revdate: 2022-08-01
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.2
 :title: Technical Guidance for the implementation of INSPIRE View Services
 
 image:./media/image1.jpeg[width=108,height=108] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -43,18 +42,17 @@ image:./media/image1.jpeg[width=108,height=108] **INSPIRE** *Infrastructure for 
 [width="100%",cols="29%,71%",]
 |===
 |*Title* |{doctitle}
-|*Creator* |{creator}
-|*Date* |{revdate}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
 |*Subject* |{keywords}
-|*Status* |Version 3.11
+|*Status* |Version 3.2.0
 |*Publisher* |{producer}
 |*Type* |Text
 |*Description* |{description}
-|*Contributor* |{author}
 |*Format* |AsciiDoc
 |*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
 |*Rights* |{copyright}
-|*Identifier* |Technical Guidance View Services v3.11
+|*Identifier* |Technical Guidance View Services v3.2.0
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Commission Regulation (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
