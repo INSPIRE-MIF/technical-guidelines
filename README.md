@@ -15,6 +15,8 @@ Currently, the following TGs have been converted:
   * [metadata-iso19139](/metadata/metadata-iso19139/metadata-iso19139.adoc)
 * Services
   * [view-wms](/services/view-wms/ViewServices.adoc)
+* Data
+  * [so](/data/so/dataspecification_so.adoc)
 
 ## Governance and release process
 
