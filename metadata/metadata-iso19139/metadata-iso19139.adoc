@@ -2125,7 +2125,7 @@ NOTE The [ISO 19139] xml schemas allow the use of either the _MD_Identifier_ typ
 
 [TIP]
 ====
-*TG Recommendation 1.1: metadata/2.0/rec/datasets-and-series/use_md_identifier*
+*TG Recommendation 1.2: metadata/2.0/rec/datasets-and-series/use_md_identifier*
 
 It is strongly recommended to use the _MD_Identifier_ instead of the the _RS_Identifier_ type and to encode the complete URI in the code element.
 ====
@@ -2134,7 +2134,7 @@ In accordance with the Best Practices that are currently being developed for (sp
 
 [TIP]
 ====
-*TG Recommendation 1.2: metadata/2.0/rec/datasets-and-series/resolvable-uid*
+*TG Recommendation 1.3: metadata/2.0/rec/datasets-and-series/resolvable-uid*
 
 It is recommended to make the unique resource identifier resolvable into a document providing information about described data set or data sets series. In the case of HTTP URIsfootnote:[HTTP URIs in the text also include HTTPS URIs], the public DNS and the usual HTTP URI resolving mechanisms should be used for implementing this resolvability. For other types of URIs, a resolving service should be provided implementing similar functionality.
 
@@ -2143,7 +2143,7 @@ This document retrieved as the result of the resolving process may be, but is no
 
 [TIP]
 ====
-*TG Recommendation 1.3: metadata/2.0/rec/datasets-and-series/persistent-uid*
+*TG Recommendation 1.4: metadata/2.0/rec/datasets-and-series/persistent-uid*
 
 The providers of unique resource identifiers should take great care in ensuring that the issued identifiers remain valid and available for the entire availability period of the identified resource, and preferably also after the data set or the data set series has been made unavailable.
 
@@ -2218,7 +2218,7 @@ These keywords shall be encoded using an _gmd:descriptiveKeywords_/_gmd:MD_Keywo
 
 [TIP]
 ====
-*TG Recommendation 1.4: metadata/2.0/rec/datasets-and-series/use-anchors-for-gemet*
+*TG Recommendation 1.5: metadata/2.0/rec/datasets-and-series/use-anchors-for-gemet*
 
 For references to the GEMET – INSPIRE themes controlled vocabulary, the _title_ element of the _thesaurusName_ should be encoded using the _gmd:title/gmx:Anchor_ element, with the _xlink:href_ attribute referring to http://www.eionet.europa.eu/gemet/inspire_themes.
 
@@ -2272,7 +2272,7 @@ See Example 3.3 for an example of the XML fragment containing GEMET keywords for
 
 [TIP]
 ====
-*TG Recommendation 1.5: metadata/2.0/rec/datasets-and-series/additional-keywords*
+*TG Recommendation 1.6: metadata/2.0/rec/datasets-and-series/additional-keywords*
 
 In addition to the required keywords from the GEMET - INSPIRE themes vocabulary, it is recommended to provide at least two other keywords describing the data set or data set series.
 ====
@@ -2309,7 +2309,7 @@ The multiplicity of this element is 0..n.
 
 [TIP]
 ====
-*TG Recommendation 1.6: metadata/2.0/rec/datasets-and-series/spatial-resolution-interval*
+*TG Recommendation 1.7: metadata/2.0/rec/datasets-and-series/spatial-resolution-interval*
 
 If the spatial resolution is an interval, both bounding values of the interval should be given (either as equivalent scale or resolution distance) as two instances of the _gmd:spatialResolution_/_gmd:MD_Resolution_ element.
 ====
@@ -2400,7 +2400,7 @@ The multiplicity of the _gmd:language_ element is 1..*.If the described resource
 
 [TIP]
 ====
-*TG Recommendation 1.7: metadata/2.0/rec/datasets-and-series/language-name*
+*TG Recommendation 1.8: metadata/2.0/rec/datasets-and-series/language-name*
 
 The name of the language(s) of the described resource in the language of the metadata should be used as the text content of the _gmd:LanguageCode_ element.
 ====
@@ -2499,7 +2499,7 @@ A Resource Locator encoded using the gmd:CI_OnlineResource element may also incl
 
 [TIP]
 ====
-*TG Recommendation 1.8: metadata/2.0/rec/datasets-and-series/resource-locator-additional-info*
+*TG Recommendation 1.9: metadata/2.0/rec/datasets-and-series/resource-locator-additional-info*
 
 The _gmd:name_, _gmd:description_, and _gmd:function_/_gmd:CI_OnLineFunctionCode_ child elements of _gmd:CI_OnlineResource_ element containing the given _gmd:linkage_ element should also be provided, if possible, to give additional information about the provided URL link. The _gmd:name_ and the _gmd:description_ elements should contain Non-empty Free Text Elements.
 
@@ -2508,7 +2508,7 @@ If provided, the _gmd:CI_OnLineFunctionCode_ element should point to one of the 
 
 [TIP]
 ====
-*TG Recommendation 1.9__: metadata/2.0/rec/datasets-and-series/resource-locator-url__*
+*TG Recommendation 1.10: metadata/2.0/rec/datasets-and-series/resource-locator-url*
 
 The URL provided as the value of the _gmd:transferOptions_/_gmd:MD_DigitalTransferOptions_/_gmd:onLine_/_gmd:CI_OnlineResource_/_gmd_: _linkage_/_gmd:URL_ element should point to one of following type of resources:- direct access for downloading the described data set,- a service metadata (capabilities) document of a Spatial Data Service used for providing this data set,- a service WSDLfootnote:[W3C Web Services Description Language, https://www.w3.org/TR/wsdl] document of a Spatial Data Service used for providing this data set (if SOAPfootnote:[W3C Simple Object Access Protocol, or more recently, just SOAP, https://www.w3.org/TR/soap/] binding is available), - a client application that directly accesses the described data set, or- a web page with further instructions for accessing the described data set.
 ====
@@ -2583,7 +2583,7 @@ Metadata for an INSPIRE data set or data set series shall declare conformity to 
 
 [TIP]
 ====
-*TG Recommendation 1.10: metadata/2.0/rec/datasets-and-series/uri-for-regulation-1089-2010*
+*TG Recommendation 1.11: metadata/2.0/rec/datasets-and-series/uri-for-regulation-1089-2010*
 
 If providing the specification title as an _gmx:Anchor_ element (as recommended in TG Recommendation C.10), the following URI should be used to refer to [Regulation 1089/2010]: http://data.europa.eu/eli/reg/2010/1089.
 ====
@@ -2638,7 +2638,7 @@ Metadata for an INSPIRE data set or data set series can also include additional 
 
 [TIP]
 ====
-*TG Recommendation 1.11: metadata/2.0/rec/datasets-and-series/uris-for-ats-and-cc*
+*TG Recommendation 1.12: metadata/2.0/rec/datasets-and-series/uris-for-ats-and-cc*
 
 If declaring conformity to an abstract test suite or a conformance class using an _gmx:Anchor_ element (as recommended in TG Recommendation C.11), the URI identifying the abstract test suite or a conformance class should be used in the _xlink:href_ attribute of the specification title element.
 ====
@@ -2720,14 +2720,14 @@ The multiplicity of this element is 1.
 
 [TIP]
 ====
-*TG Recommendation 1.12: metadata/2.0/rec/datasets-and-series/use-iso-dq-elements-and-measures*
+*TG Recommendation 1.13: metadata/2.0/rec/datasets-and-series/use-iso-dq-elements-and-measures*
 
 If a data provider has a procedure for the quality management of their spatial data set (series) then the appropriate ISO data quality elements and measures should be used to evaluate and report (in the metadata) the results in addition to the Lineage metadata element.
 ====
 
 [TIP]
 ====
-*TG Recommendation 1.13: metadata/2.0/rec/datasets-and-series/lineage-avoid-acronyms*
+*TG Recommendation 1.14: metadata/2.0/rec/datasets-and-series/lineage-avoid-acronyms*
 
 The use of abbreviations (including acronyms) should be avoided. If used, their meaning should be explained.
 ====
@@ -2877,7 +2877,7 @@ The _gmd:code_ child element of _gmd:RS_Identifier_ is mandatory. The _gmd:codeS
 
 [TIP]
 ====
-*TG Recommendation 2.1: metadata/2.0/rec/isdss/*
+*TG Recommendation 2.3: metadata/2.0/rec/isdss/*
 
 If a commonly known unique identifier for the referred temporal reference system is available in a common register, the registered identifier should be used as the value of the _gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code_ element.
 ====
@@ -3071,14 +3071,14 @@ The type of the _gmd:value/gco:Record_ element shall be chosen based on the resu
 
 [TIP]
 ====
-*TG Recommendation 2.2: metadata/2.0/rec/isdss/topological-consistency-measure-name*
+*TG Recommendation 2.4: metadata/2.0/rec/isdss/topological-consistency-measure-name*
 
 The name of the topology consistency measure should be provided using the _gmd:nameOfMeasure_ child element of each of the _gmd:DQ_QuantitativeResult_ elements__.__ This element is a Non-empty Free Text Element. In the case where the result reflects more than one measure, a separate _gmd:nameOfMeasure_ should be given to identify each included measure.
 ====
 
 [TIP]
 ====
-*TG Recommendation 2.3: metadata/2.0/rec/isdss/topological-consistency-evaluation-method*
+*TG Recommendation 2.5: metadata/2.0/rec/isdss/topological-consistency-evaluation-method*
 
 It is recommended to provide a short description of the evaluation method used for topological consistency check using the gmd:evaluationMethodDescription child element of _gmd:DQ_QuantitativeResult_ element__.__ This element is a Non-empty Free Text Element.
 
@@ -3087,7 +3087,7 @@ If applicable, the evaluation method type should be declared using the _gmd:eval
 
 [TIP]
 ====
-*TG Recommendation 2.4: metadata/2.0/rec/isdss/topological-consistency/date*
+*TG Recommendation 2.6: metadata/2.0/rec/isdss/topological-consistency/date*
 
 It is recommended to provide the date of evaluating the topological consistency check using the _gmd:dateTime/gco:DateTime_ child element of _gmd:DQ_QuantitativeResult_ element__.__ The value shall be expressed using Gregorian calendar and in accordance with [ISO 8601] date and time precision.
 ====
@@ -3235,7 +3235,7 @@ NOTE The value "true" of gmd:report/gmd:DQ_TopologicalConsistency/gmd:result/ gm
 
 The INSPIRE data specifications [TG DS] include a number of “recommended theme-specific metadata elements” in their sections 8.3. All of them are optional but recommended for certain INSPIRE annex themes.
 
-*TG Recommendation 2.5: metadata/2.0/rec/isdss/recommended-theme-specific-md-elements*
+*TG Recommendation 2.7: metadata/2.0/rec/isdss/recommended-theme-specific-md-elements*
 
 The recommended metadata elements should be included to metadata describing a spatial dataset or spatial dataset series related to the annex themes specified for the relevant element in Annex C.7.
 
@@ -3873,7 +3873,7 @@ gmd:CI_OnlineResource_ element used for the above purpose is 1..*.
 
 [TIP]
 ====
-*TG Recommendation 5.4: metadata/2.0/rec/sds-invocable/access-point-additional-info*
+*TG Recommendation 5.1: metadata/2.0/rec/sds-invocable/access-point-additional-info*
 
 It is recommended that in addition to the mandatory _gmd:linkage_ and _gmd:description_ elements, also the _gmd:name_, the _gmd:function_/_gmd:CI_OnLineFunctionCode_ child elements of _gmd:CI_OnlineResource_ element are provided to give additional information about the provided URL link. The _gmd:name_ element should contain a Non-empty Free Text Element.
 
@@ -3931,7 +3931,7 @@ gmd:DQ_ConformanceResult_ element used for the above purpose is 1.
 
 [TIP]
 ====
-*TG Recommendation 5.5: metadata/2.0/rec/sds-invocable/uri-for-regulation-1089-2010*
+*TG Recommendation 5.2: metadata/2.0/rec/sds-invocable/uri-for-regulation-1089-2010*
 
 If providing the specification title as an _gmx:Anchor_ element (as recommended in TG Recommendation C.11), the following URI should be used to refer to [Regulation 1089/2010]: http://data.europa.eu/eli/reg/2010/1089.
 ====
@@ -3986,7 +3986,7 @@ Metadata for Invocable Spatial Data Services can also include additional declara
 
 [TIP]
 ====
-*TG Recommendation 5.6: metadata/2.0/rec/datasets-and-series/uris-for-ats-and-cc*
+*TG Recommendation 5.3: metadata/2.0/rec/datasets-and-series/uris-for-ats-and-cc*
 
 If declaring conformity to an abstract test suite or a conformance class using an _gmx:Anchor_ element (as recommended in TG Recommendation C.11), the URI identifying the abstract test suite or a conformance class should be used in the _xlink:href_ attribute of the specification title element.
 ====
@@ -4117,7 +4117,7 @@ The multiplicity of the _gmd:report_/_gmd:DQ_DomainConsistency/gmd:result/gmd:DQ
 
 [TIP]
 ====
-*TG Recommendation 5.7: metadata/2.0/rec/sds-invocable/specification-title-anchor*
+*TG Recommendation 5.4: metadata/2.0/rec/sds-invocable/specification-title-anchor*
 
 In order to be machine readable, the specification title element should be provided using the _gmx:Anchor_ element referring to an official publication URL address of the particular specification. The text content of this element should contain the official title of the referred technical specification.
 ====
