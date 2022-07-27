@@ -2801,6 +2801,15 @@ gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code_ element.
 The _gmd:codeSpace_ element shall not be used in this case.
 ====
 
+[TIP]
+====
+*TG Recommendation 2.1.1: metadata/2.0/rec/isdss/crs-id*
+
+If the coordinate reference system identifier is an HTTP URI, this identifier should be encoded using a _gmx:Anchor_ element; the _xlink:href_ attribute of the _gmx:Anchor_ element should contain the identifier.
+====
+
+As explained in section 2.1.1 Encoding of code list values, the textual content of the _gmx:Anchor_ element is purely informative. A possibility in the case of coordinate reference system identifiers is to use either the name (e.g. ETRS89) or one of the aliases (e.g. ETRS89-GRS80) of the CRS as available in the https://epsg.org/[EPSG Geodetic Parameter Dataset]. Another possibility is to use a short name in the form of AUTHORITY:CODE (e.g. EPSG:4258).
+
 [source,xml,subs="+quotes"]
 ----
 **/gmd:MD_Metadata/gmd:referenceSystemInfo:**
@@ -2810,9 +2819,7 @@ The _gmd:codeSpace_ element shall not be used in this case.
     <gmd:referencesystemidentifier>
       <gmd:rs_identifier>
         <gmd:code>
-          <gmx:anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/4258">
-            EPSG:4258
-          </gmx:anchor>
+          <gmx:anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/4258">EPSG:4258</gmx:anchor>
         </gmd:code>
       </gmd:rs_identifier>
     </gmd:referencesystemidentifier>
@@ -4218,6 +4225,13 @@ If the coordinate reference system is listed in the table Default Coordinate Ref
 gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code_ element.
 
 The _gmd:codeSpace_ element shall not be used in this case.
+====
+
+[TIP]
+====
+*TG Recommendation 6.1: metadata/2.0/rec/sds-interoperable/crs-http-uris*
+
+If the coordinate reference system identifier is an HTTP URI, this identifier should be encoded using a _gmx:Anchor_ element; the _xlink:href_ attribute of the _gmx:Anchor_ element should contain the identifier.
 ====
 
 ==== Identification info section
