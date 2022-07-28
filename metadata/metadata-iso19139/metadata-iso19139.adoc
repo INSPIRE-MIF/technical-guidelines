@@ -2199,9 +2199,8 @@ The persistence and process of preventing breaking the identifier resolvability 
 
 The [Regulation 1205/2008], Part B, 3 describes how the Keyword elements shall be used for describing the relevant INSPIRE spatial data themes for the described data set or data set series:
 
-{empty}
 ____
-3. KEYWORD
+{empty}3. KEYWORD
 
 (…)
 
