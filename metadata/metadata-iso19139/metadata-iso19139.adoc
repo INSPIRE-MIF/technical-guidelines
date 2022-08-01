@@ -6,6 +6,12 @@
 :toclevels: 4
 :sectnumlevels: 4
 
+// Line Break Doc Title
+:hardbreaks-option:
+
+:appendix-caption: Annex
+
+image:./media/image1.png[image,width=107,height=107] **INSPIRE** - *Infrastructure for Spatial Information in Europe*
 // Document properties
 :title: Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
 :revdate: 2022-08-01
@@ -44,9 +50,11 @@ http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.1.1
 |*Language* |{lang}
 |===
 
+<<<
 == Table of Contents
 toc::[]
 
+<<<
 == Acknowledgements
 Many individuals and organisations have contributed to the development of these Guidelines.
 
@@ -59,11 +67,10 @@ We wish to thank the members of the MIWP-8 group as well as Michael Lutz, Angelo
 *Contact information*
 
 European Commission Joint Research Centre
-
 B.6 Digital Economy
-
 inspire-info@ec.europa.eu
 
+<<<
 == Foreword
 Directive 2007/2/EC of the European Parliament and of the Council [INS DIR], adopted on 14 March 2007 aims at establishing an Infrastructure for Spatial Information in the European Community (INSPIRE) for environmental policies, or policies and activities that have an impact on the environment. INSPIRE will make available relevant, harmonised and quality geographic information to support the formulation, implementation, monitoring and evaluation of policies and activities, which have a direct or indirect impact on the environment.
 
@@ -85,7 +92,7 @@ This Technical Guidance document relates to the implementation of the requiremen
 
 Implementing this Technical Guidance are designed to maximise the interoperability of INSPIRE services. Technical Guidance documents describe how Member States might implement the Implementing Rules described in a Commission Regulation. The technical provisions and the underlying concepts are often illustrated by use case diagrams and accompanied by examples. Technical Guidance documents may also include non-binding technical recommendations that should be satisfied if a Member State chooses to conform to the Technical Guidance. However, these recommendations have no legally binding effect.
 
-image:.\media/image2.png[TG vs IR,width=600,height=450]
+image:./media/image2.png[TG vs IR,width=600,height=450]
 
 *Figure* *1:* Relationship between the INSPIRE Implementing Rules and the associated Technical Guidance.
 
@@ -100,6 +107,7 @@ The technical document is intended to facilitate the implementation of Directive
 
 |===
 
+<<<
 == Foreword to this version
 The previous version 1.3 of this Technical Guidelines document has been widely used since its publication in 2013. It has led to a lot of feedback concerning unclear TG Requirements and implementation choices, which this version aims to answer and clarify. This work has been done under INSPIRE Maintenance and Implementation Group (MIG) temporary sub-group for work package 8 (MIWP-8: Metadata). According to its terms of referencefootnote:[Terms of Reference for the MIWP-8 group: https://ies-svn.jrc.ec.europa.eu/attachments/download/780/Inspire%20MIG%20ToR%20Update%20TG%20Metadata%20final.pdf], this new version of the TG document addresses the following issues:
 
@@ -130,7 +138,8 @@ The technical requirements in this version of the specification are presented wi
 
 Special care has been taken to not make any unnecessary changes in the required metadata elements in between the version 1.3 and 2.0. The goal has been to only clarify the existing requirements in cases where more than one interpretation of the Implementation Rules existed, or where the required XML encoding was unclear or ambiguous. Some harmonisation between the XML encodings of the elements required by different INSPIRE Regulations has also been done to make the work of the metadata providers and INSPIRE metadata handling software providers easier.
 
-Reading guidance and transition period
+[discrete]
+=== _Reading guidance and transition period_
 
 As the structure of the document and the expressions have changed considerably from the previous version of the document, the following sections have been included to help the readers in locating the specific elements and technical requirements in this version of the document:
 
@@ -164,6 +173,7 @@ As many Member States have already implemented the previous version of the Techn
 
 To facilitate a smooth transition from version 1.3 to version 2.0, a transitional period of 3 years has been defined, starting from 19 December 2016. During this period, the metadata records compliant with both version 1.3 and 2.0 implementations will be considered as “compliant with the INSPIRE Technical Guidelines for Metadata”. During the transitional period, the validator used in the INSPIRE geoportal will validate against and will provide validation reports for both versions 1.3 and 2.0. The better result will be used for the value of the compliance meter. After the transitional period, the geoportal will only validate against version 2.0.
 
+<<<
 == Revision history
 Changes from the version 1.3 to 2.0
 
@@ -450,7 +460,7 @@ TG Requirements 37 and 38 concerning the Metadata point of contact are now given
 
 TG Requirement 39 concerning the Metadata language is now stated as _TG Requirement C.5_.
 
-
+<<<
 == Normative references
 The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies. For ISO standards that have also been adopted as EN by CEN, the relevant CEN reference and adoption date are given, with the ISO number and adoption date in parentheses.
 
@@ -497,6 +507,7 @@ NOTE [Regulation 1089/2010] is informally also known as "Implementing Rules for 
 
 [OGC Specification Model] The Specification Model – A Standard for Modular specifications, Open Geospatial Consortium, OGC 08-131r3, https://portal.opengeospatial.org/files/?artifact_id=34762
 
+<<<
 == Other references
 [TG SDS] Technical Guidance for INSPIRE Spatial Data Services and services allowing spatial data services to be invoked, version 4.0, http://inspire.ec.europa.eu/id/document/tg/sds/4.0
 
@@ -520,6 +531,7 @@ NOTE This document is not listed under normative references because it is only r
 
 [ISO 15836] ISO 15836:2009, Information and documentation – The Dublin Core metadata element set
 
+<<<
 == Terms and abbreviations
 The terms concerning requirements, conformance test classes and tests are based on the OGC document The Specification Model - A Standard for Modular specifications (08-131r3)footnote:[See http://www.opengeospatial.org/standards/modularspec]. Note that the intermediate structuring entities "requirements module" and "conformance module" are not included here for simplicity. Instead, the requirements are directly included in requirements classes and conformance tests in conformance test classes.
 
@@ -571,6 +583,7 @@ NOTE The technical specifications could e.g. be a web site documentation explain
 
 *View Service* is a service making it possible, as a minimum, to display, navigate, zoom in/out, pan, or overlay viewable spatial data sets and to display legend information and any relevant content of metadata [INSPIRE Directive, Art. 11].
 
+<<<
 == Verbal forms for expression of provisions
 In accordance with the ISO rules for drafting, the following verbal forms shall be interpreted in the given way:
 
@@ -584,14 +597,14 @@ Requirements and the recommendations for INSPIRE Metadata Implementing Rules wit
 
 [IMPORTANT]
 ====
-*TG Requirement #.#: metadata/2.0/req/<conformance-class-id>/<requirement-id>*
+*TG Requirement {empty}#.#: metadata/2.0/req/<conformance-class-id>/<requirement-id>*
 
 Technical Guidelines Requirements are shown using this style
 ====
 
 [TIP]
 ====
-*TG Recommendation #.#: metadata/2.0/rec/<conformance-class-id>/<requirement-id>*
+*TG Recommendation {empty}#.#: metadata/2.0/rec/<conformance-class-id>/<requirement-id>*
 
 Technical Guidelines Recommendations are shown using this style.
 ====
@@ -613,7 +626,8 @@ Each conformance class, requirement and recommendation also have a unique identi
 
 NOTE Requirements as specified in the INSPIRE Regulations and Implementing Rules are legally binding, and that requirements and recommendations as specified in INSPIRE Technical Guideline are not legally binding. Therefore, within this technical guideline we have used the terms ‘TG requirement’ and ‘TG recommendation’ to indicate what is technically required or recommended to conform to this Technical Guidelines specification.
 
-Quoted INSPIRE Regulation text
+[discrete]
+=== Quoted INSPIRE Regulation text
 
 Directed quotations from INSPIRE Implementation Rules and other legally mandated regulations are expressed as quoted text blocks using the following style:
 
@@ -624,7 +638,8 @@ ____
 This metadata element addresses the requirement to have information on the temporal dimension of the data as referred to in Article 8(2)(d) of Directive 2007/2/EC. At least one of the metadata elements referred to in points 5.1 to 5.4 shall be provided. The value domain of the metadata elements referred to in points 5.1 to 5.4 is a set of dates. Each date shall refer to a temporal reference system and shall be expressed in a form compatible with that system. The default reference system shall be the Gregorian calendar, with dates expressed in accordance with ISO 8601.
 ____
 
-XPath expressions
+[discrete]
+=== XPath expressions
 
 XML Path Language (XPath) is a W3C Recommendation for addressing parts of an XML documentfootnote:[XML Path Language (Xpath), version 1.0, https://www.w3.org/TR/xpath/]. This compact notation allows many defaults and abbreviations for common cases. The simplest XPath takes a form such as /A/B/C which selects C elements that are children of B elements that are children of the A element that forms the outermost element of the model. More complex expressions can be constructed by specifying an axis other than the default 'child' axis, a node test other than a simple name, or predicates, which can be written in square brackets after any step. The main rules are the following ones:
 
@@ -646,7 +661,8 @@ In this document XPath expressions are used for exactly specifying the locations
 
 Where profiles conformant to [ISO 19139] are being used to encode INSPIRE metadata records, the XPath expressions used in the text of TG requirements may need to be adapted to match the profile.
 
-XML examples
+[discrete]
+=== XML examples
 
 The XML examples are numbered for easier referencing and shown as text blocks with a fixed-width font on a grey background:
 
@@ -654,10 +670,10 @@ The XML examples are numbered for easier referencing and shown as text blocks wi
 ----
 **/gmd:MD_Metadata/gmd:hierarchyLevel:**
 
-<gmd:hierarchylevel>
-  <gmd:md_scopecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codelistvalue="dataset">
-  </gmd:md_scopecode>
-</gmd:hierarchylevel>
+<gmd:hierarchyLevel>
+  <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">
+  </gmd:MD_ScopeCode>
+</gmd:hierarchyLevel>
 ----
 *Example X.Y*: Resource type "dataset" given using gmd:hierarchyLevel property
 
@@ -665,11 +681,13 @@ The location of the XML elements within the document structure is given using XP
 
 NOTE XML Examples are informative and are provided for information only and are expressly not normative.
 
-Numbering of requirements, examples, figures and tables
+[discrete]
+=== Numbering of requirements, examples, figures and tables
 
 The TG Requirements, TG Recommendations, XML examples, tables and figures are numbered using two-part, dot-separated identifiers: The first part refers to the containing Conformance Class and the second is a running number within the Conformance Class. In the chapter 2 "Common requirements for ISO/TC 19139:2007 based INSPIRE metadata records" which does not comprise a Conformance Class, but is referred to from the Conformance Class chapters, the first part is a letter "C". This numbering style is used to help associating the referred requirements with their containing Conformance Classes.
 
-XML namespaces and prefixes used in this document
+[discrete]
+=== XML namespaces and prefixes used in this document
 
 XML element prefixes are used in this document to refer to the namespaces as follows:
 
@@ -687,7 +705,7 @@ http://www.opengis.net/gml (for GML 3.2.0)
 |===
 
 :sectnums:
-
+<<<
 == Overview
 
 === Introduction
@@ -849,6 +867,7 @@ In addition to the TG Requirements, the document sections defining the Conforman
 
 The conformity with a Conformance Class shall be evaluated as defined in the Abstract Test Suites in Annex A, which shall include Test cases for each of the TG Requirements included in the Conformance Class. The Abstract Test Suites may also include tests for fulfilling the TG Recommendations to provide further interoperability improvement or deprecation hints to help both the metadata providers and the INSPIRE metadata handling software developers. If included, the failure or success of passing these TG Recommendation tests shall not have an effect of the evaluated conformance measure of the metadata record under test.
 
+<<<
 == Common requirements for ISO/TC 19139:2007 based INSPIRE metadata records
 
 === Metadata structure and encoding
@@ -857,7 +876,10 @@ The conformity with a Conformance Class shall be evaluated as defined in the Abs
 ====
 *TG Requirement C.1: metadata/2.0/req/common/xml-schema*
 
-INSPIRE metadata records shall be encoded in XML format valid against one of the following XML Schemas:- [*CSW2 AP ISO*] XML Schemafootnote:[http://inspire.ec.europa.eu/draft-schemas/inspire-md-schemas/ importing the _srv_ namespace for encoding service metadata and referring to GML version 3.2.1 available in the OGC schema repository (as defined in the schemas at http://inspire.ec.europa.eu/draft-schemas/inspire-md-schemas/srv/1.0/), or an unmodified copy.],- [*ISO 19139*] XML Schema as available in the ISO repositoryfootnote:[_http://www.isotc211.org/2005/gmd/gmd.xsd_ referring to GML version 3.2.1 available in the ISO schema repository, or an unmodified copy.], or- [*ISO 19139*] XML Schema as available in the OGC schema repositoryfootnote:[_http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd_ referring to GML version 3.2.1 available in the OGC schema repository, or _http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd_ referring to GML version 3.2.0 available in the OGC schema repository, or unmodified copies of either of these.].
+INSPIRE metadata records shall be encoded in XML format valid against one of the following XML Schemas:
+- [*CSW2 AP ISO*] XML Schemafootnote:[http://inspire.ec.europa.eu/draft-schemas/inspire-md-schemas/ importing the _srv_ namespace for encoding service metadata and referring to GML version 3.2.1 available in the OGC schema repository (as defined in the schemas at http://inspire.ec.europa.eu/draft-schemas/inspire-md-schemas/srv/1.0/), or an unmodified copy.],
+- [*ISO 19139*] XML Schema as available in the ISO repositoryfootnote:[_http://www.isotc211.org/2005/gmd/gmd.xsd_ referring to GML version 3.2.1 available in the ISO schema repository, or an unmodified copy.], or
+- [*ISO 19139*] XML Schema as available in the OGC schema repositoryfootnote:[_http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd_ referring to GML version 3.2.1 available in the OGC schema repository, or _http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd_ referring to GML version 3.2.0 available in the OGC schema repository, or unmodified copies of either of these.].
 
 All three of these XML Schemas declare the same namespace http://www.isotc211.org/2005/gmd[_http://www.isotc211.org/2005/gmd_].
 
@@ -917,9 +939,9 @@ Examples of code list URLs that can be used in the codeList attribute:
 
 [source,xml,subs="+quotes"]
 ----
-<ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codelistvalue="creation">
+<CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">
   Creazione
-</ci_datetypecode>
+</CI_DateTypeCode>
 ----
 *Example* *2.1*: An instance of CI_DateTypeCode expressed in the default language of the metadata (here: Italian).
 
@@ -932,9 +954,7 @@ The ISO 19139 XML Schemas allow using alternative ways of encoding free text. Th
 [source,xml,subs="+quotes"]
 ----
 <gmd:keyword>
-  <gco:characterstring>
-    weather data
-  </gco:characterstring>
+  <gco:CharacterString>weather data</gco:CharacterString>
 </gmd:keyword>
 ----
 *Example* *2.2*: A (user-defined) keyword declared using gco:CharacterString.
@@ -944,9 +964,7 @@ When the provided text is a term or code referring to an externally defined expl
 [source,xml,subs="+quotes"]
 ----
 <gmd:keyword>
-  <gmx:anchor xlink:href="http://inspire.ec.europa.eu/theme/mf">
-    Meteorological geographical features
-  </gmx:anchor>
+  <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/theme/mf">Meteorological geographical features</gmx:Anchor>
 </gmd:keyword>
 ----
 *Example* *2.3*: A keyword declared using gmx:Anchor element pointing to the controlled vocabulary from which it is taken (in this case, the INSPIRE theme register).
@@ -959,23 +977,17 @@ There is also a third element defined in the ISO 19139 XML Schema for expressing
 
 [source,xml,subs="+quotes"]
 ----
-<gmd:organisationname xsi:type="gmd:PT_FreeText_PropertyType">
-  <gco:characterstring>
-    Ilmatieteen laitos
-  </gco:characterstring>
-  <gmd:pt_freetext>
-    <gmd:textgroup>
-      <gmd:localisedcharacterstring locale="#locale-swe">
-        Meteorologiska institutet
-      </gmd:localisedcharacterstring>
-    </gmd:textgroup>
-    <gmd:textgroup>
-      <gmd:localisedcharacterstring locale="#locale-en">
-        Finnish Meteorological Institute
-      </gmd:localisedcharacterstring>
-    </gmd:textgroup>
-  </gmd:pt_freetext>
-</gmd:organisationname>
+<gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType">
+  <gco:CharacterString>Ilmatieteen laitos</gco:CharacterString>
+  <gmd:PT_FreeText>
+    <gmd:textGroup>
+      <gmd:LocalisedCharacterString locale="#locale-swe">Meteorologiska institutet</gmd:LocalisedCharacterString>
+    </gmd:textGroup>
+    <gmd:textGroup>
+      <gmd:LocalisedCharacterString locale="#locale-en">Finnish Meteorological Institute</gmd:LocalisedCharacterString>
+    </gmd:textGroup>
+  </gmd:PT_FreeText>
+</gmd:organisationName>
 ----
 *Example* *2.4*: gmd:organisationName element dynamically re-typed to gmd:PT_FreeText_PropertyType allowing gmd:PT_FreeText to be added in addition to gco:CharacterString child element.
 
@@ -987,9 +999,14 @@ Note that using explicitly localised free text is usually not required in INSPIR
 ====
 *TG Requirement C.4: metadata/2.0/req/common/free-text*
 
-Free text elements of type _gco:CharacterString_PropertyType_ in INSPIRE metadata shall be expressed in one of the following ways:1. using the _gco:CharacterString_ child element,2. using _gmx:Anchor_ child element, or3. re-typing the containing element to _gmd:PT_FreeText_PropertyType_ using the _xsi:type_ attribute and providing both _gco:CharacterString_ and _gmd:PT_FreeText_ child elements.
+Free text elements of type _gco:CharacterString_PropertyType_ in INSPIRE metadata shall be expressed in one of the following ways:
+1. using the _gco:CharacterString_ child element,
+2. using _gmx:Anchor_ child element, or
+3. re-typing the containing element to _gmd:PT_FreeText_PropertyType_ using the _xsi:type_ attribute and providing both _gco:CharacterString_ and _gmd:PT_FreeText_ child elements.
 
-For options 1 and 2 the character string content of elements shall be provided in the language of the metadata. For option 3 the definition of the used locale shall be provided either using an URI pointing to a _gmd:MD_Metadata/gmd:locale_ element within the same document or to an externally provided _gmd:PT_Locale_ element. The character string content shall not be empty unless explicitly allowed in the element specific TG Requirements.
+For options 1 and 2 the character string content of elements shall be provided in the language of the metadata. For option 3 the definition of the used locale shall be provided either using an URI pointing to a _gmd:MD_Metadata/gmd:locale_ element within the same document or to an externally provided _gmd:PT_Locale_ element.
+
+The character string content shall not be empty unless explicitly allowed in the element specific TG Requirements.
 ====
 
 For convenience and requirement text brevity reasons a special reserved term "Non-empty Free Text Element" is used in this document where any of these three options is allowed.
@@ -1000,18 +1017,15 @@ For convenience and requirement text brevity reasons a special reserved term "No
 **/gmd:MD_Metadata/gmd:locale:**
 
 <gmd:locale>
-  <gmd:pt_locale id="locale-swe">
-    <gmd:languagecode>
-      <gmd:languagecode codelist="http://www.loc.gov/standards/iso639-2" codelistvalue="swe">
-        Swedish
-      </gmd:languagecode>
-    </gmd:languagecode>
-    <gmd:characterencoding>
-      <gmd:md_charactersetcode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode" codelistvalue="utf8">
-        UTF-8
-      </gmd:md_charactersetcode>
+  <gmd:PT_Locale id="locale-swe">
+    <gmd:languageCode>
+      <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2" codeListValue="swe">Swedish</gmd:LanguageCode>
+    </gmd:languageCode>
+    <gmd:characterEncoding>
+      <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8">UTF-8
+      </gmd:MD_CharacterSetCode>
     </gmd:characterencoding>
-  </gmd:pt_locale>
+  </gmd:PT_Locale>
 </gmd:locale>
 ----
 *Example* *2.5*: Locale definition for Swedish language provided for referencing using the gmd:locale element. The gmd:PT_Locale child element has the id attribute "locale-swe" which can be used as the URL fragment identifier in a local XPointer referring to this element from within the same XML document.
@@ -1109,32 +1123,26 @@ Example fragment of the metadata document fulfilling TG Requirement C.6 is given
 **/gmd:MD_Metadata/gmd:contact:**
 
 <gmd:contact>
-  <gmd:ci_responsibleparty>
-    <gmd:organisationname>
-      <gco:characterstring>
-        European Commission, Joint Research Centre
-        <gco:characterstring>
-        </gco:characterstring>
-      </gco:characterstring>
-    </gmd:organisationname>
-    <gmd:contactinfo>
-      <gmd:ci_contact>
+  <gmd:CI_ResponsibleParty>
+    <gmd:organisationName>
+      <gco:CharacterString>European Commission, Joint Research Centre<gco:CharacterString>
+    </gmd:organisationName>
+    <gmd:contactInfo>
+      <gmd:CI_Contact>
         <gmd:address>
-          <gmd:ci_address>
-            <gmd:electronicmailaddress>
-              <gco:characterstring>
-                ies-contact@jrc.ec.europa.eu
-              </gco:characterstring>
-            </gmd:electronicmailaddress>
-          </gmd:ci_address>
+          <gmd:CI_Address>
+            <gmd:electronicMailAddress>
+              <gco:CharacterString>ies-contact@jrc.ec.europa.eu</gco:CharacterString>
+            </gmd:electronicMailAddress>
+          </gmd:CI_Address>
         </gmd:address>
-      </gmd:ci_contact>
-    </gmd:contactinfo>
+      </gmd:CI_Contact>
+    </gmd:contactInfo>
     <gmd:role>
-      <gmd:ci_rolecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" codelistvalue="pointOfContact">
-      </gmd:ci_rolecode>
+      <gmd:CI_RoleCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact">
+      </gmd:CI_RoleCode>
     </gmd:role>
-  </gmd:ci_responsibleparty>
+  </gmd:CI_ResponsibleParty>
 </gmd:contact>
 ----
 *Example* *2.6*: Providing metadata point of contact information.
@@ -1224,7 +1232,15 @@ The multiplicity of this element is 1.
 ====
 *TG Recommendation C.4: metadata/2.0/rec/common/resource-abstract*
 
-The resource abstract is a succinct description that can include:- A brief summary with the most important details that summarise the data or service- Coverage: linguistic transcriptions of the extent or location in addition to the bounding box- Main attributes- Data sources- Legal references- Importance of the workThe most important details of the description should be summarised in the first sentence or the first 256 characters.
+The resource abstract is a succinct description that can include:
+- A brief summary with the most important details that summarise the data or service
+- Coverage: linguistic transcriptions of the extent or location in addition to the bounding box
+- Main attributes
+- Data sources
+- Legal references
+- Importance of the work
+
+The most important details of the description should be summarised in the first sentence or the first 256 characters.
 
 Unexplained acronyms should not be used.
 ====
@@ -1258,7 +1274,11 @@ In the Tables 1 and 2 of [Regulation 1205/2008, Part C], the multiplicity of thi
 ====
 *TG Requirement C.10: metadata/2.0/req/common/responsible-organisation*
 
-The point of contact for the organisation responsible for the establishment, management, maintenance and distribution of the described resource shall be given using element _gmd:pointOfContact_/_gmd:CI_ResponsibleParty_.The multiplicity of this element is 1..*.The _gmd:CI_ResponsibleParty_ element shall contain the following child elements: The name of the organisation shall be given as the value of _gmd:pointOfContact_/_gmd:CI_ResponsibleParty_/_gmd:organisationName_ element with a Non-empty Free Text Element content.
+The point of contact for the organisation responsible for the establishment, management, maintenance and distribution of the described resource shall be given using element _gmd:pointOfContact_/_gmd:CI_ResponsibleParty_.The multiplicity of this element is 1..*.
+
+The _gmd:CI_ResponsibleParty_ element shall contain the following child elements:
+
+The name of the organisation shall be given as the value of _gmd:pointOfContact_/_gmd:CI_ResponsibleParty_/_gmd:organisationName_ element with a Non-empty Free Text Element content.
 
 The email address of the organisation shall be provided as the value of _gmd:pointOfContact_/_gmd:CI_ResponsibleParty_/_gmd:contactInfo_/_gmd:CI_Contact_/_gmd:address_/_gmd:CI_Address_/_gmd:electronicMailAddress_ element with a Non-empty Free Text Element containing a functioning email address of the responsible party.
 
@@ -1316,7 +1336,13 @@ To fulfil both INSPIRE and ISO 19115/19139 requirements the following is require
 ====
 *TG Requirement C.11: metadata/2.0/req/common/temporal-reference*
 
-At least one temporal reference describing the resource shall be given using _gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date_ element, with one of the following date types:- _publication_ for date of publication of the resource,- _revision_ for the date of last revision of the resource, or- _creation_ for the date of creation of the resource__.__The date type shall be given using the _gmd:citation_/_gmd:CI_Citation_/_gmd:date_/_gmd:CI_Date_/_gmd:dateType_/_gmd:CI_DateTypeCode_ element and it shall point to the corresponding value of [ISO 19139] code list CI_DateTypeCode mentioned above.
+At least one temporal reference describing the resource shall be given using _gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date_ element, with one of the following date types:
+
+- _publication_ for date of publication of the resource,
+- _revision_ for the date of last revision of the resource, or
+- _creation_ for the date of creation of the resource.
+
+The date type shall be given using the _gmd:citation_/_gmd:CI_Citation_/_gmd:date_/_gmd:CI_Date_/_gmd:dateType_/_gmd:CI_DateTypeCode_ element and it shall point to the corresponding value of [ISO 19139] code list CI_DateTypeCode mentioned above.
 
 The date values shall be expressed using Gregorian calendar and in accordance with [ISO 8601] with either date precision or date and time precision. For date precision the _gmd:CI_Date_/_gmd:date_/_gco:Date_ element, and for date and time precision _gmd:CI_Date_/_gmd:date_/_gco:DateTime_ element shall be used.
 ====
@@ -1350,9 +1376,13 @@ In case of spatial data set, at least the date of the last revision of the spati
 
 If a temporal reference is provided using the temporal extent, it shall be encoded using the _gmd:extent/gmd:EX_Extent_ element with one or more _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ child elements. The value of each of these element may be an individual date or a time period between two dates.
 
-The multiplicity of this element is 0..*.A single individual date or a time period shall be encoded using one _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ element. For individual dates this element shall contain a _gml:TimeInstant/gml:timePosition_ element with the date value given according to [ISO 8601].
+The multiplicity of this element is 0..*.
 
-For a single time period the _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ element shall contain a _gml:TimePeriod_ element containing start and end dates of the period. In case the time period is open-ended with either the start or the end date unknown, the elements _gml:startPosition_ or _gml:endPosition_ may be used with an empty value and the attribute _indeterminatePosition_ with value "unknown". If the temporal extent is on-going, the _gml:endPosition_ may be used with an empty value and the attribute _indeterminatePosition_ with value "now".Individual dates and time periods may be combined to form a complex temporal extent using multiple _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ elements.
+A single individual date or a time period shall be encoded using one _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ element. For individual dates this element shall contain a _gml:TimeInstant/gml:timePosition_ element with the date value given according to [ISO 8601].
+
+For a single time period the _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ element shall contain a _gml:TimePeriod_ element containing start and end dates of the period. In case the time period is open-ended with either the start or the end date unknown, the elements _gml:startPosition_ or _gml:endPosition_ may be used with an empty value and the attribute _indeterminatePosition_ with value "unknown". If the temporal extent is on-going, the _gml:endPosition_ may be used with an empty value and the attribute _indeterminatePosition_ with value "now".
+
+Individual dates and time periods may be combined to form a complex temporal extent using multiple _gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent_ elements.
 ====
 
 An example XML fragment with only a _gmd:CI_Citation_ element with the revision date of a service provided as the temporal reference, is given as Example 2.7.
@@ -1361,58 +1391,57 @@ An example XML fragment with only a _gmd:CI_Citation_ element with the revision 
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation:**
 
-<gmd:ci_citation>
+<gmd:CI_Citation>
   <gmd:title>
-    <gco:characterstring>
+    <gco:CharacterString>
       INSPIRE compliant View Service for the Finnish Cadastral Parcels
-    </gco:characterstring>
+    </gco:CharacterString>
   </gmd:title>
   <gmd:date>
-    <gmd:ci_date>
+    <gmd:CI_Date>
       <gmd:date>
         <gco:date>
           2013-02-21
         </gco:date>
       </gmd:date>
-      <gmd:datetype>
-        <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codelistvalue="revision">
+      <gmd:dateType>
+        <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">
           révision
-        </gmd:ci_datetypecode>
-      </gmd:datetype>
-    </gmd:ci_date>
+        </gmd:CI_DateTypeCode>
+      </gmd:dateType>
+    </gmd:CI_Date>
   </gmd:date>
-</gmd:ci_citation>
+</gmd:CI_Citation>
 ----
 *Example* *2.7*: Revision date for a View Service provided as the only mandatory temporal reference. Note the use of localised French term "révision" as the textual value of the date type code element pointing to the non-localised code list value "revision".
 
 [source,xml,subs="+quotes"]
 ----
-<gmd:md_metadata <gmd:identificationinfo="" …="">
-  <gmd:md_dataidentification>
+<gmd:MD_Metadata …
+…
+<gmd:identificationInfo>
+  <gmd:MD_DataIdentification>
     …
     <gmd:extent>
-      <gmd:ex_extent>
-        <gmd:temporalelement>
-          <gmd:ex_temporalextent>
+      <gmd:EX_Extent>
+        <gmd:temporalElement>
+          <gmd:EX_TemporalExtent>
             <gmd:extent>
-              <gml:timeperiod gml:id="IDd2febbb4-e66f-4ac8-ba76-8fd9bc7c8be6">
-                <gml:beginposition>
-                  2008-01-01T11:45:30
-                </gml:beginposition>
-                <gml:endposition>
-                  2008-12-31T09:10:00
-                </gml:endposition>
-              </gml:timeperiod>
+              <gml:TimePeriod gml:id="IDd2febbb4-e66f-4ac8-ba76-8fd9bc7c8be6">
+                <gml:beginPosition>2008-01-01T11:45:30</gml:beginPosition>
+                <gml:endposition>2008-12-31T09:10:00</gml:endposition>
+              </gml:TimePeriod>
             </gmd:extent>
-          </gmd:ex_temporalextent>
-        </gmd:temporalelement>
-      </gmd:ex_extent>
+          </gmd:EX_TemporalExtent>
+        </gmd:temporalElement>
+      </gmd:EX_Extent>
     </gmd:extent>
     …
-  </gmd:md_dataidentification>
+  </gmd:MD_DataIdentification>
   …
-  …
-</gmd:md_metadata>
+  </gmd:identificationInfo>
+…
+</gmd:MD_Metadata >
 ----
 *Example* *2.8*: Temporal extent
 
@@ -1467,29 +1496,29 @@ For references to well-known thesauri or controlled vocabularies, the _title_ el
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName**
 
-<gmd:thesaurusname>
-  <gmd:ci_citation>
+<gmd:thesaurusName>
+  <gmd:CI_Citation>
     <gmd:title>
-      <gmx:anchor xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes">
+      <gmx:Anchor xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes">
         GEMET - INSPIRE themes, version 1.0
-      </gmx:anchor>
+      </gmx:Anchor>
     </gmd:title>
     <gmd:date>
-      <gmd:ci_date>
+      <gmd:CI_Date>
         <gmd:date>
           <gco:date>
             2008-06-01
           </gco:date>
         </gmd:date>
-        <gmd:datetype>
-          <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+        <gmd:dateType>
+          <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
             publication
-          </gmd:ci_datetypecode>
-        </gmd:datetype>
-      </gmd:ci_date>
+          </gmd:CI_DateTypeCode>
+        </gmd:dateType>
+      </gmd:CI_Date>
     </gmd:date>
-  </gmd:ci_citation>
-</gmd:thesaurusname>
+  </gmd:CI_Citation>
+</gmd:thesaurusName>
 ----
 *Example* *2.9:* Use of gmx:Anchor elements for the vocabulary title, with a reference to the vocabulary, the GEMET – INSPIRE themes thesaurus in this case.
 
@@ -1505,8 +1534,8 @@ The use of _gmx:Anchor_ elements and pre-defined XML fragments for _CI_Citations
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName**
 
-<gmd:thesaurusname xlink:href="http://inspire.ec.europa.eu/id/citation/voc/gemet-inspire-themes-1.0">
-</gmd:thesaurusname>
+<gmd:thesaurusName xlink:href="http://inspire.ec.europa.eu/id/citation/voc/gemet-inspire-themes-1.0">
+</gmd:thesaurusName>
 ----
 *Example* *2.10:* Encoding the thesaurusName by reference to an XML fragment document containing the CI_Citation element.
 
@@ -1514,29 +1543,29 @@ The use of _gmx:Anchor_ elements and pre-defined XML fragments for _CI_Citations
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName**
 
-<gmd:thesaurusname xlink:href="http://inspire.ec.europa.eu/id/citation/voc/gemet-inspire-themes-1.0">
-  <gmd:ci_citation>
+<gmd:thesaurusName xlink:href="http://inspire.ec.europa.eu/id/citation/voc/gemet-inspire-themes-1.0">
+  <gmd:CI_Citation>
     <gmd:title>
-      <gmx:anchor xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes">
+      <gmx:Anchor xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes">
         GEMET - INSPIRE themes, version 1.0
-      </gmx:anchor>
+      </gmx:Anchor>
     </gmd:title>
     <gmd:date>
-      <gmd:ci_date>
+      <gmd:CI_Date>
         <gmd:date>
           <gco:date>
             2008-06-01
           </gco:date>
         </gmd:date>
-        <gmd:datetype>
-          <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+        <gmd:dateType>
+          <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
             publication
-          </gmd:ci_datetypecode>
-        </gmd:datetype>
-      </gmd:ci_date>
+          </gmd:CI_DateTypeCode>
+        </gmd:dateType>
+      </gmd:CI_Date>
     </gmd:date>
-  </gmd:ci_citation>
-</gmd:thesaurusname>
+  </gmd:CI_Citation>
+</gmd:thesaurusName>
 ----
 *Example* *2.11:* Including the CI_Citation element in addition to a reference to a pre-defined XML fragment document.
 
@@ -1555,40 +1584,34 @@ Further requirements for using keywords are given in the Conformance Class 1 dat
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:descriptiveKeywords/gmd:MD_Keywords:**
 
-<gmd:md_keywords>
+<gmd:MD_Keywords>
   <gmd:keyword>
-    <gmx:anchor xlink:href="http://inspire.ec.europa.eu/theme/ac">
+    <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/theme/ac">
       Atmospheric conditions
-    </gmx:anchor>
+    </gmx:Anchor>
   </gmd:keyword>
   <gmd:keyword>
-    <gmx:anchor xlink:href="http://inspire.ec.europa.eu/theme/mf">
-      Meteorological geographical features
-    </gmx:anchor>
+    <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/theme/mf">Meteorological geographical features</gmx:Anchor>
   </gmd:keyword>
-  <gmd:thesaurusname>
-    <gmd:ci_citation>
+  <gmd:thesaurusName>
+    <gmd:CI_Citation>
       <gmd:title>
-        <gmx:anchor xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes">
-          GEMET - INSPIRE themes, version 1.0
-        </gmx:anchor>
+        <gmx:Anchor xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes">GEMET - INSPIRE themes, version 1.0</gmx:Anchor>
       </gmd:title>
       <gmd:date>
-        <gmd:ci_date>
+        <gmd:CI_Date>
           <gmd:date>
-            <gco:date>
-              2008-06-01
-            </gco:date>
+            <gco:date>2008-06-01</gco:date>
           </gmd:date>
-          <gmd:datetype>
-            <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
-            </gmd:ci_datetypecode>
-          </gmd:datetype>
-        </gmd:ci_date>
+          <gmd:dateType>
+            <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
+            </gmd:CI_DateTypeCode>
+          </gmd:dateType>
+        </gmd:CI_Date>
       </gmd:date>
-    </gmd:ci_citation>
-  </gmd:thesaurusname>
-</gmd:md_keywords>
+    </gmd:CI_Citation>
+  </gmd:thesaurusName>
+</gmd:MD_Keywords>
 ----
 *Example* *2.12*: Using and grouping keywords from controlled vocabularies
 
@@ -1656,7 +1679,9 @@ Limitations on public access (or lack of such limitations) for the described res
 
 The limitations on public access (or lack of such limitations) based on reasons referred to in point (a) or in points (c) to (h) of Article 13(1) of INSPIRE Directive quoted above, the gmd:resourceConstraints/gmd:MD_LegalConstraints element shall include a combination of
 
-- one instance of _gmd:accessConstraints_/_gmd:MD_RestrictionCode_ element with code list value "otherRestrictions" and- at least one instance of _gmd:otherConstraints_/_gmx:Anchor_ pointing to one of the values from the code list for LimitationsOnPublicAccessfootnote:[INSPIRE Registry, attribute xlink:href with URL value starting with "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/" and postfixed with one of values of code list LimitationsOnPublicAccess, see Annex D.1]. If there are no limitations on public access, the element shall point to the code list value "noLimitations".
+- one instance of _gmd:accessConstraints_/_gmd:MD_RestrictionCode_ element with code list value "otherRestrictions" and
+
+- at least one instance of _gmd:otherConstraints_/_gmx:Anchor_ pointing to one of the values from the code list for LimitationsOnPublicAccessfootnote:[INSPIRE Registry, attribute xlink:href with URL value starting with "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/" and postfixed with one of values of code list LimitationsOnPublicAccess, see Annex D.1]. If there are no limitations on public access, the element shall point to the code list value "noLimitations".
 ====
 
 Example 2.13 shows a fragment of the metadata document declaring limitation on public access based on Article 13(1) a of the [INSPIRE Directive].
@@ -1665,19 +1690,19 @@ Example 2.13 shows a fragment of the metadata document declaring limitation on p
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceConstraints:**
 
-<gmd:resourceconstraints>
-  <gmd:md_legalconstraints>
-    <gmd:accessconstraints>
-      <gmd:md_restrictioncode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codelistvalue="otherRestrictions">
+<gmd:resourceConstraints>
+  <gmd:MD_LegalConstraints>
+    <gmd:accessConstraints>
+      <gmd:md_restrictioncode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">
       </gmd:md_restrictioncode>
-    </gmd:accessconstraints>
-    <gmd:otherconstraints>
-      <gmx:anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a">
+    </gmd:accessConstraints>
+    <gmd:otherConstraints>
+      <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a">
         Limitation d’accés public basé sur l’article 13(1) de la directive INSPIRE
-      </gmx:anchor>
-    </gmd:otherconstraints>
-  </gmd:md_legalconstraints>
-</gmd:resourceconstraints>
+      </gmx:Anchor>
+    </gmd:otherConstraints>
+  </gmd:MD_LegalConstraints>
+</gmd:resourceConstraints>
 ----
 *Example* *2.13*: Limitations on public access based on the Article 13(1) a described using a combination of gmd:accessConstraints and gmd:otherConstraints with the xlink:href attribute of the Anchor element pointing to the non-localized code list in the INSPIRE Registry. The textual content of the gmx:Anchor element is given in the language of the metadata (French in this case).
 
@@ -1741,35 +1766,30 @@ Example 2.14 shows an XML fragment of a data set metadata record with both limit
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceConstraints:**
 
-<gmd:resourceconstraints>
-  <gmd:md_legalconstraints>
-    <gmd:accessconstraints>
-      <gmd:md_restrictioncode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codelistvalue="otherRestrictions">
+<gmd:resourceConstraints>
+  <gmd:MD_LegalConstraints>
+    <gmd:accessConstraints>
+      <gmd:md_restrictioncode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">
       </gmd:md_restrictioncode>
-    </gmd:accessconstraints>
-    <gmd:otherconstraints>
-      <gmx:anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations">
-        No limitations on public access
-      </gmx:anchor>
-    </gmd:otherconstraints>
-  </gmd:md_legalconstraints>
-</gmd:resourceconstraints>
-<gmd:resourceconstraints>
-  <gmd:md_legalconstraints>
+    </gmd:accessConstraints>
+    <gmd:otherConstraints>
+      <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations">No limitations on public access</gmx:Anchor>
+    </gmd:otherConstraints>
+  </gmd:MD_LegalConstraints>
+</gmd:resourceConstraints>
+<gmd:resourceConstraints>
+  <gmd:MD_LegalConstraints>
     <gmd:useconstraints>
-      <gmd:md_restrictioncode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codelistvalue="otherRestrictions">
+      <gmd:md_restrictioncode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">
       </gmd:md_restrictioncode>
     </gmd:useconstraints>
-    <gmd:otherconstraints>
-      <gmx:anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/
-
-
-ConditionsApplyingToAccessAndUse/noConditionsApply">
+    <gmd:otherConstraints>
+      <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply">
         No conditions apply to access and use
-      </gmx:anchor>
-    </gmd:otherconstraints>
-  </gmd:md_legalconstraints>
-</gmd:resourceconstraints>
+      </gmx:Anchor>
+    </gmd:otherConstraints>
+  </gmd:MD_LegalConstraints>
+</gmd:resourceConstraints>
 ----
 *Example* *2.14*: Limitations on public access together with conditions of access and use are provided using two gmd:resourceConstraints elements. In this case there are no limitations on public access nor conditions for access and use. The gmd:useConstraints element is used in this example for declaring conditions for access and use.
 
@@ -1806,36 +1826,29 @@ The bounding coordinate values for west and east bound longitudes and south and 
 **/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:extent:**
 
 <gmd:extent>
-  <gmd:ex_extent>
+  <gmd:EX_Extent>
     <gmd:geographicelement>
       <gmd:ex_geographicboundingbox>
         <gmd:westboundlongitude>
-          <gco:decimal>
-            -15.00
-          </gco:decimal>
+          <gco:decimal>-15.00</gco:decimal>
         </gmd:westboundlongitude>
         <gmd:eastboundlongitude>
-          <gco:decimal>
-            45.00
-          </gco:decimal>
+          <gco:decimal>45.00</gco:decimal>
         </gmd:eastboundlongitude>
         <gmd:southboundlatitude>
-          <gco:decimal>
-            35.00
-          </gco:decimal>
+          <gco:decimal>35.00</gco:decimal>
         </gmd:southboundlatitude>
         <gmd:northboundlatitude>
-          <gco:decimal>
-            72.00
-          </gco:decimal>
+          <gco:decimal>72.00</gco:decimal>
         </gmd:northboundlatitude>
       </gmd:ex_geographicboundingbox>
     </gmd:geographicelement>
-  </gmd:ex_extent>
+  </gmd:EX_Extent>
 </gmd:extent>
 ----
 *Example* *2.15:* Geographic bounding box for a data set or service provided using gmd:EX_GeographicBoundingBox.
 
+<<<
 === Data quality info section
 
 The metadata elements described in this section are contained within the _gmd:dataQualityInfo/gmd:DQ_DataQuality_ child element of _gmd:MD_Metadata_ element.
@@ -1898,30 +1911,29 @@ The multiplicity of this element is 1..*.
 ----
 **/gmd:MD_Metadata/:**
 
-<dataqualityinfo>
-  <dq_dataquality>
-    <scope (…)="">
-    </scope>
-    <report>
-      <dq_domainconsistency>
+<dataQualityInfo>
+  <DQ_DataQuality>
+    <scope (…) />
+     <report>
+      <DQ_DomainConsistency>
         <result>
-          <dq_conformanceresult>
+          <DQ_ConformanceResult>
             (…)
-          </dq_conformanceresult>
+          </DQ_ConformanceResult>
         </result>
-      </dq_domainconsistency>
+      </DQ_DomainConsistency>
     </report>
     <report>
-      <dq_domainconsistency>
+      <DQ_DomainConsistency>
         <result>
-          <dq_conformanceresult>
+          <DQ_ConformanceResult>
             (…)
-          </dq_conformanceresult>
+          </DQ_ConformanceResult>
         </result>
-      </dq_domainconsistency>
+      </DQ_DomainConsistency>
     </report>
-  </dq_dataquality>
-</dataqualityinfo>
+  </DQ_DataQuality>
+</dataQualityInfo>
 ----
 *Example* *2.16:* Providing several conformity statements
 
@@ -1950,27 +1962,25 @@ For references to well-known INSPIRE legal acts, technical guidance documents or
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:specification**
 
 <gmd:specification>
-  <gmd:ci_citation>
+  <gmd:CI_Citation>
     <gmd:title>
-      <gmx:anchor xlink:href="http://data.europa.eu/eli/reg/2010/1089">
+      <gmx:Anchor xlink:href="http://data.europa.eu/eli/reg/2010/1089">
         COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services
-      </gmx:anchor>
+      </gmx:Anchor>
     </gmd:title>
     <gmd:date>
-      <gmd:ci_date>
+      <gmd:CI_Date>
         <gmd:date>
-          <gco:date>
-            2010-12-08
-          </gco:date>
+          <gco:date>2010-12-08</gco:date>
         </gmd:date>
-        <gmd:datetype>
-          <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+        <gmd:dateType>
+          <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
             publication
-          </gmd:ci_datetypecode>
-        </gmd:datetype>
-      </gmd:ci_date>
+          </gmd:CI_DateTypeCode>
+        </gmd:dateType>
+      </gmd:CI_Date>
     </gmd:date>
-  </gmd:ci_citation>
+  </gmd:CI_Citation>
 </gmd:specification>
 ----
 *Example* *2.17:* Using an gmx:Anchor element for the specification title
@@ -1987,8 +1997,7 @@ The use of _gmx:Anchor_ elements and pre-defined XML fragments for _CI_Citations
 ----
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:specification**
 
-<gmd:specification xlink:href="http://inspire.ec.europa.eu/id/citation/ir/reg-1089-2010">
-</gmd:specification>
+<gmd:specification xlink:href="http://inspire.ec.europa.eu/id/citation/ir/reg-1089-2010"/>
 ----
 *Example* *2.18:* Encoding the specification by reference to an XML fragment document containing the CI_Citation element.
 
@@ -1997,27 +2006,23 @@ The use of _gmx:Anchor_ elements and pre-defined XML fragments for _CI_Citations
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:specification**
 
 <gmd:specification xlink:href="http://inspire.ec.europa.eu/id/citation/ir/reg-1089-2010">
-  <gmd:ci_citation>
+  <gmd:CI_Citation>
     <gmd:title>
-      <gco:characterstring>
-        COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services
-      </gco:characterstring>
+      <gco:CharacterString>COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services</gco:CharacterString>
     </gmd:title>
     <gmd:date>
-      <gmd:ci_date>
+      <gmd:CI_Date>
         <gmd:date>
-          <gco:date>
-            2010-12-08
-          </gco:date>
+          <gco:date>2010-12-08</gco:date>
         </gmd:date>
-        <gmd:datetype>
-          <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+        <gmd:dateType>
+          <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
             publication
-          </gmd:ci_datetypecode>
-        </gmd:datetype>
-      </gmd:ci_date>
+          </gmd:CI_DateTypeCode>
+        </gmd:dateType>
+      </gmd:CI_Date>
     </gmd:date>
-  </gmd:ci_citation>
+  </gmd:CI_Citation>
 </gmd:specification>
 ----
 *Example* *2.19:* Including the CI_Citation element in addition to a reference to a pre-defined XML fragment document.
@@ -2029,6 +2034,7 @@ The use of _gmx:Anchor_ elements and pre-defined XML fragments for _CI_Citations
 Each _gmd:report_/_gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult_ element containing a specification citation described in Requirement C.21 shall also include the degree of declared conformity against this specification using _gmd:pass_ property with _gco:Boolean_ value of "true" for a conformant resource and "false" for non-conformant resource. If the conformity has not yet been evaluated, the _gmd:pass_ element shall be empty and contain a nil reason attribute with value "unknown"footnote:[Attribute gco:nilReason="unknown".].
 ====
 
+<<<
 == Conformance Classes for data sets
 
 === Baseline metadata for data sets and data set series
@@ -2074,10 +2080,10 @@ The resource type shall be declared as "dataset" or "series" using the first _gm
 ----
 **/gmd:MD_Metadata/gmd:hierarchyLevel:**
 
-<gmd:hierarchylevel>
-  <gmd:md_scopecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codelistvalue="dataset">
-  </gmd:md_scopecode>
-</gmd:hierarchylevel>
+<gmd:hierarchyLevel>
+  <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">
+  </gmd:MD_ScopeCode>
+</gmd:hierarchyLevel>
 ----
 *Example* *3.1:* Resource type "dataset" given using gmd:hierarchyLevel property.
 
@@ -2170,39 +2176,35 @@ The persistence and process of preventing breaking the identifier resolvability 
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification:**
 
-<gmd:md_dataidentification id="md-so-1002001">
+<gmd:MD_DataIdentification id="md-so-1002001">
   <gmd:citation>
-    <gmd:ci_citation>
+    <gmd:CI_Citation>
       <gmd:title>
-        <gco:characterstring>
-          INSPIRE_Flurstücke_ALKIS_NRW
-        </gco:characterstring>
+        <gco:CharacterString>INSPIRE_Flurstücke_ALKIS_NRW</gco:CharacterString>
       </gmd:title>
       <gmd:date>
-        <gmd:ci_date>
+        <gmd:CI_Date>
           <gmd:date>
-            <gco:date>
-              2016-07-01
-            </gco:date>
+            <gco:date>2016-07-01</gco:date>
           </gmd:date>
-          <gmd:datetype>
-            <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
-            </gmd:ci_datetypecode>
-          </gmd:datetype>
-        </gmd:ci_date>
+          <gmd:dateType>
+            <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
+            </gmd:CI_DateTypeCode>
+          </gmd:dateType>
+        </gmd:CI_Date>
       </gmd:date>
       <gmd:identifier>
-        <gmd:md_identifier>
+        <gmd:MD_Identifier>
           <gmd:code>
-            <gmx:anchor xlink:href="https://registry.gdi-de.org/id/de.nw/inspire-cp-alkis">
-            </gmx:anchor>
+            <gmx:Anchor xlink:href="https://registry.gdi-de.org/id/de.nw/inspire-cp-alkis">
+            </gmx:Anchor>
           </gmd:code>
-        </gmd:md_identifier>
+        </gmd:MD_Identifier>
       </gmd:identifier>
-    </gmd:ci_citation>
+    </gmd:CI_Citation>
   </gmd:citation>
   ...
-</gmd:md_dataidentification>
+</gmd:MD_DataIdentification>
 ----
 *Example* *3.2:* Unique identifier for a INSPIRE ProtectedSites data set given using gmd:identifier element within the gmd:citation element. Note also the recommended id attribute of the gmd:MD_DataIdentifier to be used for couple resource linking
 
@@ -2210,9 +2212,8 @@ The persistence and process of preventing breaking the identifier resolvability 
 
 The [Regulation 1205/2008], Part B, 3 describes how the Keyword elements shall be used for describing the relevant INSPIRE spatial data themes for the described data set or data set series:
 
-{empty}
 ____
-3. KEYWORD
+{empty}3. KEYWORD
 
 (…)
 
@@ -2225,7 +2226,9 @@ ____
 
 The INSPIRE Spatial Data Theme(s), to which the data set belongs to, shall be declared using at least one keyword from the INSPIRE Spatial Data Themes vocabulary of the general environmental multilingual thesaurus (GEMET). The keyword values shall be the exact text values of the terms in this vocabulary.
 
-These keywords shall be encoded using an _gmd:descriptiveKeywords_/_gmd:MD_Keywords_ element referring to the GEMET INSPIRE themes controlled vocabulary as specified in section 2.4.5. The value of the _gmd:thesaurusName/gmd:CI_Citation/gmd:title_ element shall contain value "GEMET - INSPIRE themes, version 1.0".For each INSPIRE Spatial Data Theme, a _gmd:keyword_ element shall be included with the title of the theme as a Non-empty Free Text Element content in the language of the metadata.
+These keywords shall be encoded using an _gmd:descriptiveKeywords_/_gmd:MD_Keywords_ element referring to the GEMET INSPIRE themes controlled vocabulary as specified in section 2.4.5. The value of the _gmd:thesaurusName/gmd:CI_Citation/gmd:title_ element shall contain value "GEMET - INSPIRE themes, version 1.0".
+
+For each INSPIRE Spatial Data Theme, a _gmd:keyword_ element shall be included with the title of the theme as a Non-empty Free Text Element content in the language of the metadata.
 ====
 
 [TIP]
@@ -2245,40 +2248,32 @@ See Example 3.3 for an example of the XML fragment containing GEMET keywords for
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords:**
 
-<gmd:md_keywords>
+<gmd:MD_Keywords>
   <gmd:keyword>
-    <gmx:anchor xlink:href="http://inspire.ec.europa.eu/theme/ac">
-      Atmospheric conditions
-    </gmx:anchor>
+    <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/theme/ac">Atmospheric conditions</gmx:Anchor>
   </gmd:keyword>
   <gmd:keyword>
-    <gmx:anchor xlink:href="http://inspire.ec.europa.eu/theme/mf">
-      Meteorological geographical features
-    </gmx:anchor>
+    <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/theme/mf">Meteorological geographical features</gmx:Anchor>
   </gmd:keyword>
-  <gmd:thesaurusname>
-    <gmd:ci_citation>
+  <gmd:thesaurusName>
+    <gmd:CI_Citation>
       <gmd:title>
-        <gmx:anchor xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes">
-          GEMET - INSPIRE themes, version 1.0
-        </gmx:anchor>
+        <gmx:Anchor xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes">GEMET - INSPIRE themes, version 1.0</gmx:Anchor>
       </gmd:title>
       <gmd:date>
-        <gmd:ci_date>
+        <gmd:CI_Date>
           <gmd:date>
-            <gco:date>
-              2008-06-01
-            </gco:date>
+            <gco:date>2008-06-01</gco:date>
           </gmd:date>
-          <gmd:datetype>
-            <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
-            </gmd:ci_datetypecode>
-          </gmd:datetype>
-        </gmd:ci_date>
+          <gmd:dateType>
+            <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
+            </gmd:CI_DateTypeCode>
+          </gmd:dateType>
+        </gmd:CI_Date>
       </gmd:date>
-    </gmd:ci_citation>
-  </gmd:thesaurusname>
-</gmd:md_keywords>
+    </gmd:CI_Citation>
+  </gmd:thesaurusName>
+</gmd:MD_Keywords>
 ----
 *Example* *3.3:* Keywords element for a data set belonging to two INSPIRE Spatial Data Themes: Atmospheric conditions and Meteorological geographical features.
 
@@ -2312,7 +2307,9 @@ The multiplicity of this element as defined in [Regulation 1205/2008], Part C, T
 ====
 *TG Requirement 1.5: metadata/2.0/req/datasets-and-series/spatial-resolution*
 
-Spatial resolution for data set or data set series shall be given using either equivalent scale or a resolution distance, provided that these have been specified for the described data sets. If both ways have been specified, only one of the ways shall be used. The spatial resolution as equivalent scale shall be encoded using _gmd:spatialResolution_/_gmd:MD_Resolution_/_gmd:equivalentScale_/_gmd:MD_RepresentativeFraction_/_gmd:denominator_/_gco:Integer_ element.
+Spatial resolution for data set or data set series shall be given using either equivalent scale or a resolution distance, provided that these have been specified for the described data sets. If both ways have been specified, only one of the ways shall be used.
+
+The spatial resolution as equivalent scale shall be encoded using _gmd:spatialResolution_/_gmd:MD_Resolution_/_gmd:equivalentScale_/_gmd:MD_RepresentativeFraction_/_gmd:denominator_/_gco:Integer_ element.
 
 The spatial resolution as resolution distance shall be encoded using _gmd:spatialResolution_/_gmd:MD_Resolution_/_gmd:distance_/_gco:Distance_ element.
 
@@ -2330,19 +2327,17 @@ If the spatial resolution is an interval, both bounding values of the interval s
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution:**
 
-<gmd:spatialresolution>
-  <gmd:md_resolution>
-    <gmd:equivalentscale>
-      <gmd:md_representativefraction>
+<gmd:spatialResolution>
+  <gmd:MD_Resolution>
+    <gmd:equivalentScale>
+      <gmd:MD_RepresentativeFraction>
         <gmd:denominator>
-          <gco:integer>
-            50000
-          </gco:integer>
+          <gco:integer>50000</gco:integer>
         </gmd:denominator>
-      </gmd:md_representativefraction>
-    </gmd:equivalentscale>
-  </gmd:md_resolution>
-</gmd:spatialresolution>
+      </gmd:MD_RepresentativeFraction>
+    </gmd:equivalentScale>
+  </gmd:MD_Resolution>
+</gmd:spatialResolution>
 ----
 *Example* *3.4:* Spatial resolution of a data set expressed using equivalent scale.
 
@@ -2350,15 +2345,13 @@ If the spatial resolution is an interval, both bounding values of the interval s
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution:**
 
-<gmd:spatialresolution>
-  <gmd:md_resolution>
+<gmd:spatialResolution>
+  <gmd:MD_Resolution>
     <gmd:distance>
-      <gco:distance uom="dd">
-        0.25
-      </gco:distance>
+      <gco:distance uom="dd">0.25</gco:distance>
     </gmd:distance>
-  </gmd:md_resolution>
-</gmd:spatialresolution>
+  </gmd:MD_Resolution>
+</gmd:spatialResolution>
 ----
 *Example* *3.5:* Spatial resolution of a data set expressed using distance.
 
@@ -2367,22 +2360,18 @@ If the spatial resolution is an interval, both bounding values of the interval s
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution:**
 
-<gmd:spatialresolution>
-  <gmd:md_resolution>
+<gmd:spatialResolution>
+  <gmd:MD_Resolution>
     <gmd:distance>
-      <gco:distance uom="dd">
-        0.24
-      </gco:distance>
+      <gco:distance uom="dd">0.24</gco:distance>
     </gmd:distance>
-  </gmd:md_resolution>
-  <gmd:md_resolution>
+  </gmd:MD_Resolution>
+  <gmd:MD_Resolution>
     <gmd:distance>
-      <gco:distance uom="dd">
-        0.26
-      </gco:distance>
+      <gco:distance uom="dd">0.26</gco:distance>
     </gmd:distance>
-  </gmd:md_resolution>
-</gmd:spatialresolution>
+  </gmd:MD_Resolution>
+</gmd:spatialResolution>
 ----
 *Example* *3.6:* Spatial resolution of a data set expressed using an interval of distances.
 
@@ -2407,7 +2396,9 @@ Table 1 contained in Part C of [Regulation 1205/2008] defines the multiplicity o
 
 For data sets or data set series containing textual information, the language(s) used in the resource shall be given. The language(s) used shall be encoded using one or more _gmd:language_/_gmd:LanguageCode_ elements. The attribute codeListValue shall contain one of the three-letter language codes of the ISO 639-2/B code list. The attribute codeList shall be either http://www.loc.gov/standards/iso639-2/ or http://id.loc.gov/vocabulary/iso639-2.
 
-The multiplicity of the _gmd:language_ element is 1..*.If the described resource does not contain textual information expressed in a natural language the special code value "zxx" of the ISO 639-2/B reserved for "no linguistic content; not applicable" shall be used.
+The multiplicity of the _gmd:language_ element is 1..*.
+
+If the described resource does not contain textual information expressed in a natural language the special code value "zxx" of the ISO 639-2/B reserved for "no linguistic content; not applicable" shall be used.
 ====
 
 [TIP]
@@ -2422,9 +2413,7 @@ The name of the language(s) of the described resource in the language of the met
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language:**
 
 <gmd:language>
-  <gmd:languagecode codelist="http://www.loc.gov/standards/iso639-2/" codelistvalue="fin">
-    Suomi
-  </gmd:languagecode>
+  <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="fin">Suomi</gmd:LanguageCode>
 </gmd:language>
 ----
 *Example* *3.7:* Resource language for a data set provided in Finnish. Note the content of the gmd:LanguageCode "Suomi": it is the name of the Finnish language in Finnish (the language of the metadata).
@@ -2463,11 +2452,9 @@ Note that contrary to many other code lists which are defined in the ISO 19139 X
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory:**
 
-<gmd:topiccategory>
-  <gmd:md_topiccategorycode>
-    environment
-  </gmd:md_topiccategorycode>
-</gmd:topiccategory>
+<gmd:topicCategory>
+  <gmd:MD_TopicCategoryCode>environment</gmd:MD_TopicCategoryCode>
+</gmd:topicCategory>
 ----
 *Example* *3.8:* Topic category element with enumeration value "environment".
 
@@ -2515,42 +2502,43 @@ A Resource Locator encoded using the gmd:CI_OnlineResource element may also incl
 
 The _gmd:name_, _gmd:description_, and _gmd:function_/_gmd:CI_OnLineFunctionCode_ child elements of _gmd:CI_OnlineResource_ element containing the given _gmd:linkage_ element should also be provided, if possible, to give additional information about the provided URL link. The _gmd:name_ and the _gmd:description_ elements should contain Non-empty Free Text Elements.
 
-If provided, the _gmd:CI_OnLineFunctionCode_ element should point to one of the values of the ISO 19139 code list CI_OnLineFunctionCode_._
+If provided, the _gmd:CI_OnLineFunctionCode_ element should point to one of the values of the ISO 19139 code list _CI_OnLineFunctionCode_.
 ====
 
 [TIP]
 ====
 *TG Recommendation 1.10: metadata/2.0/rec/datasets-and-series/resource-locator-url*
 
-The URL provided as the value of the _gmd:transferOptions_/_gmd:MD_DigitalTransferOptions_/_gmd:onLine_/_gmd:CI_OnlineResource_/_gmd_: _linkage_/_gmd:URL_ element should point to one of following type of resources:- direct access for downloading the described data set,- a service metadata (capabilities) document of a Spatial Data Service used for providing this data set,- a service WSDLfootnote:[W3C Web Services Description Language, https://www.w3.org/TR/wsdl] document of a Spatial Data Service used for providing this data set (if SOAPfootnote:[W3C Simple Object Access Protocol, or more recently, just SOAP, https://www.w3.org/TR/soap/] binding is available), - a client application that directly accesses the described data set, or- a web page with further instructions for accessing the described data set.
+The URL provided as the value of the _gmd:transferOptions_/_gmd:MD_DigitalTransferOptions_/_gmd:onLine_/_gmd:CI_OnlineResource_/_gmd_: _linkage_/_gmd:URL_ element should point to one of following type of resources:
+- direct access for downloading the described data set,
+- a service metadata (capabilities) document of a Spatial Data Service used for providing this data set,
+- a service WSDLfootnote:[W3C Web Services Description Language, https://www.w3.org/TR/wsdl] document of a Spatial Data Service used for providing this data set (if SOAPfootnote:[W3C Simple Object Access Protocol, or more recently, just SOAP, https://www.w3.org/TR/soap/] binding is available),
+- a client application that directly accesses the described data set, or
+- a web page with further instructions for accessing the described data set.
 ====
 
 [source,xml,subs="+quotes"]
 ----
 **/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions:**
 
-<gmd:transferoptions>
-  <gmd:md_digitaltransferoptions>
-    <gmd:online>
-      <gmd:ci_onlineresource>
+<gmd:transferOptions>
+  <gmd:MD_DigitalTransferOptions>
+    <gmd:onLine>
+      <gmd:CI_OnlineResource>
         <gmd:linkage>
-          <gmd:url>
-            http://example.com/wfs?VERSION=2.0.0&amp;SERVICE=WFS&amp;REQUEST=GetFeature&amp;STOREDQUERY_ID=urn:ogc:def:query:OGC-WFS::GetFeatureById&amp;ID=123345
-          </gmd:url>
+          <gmd:URL>http://example.com/wfs?VERSION=2.0.0&amp;SERVICE=WFS&amp;REQUEST=GetFeature&amp;STOREDQUERY_ID=urn:ogc:def:query:OGC-WFS::GetFeatureById&amp;ID=123345</gmd:URL>
         </gmd:linkage>
         <gmd:name>
-          <gco:characterstring>
-            WFS GetFeature request for downloading the data set
-          </gco:characterstring>
+          <gco:CharacterString>WFS GetFeature request for downloading the data set</gco:CharacterString>
         </gmd:name>
         <gmd:function>
-          <gmd:ci_onlinefunctioncode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode" codelistvalue="download">
-          </gmd:ci_onlinefunctioncode>
+          <gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="download">
+          </gmd:CI_OnLineFunctionCode>
         </gmd:function>
-      </gmd:ci_onlineresource>
-    </gmd:online>
-  </gmd:md_digitaltransferoptions>
-</gmd:transferoptions>
+      </gmd:CI_OnlineResource>
+    </gmd:onLine>
+  </gmd:MD_DigitalTransferOptions>
+</gmd:transferOptions>
 ----
 *Example* *3.9:* Data set resource locator pointing directly to a WFS GetFeature operation for downloading the described data set.
 
@@ -2558,12 +2546,12 @@ The URL provided as the value of the _gmd:transferOptions_/_gmd:MD_DigitalTransf
 ----
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:scope/gmd:DQ_Scope:**
 
-<gmd:dq_scope>
+<gmd:DQ_Scope>
   <gmd:level>
-    <gmd:md_scopecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codelistvalue="dataset">
-    </gmd:md_scopecode>
+    <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">
+    </gmd:MD_ScopeCode>
   </gmd:level>
-</gmd:dq_scope>
+</gmd:DQ_Scope>
 ----
 *Example* *3.10:* Scope of the Data quality info is set to the entire described data set by giving the code (gmd:level) with value "dataset".
 
@@ -2607,41 +2595,37 @@ NOTE A pre-defined XML fragment containing the corresponding _CI_Citation_ eleme
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result:**
 
 <gmd:result>
-  <gmd:dq_conformanceresult>
+  <gmd:DQ_ConformanceResult>
     <gmd:specification xlink:href="http://inspire.ec.europa.eu/id/citation/ir/reg-1089-2010">
-      <gmd:ci_citation>
+      <gmd:CI_Citation>
         <gmd:title>
-          <gmx:anchor xlink:href="http://data.europa.eu/eli/reg/2010/1089">
+          <gmx:Anchor xlink:href="http://data.europa.eu/eli/reg/2010/1089">
             COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services
-          </gmx:anchor>
+          </gmx:Anchor>
         </gmd:title>
         <gmd:date>
-          <gmd:ci_date>
+          <gmd:CI_Date>
             <gmd:date>
-              <gco:date>
-                2010-12-08
-              </gco:date>
+              <gco:date>2010-12-08</gco:date>
             </gmd:date>
-            <gmd:datetype>
-              <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
                 publication
-              </gmd:ci_datetypecode>
-            </gmd:datetype>
-          </gmd:ci_date>
+              </gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
         </gmd:date>
-      </gmd:ci_citation>
+      </gmd:CI_Citation>
     </gmd:specification>
     <gmd:explanation>
-      <gco:characterstring>
+      <gco:CharacterString>
         This data set is conformant with the INSPIRE Implementing Rules for the interoperability of spatial data sets and services
-      </gco:characterstring>
+      </gco:CharacterString>
     </gmd:explanation>
     <gmd:pass>
-      <gco:boolean>
-        true
-      </gco:boolean>
+      <gco:boolean>true</gco:boolean>
     </gmd:pass>
-  </gmd:dq_conformanceresult>
+  </gmd:DQ_ConformanceResult>
 </gmd:result>
 ----
 *Example* *3.11:* Conformity declaration against the [Regulation 1089/2010].
@@ -2663,41 +2647,37 @@ NOTE It is not currently planned to provide pre-defined XML fragments containing
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result:**
 
 <gmd:result>
-  <gmd:dq_conformanceresult>
+  <gmd:DQ_ConformanceResult>
     <gmd:specification>
-      <gmd:ci_citation>
+      <gmd:CI_Citation>
         <gmd:title>
-          <gmx:anchor xlink:href="http://inspire.ec.europa.eu/id/ats/data-hy/3.1">
+          <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/id/ats/data-hy/3.1">
             D2.8.I.8 Data Specification on Hydrography – Technical Guidelines, version 3.1
-          </gmx:anchor>
+          </gmx:Anchor>
         </gmd:title>
         <gmd:date>
-          <gmd:ci_date>
+          <gmd:CI_Date>
             <gmd:date>
-              <gco:date>
-                2014-04-17
-              </gco:date>
+              <gco:date>2014-04-17</gco:date>
             </gmd:date>
-            <gmd:datetype>
-              <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
                 publication
-              </gmd:ci_datetypecode>
-            </gmd:datetype>
-          </gmd:ci_date>
+              </gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
         </gmd:date>
-      </gmd:ci_citation>
+      </gmd:CI_Citation>
     </gmd:specification>
     <gmd:explanation>
-      <gco:characterstring>
+      <gco:CharacterString>
         This data set is conformant with the INSPIRE Data Specification on Hydrography – Technical Guidelines, version 3.1
-      </gco:characterstring>
+      </gco:CharacterString>
     </gmd:explanation>
     <gmd:pass>
-      <gco:boolean>
-        true
-      </gco:boolean>
+      <gco:boolean>true</gco:boolean>
     </gmd:pass>
-  </gmd:dq_conformanceresult>
+  </gmd:DQ_ConformanceResult>
 </gmd:result>
 ----
 *Example* *3.12:* Conformity declaration against an Abstract Test Suite.
@@ -2744,6 +2724,7 @@ If a data provider has a procedure for the quality management of their spatial d
 The use of abbreviations (including acronyms) should be avoided. If used, their meaning should be explained.
 ====
 
+<<<
 === Interoperability metadata for data sets and data set series
 
 [NOTE]
@@ -2791,7 +2772,11 @@ ____
 ====
 *TG Requirement 2.1: metadata/2.0/req/isdss/crs*
 
-The coordinate reference system(s) used in the described data set or data set series shall be given using element _gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier_.The multiplicity of this element is 1..*.The _gmd:code_ child element of _gmd:RS_Identifier_ is mandatory. The _gmd:codeSpace_ child element shall be used if the code alone does not uniquely identify the referred coordinate reference system. Both _gmd:code_ and _gmd:codeSpace_ element (if given) shall contain Non-empty Free Text Elements.
+The coordinate reference system(s) used in the described data set or data set series shall be given using element _gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier_.
+
+The multiplicity of this element is 1..*.
+
+The _gmd:code_ child element of _gmd:RS_Identifier_ is mandatory. The _gmd:codeSpace_ child element shall be used if the code alone does not uniquely identify the referred coordinate reference system. Both _gmd:code_ and _gmd:codeSpace_ element (if given) shall contain Non-empty Free Text Elements.
 
 Only the coordinate reference system identifiers specified in a well-known common register shall be used.
 ====
@@ -2826,17 +2811,17 @@ As explained in section 2.1.1 Encoding of code list values, the textual content 
 ----
 **/gmd:MD_Metadata/gmd:referenceSystemInfo:**
 
-<gmd:referencesysteminfo>
-  <gmd:md_referencesystem>
-    <gmd:referencesystemidentifier>
-      <gmd:rs_identifier>
+<gmd:referenceSystemInfo>
+  <gmd:MD_ReferenceSystem>
+    <gmd:referenceSystemIdentifier>
+      <gmd:RS_Identifier>
         <gmd:code>
-          <gmx:anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/4258">EPSG:4258</gmx:anchor>
+          <gmx:Anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/4258">EPSG:4258</gmx:Anchor>
         </gmd:code>
-      </gmd:rs_identifier>
-    </gmd:referencesystemidentifier>
-  </gmd:md_referencesystem>
-</gmd:referencesysteminfo>
+      </gmd:RS_Identifier>
+    </gmd:referenceSystemIdentifier>
+  </gmd:MD_ReferenceSystem>
+</gmd:referenceSystemInfo>
 ----
 *Example* *3.13:* The coordinate reference system ETRS89-GRS80 declared as used in the provided data set using the gmx:Anchor free text element.
 
@@ -2856,19 +2841,17 @@ NOTE Best practices and examples on what URIs to use for spatial reference syste
 ----
 **/gmd:MD_Metadata/gmd:referenceSystemInfo:**
 
-<gmd:referencesysteminfo>
-  <gmd:md_referencesystem>
-    <gmd:referencesystemidentifier>
-      <gmd:rs_identifier>
+<gmd:referenceSystemInfo>
+  <gmd:MD_ReferenceSystem>
+    <gmd:referenceSystemIdentifier>
+      <gmd:RS_Identifier>
         <gmd:code>
-          <gmx:anchor xlink:href="http://publications.europa.eu/resource/authority/atu">
-            Administrative territoral units NAL
-          </gmx:anchor>
+          <gmx:Anchor xlink:href="http://publications.europa.eu/resource/authority/atu">Administrative territoral units NAL</gmx:Anchor>
         </gmd:code>
-      </gmd:rs_identifier>
-    </gmd:referencesystemidentifier>
-  </gmd:md_referencesystem>
-</gmd:referencesysteminfo>
+      </gmd:RS_Identifier>
+    </gmd:referenceSystemIdentifier>
+  </gmd:MD_ReferenceSystem>
+</gmd:referenceSystemInfo>
 ----
 *Example* *3.14:* Anchor element referring to a spatial reference systems using geographic identifiers (the list of the various administrative territorial units of the EU Member States, published by the EU Publications Office).
 
@@ -2878,9 +2861,10 @@ Describing the temporal reference system(s) used in the data set makes discover
 
 The [Regulation 1089/2010], Article 13 (2) describes an element intended for describing this information:
 
-{empty}
 ____
-2. Temporal Reference System: Description of the temporal reference system(s) used in the data set.This element is mandatory only if the spatial data set contains temporal information that does not refer to the default temporal reference system.
+{empty}2. Temporal Reference System: Description of the temporal reference system(s) used in the data set.
+
+This element is mandatory only if the spatial data set contains temporal information that does not refer to the default temporal reference system.
 ____
 
 The multiplicity of this element is zero or more: it is not required if all temporal information in the data set uses the default temporal reference system. The default temporal reference system as regards to the INSPIRE metadata is Gregorian Calendar as defined in [Regulation 1205/2008], Annex, Part B, point 5.
@@ -2889,7 +2873,9 @@ The multiplicity of this element is zero or more: it is not required if all temp
 ====
 *TG Requirement 2.3: metadata/2.0/req/isdss/temportal-rs*
 
-The temporal reference system(s) used in the described data set or data set series shall be given using element _gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier_.The multiplicity of this element is 0..n.
+The temporal reference system(s) used in the described data set or data set series shall be given using element _gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier_.
+
+The multiplicity of this element is 0..n.
 
 The _gmd:code_ child element of _gmd:RS_Identifier_ is mandatory. The _gmd:codeSpace_ child element shall be used if the code alone does not uniquely identify the referred coordinate reference system. Both _gmd:code_ and _gmd:codeSpace_ element (if given) shall contain Non-empty Free Text Elements.
 ====
@@ -2907,19 +2893,17 @@ NOTE The OGC Temporal Domain Working Group (TemporalDWG)footnote:[OGC TemporalDW
 ----
 **/gmd:MD_Metadata/gmd:referenceSystemInfo:**
 
-<gmd:referencesysteminfo>
-  <gmd:md_referencesystem>
-    <gmd:referencesystemidentifier>
+<gmd:referenceSystemInfo>
+  <gmd:MD_ReferenceSystem>
+    <gmd:referenceSystemIdentifier>
       <gmd:rs_identifier>
         <gmd:code>
-          <gco:characterstring>
-            Julian calendar
-          </gco:characterstring>
+          <gco:CharacterString>Julian calendar</gco:CharacterString>
         </gmd:code>
       </gmd:rs_identifier>
-    </gmd:referencesystemidentifier>
-  </gmd:md_referencesystem>
-</gmd:referencesysteminfo>
+    </gmd:referenceSystemIdentifier>
+  </gmd:MD_ReferenceSystem>
+</gmd:referenceSystemInfo>
 ----
 *Example* *3.15:* Julian calendar declared as the temporal reference system used in the provided data set.
 
@@ -2930,10 +2914,8 @@ The metadata elements described in this section are contained within the first _
 ===== Spatial representation type
 
 The type in which the spatial data is represented may be of importance when evaluating the fit for purpose of the data set. The [Regulation 1089/2010], Article 13 (6) amended by [Regulation 1253/2013] describes an element intended for describing this information:
-
-{empty}
 ____
-6. Spatial Representation Type: The method used to spatially represent geographic information.
+{empty}6. Spatial Representation Type: The method used to spatially represent geographic information.
 ____
 
 The multiplicity of this element is one or more. From the values allowed in [ISO 19139], only the values vector, grid, TINfootnote:[TIN stands for triangulated irregular network. TIN is a digital data structure used in a geographic information system (GIS) for the representation of a surface.] and textTablefootnote:[The value textTable was added to the values originally suggested in the data specifications, for data sets with an indirect spatial reference.] should be used.
@@ -2951,10 +2933,10 @@ Multiplicity of this element is 1..*.
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialRepresentationType**
 
-<gmd:spatialrepresentationtype>
-  <gmd:md_spatialrepresentationtypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_SpatialRepresentationTypeCode" codelistvalue="vector">
-  </gmd:md_spatialrepresentationtypecode>
-</gmd:spatialrepresentationtype>
+<gmd:spatialRepresentationType>
+  <gmd:MD_SpatialRepresentationTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_SpatialRepresentationTypeCode" codeListValue="vector">
+  </gmd:MD_SpatialRepresentationTypeCode>
+</gmd:spatialRepresentationType>
 ----
 *Example* *3.16*: Spatial representation type of the described data set described as vector.
 
@@ -2962,9 +2944,8 @@ Multiplicity of this element is 1..*.
 
 The character encoding describes the way the characters of the textual information are encoded in the described data set. The [Regulation 1089/2010], Article 13 (5) describes an element intended for describing this information:
 
-{empty}
 ____
-5. Character Encoding: The character encoding used in the data set.
+{empty}5. Character Encoding: The character encoding used in the data set.
 
 This element is mandatory only if an encoding is used that is not based on UTF-8.
 ____
@@ -2988,10 +2969,10 @@ NOTE UTF-8 should be used for character encoding of INSPIRE data sets and data s
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet**
 
-<gmd:characterset>
-  <gmd:md_charactersetcode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode" codelistvalue="8859part1">
-  </gmd:md_charactersetcode>
-</gmd:characterset>
+<gmd:characterSet>
+  <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="8859part1">
+  </gmd:MD_CharacterSetCode>
+</gmd:characterSet>
 ----
 *Example* *3.17*: ISO/IEC 8859-1 (also known as Latin 1) declared as the character encoding of the described data set.
 
@@ -3003,9 +2984,8 @@ The metadata elements described in this section are contained within the _gmd:di
 
 To be able to determine if the data is encoded in a structure and format the can be accessed using the tools and data processing systems available in users' environments, it is necessary to declare the encoding in metadata. The [Regulation 1089/2010], Article 13 (3) describes an element intended for describing this information:
 
-{empty}
 ____
-3. Encoding: Description of the computer language construct(s) specifying the representation of data objects in a record, file, message, storage device or transmission channel.
+{empty}3. Encoding: Description of the computer language construct(s) specifying the representation of data objects in a record, file, message, storage device or transmission channel.
 ____
 
 The multiplicity of this element is one or more.
@@ -3016,7 +2996,9 @@ The multiplicity of this element is one or more.
 
 The encoding and the storage or transmission format of the provided data sets or data set series shall be given using the _gmd:distributionFormat/gmd:MD_Format_ element.
 
-The multiplicity of this element is 1..*.The _gmd:name_ and _gmd:version_ child elements of _gmd:MD_Format_ are mandatory. Both of these elements shall contain Non-empty Free Text Elements.
+The multiplicity of this element is 1..*.
+
+The _gmd:name_ and _gmd:version_ child elements of _gmd:MD_Format_ are mandatory. Both of these elements shall contain Non-empty Free Text Elements.
 
 If the version of the encoding is unknown or if the encoding is not versioned, the _gmd:version_ shall be left empty and the nil reason attribute shall be provided with either value "unknown" or "inapplicable" correspondinglyfootnote:[Attribute gco:nilReason="unknown" or "inapplicable".].
 ====
@@ -3025,36 +3007,27 @@ If the version of the encoding is unknown or if the encoding is not versioned, t
 ----
 **/gmd:MD_Metadata/gmd:distributionInfo/gmd:distributionFormat:**
 
-<gmd:distributionformat>
-  <gmd:md_format>
+<gmd:distributionFormat>
+  <gmd:MD_Format>
     <gmd:name>
-      <gco:characterstring>
-        Addresses GML Application Schema
-      </gco:characterstring>
+      <gco:CharacterString>Addresses GML Application Schema</gco:CharacterString>
     </gmd:name>
     <gmd:version>
-      <gco:characterstring>
-        3.0
-      </gco:characterstring>
+      <gco:CharacterString>3.0</gco:CharacterString>
     </gmd:version>
     <gmd:specification>
-      <gco:characterstring>
-        D2.8.I.5 Data Specification on Addresses – Technical Guidelines
-      </gco:characterstring>
+      <gco:CharacterString>D2.8.I.5 Data Specification on Addresses – Technical Guidelines</gco:CharacterString>
     </gmd:specification>
-  </gmd:md_format>
-</gmd:distributionformat>
-<gmd:distributionformat>
-  <gmd:md_format>
+  </gmd:MD_Format>
+</gmd:distributionFormat>
+<gmd:distributionFormat>
+  <gmd:MD_Format>
     <gmd:name>
-      <gmx:anchor xlink:href="http://inspire.ec.europa.eu/media-types/application/x-shapefile">
-        Esri Shapefile
-      </gmx:anchor>
+      <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/media-types/application/x-shapefile">Esri Shapefile</gmx:Anchor>
     </gmd:name>
-    <gmd:version gco:nilreason="unknown">
-    </gmd:version>
-  </gmd:md_format>
-</gmd:distributionformat>
+    <gmd:version gco:nilReason="unknown"></gmd:version>
+  </gmd:MD_Format>
+</gmd:distributionFormat>
 ----
 *Example* *3.18:* Data set has been declared to be available both in the INSPIRE Addresses GML Application Schema (encoded in XML) and in Esri Shapefile format. The gmx:Anchor is used to describe the latter, as the format is included in the code list for supported INSPIRE media types.
 
@@ -3066,9 +3039,8 @@ The metadata elements described in this section are contained within the _gmd:da
 
 Topological consistency is an important aspect of the data quality of a spatial data set: it describes trustworthiness and consistency of the geometry property values of the data set. Examples of such consistency measures would be number of incorrect line intersections, incorrectly closed polygons, duplicate curves or gaps in curves. These measures fall under a wider category of logical consistency of the data set. Topological consistency metadata element is described in [Regulation 1089/2010], Article 13 (4):
 
-{empty}
 ____
-4. Topological Consistency: Correctness of the explicitly encoded topological characteristics of the data set as described by the scope.
+{empty}4. Topological Consistency: Correctness of the explicitly encoded topological characteristics of the data set as described by the scope.
 ____
 
 The multiplicity of this element is zero or more with the following condition: The element is mandatory if the data set includes types from the Generic Network Model and does not assure centreline topology (connectivity of centrelines) for the network.
@@ -3083,7 +3055,9 @@ While the [Regulation 1089/2010] does not provide further guidance on how this e
 
 The quantitative results for topological consistency measures shall be reported using the _gmd:report/gmd:DQ_TopologicalConsistency_ element with a _gmd:DQ_QuantitativeResult_ element as the value of its mandatory _gmd:result_ property.
 
-The multiplicity of the element is 0..*.The _gmd:valueUnit_ and _gmd:value/gco:Record_ child elements of _gmd:DQ_QuantitativeResult_ are mandatory and shall be used for giving a numerical or otherwise quantitative value of the evaluated topology consistency measure for the described data set or data set series.
+The multiplicity of the element is 0..*.
+
+The _gmd:valueUnit_ and _gmd:value/gco:Record_ child elements of _gmd:DQ_QuantitativeResult_ are mandatory and shall be used for giving a numerical or otherwise quantitative value of the evaluated topology consistency measure for the described data set or data set series.
 
 The type of the _gmd:value/gco:Record_ element shall be chosen based on the result type of the particular measure, and it shall be declared using the _xsi:type_ attribute of the _gco:Record element_.
 ====
@@ -3117,39 +3091,32 @@ Example 3.19 contains an example of the quantitative results of one measure for 
 ----
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_TopologicalConsistency:**
 
-<gmd:dq_topologicalconsistency>
-  <gmd:nameofmeasure>
-    <gco:characterstring>
-      number of faulty point-curve connections
-    </gco:characterstring>
-  </gmd:nameofmeasure>
-  <gmd:evaluationmethodtype>
-    <gmd:dq_evaluationmethodtypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#DQ_EvaluationMethodTypeCode" codelistvalue="indirect">
+<gmd:DQ_TopologicalConsistency>
+  <gmd:nameOfMeasure>
+    <gco:CharacterString>number of faulty point-curve connections</gco:CharacterString>
+  </gmd:nameOfMeasure>
+  <gmd:evaluationMethodType>
+    <gmd:DQ_EvaluationMethodTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#DQ_EvaluationMethodTypeCode" codeListValue="indirect">
       Indirect
-    </gmd:dq_evaluationmethodtypecode>
-  </gmd:evaluationmethodtype>
-  <gmd:evaluationmethoddescription>
-    <gco:characterstring>
+    </gmd:DQ_EvaluationMethodTypeCode>
+  </gmd:evaluationMethodType>
+  <gmd:evaluationMethodDescription>
+    <gco:CharacterString>
       A point-curve connection exists where different curves touch. These curves have an intrinsic topological relationship that shall reflect the true constellation. If the point-curve connection contradicts the universe of discourse, the point-curve connection is faulty with respect to this data quality measure. The data quality measure counts the number of errors of this kind.
-    </gco:characterstring>
-  </gmd:evaluationmethoddescription>
-  <gmd:datetime>
-    <gco:datetime>
-      2015-04-01T16:20:00
-    </gco:datetime>
-  </gmd:datetime>
+    </gco:CharacterString>
+  </gmd:evaluationMethodDescription>
+  <gmd:dateTime>
+    <gco:dateTime>2015-04-01T16:20:00</gco:dateTime>
+  </gmd:dateTime>
   <gmd:result>
-    <gmd:dq_quantitativeresult>
-      <gmd:valueunit xlink:href="http://www.opengis.net/def/uom/OGC/1.0/unity">
-      </gmd:valueunit>
+    <gmd:DQ_QuantitativeResult>
+      <gmd:valueUnit xlink:href="http://www.opengis.net/def/uom/OGC/1.0/unity"></gmd:valueUnit>
       <gmd:value>
-        <gco:record xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:integer">
-          12
-        </gco:record>
+        <gco:record xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:integer">12</gco:record>
       </gmd:value>
-    </gmd:dq_quantitativeresult>
+    </gmd:DQ_QuantitativeResult>
   </gmd:result>
-</gmd:dq_topologicalconsistency>
+</gmd:DQ_TopologicalConsistency>
 ----
 *Example* *3.19:* Topological consistency reported using the quantitative result of one measure "number of faulty point-curve connections". The measure has been evaluated on 1st April 2015, and the type of resulting gco:Record element has been defined as integer using the local typing (xsi:type attribute).
 
@@ -3177,7 +3144,9 @@ gmd:specification/gmd:CI_Citation/_ gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_Dat
 The value of the _gmd:DQ_ConformanceResult/gmd:pass_ element shall always be "false" in this element to indicate that the data set does not assure the centreline topology for the network.
 
 The multiplicity of _gmd:report/gmd:DQ_TopologicalConsistency/gmd:result/ +
-gmd:DQ_ConformanceResult_ elements as described above is 0..*.The textual description of the results of the topological consistency check shall be given using the _gmd:DQ_ConformanceResult/gmd:explanation_ element. This element is a Non-empty Free Text Element.
+gmd:DQ_ConformanceResult_ elements as described above is 0..*.
+
+The textual description of the results of the topological consistency check shall be given using the _gmd:DQ_ConformanceResult/gmd:explanation_ element. This element is a Non-empty Free Text Element.
 ====
 
 Example 3.20 contains an example of the descriptive results of the topological consistency for a data set in the INSPIRE Transport networks theme.
@@ -3188,65 +3157,57 @@ NOTE The value "true" of gmd:report/gmd:DQ_TopologicalConsistency/gmd:result/ gm
 ----
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_TopologicalConsistency:**
 
-<gmd:dq_topologicalconsistency>
-  <gmd:nameofmeasure>
-    <gco:characterstring>
+<gmd:DQ_TopologicalConsistency>
+  <gmd:nameOfMeasure>
+    <gco:CharacterString>
       Network connectivity
-    </gco:characterstring>
-  </gmd:nameofmeasure>
-  <gmd:evaluationmethodtype>
-    <gmd:dq_evaluationmethodtypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#DQ_EvaluationMethodTypeCode" codelistvalue="directInternal">
+    </gco:CharacterString>
+  </gmd:nameOfMeasure>
+  <gmd:evaluationMethodType>
+    <gmd:dq_evaluationMethodTypecode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#DQ_EvaluationMethodTypeCode" codeListValue="directInternal">
       Direct, internal
-    </gmd:dq_evaluationmethodtypecode>
-  </gmd:evaluationmethodtype>
-  <gmd:evaluationmethoddescription>
-    <gco:characterstring>
+    </gmd:dq_evaluationMethodTypecode>
+  </gmd:evaluationMethodType>
+  <gmd:evaluationMethodDescription>
+    <gco:CharacterString>
       Check that wherever a connection exists in a transport network, all connected link ends and the optional node that take part in this connection are positioned at a distance of less than the connectivity tolerance from each other. Check that link ends and nodes that are not connected are always separated by a distance that is greater than the connectivity tolerance. Check if in data sets where both transport links and nodes are presented, the relative position of nodes and link ends in relation to the specified connectivity tolerance corresponds to the associations that exist between them in the data set.
-    </gco:characterstring>
-  </gmd:evaluationmethoddescription>
-  <gmd:datetime>
-    <gco:datetime>
-      2015-04-01T16:20:00
-    </gco:datetime>
-  </gmd:datetime>
+    </gco:CharacterString>
+  </gmd:evaluationMethodDescription>
+  <gmd:dateTime>
+    <gco:dateTime>2015-04-01T16:20:00</gco:dateTime>
+  </gmd:dateTime>
   <gmd:result>
-    <gmd:dq_conformanceresult>
+    <gmd:DQ_ConformanceResult>
       <gmd:specification>
-        <gmd:ci_citation>
+        <gmd:CI_Citation>
           <gmd:title>
-            <gco:characterstring>
-              D2.10.1 INSPIRE Data Specifications - Base Models - Generic Network Model
-            </gco:characterstring>
+            <gco:CharacterString>D2.10.1 INSPIRE Data Specifications - Base Models - Generic Network Model</gco:CharacterString>
           </gmd:title>
           <gmd:date>
-            <gmd:ci_date>
+            <gmd:CI_Date>
               <gmd:date>
-                <gco:date>
-                  2013-04-05
-                </gco:date>
+                <gco:date>2013-04-05</gco:date>
               </gmd:date>
-              <gmd:datetype>
-                <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+              <gmd:dateType>
+                <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
                   publication
-                </gmd:ci_datetypecode>
-              </gmd:datetype>
-            </gmd:ci_date>
+                </gmd:CI_DateTypeCode>
+              </gmd:dateType>
+            </gmd:CI_Date>
           </gmd:date>
-        </gmd:ci_citation>
+        </gmd:CI_Citation>
       </gmd:specification>
       <gmd:explanation>
-        <gco:characterstring>
+        <gco:CharacterString>
           Topological consistency has been verified following the requirements of the INSPIRE Data Specification on Transport Networks - Technical Guidelines. No errors have been found.
-        </gco:characterstring>
+        </gco:CharacterString>
       </gmd:explanation>
       <gmd:pass>
-        <gco:boolean>
-          false
-        </gco:boolean>
+        <gco:boolean>false</gco:boolean>
       </gmd:pass>
-    </gmd:dq_conformanceresult>
+    </gmd:DQ_ConformanceResult>
   </gmd:result>
-</gmd:dq_topologicalconsistency>
+</gmd:DQ_TopologicalConsistency>
 ----
 *Example* *3.20:* Topological consistency reported using the descriptive result of one measure "Network connectivity".
 
@@ -3254,12 +3215,16 @@ NOTE The value "true" of gmd:report/gmd:DQ_TopologicalConsistency/gmd:result/ gm
 
 The INSPIRE data specifications [TG DS] include a number of “recommended theme-specific metadata elements” in their sections 8.3. All of them are optional but recommended for certain INSPIRE annex themes.
 
+[TIP]
+====
 *TG Recommendation 2.7: metadata/2.0/rec/isdss/recommended-theme-specific-md-elements*
 
 The recommended metadata elements should be included to metadata describing a spatial dataset or spatial dataset series related to the annex themes specified for the relevant element in Annex C.7.
+====
 
 Many of these theme-specific metadata consider details of particular INSPIRE annex themes in definitions and examples. These are listed in Annex C.7.
 
+<<<
 == Conformance Classes for Spatial Data Services
 
 === Baseline metadata for Spatial Data Services
@@ -3317,15 +3282,13 @@ Example 4.1 gives an example of the XML code for these elements.
 ----
 **/gmd:MD_Metadata/gmd:hierarchyLevel:**
 
-<gmd:hierarchylevel>
-  <gmd:md_scopecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codelistvalue="service">
-  </gmd:md_scopecode>
-</gmd:hierarchylevel>
-<gmd:hierarchylevelname>
-  <gco:characterstring>
-    Service
-  </gco:characterstring>
-</gmd:hierarchylevelname>
+<gmd:hierarchyLevel>
+  <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codeListValue="service">
+  </gmd:MD_ScopeCode>
+</gmd:hierarchyLevel>
+<gmd:hierarchyLevelname>
+  <gco:CharacterString>Service</gco:CharacterString>
+</gmd:hierarchyLevelname>
 ----
 *Example* *4.1:* Resource type indicating a service given using gmd:hierarchyLevel and gmd:hierarchyLevelName properties.
 
@@ -3383,9 +3346,8 @@ Each INSPIRE Spatial Data Service must be classified using ISO 19119 based list 
 
 The element for giving this information is described in [Regulation 1205/2008], Part B 3:
 
-{empty}
 ____
-3. KEYWORD
+{empty}3. KEYWORD
 
 If the resource is a spatial data service, at least one keyword from Part D.4 shall be provided.
 ____
@@ -3417,35 +3379,33 @@ For an XML example, see Example 4.2.
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords:**
 
-<gmd:md_keywords>
+<gmd:MD_Keywords>
   <gmd:keyword>
-    <gmx:anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/humanCatalogueViewer">
+    <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/humanCatalogueViewer">
       humanCatalogViewer
-    </gmx:anchor>
+    </gmx:Anchor>
   </gmd:keyword>
-  <gmd:thesaurusname>
-    <gmd:ci_citation>
+  <gmd:thesaurusName>
+    <gmd:CI_Citation>
       <gmd:title>
-        <gco:characterstring>
+        <gco:CharacterString>
           COMMISSION REGULATION (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata, Part D 4, Classification of Spatial Data Services
-        </gco:characterstring>
+        </gco:CharacterString>
       </gmd:title>
       <gmd:date>
-        <gmd:ci_date>
+        <gmd:CI_Date>
           <gmd:date>
-            <gco:date>
-              2008-12-03
-            </gco:date>
+            <gco:date>2008-12-03</gco:date>
           </gmd:date>
-          <gmd:datetype>
-            <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
-            </gmd:ci_datetypecode>
-          </gmd:datetype>
-        </gmd:ci_date>
+          <gmd:dateType>
+            <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
+            </gmd:CI_DateTypeCode>
+          </gmd:dateType>
+        </gmd:CI_Date>
       </gmd:date>
-    </gmd:ci_citation>
-  </gmd:thesaurusname>
-</gmd:md_keywords>
+    </gmd:CI_Citation>
+  </gmd:thesaurusName>
+</gmd:MD_Keywords>
 ----
 *Example* *4.2:* Declaring Spatial Data Service category or subcategory as a keyword.
 
@@ -3470,7 +3430,9 @@ The multiplicity of this element as defined in [Regulation 1205/2008], Part C, T
 ====
 *TG Requirement 3.5: metadata/2.0/req/sds/sds-type*
 
-Spatial Data Service type shall be given using element _srv:serviceType_/_gco:LocalName_.The multiplicity of this element is 1.
+Spatial Data Service type shall be given using element _srv:serviceType_/_gco:LocalName_.
+
+The multiplicity of this element is 1.
 ====
 
 The specific TG Requirements for the allowed Spatial Data Service type values are given in Requirement Classes for Network Services (section 4.2) and Invocable Spatial Data Services (section 4.3).
@@ -3479,11 +3441,9 @@ The specific TG Requirements for the allowed Spatial Data Service type values ar
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType:**
 
-<srv:servicetype>
-  <gco:localname codespace="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">
-    view
-  </gco:localname>
-</srv:servicetype>
+<srv:serviceType>
+  <gco:localname codespace="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">view</gco:localname>
+</srv:serviceType>
 ----
 *Example* *4.3:* Spatial Data Service type "view"
 
@@ -3530,8 +3490,8 @@ NOTE The INSPIRE metadata element 1.6 _Coupled resource_ is not mapped to the _s
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn:**
 
-<srv:operateson xlink:href="http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;ID=f9ee6623-cf4c-11e1-9105-0017085a97ab&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;ELEMENTSETNAME=full#md-so-1002001">
-</srv:operateson>
+<srv:operatesOn xlink:href="http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;ID=f9ee6623-cf4c-11e1-9105-0017085a97ab&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;ELEMENTSETNAME=full#md-so-1002001">
+</srv:operatesOn>
 ----
 *Example* *4.4:* Coupled resource link given using the srv:operatesOn element with URL containing a fragment identifier pointing to the gmd:MD_DataIdentification element with the corresponding id attribute value "md-so-1002001".
 
@@ -3539,8 +3499,8 @@ NOTE The INSPIRE metadata element 1.6 _Coupled resource_ is not mapped to the _s
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn:**
 
-<srv:operateson xlink:href=" http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;STARTPOSITION=1&amp;MAXRECORDS=10&amp;REQUEST=GetRecords&amp;RESULTTYPE=results&amp;OUTPUTFORMAT=application/xml&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;TYPENAMES=gmd:MD_Metadata&amp;ELEMENTSETNAME=brief&amp;CONSTRAINT_LANGUAGE_VERSION=1.1.0&amp;CONSTRAINTLANGUAGE=CQL_TEXT&amp;NAMESPACE=xmlns%28ogc=http://www.opengis.net/ogc%29,xmlns%28gml=http://www.opengis.net/gml%29,xmlns%28apiso=http://www.opengis.net/cat/csw/apiso/1.0%29,xmlns%28csw=http://www.opengis.net/cat/csw/2.0.2%29&amp;constraint=apiso:identifier%20Like%20%27%26\{Identifier of the resource}%26%27&amp;#MD_DataIdentification">
-</srv:operateson>
+<srv:operatesOn xlink:href=" http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;STARTPOSITION=1&amp;MAXRECORDS=10&amp;REQUEST=GetRecords&amp;RESULTTYPE=results&amp;OUTPUTFORMAT=application/xml&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;TYPENAMES=gmd:MD_Metadata&amp;ELEMENTSETNAME=brief&amp;CONSTRAINT_LANGUAGE_VERSION=1.1.0&amp;CONSTRAINTLANGUAGE=CQL_TEXT&amp;NAMESPACE=xmlns%28ogc=http://www.opengis.net/ogc%29,xmlns%28gml=http://www.opengis.net/gml%29,xmlns%28apiso=http://www.opengis.net/cat/csw/apiso/1.0%29,xmlns%28csw=http://www.opengis.net/cat/csw/2.0.2%29&amp;constraint=apiso:identifier%20Like%20%27%26\{Identifier of the resource}%26%27&amp;#MD_DataIdentification">
+</srv:operatesOn>
 ----
 *Example* *4.5:* Coupled resource link given using the srv:operatesOn element with URL containing a CSW GetRecords request including a query for the resource identifier (shown as \{Identifier of the resource}).
 
@@ -3598,7 +3558,10 @@ A Resource Locator encoded using the _gmd:CI_OnlineResource_ element may also in
 It is recommended that in addition to the mandatory _gmd:linkage_ element also _gmd:name_, _gmd:description_, and _gmd:function_/_gmd:CI_OnLineFunctionCode_ child elements of _gmd:CI_OnlineResource_ element are provided to give additional information about the provided URL link. The _gmd:name_ and the _gmd:description_ elements should contain Non-empty Free Text Elements.
 
 If provided, the _gmd:CI_OnLineFunctionCode_ element should point to one of the values of the ISO 19139 code list CI_OnLineFunctionCode_._
+====
 
+[TIP]
+====
 *_TG Recommendation 3.5: metadata/2.0/rec/sds/resource-type-url-target_*
 
 The URL provided as the value of the _gmd:transferOptions_/_gmd:MD_DigitalTransferOptions_/_gmd:onLine_/_gmd:CI_OnlineResource_/_gmd_: _linkage_/_gmd:URL_ element should point to one of following type of resources:- a service metadata (capabilities) document of described Spatial Data Service,- a service WSDLfootnote:[W3C Web Services Description Language, https://www.w3.org/TR/wsdl] document of the described Spatial Data Service (if SOAPfootnote:[W3C Simple Object Access Protocol, or more recently, just SOAP, https://www.w3.org/TR/soap/] binding is available), or - a web page with further instructions for accessing the described service.
@@ -3609,28 +3572,24 @@ The URL provided as the value of the _gmd:transferOptions_/_gmd:MD_DigitalTransf
 ----
 **/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions:**
 
-<gmd:transferoptions>
-  <gmd:md_digitaltransferoptions>
+<gmd:transferOptions>
+  <gmd:MD_DigitalTransferOptions>
     <gmd:online>
-      <gmd:ci_onlineresource>
+      <gmd:CI_OnlineResource>
         <gmd:linkage>
-          <gmd:url>
-            http://example.com/wfs?VERSION=2.0.0&amp;SERVICE=WFS&amp;REQUEST=GetCapabilities
-          </gmd:url>
+          <gmd:URL>http://example.com/wfs?VERSION=2.0.0&amp;SERVICE=WFS&amp;REQUEST=GetCapabilities</gmd:URL>
         </gmd:linkage>
         <gmd:name>
-          <gco:characterstring>
-            WFS GetCapabilities request providing machine readable service metadata
-          </gco:characterstring>
+          <gco:CharacterString>WFS GetCapabilities request providing machine readable service metadata</gco:CharacterString>
         </gmd:name>
         <gmd:function>
-          <gmd:ci_onlinefunctioncode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode" codelistvalue="download">
-          </gmd:ci_onlinefunctioncode>
+          <gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="download">
+          </gmd:CI_OnLineFunctionCode>
         </gmd:function>
-      </gmd:ci_onlineresource>
+      </gmd:CI_OnlineResource>
     </gmd:online>
-  </gmd:md_digitaltransferoptions>
-</gmd:transferoptions>
+  </gmd:MD_DigitalTransferOptions>
+</gmd:transferOptions>
 ----
 *Example* *4.7:* Resource locator pointing to the GetCapabilities operation of the described WFS service.
 
@@ -3655,24 +3614,23 @@ Additionally the level shall be named using element _gmd:scope/gmd:DQ_Scope/gmd:
 ----
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:scope/gmd:DQ_Scope:**
 
-<gmd:dq_scope>
+<gmd:DQ_Scope>
   <gmd:level>
-    <gmd:md_scopecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codelistvalue="service">
-    </gmd:md_scopecode>
+    <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codeListValue="service">
+    </gmd:MD_ScopeCode>
   </gmd:level>
-  <gmd:leveldescription>
-    <gmd:md_scopedescription>
+  <gmd:levelDescription>
+    <gmd:MD_ScopeDescription>
       <gmd:other>
-        <gco:characterstring>
-          Service
-        </gco:characterstring>
+        <gco:CharacterString>Service</gco:CharacterString>
       </gmd:other>
-    </gmd:md_scopedescription>
-  </gmd:leveldescription>
-</gmd:dq_scope>
+    </gmd:MD_ScopeDescription>
+  </gmd:levelDescription>
+</gmd:DQ_Scope>
 ----
 *Example* *4.8:* Scope of the Data quality info is set to the entire described Spatial Data Service by giving both the code (gmd:level) and the corresponding description of the level (gmd:levelDescription).
 
+<<<
 === Metadata for Network Services
 
 [NOTE]
@@ -3683,7 +3641,9 @@ Additionally the level shall be named using element _gmd:scope/gmd:DQ_Scope/gmd:
 
 **Conformance subject**: metadata record describing an INSPIRE Network Service encoded in ISO 19139 based XML format.
 
-Metadata record fulfilling all the Requirements of this Conformance Class is compliant with the INSPIRE metadata Implementation Rules for Spatial Data Services as defined in [*Regulation 1205/2008*].footnote:[The [Regulation 976/2009] containing Implementing Rules for Network services does not contain any additional requirements for metadata. The requirements in this Requirements Class originate from the Network Services specific parts of [Regulation 1205/2008].]This Conformance Class includes TG Requirements C.1 – C.22, TG Requirements 3.1 – 3.8, and TG Requirement 4.1 of this specification.
+Metadata record fulfilling all the Requirements of this Conformance Class is compliant with the INSPIRE metadata Implementation Rules for Spatial Data Services as defined in [*Regulation 1205/2008*]footnote:[The *Regulation 976/2009* containing Implementing Rules for Network services does not contain any additional requirements for metadata. The requirements in this Requirements Class originate from the Network Services specific parts of *Regulation 1205/2008*.].
+
+This Conformance Class includes TG Requirements C.1 – C.22, TG Requirements 3.1 – 3.8, and TG Requirement 4.1 of this specification.
 ====
 
 Most of the metadata requirements for INSPIRE Network Services are contained in Conformance Class 3: INSPIRE Spatial Data Service baseline metadata. Though brief, this Conformance Class is added here to make clear which metadata requirements apply to Network Services.
@@ -3738,41 +3698,35 @@ NOTE A pre-defined XML fragment containing the corresponding _CI_Citation_ eleme
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result:**
 
 <gmd:result>
-  <gmd:dq_conformanceresult>
+  <gmd:DQ_ConformanceResult>
     <gmd:specification xlink:href="http://inspire.ec.europa.eu/id/citation/ir/reg-976-2009">
-      <gmd:ci_citation>
+      <gmd:CI_Citation>
         <gmd:title>
-          <gmx:anchor xlink:href="http://data.europa.eu/eli/reg/2009/976">
+          <gmx:Anchor xlink:href="http://data.europa.eu/eli/reg/2009/976">
             COMMISSION REGULATION (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
-          </gmx:anchor>
+          </gmx:Anchor>
         </gmd:title>
         <gmd:date>
-          <gmd:ci_date>
+          <gmd:CI_Date>
             <gmd:date>
-              <gco:date>
-                2010-12-08
-              </gco:date>
+              <gco:date>2010-12-08</gco:date>
             </gmd:date>
-            <gmd:datetype>
-              <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
                 publication
-              </gmd:ci_datetypecode>
-            </gmd:datetype>
-          </gmd:ci_date>
+              </gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
         </gmd:date>
-      </gmd:ci_citation>
+      </gmd:CI_Citation>
     </gmd:specification>
     <gmd:explanation>
-      <gco:characterstring>
-        This data set is conformant with the INSPIRE Implementing Rules for Network Services
-      </gco:characterstring>
+      <gco:CharacterString>This data set is conformant with the INSPIRE Implementing Rules for Network Services</gco:CharacterString>
     </gmd:explanation>
     <gmd:pass>
-      <gco:boolean>
-        true
-      </gco:boolean>
+      <gco:boolean>true</gco:boolean>
     </gmd:pass>
-  </gmd:dq_conformanceresult>
+  </gmd:DQ_ConformanceResult>
 </gmd:result>
 ----
 *Example* *4.9:* Conformity declaration against the [Regulation 976/2009].
@@ -3793,41 +3747,36 @@ NOTE It is not currently planned to provide pre-defined XML fragments containing
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result:**
 
 <gmd:result>
-  <gmd:dq_conformanceresult>
+  <gmd:DQ_ConformanceResult>
     <gmd:specification>
-      <gmd:ci_citation>
+      <gmd:CI_Citation>
         <gmd:title>
-          <gmx:anchor xlink:href="http://inspire.ec.europa.eu/id/ats/download-service/3.1/wfs-pre-defined">
+          <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/id/ats/download-service/3.1/wfs-pre-defined">
             Technical Guidance for Download Services, version 3.1 - Conformance class: Pre-defined WFS
-          </gmx:anchor>
+          </gmx:Anchor>
         </gmd:title>
         <gmd:date>
-          <gmd:ci_date>
+          <gmd:CI_Date>
             <gmd:date>
-              <gco:date>
-                2014-04-17
-              </gco:date>
+              <gco:date>2014-04-17</gco:date>
             </gmd:date>
-            <gmd:datetype>
-              <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
                 publication
-              </gmd:ci_datetypecode>
-            </gmd:datetype>
-          </gmd:ci_date>
+              </gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
         </gmd:date>
-      </gmd:ci_citation>
+      </gmd:CI_Citation>
     </gmd:specification>
     <gmd:explanation>
-      <gco:characterstring>
-        This data set is conformant with Conformance class: Pre-defined WFS of the INSPIRE Technical Guidance for Download Services, version 3.1
-      </gco:characterstring>
+      <gco:CharacterString>This data set is conformant with Conformance class: Pre-defined WFS of the INSPIRE Technical Guidance for Download Services, version 3.1
+      </gco:CharacterString>
     </gmd:explanation>
     <gmd:pass>
-      <gco:boolean>
-        true
-      </gco:boolean>
+      <gco:boolean>true</gco:boolean>
     </gmd:pass>
-  </gmd:dq_conformanceresult>
+  </gmd:DQ_ConformanceResult>
 </gmd:result>
 ----
 *Example* *4.10:* Conformity declaration against a conformance class.
@@ -3903,29 +3852,25 @@ If provided, the _gmd:CI_OnLineFunctionCode_ element should point to value "info
 ----
 **/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions:**
 
-<gmd:transferoptions>
-  <gmd:md_digitaltransferoptions>
+<gmd:transferOptions>
+  <gmd:MD_DigitalTransferOptions>
     <gmd:online>
-      <gmd:ci_onlineresource>
+      <gmd:CI_OnlineResource>
         <gmd:linkage>
-          <gmd:url>
-            http://www.dinoservices.nl:80/geo3dmodelwebservices-1/Geo3DModelService?wsdl
-          </gmd:url>
+          <gmd:URL>http://www.dinoservices.nl:80/geo3dmodelwebservices-1/Geo3DModelService?wsdl</gmd:URL>
         </gmd:linkage>
         <gmd:description>
-          <gmx:anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint">
-            accessPoint
-          </gmx:anchor>
+          <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint">accessPoint</gmx:Anchor>
         </gmd:description>
         <gmd:function>
-          <gmd:ci_onlinefunctioncode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode" codelistvalue="information">
+          <gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information">
             information
-          </gmd:ci_onlinefunctioncode>
+          </gmd:CI_OnLineFunctionCode>
         </gmd:function>
-      </gmd:ci_onlineresource>
+      </gmd:CI_OnlineResource>
     </gmd:online>
-  </gmd:md_digitaltransferoptions>
-</gmd:transferoptions>
+  </gmd:MD_DigitalTransferOptions>
+</gmd:transferOptions>
 ----
 *Example* *4.11*: Resource locator pointing the access point of the described Invocable Spatial Data Service.
 
@@ -3942,7 +3887,7 @@ Invocable Spatial Data Services shall declare conformity to the [Regulation 1089
 *TG Requirement 5.3: metadata/2.0/req/sds-invocable/conformity*
 
 Metadata for an INSPIRE Invocable Spatial Data Services shall declare the conformity to the Implementing Rules for interoperability of spatial data sets and services, and it shall be encoded using _gmd:report_/_gmd:DQ_DomainConsistency/gmd:result/ +
-gmd:DQ_ConformanceResult_ element as specified in **TG Requirement C.20TG Requirement C.20**TG Requirement C.20footnote:[TG Requirement C.20: degree of conformity using _gmd:DQ_ConformanceResult._]. This element shall contain citation of the [Regulation 1089/2010] encoded according to TG Requirement C.21footnote:[TG Requirement C.21: _gmd:DQ_ConformanceResult_ shall include a citation of the specification document, ...]. The degree of conformity shall be encoded as according to TG Requirement C.22footnote:[TG Requirement C.22: … _gmd:DQ_ConformanceResult …_ shall also include the degree of declared conformity…].
+gmd:DQ_ConformanceResult_ element as specified in TG Requirement C.20footnote:[TG Requirement C.20: degree of conformity using _gmd:DQ_ConformanceResult._]. This element shall contain citation of the [Regulation 1089/2010] encoded according to TG Requirement C.21footnote:[TG Requirement C.21: _gmd:DQ_ConformanceResult_ shall include a citation of the specification document, ...]. The degree of conformity shall be encoded as according to TG Requirement C.22footnote:[TG Requirement C.22: … _gmd:DQ_ConformanceResult …_ shall also include the degree of declared conformity…].
 
 The multiplicity of the _gmd:report_/_gmd:DQ_DomainConsistency/gmd:result/ +
 gmd:DQ_ConformanceResult_ element used for the above purpose is 1.
@@ -3962,41 +3907,37 @@ NOTE A pre-defined XML fragment containing the corresponding _CI_Citation_ eleme
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result:**
 
 <gmd:result>
-  <gmd:dq_conformanceresult>
+  <gmd:DQ_ConformanceResult>
     <gmd:specification xlink:href="http://inspire.ec.europa.eu/id/citation/ir/reg-1089-2010">
-      <gmd:ci_citation>
+      <gmd:CI_Citation>
         <gmd:title>
-          <gmx:anchor xlink:href="http://data.europa.eu/eli/reg/2010/1089">
+          <gmx:Anchor xlink:href="http://data.europa.eu/eli/reg/2010/1089">
             COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services
-          </gmx:anchor>
+          </gmx:Anchor>
         </gmd:title>
         <gmd:date>
-          <gmd:ci_date>
+          <gmd:CI_Date>
             <gmd:date>
-              <gco:date>
-                2010-12-08
-              </gco:date>
+              <gco:date>2010-12-08</gco:date>
             </gmd:date>
-            <gmd:datetype>
-              <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
                 publication
-              </gmd:ci_datetypecode>
-            </gmd:datetype>
-          </gmd:ci_date>
+              </gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
         </gmd:date>
-      </gmd:ci_citation>
+      </gmd:CI_Citation>
     </gmd:specification>
     <gmd:explanation>
-      <gco:characterstring>
+      <gco:CharacterString>
         This Spatial Data Service set is conformant with the INSPIRE Implementing Rules for the interoperability of spatial data sets and services
-      </gco:characterstring>
+      </gco:CharacterString>
     </gmd:explanation>
     <gmd:pass>
-      <gco:boolean>
-        true
-      </gco:boolean>
+      <gco:boolean>true</gco:boolean>
     </gmd:pass>
-  </gmd:dq_conformanceresult>
+  </gmd:DQ_ConformanceResult>
 </gmd:result>
 ----
 *Example* *4.12:* Conformity declaration against the [Regulation 1089/2010].
@@ -4068,41 +4009,36 @@ The multiplicity of the _gmd:report_/_gmd:DQ_DomainConsistency/gmd:result/gmd:DQ
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result:**
 
 <gmd:result>
-  <gmd:dq_conformanceresult>
+  <gmd:DQ_ConformanceResult>
     <gmd:specification>
-      <gmd:ci_citation>
+      <gmd:CI_Citation>
         <gmd:title>
-          <gmx:anchor xlink:href=" http://inspire.ec.europa.eu/id/ats/metadata/2.0/sds-invocable" xlink:title="INSPIRE Invocable Spatial Data Services metadata">
+          <gmx:Anchor xlink:href=" http://inspire.ec.europa.eu/id/ats/metadata/2.0/sds-invocable" xlink:title="INSPIRE Invocable Spatial Data Services metadata">
             invocable
-          </gmx:anchor>
+          </gmx:Anchor>
         </gmd:title>
         <gmd:date>
-          <gmd:ci_date>
+          <gmd:CI_Date>
             <gmd:date>
-              <gco:date>
-                2016-05-01
-              </gco:date>
+              <gco:date>2016-05-01</gco:date>
             </gmd:date>
-            <gmd:datetype>
-              <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
                 publication
-              </gmd:ci_datetypecode>
-            </gmd:datetype>
-          </gmd:ci_date>
+              </gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
         </gmd:date>
-      </gmd:ci_citation>
+      </gmd:CI_Citation>
     </gmd:specification>
     <gmd:explanation>
-      <gco:characterstring>
-        This Spatial Data Service set is conformant with the INSPIRE requirements for Invocable Spatial Data Services
-      </gco:characterstring>
+      <gco:CharacterString>This Spatial Data Service set is conformant with the INSPIRE requirements for Invocable Spatial Data Services
+      </gco:CharacterString>
     </gmd:explanation>
     <gmd:pass>
-      <gco:boolean>
-        true
-      </gco:boolean>
+      <gco:boolean>true</gco:boolean>
     </gmd:pass>
-  </gmd:dq_conformanceresult>
+  </gmd:DQ_ConformanceResult>
 </gmd:result>
 ----
 *Example* *4.13:* Conformity declaration against the Requirements Class "INSPIRE Invocable Spatial Data Services metadata".
@@ -4111,9 +4047,8 @@ The multiplicity of the _gmd:report_/_gmd:DQ_DomainConsistency/gmd:result/gmd:DQ
 
 The requirement of declaring conformity not only to the INSPIRE Implementation Rules, but also to technical specifications, including the INSPIRE Technical Guidelines, is made more explicit for the Invocable Spatial Data Services in [Regulation 1312/2014], Annex I, Part D 2:
 
-{empty}
 ____
-2. Specification
+{empty}2. Specification
 
 The Specification metadata element set out in Regulation (EC) No 1205/2008 shall also refer to or contain technical specifications (such as INSPIRE technical guidance but not only), to which the invocable spatial data service fully conforms, providing all the necessary technical elements (human, and wherever relevant, machine readable) to allow its invocation.
 ____
@@ -4146,41 +4081,37 @@ In order to be machine readable, the specification title element should be provi
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result:**
 
 <gmd:result>
-  <gmd:dq_conformanceresult>
+  <gmd:DQ_ConformanceResult>
     <gmd:specification>
-      <gmd:ci_citation>
+      <gmd:CI_Citation>
         <gmd:title>
-          <gmx:anchor xlink:href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=32546">
+          <gmx:Anchor xlink:href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=32546">
             EN ISO 19128:2005(E): Geographic information — Web map server interface
-          </gmx:anchor>
+          </gmx:Anchor>
         </gmd:title>
         <gmd:date>
-          <gmd:ci_date>
+          <gmd:CI_Date>
             <gmd:date>
-              <gco:date>
-                2005-12-01
-              </gco:date>
+              <gco:date>2005-12-01</gco:date>
             </gmd:date>
-            <gmd:datetype>
-              <gmd:ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codelistvalue="publication">
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">
                 publication
-              </gmd:ci_datetypecode>
-            </gmd:datetype>
-          </gmd:ci_date>
+              </gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
         </gmd:date>
-      </gmd:ci_citation>
+      </gmd:CI_Citation>
     </gmd:specification>
     <gmd:explanation>
-      <gco:characterstring>
+      <gco:CharacterString>
         This Spatial Data Service set is conformant with the ISO 19128:2005 specification
-      </gco:characterstring>
+      </gco:CharacterString>
     </gmd:explanation>
     <gmd:pass>
-      <gco:boolean>
-        true
-      </gco:boolean>
+      <gco:boolean>true</gco:boolean>
     </gmd:pass>
-  </gmd:dq_conformanceresult>
+  </gmd:DQ_ConformanceResult>
 </gmd:result>
 ----
 *Example* *4.14:* Conformity declaration against the Web Map Service specification (ISO 19128:2005).
@@ -4206,13 +4137,10 @@ The metadata elements described in section 4.4.1 are direct child elements of _g
 
 ===== Coordinate Reference System Identifier
 
-It is mandatory for Interoperable Spatial Data Services indicate the coordinate reference system identifiers supported by the service. The element for describing this information is given in
+It is mandatory for Interoperable Spatial Data Services indicate the coordinate reference system identifiers supported by the service. The element for describing this information is given in [Regulation1312/2014], Annex II, Part B 3:
 
-[Regulation1312/2014], Annex II, Part B 3:
-
-{empty}
 ____
-3. Coordinate Reference System Identifier
+{empty}3. Coordinate Reference System Identifier
 
 Where appropriate, this is the list of coordinate reference systems supported by the spatial data service.
 
@@ -4224,7 +4152,11 @@ ____
 *TG Requirement 6.1: metadata/2.0/req/sds-interoperable/crs*
 
 The coordinate reference system(s) supported by the described Spatial Data Service shall be given using element _gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/ +
-gmd:referenceSystemIdentifier/gmd:RS_Identifier_.The multiplicity of this element is 1..*.The _gmd:code_ child element of _gmd:RS_Identifier_ is mandatory. The _gmd:codeSpace_ child element shall be used if the code alone does not uniquely identify the referred coordinate reference system. Both _gmd:code_ and _gmd:codeSpace_ element (if given) shall contain Non-empty Free Text Elements.
+gmd:referenceSystemIdentifier/gmd:RS_Identifier_.
+
+The multiplicity of this element is 1..*.
+
+The _gmd:code_ child element of _gmd:RS_Identifier_ is mandatory. The _gmd:codeSpace_ child element shall be used if the code alone does not uniquely identify the referred coordinate reference system. Both _gmd:code_ and _gmd:codeSpace_ element (if given) shall contain Non-empty Free Text Elements.
 
 Only the coordinate reference system identifiers specified in a well-known common register shall be used.
 ====
@@ -4254,9 +4186,8 @@ The metadata elements described in this section are contained within the first _
 
 In addition to the generic, often policy and licensing based restrictions discussed in section 2.4.7, also possible technical restrictions applying to the access and use of the Spatial Data Services shall be declared in the metadata for Interoperable Spatial Data Services, as described in [Regulation1312/2014], Annex II, Part A 1:
 
-{empty}
 ____
-1. Conditions applying to access and use
+{empty}1. Conditions applying to access and use
 
 The technical restrictions applying to the access and use of the spatial data service shall be documented in the metadata element “CONSTRAINT RELATED TO ACCESS AND USE” set out in Regulation (EC) No 1205/2008.
 ____
@@ -4267,16 +4198,17 @@ ____
 
 The technical restrictions applying to access and use of an Interoperable Spatial Data Service shall be given in the metadata. This information shall be encoded as described in the TG Requirement C.18.
 
-The multiplicity of the _gmd:resourceConstraints/gmd:MD_LegalConstraints_ element used for the above purpose is 1..*.This information may be combined within the same _gmd:resourceConstraints_ element used for describing the non-technical conditions applying to access and use of the Spatial Data Service.
+The multiplicity of the _gmd:resourceConstraints/gmd:MD_LegalConstraints_ element used for the above purpose is 1..*.
+
+This information may be combined within the same _gmd:resourceConstraints_ element used for describing the non-technical conditions applying to access and use of the Spatial Data Service.
 ====
 
 ===== Responsible party – custodian
 
 In addition to the information about the organisation responsible for the establishment, management, maintenance and distribution described in section 2.4.3, the metadata for Interoperable Spatial Data Service shall contain the information about the responsible party for the service in the role of the custodian. A custodian accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource. This additional requirement is described in [Regulation1312/2014], Annex II, Part A 2:
 
-{empty}
 ____
-2. Responsible party
+{empty}2. Responsible party
 
 The responsible party set out in Regulation (EC) No 1205/2008 shall at least describe the custodian responsible organisation, corresponding to the Custodian responsible party role set out in Regulation (EC) No 1205/2008.
 ____
@@ -4288,7 +4220,9 @@ ____
 The responsible party for the Interoperable Spatial Data Service in the role of the custodian shall be given. This element shall be encoded as described in TG Requirement C.10.
 
 The value of _gmd:pointOfContact_/_gmd:CI_ResponsibleParty_/_gmd:role_/ +
-_gmd:CI_RoleCode_ shall point to the value "custodian" of ISO 19139 code list CI_RoleCode. The multiplicity of the _gmd:pointOfContact/gmd:CI_ResponsibleParty_ element used for the above purpose is 1..*.
+_gmd:CI_RoleCode_ shall point to the value "custodian" of ISO 19139 code list CI_RoleCode.
+
+The multiplicity of the _gmd:pointOfContact/gmd:CI_ResponsibleParty_ element used for the above purpose is 1..*.
 ====
 
 In the TG Requirement C.9 the freedom of selecting the best fitting code for the responsible party role is left to the metadata provider. In cases when the responsible organisation responsible for the establishment, management, maintenance and distribution of the Spatial Data Service, is also responsible for the service in the role of the custodian, it may be sufficient to use the same responsible party element with only the role code custodian to represent the responsible party for both roles. Note that if it is desirable to express all of the distinct roles, a separate _gmd:pointOfContact/gmd:CI_ResponsibleParty_ element must be used for each role as only one _gmd:role_ child element is allowed for _gmd:CI_ResponsibleParty by the [ISO 19139] XML Schema_.
@@ -4359,20 +4293,20 @@ The purpose of these quality of service metadata elements is to describe the min
 
 *Table* *4.2:* The Quality of Service criteria for Interoperable Spatial Data Services.
 
-[width="100%",cols="24%,26%,50%",options="header",]
+[width="100%",cols="24%,26%,50%"]
 |===
-|Minimum availability |Definition |Lower limit of the percentage of time the service is estimated to be available on a yearly basis.
-| |Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/availability
-| |Value type |xsi:double between 0..100
-| |Unit of measure |urn:ogc:def:uom:OGC::percent
-|Minimum performance |Definition |The maximum response time within which a typical request to the Spatial Data Service can be carried out in a normal situation, by returning at least the initial part of the response. The normal situation represents periods out of peak load. It is set at 90% of the time.
-| |Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/performance
-| |Value type |xsi:double
-| |Unit of measure |http://www.opengis.net/def/uom/SI/second
-|Minimum capacity |Definition |Lower limit of the maximum number of simultaneous requests that can be completed within the limits of the declared performance.
-| |Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/capacity
-| |Value type |xsi:integer
-| |Unit of measure |http://www.opengis.net/def/uom/OGC/1.0/unity
+.4+|Minimum availability |Definition |Lower limit of the percentage of time the service is estimated to be available on a yearly basis.
+|Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/availability
+|Value type |xsi:double between 0..100
+|Unit of measure |urn:ogc:def:uom:OGC::percent
+.4+|Minimum performance |Definition |The maximum response time within which a typical request to the Spatial Data Service can be carried out in a normal situation, by returning at least the initial part of the response. The normal situation represents periods out of peak load. It is set at 90% of the time.
+|Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/performance
+|Value type |xsi:double
+|Unit of measure |http://www.opengis.net/def/uom/SI/second
+.4+|Minimum capacity |Definition |Lower limit of the maximum number of simultaneous requests that can be completed within the limits of the declared performance.
+|Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/capacity
+|Value type |xsi:integer
+|Unit of measure |http://www.opengis.net/def/uom/OGC/1.0/unity
 |===
 
 [source,xml,subs="+quotes"]
@@ -4380,29 +4314,26 @@ The purpose of these quality of service metadata elements is to describe the min
 **/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report:**
 
 <gmd:report>
-  <gmd:dq_conceptualconsistency>
-    <gmd:nameofmeasure>
-      <gmx:anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/performance">
-        performance
-      </gmx:anchor>
-    </gmd:nameofmeasure>
-    <gmd:measuredescription>
-      <gco:characterstring>
+  <gmd:DQ_ConceptualConsistency>
+    <gmd:nameOfMeasure>
+      <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/performance">performance
+      </gmx:Anchor>
+    </gmd:nameOfMeasure>
+    <gmd:measureDescription>
+      <gco:CharacterString>
         The maximum time in which a typical request to the Spatial Data Service can be carried out in a off-peak load situation
-      </gco:characterstring>
-    </gmd:measuredescription>
+      </gco:CharacterString>
+    </gmd:measureDescription>
     <gmd:result>
-      <gmd:dq_quantitativeresult>
-        <gmd:valueunit xlink:href="http://www.opengis.net/def/uom/SI/second">
-        </gmd:valueunit>
+      <gmd:DQ_QuantitativeResult>
+        <gmd:valueUnit xlink:href="http://www.opengis.net/def/uom/SI/second">
+        </gmd:valueUnit>
         <gmd:value>
-          <gco:record xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">
-            1.56
-          </gco:record>
+          <gco:record xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">1.56</gco:record>
         </gmd:value>
-      </gmd:dq_quantitativeresult>
+      </gmd:DQ_QuantitativeResult>
     </gmd:result>
-  </gmd:dq_conceptualconsistency>
+  </gmd:DQ_ConceptualConsistency>
 </gmd:report>
 ----
 *Example* *4.15:* Declared Quality of Service for the criteria minimum performance. Similar gmd:report elements shall be given also for the other criteria minimum availability and minimum capacity. The type of the gco:Record element has been defined as a double precision floating point number using the local typing (xsi:type attribute).
@@ -4432,16 +4363,19 @@ The metadata elements described in this section are contained within the first _
 
 A harmonised spatial data service shall have well documented interfaces and list the end points for each operation to enable machine to machine communication. This invocation metadata element is described in [Regulation1312/2014], Annex III, Part B 3:
 
-{empty}
 ____
-3. Invocation metadataThe invocation metadata element documents the interfaces of the harmonised spatial data service and lists the end points to enable machine-to machine communication.
+{empty}3. Invocation metadataThe invocation metadata element documents the interfaces of the harmonised spatial data service and lists the end points to enable machine-to machine communication.
 ____
 
 [IMPORTANT]
 ====
 *TG Requirement 7.1: metadata/2.0/req/sds-harmonised/invocation-metadata*
 
-The invocation metadata shall be given for Harmonised Spatial Data Services. This information shall be encoded using one of the following two options:*Option 1*: All operations and the list of end points for them along with the information about the required and optional parameters for each operation shall be provided within the metadata record using the _srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint_ element. This element shall be the same as the element describing the access point (see TG Requirement 5.2). In this option the information provided by calling the access point together with the information about the conformity with the technical specifications described according to TG Requirement 5.5 shall fulfil the invocation metadata requirements.*Option 2*: All operations and the list of end points for them along with the information about the required and optional parameters for each operation shall be provided within the metadata record using one _srv:containsOperations/srv:SV_OperationMetadata_ element for each provided operation. The contents of these element shall be given according to [ISO 19119, Section C.2].
+The invocation metadata shall be given for Harmonised Spatial Data Services. This information shall be encoded using one of the following two options:
+
+*Option 1*: All operations and the list of end points for them along with the information about the required and optional parameters for each operation shall be provided within the metadata record using the _srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint_ element. This element shall be the same as the element describing the access point (see TG Requirement 5.2). In this option the information provided by calling the access point together with the information about the conformity with the technical specifications described according to TG Requirement 5.5 shall fulfil the invocation metadata requirements.
+
+*Option 2*: All operations and the list of end points for them along with the information about the required and optional parameters for each operation shall be provided within the metadata record using one _srv:containsOperations/srv:SV_OperationMetadata_ element for each provided operation. The contents of these element shall be given according to [ISO 19119, Section C.2].
 
 When the metadata record contains at least one _srv:containsOperations/srv:SV_OperationMetadata_ element, it is assumed that the option 2 has been chosen, otherwise it is assumed that the option 1 has been chosen.
 ====
@@ -4450,16 +4384,34 @@ When the metadata record contains at least one _srv:containsOperations/srv:SV_Op
 ====
 *TG Requirement 7.2: metadata/2.0/req/sds-harmonised/operation-metadata*
 
-If the metadata contains at least one the _srv:containsOperations/srv:SV_OperationMetadata_ element the invocation metadata within shall be encoded using at least the following child elements__:srv:operationName__ element shall contain a unique identifier for interface described by the _srv:SV_OperationMetadata_ element. The value of this element is a Non-empty Free Text Element. The multiplicity of this element is 1._srv:DCP/srv:DCPList_ shall contain a reference to the Distributed Computing Platform on which the operation has been implemented. The multiplicity of this element is 1..*._srv:parameters/srv:SV_Parameter_ shall contain a description of a single request parameter to be used in invoking the operation. The content for this element shall be encoded as described in TG Requirement 7.3. The multiplicity of this element is 0..*, and it is mandatory for all required and optional parameters provided by the operation._srv:connectPoint/gmd:CI_OnlineResource/gmd:URL_ shall contain an end point URL to be used for accessing the service for executing the operation. The multiplicity of the element is 1..*.
+If the metadata contains at least one the _srv:containsOperations/srv:SV_OperationMetadata_ element the invocation metadata within shall be encoded using at least the following child elements:
+
+_srv:operationName_ element shall contain a unique identifier for interface described by the _srv:SV_OperationMetadata_ element. The value of this element is a Non-empty Free Text Element. The multiplicity of this element is 1.
+
+_srv:DCP/srv:DCPList_ shall contain a reference to the Distributed Computing Platform on which the operation has been implemented. The multiplicity of this element is 1..*.
+
+_srv:parameters/srv:SV_Parameter_ shall contain a description of a single request parameter to be used in invoking the operation. The content for this element shall be encoded as described in TG Requirement 7.3. The multiplicity of this element is 0..*, and it is mandatory for all required and optional parameters provided by the operation.
+
+_srv:connectPoint/gmd:CI_OnlineResource/gmd:URL_ shall contain an end point URL to be used for accessing the service for executing the operation. The multiplicity of the element is 1..*.
 ====
 
 [IMPORTANT]
 ====
 *TG Requirement 7.3: metadata/2.0/req/sds-harmonised/operation-metadata-parameters*
 
-For all the required and optional request parameters of all the operations described using _srv:containsOperations/srv:SV_OperationMetadata_ elements, the following child elements of s__rv:parameters/srv:SV_Parameter__ element shall be given__:srv:name/gco:aName__ shall contain the name of the parameter as used by the service. The content of this element is a Non-empty Free Text Element. The element _srv:name/gco:attributeType_ shall contain the record or the type part of the attribute name. The multiplicity of the _srv:name_ element is 1._srv:optionality_ shall contain information about whether the attribute is required or optional. The content of this element is a Non-empty Free Text Element. The multiplicity of this element is 1.srv:repeatability/gco:Boolean shall contain indicate whether the attribute can be given more than once in one operation. The value "true" shall be used indicate that the attribute may be repeated, "false" that only it may be given only once._srv:valueType/gco:TypeName/gco:Name_ shall indicate the data type of the attribute.
+For all the required and optional request parameters of all the operations described using _srv:containsOperations/srv:SV_OperationMetadata_ elements, the following child elements of s__rv:parameters/srv:SV_Parameter__ element shall be given:
+
+_srv:name/gco:aName_ shall contain the name of the parameter as used by the service. The content of this element is a Non-empty Free Text Element. The element _srv:name/gco:attributeType_ shall contain the record or the type part of the attribute name. The multiplicity of the _srv:name_ element is 1.
+
+_srv:optionality_ shall contain information about whether the attribute is required or optional. The content of this element is a Non-empty Free Text Element. The multiplicity of this element is 1.
+
+srv:repeatability/gco:Boolean shall contain indicate whether the attribute can be given more than once in one operation. The value "true" shall be used indicate that the attribute may be repeated, "false" that only it may be given only once.
+
+_srv:valueType/gco:TypeName/gco:Name_ shall indicate the data type of the attribute.
 ====
 
+<<<
+[appendix]
 == Annex A Abstract Test Suites
 
 This Annex only contains the structure of the Abstract Test Suites and the contained Conformance Classes for testing the metadata records against the requirements of this specification. The Test Cases for the Conformance Classes are provided in a separate repositoryfootnote:[At the time of writing, the test cases for these Conformance Classes were not yet published. The repository for the Conformance Classes will be made available at http://inspire.ec.europa.eu/id/ats/metadata/2.0.].
@@ -4496,7 +4448,9 @@ This section contains test cases covering all the TG Requirements of Conformance
 
 This section contains test cases covering all the TG Requirements of Conformance Class 7: INSPIRE Harmonised Spatial Data Services metadata (http://inspire.ec.europa.eu/id/ats/metadata/2.0/sds-harmonised).
 
-== Annex B Mapping of ISO 19115:2003 Core elements and INSPIRE Implementing Rules for metadata (informative)
+<<<
+[appendix]
+== Mapping of ISO 19115:2003 Core elements and INSPIRE Implementing Rules for metadata (informative)
 
 === Spatial dataset and spatial dataset series
 
@@ -4508,9 +4462,9 @@ The table below compares the core elements of ISO 19115 (see Table 3 in 6.5 of E
 |Dataset title (M) |Part B 1.1 Resource Title |-
 |Dataset reference date (M) |Part B 5 Temporal Reference |ISO 19115 is more demanding. The metadata shall contain a date of publication, revision or creation of the resource, while in INSPIRE the Temporal Reference can also be expressed through Temporal Extent.
 |Dataset responsible party (O) |Part B 9 Responsible organisation |INSPIRE is more demanding by mandating both the name of the organisation, and a contact e-mail address
-|Geographic location of the dataset (C) |Part B 4.1 Geographic Bounding Box |INSPIRE is more restrictive. A Geographic bounding box is mandated
+|Geographic location of the dataset \(C) |Part B 4.1 Geographic Bounding Box |INSPIRE is more restrictive. A Geographic bounding box is mandated
 |Dataset language (M) |Part B 1.7 Resource Language |ISO 19115 is more demanding. It mandates the dataset language, even if the resource does not include any textual information. The ISO 19115 Dataset language is defaulted to the Metadata language.
-|Dataset character set (C) |- a|
+|Dataset character set \(C) |- a|
 ISO 19115 is more demanding. The dataset character set has to be documented in ISO 19115 when ISO 10646-1 is not used.
 
 The ISO 19115 element maps to the conditional “Character Encoding” metadata element defined in Art. 13(5) of the Implementing Rules on interoperability of spatial data sets and services. This element is mandatory only if an encoding is used that is not based on UTF-8 (the dominant encoding of ISO 10646-1).
@@ -4528,7 +4482,7 @@ The ISO 19115 element maps to the conditional “Character Encoding” metadata 
 |Metadata standard name (O) |- |-
 |Metadata standard version (O) |- |-
 |Metadata language (C) |Part B 10.3 Metadata Language |INSPIRE is more demanding. The metadata language is mandated even if it is defined by the encoding.
-|Metadata character set (C) |- |ISO 19115 is more demanding. The metadata character set has to be documented in ISO 19115 when ISO 10646-1 is not used.
+|Metadata character set \(C) |- |ISO 19115 is more demanding. The metadata character set has to be documented in ISO 19115 when ISO 10646-1 is not used.
 |Metadata point of contact (M) |Part B 10.1 Metadata point of contact |INSPIRE is more demanding by mandating both the name of the organisation, and a contact e-mail address.
 |Metadata date stamp (M) |Part B 10.2 Metadata Date |ISO is more restrictive because this element shall contain the “date that the metadata was created” and INSPIRE may contain the “date when the metadata record was created or updated
 |- |Part B 1.3 Resource Type |INSPIRE is more demanding
@@ -4549,10 +4503,10 @@ The table below compares the core requirements of ISO 19115 (see Table 3 in 6.5 
 |Dataset title (M) |Part B 1.1 Resource Title |-
 |Dataset reference date (M) |Part B 5 Temporal Reference |ISO 19115 is more demanding. Despite its name, this ISO 19115 Core metadata element applies to services. A reference date of the service (date of publication, revision or creation …) is mandated.
 |Dataset responsible party (O) |Part B 9 Responsible organisation |-
-|Geographic location of the dataset (C) |- |See INSPIRE Geographic Bounding Box
+|Geographic location of the dataset \(C) |- |See INSPIRE Geographic Bounding Box
 |- |Part B 4.1 Geographic Bounding Box |The Geographic Bounding Box is handled in ISO 19119 with a different metadata element from the one corresponding to “Geographic location of the dataset”
 |Dataset language (M) |- |Not applicable to services
-|Dataset character set (C) |- |Not applicable to services
+|Dataset character set \(C) |- |Not applicable to services
 |Dataset topic category (M) |- |Not applicable to services
 |Spatial resolution of the dataset (O) |Part B 6.2 Spatial Resolution |In the current version of ISO 19119, it is not possible to express the restriction of a service concerning the spatial resolution
 |Abstract describing the dataset (M) |Part B 1.2 Resource abstract |-
@@ -4565,8 +4519,8 @@ The table below compares the core requirements of ISO 19115 (see Table 3 in 6.5 
 |Metadata file identifier (O) |- |-
 |Metadata standard name (O) |- |-
 |Metadata standard version (O) |- |-
-|Metadata language (C) |Part B 10.3 Metadata Language |INSPIRE is more demanding. The metadata language is mandated.
-|Metadata character set (C) |- |ISO 19115 is more demanding. The metadata character set has to be documented in ISO 19115 when ISO 10646-1 is not used.
+|Metadata language \(C) |Part B 10.3 Metadata Language |INSPIRE is more demanding. The metadata language is mandated.
+|Metadata character set \(C) |- |ISO 19115 is more demanding. The metadata character set has to be documented in ISO 19115 when ISO 10646-1 is not used.
 |Metadata point of contact (M) |Part B 10.1 Metadata point of contact |-
 |Metadata date stamp (M) |Part B 10.2 Metadata Date |ISO is more restrictive because this element shall contain the “date that the metadata was created” and INSPIRE may contain the “date when the metadata record was created or updated
 |- |Part B 1.3 Resource Type |INSPIRE is more demanding
@@ -4583,7 +4537,9 @@ The table below compares the core requirements of ISO 19115 (see Table 3 in 6.5 
 * The conformance of an ISO 19115 metadata set to the ISO 19115 Core does not guarantee the conformance to INSPIRE;
 * The use of these guidelines to create INSPIRE metadata ensures that the metadata is not in conflict with ISO 19115. However, full conformance to ISO 19115 implies the provision of additional metadata elements which are not required by the INSPIRE Implementing Rule on Metadata.
 
-== Annex C INSPIRE metadata element catalog (informative)
+<<<
+[appendix]
+== INSPIRE metadata element catalog (informative)
 
 The following tables describe the mapping between the metadata elements of INSPIRE, as defined in the [Regulation 1205/2008] and [Regulation 1089/2010] (including its amendments [Regulation 1253/2013] and [Regulation 1312/2014]) and ISO 19115/ISO 19119. For each of the INSPIRE Metadata element, the mapping is composed of the main characteristics of the metadata element as they are defined in the INSPIRE implementing rules (IR) for metadata and the main characteristics of the corresponding metadata element of ISO 19115 or ISO 19119:
 
@@ -4648,12 +4604,10 @@ Section C.7 contains a collection of theme-specific metadata elements described 
 
 ==== Spatial data sets and data sets series
 
-[arabic]
-. {blank}
 
 [width="100%",cols="20%,13%,24%,15%,28%",options="header",]
 |===
-|Implementing rule |Section / article |Element name |INSPIRE multiplicity |INSPIRE obligation / condition / note
+<|Implementing rule |Section / article |Element name |INSPIRE multiplicity |INSPIRE obligation / condition / note
 |[Regulation 1205/2008] |Part B 1.1 |Resource title |1 |Mandatory
 |[Regulation 1205/2008] |Part B 1.2 |Resource abstract |1 |Mandatory
 |[Regulation 1205/2008] |Part B 1.3 |Resource type |1 |Mandatory
@@ -4694,7 +4648,7 @@ Section C.7 contains a collection of theme-specific metadata elements described 
 
 [width="100%",cols="20%,13%,24%,15%,28%",options="header",]
 |===
-|Implementing rule |Section / article |Element name |INSPIRE multiplicity |INSPIRE obligation / condition / note
+<|Implementing rule |Section / article |Element name |INSPIRE multiplicity |INSPIRE obligation / condition / note
 |[Regulation 1205/2008] |Part B 1.1 |Resource title |1 |Mandatory
 |[Regulation 1205/2008] |Part B 1.2 |Resource abstract |1 |Mandatory
 |[Regulation 1205/2008] |Part B 1.3 |Resource type |1 |Mandatory
@@ -4737,7 +4691,7 @@ Section C.7 contains a collection of theme-specific metadata elements described 
 |Reference |Part B 1.1
 |Definition |Name by which the cited resource is known
 |ISO 19115 number and name |360. title
-|ISO/TS 19139 path |identificationInfo[1]/*/citation/*/title
+|ISO/TS 19139 path |identificationInfo[1]/\*/citation/*/title
 |INSPIRE obligation / condition |Mandatory
 |INSPIRE multiplicity |[1]
 |Data type (and ISO 19115 no.) |CharacterString
@@ -4858,7 +4812,7 @@ Function: information
 |Reference |Part B 1.5
 |Definition |Value uniquely identifying an object within a namespace
 |ISO 19115 number and name |365. identifier
-|ISO/TS 19139 path |identificationInfo[1]/*/citation/*/identifier
+|ISO/TS 19139 path |identificationInfo[1]/\*/citation/*/identifier
 |INSPIRE obligation / condition |Mandatory for dataset and dataset series
 |INSPIRE multiplicity |[1..*] for dataset and series
 |Data type (and ISO 19115 no.) |205. MD_Identifier
@@ -5010,7 +4964,7 @@ Regional languages also are included in this list.
 |Reference |Part B 3.1
 |Definition |Commonly used word(s) or formalised word(s) or phrase(s) used to describe the subject
 |ISO 19115 number and name |53. keyword
-|ISO/TS 19139 path |identificationInfo[1]/*/descriptiveKeywords/*/keyword
+|ISO/TS 19139 path |identificationInfo[1]/\*/descriptiveKeywords/*/keyword
 |INSPIRE obligation / condition |Mandatory
 |INSPIRE multiplicity |[1..*]
 |Data type (and ISO 19115 no.) |CharacterString
@@ -5035,7 +4989,7 @@ rain water (GEMET Concepts)
 |Reference |Part B 3.2
 |Definition |Name of the formally registered thesaurus or a similar authoritative source of keywords
 |ISO 19115 number and name |55. thesaurusName
-|ISO/TS 19139 path |identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName
+|ISO/TS 19139 path |identificationInfo[1]/\*/descriptiveKeywords/*/thesaurusName
 |INSPIRE obligation / condition |Conditional: Mandatory if the keyword value originates from a controlled vocabulary
 |INSPIRE multiplicity |[0..1] relative to a single Keyword, but there may be many keywords originating from different controlled vocabularies
 |Data type (and ISO 19115 no.) |CI_Citation
@@ -5129,13 +5083,13 @@ Southern-most coordinate of the limit of the dataset extent, expressed in latitu
 {empty}347. northBoundLatitude
 
 |ISO/TS 19139 path a|
-identificationInfo[1]/*/extent/*/geographicElement/*/westBoundLongitude
+identificationInfo[1]/\*/extent/*/geographicElement/*/westBoundLongitude
 
-identificationInfo[1]/*/extent/*/geographicElement/*/eastBoundLongitude
+identificationInfo[1]/\*/extent/*/geographicElement/*/eastBoundLongitude
 
-identificationInfo[1]/*/extent/*/geographicElement/*/southBoundLatitude
+identificationInfo[1]/\*/extent/*/geographicElement/*/southBoundLatitude
 
-identificationInfo[1]/*/extent/*/geographicElement/*/northBoundLatitude
+identificationInfo[1]/\*/extent/*/geographicElement/*/northBoundLatitude
 
 |INSPIRE obligation / condition a|
 * Mandatory for datasets and spatial dataset series
@@ -5179,7 +5133,7 @@ identificationInfo[1]/*/extent/*/geographicElement/*/northBoundLatitude
 |Reference |Part B 5.1
 |Definition |Time period covered by the content of the dataset
 |ISO 19115 number and name |351. extent
-|ISO/TS 19139 path |identificationInfo[1]/*/extent/*/temporalElement/*/extent
+|ISO/TS 19139 path |identificationInfo[1]/\*/extent/*/temporalElement/*/extent
 |INSPIRE obligation / condition |Conditional: At least one temporal reference is required
 |INSPIRE multiplicity |[0..*] for temporal extent but at least one temporal reference is required
 |Data type (and ISO 19115 no.) |TM_Primitive
@@ -5196,7 +5150,7 @@ identificationInfo[1]/*/extent/*/geographicElement/*/northBoundLatitude
 |Reference |Part B 5.2
 |Definition |Reference date for the cited resource - publication
 |ISO 19115 number and name |362. date
-|ISO/TS 19139 path |identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='publication']/*/date
+|ISO/TS 19139 path |identificationInfo[1]/\*/citation/*/date[./*/dateType/*/text()='publication']/*/date
 |INSPIRE obligation / condition |Conditional: at least one date of publication / date of creation / date of revision is required
 |INSPIRE multiplicity |[0..*] but at least one date of publication / date of creation / date of revision or one temporal extent is required
 |Data type (and ISO 19115 no.) |393. CI_Date
@@ -5217,7 +5171,7 @@ identificationInfo[1]/*/extent/*/geographicElement/*/northBoundLatitude
 |Reference |Part B 5.3
 |Definition |Reference date for the cited resource - revision
 |ISO 19115 number and name |362. date
-|ISO/TS 19139 path |identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='publication']/*/date
+|ISO/TS 19139 path |identificationInfo[1]/\*/citation/*/date[./*/dateType/*/text()='publication']/*/date
 |INSPIRE obligation / condition |Conditional: at least one date of publication / date of creation / date of revision is required
 |INSPIRE multiplicity |[0..1] but at least one date of publication / date of creation / date of revision or one temporal extent is required
 |Data type (and ISO 19115 no.) |393. CI_Date
@@ -5238,7 +5192,7 @@ identificationInfo[1]/*/extent/*/geographicElement/*/northBoundLatitude
 |Reference |Part B 5.4
 |Definition |Reference date for the cited resource - creation
 |ISO 19115 number and name |362. date
-|ISO/TS 19139 path |identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='publication']/*/date
+|ISO/TS 19139 path |identificationInfo[1]/\*/citation/*/date[./*/dateType/*/text()='publication']/*/date
 |INSPIRE obligation / condition |Conditional: at least one date of publication / date of creation / date of revision is required
 |INSPIRE multiplicity |[0..1] but at least one date of publication / date of creation / date of revision or one temporal extent is required
 |Data type (and ISO 19115 no.) |393. CI_Date
@@ -5259,7 +5213,7 @@ identificationInfo[1]/*/extent/*/geographicElement/*/northBoundLatitude
 |Reference |Part B 6.1
 |Definition |General explanation of the data producer’s knowledge about the lineage of a dataset
 |ISO 19115 number and name |83. statement
-|ISO/TS 19139 path |dataQualityInfo/*/lineage/*/statement
+|ISO/TS 19139 path |dataQualityInfo/\*/lineage/*/statement
 |INSPIRE obligation / condition a|
 * Mandatory for spatial dataset and spatial dataset series.
 * Not applicable to services.
@@ -5290,8 +5244,8 @@ identificationInfo[1]/*/extent/*/geographicElement/*/northBoundLatitude
 * {empty}61. distance
 
 |ISO/TS 19139 path a|
-* identificationInfo[1]/*/spatialResolution/*/equivalentScale/*/denominator (equivalent scale)
-* identificationInfo[1]/*/spatialResolution/*/distance (distance)
+* identificationInfo[1]/\*/spatialResolution/*/equivalentScale/*/denominator (equivalent scale)
+* identificationInfo[1]/\*/spatialResolution/*/distance (distance)
 
 |INSPIRE obligation / condition a|
 * Conditional: Mandatory if an equivalent scale or a resolution distance can be specified.
@@ -5322,7 +5276,7 @@ identificationInfo[1]/*/extent/*/geographicElement/*/northBoundLatitude
 |Reference |Part B 7.1
 |Definition |Citation of the product specification or user requirement against which data is being evaluated
 |ISO 19115 number and name |130. specification
-|ISO/TS 19139 path |dataQualityInfo/*/report/*/result/*/specification
+|ISO/TS 19139 path |dataQualityInfo/\*/report/*/result/*/specification
 |INSPIRE obligation / condition |Mandatory
 |INSPIRE multiplicity |[1] understood in the context of a conformity statement when reported in the metadata – there may be more than one conformity statement
 |Data type (and ISO 19115 no.) |359. CI_Citation
@@ -5364,7 +5318,7 @@ date: 2010-12-08
 |Reference |Part B 7.2
 |Definition |Indication of the conformance result
 |ISO 19115 number and name |132. pass
-|ISO/TS 19139 path |dataQualityInfo/*/report/*/result/*/pass
+|ISO/TS 19139 path |dataQualityInfo/\*/report/*/result/*/pass
 |INSPIRE obligation / condition |Mandatory
 |INSPIRE multiplicity |[1] understood in the context of a conformity statement when reported in the metadata – there may be more than one conformity statement
 |Data type (and ISO 19115 no.) |Boolean
@@ -5385,7 +5339,7 @@ date: 2010-12-08
 |Reference |Part B 8.1
 |Definition |Restrictions on the access of a resource or metadata
 |ISO 19115 number and name |70. accessConstraints
-|ISO/TS 19139 path |identificationInfo[1]/*/resourceConstraints/*/accessConstraints
+|ISO/TS 19139 path |identificationInfo[1]/\*/resourceConstraints/*/accessConstraints
 |INSPIRE obligation / condition |Conditional. Mandatory if useConstraints is not documented.
 |INSPIRE multiplicity |[0..*] for accessConstraints per instance of MD_LegalConstraints
 |Data type (and ISO 19115 no.) |MD_RestrictionCode
@@ -5400,7 +5354,7 @@ date: 2010-12-08
 |Reference |Part B 8.1
 |Definition |Other restrictions and legal prerequisites for accessing the resource or metadata
 |ISO 19115 number and name |72. otherConstraints
-|ISO/TS 19139 path |identificationInfo[1]/*/resourceConstraints/*/otherConstraints
+|ISO/TS 19139 path |identificationInfo[1]/\*/resourceConstraints/*/otherConstraints
 |INSPIRE obligation / condition |Conditional: referring to conditions applying to access. Mandatory if accessConstraints is set at the value “otherRestrictions”
 |INSPIRE multiplicity |[0..*] for otherConstraints per instance of MD_LegalConstraints
 |Data type (and ISO 19115 no.) |CharacterString
@@ -5421,13 +5375,13 @@ Reproduction for non-commercial purposes is authorised, provided the source is a
 |Comments |The domain of the metadata element otherConstraints is Free text. This makes it hard to unambiguous define some common values in all official languages in the Communiy.Therefore it is required to refer to code lists in the Inspire registry for some specific values like “no conditions apply” and “conditions unknown” (see TG Requirement 8).
 |===
 
-[width="100%",cols="30%,70%",options="header",]
+[width="100%",cols="30%,70%"]
 |===
 |*Metadata element name* |*Conditions applying to use*
 |Reference |Part B 8.1
 |Definition |Restrictions on the use of a resource or metadata
 |ISO 19115 number and name |71. useConstraints
-|ISO/TS 19139 path |identificationInfo[1]/*/resourceConstraints/*/useConstraints
+|ISO/TS 19139 path |identificationInfo[1]/\*/resourceConstraints/*/useConstraints
 |INSPIRE obligation / condition |Conditional. Mandatory if accessConstraints is not documented.
 |INSPIRE multiplicity |[0..*] for useConstraints per instance of MD_LegalConstraints
 |Data type (and ISO 19115 no.) |MD_RestrictionCode
@@ -5436,13 +5390,13 @@ Reproduction for non-commercial purposes is authorised, provided the source is a
 |Comments |
 |===
 
-[width="100%",cols="30%,70%",options="header",]
+[width="100%",cols="30%,70%"]
 |===
 |*Metadata element name* |*Conditions applying to use (other constraints)*
 |Reference |Part B 8.1
 |Definition |Other restrictions and legal prerequisites for accessing and using the resource or metadata
 |ISO 19115 number and name |72. otherConstraints
-|ISO/TS 19139 path |identificationInfo[1]/*/resourceConstraints/*/otherConstraints
+|ISO/TS 19139 path |identificationInfo[1]/\*/resourceConstraints/*/otherConstraints
 |INSPIRE obligation / condition |Conditional: referring to conditions applying to use. Mandatory if useConstraints is set at the value “otherRestrictions”
 |INSPIRE multiplicity |[0..*] for otherConstraints per instance of MD_LegalConstraints
 |Data type (and ISO 19115 no.) |CharacterString
@@ -5470,7 +5424,7 @@ Therefore it is required to refer to codelists in the Inspire registry for some 
 |Reference |Part B 8.2
 |Definition |access constraints applied to assure the protection of privacy or intellectual property, and any special restrictions or limitations on obtaining the resource
 |ISO 19115 number and name |70. accessConstraints
-|ISO/TS 19139 path |identificationInfo[1]/*/resourceConstraints/*/accessConstraints
+|ISO/TS 19139 path |identificationInfo[1]/\*/resourceConstraints/*/accessConstraints
 |INSPIRE obligation / condition |Conditional: referring to limitations on public access. Mandatory if classification is not documented
 |INSPIRE multiplicity |[0..*] for accessConstraints per instance of MD_LegalConstraints
 |Data type (and ISO 19115 no.) |MD_RestrictionCode
@@ -5485,7 +5439,7 @@ Therefore it is required to refer to codelists in the Inspire registry for some 
 |Reference |Part B 8.2
 |Definition |Other restrictions and legal prerequisites for accessing and using the resource or metadata
 |ISO 19115 number and name |72. otherConstraints
-|ISO/TS 19139 path |identificationInfo[1]/*/resourceConstraints/*/otherConstraints
+|ISO/TS 19139 path |identificationInfo[1]/\*/resourceConstraints/*/otherConstraints
 |INSPIRE obligation / condition |Conditional: referring to limitations on public access. Mandatory if classification is not documented
 |INSPIRE multiplicity |[0..*] for otherConstraints per instance of MD_LegalConstraints
 |Data type (and ISO 19115 no.) |Gmx:anchor
@@ -5547,7 +5501,7 @@ electronicMailAddress: ies-contact@jrc.ec.europa.eu
 |Reference |Part B 9.2
 |Definition |Function performed by the responsible party
 |ISO 19115 number and name |379. role
-|ISO/TS 19139 path |identificationInfo[1]/*/pointOfContact/*/role
+|ISO/TS 19139 path |identificationInfo[1]/\*/pointOfContact/*/role
 |INSPIRE obligation / condition |Mandatory
 |INSPIRE multiplicity |[1] relative to a responsible organisation, but there may be many responsible organisations for a single resource
 |Data type (and ISO 19115 no.) |CI_RoleCode
@@ -5957,7 +5911,7 @@ Metadata elements for Invocable Spatial Data Services in [Regulation 1089/2010],
 |Reference |COMMISSION REGULATION (EU) No 1089/2010, Annex V, Part B 1
 |Definition |Citation of the product specification or user requirement against which data is being evaluated
 |ISO 19115 number and name |130. specification
-|ISO/TS 19139 path |dataQualityInfo/*/report/*/result/*/specification
+|ISO/TS 19139 path |dataQualityInfo/\*/report/*/result/*/specification
 |INSPIRE obligation / condition |Mandatory for invocable spatial data services
 |INSPIRE multiplicity |[1] understood in the context of a conformity statement when reported in the metadata – there may be more than one conformity statement
 |Data type (and ISO 19115 no.) |359. CI_Citation
@@ -5982,7 +5936,7 @@ http://inspire.ec.europa.eu/RequirementsClass/TG-Metadata/2.0/SDS-harmonised
 |Reference |COMMISSION REGULATION (EU) No 1089/2010, Annex V, Part B 1
 |Definition |Indication of the conformance result
 |ISO 19115 number and name |132. pass
-|ISO/TS 19139 path |dataQualityInfo/*/report/*/result/*/pass
+|ISO/TS 19139 path |dataQualityInfo/\*/report/*/result/*/pass
 |INSPIRE obligation / condition |Mandatory for invocable spatial data services
 |INSPIRE multiplicity |[1] understood in the context of a conformity statement when reported in the metadata – there may be more than one conformity statement
 |Data type (and ISO 19115 no.) |Boolean
@@ -6001,7 +5955,7 @@ http://inspire.ec.europa.eu/RequirementsClass/TG-Metadata/2.0/SDS-harmonised
 |Reference |COMMISSION REGULATION (EU) No 1089/2010, Annex V, Part D 1
 |Definition |Location (address) for on-line access using a Uniform Resource Locator address or similar addressing scheme
 |ISO 19115 number and name |397. linkage
-|ISO/TS 19139 path |distributionInfo/*/transferOptions/*/onLine/*/linkage
+|ISO/TS 19139 path |distributionInfo/\*/transferOptions/*/onLine/*/linkage
 |INSPIRE obligation / condition |Mandatory for invocable spatial data services
 |INSPIRE multiplicity |[1..*]
 |Data type (and ISO 19115 no.) |URL
@@ -6016,7 +5970,7 @@ http://inspire.ec.europa.eu/RequirementsClass/TG-Metadata/2.0/SDS-harmonised
 |Reference |COMMISSION REGULATION (EU) No 1089/2010, Annex V, Part D 1
 |Definition |Detailed text description of what the online resource is/does
 |ISO 19115 number and name |401. description
-|ISO/TS 19139 path |distributionInfo/*/transferOptions/*/onLine/*/description
+|ISO/TS 19139 path |distributionInfo/\*/transferOptions/*/onLine/*/description
 |INSPIRE obligation / condition |Mandatory for invocable spatial data services
 |INSPIRE multiplicity |[1]
 |Data type (and ISO 19115 no.) |Free text
@@ -6033,7 +5987,7 @@ http://inspire.ec.europa.eu/RequirementsClass/TG-Metadata/2.0/SDS-harmonised
 |Reference |COMMISSION REGULATION (EU) No 1089/2010, Annex V, Part D 2
 |Definition |Citation of the product specification or user requirement against which data is being evaluated
 |ISO 19115 number and name |130. specification
-|ISO/TS 19139 path |dataQualityInfo/*/report/*/result/*/specification
+|ISO/TS 19139 path |dataQualityInfo/\*/report/*/result/*/specification
 |INSPIRE obligation / condition |Mandatory for invocable spatial data services
 |INSPIRE multiplicity |[1..*] understood in the context of a conformity statement when reported in the metadata – there may be more than one conformity statement
 |Data type (and ISO 19115 no.) |359. CI_Citation
@@ -6073,7 +6027,7 @@ date: 2005-12-01
 |Reference |COMMISSION REGULATION (EU) No 1089/2010, Annex V, Part D 2
 |Definition |Indication of the conformance result
 |ISO 19115 number and name |132. pass
-|ISO/TS 19139 path |dataQualityInfo/*/report/*/result/*/pass
+|ISO/TS 19139 path |dataQualityInfo/\*/report/*/result/*/pass
 |INSPIRE obligation / condition |Mandatory for invocable spatial data services
 |INSPIRE multiplicity |[1] understood in the context of a conformity statement when reported in the metadata – there may be more than one conformity statement
 |Data type (and ISO 19115 no.) |Boolean
@@ -6195,7 +6149,7 @@ Metadata elements for Harmonised Spatial Data Services in [Regulation 1089/2010]
 |Reference |COMMISSION REGULATION (EU) No 1089/2010, Annex VII Part B 3
 |Definition |A unique identifier for this interface
 |ISO 19119 number and name |Table C2 1. operationName
-|CSW ISO Metadata AP path |identificationInfo[1]/*/containsOperations/*/operationName
+|CSW ISO Metadata AP path |identificationInfo[1]/\*/containsOperations/*/operationName
 |INSPIRE obligation / condition |Mandatory for harmonised spatial data services
 |INSPIRE multiplicity |[1]
 |Data type (and ISO 19115 no.) |CharacterString
@@ -6225,7 +6179,7 @@ Metadata elements for Harmonised Spatial Data Services in [Regulation 1089/2010]
 |Reference |COMMISSION REGULATION (EU) No 1089/2010, Annex VII Part B 3
 |Definition |Handle for accessing the service interface.
 |ISO 19119 number and name |Table C2 6. connectPoint
-|CSW ISO Metadata AP path |identificationInfo[1]/*/containsOperations/*/connectPoint/*/linkage
+|CSW ISO Metadata AP path |identificationInfo[1]/\*/containsOperations/*/connectPoint/*/linkage
 |INSPIRE obligation / condition |Mandatory for harmonised spatial data services
 |INSPIRE multiplicity |[1..*]
 |Data type (and ISO 19115 no.) |CI_OnlineResource
@@ -6804,14 +6758,13 @@ Due to making use of DQ_QuantitativeResult subset there is a mandatory element i
 |Comments |ISO 19115 lists several elements which build DQ_Element. For the purpose of theme-specific metadata according to the INSPIRE Data specifications the elements won by mapping from ISO 19157 are sufficient.
 |===
 
-== Annex D Referenced code lists and code list values
+<<<
+[appendix]
+== Referenced code lists and code list values
 
 === Limitations on public access
 
 Code list URI: http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess
-
-[arabic]
-. {blank}
 
 [width="100%",cols="40%,23%,37%",options="header",]
 |===
@@ -6888,7 +6841,9 @@ a|
 |3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height(Latitude, Longitude, H) |ETRS89-GRS80- EVRS |http://www.opengis.net/def/crs/EPSG/0/7409
 |===
 
-== Annex E Mapping between IR element numbers and TG Requirements
+<<<
+[appendix]
+== Mapping between IR element numbers and TG Requirements
 
 [width="99%",cols="20%,13%,24%,25%,18%",options="header",]
 |===
@@ -6994,7 +6949,9 @@ a|
 |[Regulation 1089/2010], Annex VII, (Harmonised SDS) |Part B 3 |Invocation metadata |TG Requirement 7.1, TG Requirement 7.2, TG Requirement 7.3 |4.5.1.1
 |===
 
-== Annex F Mapping for Requirements in previous TG versions
+<<<
+[appendix]
+== Mapping for Requirements in previous TG versions
 
 [width="100%",cols="44%,30%,26%",options="header",]
 |===
@@ -7187,6 +7144,8 @@ TG Requirement 7.2
 |TG SDS 3.1, Implementation Requirement 18 |[Not relevant to metadata] |-
 |===
 
-== Annex G Examples of complete INSPIRE metadata records
+<<<
+[appendix]
+== Examples of complete INSPIRE metadata records
 
 Examples of complete metadata records compliant with this technical guidance are available at https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/examples.
