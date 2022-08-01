@@ -11,7 +11,6 @@
 
 :appendix-caption: Annex
 
-image:./media/image1.png[image,width=107,height=107] **INSPIRE** - *Infrastructure for Spatial Information in Europe*
 // Document properties
 :title: Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
 :revdate: 2022-08-01
@@ -23,9 +22,7 @@ image:./media/image1.png[image,width=107,height=107] **INSPIRE** - *Infrastructu
 :revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.2
 :lang: EN
 
-image:.\media/image1.png[image,width=107,height=107]
-**INSPIRE**
-*Infrastructure for Spatial Information in Europe*
+image:./media/image1.png[image,width=107,height=107] **INSPIRE** - *Infrastructure for Spatial Information in Europe*
 
 [discrete]
 = Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
