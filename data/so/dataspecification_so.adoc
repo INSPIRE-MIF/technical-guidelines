@@ -51,9 +51,9 @@ image:./media/image3.png[image,width=93,height=93] **INSPIRE** - *Infrastructure
 |*Type* |Text
 |*Description* |{description}
 |*Format* |AsciiDoc
-|*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |D2.8.III.3_v3.1.0
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/so/3.1.0[D2.8.III.3_v3.1.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
