@@ -2077,7 +2077,7 @@ The metadata elements described in this section are contained within the first _
 ====
 *TG Requirement 1.2: metadata/2.0/req/datasets-and-series/only-one-md-data-identification*
 
-The first gmd:_identificationInfo_ property of _gmd:MD_Metadata_ element shall contain only one _gmd:MD_DataIdentification_ element for identifying the described INSPIRE data set or data set series.
+The first _gmd:identificationInfo_ property of _gmd:MD_Metadata_ element shall contain only one _gmd:MD_DataIdentification_ element for identifying the described INSPIRE data set or data set series.
 ====
 
 The ISO 19139 XML Schema allows more than one _gmd:IdentificationInfo_ properties to be given for each _gmd:MD_Metadata_ element. The purpose of this requirement is to harmonise the structure of the ISO 19139 based INSPIRE metadata records by declaring that while more than one instance can be given, readers can safely assume that only the first instance is used for INSPIRE resource identification.
@@ -2086,12 +2086,12 @@ The ISO 19139 XML Schema allows more than one _gmd:IdentificationInfo_ propertie
 ====
 *TG Recommendation 1.1: metadata/2.0/rec/datasets-and-series/md-element-id*
 
-The _gmd:MD_DataIdentification_ elements should contain a unique identifier of the element itself to be used for referring from within the Spatial Data Service metadata records to indicate a coupled resource. This identifier should be provided as the value of attribute i__d__ of _gmd:MD_DataIdentification_ element.
+The _gmd:MD_DataIdentification_ elements should contain a unique identifier of the element itself to be used for referring from within the Spatial Data Service metadata records to indicate a coupled resource. This identifier should be provided as the value of attribute _id_ of _gmd:MD_DataIdentification_ element.
 
 This identifier should be persistent for a particular data set or service, and unique within the all the _id_ elements of the metadata record document and other XML documents it may appear in (like GetRecords responses of Discovery Service). The persistence of the _id_ attributes is important to prevent breaking the coupled resource links between the service metadata and the data set metadata.
 ====
 
-NOTE A unique identifier of the _gmd:MD_DataIdentification_ element is not necessary when building the coupled resource link by providing a Unique Resource Identifier that is resolved to a URL containing an abstract pointer to the gmd:MD_DataIdentification element (see section 4.1.2.4).
+NOTE A unique identifier of the _gmd:MD_DataIdentification_ element is not necessary when building the coupled resource link by providing a Unique Resource Identifier that is resolved to a URL containing an abstract pointer to the _gmd:MD_DataIdentification_ element (see section 4.1.2.4).
 
 See Example 3.2 for an example of providing the _id_ attribute.
 
