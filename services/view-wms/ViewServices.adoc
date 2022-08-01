@@ -50,9 +50,9 @@ image:./media/image1.jpeg[width=108,height=108] **INSPIRE** *Infrastructure for 
 |*Type* |Text
 |*Description* |{description}
 |*Format* |AsciiDoc
-|*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |Technical Guidance View Services v3.2.0
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/view-services/3.2.0[Technical Guidance View Services v3.2.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Commission Regulation (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
