@@ -1,0 +1,13 @@
+name: Cancel older on AsciiDoc to PDF/HTML Converter
+on:
+  workflow_run:
+    workflows: ["AsciiDoc to PDF/HTML Converter"]
+    types:
+      - requested
+jobs:
+  cancel:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: styfle/cancel-workflow-action@0.9.1
+      with:
+        workflow_id: ${{ github.event.workflow.id }}
