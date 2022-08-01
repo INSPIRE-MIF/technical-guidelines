@@ -12,11 +12,11 @@ All INSPIRE TGs will be converted from the [current pdf format](https://inspire.
 
 Currently, the following TGs have been converted:
 * Metadata
-  * [metadata-iso19139](/metadata/metadata-iso19139/metadata-iso19139.adoc)
+  * [metadata-iso19139](/metadata/metadata-iso19139)
 * Services
-  * [view-wms](/services/view-wms/ViewServices.adoc)
+  * [view-wms](/services/view-wms)
 * Data
-  * [so](/data/so/dataspecification_so.adoc)
+  * [so](/data/so)
 
 ## Governance and release process
 
