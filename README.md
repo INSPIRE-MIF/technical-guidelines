@@ -8,7 +8,15 @@ The INSPIRE TGs describe detailed implementation aspects and relations with exis
 
 ## Status
 
-All INSPIRE TGs will be converted from the [current pdf format](https://inspire.ec.europa.eu/Technical-guidelines3) to the Markdown or AsciiDoc format and published in this repository. Currently, the [TG metadata](/metadata/metadata-iso19139/metadata-iso19139.adoc) has been converted.
+All INSPIRE TGs will be converted from the [current pdf format](https://inspire.ec.europa.eu/Technical-guidelines) to the AsciiDoc format and published in this repository.
+
+Currently, the following TGs have been converted:
+* Metadata
+  * [metadata-iso19139](/metadata/metadata-iso19139/metadata-iso19139.adoc)
+* Services
+  * [view-wms](/services/view-wms/ViewServices.adoc)
+* Data
+  * [so](/data/so/dataspecification_so.adoc)
 
 ## Governance and release process
 
