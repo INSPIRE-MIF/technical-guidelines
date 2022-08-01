@@ -1045,7 +1045,7 @@ In the Tables 1 and 2 of [Regulation 1205/2008], Part C, the multiplicity of thi
 
 The language of the provided metadata content shall be given. It shall be encoded using _gmd:MD_Metadata_/_gmd:language_/_gmd:LanguageCode_ element. The attribute codeListValue shall contain one of the three-letter language codes of the ISO 639-2/B code list. The attribute codeList shall be either http://www.loc.gov/standards/iso639-2/ or http://id.loc.gov/vocabulary/iso639-2.
 
-Only the code values for the official languages of the European Unionfootnote:[At the time of writing there are 24 official languages of the EU, see http://ec.europa.eu/languages/policy/linguistic-diversity/official-languages-eu_en.htm] shall be used.
+Only the code values for the languages of the Communityfootnote:[At the time of writing there are 24 official languages of the EU, see https://europa.eu/european-union/about-eu/eu-languages_en. The EEA agreement (https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31994D0001) extends the rights to use an official language also to the EFTA countries that have signed the agreement, therefore Norwegian and Icelandic are allowed as well.] shall be used.
 
 The multiplicity of this element is 1.
 ====
@@ -4903,31 +4903,23 @@ The Unique Resource Identifier for the can be explicilty defined for the target 
 |Domain a|
 Codelist (See ISO/TS 19139) based on alpha-3 codes of ISO 639-2. Use only three-letter codes from in ISO 639-2/B (bibliographic codes),
 
-The list of codes for the 24 official EU languages is:
+The list of codes for the languages of the Community is:
 
-Bulgarian – bul Irish – gle
-
-Croatian – hrv Italian – ita
-
-Czech – cze Latvian – lav
-
-Danish – dan Lithuanian – lit
-
-Dutch – dut Maltese – mlt
-
-English – eng Polish – pol
-
-Estonian – est Portuguese – por
-
-Finnish – fin Romanian – rum
-
-French – fre Slovak – slo
-
-German – ger Slovenian – slv
-
-Greek – gre Spanish – spa
-
-Hungarian – hun Swedish – swe
+!===
+!Bulgarian – *bul* !Irish – *gle*
+!Croatian – *hrv* !Italian – *ita*
+!Czech – *cze* !Latvian – *lav*
+!Danish – *dan* !Lithuanian – *lit*
+!Dutch – *dut* !Maltese – *mlt*
+!English – *eng* !Norwegian - *nor*
+!Estonian – *est* !Polish – *pol*
+!Finnish – *fin* !Portuguese – *por*
+!French – *fre* !Romanian – *rum*
+!German – *ger* !Slovak – *slo*
+!Greek – *gre* !Slovenian – *slv*
+!Hungarian – *hun* !Spanish – *spa*
+!Icelandic - *ice* !Swedish – *swe*
+!===
 
 The list of all the codes is defined at http://www.loc.gov/standards/iso639-2/[+++http://www.loc.gov/standards/iso639-2/+++]
 
@@ -4935,8 +4927,6 @@ Regional languages also are included in this list.
 
 |Example |eng
 |Comments a|
-[arabic]
-. {blank}
 
 |===
 
@@ -5621,31 +5611,23 @@ Codelist (See ISO/TS 19139) based on alpha-3 codes of ISO 639-2. Use only three-
 
 The value domain for this element is limited to the official languages of the EU member states.
 
-The list of valid codes for the 24 official EU languages is:
+The list of codes for the languages of the Community is:
 
-Bulgarian – bul Irish – gle
-
-Croatian – hrv Italian – ita
-
-Czech – cze Latvian – lav
-
-Danish – dan Lithuanian – lit
-
-Dutch – dut Maltese – mlt
-
-English – eng Polish – pol
-
-Estonian – est Portuguese – por
-
-Finnish – fin Romanian – rum
-
-French – fre Slovak – slo
-
-German – ger Slovenian – slv
-
-Greek – gre Spanish – spa
-
-Hungarian – hun Swedish – swe
+!===
+!Bulgarian – *bul* !Irish – *gle*
+!Croatian – *hrv* !Italian – *ita*
+!Czech – *cze* !Latvian – *lav*
+!Danish – *dan* !Lithuanian – *lit*
+!Dutch – *dut* !Maltese – *mlt*
+!English – *eng* !Norwegian - *nor*
+!Estonian – *est* !Polish – *pol*
+!Finnish – *fin* !Portuguese – *por*
+!French – *fre* !Romanian – *rum*
+!German – *ger* !Slovak – *slo*
+!Greek – *gre* !Slovenian – *slv*
+!Hungarian – *hun* !Spanish – *spa*
+!Icelandic - *ice* !Swedish – *swe*
+!===
 
 These values are part of the list defined at http://www.loc.gov/standards/iso639-2/[+++http://www.loc.gov/standards/iso639-2/+++]
 
