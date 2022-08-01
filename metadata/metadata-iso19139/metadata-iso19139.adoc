@@ -39,9 +39,7 @@ This document has been endorsed by the INSPIRE maintenance and implementation gr
 |*Format* |AsciiDoc
 |*Licence* |{copyright}
 |*Identifier* a|
-http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0.1 (v.2.0.1)
-http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.1.0 (v.2.1.0)
-http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.1.1 (this version)
+http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.1.1
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |===
