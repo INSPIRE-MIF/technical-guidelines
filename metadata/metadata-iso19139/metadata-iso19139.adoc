@@ -6,6 +6,17 @@
 :toclevels: 4
 :sectnumlevels: 4
 
+// Document properties
+:title: Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
+:revdate: 2022-08-01
+:keywords: Technical Guidance for INSPIRE metadata for datasets and services
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: Implementation specification for defining metadata for INSPIRE datasets and services in ISO/TS 19139 based XML format in compliance with the INSPIRE Implementing Rules for metadata.
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution (cc-by) 4.0]
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.2
+:lang: EN
+
 image:.\media/image1.png[image,width=107,height=107]
 **INSPIRE**
 *Infrastructure for Spatial Information in Europe*
@@ -15,23 +26,22 @@ image:.\media/image1.png[image,width=107,height=107]
 
 [width="100%",cols="24%,76%",]
 |===
-|*Title* |Technical Guidelines for implementing dataset and service metadata based on ISO/TS 19139:2007
-|*Creator* |Temporary MIWP 2021-2024 sub-group 2.3.1
-|*Date of publication* |2022-01-31
-|*Subject* |Technical Guidance for INSPIRE metadata for datasets and services
-|*Status* a|Version 2.1.0
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Status* a|Version 2.1.1
 
 This document has been endorsed by the INSPIRE maintenance and implementation group (MIG).
-|*Publisher* |INSPIRE Maintenance and Implementation Group (MIG)
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |Implementation specification for defining metadata for INSPIRE datasets and services in ISO/TS 19139 based XML format in compliance with the INSPIRE Implementing Rules for metadata.
+|*Description* |{description}
 |*Format* |AsciiDoc
-|*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
+|*Licence* |{copyright}
 |*Identifier* a|
-http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0.1 (v.2.0.1)
-http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.1.0 (this version)
-|*Changelog* |https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.1
-|*Language* |EN
+http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.1.1
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |===
 
 == Table of Contents
