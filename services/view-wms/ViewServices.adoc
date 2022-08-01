@@ -24,15 +24,14 @@
 :appendix-caption: Annex
 
 // Document properties
-:author: Members of the INSPIRE Drafting Team for Network Services, members of the INSPIRE IOC Task Force for Network Services and the Initial Operating Capability Task Force Service Team.
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:creator: Initial Operating Capability Task Force Network Services
 :description: This document defines the implementation requirements and recommendations and describes the implementation guidelines for INSPIRE View Services to fulfil the requirements of the INSPIRE directive and the Regulation on INSPIRE Network Services, Annex III View Services.
 :keywords: INSPIRE View Services
 :lang: en
-:producer: IOC Task Force for Network Services
-:revdate: 2013-04-04
-:revremark: 
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:revdate: 2022-08-01
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.2
 :title: Technical Guidance for the implementation of INSPIRE View Services
 
 image:./media/image1.jpeg[width=108,height=108] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -43,18 +42,17 @@ image:./media/image1.jpeg[width=108,height=108] **INSPIRE** *Infrastructure for 
 [width="100%",cols="29%,71%",]
 |===
 |*Title* |{doctitle}
-|*Creator* |{creator}
-|*Date* |{revdate}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
 |*Subject* |{keywords}
-|*Status* |Version 3.11
+|*Status* |Version 3.2.0
 |*Publisher* |{producer}
 |*Type* |Text
 |*Description* |{description}
-|*Contributor* |{author}
 |*Format* |AsciiDoc
-|*Licence* |Creative Commons Attribution (cc-by) 4.0 (https://creativecommons.org/licenses/by/4.0/)
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |Technical Guidance View Services v3.11
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/view-services/3.2.0[Technical Guidance View Services v3.2.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Commission Regulation (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
@@ -1261,7 +1259,7 @@ The title of the layer, used for human communication, for presentation of the la
 
 [IMPORTANT]
 ====
-*Implementation Requirement 33* It is mapped with <wms:Title>. The harmonised title of a layer for an INSPIRE spatial data theme is defined by [*INS DS*] and shall be subject to multilingualism (translations shall appear in each mono-lingual capabilities localised documents).
+*Implementation Requirement 33* It is mapped with <wms:Title>. For each harmonised layer according to [*INS DS*] the title is mapped to the harmonised title defined by [*INS DS*] and shall be subject to multilingualism (translations shall appear in each mono-lingual capabilities localized documents).
 ====
 
 [.text-center]
@@ -1571,8 +1569,15 @@ The harmonised name of a layer for an INSPIRE spatial data theme as defined by [
 
 [IMPORTANT]
 ====
-*Implementation Requirement 39* Name shall be mapped with the <wms:Name> element. The harmonised name of a layer shall comply with the Layer requirements of the [*INS DS,* Article 14]
+*Implementation Requirement 39* Name shall be mapped with the <wms:Name> element.
 ====
+
+[IMPORTANT]
+====
+*Implementation Requirement 39 bis* In case a layer is a harmonised layer according to [*INS DS*], the layer name shall comply with the harmonised layer name defined in Article 14 of *[INS DS*].
+====
+
+Note: A view service may contain one or more harmonised and/or one or more non-harmonised layers.
 
 [.text-center]
 *Table 5*: Annexes I harmonised name examples
@@ -1711,7 +1716,7 @@ List of the rendering styles available for the layer. A style shall be composed 
 
 [IMPORTANT]
 ====
-*Implementation Requirement 42* An <inspire_common:DEFAULT> style for each theme shall be as defined in the "Portrayal" section of the [*INS DS,* Article 14].
+*Implementation Requirement 42* For each harmonised layer according to [*INS DS*] an <inspire_common:DEFAULT> style shall be as defined in the "Portrayal" section of the [*INS DS*, Article 14].
 ====
 
 [IMPORTANT]
@@ -3063,7 +3068,7 @@ These metadata are mapped with the <Layer> element of the <Contents> structure.
 
 [IMPORTANT]
 ====
-*Implementation Requirement 85* The Resource title of the layer, used for human communication, for exmple presentation of the layer in a menu. It is mapped with <ows:Title>. The harmonised title of a layer for an INSPIRE spatial data theme is defined by [*Directive 2007/2/EC*] and shall be subject to multilingualism (translations shall appear in each mono-lingual capabilities localized documents).
+*Implementation Requirement 85* The Resource title of the layer, used for human communication, for example presentation of the layer in a menu. It is mapped with <ows:Title>. For each harmonised layer according to [*INS DS*] the title is mapped to the harmonised title defined by [*INS DS*] and shall be subject of multilingualism (translations shall appear in each mono-lingual capabilites localized documents).
 ====
 
 
