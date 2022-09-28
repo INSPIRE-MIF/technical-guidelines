@@ -16,6 +16,7 @@ Currently, the following TGs have been converted:
 * Services
   * [View Services](services/view-wms)
 * Data
+  * [Elevation](data/el)
   * [Soil](data/so)
 
 ## Governance and release process
