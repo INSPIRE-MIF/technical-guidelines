@@ -16,6 +16,7 @@ Currently, the following TGs have been converted:
 * Services
   * [View Services](services/view-wms)
 * Data
+  * [Coordinate reference systems](data/rs)
   * [Elevation](data/el)
   * [Soil](data/so)
 
