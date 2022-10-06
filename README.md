@@ -8,7 +8,7 @@ The INSPIRE TGs describe detailed implementation aspects and relations with exis
 
 ## Status
 
-All INSPIRE TGs will be converted from the [current pdf format](https://inspire.ec.europa.eu/Technical-guidelines) to the AsciiDoc format and published in this repository.
+All INSPIRE TGs will be converted from the [current pdf format](https://inspire.ec.europa.eu/Technical-guidelines) to the AsciiDoc format and published in this repository, according to the order and timing defined in the [conversion plan](tg_conversion_plan.md).
 
 Currently, the following TGs have been converted:
 * Metadata
