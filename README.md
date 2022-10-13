@@ -18,6 +18,7 @@ Currently, the following TGs have been converted:
 * Data
   * [Coordinate reference systems](data/rs)
   * [Elevation](data/el)
+  * [Geographical Grid Systems](data/gg)
   * [Soil](data/so)
 
 ## Governance and release process
