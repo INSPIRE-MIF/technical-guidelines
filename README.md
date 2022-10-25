@@ -14,6 +14,7 @@ Currently, the following TGs have been converted:
 * Metadata
   * [Metadata-iso19139](metadata/metadata-iso19139)
 * Services
+  * [Download Services](services/download-atom-wfs)
   * [View Services](services/view-wms)
 * Data
   * [Coordinate reference systems](data/rs)
