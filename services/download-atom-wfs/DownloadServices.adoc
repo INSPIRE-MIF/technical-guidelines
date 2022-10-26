@@ -3088,7 +3088,7 @@ All in normal situation, which shall be identified by the 90% best performing s
 
 With a network latency set to _x_ = 5s, the duration _t~first~_ from issuing the request at client side till the first byte returned to the client side shall be _t~first~_ ≤ 35 seconds and the duration _t~last~_ from issuing a request at client side till the complete download (last byte returned) to the client side depends on the size of the data set and shall be according to one of the tables below:
 
-[cols="20%,29%,2%,20%,29&",options="header",]
+[cols="20%,29%,2%,20%,29%",options="header",]
 |===
 |size of data set |Maximum duration 
 till complete download finished | |size of 
