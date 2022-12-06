@@ -22,6 +22,7 @@ Currently, the following TGs have been converted:
   * [Environmental Monitoring Facilities](data/ef)
   * [Geographical Grid Systems](data/gg)
   * [Hydrography](data/hy)
+  * [Protected Sites](data/ps)
   * [Soil](data/so)
 
 ## Governance and release process
