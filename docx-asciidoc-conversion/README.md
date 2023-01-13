@@ -24,7 +24,7 @@ The procedure was initially developed and tested using the INSPIRE Metadata Tech
 
 2. Copy the Microsoft Word document into the new folder. Convert the Microsoft Word document into the _.docx_ format, if it is in _.doc_ format:
     ```shell
-    From Microsoft Word document: File -> Informations -> Convert
+    From Microsoft Word document: File -> Info -> Convert
     ```
     
 3. Launch the preliminary folder script from main folder. This script contains instructions for the first conversion to asciidoc.:
