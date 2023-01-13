@@ -1,9 +1,9 @@
 // Admonition icons:
-// TG Requirement
+// IR Requirement
 :important-caption: 📕
-// TG Recommendation
+// TG Requirement
 :tip-caption: 📒
-// Conformance class
+// Recommendation
 :note-caption: 📘
 
 // TOC placement using macro (manual)
@@ -13,7 +13,13 @@
 :toc-title:
 
 // TOC level depth
-:toclevels: 4
+:toclevels: 3
 
 // Section numbering level depth
-:sectnumlevels: 4
+:sectnumlevels: 5
+
+// Line Break Doc Title
+:hardbreaks-option:
+
+:appendix-caption: Annex
+
