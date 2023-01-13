@@ -2438,7 +2438,7 @@ The multiplicity of this element as defined in [Regulation 1205/2008], Part C, T
 ====
 *TG Requirement 1.7: metadata/2.0/req/datasets-and-series/topic-category*
 
-The main theme(s) of the data set shall be described using of the ISO 19115 topic category code list values. The topic categories shall be encoded using _gmd:topicCategory_/_gmd:MD_TopicCategoryCode_ elementfootnote:[See Part D 2 of [Regulation 1205/2008] for the mapping between topics and INSPIRE themes.].
+The main theme(s) of the data set shall be described using of the ISO 19115 topic category code list values. The topic categories shall be encoded using _gmd:topicCategory_/_gmd:MD_TopicCategoryCode_ elementfootnote:[See Part D 2 of [Regulation 1205/2008\] for the mapping between topics and INSPIRE themes.].
 
 The multiplicity of this element is 1..*.
 ====
