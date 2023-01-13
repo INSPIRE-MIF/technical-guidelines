@@ -6,7 +6,7 @@ The objective of the procedure is to convert the INSPIRE Technical Guidance docu
 
 An important issue encountered is that it is not possible for a generic docx to AsciiDoc converter (such as Pandoc used here) to convert all the document content as required, which is mostly due to sections with special formatting, such as TG Requirements, TG Recommendations, Conformance Classes, XML Examples or quotes. To address this issue, a Python script was developed that applies custom styling to relevant sections of AsciiDoc version of the document (obtained using Pandoc converter) based on additional style information included in a Markdown version of the document (obtained using Pandoc as well). Additionally, the Python script fixes other minor issues with the AsciiDoc document, such as section headings, numbering, TOC, etc. Moreover, some of the styles, used to identify relevant sections, are not applied consistently in the docx, so this needs to be corrected in MS Word before the conversion.
 
-The procedure was initially developed and tested using the INSPIRE Metadata Technical Guidance 2.0 and successively tested on different types of TGs (Network Services and Data Specifications). Due to the different MS Word formats used in these documents, the development of dedicated Python scripts was to automate as much as possible the conversion of all MS Word syntax. It has been verified that, in any case, a final manual revision is always needed due to the complexity of the MS Word documents.
+The procedure was initially developed and tested using the INSPIRE Metadata Technical Guidance 2.0 and successively tested on different types of TGs (Network Services and Data Specifications). Due to the different MS Word formats used in these documents, the development of dedicated Python scripts was aimed to automate as much as possible the conversion of all MS Word syntax. It has been verified that, in any case, a final manual revision is always needed due to the complexity of the MS Word documents.
  
 
 ### Prerequisites
@@ -22,7 +22,7 @@ The procedure was initially developed and tested using the INSPIRE Metadata Tech
     mkdir my_example_data_specifications_EX
     ```
 
-2. Copy the Microsoft Word document into the new folder. Convert the Microsoft Word document into the last .docx format:
+2. Copy the Microsoft Word document into the new folder. Convert the Microsoft Word document into the _.docx_ format, if it is in _.doc_ format:
     ```shell
     From Microsoft Word document: File -> Informations -> Convert
     ```
@@ -37,7 +37,7 @@ The procedure was initially developed and tested using the INSPIRE Metadata Tech
     .\pandoc-postpy.bat .\my_example_data_specifications_EX data
     ```
     
-    The script applies AsciiDoc admonitions to TG Requirement, TG Recommendation and Conformance Class sections, source blocks to XML Examples and blockquotes to quote sections of  md_2_pandoc.adoc based on additional style information included in md_2_styles.md. 
+    The script applies proper AsciiDoc formatting to TG Requirement, TG Recommendation and Conformance Class sections, source blocks to XML Examples and blockquotes to quote sections of  md_2_pandoc.adoc based on additional style information included in md_2_styles.md. 
     
 5. Check the result document, named as the folder (e.g. my_example_data_specifications_EX.adoc). It always requires a manual revision to fix some possible conversion errors.
 	A sample list of common issues to be manually fixed is the following:
