@@ -150,7 +150,7 @@ The coordinate reference systems for the expression of the vertical component in
 
 The referencing by parameters and temporal reference systems is out of the scope of the theme CRS. However, when data is exchanged using such reference systems, these shall be described in an accessible reference using EN ISO 19111-2:2012 or linked by reference.
 
-The requirements and recommendations related to Map projections are based on the results from the "Map Projections for Europe" workshop[multiblock footnote omitted]. These are:
+The requirements and recommendations related to Map projections are based on the results from the "Map Projections for Europe" workshopfootnote:[The workshop took place on 15/12/2000. See proceedings on http://www.ec-gis.org/sdi/publist/pdfs/annoni-etal2003eur.pdf]. These are:
 
 * Lambert Azimuthal Equal Area (ETRS89-LAEA) for pan-European spatial analysis and reporting, where true area representation is required;
 * Lambert Conformal Conic (ETRS89-LCC) for conformal pan-European mapping at scales smaller than or equal to 1:500,000;
