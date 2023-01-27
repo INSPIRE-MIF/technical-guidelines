@@ -177,7 +177,7 @@ Corrected georss:polygon coordinates in examples Example 2:, Example 12: and Exa
 Section 5.4, Example 35: (previously not numbered), OpenSearch Description document:
 
 Changed from: 
-<Url type="application/atomxml" rel="results" template="http://xyz.org/search.php?q=\{searchTerms}"/>
+<Url type="application/atom+xml" rel="results" template="http://xyz.org/search.php?q=\{searchTerms}"/>
 
 to: 
 <Url type="text/html" rel="results" template="http://xyz.org/search.php?q=\{searchTerms}"/>
@@ -1279,12 +1279,12 @@ The feed shall have a link element which contains an HTTP URI for the feed docum
 *_Example 6: Example reference to feed_*
 [source, xml]
 <!-- self-referencing link to this feed -->
-<link href="http://xyz.org/download/en.xml" rel="self" type="application/atomxml" hreflang="en" title="This document"/>
+<link href="http://xyz.org/download/en.xml" rel="self" type="application/atom+xml" hreflang="en" title="This document"/>
 
 [IMPORTANT]
 ====
 *TG Requirement 7*
-The "Download Service Feed" shall contain an Atom 'link' element that contains an HTTP URI for the "Download Service Feed" document. The value of the 'rel' attribute of this element shall be "self", the 'hreflang' attribute shall use the appropriate language code and the value of the 'type' attribute shall be "application/atomxml".
+The "Download Service Feed" shall contain an Atom 'link' element that contains an HTTP URI for the "Download Service Feed" document. The value of the 'rel' attribute of this element shall be "self", the 'hreflang' attribute shall use the appropriate language code and the value of the 'type' attribute shall be "application/atom+xml".
 ====
 
 ==== Download Service Feed: feed 'link' element – OpenSearch Description Document
@@ -1294,7 +1294,7 @@ A link element shall be provided that links to an OpenSearch description documen
 [IMPORTANT]
 ====
 *TG Requirement 8*
-The "Download Service Feed" shall contain an Atom 'link' element that contains a link to an OpenSearch description document for the Download Service. The value of the 'rel' attribute of this element shall be "search", the 'hreflang' attribute shall use the appropriate language code and the value of the 'type' attribute shall be "application/opensearchdescriptionxml".
+The "Download Service Feed" shall contain an Atom 'link' element that contains a link to an OpenSearch description document for the Download Service. The value of the 'rel' attribute of this element shall be "search", the 'hreflang' attribute shall use the appropriate language code and the value of the 'type' attribute shall be "application/opensearchdescription+xml".
 ====
 
 ==== Download Service Feed: feed 'link' element – alternative languages
@@ -1487,7 +1487,7 @@ Each entry shall contain a link to a "Dataset Feed" (Dataset Feeds are described
 [IMPORTANT]
 ====
 *TG Requirement 15*
-Each feed 'entry' in a "Download Service Feed" shall contain a single link to a "Dataset Feed". This link shall have a 'rel' attribute with a value of "alternate" and a 'type' attribute with a value "application/atomxml"
+Each feed 'entry' in a "Download Service Feed" shall contain a single link to a "Dataset Feed". This link shall have a 'rel' attribute with a value of "alternate" and a 'type' attribute with a value "application/atom+xml"
 ====
 
 ==== Download Service Feed: entry 'link' to WFS implementation (only for "hybrid implementations")
@@ -1759,7 +1759,7 @@ Each feed shall contain an Atom 'link' element for each INSPIRE Spatial Object T
 
 ==== Dataset Feed: optional 'link' element: link to Download feed
 
-In order to facilitate the reverse navigation between the Dataset feed and its 'parent' Download feed it is recommended that a link element is included in the Dataset feed that links back to the parent Download feed. This link should have a 'rel' value of "up" and a type attribute with a value "application/atomxml".
+In order to facilitate the reverse navigation between the Dataset feed and its 'parent' Download feed it is recommended that a link element is included in the Dataset feed that links back to the parent Download feed. This link should have a 'rel' value of "up" and a type attribute with a value "application/atom+xml".
 
 *_Example 24: Optional upward link to download service feed_*
 [source, xml]
@@ -1770,7 +1770,7 @@ In order to facilitate the reverse navigation between the Dataset feed and its '
 [TIP]
 ====
 *TG Recommendation 9*
-A link element should be included that links to the 'parent' Dataset feed. This link should have a 'rel' attribute with a value of "up" and a 'type' attribute with a value of "application/atomxml".
+A link element should be included that links to the 'parent' Dataset feed. This link should have a 'rel' attribute with a value of "up" and a 'type' attribute with a value of "application/atom+xml".
 ====
 
 ==== Dataset Feed: Entry 'link' element: link to pre-defined dataset
@@ -1972,7 +1972,7 @@ The value of the 'rel' attribute of these elements shall be "alternate" and the 
 *_Example 32: Alternative representation is available in German (hreflang="de")_*
 [source,xml,subs="+quotes",align=center]
 ----
-<link href="http://xyz.org/download/de.xml" hreflang="de" rel="alternate" title="The download service information in German" type="application/atomxml"/>
+<link href="http://xyz.org/download/de.xml" hreflang="de" rel="alternate" title="The download service information in German" type="application/atom+xml"/>
 ----
 
 [IMPORTANT]
@@ -2058,7 +2058,7 @@ The OpenSearch Description shall contain a 'Url' element which contains an HTTP 
 [IMPORTANT]
 ====
 *TG Requirement 40*
-The OpenSearch description shall contain a 'Url' element that describes an HTTP URI for the OpenSearch Description document. The value of the 'rel' attribute of this element shall be "self", the value of the 'type' attribute shall be "application/opensearchdescriptionxml" and the value of the 'template' attribute shall be the HTTP URI of the document.
+The OpenSearch description shall contain a 'Url' element that describes an HTTP URI for the OpenSearch Description document. The value of the 'rel' attribute of this element shall be "self", the value of the 'type' attribute shall be "application/opensearchdescription+xml" and the value of the 'template' attribute shall be the HTTP URI of the document.
 ====
 
 ==== OpenSearch Description: Generic search template
@@ -2075,7 +2075,7 @@ image::./media/image9.png[image,width=605,height=265, align=center]
 The availability of an OpenSearch engine can be advertised in an html page by adding a link element similar to the following one to the HEAD section of the html page:
 
 [source, xml]
-<link rel="search" type="application/opensearchdescriptionxml" title="CCM2" href="view-source:http://inspire-geoportal.ec.europa.eu/demos/ccm/opensearchdescription.xml[opensearchdescription.xml]">
+<link rel="search" type="application/opensearchdescription+xml" title="CCM2" href="view-source:http://inspire-geoportal.ec.europa.eu/demos/ccm/opensearchdescription.xml[opensearchdescription.xml]">
 
 The automatic detection of the OpenSearch engine has been tested for a number of popular browsers. Table 18 gives an overview of the testing results.
 
@@ -2115,7 +2115,7 @@ A search template shall be supplied that provides the request mechanism for a De
 [IMPORTANT]
 ====
 *TG Requirement 42*
-The OpenSearch description shall contain a 'Url' element that describes a template URL for the Describe Spatial Data Set operation. This template shall accept the INSPIRE parameters "spatial_dataset_identifier_code", "spatial_dataset_identifier_namespace" and the OpenSearch "language" parameter. The 'Url' element shall have an attribute 'type' with a value of "application/atomxml" and an attribute 'rel' with the value "describedby".
+The OpenSearch description shall contain a 'Url' element that describes a template URL for the Describe Spatial Data Set operation. This template shall accept the INSPIRE parameters "spatial_dataset_identifier_code", "spatial_dataset_identifier_namespace" and the OpenSearch "language" parameter. The 'Url' element shall have an attribute 'type' with a value of "application/atom+xml" and an attribute 'rel' with the value "describedby".
 ====
 
 The Describe Spatial Data Set response shall be the description of the Spatial Objects in the requested Spatial Dataset and in the requested language. i.e. it shall be the relevant atom "Dataset Feed" corresponding to the specified spatial_dataset_identifier_code, spatial_dataset_identifier_namespace and language.
