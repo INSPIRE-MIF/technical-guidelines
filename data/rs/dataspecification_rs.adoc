@@ -893,6 +893,21 @@ a|
 (Latitude, Longitude, H)
 
 |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
+a|
+Height in EVRS (EVRF2007)
+(H)
+
+|EVRS-EVRF2007  |_http://www.opengis.net/def/crs/EPSG/0/5621_
+a|
+Height in EVRS (EVRF2019)
+(H)
+
+|EVRS-EVRF2019  |_http://www.opengis.net/def/crs/EPSG/0/9389_
+a|
+Mean-tide height in EVRS (EVRF2019)
+(H)
+
+|EVRS-EVRF2019mean  |_http://www.opengis.net/def/crs/EPSG/0/9390_
 |===
 
 [NOTE]
