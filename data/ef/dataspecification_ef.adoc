@@ -24,7 +24,7 @@
 :appendix-caption: Annex
 
 // Document properties
-:title: D2.8.II/III.7 INSPIRE Data Specification on _Environmental Monitoring Facilities_ – Technical Guidelines
+:title: D2.8.II/III.7 INSPIRE Data Specification on Environmental Monitoring Facilities – Technical Guidelines
 :revdate: 2023-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Environmental Monitoring Facilities
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
