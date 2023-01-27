@@ -23,28 +23,40 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: Technical Guidance for the implementation of INSPIRE Download Services
+:revdate: 2023-01-31
+:keywords: INSPIRE Download Services
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document defines technical guidance for INSPIRE Download Services
+:keywords: INSPIRE Download Services
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2023.1
+:lang: en
+
 image:media/image1.png[image,width=107,height=107] **INSPIRE** *Infrastructure for Spatial Information in Europe*
 
 [discrete]
 = Technical Guidance for the implementation of INSPIRE Download Services
 
-[width="100%",cols="17%,83%"]
+[width="100%",cols="29%,71%",]
 |===
-|*Title* |Technical Guidance for the implementation of INSPIRE Download Services
-|*Creator* |Initial Operating Capability Task Force for Network Services
-|*Date* |09-08-2013
-|*Subject* |INSPIRE Download Services
-|*Status* |Published, Version 3.1
-|*Publisher* |Initial Operating Capability Task Force
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Status* |Version 3.2.0
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document defines technical guidance for INSPIRE Download Services
-|*Format* |PDF
-|*Source* |Technical Guidance for the Implementation of INSPIRE Download Services (version 3.1)
-|*Rights* |Public
-|*Identifier* |Technical_Guidance_Download_Services_v3.1
-|*Language* |EN
-|*Relation* |COMMISSION REGULATION (EU) No 1088/2010 of 23 November 2010 amending Regulation (EC) No 976/2009 as regards download services and transformation services
-|*Coverage* |Project duration
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/download-services/[Technical Guidance Download Services v3.2.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
+|*Relation* |Commission Regulation (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
 |===
 
 <<<
