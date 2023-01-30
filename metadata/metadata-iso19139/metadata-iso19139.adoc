@@ -3439,7 +3439,7 @@ The specific TG Requirements for the allowed Spatial Data Service type values ar
 **/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType:**
 
 <srv:serviceType>
-  <gco:localname codespace="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">view</gco:localname>
+  <gco:LocalName codespace="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">view</gco:LocalName>
 </srv:serviceType>
 ----
 *Example* *4.3:* Spatial Data Service type "view"
