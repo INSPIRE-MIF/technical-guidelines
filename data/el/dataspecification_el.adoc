@@ -1725,10 +1725,10 @@ NOTE 1 The data type EX_Extent, is defined in ISO 19103. Extents may be specifie
 NOTE 2 The domain extent shall be specified at least in space by using EX_BoundingPolygon, EX_GeographicBoundingBox or EX_GeographicDescription. The whole geographic extent of the elevation coverage is affected, including areas where grid points hold nil reason values.
 |Multiplicity: |1..*
 2+|*Attribute: endLifespanVersion*
-|Name: !end lifespan version
+|Name: |end lifespan version
 |Value type: |DateTime
 |Definition: |Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
-|Multiplicity: |1
+|Multiplicity: |0..1
 |Stereotypes: |«voidable,lifeCycleInfo»
 2+|*Attribute: inspireId*
 |Name: |inspire ID
@@ -2131,7 +2131,7 @@ NOTE 2 In the case of depth contours, when the downRight attribute is 'true' thi
 |Name: |end lifespan version
 |Value type: |DateTime
 |Definition: |Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
-|Multiplicity: |1
+|Multiplicity: |0..1
 |Stereotypes: |«voidable,lifeCycleInfo»
 |*Attribute: localDepthDatum*
 |
@@ -2694,7 +2694,7 @@ EXAMPLE An elevation TIN model calculated by means of the Delaunay triangulation
 |Name: |end lifespan version
 |Value type: |DateTime
 |Definition: |Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
-|Multiplicity: |1
+|Multiplicity: |0..1
 |Stereotypes: |«voidable,lifeCycleInfo»
 |*Attribute: geometries*
 |
