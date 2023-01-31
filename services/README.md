@@ -1,12 +1,6 @@
-# Structure
+#  Technical Guidelines for Network Services
 
-This folder will contain technical guidelines for different types of services, in the following structure:
+This folder contains the Technical Guidelines for the following network services:
 
-```
-services
-├───discovery-cws
-├───download-atom-wfs
-├───download-sos
-├───download-wcs
-└───view-wms
-```
+* [Download Services](download-atom-wfs)
+* [View Services](view-wms)
