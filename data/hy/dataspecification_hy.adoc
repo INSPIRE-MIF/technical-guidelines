@@ -5557,7 +5557,7 @@ HydroNode,
 WatercourseLink
 |Hydrographic network,
 |HY.PhysicalWaters.HydroPointOfInterest |Hydro Point of Interest |Rapids, Falls |Rapids, Falls, Cascade
-|HY.PhysicalWaters.ManMadeObject |Man-made Object |Crossing, DamOrWeir, Embankment, Sluice, Lock, Ford, ShorelineConstruction |Bridge, Aqueduct, Dam, Weir, Lock, Ford, Dick
+|HY.PhysicalWaters.ManMadeObject |Man-made Object |Crossing, DamOrWeir, Embankment, Sluice, Lock, Ford, ShorelineConstruction |Bridge, Aqueduct, Dam, Weir, Lock, Ford, Dyke
 |HY.PhysicalWaters.Wetland |Wetlands |Wetland |
 |HY.PhysicalWaters.Shore |Shores |Shore |
 |===
