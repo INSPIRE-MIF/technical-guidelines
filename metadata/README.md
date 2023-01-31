@@ -1,3 +1,3 @@
-# Structure
+# Technical Guidelines for metadata
 
-This folder contains the technical guidelines for metadata.
+* [Metadata-iso19139](metadata-iso19139)

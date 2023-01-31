@@ -1,42 +1,12 @@
-# Structure
+#  Technical Guidelines - Data Specifications
 
-This folder will contain the data specifications in the following structure:
+This folder contains the data specifications for the following data themes:
 
-```
-data
-├───ac
-├───ac-mf
-├───ad
-├───af
-├───am
-├───au
-├───br
-├───bu
-├───cp
-├───ef
-├───el
-├───er
-├───ge
-├───gg
-├───gn
-├───hb
-├───hh
-├───hy
-├───lc
-├───lu
-├───mf
-├───mr
-├───nz
-├───of
-├───oi
-├───pd
-├───pf
-├───ps
-├───rs
-├───sd
-├───so
-├───sr
-├───su
-├───tn
-└───us
-```
+* [Coordinate reference systems](rs)
+* [Elevation](data/el)
+* [Environmental Monitoring Facilities](ef)
+* [Geographical Grid Systems](gg)
+* [Hydrography](hy)
+* [Land Use](lu)
+* [Protected Sites](ps)
+* [Soil](so)
