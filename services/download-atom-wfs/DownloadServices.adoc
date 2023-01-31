@@ -1266,7 +1266,7 @@ An Atom link element shall be provided that links to the metadata record for thi
 [IMPORTANT]
 ====
 *TG Requirement 6*
-The "Download Service Feed" shall contain an Atom 'link' element that links to the metadata record for this Download Service. The value of the 'rel' attribute of this element shall be "describedby" and  or
+The "Download Service Feed" shall contain an Atom 'link' element that links to the metadata record for this Download Service. The value of the 'rel' attribute of this element shall be "describedby" and the value of the 'type' attribute shall be either "application/xml".
 ====
 
 NOTE In case of a "hybrid implementation" based on Atom and WFS for Parts B and C, only the Atom service needs to be described through metadata in a discovery service. The link to the WFS implementations shall be established through the "related" link element in the Atom feed (see TG Requirement 16).
