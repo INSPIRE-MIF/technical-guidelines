@@ -150,7 +150,7 @@ The coordinate reference systems for the expression of the vertical component in
 
 The referencing by parameters and temporal reference systems is out of the scope of the theme CRS. However, when data is exchanged using such reference systems, these shall be described in an accessible reference using EN ISO 19111-2:2012 or linked by reference.
 
-The requirements and recommendations related to Map projections are based on the results from the "Map Projections for Europe" workshopfootnote:[The workshop took place on 15/12/2000. See proceedings on http://www.ec-gis.org/sdi/publist/pdfs/annoni-etal2003eur.pdf]. These are:
+The requirements and recommendations related to Map projections are based on the results from the "Map Projections for Europe" workshop [EUR 20120 EN]. These are:
 
 * Lambert Azimuthal Equal Area (ETRS89-LAEA) for pan-European spatial analysis and reporting, where true area representation is required;
 * Lambert Conformal Conic (ETRS89-LCC) for conformal pan-European mapping at scales smaller than or equal to 1:500,000;
@@ -568,7 +568,7 @@ Map projections are used for geo-referencing spatial information in plane coordi
 
 Map projections are required to make possible the data delivery and exchange in this type of coordinates at the Pan-European level.
 
-Between 14-15 December 2000 the "Map Projections for Europe" workshop^14^ was organised to propose the map projections to be used for representation of data in plane coordinates in general applications. The use of the following projections was recommended:
+Between 14-15 December 2000 the "Map Projections for Europe" workshop [EUR 20120 EN] was organised to propose the map projections to be used for representation of data in plane coordinates in general applications. The use of the following projections was recommended:
 
 * Lambert Azimuthal Equal Area (ETRS89-LAEA) for spatial analysis and display;
 * Lambert Conformal Conic (ETRS89-LCC) for conformal pan-European mapping at scales smaller or equal to 1:500,000;
@@ -576,7 +576,7 @@ Between 14-15 December 2000 the "Map Projections for Europe" workshop^14^ was or
 
 These recommendations have been used by the European Commission (EC) for geo-referencing the data internally within the EC. For the representation of data in plane coordinates in general pan-European applications in continental Europe in the frame of INSPIRE, these projections are either mandated or recommended. For regions outside of continental Europe, for example for overseas MS territories, the MS shall define a map projection they consider most suitable for the application. The ETRS89-LAEA projection in INSPIRE is recommended for spatial analysis and reporting.
 
-The formulas of the above mentioned map projections are published in the proceedings of the "Map Projections for Europe" workshop (Marne-La Vallee, 14-15 December 2000) and in the proceedings of the "European Reference Grids" workshop (Ispra, 27-29 October 2003). For other map projections, see Snyder, John P: Map Projections – A Working Manual (Snyder, 1987).
+The formulas of the above mentioned map projections are published in the proceedings of the "Map Projections for Europe" workshop (Marne-La Vallee, 14-15 December 2000) [EUR 20120 EN] and in the proceedings of the "European Reference Grids" workshop (Ispra, 27-29 October 2003) [EUR 21494 EN]. For other map projections, see Snyder, John P: Map Projections – A Working Manual (Snyder, 1987).
 
 The Transverse Mercator (ETRS89-TMzn) is identical to the Universal Transverse Mercator (UTM) grid system for the Northern hemisphere when applied to the ETRS89 geodetic datum and the GRS80 ellipsoid. The UTM system was developed for worldwide application between 80º S and 84º N.
 
@@ -909,21 +909,21 @@ EXAMPLE When both ETRS89-GRS80 and EVRS the CRS used the identifier shall be ETR
 :sectnums!:
 == Bibliography
 
-[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf
+[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf_
 
 [DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.4rc2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3.4rc2.pdf_
 
-[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf
+[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf_
 
 [DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.3rc2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.3rc2.pdf_
 
-[EUR 19575 EN] Spatial Reference Systems in Europe – EUR Report 19575 EN. Proceedings of the "Spatial Reference Systems in Europe" workshop, Marne-La Vallee, 29-30 November 1999
+[EUR 19575 EN] Spatial Reference Systems in Europe – EUR Report 19575 EN. Proceedings of the "Spatial Reference Systems in Europe" workshop, Marne-La Vallee, 29-30 November 1999, _https://github.com/INSPIRE-MIF/technical-guidelines/raw/main/data/rs/bibliography/EUR_19575_EN.pdf_
 
-[EUR 20120 EN] Map Projections for Europe – EUR Report 20120 EN. Proceedings of the "Map Projections for Europe" workshop, Marne-La Vallee, 14-15 December 2000
-_http://www.ec-gis.org/sdi/publist/pdfs/annoni-etal2003eur.pdf_
+[EUR 20120 EN] Map Projections for Europe – EUR Report 20120 EN. Proceedings of the "Map Projections for Europe" workshop, Marne-La Vallee, 14-15 December 2000, 
+_https://github.com/INSPIRE-MIF/technical-guidelines/raw/main/data/rs/bibliography/EUR_20120_EN.pdf_
 
-[EUR 21494 EN] European Reference Grids – EUR Report 21494 EN. Proceedings of the "European Reference Grids" workshop, Ispra, 27-29 October 2003
-_http://www.ec-gis.org/sdi/publist/pdfs/annoni2005eurgrids.pdf_
+[EUR 21494 EN] European Reference Grids – EUR Report 21494 EN. Proceedings of the "European Reference Grids" workshop, Ispra, 27-29 October 2003, 
+_https://github.com/INSPIRE-MIF/technical-guidelines/raw/main/data/rs/bibliography/EUR_21494_EN.pdf_
 
 [EUREF] _www.euref.eu_ or _www.euref-iag.net_ – EUREF website for information on the ETRS89 and the EVRS
 
