@@ -1284,7 +1284,7 @@ The feed shall have a link element which contains an HTTP URI for the feed docum
 [IMPORTANT]
 ====
 *TG Requirement 7*
-The "Download Service Feed" shall contain an Atom 'link' element that contains an HTTP URI for the "Download Service Feed" document. The value of the 'rel' attribute of this element shall be "self", the 'hreflang' attribute shall use the appropriate language code and the value of the 'type' attribute shall be "application/atom+xml".
+The "Download Service Feed" shall contain an Atom 'link' element that contains an HTTP URI for the "Download Service Feed" document. The value of the 'rel' attribute of this element shall be "self", the 'hreflang' attribute shall use the appropriate language code and the value of the 'type' attribute shall be "application/atom+xml", "application/xml" or "text/xml".
 ====
 
 ==== Download Service Feed: feed 'link' element – OpenSearch Description Document
@@ -1487,7 +1487,7 @@ Each entry shall contain a link to a "Dataset Feed" (Dataset Feeds are described
 [IMPORTANT]
 ====
 *TG Requirement 15*
-Each feed 'entry' in a "Download Service Feed" shall contain a single link to a "Dataset Feed". This link shall have a 'rel' attribute with a value of "alternate" and a 'type' attribute with a value "application/atom+xml"
+Each feed 'entry' in a "Download Service Feed" shall contain a single link to a "Dataset Feed". This link shall have a 'rel' attribute with a value of "alternate" and a 'type' attribute with a value "application/atom+xml", "application/xml" or "text/xml".
 ====
 
 ==== Download Service Feed: entry 'link' to WFS implementation (only for "hybrid implementations")
@@ -2115,7 +2115,7 @@ A search template shall be supplied that provides the request mechanism for a De
 [IMPORTANT]
 ====
 *TG Requirement 42*
-The OpenSearch description shall contain a 'Url' element that describes a template URL for the Describe Spatial Data Set operation. This template shall accept the INSPIRE parameters "spatial_dataset_identifier_code", "spatial_dataset_identifier_namespace" and the OpenSearch "language" parameter. The 'Url' element shall have an attribute 'type' with a value of "application/atom+xml" and an attribute 'rel' with the value "describedby".
+The OpenSearch description shall contain a 'Url' element that describes a template URL for the Describe Spatial Data Set operation. This template shall accept the INSPIRE parameters "spatial_dataset_identifier_code", "spatial_dataset_identifier_namespace" and the OpenSearch "language" parameter. The 'Url' element shall have an attribute 'type' with a value of "application/atom+xml", "application/xml" or "text/xml" and an attribute 'rel' with the value "describedby".
 ====
 
 The Describe Spatial Data Set response shall be the description of the Spatial Objects in the requested Spatial Dataset and in the requested language. i.e. it shall be the relevant atom "Dataset Feed" corresponding to the specified spatial_dataset_identifier_code, spatial_dataset_identifier_namespace and language.
