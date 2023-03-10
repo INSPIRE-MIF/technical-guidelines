@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.18">
+<meta name="description" content="This document describes the INSPIRE Data Specification for the spatial data theme Geographical Grid Systems">
+<meta name="keywords" content="INSPIRE Data Specification for the spatial data theme Geographical Grid Systems">
+<meta name="author" content="Temporary MIWP 2021-2024 sub-group 2.3.1">
+<meta name="copyright" content="Public">
+<title>D2.8.I.2 Data Specification on Geographical Grid Systems – Technical Guidelines</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><span class="image"><img src="./media/image2.jpeg" alt="image" width="131" height="90"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/image3.png" alt="image" width="93" height="93"></span> <strong>INSPIRE</strong> <strong>Infrastructure for Spatial Information in Europe</strong></p>
+</div>
+<h1 id="_d2_8_i_2_data_specification_on_geographical_grid_systems_technical_guidelines" class="discrete">D2.8.I.2 Data Specification on <em>Geographical Grid Systems</em> – Technical Guidelines</h1>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 17%;">
+<col style="width: 83%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Title</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">D2.8.I.2 Data Specification on Geographical Grid Systems – Technical Guidelines</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Creator</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Temporary MIWP 2021-2024 sub-group 2.3.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Date of publication</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2023-01-31</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subject</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INSPIRE Data Specification for the spatial data theme Geographical Grid Systems</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Publisher</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INSPIRE Maintenance and Implementation Group (MIG)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This document describes the INSPIRE Data Specification for the spatial data theme Geographical Grid Systems</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Format</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AsciiDoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Licence</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://creativecommons.org/licenses/by/4.0">Creative Commons Attribution (cc-by) 4.0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rights</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Public</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Identifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://inspire.ec.europa.eu/id/document/tg/gg">D2.8.I.2_v3.2.0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Changelog</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2023.1" class="bare">https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2023.1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Language</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">en</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Relation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h2 id="_foreword" class="discrete">Foreword</h2>
+<h2 id="_how_to_read_the_document" class="discrete">How to read the document?</h2>
+<div class="paragraph">
+<p>This document describes the <em>"INSPIRE data specification on Geographical Grid Systems – Technical Guidelines"</em> version 3.1rc1 as developed by the Thematic Working Group (TWG) <em>Reference Systems</em> using both natural and a conceptual schema language.</p>
+</div>
+<div class="paragraph">
+<p>The data specification is based on a common template<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> used for all data specifications, which has been harmonised using the experience from the development of the Annex I, II and III data specifications.</p>
+</div>
+<div class="paragraph">
+<p>This document provides guidelines for the implementation of the provisions laid down in the draft Implementing Rule for spatial data sets and services of the INSPIRE Directive. It also includes additional requirements and recommendations that, although not included in the Implementing Rule, are relevant to guarantee or to increase data interoperability.</p>
+</div>
+<div class="paragraph">
+<p>Two executive summaries provide a quick overview of the INSPIRE data specification process in general, and the content of the data specification on <em>Geographical Grid Systems</em> in particular. We highly recommend that managers, decision makers, and all those new to the INSPIRE process and/or information modelling should read these executive summaries first.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagrams (in Chapter 5) offer a rapid way to see the main elements of the specifications and their relationships. The definition of the spatial object types, attributes, and relationships are included in the Feature Catalogue (also in Chapter 5). People having thematic expertise but not familiar with UML can fully understand the content of the data model focusing on the Feature Catalogue. Users might also find the Feature Catalogue especially useful to check if it contains the data necessary for the applications that they run. The technical details are expected to be of prime interest to those organisations that are responsible for implementing INSPIRE within the field of <em>Geographical Grid Systems</em>, but also to other stakeholders and users of the spatial data infrastructure.</p>
+</div>
+<div class="paragraph">
+<p>The technical provisions and the underlying concepts are often illustrated by examples. Smaller examples are within the text of the specification, while longer explanatory examples and descriptions of selected use cases are attached in the annexes.</p>
+</div>
+<div class="paragraph">
+<p>In order to distinguish the INSPIRE spatial data themes from the spatial object types, the INSPIRE spatial data themes are written in <em>italics.</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The document will be publicly available as a 'non-paper'. It does not represent an official position of the European Commission, and as such cannot be invoked in the context of legal procedures.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Legal Notice</strong></p>
+</div>
+<div class="paragraph">
+<p>Neither the European Commission nor any person acting on behalf of the Commission is responsible for the use which might be made of this publication.</p>
+</div>
+<h2 id="_interoperability_of_spatial_data_sets_and_services_general_executive_summary" class="discrete">Interoperability of Spatial Data Sets and Services – General Executive Summary</h2>
+<div class="paragraph">
+<p>The challenges regarding the lack of availability, quality, organisation, accessibility, and sharing of spatial information are common to a large number of policies and activities and are experienced across the various levels of public authority in Europe. In order to solve these problems it is necessary to take measures of coordination between the users and providers of spatial information. The Directive 2007/2/EC of the European Parliament and of the Council adopted on 14 March 2007 aims at establishing an Infrastructure for Spatial Information in the European Community (INSPIRE) for environmental policies, or policies and activities that have an impact on the environment.</p>
+</div>
+<div class="paragraph">
+<p>INSPIRE is based on the infrastructures for spatial information that are created and maintained by the Member States. To support the establishment of a European infrastructure, Implementing Rules addressing the following components of the infrastructure have been specified: metadata, interoperability of spatial data sets (as described in Annexes I, II, III of the Directive) and spatial data services, network services, data and service sharing, and monitoring and reporting procedures.</p>
+</div>
+<div class="paragraph">
+<p>INSPIRE does not require collection of new data. However, after the period specified in the Directive<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> Member States have to make their data available according to the Implementing Rules.</p>
+</div>
+<div class="paragraph">
+<p>Interoperability in INSPIRE means the possibility to combine spatial data and services from different sources across the European Community in a consistent way without involving specific efforts of humans or machines. It is important to note that "interoperability" is understood as providing access to spatial data sets through network services, typically via Internet. Interoperability may be achieved by either changing (harmonising) and storing existing data sets or transforming them via services for publication in the INSPIRE infrastructure. It is expected that users will spend less time and efforts on understanding and integrating data when they build their applications based on data delivered in accordance with INSPIRE.</p>
+</div>
+<div class="paragraph">
+<p>In order to benefit from the endeavours of international standardisation bodies and organisations established under international law their standards and technical means have been utilised and referenced, whenever possible.</p>
+</div>
+<div class="paragraph">
+<p>To facilitate the implementation of INSPIRE, it is important that all stakeholders have the opportunity to participate in specification and development. For this reason, the Commission has put in place a consensus building process involving data users, and providers together with representatives of industry, research and government. These stakeholders, organised through Spatial Data Interest Communities (SDIC) and Legally Mandated Organisations (LMO)<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>, have provided reference materials, participated in the user requirement and technical<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> surveys, proposed experts for the Data Specification Drafting Team<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup>, the Thematic Working Groups<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> and other ad-hoc cross-thematic technical groups and participated in the public stakeholder consultations on draft versions of the data specifications. These consultations covered expert reviews as well as feasibility and fitness-for-purpose testing of the data specifications<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p>This open and participatory approach was successfully used during the development of the data specifications on Annex I, II and III data themes as well as during the preparation of the Implementing Rule on Interoperability of Spatial Data Sets and Services<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> for Annex I spatial data themes and of its amendment regarding the themes of Annex II and III.</p>
+</div>
+<div class="paragraph">
+<p>The development framework elaborated by the Data Specification Drafting Team aims at keeping the data specifications of the different themes coherent. It summarises the methodology to be used for the development of the data specifications, providing a coherent set of requirements and recommendations to achieve interoperability. The pillars of the framework are the following technical documents<sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>Definition of Annex Themes and Scope</em> describes in greater detail the spatial data themes defined in the Directive, and thus provides a sound starting point for the thematic aspects of the data specification development.</p>
+</li>
+<li>
+<p>The <em>Generic Conceptual Model</em> defines the elements necessary for interoperability and data harmonisation including cross-theme issues. It specifies requirements and recommendations with regard to data specification elements of common use, like the spatial and temporal schema, unique identifier management, object referencing, some common code lists, etc. Those requirements of the Generic Conceptual Model that are directly implementable are included in the Implementing Rule on Interoperability of Spatial Data Sets and Services.</p>
+</li>
+<li>
+<p>The <em>Methodology for the Development of Data Specifications</em> defines a repeatable methodology. It describes how to arrive from user requirements to a data specification through a number of steps including use-case development, initial specification development and analysis of analogies and gaps for further specification refinement.</p>
+</li>
+<li>
+<p>The <em>Guidelines for the Encoding of Spatial Data</em> defines how geographic information can be encoded to enable transfer processes between the systems of the data providers in the Member States. Even though it does not specify a mandatory encoding rule it sets GML (ISO 19136) as the default encoding for INSPIRE.</p>
+</li>
+<li>
+<p>The <em>Guidelines for the use of Observations &amp; Measurements and Sensor Web Enablement-related standards in INSPIRE Annex II and III data specification development</em> provides guidelines on how the "Observations and Measurements" standard (ISO 19156) is to be used within INSPIRE.</p>
+</li>
+<li>
+<p>The <em>Common data models</em> are a set of documents that specify data models that are referenced by a number of different data specifications. These documents include generic data models for networks, coverages and activity complexes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The structure of the data specifications is based on the "ISO 19131 Geographic information - Data product specifications" standard. They include the technical documentation of the application schema, the spatial object types with their properties, and other specifics of the spatial data themes using natural language as well as a formal conceptual schema language<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p>A consolidated model repository, feature concept dictionary, and glossary are being maintained to support the consistent specification development and potential further reuse of specification elements. The consolidated model consists of the harmonised models of the relevant standards from the ISO 19100 series, the INSPIRE Generic Conceptual Model, and the application schemas<sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup> developed for each spatial data theme. The multilingual INSPIRE Feature Concept Dictionary contains the definition and description of the INSPIRE themes together with the definition of the spatial object types present in the specification. The INSPIRE Glossary defines all the terms (beyond the spatial object types) necessary for understanding the INSPIRE documentation including the terminology of other components (metadata, network services, data sharing, and monitoring).</p>
+</div>
+<div class="paragraph">
+<p>By listing a number of requirements and making the necessary recommendations, the data specifications enable full system interoperability across the Member States, within the scope of the application areas targeted by the Directive. The data specifications (in their version 3.0) are published as technical guidelines and provide the basis for the content of the Implementing Rule on Interoperability of Spatial Data Sets and Services<sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup>. The content of the Implementing Rule is extracted from the data specifications, considering short- and medium-term feasibility as well as cost-benefit considerations. The requirements included in the Implementing Rule are legally binding for the Member States according to the timeline specified in the INSPIRE Directive.</p>
+</div>
+<div class="paragraph">
+<p>In addition to providing a basis for the interoperability of spatial data in INSPIRE, the data specification development framework and the thematic data specifications can be reused in other environments at local, regional, national and global level contributing to improvements in the coherence and interoperability of data in spatial data infrastructures.</p>
+</div>
+<div style="page-break-after: always;"></div>
+<h2 id="_geographical_grid_systems_executive_summary" class="discrete">Geographical Grid Systems – Executive Summary</h2>
+<div class="paragraph">
+<p><em>Geographical grid systems</em> are included in Annex I, which means that they are considered as reference data, i.e. data that constitute the spatial frame for linking and/or pointing to other information that belong to specific thematic fields as defined in the INSPIRE Annexes II and III.</p>
+</div>
+<div class="paragraph">
+<p>The INSPIRE specification on <em>Geographical grid systems</em> has been prepared following the participative principle of a consensus building process. The stakeholders, based on their registration as a Spatial Data Interest Community (SDIC) or a Legally Mandated Organisation (LMO) had the opportunity to bring forward user requirements and reference materials, propose experts for the specification development, and participate in the review of the data specifications. The Thematic Working Group responsible for the specification development was composed of geodetic and mapping experts coming from Portugal, Slovenia, France, Germany, Italy, Sweden and the UK, all of them for many years involved in activities aiming to establish uniform geo-referencing within Europe. Due to the close links between and the special technical nature of the two themes of <em>Coordinate reference systems</em> and G<em>eographical grid systems</em>, the specifications of both themes were developed by one Thematic Working Group.</p>
+</div>
+<div class="paragraph">
+<p><em>Geographical grid systems</em> (hereafter: <em>Grids</em>) play a specific role that is quite different from the other themes in the Directive&#8217;s annexes. Contrary to the other themes the <em>Grids</em> specification does not concern a downloadable or viewable thematic data set. Rather, it presents a basic functionality allowing the harmonised and interoperable geographic localisation of spatial objects defined by the other INSPIRE thematic data specifications. Therefore, the methodology developed by the Drafting Team on data specifications is only partly applicable to the work of this Thematic Working Group.</p>
+</div>
+<div class="paragraph">
+<p>The specific task of the definition of the <em>Geographical grid systems</em> theme therefore consists in taking the right decisions on the choice of a limited number of grid systems that will ensure a common basis for the geographical harmonisation between the other themes defined in the Annexes of the Directive.</p>
+</div>
+<div class="paragraph">
+<p>The cornerstone of the specification development was the definition of the Directive on <em>Geographical grid systems:</em> "Harmonised multi-resolution grid with a common point of origin and standardised location and size of grid cells". With this goal in mind, the Thematic Working Group agreed the scope of the theme "Geographical grid systems", covering quadrilateral grids used for indirect geo-referencing of themes with typically coarse resolution and wide (pan-European) geographical extent. As a result, this document specifies two Pan-European grids to be used within continental Europe in the INSPIRE context: The <em>Equal Area Grid</em> and the <em>Zoned Geographic Grid</em>.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Equal Area Grid</em>, which was proposed as the multipurpose Pan-European standard during the Annex I data specification process, is two-dimensional and it is based on the ETRS89 Lambert Azimuthal Equal Area coordinate reference system. It is mainly intended for spatial analysis or reporting purposes (e.g. statistical information), but not for communities where the grids have to be optimised for data exchange, supercomputer processing and high volume archiving of new data each day. The requirements and recommendations associated to this grid are based on the results from the "European Reference Grids" workshop [EUR 21494 EN].</p>
+</div>
+<div class="paragraph">
+<p>The <em>Zoned Geographic Grid</em>, which was proposed during the subsequent Annex II-III data specification process, is a two-dimensional multi-resolution geographic grid based on the ETRS89-GRS80 geodetic coordinate reference system. It follows a structure analogue to DTED (Digital Terrain Elevation Data), dividing the world into different zones in latitude, to mitigate the effect of convergence of meridians. The grid may be used as a geo-referencing framework when gridded data (raster data) is delivered using geodetic coordinates, mainly suited for reference data (such as elevation or orthoimagery), to achieve their interoperability for data provision and therefore serve crossborder purposes at global level.</p>
+</div>
+<div class="paragraph">
+<p>Both grids are multi-resolution grids, associated with predefined resolution levels, and provided with a designator and a coding system for identifying individual cells at all these levels.</p>
+</div>
+<div class="paragraph">
+<p>This document provided the basis for a number of requirements that have been included in the Implementing Rule on interoperability of spatial data sets and services. These elements are clearly indicated in the document as "IR Requirements". The other parts of the documents give clarification, background information and examples and are intended as part of the technical guidance documents accompanying the Implementing Rules.</p>
+</div>
+<div style="page-break-after: always;"></div>
+<h2 id="_acknowledgements" class="discrete">Acknowledgements</h2>
+<div class="paragraph">
+<p>Many individuals and organisations have contributed to the development of these Guidelines.</p>
+</div>
+<div class="paragraph">
+<p>The Thematic Working Group <em>Coordinate reference systems and Geographical grid systems</em> (TWG RS) included: João Torres (TWG Facilitator), Vida Bitenc (TWG-RS Editor), Alessandro Caporali, Paul Crudace, Lars Engberg, Bruno Garayt, Heinz Habrich (TWG-RS members).</p>
+</div>
+<div class="paragraph">
+<p>Gil Ross, Leendert Dorst participated in the original development phase as external experts.</p>
+</div>
+<div class="paragraph">
+<p>Jordi Escriu, Vicenç Palà, Pierre-Yves Curtinot, Tony Vanderstraete, Pavel Milenov and Rogier Broekman provided expertise in updating the specification according to the requirements stemming from Annex II-III data themes.</p>
+</div>
+<div class="paragraph">
+<p>Freddy Fierens and Katalin Tóth were the contact points of the European Commission.</p>
+</div>
+<div class="paragraph">
+<p>Other contributors to the INSPIRE data specifications are the Drafting Team Data Specifications, the JRC Data Specifications Team and the INSPIRE stakeholders - Spatial Data Interested Communities (SDICs) and Legally Mandated Organisations (LMOs).</p>
+</div>
+<div class="paragraph">
+<p><strong>Contact information</strong></p>
+</div>
+<div class="paragraph">
+<p>Maria Vanda Nunes de Lima &amp; Michael Lutz<br>
+European Commission Joint Research Centre (JRC)<br>
+Institute for Environment and Sustainability<br>
+Unit H06: Digital Earth and Reference Data<br>
+<em><a href="http://inspire.ec.europa.eu/index.cfm/pageid/2" class="bare">http://inspire.ec.europa.eu/index.cfm/pageid/2</a></em></p>
+</div>
+<div style="page-break-after: always;"></div>
+<h2 id="_table_of_contents" class="discrete">Table of Contents</h2>
+<div id="toc" class="toc">
+<div id="toctitle" class="title"></div>
+<ul class="sectlevel1">
+<li><a href="#_scope">1. Scope</a></li>
+<li><a href="#_overview">2. Overview</a>
+<ul class="sectlevel2">
+<li><a href="#_name">2.1. Name</a></li>
+<li><a href="#_informal_description">2.2. Informal description</a></li>
+<li><a href="#_normative_references">2.3. Normative References</a></li>
+<li><a href="#_terms_and_definitions">2.4. Terms and definitions</a></li>
+<li><a href="#_symbols_and_abbreviations">2.5. Symbols and abbreviations</a></li>
+<li><a href="#_how_the_technical_guidelines_map_to_the_implementing_rules">2.6. How the Technical Guidelines map to the Implementing Rules</a>
+<ul class="sectlevel3">
+<li><a href="#_requirements">2.6.1. Requirements</a></li>
+<li><a href="#_recommendations">2.6.2. Recommendations</a></li>
+<li><a href="#_conformance">2.6.3. Conformance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_specification_scopes">3. Specification scopes</a></li>
+<li><a href="#_identification_information">4. Identification information</a></li>
+<li><a href="#_geographical_grid_systems">5. Geographical Grid Systems</a>
+<ul class="sectlevel2">
+<li><a href="#_overview_2">5.1. Overview</a></li>
+<li><a href="#_geographic_grids_for_inspire">5.2. Geographic grids for INSPIRE</a>
+<ul class="sectlevel3">
+<li><a href="#_equal_area_grid">5.2.1. Equal Area Grid</a></li>
+<li><a href="#_zoned_geographic_grid">5.2.2. Zoned Geographic Grid</a></li>
+</ul>
+</li>
+<li><a href="#_modelling_of_grids">5.3. Modelling of grids</a></li>
+<li><a href="#_manipulation_with_grid_values">5.4. Manipulation with grid values</a></li>
+</ul>
+</li>
+<li><a href="#_bibliography">Bibliography</a></li>
+<li><a href="#_abstract_test_suite_normative">Annex A: Abstract Test Suite - (normative)</a>
+<ul class="sectlevel2">
+<li><a href="#_equal_area_grid_test">A.1. Equal Area Grid test</a></li>
+<li><a href="#_zoned_geographic_grid_test">A.2. Zoned Geographic Grid test</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect1">
+<h2 id="_scope">1. Scope</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document specifies a harmonised data specification for the spatial data theme <em>Geographical Grid Systems</em> as defined in Annex I of the INSPIRE Directive.</p>
+</div>
+<div class="paragraph">
+<p>This data specification provides the basis for the drafting of Implementing Rules according to Article 7 (1) of the INSPIRE Directive [Directive 2007/2/EC]. The entire data specification is published as implementation guidelines accompanying these Implementing Rules.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview">2. Overview</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_name">2.1. Name</h3>
+<div class="paragraph">
+<p>INSPIRE data specification for the theme Geographical Grid Systems.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_informal_description">2.2. Informal description</h3>
+<div class="paragraph">
+<p><strong>Definition:</strong></p>
+</div>
+<div class="paragraph">
+<p>Harmonised multi-resolution grid with a common point of origin and standardised location and size of grid cells.</p>
+</div>
+<div class="paragraph">
+<p><strong>Description:</strong></p>
+</div>
+<div class="paragraph">
+<p>The scope of the theme "Geographical grid systems" covers quadrilateral grids used for the indirect geo-referencing of themes with typically coarse resolution and wide (pan-European) geographical extent.</p>
+</div>
+<div class="paragraph">
+<p>The theme establishes two Pan-European grids to be used within continental Europe in the INSPIRE context: The <em>Equal Area Grid</em> and the <em>Zoned Geographic Grid</em>.</p>
+</div>
+<div class="paragraph">
+<p>Either of these grids, with fixed and unambiguously defined locations, shall be used as a geo-referencing framework to make gridded data available in INSPIRE, unless other grids are specified for specific INSPIRE spatial data themes for the purpose or in regions outside continental Europe.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Equal Area Grid</em> is proposed as the multipurpose Pan-European standard for spatial analysis or reporting. It consists of a two-dimensional grid based on the ETRS89 Lambert Azimuthal Equal Area projected coordinate reference system.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Zoned Geographic Grid</em> is proposed as an optional geo-referencing framework when gridded data (raster data) is delivered using geodetic coordinates, mainly suited for reference data (such as elevation or orthoimagery), to achieve their interoperability for data provision. It is aimed to serve cross-border purposes at global level. It consists of a two-dimensional multi-resolution geographic grid based on the ETRS89-GRS80 geodetic coordinate reference system, following a structure analogue to DTED (Digital Terrain Elevation Data) which divides the world into different zones in latitude.</p>
+</div>
+<div class="paragraph">
+<p>Both geographical grids have multiple predefined resolution levels, and are provided with a designator and a coding system for identifying individual cells at all these levels.</p>
+</div>
+<div class="paragraph">
+<p>It is recognised that there is a need to enable grid referencing for regions outside of continental Europe, for example for overseas Member States (MS) territories. For these regions, MS may define their own grid, although it must follow the same principles as laid down for the Pan-European Grids defined in this specification.</p>
+</div>
+<div class="paragraph">
+<p>The requirements and recommendations regarding "Geographical grid systems" are harmonised with the requirements of the Coordinate Reference Systems data specification [INSPIRE-DS-CRS].</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_normative_references">2.3. Normative References</h3>
+<div class="paragraph">
+<p>[Directive 2007/2/EC] Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)</p>
+</div>
+<div class="paragraph">
+<p>[ISO 19111] EN ISO 19111:2007 Geographic information - Spatial referencing by coordinates (ISO 19111:2007)</p>
+</div>
+<div class="paragraph">
+<p>[ISO 19111-2] EN ISO 19111-2:2009 Geographic information - Spatial referencing by coordinates – Part 2: Extension for parametric values</p>
+</div>
+<div class="paragraph">
+<p>[ISO 19115] EN ISO 19115:2005, Geographic information – Metadata (ISO 19115:2003)</p>
+</div>
+<div class="paragraph">
+<p>[ISO 19123] EN ISO 19123:2007, Geographic Information – Schema for coverage geometry and functions</p>
+</div>
+<div class="paragraph">
+<p>[ISO 19129] ISO/TS 19129:2009, Geographic information – Imagery, gridded and coverage data framework (ISO 19129:2009)</p>
+</div>
+<div class="paragraph">
+<p>[ISO 19135] EN ISO 19135:2007 Geographic information – Procedures for item registration (ISO 19135:2005)</p>
+</div>
+<div class="paragraph">
+<p>[Regulation 1205/2008/EC] Regulation 1205/2008/EC implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_terms_and_definitions">2.4. Terms and definitions</h3>
+<div class="paragraph">
+<p>General terms and definitions helpful for understanding the INSPIRE data specification documents are defined in the INSPIRE Glossary<sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p>Specifically, for the theme Geographical Grid Systems, the following terms are defined:</p>
+</div>
+<div class="paragraph">
+<p><strong>(1) grid</strong></p>
+</div>
+<div class="paragraph">
+<p>A network composed of two or more sets of curves in which the members of each set intersect the members of the other sets in an algorithmic way.</p>
+</div>
+<div class="paragraph">
+<p><strong>(2) grid cell</strong></p>
+</div>
+<div class="paragraph">
+<p>A cell delineated by grid curves.</p>
+</div>
+<div class="paragraph">
+<p><strong>(3) grid point</strong></p>
+</div>
+<div class="paragraph">
+<p>A point located at the intersection of two or more curves in a grid.</p>
+</div>
+<div class="paragraph">
+<p><strong>(4) gridded data</strong></p>
+</div>
+<div class="paragraph">
+<p>Data made available as a coverage (or coverages) whose domain is a grid.</p>
+</div>
+<div class="paragraph">
+<p>NOTE Gridded data are often also referred to as "raster data". A raster is defined in ISO 19123:2005 as a "usually rectangular pattern of parallel scanning lines forming or corresponding to the display on a cathode ray tube", i.e. as a specific type of grid.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_symbols_and_abbreviations">2.5. Symbols and abbreviations</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14%;">
+<col style="width: 86%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CRS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coordinate Reference System</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DTED</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Digital Terrain Elevation Data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">European Commission</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EEA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">European Environment Agency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EIONET</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Environmental Information and Observation Network</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">European Terrestrial Reference System 1989</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-LAEA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Two-dimensional Lambert Azimuthal Equal Area Coordinate Reference System</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-GRS80</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Two-dimensional Geodetic Coordinate Reference System in ETRS89 on the GRS80 ellipsoid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GCM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generic Conceptual Model</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GRIB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WMO standard for gridded data exchange GRIdded Binary <a href="http://www.wmo.ch/pages/prog/www/WMOCodes/GRIB.html" class="bare">http://www.wmo.ch/pages/prog/www/WMOCodes/GRIB.html</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grid_ETRS89-LAEA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pan-European Equal Area Grid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grid_ETRS89-GRS80z<em>n</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pan-European Zoned Geographic Grid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GRS80</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geodetic Reference System 1980</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ICAO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">International Civil Aviation Organisation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IOC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intergovernmental Oceanographic Commission</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ITRS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">International Terrestrial Reference System</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Member States</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NetCDF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Exchange Standard of the Climate and Forecasting Community Network Common Data Form <a href="http://www.unidata.ucar.edu/netcdf" class="bare">http://www.unidata.ucar.edu/netcdf</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TWG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Thematic Working Group</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WMO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">World Meteorological Organisation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WMTS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web Map Tile Service</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_how_the_technical_guidelines_map_to_the_implementing_rules">2.6. How the Technical Guidelines map to the Implementing Rules</h3>
+<div class="paragraph">
+<p>The schematic diagram in Figure 1 gives an overview of the relationships between the INSPIRE legal acts (the INSPIRE Directive and Implementing Rules) and the INSPIRE Technical Guidelines. The INSPIRE Directive and Implementing Rules include legally binding requirements that describe, usually on an abstract level, <em>what</em> Member States must implement.</p>
+</div>
+<div class="paragraph">
+<p>In contrast, the Technical Guidelines define <em>how</em> Member States might implement the requirements included in the INSPIRE Implementing Rules. As such, they may include non-binding technical requirements that must be satisfied if a Member State data provider chooses to conform to the Technical Guidelines. Implementing these Technical Guidelines will maximise the interoperability of INSPIRE spatial data sets.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./media/image4.png" alt="image" width="603" height="375">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><strong>Figure 1 - Relationship between INSPIRE Implementing Rules and Technical Guidelines</strong></p>
+</div>
+<div class="sect3">
+<h4 id="_requirements">2.6.1. Requirements</h4>
+<div class="paragraph">
+<p>The purpose of these Technical Guidelines (Data specifications on <em>Geographical Grid Systems</em>) is to provide practical guidance for implementation that is guided by, and satisfies, the (legally binding) requirements included for the spatial data theme Geographical Grid Systems in the Regulation (Implementing Rules) on interoperability of spatial data sets and services. These requirements are highlighted in this document as follows:</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph text-center">
+<p><strong>IR Requirement</strong><br>
+<em>Article / Annex / Section no.</em><br>
+<strong>Title / Heading</strong></p>
+</div>
+<div class="paragraph">
+<p>This style is used for requirements contained in the Implementing Rules on interoperability of spatial data sets and services (Commission Regulation (EU) No 1089/2010).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For each of these IR requirements, these Technical Guidelines contain additional explanations and examples.</p>
+</div>
+<div class="paragraph">
+<p>NOTE The Abstract Test Suite (ATS) in Annex A contains conformance tests that directly check conformance with these IR requirements.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, these Technical Guidelines may propose a specific technical implementation for satisfying an IR requirement. In such cases, these Technical Guidelines may contain additional technical requirements that need to be met in order to be conformant with the corresponding IR requirement <em>when using this proposed implementation</em>. These technical requirements are highlighted as follows:</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📒</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>TG Requirement X</strong><br>
+This style is used for requirements for a specific technical solution proposed in these Technical Guidelines for an IR requirement.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>NOTE 1 Conformance of a data set with the TG requirement(s) included in the ATS implies conformance with the corresponding IR requirement(s).</p>
+</div>
+<div class="paragraph">
+<p>NOTE 2 In addition to the requirements included in the Implementing Rules on interoperability of spatial data sets and services, the INSPIRE Directive includes further legally binding obligations that put additional requirements on data providers. For example, Art. 10(2) requires that Member States shall, where appropriate, decide by mutual consent on the depiction and position of geographical features whose location spans the frontier between two or more Member States. General guidance for how to meet these obligations is provided in the INSPIRE framework documents.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_recommendations">2.6.2. Recommendations</h4>
+<div class="paragraph">
+<p>In addition to IR and TG requirements, these Technical Guidelines may also include a number of recommendations for facilitating implementation or for further and coherent development of an interoperable infrastructure.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📘</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Recommendation X</strong><br>
+Recommendations are shown using this style.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>NOTE The implementation of recommendations is not mandatory. Compliance with these Technical Guidelines or the legal obligation does not depend on the fulfilment of the recommendations.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_conformance">2.6.3. Conformance</h4>
+<div class="paragraph">
+<p>Annex A includes the abstract test suite for checking conformance with the requirements included in these Technical Guidelines and the corresponding parts of the Implementing Rules (Commission Regulation (EU) No 1089/2010).</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_specification_scopes">3. Specification scopes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This data specification does not distinguish different specification scopes, but just considers one general scope.</p>
+</div>
+<div class="paragraph">
+<p>NOTE For more information on specification scopes, see [ISO 19131:2007], clause 8 and Annex D.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_identification_information">4. Identification information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These Technical Guidelines are identified by the following URI:</p>
+</div>
+<div class="paragraph">
+<p><a href="http://inspire.ec.europa.eu/tg/gg/3.1" class="bare">http://inspire.ec.europa.eu/tg/gg/3.1</a></p>
+</div>
+<div class="paragraph">
+<p>NOTE ISO 19131 suggests further identification information to be included in this section, e.g. the title, abstract or spatial representation type. The proposed items are already described in the document metadata, executive summary, overview description (section 2) and descriptions of the application schemas (section 5). In order to avoid redundancy, they are not repeated here.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_geographical_grid_systems">5. Geographical Grid Systems</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_overview_2">5.1. Overview</h3>
+<div class="paragraph">
+<p>One method of storing spatial information with indirect position is by using geographical grids. Grids omit direct spatial reference and average the qualitative properties of the subject. This makes them powerful tools for harmonisation and reduction of the complexity of spatial datasets. Geographical grids are also effective communication means for reporting spatial variability of features.</p>
+</div>
+<div class="paragraph">
+<p>Technically, grids for geographical data are predefined spatial reference structures composed of cells regular in shape or area. Cells are usually squares based on a given coordinate reference system but, in rare cases, they can be shaped differently, e.g. as hexagons.</p>
+</div>
+<div class="paragraph">
+<p>A grid typically uses a matrix of n x m cells spanned by 2 axes. As a result, a grid cell can be referenced by a sequence of integer values (one for each axis) that represent the position of the reference cell along each of the axes of the grid. See CV_GridCoordinate as specified in ISO 19123.</p>
+</div>
+<div class="paragraph">
+<p>There are many types of grids available for different purposes. Ideally, one grid that is useful for all purposes ought to be created but it is not possible for one grid to cover uniformly the whole of Europe. Any type of grid will always have some disadvantages that disqualify it for certain use. The following grid examples are presented to describe the difficulties in selection of a multipurpose grid.</p>
+</div>
+<div class="paragraph">
+<p>The <em>World Geographic Reference System</em> (Georef) is made for aircraft navigation. It is also suitable for global grid mapping. Georef is based on geographical latitude and longitude. The globe is divided into 12 bands of latitude and 24 zones of longitude, each 15 degrees in extent. These 15-degree areas are further divided into one-degree units identified by 15 characters. Georef disadvantages are that the shape, area and distance of cells are distorted.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Common European chorological grid reference system</em> (CGRS) is modified from the military grid reference system (MGRS). The MGRS itself is an alphanumeric version of a numerical UTM (Universal Transverse Mercator) or UPS (Universal Polar Stereographic) grid coordinate. MGRS has some serious disadvantages; cells do not cover the same area or have the same length of sides along latitude. This implies that cell statistics are difficult to calculate.</p>
+</div>
+<div class="paragraph">
+<p><em>National grid systems</em>. Most countries have defined grid systems covering their territory, based on the national plane coordinates. Belgium, Great Britain, Denmark, Finland, Ireland, Italy, the Netherlands and Sweden are examples of countries that have defined a national grid system. These systems employ conformal map projections which have some scale and area distortion.</p>
+</div>
+<div class="paragraph">
+<p><em>Equal area grids</em> are suitable for generalising data, statistical mapping and analytical work where an equal area of cells is important. The first Workshop on European Reference Grids in Ispra, 27-29 October 2003 [EUR 21494 EN], recommends the use of the multipurpose European grid based on Lambert Azimuthal Equal Area and ETRS89. Reference to the proceedings [EUR 21494 EN] is available in the bibliography.</p>
+</div>
+<div class="paragraph">
+<p><em>Weather and climate model grids</em>; The Meteorological, Atmospheric and Oceanographic modelling communities produce many new forecast and climatological data models every day in 4 dimensional grids and subsequent projection onto (any) 2 dimensions. These are used for operational weather and ocean forecasting and for climate change research. Here there are existing standards from the WMO (World Meteorological Organisation), ICAO (International Civil Aviation Organisation) and the IOC (Intergovernmental Oceanographic Commission). The high volume data exchange formats include GRIB and NetCDF which are exchanged globally. It is not proposed that the INSPIRE grid specification should be required for use by these communities, who need highly specialised grids. Whenever this data is exchanged, it is expected that the grid definition (usually a mathematical definition) is included as part of the community standard. Where the grid is even more specialised, it is expected that the grid specification will be provided in a reference to an appropriate scientific document. This is the normal procedure used by these communities and their data specification standards.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_geographic_grids_for_inspire">5.2. Geographic grids for INSPIRE</h3>
+<div class="paragraph">
+<p>This data specification defines two Pan-European geographical grids for their use in the INSPIRE context within continental Europe:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>Equal Area Grid</em>, which is intended more for statistical reporting purposes. It is not intended for communities where the grids have to be optimised for data exchange, supercomputer processing and high volume archiving of new data each day.</p>
+<div class="paragraph">
+<p>This grid, designated as Grid_ETRS89-LAEA, is fully-specified in section 5.2.1.</p>
+</div>
+</li>
+<li>
+<p>The <em>Zoned Geographic Grid</em>, which is intended for the provision of gridded spatial information (i.e. raster, coverage-based data) for reference data themes.</p>
+<div class="paragraph">
+<p>This grid, designated as Grid_ETRS89-GRS80z<em>n_res</em>, is fully-specified in section 5.2.2.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is recognised that there is a need to enable grid referencing for regions outside of continental Europe, for example for overseas Member States (MS) territories. For these regions, MS may define their own grid, although it must follow the same principles as laid down for the Pan-European Grids (either the <em>Equal Area Grid</em> or the <em>Zoned Geographic Grid</em>) and be documented according to ISO 19100 standards.</p>
+</div>
+<div class="paragraph">
+<p>Such MS defined grids will be based on the International Terrestrial Reference System (ITRS), or other geodetic coordinate reference systems compliant with ITRS in areas that are outside the geographical scope of ETRS89. This follows the requirement in Annex II, Section 1.2 of the <em>Commission Regulation (EU) No 1089/2010</em> for the Coordinate Reference Systems theme. Compliant with the ITRS means that the system definition is based on the definition of the ITRS and there is a well established and described relationship between both systems, according to ISO 19111:2007 Geographic Information – Spatial referencing by coordinates.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph text-center">
+<p><strong>IR Requirement</strong><br>
+<em>Annex II, Section 2.2</em><br>
+<strong>Grids</strong></p>
+</div>
+<div class="paragraph">
+<p>Either of the grids with fixed and unambiguously defined locations defined in Sections 2.2.1 and 2.2.2 shall be used as a geo-referencing framework to make gridded data available in INSPIRE, unless one of the following conditions holds:</p>
+</div>
+<div class="paragraph">
+<p>(1) Other grids may be specified for specific spatial data themes in Annexes II-IV. In this case, data exchanged using such a theme-specific grid shall use standards in which the grid definition is either included with the data, or linked by reference.</p>
+</div>
+<div class="paragraph">
+<p>(2) For grid referencing in regions outside of continental Europe Member States may define their own grid based on a geodetic coordinate reference system compliant with ITRS and a Lambert Azimuthal Equal Area projection, following the same principles as laid down for the grid specified in Section 2.2.1. In this case, an identifier for the coordinate reference system shall be created.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph text-center">
+<p><strong>IR Requirement</strong><br>
+<em>Annex II, Section 2.2.2</em><br>
+<strong>Zoned Geographic Grid</strong></p>
+</div>
+<div class="paragraph">
+<p>(&#8230;&#8203;)<br>
+(6) For grid referencing in regions outside of continental Europe data providers may define their own grid based on a geodetic coordinate reference system compliant with ITRS, following the same principles as laid down for the Pan-European Grid_ETRS89-GRS80zn. In this case, an identifier for the coordinate reference system and the corresponding identifier for the grid shall be created.<br>
+(&#8230;&#8203;)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>NOTE 1 Sections 5.2.1 and 5.2.2 of this data specification identify respectively the characteristics of the geographic grids specified in Annex II, Sections 2.2.1 and 2.2.2 of the <em>Commission Regulation (EU) No 1089/2010, on interoperability of spatial data sets and services</em>.</p>
+</div>
+<div class="paragraph">
+<p>NOTE 2 The term continental Europe means the area within the scope of ETRS89-GRS80-EVRS.</p>
+</div>
+<div class="sect3">
+<h4 id="_equal_area_grid">5.2.1. Equal Area Grid</h4>
+<div class="paragraph">
+<p>This section specifies a geographic grid which is proposed as the multipurpose Pan-European standard, mainly intended for spatial analysis and reporting. It is based on the ETRS89 Lambert Azimuthal Equal Area coordinate reference system (CRS identifier in INSPIRE: ETRS89-LAEA).</p>
+</div>
+<div class="sect4">
+<h5 id="_definition_of_the_grid">5.2.1.1. Definition of the grid</h5>
+<div class="paragraph">
+<p>The characteristics of the grid are specified below.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph text-center">
+<p><strong>IR Requirement</strong><br>
+<em>Annex II, Section 2.2.1</em><br>
+<strong>Equal Area Grid</strong></p>
+</div>
+<div class="paragraph">
+<p>The grid is based on the ETRS89 Lambert Azimuthal Equal Area (ETRS89-LAEA) coordinate reference system with the centre of the projection at the point 52<sup>o</sup> N, 10<sup>o</sup> E and false easting: x<sub>0</sub> = 4321000 m, false northing: y<sub>0</sub> = 3210000 m.</p>
+</div>
+<div class="paragraph">
+<p>The origin of the grid coincides with the false origin of the ETRS89-LAEA coordinate reference system (x=0, y=0).</p>
+</div>
+<div class="paragraph">
+<p>Grid points of grids based on ETRS89-LAEA shall coincide with grid points of the grid.</p>
+</div>
+<div class="paragraph">
+<p>The grid is hierarchical, with resolutions of 1m, 10m, 100m, 1000m, 10000m and 100000m.</p>
+</div>
+<div class="paragraph">
+<p>The grid orientation is south-north, west-east.</p>
+</div>
+<div class="paragraph">
+<p>The grid is designated as Grid_ETRS89-LAEA. For identification of an individual resolution level the cell size in metres is appended.<br>
+(&#8230;&#8203;)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📘</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Recomendation 1</strong><br>
+For expressing the cell size in metres, the following values should be used: 1, 10, 100, 1000, 10k, 100k, 1000k.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>EXAMPLE The grid at a resolution level of 100km is designated as Grid_ETRS89-LAEA<em>_100k</em>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📘</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Recomendation 2</strong><br>
+Where applicable, the following URI pattern should be used to refer to the Grid_ETRS89-LAEA:</p>
+</div>
+<div class="paragraph">
+<p><a href="http://inspire.ec.europa.eu/grid/etrs89-laea/&lt;resolution&gt" class="bare">http://inspire.ec.europa.eu/grid/etrs89-laea/&lt;resolution&gt</a>;</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>EXAMPLE For the grid at a resolution level of 100km the following URI should be used: <a href="http://inspire.ec.europa.eu/grid/etrs89-laea/100k" class="bare">http://inspire.ec.europa.eu/grid/etrs89-laea/100k</a></p>
+</div>
+<div class="paragraph">
+<p>For the unambiguous referencing and identification of a grid cell, a coding system is needed to identify the cell size and the position of the lower left corner.</p>
+</div>
+<div class="paragraph">
+<p>The coding system described hereafter follows the recommendations from the European Environmental Agency [EEA 2008].</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph text-center">
+<p><strong>IR Requirement</strong><br>
+<em>Annex II, Section 2.2.1</em><br>
+<strong>Equal Area Grid</strong></p>
+</div>
+<div class="paragraph">
+<p>(&#8230;&#8203;)<br>
+For the unambiguous referencing and identification of a grid cell, the cell code composed of the size of the cell and the coordinates of the lower left cell corner in ETRS89-LAEA shall be used. The cell size shall be denoted in metres ("m") for cell sizes up to 100m or kilometres ("km") for cell sizes of 1000m and above. Values for northing and easting shall be divided by 10<sup>n</sup>, where <em>n</em> is the number of trailing zeros in the cell size value.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>EXAMPLE 1 A cell size of 10000 metres is denoted as "10km".</p>
+</div>
+<div class="paragraph">
+<p>NOTE 1 The values for northing and easting (in the ETRS89-LAEA they are named Y and X) are divided by 10<sup>n</sup> ("n" is number of zeros in the cell size value) in order to reduce the length of the string. With the given resolutions this means that the zeros are trimmed.</p>
+</div>
+<div class="paragraph">
+<p>EXAMPLE 2 If the cell size is 1000 metres, the number of zeros in end is 3 and thus the divider is 10<sup>3</sup> = 1000.</p>
+</div>
+<div class="paragraph">
+<p>EXAMPLE 3 The cell code "1kmN2599E4695" identifies the 1km grid cell with coordinates of the lower left corner: Y=2599000m, X=4695000m.</p>
+</div>
+<div class="paragraph">
+<p>NOTE 2 There is the possibility that some grids based on ETRS89-LAEA do not comply with Grid_ETRS89-LAEA (e.g. 5 m grid resolution). For maximising compatibility, the origin of all grids based on ETRS89-LAEA shall coincide with the Grid_ETRS89-LAEA origin.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_zoned_geographic_grid">5.2.2. Zoned Geographic Grid</h4>
+<div class="paragraph">
+<p>This section specifies a Pan-European geographic grid, aimed at global purposes, available for the provision of gridded spatial information (i.e. raster, coverage-based data), and explains the need to establish such geographic grid.</p>
+</div>
+<div class="sect4">
+<h5 id="_justification_for_the_grid">5.2.2.1. Justification for the grid</h5>
+<div class="paragraph">
+<p>The amount of information made available to users will be enormous when INSPIRE services become operative. In order to combine all these data sets or make cross-reference analyses aimed at satisfying Pan-European cross-border needs, it would be highly desirable to make data available in the same coordinate reference system (with its associated datum) to obtain consistent data. This is supported by key use-cases like flood modelling and emergency response. Although they are not equally relevant for every INSPIRE theme dealing with gridded data, it would be highly desirable that all the themes with similar needs makes use of the same geographical grid system in order to maintain their coherence.</p>
+</div>
+<div class="paragraph">
+<p>Conservation of original values is important when working with raster files, since interpolations directly affect the accuracy of those variables computed from them. As an example, in the case of the elevation property resampling diminishes height values associated to points on the Earth surface.</p>
+</div>
+<div class="paragraph">
+<p>The different projections allowed by the <em>INSPIRE Data Specification on Coordinate Reference Systems v3.2</em> for representation in plane coordinates are recommended in association to a certain range of scales and/or purposes, but problems arise when combining the data using these map projections (due to their inherent characteristics). As an example, ETRS-LAEA is suitable for spatial analysis and reporting, ETRS89-LCC is recommended for mapping at scales smaller than 1:500,000 and ETRS89-TMzn at scales larger than 1:500,000, with the additional inconvenience of using different zones for the whole Europe.</p>
+</div>
+<div class="paragraph">
+<p>Hence, it would be recommendable to minimise coordinate reference system transformations of the data sets as possible, in order to preserve their quality.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, even in the case where data is made available in the same coordinate reference system, when combining raster georeferenced data (coverages) from different sources, limits of pixels (coverage grid cells) usually do not match in x, y coordinates (i.e. maybe they are not aligned due to the fact they were generated by independent production lines). In order to get the proper alignment it is necessary to establish additional rules, such as the origin of a common geographic grid or its orientation.</p>
+</div>
+<div class="paragraph">
+<p>The Pan-European Equal Area Grid (Grid_ETRS89-LAEA), based on the ETRS89 Lambert Azimuthal Equal Area coordinate reference system (ETRS89-LAEA), is not suited for gridded reference data (e.g. elevation or orthoimagery gridded data), because:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The inherent properties of LAEA projection are inappropriate:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The direction of the Geographic North varies as geographical longitude does;</p>
+</li>
+<li>
+<p>The scale gradually decreases from the centre of the projection;</p>
+</li>
+<li>
+<p>Directions are only true directions from this point;</p>
+</li>
+<li>
+<p>Shape distortions increases while moving away from this point.</p>
+</li>
+<li>
+<p>It makes difficult the use of hierarchical levels of grid cell sizes, since resolution varies depending on the position;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The Grid_ETRS89-LAEA is defined in an equal area projection, suited for thematic spatial analysis and reporting, whereas for reference data the geometric aspects are important (e.g. conservation of angles, shapes and directions).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As a consequence of all the aspects above, it is recommended for reference data themes the use of a common geographic grid in Europe to achieve convergence of their gridded data sets in terms of datum (already fixed by the <em>Commission Regulation (EU) No 1089/2010</em>), coordinate reference system and data sets organization at different levels of detail for data provision.</p>
+</div>
+<div class="paragraph">
+<p>The Zoned Geographic Grid proposed in section 5.2.2.2 is aimed to solve or minimize the previous issues. It is defined in geodetic coordinates and follows a structure analogue to DTED (Digital Terrain Elevation Data), which constitutes a valid solution to mitigate the effect of convergence of meridians. Due to this effect, if a geographic grid is defined in equiangular geodetic coordinates, the grid cell dimension on the ground becomes smaller in the longitude axis while the latitude increases, causing undesirable effects in areas with high latitude. This becomes especially problematic in areas near the Polar Regions.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_definition_of_the_grid_2">5.2.2.2. Definition of the grid</h5>
+<div class="paragraph">
+<p>Provision of data in ETRS89-GRS80 geodetic coordinates is aligned with the <em>Commission Regulation (EU) No 1089/2010, of 23 November 2010, on interoperability of spatial data sets and services</em>, while is a valid alternative to have continuous data regardless different levels of detail and purposes (as explained in 5.2.2.1).</p>
+</div>
+<div class="paragraph">
+<p>This specification establishes the Zoned Geographic Grid, a multi-resolution geographic which may be used as a geo-referencing framework when gridded data is delivered using geodetic coordinates. The characteristics of this grid are specified below.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph text-center">
+<p><strong>IR Requirement</strong><br>
+<em>Annex II, Section 2.2.2</em><br>
+<strong>Zoned Geographic Grid</strong></p>
+</div>
+<div class="paragraph">
+<p>(1) When gridded data is delivered using geodetic coordinates the multi-resolution grid defined in this Section may be used as a geo-referencing framework.<br>
+(&#8230;&#8203;)</p>
+</div>
+<div class="paragraph">
+<p>(3) The grid shall be based on the ETRS89-GRS80 geodetic coordinate reference system.<br>
+	The origin of the grid shall coincide with the intersection point of the Equator with the Greenwich Meridian (GRS80 latitude φ=0; GRS80 longitude λ=0).<br>
+	The grid orientation shall be south-north and west-east according to the net defined by the meridians and parallels of the GRS80 ellipsoid.<br>
+(&#8230;&#8203;)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The geographical grid establishes multiple levels of resolution and follows a structure analogue to DTED, dividing the world into different zones in latitude, as shown in the following table:</p>
+</div>
+<div class="paragraph">
+<p><strong>Table 1 – Latitudinal zones for the common Grid_ETRS89-GRS80zn</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>Zone</strong></th>
+<th class="tableblock halign-center valign-top"><strong>Latitude</strong></th>
+<th class="tableblock halign-center valign-top"><strong>Factor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>1</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>0°–50°</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>1</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>2</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>50°–70°</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>2</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>3</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>70°–75°</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>3</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>4</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>75°–80°</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>4</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>5</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>80°–90°</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>6</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>It is recognized that a geographical grid with such structure may constitute additional efforts for Member States whose territories intersect the limit of adjoining zones. However, this is perceived as an acceptable solution to mitigate the meridian convergence. It is worth to mention here that most of territories in continental European are included in Zones 1 and 2 (Cape North in Norway is approximately at 71° latitude).</p>
+</div>
+<div class="paragraph">
+<p>For a given level of resolution:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The latitude spacing of cells of the geographic grid is the same in the different zones.</p>
+</li>
+<li>
+<p>Each zone has a specific longitude spacing for the cells of the geographic grid (equal or greater than the latitude spacing). Last column in the previous table shows the factor by which the latitude spacing is multiplied in each zone to obtain the longitude spacing.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When applying this factor, the cell sizes become approximately square on the ground (while they are rectangular in geodetic coordinates, i.e. 1x2, 1x3, 1x4, 1x6). Only grid cells included in Zone 1 preserve the square condition in geodetic coordinates (1x1).</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph text-center">
+<p><strong>IR Requirement</strong><br>
+<em>Annex II, Section 2.2.2</em><br>
+<strong>Zoned Geographic Grid</strong></p>
+</div>
+<div class="paragraph">
+<p>(&#8230;&#8203;)<br>
+(2) The resolution levels are defined in Table 1.<br>
+(&#8230;&#8203;)<br>
+(7) This grid shall be subdivided in zones. The south-north resolution of the grid shall have equal angular spacing. The west-east resolution of the grid shall be established as the product of angular spacing multiplied by the factor of the zone as defined in Table 1.<br>
+(&#8230;&#8203;)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>NOTE Table 2 in this document.</p>
+</div>
+<div class="paragraph">
+<p>The geographic grid is generically designated as Grid_ETRS89-GRS80z<em>n</em>. For identification of an individual resolution level the zone number (<em>n</em>) and the cell size (<em>res</em>) - in degrees (D), minutes (M), seconds (S), milliseconds (MS) or microseconds (MMS) - has to be included and appended (respectively) to this designator, resulting in the Grid_ETRS89-GRS80z<em>n_res</em>.</p>
+</div>
+<div class="paragraph">
+<p>EXAMPLE The zoned geographic grid at a resolution level of 300 milliseconds in Zone 2 is designated as Grid_ETRS89-GRS80z<em>2_300MS</em>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph text-center">
+<p><strong>IR Requirement</strong><br>
+<em>Annex II, Section 2.2.2</em><br>
+<strong>Zoned Geographic Grid</strong></p>
+</div>
+<div class="paragraph">
+<p>(&#8230;&#8203;)<br>
+(8) The grid shall be designated Grid_ETRS89-GRS80z<em>n_res</em>, where <em>n</em> represents the number of the zone and <em>res</em> the cell size in angular units, as specified in Table 1.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>NOTE Table 2 in this document.</p>
+</div>
+<div class="paragraph">
+<p><strong>Table 2 - Common Grid_ETRS89-GRS80zn: Latitude spacing (resolution level) and longitude spacing for each zone</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/image5.png" alt="image5">
+</div>
+</div>
+<div class="paragraph">
+<p>The table above shows the latitude spacing (each resolution level), as well as the longitude spacing obtained by applying the factor parameter to each latitudinal zone.</p>
+</div>
+<div class="paragraph">
+<p>The levels of resolution identified in Table 2 make up a hierarchical geographic grid (which constitute a pyramidal grid structure). Level 8, Level 11 and Level 13 in the previous table correspond to the levels of resolution of the Digital Terrain Elevation Data (DTED) L0, L1 and L2, respectively. Other levels in the table are derived from these taking into account the well-known scale set <em>GlobalCRS84Pixel</em> included in the WMTS v1.0.0 specification.</p>
+</div>
+<div class="paragraph">
+<p>Table 3 illustrates the approximate geographic grid cell size on terrain in latitude at each resolution level.</p>
+</div>
+<div class="paragraph">
+<p><strong>Table 3 – Approximate Grid_ETRS89-GRS80zn cell size on terrain in latitude at each resolution level</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/image6.png" alt="image6">
+</div>
+</div>
+<div class="paragraph">
+<p>The geodetic coordinates of any cell of this Zoned Geographic Grid for a specific zone will always be a multiple of the grid cell size for a given resolution level, as a consequence of establishing a common origin for the geographic grid (φ=0; λ=0).</p>
+</div>
+<div class="paragraph">
+<p>As a consequence, problems of alignment between raster files (coverages) based on the Grid_ETRS89-GRS80z<em>n_res</em> at the same resolution level (grid coverage cell size) disappear. Remaining misalignments correspond only to the difference in absolute positioning and consistency of the data being combined. Especially in the case of very high resolution data, an inherent positional misalignment between coverages originated from two neighbour data providers may be observed, due to the different product specifications and (moreover) to the fact that the cells of the common geographic grid do not necessarily represent the same sampled features on the Earth in both datasets (e.g. because of the occlusions and/or the different angles of observation).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modelling_of_grids">5.3. Modelling of grids</h3>
+<div class="paragraph">
+<p>INSPIRE geographical grids themselves, with no values assigned to individual cells, are implemented and exchanged as vector data (lines or polygons). Thematic datasets based on geographical grids are exchanged as tables, lists or as gridded data.</p>
+</div>
+<div class="paragraph">
+<p>Existing standards enable different modelling of gridded data products and exchanging data in not always compatible formats. The most confusing issue seems to be the relation of grid cell and grid points in discrete surface grids. When discrete surface grids are implemented as discrete point grids, this can cause location shifts of half of the cell size or unwanted cell value interpolations.</p>
+</div>
+<div class="paragraph">
+<p>When surface grids are implemented as surfaces the above mentioned problems are avoided.</p>
+</div>
+<div class="paragraph">
+<p><strong>Error! Reference source not found.</strong> contains template application schema for Discrete Surface Grid Coverage (from [ISO 19129]).</p>
+</div>
+<div class="paragraph">
+<p>This surface grid schema does not apply to 3 and 4 dimensional specialised grids of the weather, ocean and climate modelling communities, nor to the general parametric display projections taken from such models.</p>
+</div>
+<div class="paragraph">
+<p>As stated in section 5.2, data exchanged using numerical modelling theme-specific grids shall use standards in which the grid definition is either included with the data, or linked by reference to an appropriate scientific document describing the grid.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_manipulation_with_grid_values">5.4. Manipulation with grid values</h3>
+<div class="paragraph">
+<p>Reference grids are mainly used for exchanging discrete values assigned to individual cells. When discrete values referred to one grid (e.g. sampling results) are converted to a different grid, there is no possibility to maintain the original thematic information. "Proceedings &amp; Recommendations" from the European Reference Grids Workshop [EUR 21494 EN] provide an exhaustive source on descriptions of the methods used when such conversion is required. A more compact source of relevant instructions is the "Guide to Geographic Data and Maps" [EEA 2008]. A general rule is to select the most suitable methodology, to use the original (not already derived) data, and to describe in detail the applied processing steps.</p>
+</div>
+<div class="paragraph">
+<p>Controlling and recording resampling steps provides the needed input for calculation of expected errors.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bibliography">Bibliography</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, <a href="http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf" class="bare">http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf</a></p>
+</div>
+<div class="paragraph">
+<p>[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.4rc2, <em><a href="http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3.4rc2.pdf" class="bare">http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3.4rc2.pdf</a></em></p>
+</div>
+<div class="paragraph">
+<p>[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, <a href="http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf" class="bare">http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf</a></p>
+</div>
+<div class="paragraph">
+<p>[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.3rc2, <em><a href="http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.3rc2.pdf" class="bare">http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.3rc2.pdf</a></em></p>
+</div>
+<div class="paragraph">
+<p>[EEA 2008] Guide to geographic data and maps, version 3, December 2008, European Environmental Agency, <em><a href="http://www.eionet.europa.eu/gis/docs/EEA_GISguide.doc" class="bare">http://www.eionet.europa.eu/gis/docs/EEA_GISguide.doc</a></em></p>
+</div>
+<div class="paragraph">
+<p>[EUR 19575 EN] Spatial Reference Systems in Europe – EUR Report 19575 EN. Proceedings of the "Spatial Reference Systems in Europe" workshop, Marne-La Vallee, 29-30 November 1999, <em><a href="https://github.com/INSPIRE-MIF/technical-guidelines/raw/main/data/rs/bibliography/EUR_19575_EN.pdf" class="bare">https://github.com/INSPIRE-MIF/technical-guidelines/raw/main/data/rs/bibliography/EUR_19575_EN.pdf</a></em></p>
+</div>
+<div class="paragraph">
+<p>[EUR 20120 EN] Map Projections for Europe – EUR Report 20120 EN. Proceedings of the "Map Projections for Europe" workshop, Marne-La Vallee, 14-15 December 2000, <em><a href="https://github.com/INSPIRE-MIF/technical-guidelines/raw/main/data/rs/bibliography/EUR_20120_EN.pdf" class="bare">https://github.com/INSPIRE-MIF/technical-guidelines/raw/main/data/rs/bibliography/EUR_20120_EN.pdf</a></em></p>
+</div>
+<div class="paragraph">
+<p>[EUR 21494 EN] European Reference Grids – EUR Report 21494 EN. Proceedings of the "European Reference Grids" workshop, Ispra, 27-29 October 2003,<br>
+<em><a href="https://github.com/INSPIRE-MIF/technical-guidelines/raw/main/data/rs/bibliography/EUR_21494_EN.pdf" class="bare">https://github.com/INSPIRE-MIF/technical-guidelines/raw/main/data/rs/bibliography/EUR_21494_EN.pdf</a></em></p>
+</div>
+<div class="paragraph">
+<p>[EUREF] <em>www.euref.eu</em> or <em>www.euref-iag.net</em> – EUREF website for information on the ETRS89 and the EVRS</p>
+</div>
+<div class="paragraph">
+<p>[IERS] <em>www.iers.org</em> – IERS website for information on the ITRS</p>
+</div>
+<div class="paragraph">
+<p>[ICAO] <em>www.icao.int</em> <em><a href="http://www.wmo.int/" class="bare">http://www.wmo.int/</a></em> – International Civil Aviation Organization</p>
+</div>
+<div class="paragraph">
+<p>[IHO] <em>www.iho.int</em> – IHO website for information on Hydrography</p>
+</div>
+<div class="paragraph">
+<p>[IOC] <em>ioc-unesco.org</em> <em><a href="http://www.wmo.int/" class="bare">http://www.wmo.int/</a></em> – Intergovernmental Oceanographic Commission</p>
+</div>
+<div class="paragraph">
+<p>[ISO 19111] EN ISO 19111:2007 Geographic information - Spatial referencing by coordinates (ISO 19111:2007)</p>
+</div>
+<div class="paragraph">
+<p>[ISO 19115] EN ISO 19115:2005, Geographic information – Metadata (ISO 19115:2003)</p>
+</div>
+<div class="paragraph">
+<p>[ISO 19135] EN ISO 19135:2007 Geographic information – Procedures for item registration (ISO 19135:2005)</p>
+</div>
+<div class="paragraph">
+<p>[GRIB] (GRIdded Binary) – WMO operational open data standard for multiple-dimensioned array data, exchanged daily by WMO, ICAO and IOC,</p>
+</div>
+<div class="paragraph">
+<p><em><a href="http://www.wmo.ch/pages/prog/www/WMOCodes/OperationalCodes.html" class="bare">http://www.wmo.ch/pages/prog/www/WMOCodes/OperationalCodes.html</a></em></p>
+</div>
+<div class="paragraph">
+<p>[NetCDF] (Network Common Data Form) - Data Exchange Standard of the Climate and Forecasting community, <em><a href="http://www.unidata.ucar.edu/software/netcdf/" class="bare">http://www.unidata.ucar.edu/software/netcdf/</a></em></p>
+</div>
+<div class="paragraph">
+<p>[Snyder, 1987] Map Projections – A Working Manual – Snyder, John P., Professional Paper 1395, U.S. Geological Survey, 1987</p>
+</div>
+<div class="paragraph">
+<p>[WMO] <em>www.wmo.int</em> – World Meteorological Organization</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_abstract_test_suite_normative">Annex A: Abstract Test Suite - (normative)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tests for the requirements on Geographical Grid Systems included in Commission Regulation (EU) No 1089/2010 and discussed in these Technical Guidelines have been integrated in the ATS section of the common data specifications document template. All thematic data specifications therefore include the relevant test for the grid-related requirements in their respective ATS (in Annex A), and specifically in section A2.3.</p>
+</div>
+<div class="paragraph">
+<p>The common document template contains the following test template for grids.</p>
+</div>
+<div class="paragraph">
+<p><strong>A2.3 Grid test</strong></p>
+</div>
+<div class="paragraph">
+<p>a) <span class="underline">Purpose</span>: Verify that gridded data related are available using the grid compatible with one of the coordinate reference systems defined in Commission Regulation No 1089/2010</p>
+</div>
+<div class="paragraph">
+<p>b) <span class="underline">Reference</span>: Annex II Section 2.1 and 2.2 of Commission Regulation 1089/2010.</p>
+</div>
+<div class="paragraph">
+<p>c) <span class="underline">Test Method</span>: Check whether the dataset is based on one of the following grids:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Grid_ETRS89_GRS80 (based on two-dimensional geodetic coordinates using the parameters of the GRS80 ellipsoid).</p>
+</li>
+<li>
+<p>Grid_ETRS89_GRS80zn (based on two-dimensional geodetic coordinates with zoning)</p>
+</li>
+<li>
+<p>A grid compatible with plane coordinates using the Lambert Azimuthal Equal Area projection and the parameters of the GRS80 ellipsoid (ETRS89-LAEA).</p>
+</li>
+<li>
+<p>A grid compatible with plane coordinates using the Lambert Conformal Conic projection and the parameters of the GRS80 ellipsoid (ETRS89-LCC).</p>
+</li>
+<li>
+<p>A grid compatible with plane coordinates using the Transverse Mercator projection and the parameters of the GRS80 ellipsoid (ETRS89-TMzn).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>NOTE Further technical information is given in Section 6 of this document.</p>
+</div>
+<div class="paragraph">
+<p>NOTE In each data specification, those grids that are not applicable to the specific data theme should be deleted also in the ATS. Unless an exception is specified in the specific data specification, only the ETRS89_GRS80 and Grid_ETRS89_GRS80zn should be included.</p>
+</div>
+<div class="paragraph">
+<p>In the following details are given on how to check conformance with the two grids defined in this specification.</p>
+</div>
+<div class="sect2">
+<h3 id="_equal_area_grid_test">A.1. Equal Area Grid test</h3>
+<div class="paragraph">
+<p>a) <span class="underline">Purpose</span>: Verify that if a geographical grid based on the ETRS89-LAEA coordinate reference system is used for the provision of gridded data within the geographical scope of ETRS89, such grid corresponds to the Equal Area Grid (Grid_ETRS89-LAEA) as defined in Commission Regulation No 1089/2010.</p>
+</div>
+<div class="paragraph">
+<p>b) <span class="underline">Reference</span>: Annex II Section 2.2 and 2.2.1 of Commission Regulation 1089/2010.</p>
+</div>
+<div class="paragraph">
+<p>c) <span class="underline">Test Method</span>: Check whether the ETRS89-LAEA geographic grid complies with the characteristics specified for the Equal Area Grid (Grid_ETRS89-LAEA):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The grid is based on the ETRS89 Lambert Azimuthal Equal Area (ETRS89-LAEA) coordinate reference system with the centre of the projection at the point 52<sup>o</sup> N, 10<sup>o</sup> E and false easting: x<sub>0</sub> = 4321000 m, false northing: y<sub>0</sub> = 3210000 m.</p>
+</li>
+<li>
+<p>The origin of the grid coincides with the false origin of the ETRS89-LAEA coordinate reference system (x=0, y=0).</p>
+</li>
+<li>
+<p>The grid orientation is south-north, west-east.</p>
+</li>
+<li>
+<p>The grid has one of the following resolution levels: 1m, 10m, 100m, 1000m, 10000m and 100000m.</p>
+</li>
+<li>
+<p>The grid is designated as 'Grid_ETRS89-LAEA__res_', where <em>res</em> represents the resolution level (cell size) in metres (using the suffix 'k' to indicate 1000m for resolutions larger than 1000m, e.g. 100k for a resolution of 100 km) .</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>NOTE 1 Further technical information is given in Section 5.2.1 of this document.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zoned_geographic_grid_test">A.2. Zoned Geographic Grid test</h3>
+<div class="paragraph">
+<p>a) <span class="underline">Purpose</span>: Verify that if a geographical grid based on the ETRS89-GRS80 coordinate reference system is used for the provision of gridded data within the geographical scope of ETRS89, such grid corresponds to the Zoned Geographic Grid (Grid_ETRS89-GRS80z<em>n</em>) as defined in Commission Regulation No 1089/2010.</p>
+</div>
+<div class="paragraph">
+<p>b) <span class="underline">Reference</span>: Annex II Section 2.2 and 2.2.2 of Commission Regulation 1089/2010.</p>
+</div>
+<div class="paragraph">
+<p>c) <span class="underline">Test Method</span>: Check whether the ETRS89-GRS80 geographic grid complies with the characteristics specified for the Zoned Geographic Grid (Grid_ETRS89-GRS80z<em>n</em>):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The grid is based on the ETRS89-GRS80 geodetic coordinate reference system.</p>
+</li>
+<li>
+<p>The origin of the grid coincides with the intersection point of the Equator with the Greenwich Meridian (GRS80 latitude φ=0; GRS80 longitude λ=0).</p>
+</li>
+<li>
+<p>The grid orientation is south-north and west-east, according to the net defined by the meridians and parallels of the GRS80 ellipsoid.</p>
+</li>
+<li>
+<p>The grid has one of the resolution levels specified in Table 2 of this document.</p>
+</li>
+<li>
+<p>This grid is subdivided in zones which depend on the latitude. The south-north resolution of the grid has equal angular spacing. The west-east resolution of the grid is established as the product of angular spacing multiplied by the factor of the zone as defined in Table 2 of this document.</p>
+</li>
+<li>
+<p>The grid is designated as 'Grid_ETRS89-GRS80z<em>n_res</em>', where <em>n</em> represents the number of the zone (which depends on the latitude) and <em>res</em> the cell size in angular units, as specified in Table 2 of this document.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>NOTE 1 Further technical information is given in Section 5.2.2 of this document.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. The common document template is available in the "Framework documents" section of the data specifications web page at <a href="http://inspire.jrc.ec.europa.eu/index.cfm/pageid/2" class="bare">http://inspire.jrc.ec.europa.eu/index.cfm/pageid/2</a>
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. For all 34 Annex I,II and III data themes: within two years of the adoption of the corresponding Implementing Rules for newly collected and extensively restructured data and within 5 years for other data in electronic format still in use
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. The current status of registered SDICs/LMOs is available via INSPIRE website: <a href="http://inspire.jrc.ec.europa.eu/index.cfm/pageid/42" class="bare">http://inspire.jrc.ec.europa.eu/index.cfm/pageid/42</a>
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. Surveys on unique identifiers and usage of the elements of the spatial and temporal schema,
+</div>
+<div class="footnote" id="_footnotedef_5">
+<a href="#_footnoteref_5">5</a>. The Data Specification Drafting Team has been composed of experts from Austria, Belgium, Czech Republic, France, Germany, Greece, Italy, Netherlands, Norway, Poland, Switzerland, UK, and the European Environment Agency
+</div>
+<div class="footnote" id="_footnotedef_6">
+<a href="#_footnoteref_6">6</a>. The Thematic Working Groups of Annex II and III themes have been composed of experts from Austria, Belgium, Bulgaria, Czech Republic, Denmark, Finland, France, Germany, Hungary, Ireland, Italy, Latvia, Netherlands, Norway, Poland, Romania, Slovakia, Spain, Sweden, Switzerland, Turkey, UK, the European Commission, and the European Environment Agency
+</div>
+<div class="footnote" id="_footnotedef_7">
+<a href="#_footnoteref_7">7</a>. For Annex IIIII, the consultation and testing phase lasted from 20 June to 21 October 2011.
+</div>
+<div class="footnote" id="_footnotedef_8">
+<a href="#_footnoteref_8">8</a>. Commission Regulation (EU) No 1089/2010 <a href="http://eur-lex.europa.eu/JOHtml.do?uri=OJ:L:2010:323:SOM:EN:HTML">implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services,</a> published in the Official Journal of the European Union on 8<sup>th</sup> of December 2010.
+</div>
+<div class="footnote" id="_footnotedef_9">
+<a href="#_footnoteref_9">9</a>. The framework documents are available in the "Framework documents" section of the data specifications web page at <a href="http://inspire.jrc.ec.europa.eu/index.cfm/pageid/2" class="bare">http://inspire.jrc.ec.europa.eu/index.cfm/pageid/2</a>
+</div>
+<div class="footnote" id="_footnotedef_10">
+<a href="#_footnoteref_10">10</a>. UML – Unified Modelling Language
+</div>
+<div class="footnote" id="_footnotedef_11">
+<a href="#_footnoteref_11">11</a>. Conceptual models related to specific areas (e.g. INSPIRE themes)
+</div>
+<div class="footnote" id="_footnotedef_12">
+<a href="#_footnoteref_12">12</a>. In the case of the Annex IIIII data specifications, the extracted requirements are used to formulate an amendment to the existing Implementing Rule.
+</div>
+<div class="footnote" id="_footnotedef_13">
+<a href="#_footnoteref_13">13</a>. The INSPIRE Glossary is available from <a href="http://inspire-registry.jrc.ec.europa.eu/registers/GLOSSARY" class="bare">http://inspire-registry.jrc.ec.europa.eu/registers/GLOSSARY</a>
+</div>
+</div>
+</body>
+</html>
