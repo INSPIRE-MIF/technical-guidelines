@@ -26,6 +26,7 @@ Currently, the following TGs have been converted:
   * [Land Use](data/lu)
   * [Protected Sites](data/ps)
   * [Soil](data/so)
+  * [Utility and Government Services](data/us)
 
 ## Governance and release process
 
