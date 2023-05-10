@@ -7,6 +7,7 @@ This folder contains the data specifications for the following data themes:
 * [Environmental Monitoring Facilities](ef)
 * [Geographical Grid Systems](gg)
 * [Hydrography](hy)
+* [Land Cover](lc)
 * [Land Use](lu)
 * [Protected Sites](ps)
 * [Soil](so)
