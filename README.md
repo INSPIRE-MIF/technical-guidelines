@@ -18,6 +18,7 @@ Currently, the following TGs have been converted:
   * [Download Services](services/download-atom-wfs)
   * [View Services](services/view-wms)
 * Data
+  * [Administrative Units](data/au)
   * [Coordinate reference systems](data/rs)
   * [Elevation](data/el)
   * [Environmental Monitoring Facilities](data/ef)

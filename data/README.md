@@ -2,6 +2,7 @@
 
 This folder contains the data specifications for the following data themes:
 
+* [Administrative Units](au)
 * [Coordinate reference systems](rs)
 * [Elevation](el)
 * [Environmental Monitoring Facilities](ef)
