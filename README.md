@@ -29,6 +29,7 @@ Currently, the following TGs have been converted:
   * [Protected Sites](data/ps)
   * [Soil](data/so)
   * [Species Distribution](data/sd)
+  * [Statistical Units](data/su)
   * [Utility and Government Services](data/us)
 
 ## Governance and release process

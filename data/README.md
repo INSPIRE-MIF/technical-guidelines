@@ -13,5 +13,6 @@ This folder contains the data specifications for the following data themes:
 * [Protected Sites](ps)
 * [Soil](so)
 * [Species Distribution](sd)
+* [Statistical Units](su)
 * [Utility and Government Services](us)
 
