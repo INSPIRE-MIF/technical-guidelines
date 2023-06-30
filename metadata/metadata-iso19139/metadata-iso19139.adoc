@@ -5,6 +5,7 @@
 :toc-title:
 :toclevels: 4
 :sectnumlevels: 4
+:source-highlighter: rouge 
 
 // Line Break Doc Title
 :hardbreaks-option:
@@ -510,9 +511,9 @@ NOTE [Regulation 1089/2010] is informally also known as "Implementing Rules for 
 
 [TG DiscoveryS] Technical Guidance for INSPIRE Discovery Services, version 3.1, http://inspire.jrc.ec.europa.eu/documents/Network_Services/TechnicalGuidance_DiscoveryServices_v3.1.pdf
 
-[TG ViewS] Technical Guidance for the implementation of INSPIRE View Services, version 3.11, http://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_ViewServices_v3.11.pdf
+[TG ViewS] Technical Guidance for the implementation of INSPIRE View Services, https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1
 
-[TG DownloadS] Technical Guidance for the implementation of INSPIRE Download Services, version 3.1, http://inspire.ec.europa.eu/documents/Network_Services/Technical_Guidance_Download_Services_v3.1.pdf
+[TG DownloadS] Technical Guidance for the implementation of INSPIRE Download Services https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services
 
 [TG DS] Technical Guidelines – INSPIRE data specifications, http://inspire.ec.europa.eu/index.cfm/pageid/2
 
@@ -3822,10 +3823,19 @@ Links pointing to the online metadata descriptions of data sets provided by the 
 
 The multiplicity of this element is 0..n.
 
-This property shall be implemented by reference. The _xlink:href_ attribute of each of the _srv:operatesOn_ elements shall contain a URI pointing to the _gmd:MD_DataIdentification_ element of the metadata record of the provided the data set or data set series.
+This property shall be implemented by reference. The _xlink:href_ attribute of each of the _srv:operatesOn_ elements shall contain a URI pointing to the metadata record of the provided data set or data set series.
 ====
 
 “Implementation by reference” means that the xlink:href attribute is pointing to an XML document that contains a _gmd:MD_DataIdentification_ object.
+
+[TIP]
+====
+*TG Recommendation 3.6: metadata/2.0/rec/sds/coupled-resource*
+
+In order to be fully compliant with https://www.iso.org/standard/59221.html?browse=tc[ISO 19119:2016], the URI contained in the `xlink:href` attribute of each of the `<srv:operatesOn>` elements should specifically point to the `<gmd:MD_DataIdentification>` element of the metadata record of the provided data set or data set series.
+====
+
+NOTE: The different practices in the implementation of the Coupled Resource element in existing metadata is acknowledged. Despite https://www.iso.org/standard/59221.html?browse=tc[ISO 19119:2016] requiring that the target of the `<srv:operatesOn>` elements (Coupled Resource) is the `#MD_DataIdentification` class of the linked dataset metadata, this technical guidelines allows a more simple approach for the service-data set linking by allowing, in the `xlink:href` attribute of each of the `<srv:operatesOn>` elements, the use of URI values either with or without the `#MD_DataIdentification` pointer.
 
 The reference to the _gmd:MD_DataIdentification_ element can be implemented e.g. in the following ways:
 
@@ -3838,10 +3848,28 @@ NOTE The INSPIRE metadata element 1.6 _Coupled resource_ is not mapped to the _s
 ----
 **/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn:**
 
+<srv:operatesOn xlink:href="http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;ID=f9ee6623-cf4c-11e1-9105-0017085a97ab&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;ELEMENTSETNAME=full">
+</srv:operatesOn>
+----
+*Example* *4.4a:* Coupled resource link given using the srv:operatesOn element with URL pointing to the metadata record of the provided data set or data set series without any fragment identifier specifically pointing to the <gmd:MD_DataIdentification>
+
+[source,xml,subs="+quotes"]
+----
+**/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn:**
+
 <srv:operatesOn xlink:href="http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;ID=f9ee6623-cf4c-11e1-9105-0017085a97ab&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;ELEMENTSETNAME=full#md-so-1002001">
 </srv:operatesOn>
 ----
-*Example* *4.4:* Coupled resource link given using the srv:operatesOn element with URL containing a fragment identifier pointing to the gmd:MD_DataIdentification element with the corresponding id attribute value "md-so-1002001".
+*Example* *4.4b:* Coupled resource link given using the srv:operatesOn element with URL containing a fragment identifier pointing to the gmd:MD_DataIdentification element with the corresponding id attribute value "md-so-1002001".
+
+[source,xml,subs="+quotes"]
+----
+**/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn:**
+
+<srv:operatesOn xlink:href="https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/ger/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;ID=9db8a0c3-e92a-4df4-9d55-8210e326a7ed&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;ELEMENTSETNAME=full"> </srv:operatesOn>
+</srv:operatesOn>
+----
+*Example* *4.5a:* Coupled resource link given using the `srv:operatesOn` element with URL containing a CSW GetRecords request including a query for the resource identifier. See the response https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/ger/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetRecordById&ID=9db8a0c3-e92a-4df4-9d55-8210e326a7ed&OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&ELEMENTSETNAME=full[here].
 
 [source,xml,subs="+quotes"]
 ----
@@ -3850,7 +3878,7 @@ NOTE The INSPIRE metadata element 1.6 _Coupled resource_ is not mapped to the _s
 <srv:operatesOn xlink:href=" http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;STARTPOSITION=1&amp;MAXRECORDS=10&amp;REQUEST=GetRecords&amp;RESULTTYPE=results&amp;OUTPUTFORMAT=application/xml&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;TYPENAMES=gmd:MD_Metadata&amp;ELEMENTSETNAME=brief&amp;CONSTRAINT_LANGUAGE_VERSION=1.1.0&amp;CONSTRAINTLANGUAGE=CQL_TEXT&amp;NAMESPACE=xmlns%28ogc=http://www.opengis.net/ogc%29,xmlns%28gml=http://www.opengis.net/gml%29,xmlns%28apiso=http://www.opengis.net/cat/csw/apiso/1.0%29,xmlns%28csw=http://www.opengis.net/cat/csw/2.0.2%29&amp;constraint=apiso:identifier%20Like%20%27%26\{Identifier of the resource}%26%27&amp;#MD_DataIdentification">
 </srv:operatesOn>
 ----
-*Example* *4.5:* Coupled resource link given using the srv:operatesOn element with URL containing a CSW GetRecords request including a query for the resource identifier (shown as \{Identifier of the resource}).
+*Example* *4.5b:* Coupled resource link given using the srv:operatesOn element with URL containing a CSW GetRecords request including a query for the resource identifier (shown as \{Identifier of the resource}).
 
 [source,xml,subs="+quotes"]
 ----
@@ -3859,8 +3887,18 @@ NOTE The INSPIRE metadata element 1.6 _Coupled resource_ is not mapped to the _s
 <srv:operateson xlink:href="https://registry.gdi-de.org/id/de.nw/inspire-cp-alkis">
 </srv:operateson>
 ----
-*Example* *4.6:* Coupled resource link given using the Unique resource identifier URL of the referred data set as the value of the xlink:href attribute of srv:operatesOn element. The given URL automatically redirects to another URLfootnote:[http://gdk.gdi-de.org/gdi-de/srv/eng/csw?REQUEST=GetRecords&SERVICE=CSW&VERSION=2.0.2&OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&constraintLanguage=CQL_TEXT&constraint=ResourceIdentifier+like+%27https://registry.gdi-de.org/id/de.nw/inspire-cp-alkis%27&constraint_language_version=1.1.0&typenames=csw:Record&resulttype=results&elementsetname=full#xpointer%28//gmd:identificationInfo[1]/gmd:MD_DataIdentification%29[http://gdk.gdi-de.org/gdi-de/srv/eng/csw?REQUEST=GetRecords&SERVICE=CSW&VERSION=2.0.2&OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&constraintLanguage=CQL_TEXT&constraint=ResourceIdentifier+like+%27https://registry.gdi-de.org/id/de.nw/inspire-cp-alkis%27&constraint_language_version=1.1.0& +
-typenames=csw:Record&resulttype=results&elementsetname=full#xpointer%28//gmd:identificationInfo[1]/gmd:MD_DataIdentification%29]] returning the gmd:MD_DataIdentification element
+*Example* *4.6:* Coupled resource link given using the Unique resource identifier URL of the referred data set as the value of the `xlink:href` attribute of `srv:operatesOn` element. The given URL automatically redirects to  link:++https://gdk.gdi-de.org/gdi-de/srv/eng/csw?REQUEST=GetRecords&SERVICE=CSW&VERSION=2.0.2&OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&constraintLanguage=CQL_TEXT&constraint=ResourceIdentifier=%27https://registry.gdi-de.org/id/de.nw/inspire-cp-alkis%27&constraint_language_version=1.1.0&typenames=csw:Record&resulttype=results&elementsetname=full#xpointer(//gmd:identificationInfo[1]/gmd:MD_DataIdentification)++[this URL], pointing to the `gmd:MD_DataIdentification` element
+
+[TIP]
+====
+*TG Recommendation 3.7: /rec/coupled-resource-operateson-match-metadataurl*
+
+The URI contained in the `xlink:href` attribute of each of the `<srv:operatesOn>` elements in the metadata record should match the value of the Coupled Resource in the metadata exposed by the service itself.
+====
+
+The Coupled Resource is `<wms:MetadataURL>` in the case of a WMS and `<wfs:MetadataURL>` in the case of a WFS. See the [TG ViewS] and [TG DownloadS] for more information.
+
+In case of discrepancies, the references expressed with `srv:operatesOn` prevail over the other associations. This is relevant for tools that process the metadata, such as the INSPIRE Geoportal.
 
 ==== Distribution info section
 
