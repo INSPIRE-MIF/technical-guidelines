@@ -23,6 +23,8 @@
 
 :appendix-caption: Annex
 
+:source-highlighter: rouge
+
 // Document properties
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
@@ -424,7 +426,7 @@ Which, however breaks compatibility with existing clients. The disadvantages of 
 
 As a result for the discovery service capabilities document this approach would require reference to three different versions of GML in the same document.
 
-*It has therefore been decided to use a custom INSPIRE schema for the missing INSPIRE metadata elements in the Extended Capabilities section. This allows for an easy integration with all OGC services and full validation of INSPIRE compliance using standard XML validation.* Table 3 *shows the mapping between the INSPIRE metadata elements and the ISO 19128 Capabilities metadata elements.*
+*It has therefore been decided to use a custom INSPIRE schema for the missing INSPIRE metadata elements in the Extended Capabilities section. This allows for an easy integration with all OGC services and full validation of INSPIRE compliance using standard XML validation.* Table 3a *shows the mapping between the INSPIRE metadata elements and the ISO 19128 Capabilities metadata elements.*
 
 *Note: the schema will be aligned to the relevant standards once these support the INSPIRE requirements. Alignment between The OGC OWS Common Implementation specification and ISO 19119 should also help addressing some of the issues.*
 
@@ -537,61 +539,39 @@ image::./media/image5.png[UC1,width=604,height=855,align="center"]
 
 ====== View service metadata
 
-Two scenarios have been identified for publishing View Service metadata conforming to the Regulation on INSPIRE Network Services [*INS NS*] and on Metadata [*INS MD*]. It is up to the Member State to choose which scenario best fits its needs. As these scenarios are not mutually exclusive, a Member State may choose to implement both.
+Three scenarios have been identified for publishing View Service metadata conforming to the Regulation on INSPIRE Network Services [*INS NS*] and on Metadata [*INS MD*]. It is up to the Member State to choose which scenario best fits its needs. As these scenarios are not mutually exclusive, a Member State may choose to implement more than one.
 
-*Scenario 1: INSPIRE network service metadata in a Discovery Service is referenced through an extended capability.*
-
-This scenario involves adding a reference to an online INSPIRE metadata resource in the extended INSPIRE capabilities.
-
-[IMPORTANT]
-====
-*Implementation Requirement 6* The <inspire_common:MetadataURL> element within the extended INSPIRE capabilities of an [*ISO 19128*] – WMS 1.3.0 <wms:Capability> element shall be used to reference the INSPIRE service metadata available through an INSPIRE Discovery Service. Mandatory [*ISO 19128*] – WMS 1.3.0 metadata elements shall be mapped to INSPIRE metadata elements to implement a consistent interface.
-====
-
-
-*Scenario 2: Use (extended) capabilities to map all INSPIRE metadata elements to the [ISO 19128] – WMS1.3.0 elements.*
-
-This scenario involves mapping all INSPIRE metadata elements to [*ISO 19128*] – WMS 1.3.0 elements.
+1. Scenario 1: The View Service metadata elements are managed in an INSPIRE Discovery catalogue. The INSPIRE network service metadata record in a Discovery Service is referenced in the extended INSPIRE capabilities. 
+2. Scenario 2: The View Service metadata elements are fully mapped to [*ISO 19128*] – WMS 1.3.0 elements and elements in the INSPIRE extended capabilities.
+3. Scenario 3: The View Service metadata elements are fully mapped to [*ISO 19128*] – WMS 1.3.0 elements without the use of any extended capabilities.
 
 [IMPORTANT]
 ====
-*Implementation Requirement 7* INSPIRE metadata are mapped to WMS capabilities elements to its full extent. It is mandatory to use the mapping provided in this Technical Guideline (described in Section 4.2.3.3.1.1 to 4.2.3.3.1.16. INSPIRE metadata elements that cannot be mapped to available [*ISO 19128*] – WMS1.3.0 elements are implemented as Extended Capabilities.  Metadata are published through a service's capabilities document and can be harvested by an INSPIRE Discovery service.
+*Implementation Requirement 6* The INSPIRE View Service metadata elements shall be available in one or more of the following ways:
+
+1. The extended capabilities section of the View Service is in accordance with the schema at http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd and contains a link to the metadata record of the service in an INSPIRE Discovery catalogue in element `<inspire_common:MetadataURL>`;
+2. The capabilities section of the View Service contains the View Service metadata elements in accordance with Table 3a and the schema at http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd;
+3. The capabilities section of the View Service contains the View Service metadata elements in accordance with Table 3b.
 ====
 
+Sections 4.2.3.3.1.1 through 4.2.3.3.1.16 describe the mappings in Table 3a and Table 3b in more detail.
 
 [IMPORTANT]
 ====
-*Implementation Requirement* *8* Regardless of the scenario chosen to be implemented, a language section shall be added in the extended capability of the service to fulfil the language requirements of the Network Services Regulation [*INS NS*].
+*Implementation Requirement* *8* If more than one language is supported, a language section shall be added in the extended capabilities of the service to fulfil the language requirements of the Network Services Regulation [*INS NS*].
 ====
 
+This means that scenario 3 cannot be used if more than one language is supported.
 
-In scenario 1, INSPIRE View service metadata are managed in an INSPIRE Discovery catalogue and need to be partially mapped to [*ISO 19128*] – WMS 1.3.0 elements and extended capabilities.
-
-In scenario 2, INSPIRE service metadata are fully mapped to [*ISO 19128*] – WMS 1.3.0 elements and extended capabilities and are managed through service capabilities.
-
-A graphical illustration of the XML schema for the extended capabilities for both scenarios as required for the INSPIRE View Services is shown in Figure 5. Examples of extended capabilities response for both scenarios are provided in Annexes Annex C and Annex D.
+A graphical illustration of the XML schema for the extended capabilities for the first two scenarios as required for the INSPIRE View Services is shown in Figure 5. Examples of extended capabilities response for both scenarios are provided in Annexes Annex C and Annex D.
 
 image::./media/image6.png[width=600,height=866,align="center"]
 
 [.text-center] 
 *Figure 5*: Illustration of the Extended Capabilities for Scenario 1 and 2 for INSPIRE View Services
 
-[IMPORTANT]
-====
-*Implementation Requirement 9* Regardless of the scenario chosen to be implemented View Service Metadata shall be published in an INSPIRE Discovery Service. This is required to support a) the INSPIRE View Link service operation and b) discovery of View services by client applications such as the INSPIRE geoportal
-====
-
-
-[IMPORTANT]
-====
-*Implementation Requirement 10* An INSPIRE View service shall contain the INSPIRE metadata elements set out in the Metadata Regulation [*INS* *MD*] as shown in Table 3.
-====
-
-
-INSPIRE metadata are mapped to the <WMS_Capabilities> element of the GetCapabilities response as illustrated in Table 3. In Sections 4.2.3.3.1.1 through 4.2.3.3.1.16 the mandatory mappings for supporting these scenarios are described in detail.
-
 [.text-center] 
-*Table 3*: Mapping between INSPIRE metadata elements and [ISO 19128] WMS elements
+*Table 3a*: Mapping between INSPIRE metadata elements and [ISO 19128] WMS elements with the use of extended capabilities
 
 [width="100%",cols="36%,64%",options="header"]
 |===
@@ -613,7 +593,7 @@ INSPIRE metadata are mapped to the <WMS_Capabilities> element of the GetCapabili
 |Spatial Data Service Type (M) | inspire_common:SpatialDataServiceType +
 (ExtendedCapabilities)
 
-|Keyword (M) |wms:Keyword; inspire_common:Keyword
+|Keyword (M) |wms:Keyword and wms:Keyword/@vocabulary; inspire_common:Keyword
 |Geographic Bounding Box (M) |wms:EX_GeographicBoundingBox (Layer property)
 |Temporal Reference (M) |inspire_common:TemporalReference +
 (ExtendedCapabilities)
@@ -624,7 +604,8 @@ INSPIRE metadata are mapped to the <WMS_Capabilities> element of the GetCapabili
 
 |Conditions for Access and Use (M) |wms:Fees
 |Limitations on Public Access (M) |wms:AccessConstraints
-|Responsible Organisation (M) |wms:ContactInformation
+|Responsible Organisation (M) |wms:ContactInformation/wms:ContactPersonPrimary/wms:ContactOrganization and
+wms:ContactInformation/wms:ContactPosition
 |Metadata Point of Contact (M) |inspire_common:MetadataPointOfContact +
 (ExtendedCapabilities)
 
@@ -633,6 +614,63 @@ INSPIRE metadata are mapped to the <WMS_Capabilities> element of the GetCapabili
 
 |Metadata Language (M) |inspire_common:SupportedLanguages +
 (ExtendedCapabilities)
+|===
+
+[.text-center] 
+*Table 3b*: Mapping between INSPIRE metadata elements and [ISO 19128] WMS elements without the use of extended capabilities. The mapping of the INSPIRE metadata elements of the data set is available in the TG Metadata.
+
+[cols=",,",options="header",]
+|===
+|INSPIRE Metadata element |WMS 1.3 without ExtendedCapabilities
+|Fallback
+|Resource Title (M) |`wms:Title` |
+
+|Resource Abstract (M) |`wms:Abstract` |
+
+|Resource Type (M) |- |Is by default "service"
+
+|Resource Locator \(C) |- |Resource Locator of the data set
+
+|Coupled Resource \(C) |`wms:MetadataURL` (per layer) |
+
+|Spatial Data Service Type (M) |-
+|In a ISO/TS 19139:2007 metadata record dataset: `gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:applicationProfile`
+
+
+|Keyword (M) |`wms:Keyword` and `wms:Keyword/@vocabulary`|
+
+|Geographic Bounding Box (M) |- |Geographic Bounding Box of the data set
+
+|Temporal Reference (M) |`updateSequence` attribute |If in the optional
+`updateSequence` attribute a timestamp value is not present, the
+Temporal Reference is mapped to the Temporal Reference of the dataset
+metadata, in order of a date of type `publication`,`revision` `creation`.
+
+|Spatial Resolution \(C) |- |Spatial Resolution of the data set
+
+|Conformity (M) |`wms:KeywordList/wms:Keyword`; use a `wms:Keyword`
+element for each specification against which the service is *conformant*,
+included within an specific `wms:KeywordList` group. |
+
+|Conditions for Access and Use (M) |`wms:Fees` |
+
+|Limitations on Public Access (M) |`wms:AccessConstraints` |
+
+|Responsible Organisation (M) |`wms:ContactInformation/wms:ContactPersonPrimary/wms:ContactOrganization` and
+`wms:ContactInformation/wms:ContactPosition` |
+
+|Metadata Point of Contact (M)
+|`wms:ContactInformation/wms:ContactPersonPrimary/wms:ContactOrganization` and
+`wms:ContactInformation/wms:ContactElectronicMailAddress`
+|
+
+|Metadata Date (M) |`updateSequence` attribute |If in the optional
+`updateSequence` attribute a timestamp value is not present, the
+Metadata Date is mapped to the Temporal reference of the dataset
+metadata, in order of a date of type `publication`,`revision` `creation`.
+
+|Metadata Language (M) |- |Metadata Language of the data set
+|
 |===
 
 4.2.3.3.1.1 RESOURCE TITLE
@@ -686,7 +724,7 @@ This is the type of the resource being described by the metadata. The value doma
 
 [IMPORTANT]
 ====
-*Implementation Requirement 11* Within the scope defined by the INSPIRE directive the value of the Resource Type shall be fixed to 'service' for spatial data services. As the Resource Type is not supported by [*ISO 19128*] – WMS 1.3.0, an extension shall be used to map this to an <inspire_common:ResourceType> element within an <inspire_vs:ExtendedCapabilities> element.
+*Implementation Requirement 11* Within the scope defined by the INSPIRE directive, the value of the Resource Type shall be fixed to 'service' for spatial data services.
 ====
 
 4.2.3.3.1.4 RESOURCE LOCATOR
@@ -698,26 +736,13 @@ The Resource Locator defines the link, commonly expressed as a Uniform Resource 
 * A link to a web page with further instructions;
 * A link to a client application that directly accesses the service.
 
-The <wms:OnlineResource> element within the <wms:Service> element would be the preferred choice for mapping the Resource Locator metadata element. But, for consistency with the INSPIRE Discovery service metadata in the capabilities document it has been decided that:
-
-[IMPORTANT]
-====
-*Implementation Requirement 12* An extension shall be used to map Resource Locator to an <inspire_common:ResourceLocator> element within an <inspire_vs:ExtendedCapabilities> element.
-====
-
 4.2.3.3.1.5 COUPLED RESOURCE
 
 The Coupled Resource identifies, where relevant, the target spatial data sets of the service through their unique resource identifiers.
 
 [IMPORTANT]
 ====
-*Implementation Requirement 13* Coupled Resource shall be mapped to the <MetadataURL> elements of the Layer elements of the service capabilities. If linkage to the data sets or series on which the service operates are available, then the linkage to these resources shall be provided as stated by the INSPIRE Metadata Technical Guidance [*INS MDTG*].
-====
-
-
-[IMPORTANT]
-====
-*Implementation Requirement 14* Each of the <MetadataURL> elements shall be populated with a URL that allows access to an unambiguous metadata record. The URL shall be either an HTTP/GET call on the GetRecordById operation of the Discovery Service or a direct link to the ISO 19139 metadata document.
+*Implementation Requirement 14* The value of the Coupled Resource shall be a URL that allows access to an unambiguous metadata record. The URL shall be either an HTTP/GET call on the GetRecordById operation of the Discovery Service or a direct link to the ISO 19139 metadata document.
 ====
 
 _Example:_
@@ -778,7 +803,7 @@ Given that [*ISO 19128*] – WMS 1.3.0 has been identified as one of the relevan
 
 [IMPORTANT]
 ====
-*Implementation Requirement 15* For the Spatial Data Service Type as defined by the INSPIRE Metadata Regulation [*INS MD*] ('view') an extension shall be used to map this to an <inspire_common:SpatialDataServiceType> element within an <inspire_vs:ExtendedCapabilities> element. For an INSPIRE View Service the Spatial Data Service Type shall have a fixed value "view" according to INSPIRE Metadata Regulation [INS MD Part 3].
+*Implementation Requirement 15* For an INSPIRE View Service, the Spatial Data Service Type shall have a fixed value "view" according to INSPIRE Metadata Regulation [INS MD Part 3].
 ====
 
 4.2.3.3.1.7 KEYWORD
@@ -787,17 +812,7 @@ Commonly used word(s), formalized word(s) or phrase(s) used to describe the reso
 
 [IMPORTANT]
 ====
-*Implementation Requirement 16* The INSPIRE Metadata Regulation [*INS MD*] mandates that in the case of spatial data services at least one keyword from the "Classification of Spatial data Services" (Part D.4 from *INS MD*] shall be provided.
-====
-
-[TIP]
-====
-*Implementation Recommendation 3* Additional keywords may be described as a free text or may originate from any Controlled Vocabulary. If they originate from a Controlled Vocabulary, for example GEMET, then the citation of the originating Controlled Vocabulary shall be provided in the extended capabilities.
-====
-
-[IMPORTANT]
-====
-*Implementation Requirement 17* If additional keywords are provided they shall be mapped with the <wms:KeywordList> element, the individual keywords shall be mapped to the <wms:Keyword> element, the referenced vocabulary shall be mapped to the 'vocabulary' attribute of the <wms:Keyword> element.
+*Implementation Requirement 16* The INSPIRE Metadata Regulation [*INS MD*] mandates that in the case of spatial data services at least one keyword from the https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory[Classification of spatial data services] shall be provided.
 ====
 
 [.text-center]
@@ -812,7 +827,7 @@ Commonly used word(s), formalized word(s) or phrase(s) used to describe the reso
     <wms:Abstract>Service for making available INSPIRE spatial data themes</wms:Abstract>
     <wms:KeywordList>
       <!-- vocabulary in WMS 1.3.0 only -->
-      <wms:Keyword vocabulary="ISO">infoMapAccessService</wms:Keyword>
+      <Keyword vocabulary="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory">https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/infoMapAccessService</Keyword>
       <wms:Keyword vocabulary="GEMET">keyword</wms:Keyword>
       <wms:Keyword>keyword</wms:Keyword>
       ...
@@ -822,21 +837,9 @@ Commonly used word(s), formalized word(s) or phrase(s) used to describe the reso
 </wms:WMS_Capabilities>
 ----
 
-Typing keywords according to the Metadata Technical Guidance and [*ISO 19115*] allow for the detailed description of the thesaurus a keyword belongs to. To provide this functionality and to keep a similar interface as for the Discovery Service, this approach for describing keywords is provided as an extended capability.
-
-[IMPORTANT]
-====
-*Implementation Requirement 18* The keywords shall be mapped to the capabilities extension <inspire_common:Keyword> and <inspire_common:MandatoryKeyword> within an <inspire_vs:ExtendedCapabilities> element.
-====
-
 4.2.3.3.1.8 GEOGRAPHIC BOUNDING BOX
 
-[IMPORTANT]
-====
-*Implementation Requirement 19* Geographic Bounding Box shall be mapped to the EX_GeographicBoundingBox element of Layer elements.
-====
-
-Note that this metadata element is different to the Layer Metadata Geographic Bounding Box element which is mapped to the <wms:BoundingBox> element (see Section 4.2.3.3.4.4)
+Note that the Geographic Bounding Box, mapped to EX_GeographicBoundingBox, is different to the Layer Metadata Geographic Bounding Box element which is mapped to the <wms:BoundingBox> element (see Section 4.2.3.3.4.4)
 
 [.text-center]
 *Example 5*: Geographic bounding box
@@ -876,15 +879,10 @@ The creation, publishing or revision date of the INSPIRE View Service.
 
 [IMPORTANT]
 ====
-*Implementation Requirement 20* To be compliant with the INSPIRE Metadata Regulation [*INS MD*] and with [*ISO 19115*] one of following dates shall be used: date of publication, date of last revision, or the date of creation. Date of last revision is preferred. The date shall be expressed in conformity with the [*INS MD*]
+*Implementation Requirement 20* To be compliant with the INSPIRE Metadata Regulation [*INS MD*] and with [*ISO 19115*] one of following dates shall be used: date of publication, date of last revision, or the date of creation. Date of last revision is preferred. The date shall be expressed in conformity with the [*INS MD*], meaning it shall be expressed in conformity with ISO 8601.
 ====
 
 INSPIRE also allows the use of a Temporal Extent as Temporal Reference, which is not supported by [*ISO 19115*].
-
-[IMPORTANT]
-====
-*Implementation Requirement 21* As the Temporal Reference is not directly supported by [*ISO 19128*] – WMS 1.3.0 an extension shall be used to map this to an <inspire_common:TemporalReference> element within an <inspire_vs:ExtendedCapabilities> element.
-====
 
 4.2.3.3.1.10 SPATIAL RESOLUTION
 
@@ -900,22 +898,10 @@ Nevertheless is it possible to describe the Spatial Resolution of an individual 
 
 4.2.3.3.1.11 CONFORMITY
 
-[IMPORTANT]
-====
-*Implementation Requirement 22* The INSPIRE Metadata Regulation [*INS MD*] requires that metadata shall include information on the degree of conformity with the implementing rules provided in Art. 7.1 (Interoperability of spatial data sets and services) of the INSPIRE Directive [*Directive 2007/2/EC*].
-====
-
 The INSPIRE Metadata Regulation [*INS MD*, Part D 5] defines three degrees of conformity which shall be reported in the capabilities:
 
 * "conformant" or "not conformant" : When the conformity to the cited Specification has been evaluated, it shall be reported as a domain consistency element. In that case, if the evaluation has passed, the degree is confomant, otherwise it is not conformant.
 * "not evaluated": When the conformity to the cited Specification has not been evaluated it shall it shall be reported as a domain consistency element with a value of "not evaluated". Note that in the INSPIRE Metadata Technical Guidance [*INS MDTG]*, the absence of [*ISO 19115*] metadata related to the conformity to an INSPIRE specification implies that the conformity has not been evaluated.
-
-There is no element available in [*ISO 19128*] – WMS 1.3.0 that allows the description of the degree of conformity with a specific specification.
-
-[IMPORTANT]
-====
-*Implementation Requirement 23* An extension shall be used to map this to an <inspire_common:Conformity> element within an <inspire_vs:ExtendedCapabilities> element.
-====
 
 4.2.3.3.1.12 CONDITIONS FOR ACCESS AND USE
 
@@ -923,7 +909,7 @@ Defines the conditions for access and use of spatial data sets and services, and
 
 [IMPORTANT]
 ====
-*Implementation Requirement 24* This metadata element shall be mapped to the <wms:Fees>  element of the capabilities. If no conditions apply to the access and use of the resource, "no conditions apply" shall be used. If conditions are unknown "conditions unknown" shall be used.
+*Implementation Requirement 24* If no conditions apply to the access and use of the resource, the value "no conditions apply" shall be used for the conditions for access and use. If conditions are unknown "conditions unknown" shall be used.
 ====
 
 [.text-center]
@@ -1000,7 +986,7 @@ No precise syntax has been defined for the text content of these elements in [*I
 
 4.2.3.3.1.14 RESPONSIBLE ORGANISATION
 
-Description of the organisation responsible for the establishment, management, maintenance and distribution of the resource. It shall be mapped to the <wms:ContactInformation> element where the most relevant properties are:
+Description of the organisation responsible for the establishment, management, maintenance and distribution of the resource. It is mapped to the <wms:ContactInformation> element where the most relevant properties are:
 
 * Organisation
 * Role
@@ -1011,12 +997,7 @@ Personal email addresses are not recommended.
 
 [IMPORTANT]
 ====
-*Implementation Requirement 25* Responsible Party as described in the INSPIRE Metadata Regulation [*INS MD*] shall be mapped to the <wms:ContactOrganization> element of the <wms:ContactPersonPrimary> within the <wms:ContactInformation> element.
-====
-
-[IMPORTANT]
-====
-*Implementation Requirement 26* The value domain of the Responsible Party role shall comply with the INSPIRE Metadata Regulation [*INS MD,* Part D6]. The Responsible Party Role shall be mapped to the <wms:ContactPosition> of the <wms:ContactInformation> element.
+*Implementation Requirement 26* The value domain of the Responsible Party role shall be one of the values of code list https://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole[Responsible party role].
 ====
 
 [.text-center]
@@ -1068,13 +1049,7 @@ The Metadata Point Of Contact describes the organisation responsible for the cre
 
 [IMPORTANT]
 ====
-*Implementation Requirement 27* INSPIRE is more demanding than [*ISO 19115*] by mandating both the name of the organisation, and a contact e-mail address. The role of the responsible party serving as a metadata point of contact is out of scope of the Metadata Regulation [INS MD], but this property is mandated by [*ISO 19115*]. Its value shall be defaulted to "pointOfContact".
-====
-
-
-[IMPORTANT]
-====
-*Implementation Requirement 28* Since only one <wms:ContactInformation> element is allowed in [*ISO 19128*] – WMS 1.3.0 (to which Responsible Organisation is mapped), an extension shall be used to map this to an <inspire_common:MetadataPointOfContact> element within an <inspire_vs:ExtendedCapabilities> element.
+*Implementation Requirement 27* The role of the metadata point of contact shall be "pointOfContact".
 ====
 
 4.2.3.3.1.16 METADATA DATE
@@ -1083,7 +1058,7 @@ The date when the INSPIRE View Service metadata was created or updated. [*ISO 19
 
 [IMPORTANT]
 ====
-*Implementation Requirement 29* As the Metadata Date is not supported by [*ISO 19128*] – WMS 1.3.0, an extension shall be used to map this to an <inspire_common:MetadataDate> element within an <inspire_vs:ExtendedCapabilities> element. The date shall be expressed in conformity with the [INS MD].
+*Implementation Requirement 29* The date shall be expressed in conformity with the [INS MD], meaning it shall be expressed in conformity with ISO 8601.
 ====
 
 ====== Operations Metadata
@@ -1203,11 +1178,11 @@ The mechanism for publishing a view service's service metadata and discovering a
 
 ====== Languages
 
-Refer to METADATA LANGUAGE element in Table 3.
+Refer to METADATA LANGUAGE element in Table 3a.
 
 ====== Layers Metadata
 
-The metadata elements listed in Table 3 of the INSPIRE Network Services regulation [*INS NS*, Annex III] shall be provided for each layer (see Table 4 below). The layers metadata are mapped with the <wms:Layer> element.
+The metadata elements listed in Table 3a of the INSPIRE Network Services regulation [*INS NS*, Annex III] shall be provided for each layer (see Table 4 below). The layers metadata are mapped with the <wms:Layer> element.
 
 [.text-center]
 *Example 11*: Layers Metadata
