@@ -818,9 +818,13 @@ This document is a technical specification for implementing the legal requiremen
 
 In addition to the structural requirements formalized through required XML elements in the Technical Guidelines Requirements of this specification, the conformance to INSPIRE is a matter of semantics of the information provided. The minimum requirements expressed in the Implementing Rules also have to be met semantically, i.e. with metadata contents strictly satisfying the INSPIRE requirements.
 
-The INSPIRE Maintenance and Implementation Group (MIG) strongly recommends the EU Member States follow the technical requirements given in this specification for providing the metadata describing the INSPIRE spatial data sets and Spatial Data Services. Harmonisation beyond the abstract level of requirements contained in the INSPIRE Regulations is necessary for reaching the goals of data set and service interoperability and information reuse set for the Infrastructure of Spatial Information in Europe.
+Harmonisation beyond the abstract level of requirements contained in the INSPIRE Regulations is necessary for reaching the goals of data set and service interoperability and information reuse set for the Infrastructure of Spatial Information in Europe.
 
-This specification consists of 7 Conformance Classes (see also *Figure 4*):
+The INSPIRE Maintenance and Implementation Group (MIG) therefore strongly recommends the EU Member States follow the technical requirements given in this specification for providing the metadata describing the INSPIRE spatial data sets. 
+
+As for the INSPIRE spatial data services, metadata can be provided using the technical requirements given in this specification, in [TG DownloadS] or in [TG ViewS].
+
+This specification consists of 7 Conformance Classes (see also *Figure 4*), all having as conformance subject a metadata record encoded in ISO 19139 based XML format:
 
 * Conformance Class 1: INSPIRE data sets and data set series baseline metadata (section 3.1),
 ** {blank}
