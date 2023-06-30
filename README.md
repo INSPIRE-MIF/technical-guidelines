@@ -26,6 +26,7 @@ Currently, the following TGs have been converted:
   * [Hydrography](data/hy)
   * [Land Cover](data/lc)
   * [Land Use](data/lu)
+  * [Orthoimagery](data/oi)
   * [Protected Sites](data/ps)
   * [Soil](data/so)
   * [Species Distribution](data/sd)
