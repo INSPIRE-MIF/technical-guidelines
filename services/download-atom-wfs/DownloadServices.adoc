@@ -854,6 +854,7 @@ ISO 19143: Query, Ad hoc Query, Resource Identification, Minimum Standard Filter
 
 *Table 12: Search Capabilities - WFS Implementation*
 
+[#mapping-spatial-data-set-identifier]
 ==== Mapping of Spatial Data Set Identifier parameter
 
 The Spatial Data Set Identifier parameter is defined in the Network Service regulation [*INS NS*] as _"The Spatial Data Set Identifier parameter shall contain the Unique Resource Identifier of the Data Set"_
@@ -1440,21 +1441,27 @@ As per TG Requirement 1 an entry shall be included for each pre-defined dataset.
 
 ==== Download Service Feed: entry INSPIRE identifier elements
 
-Each entry in the download service feed shall contain the INSPIRE Spatial Dataset Unique Resource Identifier for the dataset described by that entry. This is the Spatial Dataset Unique Resource Identifier as described in the INSPIRE Metadata Regulation [*INS MD*]. This shall be provided in two parts, the code (_inspire_dls:spatial_dataset_identifier_code_) and namespace (_inspire_dls:dsid_namspace_). The _inspire_dls_ namespace is defined as in the feed as follows:
+Each entry in the download service feed shall contain the INSPIRE Spatial Dataset Unique Resource Identifier for the dataset described by that entry. This is the Spatial Dataset Unique Resource Identifier as described in the INSPIRE Metadata Regulation [*INS MD*]. This can be provided either in one part, the code only (_inspire_dls:spatial_dataset_identifier_code_), or in two parts, the code and namespace (_inspire_dls:dsid_namspace_), see also <<mapping-spatial-data-set-identifier>>. The _inspire_dls_ namespace is defined in the feed as follows:
 
 *_Example 13: Namespace declaration for inspire_dls_*
 [source, xml]
 xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0"
 
-*_Example 14: Example Spatial Dataset URI_*
+*_Example 14a: Example Spatial Dataset URI with spatial_dataset_identifier_namespace_*
 [source, xml]
-<!—Spatial Dataset Unique Resourse Identifier for this dataset-->
-<inspire_dls:spatial_dataset_identifier_code>wn_id1</inspire_dls:spatial_dataset_identifier_code>                                  <inspire_dls:spatial_dataset_identifier_namespace>http://xyz.org/data</inspire_dls:spatial_dataset_identifier_namespace>
+<!--Spatial Dataset Unique Resource Identifier for this data set-->
+<inspire_dls:spatial_dataset_identifier_code>wn_id1</inspire_dls:spatial_dataset_identifier_code>
+<inspire_dls:spatial_dataset_identifier_namespace>http://xyz.org/data</inspire_dls:spatial_dataset_identifier_namespace>
+
+*_Example 14b: Example Spatial Dataset URI without spatial_dataset_identifier_namespace_*
+[source, xml]
+<!--Spatial Dataset Unique Resource Identifier for this data set-->
+<inspire_dls:spatial_dataset_identifier_code>http://xyz.org/data/wn_id1</inspire_dls:spatial_dataset_identifier_code>
 
 [IMPORTANT]
 ====
 *TG Requirement 13*
-Each feed 'entry' in a "Download Service Feed" shall contain _spatial_dataset_identifier_code_ and _spatial_dataset_identifier_namespace_ elements which together contain the Spatial Dataset Unique Resource Identifier for the dataset described by the feed. These elements are defined in the _inspire_dls_ schema which shall be included in the namespace declarations of the feed.
+Each feed 'entry' in a "Download Service Feed" shall contain a _spatial_dataset_identifier_code_ element. Each feed 'entry' in a "Download Service Feed" shall also contain a _spatial_dataset_identifier_namespace_ element if the data set identifier has a namespace component. _spatial_dataset_identifier_code_ and _spatial_dataset_identifier_namespace_ are defined in the _inspire_dls_ schema, which shall be included in the namespace declarations of the feed.
 ====
 
 ==== Download Service Feed: entry 'link' to dataset metadata record
@@ -2106,19 +2113,23 @@ The OpenSearch description shall contain a 'Url' element that describes a templa
 
 A search template shall be supplied that provides the request mechanism for a Describe Spatial Data Set Operation.
 
-*_Example 38: Example Describe Spatial Data Set template_*
+*_Example 38a: Example Describe Spatial Data Set template with spatial_dataset_identifier_namespace_*
 [source, xml]
 <!--Describe Spatial Data Set Operation request URL template to be used in order to retrieve the description of Spatial Object Types in a Spatial Dataset-->
 <Url type="application/atom+xml" rel="describedby" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;language={language?}&amp;q={searchTerms?}"/>
 
+*_Example 38b: Example Describe Spatial Data Set template without spatial_dataset_identifier_namespace_*
+[source, xml]
+<!--Describe Spatial Data Set Operation request URL template to be used in order to retrieve the description of Spatial Object Types in a Spatial Dataset-->
+<Url type="application/atom+xml" rel="describedby" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;language={language?}&amp;q={searchTerms?}"/>
 
 [IMPORTANT]
 ====
 *TG Requirement 42*
-The OpenSearch description shall contain a 'Url' element that describes a template URL for the Describe Spatial Data Set operation. This template shall accept the INSPIRE parameters "spatial_dataset_identifier_code", "spatial_dataset_identifier_namespace" and the OpenSearch "language" parameter. The 'Url' element shall have an attribute 'type' with a value of "application/atom+xml", "application/xml" or "text/xml" and an attribute 'rel' with the value "describedby".
+The OpenSearch description shall contain a 'Url' element that describes a template URL for the Describe Spatial Data Set operation. This template shall accept the INSPIRE parameters "spatial_dataset_identifier_code" and the OpenSearch "language" parameter. This template shall also accept the INSPIRE parameter "spatial_dataset_identifier_namespace" if the dataset identifier has a namespace component. The 'Url' element shall have an attribute 'type' with a value of "application/atom+xml", "application/xml" or "text/xml" and an attribute 'rel' with the value "describedby".
 ====
 
-The Describe Spatial Data Set response shall be the description of the Spatial Objects in the requested Spatial Dataset and in the requested language. i.e. it shall be the relevant atom "Dataset Feed" corresponding to the specified spatial_dataset_identifier_code, spatial_dataset_identifier_namespace and language.
+The Describe Spatial Data Set response shall be the description of the Spatial Objects in the requested Spatial Dataset and in the requested language. i.e. it shall be the relevant atom "Dataset Feed" corresponding to the specified spatial_dataset_identifier_code, language and (<<mapping-spatial-data-set-identifier,optional>>) spatial_dataset_identifier_namespace.
 
 In a machine-to-machine interaction, if a client wants to issue a Describe Spatial Data Set request, it will read the Open Search document, extract the 'Url' element with the attributes rel="describedby" and type="application/xml". It will then replace the template arguments with the actual values for the Spatial Dataset Identifier code and namespace, and language.
 
@@ -2126,7 +2137,7 @@ In a machine-to-machine interaction, if a client wants to issue a Describe Spati
 
 _If a client is looking for the description of the Spatial Data Set identified by the code "mycode" and the namespace "mynamespace" in the English language, the following template:_
 
-http://xyz.org/search.php?spatial_dataset_identifier_code=%7binspire_dls:spatial_dataset_identifier_code?%7d&spatial_dataset_identifier_namespace=%7binspire_dls:spatial_dataset_identifier_namespace?%7d&language=%7blanguage?%7d&q=%7bsearchTerms?%7d[http://xyz.org/search.php?spatial_dataset_identifier_code=\{inspire_dls:spatial_dataset_identifier_code?}&spatial_dataset_identifier_namespace=\{inspire_dls:spatial_dataset_identifier_namespace?}&language=\{language?}&q=\{searchTerms?}]
+`http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&language={language?}&q={searchTerms?}`
 
 _will be used to form the actual URL as follows:_
 
@@ -2138,41 +2149,55 @@ _The response will be the appropriate data set atom feed._
 
 A search template shall be supplied that provides the request mechanism for a Get Spatial Data Set Operation.
 
-*_Example 40: Example Get Spatial Data Set template_*
+*_Example 40a: Example Get Spatial Data Set template with spatial_dataset_identifier_namespace_*
 [source, xml]
 <!--Get Spatial Data Set Operation request URL template to be used in order to retrieve a Spatial Data Set-->
 	<Url type="application/x-filegdb" rel="results" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;crs={inspire_dls:crs?}&amp;language={language?}&amp;q={searchTerms?}"/>
 
+*_Example 40b: Example Get Spatial Data Set template without spatial_dataset_identifier_namespace_*
+[source, xml]
+<!--Get Spatial Data Set Operation request URL template to be used in order to retrieve a Spatial Data Set-->
+	<Url type="application/x-filegdb" rel="results" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;crs={inspire_dls:crs?}&amp;language={language?}&amp;q={searchTerms?}"/>
+
 [IMPORTANT]
 ====
 *TG Requirement 43*
-The OpenSearch description shall contain a 'Url' element that describes a template URL for the Get Spatial Data Set operation. This template shall accept the INSPIRE parameters "crs", "spatial_dataset_identifier_code", "spatial_dataset_identifier_namespace" and the OpenSearch "language" parameter. The 'Url' element shall have an attribute 'type' with a value corresponding to the media type of the result and an attribute 'rel' with the value "results".
+The OpenSearch description shall contain a 'Url' element that describes a template URL for the Get Spatial Data Set operation. This template shall accept the INSPIRE parameters "crs", "spatial_dataset_identifier_code" and the OpenSearch "language" parameter. The template shall also accept the INSPIRE parameter "spatial_dataset_identifier_namespace" if the dataset identifier has a namespace component. The 'Url' element shall have an attribute 'type' with a value corresponding to the media type of the result and an attribute 'rel' with the value "results".
 ====
 
 When a dataset is not downloadable as a single file, but is a multipart dataset, then the OpenSearch result for the Get Spatial Dataset operation allows for multiple results to be returned.
 
 In order to avoid an HTTP multipart response, which is not supported by browsers and would require specific clients, the Get Spatial Dataset operation shall return an Atom feed containing the links to the files to be downloaded instead of the files themselves as in the following example.
 
-*_Example 41: OpenSearch URL template returning an Atom feed_*
+*_Example 41a: OpenSearch URL template returning an Atom feed with spatial_dataset_identifier_namespace_*
 [source, xml]
    <Url type=" application/atom+xml " rel="results" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;crs={inspire_dls:crs?}&amp;language={language?}&amp;q={searchTerms?}"/>
+   
+*_Example 41b: OpenSearch URL template returning an Atom feed without spatial_dataset_identifier_namespace_*
+[source, xml]
+   <Url type=" application/atom+xml " rel="results" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;crs={inspire_dls:crs?}&amp;language={language?}&amp;q={searchTerms?}"/>
 
 ==== OpenSearch Description: Spatial Dataset Identifiers
 
 Available Spatial Dataset Identifiers shall be indicated using the OpenSearch "example" query mechanism.
 
-*_Example 42: Example Get Spatial Data Set template_*
+*_Example 42a: Example Get Spatial Data Set template with spatial_dataset_identifier_namespace_*
 [source, xml]
 <!--List of available Spatial Dataset Identifiers -->
-	<Query role="example" inspire_dls:spatial_dataset_identifier_namespace="http://xyz.org/" inspire_dls:spatial_dataset_identifier_code="waternetwork" inspire_dls:crs="http://www.opengis.net/def/crs/EPSG/0/4326" language="en" title="Waternetwork_abc" count="1"/>
+<Query role="example" inspire_dls:spatial_dataset_identifier_namespace="http://xyz.org/" inspire_dls:spatial_dataset_identifier_code="waternetwork" inspire_dls:crs="http://www.opengis.net/def/crs/EPSG/0/4326" language="en" title="Waternetwork_abc" count="1"/>
+    
+*_Example 42b: Example Get Spatial Data Set template without spatial_dataset_identifier_namespace_*
+[source, xml]
+<!--List of available Spatial Dataset Identifiers -->
+<Query role="example" inspire_dls:spatial_dataset_identifier_code="waternetwork" inspire_dls:crs="http://www.opengis.net/def/crs/EPSG/0/4326" language="en" title="Waternetwork_abc" count="1"/>
 
 [IMPORTANT]
 ====
 *TG Requirement 44*
-For each dataset available the OpenSearch description shall contain a 'Query' element that has a 'role' attribute with the value "example" and 'spatial_dataset_identifier_code' and 'spatial_dataset_identifier_namespace' attributes together containing unique spatial dataset identifier. The value of the 'crs' and 'language' attributes shall be set to the values considered as the default ones by the service provider.
+For each dataset available the OpenSearch description shall contain a 'Query' element that has a 'role' attribute with the value "example" and that has an attribute 'spatial_dataset_identifier_code'. The 'Query' element shall also contain an attribute 'spatial_dataset_identifier_namespace' if the dataset identifier has a namespace component. TThe 'Query' element shall also have 'crs' and 'language' attributes, which are set to the values considered as the default ones by the service provider.
 ====
 
-The Get Spatial Data Set response shall be the file corresponding to the specified spatial_dataset_identifier_code, spatial_dataset_identifier_namespace, crs and language, as declared in the relevant atom "Dataset Feed".
+The Get Spatial Data Set response shall be the file corresponding to the specified spatial_dataset_identifier_code, crs, language, and (<<mapping-spatial-data-set-identifier,optional>>) spatial_dataset_identifier_namespace as declared in the relevant atom "Dataset Feed".
 
 ==== OpenSearch Description: Available Languages
 
@@ -2253,12 +2278,12 @@ ISO 19142 describes the operations ListStoredQueries and DescribeStoredQueries. 
 Pre-defined Stored Queries shall be provided to make pre-defined datasets available.
 ====
 
-Any implementation shall ensure that all possible (i.e. available) combinations of CRS/DataSetIdCode/ DataSetIdNamespace/language should be available through a pre-defined stored query.
+Any implementation shall ensure that all possible (i.e. available) combinations of CRS/DataSetIdCode/DataSetIdNamespace/language should be available through a pre-defined stored query. Whether DataSetIdNamespace is present depends on the way the Spatial Data Set Unique Resource Identifier is implemented, see also <<mapping-spatial-data-set-identifier>>.
 
 [IMPORTANT]
 ====
 *TG Requirement 50*
-Any possible (i.e. available) combinations of CRS/DataSetIdCode/ DataSetIdNamespace/language shall be made available through pre-defined stored queries.
+Any possible (i.e. available) combinations of CRS/DataSetIdCode/Language shall be made available through pre-defined stored queries if the dataset identifier does not have a namespace component. Any possible (i.e. available) combinations of CRS/DataSetIdCode/DataSetIdNamespace/Language shall be made available through pre-defined stored queries if the dataset identifier has a namespace component.
 ====
 
 Every instance of a WFS-based pre-defined dataset download service should define only one Stored Query for serving pre-defined Spatial Data Sets in order to make it easier for clients who already know the identifier of the Stored Query.
@@ -2274,18 +2299,18 @@ The parameter names for the arguments of the Stored Query shall be consistent as
 [IMPORTANT]
 ====
 *TG Requirement 51*
-Pre-defined Stored Queries shall use the parameter names "CRS", "DataSetIdCode", "DataSetIdNamespace" and "Language" to identify the CRS, dataset ID code, dataset ID namespace and language components of a query.
+Pre-defined Stored Queries shall use the parameter names "CRS", "DataSetIdCode", and "Language" to identify the CRS, data set identifier code and language components of a query. Pre-defined Stored Queries shall also use the parameter name "DataSetIdNamespace" for the namespace of the dataset identifier if the data set identifier has a namespace component.
 ====
 
 For example the following stored query takes arguments for the parameters DataSetIdCode (mycode), DatasetIdNamespace (mynamespace), CRS (EPSG:4326) and Language (English).
 
 *_Example 44: Custom stored query requesting a dataset by ID and CRS (informative only)_*
-[source,xml,subs="+quotes",align=center]
+[source,subs="+quotes",align=center]
 ----
-http://www.myinspirewfs.com/request=getFeature&storedquery_id= http://inspire.ec.europa.eu/operation/download/GetSpatialDataSet &DataSetIdCode=mycode&DataSetIdNamespace=mynamespace&CRS=EPSG:4326&Language=eng
+http://www.myinspirewfs.com/request=getFeature&storedquery_id=http://inspire.ec.europa.eu/operation/download/GetSpatialDataSet&DataSetIdCode=mycode&DataSetIdNamespace=mynamespace&CRS=EPSG:4326&Language=eng
 ----
 
-Beyond these four mandated parameter names this Technical Guidance does not place any requirements on other parameter names as they may be dataset specific.
+Beyond these mandated parameter names this Technical Guidance does not place any requirements on other parameter names as they may be dataset specific.
 
 === INSPIRE Datasets and WFS Features
 
