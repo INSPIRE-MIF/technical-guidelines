@@ -19654,7 +19654,7 @@ Observations always focus on some property of the feature of interest. It is eit
 
 [source, xml]
 <omop:ObservableProperty gml:id="op1">
-   <omop:basePhenomenon codeSpace="http://inspire.ec.europa.eu/codeList/GeophPropertyNameValue/magneticProperty">MAG_T</omop:basePhenomenon>
+   <omop:basePhenomenon codeSpace="http://inspire.ec.europa.eu/codelist/GeophPropertyNameValue/magneticProperty">MAG_T</omop:basePhenomenon>
    <omop:uom uom="nT"/>
   <omop:statisticalMeasure>
       <omop:StatisticalMeasure gml:id="sm1">
@@ -19689,17 +19689,17 @@ GeophResult
       resource
          linkage ”http://any.institution/getItem?id=asd-123.1.1.segy”
          description ”SEG-Y field data line-1.1”
-      resourceType "http://inspire.ec.europa.eu/codeList/ResourceTypeValue/seismicResource/SEG-Y "
+      resourceType "http://inspire.ec.europa.eu/codelist/ResourceTypeValue/seismicResource/SEG-Y "
    geophResource
       resource
          linkage ”http://any.institution/getItem?id=asd-123.1.2.segy”
          description ”SEG-Y field data line-1.2”
-      resourceType " http://inspire.ec.europa.eu/codeList/ResourceTypeValue/seismicResource/SEG-Y "
+      resourceType " http://inspire.ec.europa.eu/codelist/ResourceTypeValue/seismicResource/SEG-Y "
    geophResource
       resource
          linkage ”http://any.institution/getItem?id=asd-123.1.3.segy”
          description ”SEG-Y field data line-1.3”
-      resourceType " http://inspire.ec.europa.eu/codeList/ResourceTypeValue/seismicResource/SEG-Y "
+      resourceType " http://inspire.ec.europa.eu/codelist/ResourceTypeValue/seismicResource/SEG-Y "
 
 [discrete]
 ===== Dividing data sets
@@ -19803,12 +19803,12 @@ It seems to be reasonable not to use different encoding on the basis of the numb
    <gmlcov:rangeType>
       <swe:DataRecord>
          <swe:field name="observedGravity">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophPropertyNameValue/gravimetricProperty/observedGravity">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophPropertyNameValue/gravimetricProperty/observedGravity">
                <swe:uom code="microGal"/>
             </swe:Quantity>
          </swe:field>
          <swe:field name="errorOfClosure">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophPropertyNameValue/gravimetricProperty/errorOfClosure">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophPropertyNameValue/gravimetricProperty/errorOfClosure">
                <swe:uom code="microGal"/>
             </swe:Quantity>
          </swe:field>
@@ -19870,27 +19870,27 @@ stn-005 980000 980000 980000 0 0</gml:tupleList>
             </swe:Text>
          </swe:field>
          <swe:field name="observedGravity">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophPropertyNameValue/gravimetricProperty/observedGravity">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophPropertyNameValue/gravimetricProperty/observedGravity">
                <swe:uom code="microGal"/>
             </swe:Quantity>
          </swe:field>
          <swe:field name="gravityFreeAirAnomaly">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophPropertyNameValue/gravimetricProperty/gravityFreeAirAnomaly">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophPropertyNameValue/gravimetricProperty/gravityFreeAirAnomaly">
                <swe:uom code="microGal"/>
             </swe:Quantity>
          </swe:field>
          <swe:field name="gravityBouguerAirAnomaly">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophPropertyNameValue/gravimetricProperty/gravityBouguerAnomaly">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophPropertyNameValue/gravimetricProperty/gravityBouguerAnomaly">
                <swe:uom code="microGal"/>
             </swe:Quantity>
          </swe:field>
          <swe:field name="innerTopoCorrection">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophProcessParameterNameValue/gravityProcessParameter/topoCorrection/innerTopoCorrection">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophProcessParameterNameValue/gravityProcessParameter/topoCorrection/innerTopoCorrection">
                <swe:uom code="microGal"/>
             </swe:Quantity>
          </swe:field>
          <swe:field name="totalTopoCorrection">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophProcessParameterNameValue/gravityProcessParameter/topoCorrection/totalTopoCorrection">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophProcessParameterNameValue/gravityProcessParameter/topoCorrection/totalTopoCorrection">
                <swe:uom code="microGal"/>
             </swe:Quantity>
          </swe:field>
@@ -19938,12 +19938,12 @@ Layer model is a generic concept for representing a 1D structure. An efficient w
    <gmlcov:rangeType>
       <swe:DataRecord>
          <swe:field name="resistivity">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophPropertyNameValue/electromagneticProperty/resistivity">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophPropertyNameValue/electromagneticProperty/resistivity">
                <swe:uom code="ohmm"/>
             </swe:Quantity>
          </swe:field>
          <swe:field name="chargeability">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophPropertyNameValue/electromagneticProperty/chargeability">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophPropertyNameValue/electromagneticProperty/chargeability">
                <swe:uom code="ohmm"/>
             </swe:Quantity>
          </swe:field>
@@ -19994,7 +19994,7 @@ NOTE Referenceable grids can be used for nodes with uneven spacing or to project
    <gmlcov:rangeType>
       <swe:DataRecord id="drec-1">
          <swe:field name="resistivity">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophPropertyNameValue/electromagneticProperty/resistivity">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophPropertyNameValue/electromagneticProperty/resistivity">
                <swe:uom code="mV"/>
             </swe:Quantity>
          </swe:field>
@@ -20033,7 +20033,7 @@ The following example shows a Bouguer anomaly map encoded as RectifiedGridCovera
    <gmlcov:rangeType>
       <swe:DataRecord>
          <swe:field name=" gravityBouguerAnomaly ">
-            <swe:Quantity definition="http://inspire.ec.europa.eu/codeList/GeophPropertyNameValue/gravimetricProperty/gravityBouguerAnomaly">
+            <swe:Quantity definition="http://inspire.ec.europa.eu/codelist/GeophPropertyNameValue/gravimetricProperty/gravityBouguerAnomaly">
                <swe:uom code="ohmm"/>
             </swe:Quantity>
          </swe:field>

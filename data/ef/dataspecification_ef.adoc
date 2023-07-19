@@ -5132,7 +5132,7 @@ a|
 !Name: !measurement regime
 !Definition: !Categories for different types of the MeasurementRegime.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/MeasurementRegimeValue
 !Values: !
 !===
 
@@ -5190,7 +5190,7 @@ a|
 !Name: !media
 !Definition: !Categories for different types of media.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/MediaValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/MediaValue
 !Values: !
 !===
 
@@ -5268,7 +5268,7 @@ a|
 !Name: !process type
 !Definition: !Categories for different process types.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/ProcessTypeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ProcessTypeValue
 !Values: !
 !===
 
@@ -5308,7 +5308,7 @@ a|
 !Name: !result acquisition source
 !Definition: !Categories for different types of the ResultAcquisitionSource.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/ResultAcquisitionSourceValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ResultAcquisitionSourceValue
 !Values: !
 !===
 
@@ -5366,7 +5366,7 @@ a|
 !Name: !result nature
 !Definition: !State of the result of an observation.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/ResultNatureValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ResultNatureValue
 !Values: !
 !===
 

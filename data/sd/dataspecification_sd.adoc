@@ -1949,7 +1949,7 @@ XLS
 |===
 |*Code list* |*Identifiers* |*Examples*
 |Article17CountingUnitValue |Append the name in the Code column in the table 
-Population units to the base URI http://inspire.ec.europa.eu/codeList/ Article17CountingUnitValue/ |"i" 
+Population units to the base URI http://inspire.ec.europa.eu/codelist/ Article17CountingUnitValue/ |"i" 
 "stones"
 |PopulationTypeValue |Append the name in the TYPE heading of section '7) Other codelists (SDF fields 3.2, 3.3.)' 'TYPE: 
 p = permanent; r = reproducing; c = concentration; w = wintering; (for plant and non-migratory species use permanent)' 
@@ -2437,7 +2437,7 @@ http://bd.eionet.europa.eu/article17/reference_portal
 |===
 |*Code list* |*Identifiers* |*Examples*
 |Article17SourceMethodValue |Append the codes in the field '1.1.2 Method used-map' from page 4 of the Reporting Formats for Article17, the codes to be used are 
-3,2,1,0. Refer to the document for more detailed description. For the reporting under Article 12 of the Birds Directive the codes are the same. |http://inspire.ec.europa.eu/codeList/Article17SourceMethodValue/3
+3,2,1,0. Refer to the document for more detailed description. For the reporting under Article 12 of the Birds Directive the codes are the same. |http://inspire.ec.europa.eu/codelist/Article17SourceMethodValue/3
 |===
 
 [cols=",,",options="header",]
@@ -4968,7 +4968,7 @@ a|
 !Name: !counting method value
 !Definition: !Method for producing numbers indicating the abundance of a species within an aggregation unit.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/CountingMethodValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/CountingMethodValue
 !Values: !The allowed values for this code list comprise only the values specified in the table below.
 !===
 
@@ -5015,7 +5015,7 @@ a|
 !Name: !general counting unit value
 !Definition: !The unit used to express a counted or estimated number indicating the abundance within a SpeciesAggregationUnit (e.g. ccurrences or the population size).
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/GeneralCountingUnitValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/GeneralCountingUnitValue
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
@@ -5110,7 +5110,7 @@ a|
 !Definition: !The species population density in the SpeciesDistributionUnit.
 !Description: !A species population density in classes (common, rare, very rare or present) in an individual SpeciesDistributionUnit.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/OccurrenceCategoryValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/OccurrenceCategoryValue
 !Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
 !===
 
@@ -5175,7 +5175,7 @@ a|
 !Name: !qualifier value
 !Definition: !This value defines the relation between the taxonomic concepts of a local species name and the reference species name given by reference species identifier or by a reference species scheme.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/QualifierValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/QualifierValue
 !Values: !The allowed values for this code list comprise only the values specified in the table below.
 !===
 
@@ -5241,7 +5241,7 @@ a|
 !Definition: !Reference lists defining a nomenclatural and taxonomical standard to which local names and taxonomic concepts can be mapped.
 !Description: !The authorized ReferenceSpeciesScheme provides reference species list which defines the ReferenceSpeciesName with its scientific name plus author and ReferenceSpeciesId. In these ReferenceSpeciesSchemes harmonized species names are given GUIDs and the species names are to be retrieved through webservices using GUIDs. Only one of these list must be used for one taxon. The priority is as follows: 1) EU-Nomen, 2) EUNIS, 3) NatureDirectives. This implies: if a taxon is listed in EU-Nomen, this reference must be used as first choice. If it is not listed in EU-Nomen, the second choice is EUNIS, if not in EUNIS, NatureDirectives can be used.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/ReferenceSpeciesSchemeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ReferenceSpeciesSchemeValue
 !Values: !The allowed values for this code list comprise only the values specified in the table below.
 !===
 
@@ -5291,7 +5291,7 @@ a|
  
 NOTE One or more categories of population may be listed in the dataset, giving population size of e.g. permanent and wintering populations.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/ResidencyStatusValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ResidencyStatusValue
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
