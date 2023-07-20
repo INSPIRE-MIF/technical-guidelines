@@ -1300,7 +1300,7 @@ a|
 !===
 !Value type: !GeophObjectSet
 !Definition: !A GeophObjectSet member of a Geologic Collection.
-!Multiplicity: !
+!Multiplicity: !0..*
 !Stereotypes: !«voidable»
 !===
 
@@ -1311,7 +1311,7 @@ a|
 !===
 !Value type: !GeophObject
 !Definition: !A GeophObject member of a Geologic Collection.
-!Multiplicity: !
+!Multiplicity: !0..*
 !Stereotypes: !«voidable»
 !===
 
