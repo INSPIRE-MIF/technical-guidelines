@@ -1079,6 +1079,7 @@ The following constraints are added:
 * Each vector statistical unit cannot have more than one geometry with a type _referenceGeometry_,
 * Geometry descriptors with a _generalisedGeometry_ type have to be instances of _GeneralisedGeometryDescriptor_ class.
 * Vector statistical units with a reference geometry instance of _GM_MultiSurface_ must be instances of the specialised class _AreaStatisticalUnit_.
+* The reference geometry of an area statistical units should be a _GM_MultiSurface_.
 
 [NOTE]
 ====
@@ -2032,6 +2033,15 @@ a|
 !Definition: !The tesselation composed of units.
 !Multiplicity: !0..1
 !Stereotypes: !«voidable»
+!===
+
+a|
+*Constraint: AreaStatisticalUnitsGeometryConstraint*
+
+[cols=","]
+!===
+!Natural language: !The reference geometry of an area statistical units should be a _GM_MultiSurface_.
+!OCL: !
 !===
 
 |===
