@@ -21,6 +21,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: Technical Guidance for the implementation of INSPIRE Discovery Services
+:revdate: 2023-07-31
+:keywords: INSPIRE Discovery Services
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document defines technical guidance for INSPIRE Discovery Services
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:lang: en
+
 image:./media/image1.jpeg[image,width=108,height=108] **INSPIRE** - *Infrastructure for Spatial Information in Europe*
 
 [discrete]
@@ -28,22 +39,21 @@ image:./media/image1.jpeg[image,width=108,height=108] **INSPIRE** - *Infrastruct
 
 [width="100%",cols="29%,71%",]
 |===
-|*Title* |Technical Guidance for the implementation of INSPIRE Discovery Services
-|*Creator* |Initial Operating Capability Task Force for Network Services
-|*Date* |2011-11-07
-|*Subject* |INSPIRE Discovery Services
-|*Status* |Version 3.1
-|*Publisher* |IOC Task Force for Network Services
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Status* |Version 3.1.0
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document defines the implementation requirements and recommendations and describes the implementation guidelines for INSPIRE Discovery Services to fulfil the requirements of the INSPIRE directive and the Regulation on INSPIRE Network Services, Annex II Discovery Services.
-|*Contributors* |Members of the INSPIRE Drafting Team for Network Services, members of the INSPIRE IOC Task Force for Network Services and the Initial Operating Capability Task Force Service Team.
-|*Format* |PDF
-|*Source* |Technical Guidance for the implementation of INSPIRE Discovery Services v3.0
-|*Rights* |Public
-|*Identifier* |Technical Guidance Discovery Services v3.1
-|*Language* |EN
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/discowery-services/[Technical Guidance Discovery Services v3.1.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Commission Regulation (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
-|*Coverage* |Project duration
 |===
 
 <<<
