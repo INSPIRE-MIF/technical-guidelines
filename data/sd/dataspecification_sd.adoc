@@ -41,25 +41,6 @@ image:./media/image3.png[image,width=93,height=93] **INSPIRE** *Infrastructure f
 [discrete]
 = D2.8.III.19 Data Specification on _Species Distribution_ – Technical Guidelines
 
-[width="100%",cols="17%,83%"]
-|===
-|*Title* |D2.8.III.19 INSPIRE Data Specification on _Species Distribution_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Species Distribution_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Species Distribution_
-|*Publisher* |European Commission Joint Research Centre
-|*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Species Distribution_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Species Distribution_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.19_v3.0
-|*Language* |En
-|*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Union (INSPIRE)
-|*Coverage* |Project duration
-|===
-
 [width="100%",cols="17%,83%",]
 |===
 |*Title* |{doctitle}
