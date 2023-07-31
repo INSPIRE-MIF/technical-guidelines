@@ -2532,18 +2532,18 @@ The externally governed code lists included in this application schema are speci
 [cols=",,,",options="header",]
 |===
 |*Code list* |*Identifiers* |*Identifier examples* |*Labels*
-.11+|SpotElevationClassValue .11+|Append the number in the "Classification Value" column of Table 4.9 to the URI prefix _http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/0_ |_Created, never classified_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/1_ |_Unclassified_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/2_ |_Ground_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/3_ |_Low Vegetation_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/4_ |_Medium Vegetation_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/5_ |_High Vegetation_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/6_ |_Building_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/7_ |_Low point (noise)_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/8_ |_Model Key-point (mass point)_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/9_ |_Water_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/12_ |_Overlap Points_
+.11+|SpotElevationClassValue .11+|Append the number in the "Classification Value" column of Table 4.9 to the URI prefix _http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/0_ |_Created, never classified_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/1_ |_Unclassified_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/2_ |_Ground_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/3_ |_Low Vegetation_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/4_ |_Medium Vegetation_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/5_ |_High Vegetation_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/6_ |_Building_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/7_ |_Low point (noise)_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/8_ |_Model Key-point (mass point)_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/9_ |_Water_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/12_ |_Overlap Points_
 |===
 
 <<<

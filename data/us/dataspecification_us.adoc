@@ -4232,7 +4232,7 @@ a|
 !Name: !thermal appurtenance type
 !Definition: !Classification of thermal appurtenances.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/ThermalAppurtenanceTypeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ThermalAppurtenanceTypeValue
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
@@ -9761,7 +9761,7 @@ a|
 !Name: !thermal appurtenance type value
 !Definition: !Codelist containing a classification of thermal appurtenances.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/US/ThermalAppurtenanceTypeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/US/ThermalAppurtenanceTypeValue
 !Parent: !AppurtenanceTypeValue
 !Values: !
 !===
