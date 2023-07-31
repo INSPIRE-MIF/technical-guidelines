@@ -32,7 +32,7 @@
 :keywords: INSPIRE Download Services
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2023.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.1
 :lang: en
 
 image:media/image1.png[image,width=107,height=107] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -1174,21 +1174,21 @@ a|
 |Resource Title (M) |/feed/title
 |Resource Abstract (M) |/feed/subtitle
 |Resource Type (M) |Not mapped
-|Resource Locator (C) a|
+|Resource Locator \(C) a|
 Feed level link in the top Atom feed
 
 /feed/link[@rel="self"]
 
-|Coupled Resource (C) a|
+|Coupled Resource \(C) a|
 Entry level link in the top Atom feed
 
 /feed/entry/link[@rel="describedby"]
 
 |Spatial Data Service Type (M) |Not mapped
 |Keyword (M) |Not mapped
-|Geographic Bounding Box (C) |Not mapped
+|Geographic Bounding Box \(C) |Not mapped
 |Temporal Reference (M) |Not mapped
-|Spatial Resolution (C) |Not mapped
+|Spatial Resolution \(C) |Not mapped
 |Conformity (M) |Not mapped
 |Conditions for Access and Use (M) |Not mapped
 |Limitations on Public Access (M) a|
@@ -2335,12 +2335,12 @@ inspire_common:ResourceType
 
 (ExtendedCapabilities)
 
-|Resource Locator (C) a|
+|Resource Locator \(C) a|
 inspire_common:ResourceLocator
 
 (ExtendedCapabilities)
 
-|Coupled Resource (C) |wfs:MetadataURL (per feature type)
+|Coupled Resource \(C) |wfs:MetadataURL (per feature type)
 |Spatial Data Service Type (M) a|
 inspire_common:SpatialDataServiceType
 
@@ -2353,7 +2353,7 @@ inspire_common:TemporalReference
 
 (ExtendedCapabilities)
 
-|Spatial Resolution (C) |ows:ServiceIdentification/ows:Abstract
+|Spatial Resolution \(C) |ows:ServiceIdentification/ows:Abstract
 a|
 Conformity* (M)
 

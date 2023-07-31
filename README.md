@@ -8,23 +8,56 @@ The INSPIRE TGs describe detailed implementation aspects and relations with exis
 
 ## Status
 
-All INSPIRE TGs will be converted from the [current pdf format](https://inspire.ec.europa.eu/Technical-guidelines) to the AsciiDoc format and published in this repository, according to the order and timing defined in the [conversion plan](tg_conversion_plan.md).
+All INSPIRE TGs will be converted from the original pdf format to the AsciiDoc format and published in this repository, according to the order and timing defined in the [conversion plan](tg_conversion_plan.md).
 
 Currently, the following TGs have been converted:
 * Metadata
   * [Metadata-iso19139](metadata/metadata-iso19139)
 * Services
+  * [Discovery Services](services/discovery-cws)
   * [Download Services](services/download-atom-wfs)
   * [View Services](services/view-wms)
 * Data
+  * [Administrative Units](data/au)
   * [Coordinate reference systems](data/rs)
   * [Elevation](data/el)
   * [Environmental Monitoring Facilities](data/ef)
   * [Geographical Grid Systems](data/gg)
+  * [Geology](data/ge)
   * [Hydrography](data/hy)
+  * [Land Cover](data/lc)
   * [Land Use](data/lu)
+  * [Orthoimagery](data/oi)
   * [Protected Sites](data/ps)
   * [Soil](data/so)
+  * [Species Distribution](data/sd)
+  * [Statistical Units](data/su)
+  * [Utility and Government Services](data/us)
+
+
+The following TGs are available in the original pdf format:
+
+* Data
+  * [Addresses](data/ad)
+  * [Agricultural and Aquaculture Facilities](data/af)
+  * [Area Management/Restriction/Regulation Zones and Reporting Units](data/am)
+  * [Atmospheric Conditions](data/ac-mf)
+  * [Bio-geographical Regions](data/br)
+  * [Buildings](data/bu)
+  * [Cadastral Parcels](data/cp)
+  * [Energy Resources](data/er)
+  * [Geographical Names](data/gn)
+  * [Habitats and Biotopes](data/hb)
+  * [Human Health and Safety](data/hh)
+  * [Meteorological Geographical Features](data/ac-mf)
+  * [Mineral Resources](data/mr)
+  * [Natural Risk Zones](data/nz)
+  * [Oceanographic Geographical Features](data/of)
+  * [Population Distribution and Demography](data/pd)
+  * [Production and Industrial Facilities](data/pf)
+  * [Sea Regions](data/sr)
+  * [Transport Networks](data/tn)
+
 
 ## Governance and release process
 

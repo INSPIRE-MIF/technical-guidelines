@@ -31,7 +31,7 @@
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Land Us
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2023.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]

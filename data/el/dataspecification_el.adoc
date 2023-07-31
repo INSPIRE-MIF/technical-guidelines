@@ -31,7 +31,7 @@
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Elevation
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2023.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.1
 :lang: en
 
 image::./media/image2.jpeg[image,width=93,height=93,align=center]
@@ -2532,18 +2532,18 @@ The externally governed code lists included in this application schema are speci
 [cols=",,,",options="header",]
 |===
 |*Code list* |*Identifiers* |*Identifier examples* |*Labels*
-.11+|SpotElevationClassValue .11+|Append the number in the "Classification Value" column of Table 4.9 to the URI prefix _http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/0_ |_Created, never classified_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/1_ |_Unclassified_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/2_ |_Ground_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/3_ |_Low Vegetation_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/4_ |_Medium Vegetation_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/5_ |_High Vegetation_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/6_ |_Building_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/7_ |_Low point (noise)_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/8_ |_Model Key-point (mass point)_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/9_ |_Water_
-|_http://inspire.ec.europa.eu/codeList/SpotElevationClassValue/12_ |_Overlap Points_
+.11+|SpotElevationClassValue .11+|Append the number in the "Classification Value" column of Table 4.9 to the URI prefix _http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/0_ |_Created, never classified_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/1_ |_Unclassified_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/2_ |_Ground_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/3_ |_Low Vegetation_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/4_ |_Medium Vegetation_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/5_ |_High Vegetation_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/6_ |_Building_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/7_ |_Low point (noise)_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/8_ |_Model Key-point (mass point)_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/9_ |_Water_
+|_http://inspire.ec.europa.eu/codelist/SpotElevationClassValue/12_ |_Overlap Points_
 |===
 
 <<<
