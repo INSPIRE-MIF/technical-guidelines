@@ -19,7 +19,7 @@
 :description: Implementation specification for defining metadata for INSPIRE datasets and services in ISO/TS 19139 based XML format in compliance with the INSPIRE Implementing Rules for metadata.
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution (cc-by) 4.0]
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2023.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.1
 :lang: EN
 
 image:./media/image1.png[image,width=107,height=107] **INSPIRE** - *Infrastructure for Spatial Information in Europe*
