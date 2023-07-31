@@ -1484,7 +1484,7 @@ If the keywords from controlled vocabularies are used and the individual keyword
 
 [TIP]
 ====
-*TG Recommendation 1.9: metadata/2.0/rec/common/use-anchors-for-thesauri*
+*TG Recommendation C.9: metadata/2.0/rec/common/use-anchors-for-thesauri*
 
 For references to well-known thesauri or controlled vocabularies, the _title_ element of the _thesaurusName_ should be encoded using the _gmd:title/gmx:Anchor_ element. The _xlink:href_ attribute of the _gmx:Anchor_ element should be used for referring to the URI of the thesaurus or controlled vocabulary.
 ====
