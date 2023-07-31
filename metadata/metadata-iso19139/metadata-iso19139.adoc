@@ -2345,7 +2345,7 @@ If the spatial resolution is an interval, both bounding values of the interval s
 <gmd:spatialResolution>
   <gmd:MD_Resolution>
     <gmd:distance>
-      <gco:distance uom="dd">0.25</gco:distance>
+      <gco:Distance uom="dd">0.25</gco:Distance>
     </gmd:distance>
   </gmd:MD_Resolution>
 </gmd:spatialResolution>
@@ -2360,12 +2360,12 @@ If the spatial resolution is an interval, both bounding values of the interval s
 <gmd:spatialResolution>
   <gmd:MD_Resolution>
     <gmd:distance>
-      <gco:distance uom="dd">0.24</gco:distance>
+      <gco:Distance uom="dd">0.24</gco:Distance>
     </gmd:distance>
   </gmd:MD_Resolution>
   <gmd:MD_Resolution>
     <gmd:distance>
-      <gco:distance uom="dd">0.26</gco:distance>
+      <gco:Distance uom="dd">0.26</gco:Distance>
     </gmd:distance>
   </gmd:MD_Resolution>
 </gmd:spatialResolution>
