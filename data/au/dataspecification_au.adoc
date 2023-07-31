@@ -24,7 +24,7 @@
 :appendix-caption: Annex
 
 // Document properties
-:title: D2.8.I.2 Data Specification on Administrative Units – Technical Guidelines
+:title: D2.8.I.4 Data Specification on Administrative Units – Technical Guidelines
 :revdate: 2023-07-31
 :keywords: INSPIRE Data Specification for the spatial data theme Administrative Units
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
