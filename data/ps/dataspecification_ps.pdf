@@ -6,8 +6,8 @@
 /Keywords (INSPIRE Data Specification for the spatial data theme Protected Sites)
 /Creator (Asciidoctor PDF 2.3.9, based on Prawn 2.4.0)
 /Producer (Temporary MIWP 2021-2024 sub-group 2.3.1)
-/ModDate (D:20230731113813+00'00')
-/CreationDate (D:20230731114550+00'00')
+/ModDate (D:20230801103120+00'00')
+/CreationDate (D:20230801103937+00'00')
 >>
 endobj
 2 0 obj
@@ -521,7 +521,7 @@ S
 BT
 136.036 456.74461 Td
 /F1.0 10.5 Tf
-<323032332d30312d3331> Tj
+<323032332d30372d3331> Tj
 ET
 
 0.0 0.0 0.0 scn
@@ -1094,7 +1094,7 @@ S
 BT
 136.036 250.94461 Td
 /F1.0 10.5 Tf
-<44322e382e492e395f76332e322e30> Tj
+<44322e382e492e395f76332e332e30> Tj
 ET
 
 0.0 0.0 0.0 SCN
@@ -1168,7 +1168,7 @@ S
 BT
 136.036 229.16461 Td
 /F1.0 10.5 Tf
-<68747470733a2f2f6769746875622e636f6d2f494e53504952452d4d49462f746563686e6963616c2d67756964656c696e65732f72656c65617365732f7461672f76323032332e31> Tj
+<68747470733a2f2f6769746875622e636f6d2f494e53504952452d4d49462f746563686e6963616c2d67756964656c696e65732f72656c65617365732f7461672f76323032332e32> Tj
 ET
 
 0.0 0.0 0.0 SCN
@@ -1837,7 +1837,7 @@ endobj
 << /Border [0 0 0]
 /A << /Type /Action
 /S /URI
-/URI (https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.1)
+/URI (https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2)
 >>
 /Subtype /Link
 /Rect [136.036 226.09861 499.945 240.37861]
