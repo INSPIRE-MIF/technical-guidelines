@@ -12,7 +12,7 @@ All INSPIRE TGs will be converted from the original pdf format to the AsciiDoc f
 
 Currently, the following TGs have been converted:
 * Metadata
-  * [Metadata-iso19139](metadata/metadata-iso19139)
+  * [Metadata-iso19139](metadata/metadata-iso19139) ([PDF](https://inspire-mif.github.io/technical-guidelines/metadata/metadata-iso19139/metadata-iso19139.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/metadata/metadata-iso19139/metadata-iso19139.html))
 * Services
   * [Discovery Services](services/discovery-cws)
   * [Download Services](services/download-atom-wfs)
