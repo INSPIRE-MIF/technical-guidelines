@@ -20,6 +20,7 @@ Currently, the following TGs have been converted:
 * Data
   * [Administrative Units](data/au) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/au/dataspecification_au.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/au/dataspecification_au.html))
   * [Agricultural and Aquaculture Facilities](data/af) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/af/dataspecification_af.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/au/dataspecification_af.html))
+  * [Area Management/Restriction/Regulation Zones and Reporting Units](data/am) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/am/dataspecification_am.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/au/dataspecification_am.html))
   * [Buildings](data/bu) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/bu/dataspecification_bu.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/au/dataspecification_bu.html))
   * [Coordinate reference systems](data/rs) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/rs/dataspecification_rs.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/rs/dataspecification_rs.html))
   * [Elevation](data/el) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/el/dataspecification_el.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/el/dataspecification_el.html))
@@ -41,7 +42,6 @@ The following TGs are available in the original pdf format:
 
 * Data
   * [Addresses](data/ad) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/ad/dataspecification_ad.pdf))
-  * [Area Management/Restriction/Regulation Zones and Reporting Units](data/am) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/am/dataspecification_am.pdf))
   * [Atmospheric Conditions](data/ac-mf) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/ac-mf/dataspecification_ac-mf.pdf))
   * [Bio-geographical Regions](data/br) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/br/dataspecification_br.pdf))
   * [Cadastral Parcels](data/cp) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/cp/dataspecification_cp.pdf))
