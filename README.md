@@ -19,6 +19,7 @@ Currently, the following TGs have been converted:
   * [View Services](services/view-wms) ([PDF](https://inspire-mif.github.io/technical-guidelines/services/view-wms/ViewServices.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/services/view-wms/ViewServices.html))
 * Data
   * [Administrative Units](data/au) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/au/dataspecification_au.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/au/dataspecification_au.html))
+  * [Buildings](data/bu) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/bu/dataspecification_bu.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/au/dataspecification_bu.html))
   * [Coordinate reference systems](data/rs) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/rs/dataspecification_rs.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/rs/dataspecification_rs.html))
   * [Elevation](data/el) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/el/dataspecification_el.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/el/dataspecification_el.html))
   * [Environmental Monitoring Facilities](data/ef) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/ef/dataspecification_ef.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/ef/dataspecification_ef.html))
@@ -43,7 +44,6 @@ The following TGs are available in the original pdf format:
   * [Area Management/Restriction/Regulation Zones and Reporting Units](data/am) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/am/dataspecification_am.pdf))
   * [Atmospheric Conditions](data/ac-mf) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/ac-mf/dataspecification_ac-mf.pdf))
   * [Bio-geographical Regions](data/br) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/br/dataspecification_br.pdf))
-  * [Buildings](data/bu) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/bu/dataspecification_bu.pdf))
   * [Cadastral Parcels](data/cp) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/cp/dataspecification_cp.pdf))
   * [Energy Resources](data/er) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/er/dataspecification_er.pdf))
   * [Geographical Names](data/gn) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/gn/dataspecification_gn.pdf))
