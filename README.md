@@ -33,6 +33,7 @@ Currently, the following TGs have been converted:
   * [Land Use](data/lu) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/lu/dataspecification_lu.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/lu/dataspecification_lu.html))
   * [Natural Risk Zones](data/nz) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/nz/dataspecification_nz.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/lu/dataspecification_nz.html))
   * [Orthoimagery](data/oi) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/oi/dataspecification_oi.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/oi/dataspecification_oi.html))
+  * [Production and Industrial Facilities](data/pf) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/pf/dataspecification_pf.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/ps/dataspecification_pf.html))
   * [Protected Sites](data/ps) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/ps/dataspecification_ps.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/ps/dataspecification_ps.html))
   * [Soil](data/so) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.html))
   * [Species Distribution](data/sd) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/sd/dataspecification_sd.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/sd/dataspecification_sd.html))
@@ -55,7 +56,6 @@ The following TGs are available in the original pdf format:
   * [Mineral Resources](data/mr) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/mr/dataspecification_mr.pdf))
   * [Oceanographic Geographical Features](data/of) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/of/dataspecification_of.pdf))
   * [Population Distribution and Demography](data/pd) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/pd/dataspecification_pd.pdf))
-  * [Production and Industrial Facilities](data/pf) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/pf/dataspecification_pf.pdf))
   * [Sea Regions](data/sr) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/sr/dataspecification_sr.pdf))
 
 
