@@ -36,6 +36,7 @@ Currently, the following TGs have been converted:
   * [Soil](data/so) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.html))
   * [Species Distribution](data/sd) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/sd/dataspecification_sd.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/sd/dataspecification_sd.html))
   * [Statistical Units](data/su) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/su/dataspecification_su.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/su/dataspecification_su.html))
+  * [Transport Networks](data/tn) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/tn/dataspecification_tn.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/us/dataspecification_tn.html))
   * [Utility and Government Services](data/us) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/us/dataspecification_us.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/us/dataspecification_us.html))
 
 
@@ -56,7 +57,6 @@ The following TGs are available in the original pdf format:
   * [Population Distribution and Demography](data/pd) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/pd/dataspecification_pd.pdf))
   * [Production and Industrial Facilities](data/pf) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/pf/dataspecification_pf.pdf))
   * [Sea Regions](data/sr) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/sr/dataspecification_sr.pdf))
-  * [Transport Networks](data/tn) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/tn/dataspecification_tn.pdf))
 
 
 ## Governance and release process
