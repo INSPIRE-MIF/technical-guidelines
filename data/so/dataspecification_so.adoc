@@ -2897,7 +2897,7 @@ a|
 
 ===== Code lists
 
-====== FAOHorizonMasterValu
+====== FAOHorizonMasterValue
 
 [width="100%",cols="100%"]
 |===
@@ -2981,7 +2981,7 @@ a|
 !  !Definition: !classification of a layer according to the concept that fits the purpose.
 !  !Description: !EXAMPLE Topsoil: meaning the upper part of the natural soil that is generally dark coloured and has a higher content of organic matter and nutrients when compared to the (mineral ) horizons below excluding the humus layer.
 !  !Extensibility: !none
-!  !Identifier: !http://inspire-registry.jrc.ec.europa.eu/clr/LayerTypeValue
+!  !Identifier: !http://inspire.ec.europa.eu/codelist/LayerTypeValue
 !  !Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
@@ -8343,6 +8343,23 @@ a|
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LayerGenesisProcessStateValue
 !Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
+!===
+
+|===
+
+*LayerTypeValue*
+
+[width="100%",cols="100%"]
+|===
+a|
+[width="100%",cols="17%,83%"]
+!===
+!Name: !layer type value
+!Definition: !classification of a layer according to the concept that fits the purpose.
+!Description: !EXAMPLE Topsoil: meaning the upper part of the natural soil that is generally dark coloured and has a higher content of organic matter and nutrients when compared to the (mineral ) horizons below excluding the humus layer.
+!Extensibility: !none
+!Identifier: !http://inspire.ec.europa.eu/codelist/LayerTypeValue
+!Values: !The allowed values for this code list comprise only the values specified in the table below.
 !===
 
 |===
