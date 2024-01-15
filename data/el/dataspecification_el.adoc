@@ -2350,7 +2350,7 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 |Definition: |List of possible type values for break lines based on the physical characteristics of the break line [in the elevation surface].
 |Extensibility: |narrower
 |Identifier: |http://inspire.ec.europa.eu/codelist/BreakLineTypeValue
-|Values: |The allowed values for this code list comprise the values specified in _Annex C_ and narrower values defined by data providers.
+|Values: |The allowed values for this code list comprise the values specified in INSPIRE Registry and narrower values defined by data providers.
 |===
 
 ====== SpotElevationClassValue
@@ -2377,7 +2377,7 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 |Definition: |Possible values for spot elevation points that describe a singularity of the surface.
 |Extensibility: |narrower
 |Identifier: |http://inspire.ec.europa.eu/codelist/SpotElevationTypeValue
-|Values: |The allowed values for this code list comprise the values specified in _Annex C_ and narrower values defined by data providers.
+|Values: |The allowed values for this code list comprise the values specified in INSPIRE Registry and narrower values defined by data providers.
 |===
 
 ===== Imported types (informative)
@@ -7576,36 +7576,7 @@ INSPIRE Application Schema 'ElevationVectorElements'
 |Definition: |List of possible type values for break lines based on the physical characteristics of the break line [in the elevation surface].
 |Extensibility: |narrower
 |Identifier: |http://inspire.ec.europa.eu/codelist/BreakLineTypeValue
-|Values: |The allowed values for this code list comprise the values specified in the table below and narrower values defined by data providers.
-|===
-
-[cols=","]
-|===
-|*bottomOfSlope*
-|
-|Name: |bottom of slope
-|Definition: |Break line representing the lower boundary of an area having a constant slope in the terrain surface, typically varying approximately between 2? and 40?.
-|*changeInSlope*
-|
-|Name: |change in slope
-|Definition: |Break line representing a collection of adjoining points where the terrain has an abrupt change in slope.
-|*flatAreaBoundary*
-|
-|Name: |flat area boundary
-|Definition: |Break line that delimits an isolated part of the territory where the elevation model has to be constrained at the same elevation value.
-|Description: |NOTE The boundary of a flat area shall be closed. 
-EXAMPLE Boundary of an inland water body (e.g. lake).
-|*formLine*
-|
-|Name: |form line
-|Definition: |Break line representing a local direction in which the elevation surface being described takes the greatest slope.
-|Description: |"NOTE 1 Form lines are always perpendicular to contour lines describing the same elevation surface. 
-NOTE 2 This special case of break line is often used to describe troughs and ridges of the terrain surface. 
-EXAMPLE Ridge line, thalweg."
-|*topOfSlope*
-|
-|Name: |top of slope
-|Definition: |Break line representing the upper boundary of an area having a constant slope in the terrain surface, typically varying approximately between 2? and 40?.
+|Values: |The allowed values for this code list comprise the values specified in the INSPIRE Registry and narrower values defined by data providers.
 |===
 
 *SpotElevationTypeValue*
@@ -7616,37 +7587,7 @@ EXAMPLE Ridge line, thalweg."
 |Definition: |Possible values for spot elevation points that describe a singularity of the surface.
 |Extensibility: |narrower
 |Identifier: |http://inspire.ec.europa.eu/codelist/SpotElevationTypeValue
-|Values: |The allowed values for this code list comprise the values specified in the table below and narrower values defined by data providers.
-|===
-
-[cols=",",options="header",]
-|===
-| *depression*
-|
-|Name: |depression
-|Definition: |Point that represents a part of the relief of the land surface or water body's floor surface that is lower in elevation when compared to its surrounding points.
-|Description: |EXAMPLE Trough or basin.
-|*formSpot*
-|
-|Name: |form spot
-|Definition: |A supplementary spot height, estimated or interpolated from surrounding heights, in areas where few contour lines or other height information exist.
-|Description: |"NOTE 1 Used to control the creation of DEMs. 
- 
-NOTE 2 This value is only applicable to spot heights, not to spot depths."
-|*generic*
-|
-|Name: |generic
-|Definition: |Spot elevation spatial object not fulfilling the description of any of the other values in the current code list.
-|*pass*
-|
-|Name: |pass
-|Definition: |Lower point of a depression within a ridge alignment, generally opened along the crest line, which allow passing from one slope of the surface to another.
-|Description: |"NOTE A pass is a point of double curvature, one in the direction of the crest line and another in the direction of the thalwegs born in this point (i.e. with two maximum curvatures - concave and convex, respectively)."
-|*summit*
-|
-|Name: |summit
-|Definition: |Highest point of a prominence in the relief of a land surface or a water body's floor surface.
-|Description: |EXAMPLE The top of a hill or a mountain.
+|Values: |The allowed values for this code list comprise the values specified in the INSPIRE Registry and narrower values defined by data providers.
 |===
 
 <<<
