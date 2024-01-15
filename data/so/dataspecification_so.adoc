@@ -3141,7 +3141,7 @@ a|
 !  !Definition: !list of values to indicate the placement of the Qualifier with regard to the WRB reference soil group (RSG). The placement can be in front of the RSG i.e. 'prefix' or it can be behind the RSG i.e. 'suffix'. The allowed values for this code list comprise only the values "prefix" and "suffix", according to naming rules of the _World reference base for soil resources 2006,_ _first update 2007,_ World Soil Resources Reports No. 103, Food and Agriculture Organization of the United Nations, Rome, 2007.
 !  !Extensibility: !none
 !  !Identifier: !http://inspire.ec.europa.eu/codelist/WRBQualifierPlaceValue
-!  !Values: !The allowed values for this code list comprise only the values specified in "World reference base for soil resources 2006, first update 2007, World Soil Resources Reports No. 103, Food and Agriculture Organization of the United Nations, Rome, 2007" . Annex _C_ includes recommended values that may be used by data providers.
+!  !Values: !The allowed values for this code list comprise only the values specified in "World reference base for soil resources 2006, first update 2007, World Soil Resources Reports No. 103, Food and Agriculture Organization of the United Nations, Rome, 2007" . INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -3160,7 +3160,7 @@ a|
 NOTE WRB restricts the use of qualifiers in different ways for the 32 reference soil groups.
 !  !Extensibility: !none
 !  !Identifier: !http://inspire.ec.europa.eu/codelist/WRBQualifierValue
-!  !Values: !The allowed values for this code list comprise only the values specified in "World reference base for soil resources 2006, first update 2007, World Soil Resources Reports No. 103, Food and Agriculture Organization of the United Nations, Rome, 2007" . Annex _C_ includes recommended values that may be used by data providers.
+!  !Values: !The allowed values for this code list comprise only the values specified in "World reference base for soil resources 2006, first update 2007, World Soil Resources Reports No. 103, Food and Agriculture Organization of the United Nations, Rome, 2007" . INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -3180,7 +3180,7 @@ NOTE The WRB soil classification system comprises 32 different RSGs.
 SOURCE _World reference base for soil resources 2006,_ _first update 2007,_ World Soil Resources Reports No. 103, Food and Agriculture Organization of the United Nations, Rome, 2007.
 !  !Extensibility: !none
 !  !Identifier: !http://inspire.ec.europa.eu/codelist/WRBReferenceSoilGroupValue
-!  !Values: !The allowed values for this code list comprise only the values specified in "World reference base for soil resources 2006, first update 2007, World Soil Resources Reports No. 103, Food and Agriculture Organization of the United Nations, Rome, 2007" . Annex _C_ includes recommended values that may be used by data providers.
+!  !Values: !The allowed values for this code list comprise only the values specified in "World reference base for soil resources 2006, first update 2007, World Soil Resources Reports No. 103, Food and Agriculture Organization of the United Nations, Rome, 2007" . INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -3199,7 +3199,7 @@ a|
 Specifiers are name elements in WRB restricting the meaning of qualifiers.
 !  !Extensibility: !none
 !  !Identifier: !http://inspire.ec.europa.eu/codelist/WRBSpecifierValue
-!  !Values: !The allowed values for this code list comprise only the values specified in "World Soil Resources Reports No. 103, Food and Agriculture Organization of the United Nations, Rome, 2007" . Annex _C_ includes recommended values that may be used by data providers.
+!  !Values: !The allowed values for this code list comprise only the values specified in "World Soil Resources Reports No. 103, Food and Agriculture Organization of the United Nations, Rome, 2007" . INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -3494,7 +3494,7 @@ The externally governed code lists included in this application schema are speci
 |WRBSpecifierValue |_http://www.fao.org/fileadmin/templates/nr/images/resources/pdf_documents/wrb2007_red.pdf_ (p. 107) |pdf
 |===
 
-NOTE All the externally managed code lists and their values are presented in the Annex C of this document
+NOTE All the externally managed code lists are presented in the Annex C of this document
 
 <<<
 == Reference systems, units of measure and grids
