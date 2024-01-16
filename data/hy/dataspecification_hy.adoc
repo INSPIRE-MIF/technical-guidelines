@@ -168,6 +168,7 @@ Unit H06: Digital Earth and Reference Data
 _http://inspire.ec.europa.eu/index.cfm/pageid/2_
 
 <<<
+[discrete]
 == Table of Contents
 toc::[]
 
@@ -1554,7 +1555,7 @@ a|
 !Definition: !Defines categories for different types of hydrographic network nodes.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HydroNodeCategoryValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3043,7 +3044,7 @@ a|
 !Definition: !Man-made physical watercourse crossing types.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/CrossingTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3060,7 +3061,7 @@ a|
 !Description: !SOURCE [Codelist values based on DFDD].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HydrologicalPersistenceValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3077,7 +3078,7 @@ a|
 !Description: !SOURCE [Codelist items based on DFDD].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/ShoreTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3094,7 +3095,7 @@ a|
 !Description: !SOURCE [Codelist values based on DFDD].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/WaterLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -8277,70 +8278,10 @@ a|
 !Definition: !Defines categories for different types of hydrographic network nodes.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HydroNodeCategoryValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
-
-[cols=""]
-|===
-a|
-boundary
-[cols=","]
-!===
-!Name: !boundary
-!Definition: !Node used to connect different networks.
-!===
-
-a|
-flowConstriction
-
-[cols=","]
-!===
-!Name: !flow constriction
-!Definition: !A network node unrelated to the network topology per se, but associated with a hydrographic point of interest or facility, or a man-made object, that affects the network flow.
-!===
-
-a|
-flowRegulation
-
-[cols=","]
-!===
-!Name: !flow regulation
-!Definition: !A network node unrelated to the network topology per se, but associated with a hydrographic point of interest or facility, or a man-made object, that regulates the network flow.
-!===
-
-a|
-junction
-
-[cols=","]
-!===
-!Name: !junction
-!Definition: !Node where three or more links connect.
-!===
-
-a|
-outlet
-
-[cols=","]
-!===
-!Name: !outlet
-!Definition: !Ending node of a series of interconnected links.
-!===
-
-a|
-source
-
-[cols=","]
-!===
-!Name: !source
-!Definition: !Starting node of a series of interconnected links.
-!===
-
-|===
-
-_ 
-_
 
 === INSPIRE Application Schema 'Hydro - Physical Waters'
 
@@ -8365,51 +8306,10 @@ a|
 !Definition: !Man-made physical watercourse crossing types.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/CrossingTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
-
-[cols=""]
-|===
-a|
-aqueduct
-
-[cols=","]
-!===
-!Name: !aqueduct
-!Definition: !A pipe or artificial channel that is designed to transport water from a remote source, usually by gravity, for freshwater supply, agricultural, and/or industrial use.
-!===
-
-a|
-bridge
-
-[cols=","]
-!===
-!Name: !bridge
-!Definition: !A structure that connects two locations and provides for the passage of a transportation route over a terrain obstacle.
-!===
-
-a|
-culvert
-
-[cols=","]
-!===
-!Name: !culvert
-!Definition: !An enclosed channel for carrying a watercourse under a route.
-!===
-
-a|
-siphon
-
-[cols=","]
-!===
-!Name: !siphon
-!Definition: !A pipe used for conveying liquid from one level to a lower level, using the liquid pressure differential to force a column of the liquid up to a higher level before it falls to the outlet.
-!===
-
-|===
-
 
 *HydrologicalPersistenceValue*
 
@@ -8423,47 +8323,7 @@ a|
 !Description: !SOURCE [Codelist values based on DFDD].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HydrologicalPersistenceValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-dry
-
-[cols=","]
-!===
-!Name: !dry
-!Definition: !Filled and/or flowing infrequently, generally only during and/or immediately after heavy precipitation.
-!===
-
-a|
-ephemeral
-
-[cols=","]
-!===
-!Name: !ephemeral
-!Definition: !Filled and/or flowing during and immediately after precipitation.
-!===
-
-a|
-intermittent
-
-[cols=","]
-!===
-!Name: !intermittent
-!Definition: !Filled and/or flowing for part of the year.
-!===
-
-a|
-perennial
-
-[cols=","]
-!===
-!Name: !perennial
-!Definition: !Filled and/or flowing continuously throughout the year.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -8481,83 +8341,7 @@ a|
 !Description: !SOURCE [Codelist items based on DFDD].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/ShoreTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-boulders
-
-[cols=","]
-!===
-!Name: !boulders
-!Definition: !Large water- or weather-worn stones.
-!===
-
-a|
-clay
-
-[cols=","]
-!===
-!Name: !clay
-!Definition: !A stiff tenacious fine-grained earth consisting mainly of hydrated aluminosilicates, which become more plastic when water is added and can be moulded and dried.
-!===
-
-a|
-gravel
-
-[cols=","]
-!===
-!Name: !gravel
-!Definition: !Small water-worn or pounded stones.
-!===
-
-a|
-mud
-
-[cols=","]
-!===
-!Name: !mud
-!Definition: !Soft wet soil, sand, dust, and/or other earthy matter.
-!===
-
-a|
-rock
-
-[cols=","]
-!===
-!Name: !rock
-!Definition: !Stones of any size.
-!===
-
-a|
-sand
-
-[cols=","]
-!===
-!Name: !sand
-!Definition: !Granular material consisting of small eroded fragments of (mainly siliceous) rocks, finer than gravel and larger than a coarse silt grain.
-!===
-
-a|
-shingle
-
-[cols=","]
-!===
-!Name: !shingle
-!Definition: !Small, loose, rounded water-worn pebbles, especially as accumulated on a seashore.
-!===
-
-a|
-stone
-
-[cols=","]
-!===
-!Name: !stone
-!Definition: !Pieces of rock or mineral substance (other than metal) of definite form and size, usually artificially shaped, and used for some special purpose.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -8573,344 +8357,7 @@ a|
 !Description: !SOURCE [Codelist values based on DFDD].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/WaterLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-equinoctialSpringLowWater
-
-[cols=","]
-!===
-!Name: !equinoctial spring low water
-!Definition: !The level of low water springs near the time of an equinox.
-!===
-
-a|
-higherHighWater
-
-[cols=","]
-!===
-!Name: !higher high water
-!Definition: !The highest of the high waters (or single high water) of any specified tidal day due to the declination A1 effects of the moon and sun.
-!===
-
-a|
-higherHighWaterLargeTide
-
-[cols=","]
-!===
-!Name: !higher high water large tide
-!Definition: !The average of the highest high waters, one from each of 19 years of observations.
-!===
-
-a|
-highestAstronomicalTide
-
-[cols=","]
-!===
-!Name: !highest astronomical tide
-!Definition: !The highest tidal level, which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
-!===
-
-a|
-highestHighWater
-
-[cols=","]
-!===
-!Name: !highest high water
-!Definition: !The highest water level observed at a location.
-!===
-
-a|
-highWater
-
-[cols=","]
-!===
-!Name: !high water
-!Definition: !The highest level reached at a location by the water surface in one tidal cycle.
-!===
-
-a|
-highWaterSprings
-
-[cols=","]
-!===
-!Name: !high water springs
-!Definition: !An arbitrary level, approximating that of mean high water springs.
-!===
-
-a|
-indianSpringHighWater
-
-[cols=","]
-!===
-!Name: !indian spring high water
-!Definition: !A tidal surface datum approximating the level of the mean of the higher high water at spring tides.
-!===
-
-a|
-indianSpringLowWater
-
-[cols=","]
-!===
-!Name: !indian spring low water
-!Definition: !A tidal surface datum approximating the level of the mean of the lower low water at spring tides.
-!===
-
-a|
-localDatum
-
-[cols=","]
-!===
-!Name: !local datum
-!Definition: !An arbitrary datum defined by an authority of a local harbour, from which levels and tidal heights are measured by that authority.
-!===
-
-a|
-lowerLowWater
-
-[cols=","]
-!===
-!Name: !lower low water
-!Definition: !The lowest of the low waters (or single low water) of any specified tidal day due to the declination A1 effects of the moon and sun.
-!===
-
-a|
-lowerLowWaterLargeTide
-
-[cols=","]
-!===
-!Name: !lower low water large tide
-!Definition: !The average of the lowest low waters, one from each of 19 years of observations.
-!===
-
-a|
-lowestAstronomicalTide
-
-[cols=","]
-!===
-!Name: !lowest astronomical tide
-!Definition: !The lowest tide level that can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
-!===
-
-a|
-lowestLowWater
-
-[cols=","]
-!===
-!Name: !lowest low water
-!Definition: !An arbitrary level conforming to the lowest tide observed at a location, or somewhat lower.
-!===
-
-a|
-lowestLowWaterSprings
-
-[cols=","]
-!===
-!Name: !lowest low water springs
-!Definition: !An arbitrary level conforming to the lowest water level observed at a location at spring tides during a period shorter than 19 years.
-!===
-
-a|
-lowWater
-
-[cols=","]
-!===
-!Name: !low water
-!Definition: !An approximation of mean low water adopted as the reference level for a limited region, irrespective of better determinations later.
-!===
-
-a|
-lowWaterDatum
-
-[cols=","]
-!===
-!Name: !low water datum
-!Definition: !An approximation of mean low water that has been adopted as a standard reference for a limited area.
-!===
-
-a|
-lowWaterSprings
-
-[cols=","]
-!===
-!Name: !low water springs
-!Definition: !A level approximating that of mean low water springs.
-!===
-
-a|
-meanHigherHighWater
-
-[cols=","]
-!===
-!Name: !mean higher high water
-!Definition: !The average height of higher high waters at a location over a 19-year period.
-!===
-
-a|
-meanHigherHighWaterSprings
-
-[cols=","]
-!===
-!Name: !mean higher high water springs
-!Definition: !The average height of higher high water at spring tides at a location.
-!===
-
-a|
-meanHigherLowWater
-
-[cols=","]
-!===
-!Name: !mean higher low water
-!Definition: !The average of the higher low water height of each tidal day observed over a National Tidal Datum Epoch.
-!===
-
-a|
-meanHighWater
-
-[cols=","]
-!===
-!Name: !mean high water
-!Definition: !The average height of all high waters at a location over a 19-year period.
-!===
-
-a|
-meanHighWaterNeaps
-
-[cols=","]
-!===
-!Name: !mean high water neaps
-!Definition: !The average height of the high waters of the neap tide.
-!===
-
-a|
-meanHighWaterSprings
-
-[cols=","]
-!===
-!Name: !mean high water springs
-!Definition: !The average height of the high waters of spring tides.
-!===
-
-a|
-meanLowerHighWater
-
-[cols=","]
-!===
-!Name: !mean lower high water
-!Definition: !The average of the lower high water height of each tidal day observed over a National Tidal Datum Epoch.
-!===
-
-a|
-meanLowerLowWater
-
-[cols=","]
-!===
-!Name: !mean lower low water
-!Definition: !The average height of the lower low waters at a location over a 19-year period.
-!===
-
-a|
-meanLowerLowWaterSprings
-
-[cols=","]
-!===
-!Name: !mean lower low water springs
-!Definition: !The average height of lower low water at spring tides at a location.
-!===
-
-a|
-meanLowWater
-
-[cols=","]
-!===
-!Name: !mean low water
-!Definition: !The average height of all low waters at a location over a 19-year period.
-!===
-
-a|
-meanLowWaterNeaps
-
-[cols=","]
-!===
-!Name: !mean low water neaps
-!Definition: !The average height of the low waters of the neap tide.
-!===
-
-a|
-meanLowWaterSprings
-
-[cols=","]
-!===
-!Name: !mean low water springs
-!Definition: !The average height of the low waters of spring tides.
-!===
-
-a|
-meanSeaLevel
-
-[cols=","]
-!===
-!Name: !mean sea level
-!Definition: !The average height of the sea at a tide station measured from a fixed predetermined reference level.
-!===
-
-a|
-meanTideLevel
-
-[cols=","]
-!===
-!Name: !mean tide level
-!Definition: !The arithmetic mean of mean high water and mean low water.
-!===
-
-a|
-meanWaterLevel
-
-[cols=","]
-!===
-!Name: !mean water level
-!Definition: !The average of all hourly water levels over the available period of record.
-!===
-
-a|
-nearlyHighestHighWater
-
-[cols=","]
-!===
-!Name: !nearly highest high water
-!Definition: !An arbitrary level approximating the highest water level observed at a location, usually equivalent to the high water springs.
-!===
-
-a|
-nearlyLowestLowWater
-
-[cols=","]
-!===
-!Name: !nearly lowest low water
-!Definition: !A level approximating the lowest water level observed at a location, usually equivalent to Indian spring low water.
-!===
-
-a|
-tropicHigherHighWater
-
-[cols=","]
-!===
-!Name: !tropic higher high water
-!Definition: !The highest of the high waters (or single high water) of the tides occurring semimonthly when the effect of the Moon's maximum declination is greatest.
-!===
-
-a|
-tropicLowerLowWater
-
-[cols=","]
-!===
-!Name: !tropic lower low water
-!Definition: !The lowest of the low waters (or single low water) of the tides occurring semimonthly when the effect of the Moon's maximum declination is greatest.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
