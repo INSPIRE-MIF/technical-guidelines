@@ -1995,7 +1995,7 @@ a|
 [cols=","]
 !===
 !Natural language: !A river basin may not be contained in any other basin
-!OCL: !inv: self.containsBasin->forall(c | not c.oclIsTypeOf(RiverBasin))
+!OCL: !inv: self.containsBasin->forall(c \| not c.oclIsTypeOf(RiverBasin))
 !===
 
 |===
