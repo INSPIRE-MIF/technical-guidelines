@@ -12,7 +12,7 @@
 // Empty TOC title (the title is in the document)
 :toc-title:
 
-// TOC level depth
+// TOC level depth  
 :toclevels: 5
 
 // Section numbering level depth
@@ -2205,7 +2205,7 @@ a|
 !Definition: !Values indicating the condition of a construction.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/ConditionOfConstructionValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2222,7 +2222,7 @@ a|
 !Definition: !Values indicating the method used to capture a height.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HeightStatusValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2240,7 +2240,7 @@ a|
 !Description: !NOTE The values of this code list are used to describe the reference of elevation both where elevation has been captured as attribute or as Z coordinate.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/ElevationReferenceValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Resgitry.
 !===
 
 |===
@@ -2259,7 +2259,7 @@ a|
 NOTE the values of this code list apply to buildings or building components where building components may be a building part (in core profiles) or a building unit (in extended profiles)
 !Extensibility: !narrower
 !Identifier: !http://inspire.ec.europa.eu/codelist/CurrentUseValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and narrower values defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and narrower values defined by data providers.
 !===
 
 |===
@@ -2279,7 +2279,7 @@ NOTE 2: The values included in this code list address mainly (but not only) two 
 NOTE 3: This code list should only be applied for buildings, even if it may be applicable to other constructions (for example, not all dams are buildings).
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/BuildingNatureValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2296,7 +2296,7 @@ a|
 !Definition: !Values indicating the element considered to capture a horizontal geometry.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HorizontalGeometryRefrenceValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -12187,7 +12187,9 @@ For instance, in France, the criteria to be respected are the following:
 
 <<<
 [appendix]
-== Code list values - (normative) 
+== Code list values 
+
+=== (normative)
 
 *INSPIRE Application Schema 'BuildingsBase'*
 
@@ -12216,191 +12218,7 @@ NOTE 2: The values included in this code list address mainly (but not only) two 
 NOTE 3: This code list should only be applied for buildings, even if it may be applicable to other constructions (for example, not all dams are buildings).
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/BuildingNatureValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*arch*
-
-[cols=","]
-!===
-!Name: !arch
-!Definition: !A man-made structure in the form of an arch.
-!===
-
-a|
-*bunker*
-
-[cols=","]
-!===
-!Name: !bunker
-!Definition: !A facility, partly underground, intended for or used by the military either for location of command/control centers or for troop encampment.
-!===
-
-a|
-*canopy*
-
-[cols=","]
-!===
-!Name: !canopy
-!Definition: !An overhead roof providing shelter to things below. Canopies may be free standing frameworks over which a covering is attached or may be linked or suspended to the outside of a building.
-!===
-
-a|
-*caveBuilding*
-
-[cols=","]
-!===
-!Name: !cave building
-!Definition: !A space hosting human or economic activity which is usually enclosed within rock with the addition of man-made exterior walls and which may contain structures comparable to the interior structures of freestanding buildings.
-!===
-
-a|
-*chapel*
-
-[cols=","]
-!===
-!Name: !chapel
-!Definition: !A Christian place of worship, usually smaller than a church.
-!===
-
-a|
-*castle*
-
-[cols=","]
-!===
-!Name: !castle
-!Definition: !A large ornate or fortified building usually constructed for the purpose of a private residence or security.
-!===
-
-a|
-*church*
-
-[cols=","]
-!===
-!Name: !church
-!Definition: !A building or structure whose primary purpose is to facilitate the catholic or orthodox cult.
-!===
-
-a|
-*dam*
-
-[cols=","]
-!===
-!Name: !dam
-!Definition: !A permanent barrier across a watercourse used to impound water or to control its flow.
-!===
-
-a|
-*greenhouse*
-
-[cols=","]
-!===
-!Name: !greenhouse
-!Definition: !A building that is often constructed primarily of transparent material (for example: glass), in which temperature and humidity can be controlled for the cultivation and/or protection of plants.
-!===
-
-a|
-*lighthouse*
-
-[cols=","]
-!===
-!Name: !lighthouse
-!Definition: !A tower designed to emit light from a system of lamps and lenses.
-!===
-
-a|
-*mosque*
-
-[cols=","]
-!===
-!Name: !mosque
-!Definition: !A building or structure whose primary purpose is to facilitate the muslim cult.
-!===
-
-a|
-*shed*
-
-[cols=","]
-!===
-!Name: !shed
-!Definition: !A building of light construction, which usually has one or more open sides, that is typically used for storage.
-!===
-
-a|
-*silo*
-
-[cols=","]
-!===
-!Name: !silo
-!Definition: !A large storage structure, generally cylindrical, used for storing loose materials.
-!===
-
-a|
-*stadium*
-
-[cols=","]
-!===
-!Name: !stadium
-!Definition: !A place or venue for sports, concerts or other events and consists of a field or stage either partly or completely surrounded by a structure designed to allow spectators to stand or sit and view the event.
-!===
-
-a|
-*storageTank*
-
-[cols=","]
-!===
-!Name: !storage tank
-!Definition: !A container usually for holding liquids and compressed gases.
-!===
-
-a|
-*synagogue*
-
-[cols=","]
-!===
-!Name: !synagogue
-!Definition: !A building or structure whose primary purpose is to facilitate the israelit cult.
-!===
-
-a|
-*temple*
-
-[cols=","]
-!===
-!Name: !temple
-!Definition: !A building or structure whose primary purpose is to facilitate the meeting of a religious sect.
-!===
-
-a|
-*tower*
-
-[cols=","]
-!===
-!Name: !tower
-!Definition: !A relatively tall, narrow structure that may either stand alone or may form part of another structure.
-!===
-
-a|
-*windmill*
-
-[cols=","]
-!===
-!Name: !windmill
-!Definition: !A building which converts the energy of the wind into rotational motion by means of adjustable sails or blades.
-!===
-
-a|
-*windTurbine*
-
-[cols=","]
-!===
-!Name: !wind turbine
-!Definition: !A tower and associated equipment that generates electrical power from wind.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -12416,67 +12234,7 @@ a|
 !Definition: !Values indicating the condition of a construction.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/ConditionOfConstructionValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*declined*
-
-[cols=","]
-!===
-!Name: !declined
-!Definition: !The construction cannot be used under normal conditions, though its main elements (walls, roof) are still present.
-!Description: !EXAMPLE: A house whose windows have been for a long time broken or walled up (even if occupied by squatters).
-!===
-
-a|
-*demolished*
-
-[cols=","]
-!===
-!Name: !demolished
-!Definition: !The construction has been demolished. There are no more visible remains.
-!===
-
-a|
-*functional*
-
-[cols=","]
-!===
-!Name: !functional
-!Definition: !The construction is functional.
-!Description: !NOTE The construction may be used under normal conditions for its current use value(s).
-!===
-
-a|
-*projected*
-
-[cols=","]
-!===
-!Name: !projected
-!Definition: !The construction is being designed. Construction has not yet started.
-!===
-
-a|
-*ruin*
-
-[cols=","]
-!===
-!Name: !ruin
-!Definition: !The construction has been partly demolished and some main elements (roof, walls) have been destroyed. There are some visible remains of the construction.
-!===
-
-a|
-*underConstruction*
-
-[cols=","]
-!===
-!Name: !under construction
-!Definition: !The construction is under construction and not yet functional. This applies only to the initial construction of the construction and not to maintenance work.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -12494,146 +12252,7 @@ a|
 NOTE the values of this code list apply to buildings or building components where building components may be a building part (in core profiles) or a building unit (in extended profiles)
 !Extensibility: !narrower
 !Identifier: !http://inspire.ec.europa.eu/codelist/CurrentUseValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and narrower values defined by data providers.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*residential*
-
-[cols=","]
-!===
-!Name: !residential
-!Definition: !The building (or building component) is used for residential purpose.
-!===
-
-a|
-*individualResidence*
-
-[cols=","]
-!===
-!Name: !individual residence
-!Definition: !The building (or building component) hosts only one dwelling.
-!Description: !"NOTE This value includes detached houses such as bungalows, villas, chalets, forest lodges, farmhouses, country houses, summer houses, weekend houses and semi-detached or terraced houses, with each dwelling having its own roof and its own entrance directly from ground surface."
-!Parent: !residential
-!===
-
-a|
-*collectiveResidence*
-
-[cols=","]
-!===
-!Name: !collective residence
-!Definition: !The building (or building component) hosts more than one dwelling.
-!Parent: !residential
-!===
-
-a|
-*twoDwellings*
-
-[cols=","]
-!===
-!Name: !two dwellings
-!Definition: !The building (or building component) hosts two dwellings.
-!Description: !"NOTE This class includes detached houses, semi-detached or terraced houses, with two dwellings."
-!Parent: !collectiveResidence
-!===
-
-a|
-*moreThanTwoDwelling*
-
-[cols=","]
-!===
-!Name: !more than two dwellings
-!Definition: !The building (or building component) hosts at least 3 dwellings.
-!Description: !"NOTE This class includes flat blocks, apartment houses, with three or more dwellings but excludes residence for communities."
-!Parent: !collectiveResidence
-!===
-
-a|
-*residenceForCommunities*
-
-[cols=","]
-!===
-!Name: !residence for communities
-!Definition: !The building (or building component) hosts a residence for communities.
-!Description: !"This class includes residential buildings for communities, including residences and service residences for the elderly, students, children and other social groups."
-!Parent: !residential
-!===
-
-a|
-*agriculture*
-
-[cols=","]
-!===
-!Name: !agriculture
-!Definition: !The building (or building component) is used for agricultural activities.
-!===
-
-a|
-*industrial*
-
-[cols=","]
-!===
-!Name: !industrial
-!Definition: !The building (or building component) is used for secondary sector activities (industrial).
-!===
-
-a|
-*commerceAndServices*
-
-[cols=","]
-!===
-!Name: !commerce and services
-!Definition: !The building (or building component) is used for any service activities. This value addresses the buildings and building components dedicated to tertiary sector activities (commercial and services).
-!Description: !"NOTE This value includes both ternary sector (commercial activities) and quaternary sector (non-commercial, charity sector)."
-!===
-
-a|
-*office*
-
-[cols=","]
-!===
-!Name: !office
-!Definition: !The building (or building component) hosts offices.
-!Parent: !commerceAndServices
-!===
-
-a|
-*trade*
-
-[cols=","]
-!===
-!Name: !trade
-!Definition: !The building (or building component) hosts trade activities.
-!Description: !"EXAMPLE: Shops, supermarkets, hotels, restaurants."
-!Parent: !commerceAndServices
-!===
-
-a|
-*publicServices*
-
-[cols=","]
-!===
-!Name: !public services
-!Definition: !The building (or building component) hosts public services. Public services are tertiary services provided for the benefit of the citizens.
-!Description: !"Public services are often ruled by public governments or on behalf of them. 
-EXAMPLES: Schools, hospitals, governmental buildings, prisons, rescue stations, transport station. 
-NOTE in case of a building being both office and public service (e.g. a city hall), the building should be classified preferably as public service."
-!Parent: !commerceAndServices
-!===
-
-a|
-*ancillary*
-
-[cols=","]
-!===
-!Name: !ancillary
-!Definition: !A building (or building component) of small size that is used only in connection with another larger building (or building component) and generally does not inherit the same function and characteristics as the building (or building component) it is linked to.
-!Description: !EXAMPLES : A summer house or garage (ancillary use) in the garden of a dwelling (residential use).
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and narrower values defined by data providers.
 !===
 
 |===
@@ -12650,161 +12269,7 @@ a|
 !Description: !NOTE The values of this code list are used to describe the reference of elevation both where elevation has been captured as attribute or as Z coordinate.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/ElevationReferenceValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*aboveGroundEnvelope*
-
-[cols=","]
-!===
-!Name: !above ground envelope
-!Definition: !The elevation has been captured at the level of the maximum extend of the above ground envelope of the construction.
-!===
-
-a|
-*bottomOfConstruction*
-
-[cols=","]
-!===
-!Name: !bottom of construction
-!Definition: !The elevation has been captured at the bottom of the usable part of the construction.
-!Description: !NOTE The bottom of usable part of a building is generally its lowest underground floor.
-!===
-
-a|
-*entrancePoint*
-
-[cols=","]
-!===
-!Name: !entrance point
-!Definition: !The elevation has been captured at the entrance of the construction, generally the bottom of entrance door.
-!===
-
-a|
-*generalEave*
-
-[cols=","]
-!===
-!Name: !general eave
-!Definition: !The elevation has been captured on one of the meeting lines between the roof and the walls.
-!Description: !"NOTE in case of a roof having a symetry axis, values generalEave, lowestEave and highestEave are equivalent."
-!===
-
-a|
-*generalGround*
-
-[cols=","]
-!===
-!Name: !general ground
-!Definition: !The elevation has been captured on one of the meeting lines between the construction and the ground.
-!Description: !"NOTE In case of buildings located on flat areas, values generalGround, lowestGroundPoint and highestGroundPoint are equivalent."
-!===
-
-a|
-*generalRoof*
-
-[cols=","]
-!===
-!Name: !general roof
-!Definition: !The elevation has been captured anywhere on the roof.
-!===
-
-a|
-*generalRoofEdge*
-
-[cols=","]
-!===
-!Name: !general roof Edge
-!Definition: !The elevation has been captured on one of the roof edges.
-!Description: !"NOTE in case of a roof having a symetry axis, values generalRoofEdge, lowestRoofEdge and highestRoofEdge are equivalent."
-!===
-
-a|
-*highestEave*
-
-[cols=","]
-!===
-!Name: !highest eave
-!Definition: !The elevation has been captured on the highest meeting line between the roof and the walls.
-!===
-
-a|
-*highestGroundPoint*
-
-[cols=","]
-!===
-!Name: !highest ground Point
-!Definition: !The elevation has been captured on the highest point of the meeting lines between the construction and the ground.
-!===
-
-a|
-*highestPoint*
-
-[cols=","]
-!===
-!Name: !highest point
-!Definition: !The elevation has been captured at the highest point of the construction, including the installations, such as chimneys and antennas.
-!===
-
-a|
-*highestRoofEdge*
-
-[cols=","]
-!===
-!Name: !highest roof edge
-!Definition: !The elevation has been captured at the highest roof edge level of the construction.
-!===
-
-a|
-*lowestEave*
-
-[cols=","]
-!===
-!Name: !lowest eave
-!Definition: !The elevation has been captured on the lowest meeting line between the roof and the walls.
-!===
-
-a|
-*lowestFloorAboveGround*
-
-[cols=","]
-!===
-!Name: !lowest floor above ground
-!Definition: !The elevation has been captured at the level of the lowest floor above ground of the construction.
-!Description: !This value is of interest for over-hanging buildings or for buildings on pilotis.
-!===
-
-a|
-*lowestGroundPoint*
-
-[cols=","]
-!===
-!Name: !lowest ground point
-!Definition: !The elevation has been captured on the lowest point of the meeting lines between the construction and the ground.
-!===
-
-a|
-*lowestRoofEdge*
-
-[cols=","]
-!===
-!Name: !lowest roof edge
-!Definition: !The elevation has been captured at the lowest roof edge level of theconstruction.
-!===
-
-a|
-*topOfConstruction*
-
-[cols=","]
-!===
-!Name: !top of construction
-!Definition: !The elevation has been captured at the top level of the construction.
-!Description: !"NOTE for buildings, it is generally top of the roof."
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -12820,32 +12285,7 @@ a|
 !Definition: !Values indicating the method used to capture a height.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HeightStatusValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*estimated*
-
-[cols=","]
-!===
-!Name: !estimated
-!Definition: !The height has been estimated and not measured.
-!Description: !"EXAMPLE 1: Typically, the height has been estimated from the number of floors. 
-EXAMPLE 2: In some cases, the height has been estimated by interpolation of a set of heights of adjacent buildings."
-!===
-
-a|
-*measured*
-
-[cols=","]
-!===
-!Name: !measured
-!Definition: !The height has been (directly or indirectly) measured.
-!Description: !"EXAMPLE: typically, the elevation at ground level and at roof level has been measured by stereo-plotting or by field survey or by cross-referencing with DTM (Digital Terrain Model)."
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -12861,98 +12301,13 @@ a|
 !Definition: !Values indicating the element considered to capture a horizontal geometry.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HorizontalGeometryRefrenceValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Regsitry.
 !===
 
 |===
 
-[cols=""]
-|===
-a|
-*aboveGroundEnvelope*
-
-[cols=","]
-!===
-!Name: !above ground envelope
-!Definition: !The building horizontal geometry has been captured using the above ground envelope of the building, i.e. the maximum extent of the building above ground.
-!===
-
-a|
-*combined*
-
-[cols=","]
-!===
-!Name: !combined
-!Definition: !The building horizontal geometry has been obtained from the combination of the geometries of its building parts with the geometries of the building parts using different horizontal geometry references.
-!Description: !"EXAMPLE: A building with two building parts, one captured by its footprint and the other by its lowest floor above ground, and whose geometry is obtained by merging the geometries of the building parts."
-!===
-
-a|
-*entrancePoint*
-
-[cols=","]
-!===
-!Name: !entrance point
-!Definition: !The building geometry is represented by a point located at the entrance of the building.
-!===
-
-a|
-*envelope*
-
-[cols=","]
-!===
-!Name: !envelope
-!Definition: !The building horizontal geometry has been captured using the whole envelope of the building, i.e. the maximum extent of the building above and under ground.
-!===
-
-a|
-*footPrint*
-
-[cols=","]
-!===
-!Name: !foot print
-!Definition: !The building horizontal geometry has been captured using the footprint of the building, i.e. its extent at ground level.
-!===
-
-a|
-*lowestFloorAboveGround*
-
-[cols=","]
-!===
-!Name: !lowest floor above ground
-!Definition: !The building horizontal geometry has been captured using the lowest floor above ground of the building.
-!Description: !This value is of interest for over-hanging buildings or for buildings on pilotis.
-!===
-
-a|
-*pointInsideBuilding*
-
-[cols=","]
-!===
-!Name: !point inside building
-!Definition: !The building horizontal geometry is represented by a point located within the building.
-!===
-
-a|
-*pointInsideCadastralParcel*
-
-[cols=","]
-!===
-!Name: !point inside cadastral parcel
-!Definition: !The building horizontal geometry is represented by a point located within the parcel the building belongs to.
-!===
-
-a|
-*roofEdge*
-
-[cols=","]
-!===
-!Name: !roof edge
-!Definition: !The building horizontal geometry has been captured using the roof edges of the building.
-!Description: !NOTE This value may be used more generally when the building horizontal geometry has been captured by the roof extent.
-!===
-
-|===
+<<<
+=== (informative)
 
 *INSPIRE Application Schema 'BuildingsExtendedBase'*
 
@@ -13019,7 +12374,7 @@ a|
 
 [cols=","]
 !===
-!Name: !internal area
+!Name   : !internal area
 !Definition: !Internal area is the area within the interior perimeter of a building or building unit, measured above skirting-board level.
 !Description: !"Internal area is mainly used as reference unit of measure in valuation, property transaction, renting and building management."
 !===
@@ -14830,7 +14185,7 @@ a|
 
 |===
 
-*RoomNatureValue*
+*RoomNatureVal1ue*
 
 [cols="",]
 |===
