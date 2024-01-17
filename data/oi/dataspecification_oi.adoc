@@ -1822,7 +1822,7 @@ a|
 NOTE 2 Example values: nearestneighbor, bilinear, biquadratic, bicubic, etc...
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/InterpolationMethodValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -4954,7 +4954,7 @@ Another orthoimage requirements:
 == Code list values - (normative) 
 
 
-INSPIRE Application Schema '_Orthoimagery_'
+*INSPIRE Application Schema '_Orthoimagery_'*
 
 [cols="",options="header",]
 |===
@@ -4971,47 +4971,7 @@ INSPIRE Application Schema '_Orthoimagery_'
 NOTE 2 Example values: nearestneighbor, bilinear, biquadratic, bicubic, etc...
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/InterpolationMethodValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-|===
-
-[cols=""]
-|===
-a|
-*nearestNeighbour*
-
-[cols=","]
-!===
-!Name: !nearest neighbour
-!Definition: !Nearest neighbour interpolation
-!===
-
-a|
-*bilinear*
-
-[cols=","]
-!===
-!Name: !bilinear
-!Definition: !Bilinear interpolation
-!===
-
-a|
-*biquadratic*
-
-[cols=","]
-!===
-!Name: !biquadratic
-!Definition: !Biquadratic interpolation
-!===
-
-a|
-*bicubic*
-
-[cols=","]
-!===
-!Name: !bicubic
-!Definition: !Bicubic interpolation
-!===
-
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 |===
 
 <<<
