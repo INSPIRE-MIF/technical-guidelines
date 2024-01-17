@@ -5448,7 +5448,7 @@ a|
 !Definition: !The code values for the NUTS levels.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/NUTSLevelValue
-!Values: !The allowed values for this code list comprise the values specified in this Annex and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in this Annex and additional values at any level defined by data providers. This Annex includes recommended values that may be used by data providers.
 !===
 
 |===
