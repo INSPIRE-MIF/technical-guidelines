@@ -2445,7 +2445,7 @@ a|
 !===
 !Definition: !A generic classification of types of natural hazards.
 !Extensibility: !narrower
-!Identifier: !http://inspire.ec.europa.eu/codelist/RiskOrHazardCategoryValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/NaturalHazardCategoryValue
 !Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and narrower values defined by data providers.
 !===
 
@@ -5646,7 +5646,7 @@ a|
 !===
 !Definition: !A generic classification of types of natural hazards.
 !Extensibility: !narrower
-!Identifier: !http://inspire.ec.europa.eu/codelist/RiskOrHazardCategoryValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/NaturalHazardCategoryValue
 !Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and narrower values defined by data providers. The INSPIRE Registry includes additional recommended values that may also be used by data providers. Before creating new terms, please check if one of them can be used.
 
 !===
