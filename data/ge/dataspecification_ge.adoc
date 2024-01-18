@@ -10335,7 +10335,8 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 
 |===
 
-==== INSPIRE Application Schema 'GeophysicsExtension'
+==== GeophysicsExtension - Code Lists
+*INSPIRE Application Schema 'GeophysicsExtension'*
 
 [cols="",options="header",]
 |===
@@ -10352,7 +10353,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 
 
-===== CurveModelTypeValue
+*CurveModelTypeValue*
 
 [cols="",]
 |===
@@ -10399,7 +10400,7 @@ a|
 
 |===
 
-===== GeophProcessNameValue
+*GeophProcessNameValue*
 
 [cols="",]
 |===
@@ -10706,7 +10707,7 @@ a|
 
 |===
 
-===== GeophProcessParameterNameValue
+*GeophProcessParameterNameValue*
 
 [cols="",]
 |===
@@ -12835,7 +12836,7 @@ a|
 
 |===
 
-===== GeophPropertyNameValue
+*GeophPropertyNameValue*
 
 [cols="",]
 |===
@@ -14125,7 +14126,7 @@ a|
 
 |===
 
-===== OtherGeophModelTypeValue
+*OtherGeophModelTypeValue*
 
 [cols="",]
 |===
@@ -14225,7 +14226,7 @@ a|
 
 |===
 
-===== OtherMeasurementTypeValue
+*OtherMeasurementTypeValue*
 
 [cols="",]
 |===
@@ -14254,7 +14255,7 @@ a|
 
 |===
 
-===== ResourceTypeValue
+*ResourceTypeValue*
 
 [cols="",]
 |===
@@ -14435,8 +14436,7 @@ a|
 
 |===
 
-[discrete]
-=== SolidGridModelTypeValue
+*SolidGridModelTypeValue*
 
 [cols="",]
 |===
@@ -14474,7 +14474,7 @@ a|
 
 |===
 
-===== SurfaceGridModelTypeValue
+*SurfaceGridModelTypeValue*
 
 [cols="",]
 |===
