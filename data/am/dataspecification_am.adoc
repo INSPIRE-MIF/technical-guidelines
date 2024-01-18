@@ -1661,9 +1661,18 @@ a|
 !===
 !Name: !specialised zone type code
 !Definition: !Additional classification value that defines the specialised type of zone.
-!Description: !
+!Description: a! For some ManagementRestrictionOrRegulationZones each zone may be further specialised. This is used to indicate that additional controls (activities or measures)may be in force depending on its specialised type.
+Example 1: Air Quality Management Zones - can be specialised as either:
+* agglomerations
+* nonAgglomeration
+Example 2: Animal Health Restriction Zones - can be specialised as either:
+* restrictionZone
+* protectionZone
+* controlZone
+* lowerRiskZone
+* surveillanceZone
 !Extensibility: !any
-!Identifier: !
+!Identifier: ! http://inspire.ec.europa.eu/codelist/SpecialisedZoneTypeCode
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
