@@ -3566,7 +3566,7 @@ a|
 !===
 !Definition: !Possible service facilities available at a road service area.
 !Extensibility: !none
-!Identifier: !
+!Identifier: !https://inspire.ec.europa.eu/codelist/ServiceFacilityValue
 !Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
@@ -11358,7 +11358,6 @@ Documentation
 
 [cols=",",]
 |===
-|
 |Definition: |Speed limit restriction depending on the area.
 |Description: |SOURCE [Euroroads].
 |Extensibility: |none
@@ -11429,7 +11428,7 @@ Documentation
 |===
 |Definition: |Possible service facilities available at a road service area.
 |Extensibility: |none
-|Identifier: |
+|Identifier: |https://inspire.ec.europa.eu/codelist/ServiceFacilityValue
 |Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
