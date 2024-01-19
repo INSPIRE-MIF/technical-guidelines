@@ -1533,7 +1533,7 @@ a|
 !Definition: !List of values that specify the relation between a locally used name and a name used at the pan-European level.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codeList/QualifierLocalNameValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1550,11 +1550,11 @@ a|
 !Definition: !Values used in the Pan-European habitat classification schemes.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/ReferenceHabitatTypeCodeValue
-!Values: !
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
-
+    
 ====== ReferenceHabitatTypeSchemeValue
 
 [cols="",options="header",]
@@ -1568,7 +1568,7 @@ a|
 !Description: !EXAMPLE Eunis
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codeList/ReferenceHabitatTypeSchemeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -7090,56 +7090,7 @@ a|
 !Definition: !List of values that specify the relation between a locally used name and a name used at the pan-European level.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codeList/QualifierLocalNameValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols="",]
-|===
-a|
-*congruent*
-
-[cols=","]
-!===
-!Name: !congruent
-!Definition: !The local type is conceptually the same as its related Pan-European type.
-!===
-
-a|
-*excludes*
-
-[cols=","]
-!===
-!Name: !excludes
-!Definition: !The Pan-European habitat type is conceptually not a subtype of its related local type.
-!===
-
-a|
-*includedIn*
-
-[cols=","]
-!===
-!Name: !included in
-!Definition: !The local type is conceptually a subtype of its related Pan-European type.
-!===
-
-a|
-*includes*
-
-[cols=","]
-!===
-!Name: !includes
-!Definition: !The Pan-European habitat type is conceptually a subtype of its related local type.
-!===
-
-a|
-*overlaps*
-
-[cols=","]
-!===
-!Name: !overlaps
-!Definition: !There is a certain overlap between the local type and its related Pan-European type according to their respective definitions, but none of the other specific relationships (congruent, excludes, included in, includes) holds.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -7156,38 +7107,7 @@ a|
 !Description: !EXAMPLE Eunis
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codeList/ReferenceHabitatTypeSchemeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*eunis*
-
-[cols=","]
-!===
-!Name: !Eunis
-!Definition: !EUNIS habitat classification.
-!===
-
-a|
-*habitatsDirective*
-
-[cols=","]
-!===
-!Name: !Habitats directive
-!Definition: !Classification of habitats according to Annex I to Directive 92/43/EEC.
-!===
-
-a|
-*marineStrategyFrameworkDirective*
-
-[cols=","]
-!===
-!Name: !Marine strategy framework directive
-!Definition: !Classification of habitats according to table 1 of Annex III to Directive 2008/56/EC.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
