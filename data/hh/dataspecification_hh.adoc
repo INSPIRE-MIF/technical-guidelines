@@ -2131,7 +2131,7 @@ a|
 !Description: !The EIONET codelist is recommended.
 !Extensibility: !open
 !Identifier: !http://www.eionet.europa.eu/aqportal/codelists
-!Values: !The allowed values for this code list comprise the values specified in "Reference Portal for Natura 2000 as defined in Commission Implementing Decision 2011/484/EU" and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in "Reference Portal for Natura 2000 as defined in Commission Implementing Decision 2011/484/EU" and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2149,7 +2149,7 @@ a|
 !Description: !The EIONET codelist is recommended.
 !Extensibility: !open
 !Identifier: !http://dd.eionet.europa.eu/datasets/2943
-!Values: !The allowed values for this code list comprise the values specified in "Reference Portal for Natura 2000 as defined in Commission Implementing Decision 2011/484/EU" and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in "Reference Portal for Natura 2000 as defined in Commission Implementing Decision 2011/484/EU" and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2200,7 +2200,7 @@ a|
 !Definition: !Different ways how data on diseases and related health problems in a population can be reported.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/DiseaseMeasureTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2217,7 +2217,7 @@ a|
 !Definition: !Type of environmental health determinant.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/EnvHealthDeterminantTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2235,7 +2235,7 @@ a|
 !Description: !The EIONET codelist is recommended.
 !Extensibility: !open
 !Identifier: !http://dd.eionet.europa.eu/datasets/2916
-!Values: !The allowed values for this code list comprise the values specified in "Reference Portal for Natura 2000 as defined in Commission Implementing Decision 2011/484/EU" and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in "Reference Portal for Natura 2000 as defined in Commission Implementing Decision 2011/484/EU" and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2252,7 +2252,7 @@ a|
 !Definition: !This codelist contains some items included and defined by Eurostat as "Non-expenditure health care data" (http://epp.eurostat.ec.europa.eu/cache/ITY_SDDS/EN/hlth_care_esms.htm).
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/HealthServicesTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2270,7 +2270,7 @@ a|
 !Description: !The EIONET codelist is recommended.
 !Extensibility: !any
 !Identifier: !http://dd.eionet.europa.eu/datasets/2909
-!Values: !The allowed values for this code list comprise any values defined by data providers. Annex _C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
 |===
@@ -2304,8 +2304,8 @@ a|
 !Definition: !The media in which the concentration of a health component is measured.
 !Description: !EXAMPLE: Drinking water, indoor air, ambient air, etc.
 !Extensibility: !any
-!Identifier: !
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Identifier: !https://inspire.ec.europa.eu/codelist/MediaTypeValue
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2341,7 +2341,7 @@ a|
 !Description: !The EIONET codelist is recommended.
 !Extensibility: !any
 !Identifier: !http://dd.eionet.europa.eu/datasets/2908
-!Values: !The allowed values for this code list comprise any values defined by data providers. Annex _C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
 |===
@@ -2358,7 +2358,7 @@ a|
 !Definition: !The types of statistical methods used to aggregate raw measurement data on the statistical unit.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/StatisticalAggregationMethodValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2412,7 +2412,7 @@ a|
 !Definition: !Type of health status indicators.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeneralHealthTypeValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -3242,7 +3242,7 @@ a|
 !Definition: !Types of consequence caused by an event.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ConsequenceTypeValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -3259,7 +3259,7 @@ a|
 !Definition: !List of values showing the type of use of the building.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/BuildingUseValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -3276,7 +3276,7 @@ a|
 !Definition: !The value allowed for the fire or explosion related event type
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/FireOrExplosionTypeValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -3293,7 +3293,7 @@ a|
 !Definition: !Codes for hazardous materials.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/HazardousMaterialTypeValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -3310,7 +3310,7 @@ a|
 !Definition: !List of type of traffic related event.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/TrafficTypeValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -6093,49 +6093,7 @@ a|
 !Definition: !Different ways how data on diseases and related health problems in a population can be reported.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/DiseaseMeasureTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers.
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*incidence*
-
-[cols=","]
-!===
-!Name: !Incidence
-!Definition: !the number of new cases of a condition, symptom, death, or injury that develop during a specific time period, such as a year. The number is often expressed as a percentage of a population. (ref.: http://www.nlm.nih.gov/medlineplus/ency/article/002387.htm)
-!===
-
-a|
-*prevalence*
-
-[cols=","]
-!===
-!Name: !Prevalence
-!Definition: !The proportion of individuals in a population having a disease. Prevalence is a statistical concept referring to the number of cases of a disease that are present in a particular population at a given time.\n(ref.: http://www.medterms.com/script/main/art.asp?articlekey=11697) .
-!===
-
-a|
-*mortality*
-
-[cols=","]
-!===
-!Name: !Mortality
-!Definition: !Data on death; often expressed as mortality (death) rate, which is an estimate of the proportion of a population that dies during a specified period. Mortality (death) statistics usually show numbers of death ad/or rates by age, sex, cause, and sometimes other variables. Different types of mortality (death) rates are available, for example infant mortality rate (the number of children dying under a year of age divided by the number of live births that year).\nRef.: Porta M (Ed.). A Dictionary of Epidemiology. IEA, 2008. Oxford University Press.
-!===
-
-a|
-*outbreak*
-
-[cols=","]
-!===
-!Name: !Outbreak
-!Definition: !An epidemic limited to localized increase in the incidence of a disease; e.g. in a village, town, or closed institution.\nRef.: Porta M (Ed.). A Dictionary of Epidemiology. IEA, 2008. Oxford University Press.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
@@ -6151,58 +6109,7 @@ a|
 !Definition: !Type of environmental health determinant.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/EnvHealthDeterminantTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers.
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*air*
-
-[cols=","]
-!===
-!Name: !air
-!Definition: !Environmental health determinant related to air.
-!===
-
-a|
-*indoorAir*
-
-[cols=","]
-!===
-!Name: !indoor Air
-!Definition: !Environmental health determinant related to indoor air.
-!===
-
-a|
-*water*
-
-[cols=","]
-!===
-!Name: !water
-!Definition: !Environmental health determinant related to water.
-!===
-
-a|
-*noise*
-
-[cols=","]
-!===
-!Name: !noise
-!Definition: !Environmental health determinant related to noise.
-!===
-
-a|
-*pollen*
-
-[cols=","]
-!===
-!Name: !pollen
-!Definition: !Environmental health determinant related to pollen.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
@@ -6218,67 +6125,7 @@ a|
 !Definition: !Type of health status indicators.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeneralHealthTypeValue
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*measuredBMI*
-
-[cols=","]
-!===
-!Name: !measured BMI
-!Definition: !Measured Body mass index.
-!===
-
-a|
-*selfPerceivedBMI*
-
-[cols=","]
-!===
-!Name: !self perceived BMI
-!Definition: !Self Perceived Body mass index.
-!===
-
-a|
-*selfPerceivedHealth*
-
-[cols=","]
-!===
-!Name: !self perceived health
-!Definition: !The data on self-perceived health refer to the auto-evaluation of the general health state (i.e. any temporary health problem is not considered) by respondents using a scale from """"very good"""" to """"very bad"""".
-!===
-
-a|
-*smokers*
-
-[cols=","]
-!===
-!Name: !smokers
-!Definition: !smokers
-!===
-
-a|
-*longStandingIllness*
-
-[cols=","]
-!===
-!Name: !long standing illness
-!Definition: !The data on chronic (longstanding) illnesses or conditions refer to the self-declaration by the respondents of whether they have or have not a chronic (longstanding) illness or condition.
-!===
-
-a|
-*selfPerceivedLimitationDailyActivity*
-
-[cols=","]
-!===
-!Name: !self perceived limitation of daily activity
-!Definition: !The data on limitation in activities due to health problems refer to the auto-evaluation by the respondents of the extent of which they are limited in activities people usually do because of health problems for at least the last 6 months (strongly limited, limited, not limited).
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
@@ -6294,103 +6141,7 @@ a|
 !Definition: !This codelist contains some items included and defined by Eurostat as "Non-expenditure health care data" (http://epp.eurostat.ec.europa.eu/cache/ITY_SDDS/EN/hlth_care_esms.htm).
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/HealthServicesTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers.
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*hospitalBed*
-
-[cols=","]
-!===
-!Name: !Hospital bed
-!Definition: !Total hospital beds are all hospital beds which are regularly maintained and staffed and immediately available for the care of admitted patients. Hospital beds provide information on health care capacities, i.e. on the maximum number of patients who can be treated by hospitals.
-!===
-
-a|
-*physician*
-
-[cols=","]
-!===
-!Name: !Physician
-!Definition: !Physicians (medical doctors) as defined by ISCO 88 (code 2221) apply preventive and curative measures, improve or develop concepts, theories and operational methods and conduct research in the area of medicine and health care (http://epp.eurostat.ec.europa.eu/tgm/table.do?\ntab=table&init=1&language=en&pcode=tps00044&plugin=1).
-!===
-
-a|
-*healthCareExpenditure*
-
-[cols=","]
-!===
-!Name: !Health care expenditure
-!Definition: !Health care expenditure data provide information on expenditure in the functionally defined area of health distinct by provider category (e.g. hospitals, general practitioners), function category (e.g. services of curative care, rehabilitative care, clinical laboratory, patient transport, prescribed medicines) and financing agent (e.g. social security, private insurance company, household).
-!===
-
-a|
-*curativeHospitalBed*
-
-[cols=","]
-!===
-!Name: !Curative hospital bed
-!Definition: !Curative care (or acute care) beds in hospitals are beds that are available for curative care. These beds are a subgroup of total hospital beds; both occupied and unoccupied beds are covered.
-!===
-
-a|
-*averageLengthOfStay*
-
-[cols=","]
-!===
-!Name: !Average length of stay
-!Definition: !Average length of stay (ALOS) is computed by dividing the number of hospital days (or bed-days or in-patient days) from the date of admission in an in-patient institution (date of discharge minus date of admission) by the number of discharges (including deaths) during the year.
-!===
-
-a|
-*psychiatricCareBed*
-
-[cols=","]
-!===
-!Name: !Psychiatric care bed
-!Definition: !Psychiatric care beds in hospitals are beds accommodating patients with mental health problems. These beds are a subgroup of total hospital beds; both occupied and unoccupied beds are covered.
-!===
-
-a|
-*discharge*
-
-[cols=","]
-!===
-!Name: !Discharge
-!Definition: !The total number of in-patient discharges (excluding day cases) with the above diagnosis for a given gender and age group.
-!===
-
-a|
-*bedDays*
-
-[cols=","]
-!===
-!Name: !Bed days
-!Definition: !The total number of bed-days used by in-patients (excluding day cases) with the above diagnosis for given gender and age group.
-!===
-
-a|
-*dayCases*
-
-[cols=","]
-!===
-!Name: !Day cases
-!Definition: !The total number of day case discharges with the above diagnosis for a given gender and age group.
-!===
-
-a|
-*practisingPhysician*
-
-[cols=","]
-!===
-!Name: !Practising physicians
-!Definition: !Practising physicians as defined by ISCO 88 (code 2221) provide services directly to patients(http://epp.eurostat.ec.europa.eu/tgm/table.do?\ntab=table&init=1&language=en&pcode=tps00044&plugin=1).
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
@@ -6406,86 +6157,8 @@ a|
 !Definition: !The media in which the concentration of a health component is measured.
 !Description: !EXAMPLE: Drinking water, indoor air, ambient air, etc.
 !Extensibility: !any
-!Identifier: !
-!Values: !The allowed values for this code list comprise any values defined by data providers.
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*ambientAir*
-
-[cols=","]
-!===
-!Name: !ambient Air
-!Definition: !Ambient air.
-!===
-
-a|
-indoorAir
-
-[cols=","]
-!===
-!Name: !indoor Air
-!Definition: !Indoor air.
-!===
-
-a|
-drinkingWater
-
-[cols=","]
-!===
-!Name: !drinking Water
-!Definition: !Drinking water.
-!===
-
-a|
-riverWater
-
-[cols=","]
-!===
-!Name: !river Water
-!Definition: !River water.
-!===
-
-a|
-lakeWater
-
-[cols=","]
-!===
-!Name: !lake Water
-!Definition: !Lake water.
-!===
-
-a|
-bathingWater
-
-[cols=","]
-!===
-!Name: !bathing Water
-!Definition: !Bathing water.
-!===
-
-a|
-groundWater
-
-[cols=","]
-!===
-!Name: !ground Water
-!Definition: !Ground water.
-!===
-
-a|
-soil
-
-[cols=","]
-!===
-!Name: !soil
-!Definition: !Soil.
+!Identifier: !https://inspire.ec.europa.eu/codelist/MediaTypeValue
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
@@ -6501,67 +6174,7 @@ a|
 !Definition: !The types of statistical methods used to aggregate raw measurement data on the statistical unit.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/StatisticalAggregationMethodValue
-!Values: !The allowed values for this code list comprise any values defined by data providers.
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols="",]
-|===
-a|
-*mean*
-
-[cols=","]
-!===
-!Name: !mean
-!Definition: !The mean.
-!===
-
-a|
-sum
-
-[cols=","]
-!===
-!Name: !sum
-!Definition: !The sum.
-!===
-
-a|
-maximum
-
-[cols=","]
-!===
-!Name: !maximum
-!Definition: !The maximum.
-!===
-
-a|
-minimum
-
-[cols=","]
-!===
-!Name: !minimum
-!Definition: !The minimum.
-!===
-
-a|
-median
-
-[cols=","]
-!===
-!Name: !median
-!Definition: !The median.
-!===
-
-a|
-standardDeviation
-
-[cols=","]
-!===
-!Name: !standard Deviation
-!Definition: !The standard deviation.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
@@ -6589,49 +6202,7 @@ a|
 !Definition: !List of values showing the type of use of the building.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/BuildingUseValue
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-residential
-
-[cols=","]
-!===
-!Name: !residential
-!Definition: !A building used more than half of the area for living in.
-!===
-
-a|
-industrial
-
-[cols=","]
-!===
-!Name: !industrial
-!Definition: !A building used as industrial, agricultural object or for office.
-!===
-
-a|
-office
-
-[cols=","]
-!===
-!Name: !office
-!Definition: !A building is defined as public if it serves educational, sport or cultural purposes.
-!===
-
-a|
-healthService
-
-[cols=","]
-!===
-!Name: !health service
-!Definition: !A building serving health care purposes.
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
@@ -6647,58 +6218,7 @@ a|
 !Definition: !Types of consequence caused by an event.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ConsequenceTypeValue
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*fatalities*
-
-[cols=","]
-!===
-!Name: !fatalities
-!Definition: !Numerical expression for the amount of fatalities caused by the event.
-!===
-
-a|
-injured
-
-[cols=","]
-!===
-!Name: !injured
-!Definition: !Numerical expression for the amount of injured persons caused by the event.
-!===
-
-a|
-evacuated
-
-[cols=","]
-!===
-!Name: !evacuated
-!Definition: !Numerical expression for the amount of evacuated persons caused by the event.
-!===
-
-a|
-isolated
-
-[cols=","]
-!===
-!Name: !isolated
-!Definition: !Numerical expression for the amount of isolated persons caused by the event.
-!===
-
-a|
-estimatedCostForSociety
-
-[cols=","]
-!===
-!Name: !estimated Cost For Society
-!Definition: !Infrastructure, building repair and restoration costs.
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
@@ -6714,31 +6234,7 @@ a|
 !Definition: !The value allowed for the fire or explosion related event type
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/FireOrExplosionTypeValue
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-fire
-
-[cols=","]
-!===
-!Name: !fire
-!Definition: !Fire.
-!===
-
-a|
-explosion
-
-[cols=","]
-!===
-!Name: !explosion
-!Definition: !Explosion.
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
@@ -6754,58 +6250,7 @@ a|
 !Definition: !Codes for hazardous materials.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/HazardousMaterialTypeValue
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*Chemical*
-
-[cols=","]
-!===
-!Name: !chemical
-!Definition: !An incident with hazardous chemicals that comprise a danger through, for example an accident during transport of hazardous substances.
-!===
-
-a|
-Biological
-
-[cols=","]
-!===
-!Name: !biological
-!Definition: !An incident with pathogenic microorganisms/toxins that comprise a danger through for example natural dispersal.
-!===
-
-a|
-Radiological
-
-[cols=","]
-!===
-!Name: !radiological
-!Definition: !Radioactive material means any material containing radionucleids where both the activity concentration and the total activity in the consignment exceed a level specified in rules.
-!===
-
-a|
-Nuclear
-
-[cols=","]
-!===
-!Name: !nuclear
-!Definition: !An incident with ionizing radiation that comprises a danger through, for example an accident at a nuclear plant, other accidents involving radioactive substances or ionizing radiation.
-!===
-
-a|
-Explosive
-
-[cols=","]
-!===
-!Name: !explosive
-!Definition: !An incident with explosive substances that comprise a danger through, for example an accident.
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
@@ -6821,49 +6266,7 @@ a|
 !Definition: !List of type of traffic related event.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/TrafficTypeValue
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*road*
-
-[cols=","]
-!===
-!Name: !road
-!Definition: !Traffic way on land.
-!===
-
-a|
-railroad
-
-[cols=","]
-!===
-!Name: !railroad
-!Definition: !Traffic way on rail.
-!===
-
-a|
-maritime
-
-[cols=","]
-!===
-!Name: !maritime
-!Definition: !Traffic way on water.
-!===
-
-a|
-air
-
-[cols=","]
-!===
-!Name: !air
-!Definition: !Traffic way in the air.
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
