@@ -5980,9 +5980,11 @@ image::./media/image28.png[image,width=609,height=751, align=center]
 
 <<<
 [appendix]
-== Code list values - (normative) 
+== Code list values
 
-=== INSPIRE Application Schema 'Production and Industrial Facilities'
+=== Production and Industrial Facilities (normative)
+
+*INSPIRE Application Schema 'Production and Industrial Facilities'*
 
 [cols="",options="header",]
 |===
@@ -6006,7 +6008,9 @@ a|
 
 |===
 
-=== INSPIRE Application Schema 'Production And Industrial Facilities Extension'
+=== Production And Industrial Facilities Extension (informative)
+
+*INSPIRE Application Schema 'Production And Industrial Facilities Extension'*
 
 [cols="",options="header",]
 |===
