@@ -735,11 +735,9 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 _Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
 
-. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
-
-. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
 ====
 
@@ -804,7 +802,7 @@ Additional and/or use case-specific information related to the theme _Buildings_
 
 These spatial object types and data types should comply with the definitions and constraints and include the attributes and association roles defined in this section.
 
-The enumerations and code lists used in attributes or association roles of spatial object types or data types should comply with the definitions and include the values defined in this section.
+The code lists used in attributes or association roles of spatial object types or data types should comply with the definitions and include the values defined in this section.
 
 ====
 
@@ -863,7 +861,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -902,27 +899,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-_Article 6_
-*Code Lists and Enumerations*
-
-(...)
-
-[arabic, start=5]
-. Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -936,16 +912,23 @@ The IRs distinguish the following types of code lists.
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatal Data Sets*
 
-. Code lists shall be of one of the following types, as specified in the Annexes:
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
+
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
+
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
+
+. Code lists shall be one of the following types:
 [loweralpha]
-.. code lists whose allowed values comprise only the values specified in this Regulation;
-.. code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
-.. code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
-.. code lists, whose allowed values comprise any values defined by data providers.
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
 
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
@@ -966,18 +949,18 @@ Additional values defined by data providers should not replace or redefine any v
 
 NOTE This data specification may specify recommended values for some of the code lists of type (b), (c) and (d) (see section 5.2.4.3). These recommended values are specified in a dedicated Annex.
 
-In addition, code lists can be hierarchical, as explained in Article 6(2) of the IRs.
+In addition, code lists can be hierarchical, as explained in Article 6(5) of the IRs.
 
 [IMPORTANT]
 ====
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
 (...)
 
-[arabic, start=2]
+[arabic, start=5]
 . Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.
 
 ====
@@ -991,19 +974,18 @@ The type of code list and whether it is hierarchical or not is also indicated in
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Datasets*
 
 (....)
 
-[arabic, start=3]
+[arabic, start=6]
 . Where, for an attribute whose type is a code list as referred to in points (b), (c) or (d) of paragraph 1, a data provider provides a value that is not specified in this Regulation, that value and its definition shall be made available in a register.
-. Attributes or association roles of spatial object types or data types whose type is a code list may only take values that are allowed according to the specification of the code list.
 
 ====
 
-Article 6(4) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
+Article 6(6) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
 
-For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(3) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
+For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(6) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
 
 NOTE Guidelines for setting up registers for additional values and how to register additional values in these registers is still an open discussion point between Member States and the Commission.
 
@@ -2303,7 +2285,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _Boolean_
 
@@ -2647,7 +2629,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _BuildingGeometry2D_
 
@@ -3234,7 +3216,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _BuildingGeometry2D_
 
@@ -4896,7 +4878,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _AbstractConstruction_
 
@@ -5322,7 +5304,7 @@ EXAMPLE: A Building may be composed of two BuildingParts having different height
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _AbstractBuildingUnit_
 
@@ -6762,7 +6744,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _AbstractBuildingUnit_
 
@@ -9816,7 +9798,7 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
 [.red.background]
 ====
@@ -9856,7 +9838,7 @@ http://inspire.ec.europa.eu/conformance-class/ir/*bu*/as/Buildings3D
 
 . [.underline]#Reference#: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in sections 5.2, 5.3 and 5.4.
 
@@ -9869,20 +9851,19 @@ NOTE Further technical information is in the Feature catalogue and UML diagram o
 
 . [.underline]#Test Method#: Examine whether the value type of each provided attribute or association role adheres to the corresponding value type specified in the target specification.
 
-NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from enumeration and code lists, and the coverage domains.
+NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from code lists, and the coverage domains.
 
 NOTE 2 Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in sections 5.2, 5.3 and 5.4.
 
 ==== Value test
 
 [loweralpha]
-. [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.
+. [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.
 
 . [.underline]#Reference#: Art.4 (3) of Commission Regulation No 1089/2010.
 
-. [.underline]#Test Method#: When an attributes / association roles has "enumeration" or "codeList" type compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
+. [.underline]#Test Method#: When an attributes / association roles has "codeList" type compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
 +
-* Shall not take any other value than defined in the enumeration table when its type is enumeration.
 * Shall take only values explicitly specified in the code list when its type is codeList with extensibility value is "none".
 * Shall take only a value explicitly specified in the code list or shall take a value that is narrower (i.e. more specific) than those explicitly specified in the application schema when the type is codeList with extensibility value is "narrower".
 
@@ -12080,7 +12061,7 @@ Each 10 years, the EU Member States have to conduct a census of population and d
 * technical regulation
 * programme (for instance, date for the 2011 census shall be transmitted by 2014 at the latest).
 
-Eurostat is collecting data coming from the Member States (National Institutes of Statistics). In principle, the Member States can decide themselves on the data sources and methodology for their census. Whereas a full enumeration is the ideal for a census, some topics might be covered by means of a sample. For the dwellings, the Member States generally establish a complete frame, i.e. they base the data transmitted to Eurostat on a complete list of buildings/dwellings. Often the censuses in the Member States may use questionnaires to dwelling owner or occupant; it may also use reference data from building registry or other data bases.
+Eurostat is collecting data coming from the Member States (National Institutes of Statistics). In principle, the Member States can decide themselves on the data sources and methodology for their census. Whereas a full code list is the ideal for a census, some topics might be covered by means of a sample. For the dwellings, the Member States generally establish a complete frame, i.e. they base the data transmitted to Eurostat on a complete list of buildings/dwellings. Often the censuses in the Member States may use questionnaires to dwelling owner or occupant; it may also use reference data from building registry or other data bases.
 
 The data related to buildings is also useful for National Institutes to find the dwellings and the inhabitants.
 
@@ -15113,7 +15094,7 @@ image::./media/image275.png[image,width=596,height=272, align=center]
 
 Buildings as well as all features in CityGML are represented in different levels of detail. Five consecutive Levels of Detail (LoD) are defined, where features become more detailed with increasing LoD regarding both their geometry and semantic differentiation. CityGML features as well as data sets can - but do not have to - contain multiple representations (and geometries) for each object in different LoD simultaneously. This enables the analysis and visualisation of the same object with regard to different degrees of resolution. LoDs are required to reflect independent data collection processes with differing application requirements. Furthermore, the classification into LoDs facilitates interoperability, since preferably features with the same LoD can be integrated. In the following, the LoDs of CityGML – LoD0 to LoD4 – are introduced. Fig. 6 provides examples for those LoDs.
 
-In all LoDs, buildings are represented by the class _Building_, the attributes of which are inherited from the base class __AbstractBuilding_. The attributes are a classification of the building (attribute _class_: public building, ...), the _function_ (dwelling, office building, ...) and the _usage_ in the case the actual usage differs from the intended function. The other attributes represent the year of construction/demolition, the roof type (given as an enumeration of the main types flat, monopitch, gabled, ...), the actual measured height of the building and the numbers and actual heights of the stories above and below ground. The address of the building is given by the reference to an address object (using the OASIS standard for addresses).
+In all LoDs, buildings are represented by the class _Building_, the attributes of which are inherited from the base class __AbstractBuilding_. The attributes are a classification of the building (attribute _class_: public building, ...), the _function_ (dwelling, office building, ...) and the _usage_ in the case the actual usage differs from the intended function. The other attributes represent the year of construction/demolition, the roof type (given as an code list of the main types flat, monopitch, gabled, ...), the actual measured height of the building and the numbers and actual heights of the stories above and below ground. The address of the building is given by the reference to an address object (using the OASIS standard for addresses).
 
 A building can consist of building parts, The distinction into _BuildingParts_ accommodates the fact that components of a building differ with regard to geometry (different heights, for example) or attributes (_YearOfConstruction, RoofType_, ...). _Buildings_ and _BuildingParts_ potentially have the same spatial and non spatial properties, since both are sub classes of __AbstractBuilding_. Both must be consistent: If parts are present, the building geometry is represented for the parts only. The attribute values of a part apply only to that part, whereas attribute values of a building refer to all parts. Fig. 7 shows an example for a building consisting of two parts.
 
