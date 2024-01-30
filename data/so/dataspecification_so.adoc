@@ -1001,7 +1001,7 @@ An observed soil profile represents a geo-referenced soil profile, described in 
 
 A derived soil profile is a non-point-located soil profile with property values that are derived (e.g. averaged) from the values of the corresponding properties of one or more observed soil profiles. Even if such a connection to an observed soil profile exists, it is not mandatory to provide it (nor its data) together with the derived soil profile. Eventually, a derived soil profile could also be a standalone non-geo-referenced soil profile, not associated to an observed soil profile and with property values that are e.g. assessed by expert knowledge.
 
-Any soil profile can be characterized as a whole by a number of properties, of which the following are included in the model: its soil type according to the WRB soil classification scheme (_WRBSoilName_) and/or any other soil classification scheme (_otherSoilName_) with the limitation to one per dataset, and zero or more other parameters, which are expressed through _soilProfileObservation_ associations with _OM_Observation_ objects (see Figure 11). Through the _observedProperty_ role of its _Phenomenon_ association, the _OM_Observation_ object designates the parameter, through the attributes _label_, _basePhenomenon_ (value selected from the codelist _SoilProfileParameterNameValue_) (see Figre 10) and _uom_ (unit of measure). Through the _result_ role of the _Range_ association, a value can be given to the parameter; this value should be of the type _Number_, _RangeType_ (a range of values) or _CharacterString_ (e.g. 'good' or 'very high'). Note that the _SoilProfileParameterNameValue_ codelist can be extended by the data provider when needed.
+Any soil profile can be characterized as a whole by a number of properties, of which the following are included in the model: its soil type according to the WRB soil classification scheme (_WRBSoilName_) and/or any other soil classification scheme (_otherSoilName_) with the limitation to one per dataset, and zero or more other parameters, which are expressed through _soilProfileObservation_ associations with _OM_Observation_ objects (see Figure 11). Through the _observedProperty_ role of its _Phenomenon_ association, the _OM_Observation_ object designates the parameter, through the attributes _label_, _basePhenomenon_ (value selected from the codelist _SoilProfileParameterNameValue_) (see Figre 10) and _uom_ (unit of measure). Through the _result_ role of the _Range_ association, a value can be given to the parameter; this value should be of the type _Number_, _RangeType_ (a range of values, as defined in Section 5.3.2.2.6.) or _CharacterString_ (e.g. 'good' or 'very high'). Note that the _SoilProfileParameterNameValue_ codelist can be extended by the data provider when needed.
 
 [IMPORTANT]
 ====
@@ -1095,7 +1095,7 @@ The specific purpose of the _SoilThemeCoverage_ class (see Figure 8) is to provi
 
 The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_, e.g. _organicCarbonContent_) (see Figure 10) and a unit of measure (e.g. cm). Note that the code list _SoilDerivedObjectParameterNameValue_ can be extended by the data provider when needed.
 
-The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType or CharacterString.
+The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType (as defined in Section 5.3.2.2.6.) or CharacterString.
 
 Since it may be useful to associate to a coverage other coverages of which the cell values are supplementary information to the corresponding grid cells of the coverage itself, the _SoilThemeCoverage_ class has an association to another coverage, the _SoilThemeDescriptiveCoverage_. The _SoilThemeDescriptiveCoverage_ has the same spatial and domain extent as the associated _SoilThemeCoverage_. The attribute _soilThemeDescriptiveParameter_ is of the datatype _SoilThemeDescriptiveParameterType_ that consists of a _soilThemeDescriptiveParameterName_ (characterstring, e.g. _purity_) and a unit of measure (e.g. cm). The _soilThemeDescriptiveParameter_ gives supplementary information on the grid cell values of the associated coverage, often it concerns qualitative information. An example would be the provision of "purity maps" in relation to for instance soil texture maps.
 
@@ -1322,7 +1322,7 @@ a|
 [width="100%",cols="5%,17%,78%"]
 !===
 !  !Name: !profile element depth range
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !Upper and lower depth of the profile element (layer or horizon) measured from the surface (0 cm) of a soil profile (in cm).
 !  !Description: !
 !  !Multiplicity: !1
@@ -1385,7 +1385,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the profile element observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the profile element observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.profileElementObservation.result->oclIsKindOf(Number) or self.profileElementObservation.result->oclIsKindOf(CharacterString) or self.profileElementObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -1580,7 +1580,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the soil derived object observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the soil derived object observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.soilDerivedObjectObservation.result->oclIsKindOf(Number) or self.soilDerivedObjectObservation.result->oclIsKindOf(CharacterString) or self.soilDerivedObjectObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -1987,7 +1987,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the soil profile observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the soil profile observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.soilProfileObservation.result->oclIsKindOf(Number) or self.soilProfileObservation.result->oclIsKindOf(CharacterString) or self.soilProfileObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -2145,7 +2145,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the soil site observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the soil site observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.soilSiteObservation.result->oclIsKindOf(Number) or self.soilSiteObservation.result->oclIsKindOf(CharacterString) or self.soilSiteObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -2255,7 +2255,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: rangeSet->oclIsKindOf(Number) or rangeSet->oclIsKindOf(Characterstring) or rangeSet->oclIsKindOf(RangeType)
 !===
 
@@ -2343,7 +2343,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: rangeSet->oclIsKindOf(Number) or rangeSet->oclIsKindOf(Characterstring) or rangeSet->oclIsKindOf(RangeType)
 !===
 
@@ -2375,7 +2375,7 @@ a|
 [width="100%",cols="5%,17%,78%"]
 !===
 !  !Name: !derived profile percentage range.
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !Interval that defines the minimum and maximum percentage of the area of the soil body represented by a specific derived soil profile.
 !  !Multiplicity: !1
 !  !Stereotypes: !«voidable»
@@ -2615,7 +2615,7 @@ a|
 [width="100%",cols="5%,17%,78%"]
 !===
 !  !Name: !fraction particle size range
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !upper and lower limit of the particle size of the defined fraction (expressed in µm)
 !  !Description: !SOURCE NRCS Natural Resources Conservation Service, Soil survey laboratory information manual, Soil survey investigation report n.45 version 1.0 May 1995 pag. 11 
 EXAMPLE upper limit = 63µm , lower limit =20µm
@@ -5801,7 +5801,7 @@ The required data input format could be point/vector maps or raster maps.
 
 Each input dataset is a composition of __SoilDerivedObject__s and is documented in its associated metadata, that includes a title, abstract and would point to the documentation on how the computation for the input data has been accomplished, eventually relying on data coming from observed soil profiles and/or soil bodies.
 
-Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType), and qualitative values (CharacterString).
+Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType, as defined in Section 5.3.2.2.6.), and qualitative values (CharacterString).
 
 For the considered soil input data: name, unit of measure and value would be:
 
@@ -5819,7 +5819,7 @@ Note that, since the parameters _soilDerivedObject_ are linked (through the O&M 
 
 *In case of raster input maps:.*
 
-The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType or CharacterString.
+The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType (as defined in Section 5.3.2.2.6.) or CharacterString.
 
 Unlike the _SoilDerivedObject_'s (where an input dataset could be specified by indicating its contributing data), the input coverages are in essence standalone, although in theory they can be associated to other coverages through the association with zero or more SoilThemeDescriptiveCoverage's that have the same spatial and domain extent as the associated SoilThemeCoverage..
 
@@ -5983,7 +5983,7 @@ The required data input format could be point/vector maps or raster maps.
 
 Each input dataset is a composition of __SoilDerivedObject__s and is documented in its associated metadata, that includes a title, abstract and would point to the documentation on how the computation for the input data has been accomplished, eventually relying on data coming from observed soil profiles and/or soil bodies.
 
-Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType), and qualitative values (CharacterString).
+Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType, as defined in Section 5.3.2.2.6.), and qualitative values (CharacterString).
 
 For the considered soil input data: name, unit of measure and value would be:
 
@@ -6004,7 +6004,7 @@ Note that, since the parameters _soilDerivedObject_ are linked (through the O&M 
 
 *In case of raster input maps:*
 
-The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType or CharacterString.
+The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType (as defined in Section 5.3.2.2.6.) or CharacterString.
 
 Unlike the _SoilDerivedObject_'s (where an input dataset could be specified by indicating its contributing data), the input coverages are in essence standalone, although in theory they can be associated to other coverages through the association with zero or more SoilThemeDescriptiveCoverage's that have the same spatial and domain extent as the associated SoilThemeCoverage..
 
@@ -13504,7 +13504,7 @@ a|
 [width="100%",cols="5%,16%,79%"]
 !===
 !  !Name: !groundwater depth range
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !depth of the groundwater.
 !  !Multiplicity: !1
 !===
