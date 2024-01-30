@@ -1055,7 +1055,7 @@ For pan-European applications, there is a need to specify some common European g
 _Annex IV, Section 1.5_
 *Theme-specific Requirements*
 
-For pan-European usage, the Equal Area Grid defined in Section 2.2.1 of Annex II shall be used.
+For pan-European usage, the Equal Area Grid defined in Section 2.2.1 of Annex II shall be used. For pan-European usage additional allowed grid cell sizes are 2m, 5m, 20m, 50m, 200m, 500m, 2 000m, 5 000m, 20 000m, 50 000m.
 ====
 
 ====== _Vector package_
@@ -1410,7 +1410,7 @@ a|
 
 *Types defined in the feature catalogue*
 
-[cols=","]
+[cols=",,",options="header",]
 |===
 |*Type* |*Package* |*Stereotypes*
 |GridPosition |Statistical Units Grid |«dataType»
@@ -1580,8 +1580,9 @@ a|
 !Value type: !CharacterString
 !Definition: !A cell code.
 !Description: !This code is composed of: 
-1. A coordinate reference system part, represented by the word CRS, followed by the EPSG code. 
-2. A resolution and position part: 
+1. A two-letter country code as defined in the Interinstitutional Style Guide published by the Publications Office of the European Union.
+2. A coordinate reference system part, represented by the word CRS, followed by the EPSG code. 
+3. A resolution and position part: 
 - If the coordinate reference system is projected, the word RES followed by the grid resolution in meters and the letter m. Then, the letter N followed by the northing value in meters, and the letter E followed by the easting value in meters too. 
 - If the coordinate reference system is not projected, the word RES followed by the grid resolution in degree-minute-second, followed by the word dms. Then the word LON followed by the longitude value in degree-minute-second, and word LAT followed by the latitude value in degree-minute-second. 
 For both cases, the given position is the position of the lower left cell corner. 
@@ -1664,7 +1665,7 @@ a|
 
 [cols=","]
 !===
-!Natural language: !The code shall be composed of: (1) A coordinate reference system part, represented by the word CRS, followed by the EPSG code. (2) A resolution and position part: – If the coordinate reference system is projected, the word RES followed by the grid resolution in meters and the letter m. Then, the letter N followed by the northing value in meters, and the letter E followed by the easting value in meters. – If the coordinate reference system is not projected, the word RES followed by the grid resolution in degree-minute-second, followed by the word dms. Then the word LON followed by the longitude value in degree-minute-second, and word LAT followed by the latitude value in degree-minute-second. For both cases, the given position shall be the position of the lower left cell corner.
+!Natural language: !The code shall be composed of: (1) A two-letter country code as defined in the Interinstitutional Style Guide published by the Publications Office of the European Union. (2) A coordinate reference system part, represented by the word CRS, followed by the EPSG code. (3) A resolution and position part: – If the coordinate reference system is projected, the word RES followed by the grid resolution in meters and the letter m. Then, the letter N followed by the northing value in meters, and the letter E followed by the easting value in meters. – If the coordinate reference system is not projected, the word RES followed by the grid resolution in degree-minute-second, followed by the word dms. Then the word LON followed by the longitude value in degree-minute-second, and word LAT followed by the latitude value in degree-minute-second. For both cases, the given position shall be the position of the lower left cell corner.
 !OCL: !
 !===
 
