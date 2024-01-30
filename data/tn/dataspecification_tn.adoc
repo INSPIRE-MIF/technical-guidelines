@@ -5270,7 +5270,7 @@ a|
 
 [cols="",options="header",]
 |===
-|*TrafficSeparationScheme (abstract)*
+|*TrafficSeparationScheme*
 a|
 [cols=","]
 !===
