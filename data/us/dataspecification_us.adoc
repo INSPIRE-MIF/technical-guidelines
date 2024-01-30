@@ -1411,7 +1411,7 @@ a|
 [cols=","]
 !===
 !Name: !service location by building
-!Value type: !Building
+!Value type: !Building of the Buildings 2D package
 !Definition: !Location of the service by referring to a building.
 !Multiplicity: !1..*
 !===
