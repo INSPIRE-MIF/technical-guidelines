@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.II.3 Data Specification on Orthoimagery – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Orthoimagery
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Orthoimagery
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/oi[D2.8.II.3_v3.0.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/oi[D2.8.II.3_v3.1.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -2772,7 +2772,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -2814,7 +2814,7 @@ referenceSystemIdentifier:
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -2855,7 +2855,7 @@ referenceSystemIdentifier:
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -2891,7 +2891,7 @@ Technical Guidelines</gco:CharacterString>
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -2914,7 +2914,7 @@ Technical Guidelines</gco:CharacterString>
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -2980,7 +2980,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -3057,7 +3057,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -3102,7 +3102,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -3129,7 +3129,7 @@ NOTE The DQ_Result type should be DQ_DescriptiveResult and in the statement (68.
 
 ==== Data Quality – Completeness – Omission
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Data Quality – Completeness – Omission*
 |Definition |Data absent from the dataset, as described by the scope
@@ -3147,7 +3147,7 @@ NOTE The DQ_Result type should be DQ_DescriptiveResult and in the statement (68.
 
 ==== Data Quality – Positional Accuracy – Gridded data position accuracy
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Data Quality - Positional accuracy – Gridded data position accuracy*
 |Definition |closeness of gridded data position values to values accepted as or being true
@@ -3165,7 +3165,7 @@ NOTE The DQ_Result type should be DQ_DescriptiveResult and in the statement (68.
 
 ==== Process step
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Process step*
 |Definition |Information about an event or transformation in the life of a dataset including the process used to maintain the dataset
@@ -3199,7 +3199,7 @@ Note that such information may convey, most often implicitly, supplementary indi
 
 ==== Data source
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Data source*
 |Definition |Information about the source data used in creating the data specified by the scope
@@ -3250,7 +3250,7 @@ Information relative to the seamlines carrying the geometry of the mosaic elemen
 
 ==== Image description
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Image description*
 |Definition |Information about an image's suitability for use
@@ -3274,7 +3274,7 @@ At least the following element should be used:
 
 ==== Browse graphic information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Browse graphic information*
 |Definition a|
@@ -3300,7 +3300,7 @@ The following element is mandatory:
 
 ==== Digital transfer options information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Digital transfer options information*
 |Definition a|
@@ -3738,7 +3738,7 @@ None.
 
 ==== Styles for the layer OI.OrthoimageCoverage
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |OI. OrthoimageCoverage.Default
 |*Default Style* |yes
