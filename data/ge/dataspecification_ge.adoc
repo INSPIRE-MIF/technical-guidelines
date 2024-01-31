@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.II.4 Data Specification on Geology – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Geology
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Geology
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/ge[D2.8.II.4_v3.1.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/ge[D2.8.II.4_v3.2.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -5360,7 +5360,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -5404,7 +5404,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -5448,7 +5448,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -5485,7 +5485,7 @@ specification: D2.8.II.4 Data Specification on _Geology_ – Technical Guideline
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -5508,7 +5508,7 @@ specification: D2.8.II.4 Data Specification on _Geology_ – Technical Guideline
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -5569,7 +5569,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -5646,7 +5646,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -5690,7 +5690,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -6227,7 +6227,7 @@ None
 
 ==== Styles for the layer GE.GeomorphologicFeature – Natural Geomorphologic Feature 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.GeomorphologicFeature.Natural
 |*Style Title* |Type of Natural Geomorphologic Features
@@ -6280,7 +6280,7 @@ None
 
 ==== Styles for the layer GE.GeomorphologicFeature – Anthropogenic Geomorphologic Feature 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.GeomorphologicFeature.Anthropogenic
 |*Style Title* |Type of Anthropogenic Geomorphologic Features
@@ -6318,7 +6318,7 @@ REFERENCES for both types of Geomorphological features
 
 ==== Styles for the layer GE.Borehole - Purpose of Boreholes 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.Borehole
 |*Style Title* |Boreholes – Purpose type
@@ -6440,7 +6440,7 @@ None
 
 ==== Styles for the layer GE.Aquiclude – ConstitutionOfAquiclude
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE. Aquiclude.ConstitutionOfAquiclude
 |*Style Title* |Aquiclude – Constitution of Aquiclude
@@ -6461,7 +6461,7 @@ None
 
 ==== Styles for the layer GE.Aquitard – ConstitutionOfAquitard
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.Aquitard. ConstitutionOfAquitard
 |*Style Title* |Aquiclude – Constitution of Aquiclude
@@ -6480,7 +6480,7 @@ None
 
 ==== Styles for the layer GE.AquiferSystem – ConstitutionOfAquifer System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.AquiferSystem. ConstitutionOfAquiferSystem
 |*Style Title* |AquiferSystem – Constitution of AquiferSystem
@@ -6499,7 +6499,7 @@ None
 
 ==== Styles for the layer GE.GroundWaterBody– Groundwater Body
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.GroundWaterBody
 |*Style Title* |Groundwater Body
@@ -6518,7 +6518,7 @@ None
 
 ==== Styles for the layer GE.ActiveWell– Type of Active Well
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.ActiveWell
 |*Style Title* |Type of Active Wells
@@ -6540,7 +6540,7 @@ None
 
 ==== Styles for the layer group GE.GeophStation - (TypeOfGeophStation) 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.TypeOfGeophStation:GE.gravityStation
 |*Style Title* |TypeOfGeophStation - Gravity Stations
@@ -6572,7 +6572,7 @@ Note: One layer shall be made available for each code list value, for example: G
 
 ==== Styles for the layer group GE.GeophProfile - (TypeOfGeophProfile) 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.TypeOf GeophProfile:GE.seismicLine
 |*Style Title* |TypeOf GeophProfile - Seismic Lines
@@ -6603,7 +6603,7 @@ Note: One layer shall be made available for each code list value, for example: G
 
 ==== Styles for the layer group GE.Campaign - (TypeOfSurvey) 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.TypeOfSurvey:GE.groundGravitySurvey
 |*Style Title* |TypeOfSurvey - Ground Gravity Survey
@@ -6640,7 +6640,7 @@ Note: One layer shall be made available for each code list value, for example: G
 
 ==== Styles for the layer group GE. GeophSwath - (TypeOfGeophSwath) 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |GE.TypeOfGeophSwath: GE.3DSeismics
 |*Style Title* |TypeOfGeophSwath - 3D Seismics
@@ -7419,7 +7419,7 @@ The hazard is often defined as the probability of occurrence of a potentially da
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use case description*
 |Name |Providing geological data to detect geo-hazards
@@ -7503,7 +7503,7 @@ Actors:
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use case description*|Name |Providing geological data to ensure safe disposal of waste
 |Priority |High
@@ -7624,7 +7624,7 @@ The three first groups of data (lithologies, unconsolidated deposits and hydroge
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use case description*
 |Name |Providing geological data to detect ground stability in a flat area
@@ -7717,7 +7717,7 @@ In order to find an optimum location for a geothermal drilling the user is looki
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use case description*
 |Name |Looking for deep fractured zones in the basement
@@ -7798,7 +7798,7 @@ After a nuclear power plant accident an environment agency analyses the impact o
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use case description*
 |Name |Checking background radiation level changes
@@ -7886,7 +7886,7 @@ The WFD requires that a groundwater body has "good status" in that it is not ove
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use case description*
 |Name |Providing data to undertake water balance to ensure compliance with the WFD
@@ -7992,7 +7992,7 @@ GWBs provided by Member States will be merged into one dataset taking into accou
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use case description*
 |Name |Providing groundwater data to WISE reporting
@@ -8143,7 +8143,7 @@ Groundwater dependent ecosystems (GDE) are a diverse and important component of 
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use case description*
 |Name |Managing the positive role aquifers play in supporting ecosystems
@@ -8226,7 +8226,7 @@ Underground assets, such as iron pipes, concrete foundations are at risk from co
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use case description*
 |Name |Providing data to assess Corrosivity to Underground Assets
@@ -8313,7 +8313,7 @@ Tunneling is an activity that required suitable knowledge of the geological and 
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use case description*
 |Name |Providing data to plan tunneling operations safely and effectively
@@ -8413,7 +8413,7 @@ The majority of groundwater measurements are undertaken at a well, therefore the
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !The types of anthropogenic geomorphologic feature.
 !Extensibility: !open
@@ -8576,7 +8576,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !Purposes for which a borehole was drilled.
 !Description: !EXAMPLE: mineral exploration, water pumping, site evaluation, stratigraphic research, etc.
@@ -8931,7 +8931,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !Types of collections of geological and geophysical objects.
 !Description: !EXAMPLE: geological map, thematic map etc.
@@ -8987,7 +8987,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !Roles that a compositional part plays in a geologic unit.
 !Extensibility: !open
@@ -9074,7 +9074,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !Terms for the geologic environments within which geologic events take place.
 !Extensibility: !open
@@ -10738,7 +10738,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !Terms specifying the process or processes that occurred during an event.
 !Description: !EXAMPLE: deposition, extrusion, intrusion, cooling.
@@ -11704,7 +11704,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !Terms describing the type of shear displacement structure.
 !Description: !EXAMPLE: thrust fault, normal fault, wrench fault.
@@ -11953,7 +11953,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !Terms specifying the type of fold.
 !Description: !Folds are typed according to the concave/convex geometry of the fold relative to the earth surface, and the relationship to younging direction in folded strata if known. 
@@ -12010,7 +12010,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !Terms specifying recognised geological time units.
 !Extensibility: !open
@@ -14273,7 +14273,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !Terms describing the type of geologic unit.
 !Description: !EXAMPLE: GeologicUnit, AllostratigraphicUnit etc
@@ -14536,7 +14536,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Definition: !Terms describing the lithology.
 !Description: !EXAMPLE: granite, sandstone, schist.
@@ -19428,7 +19428,7 @@ In contrast to Geophysical measurements geophysical models represent spatial dis
 
 GeophMeasurement and GeophModel are the initial and final stage of the geophysical processing chain. However, the processing chain can be long and if the result originates from an intermediate step it is not always easy to decide which class it belongs to. Table 1. can help in the classification of a feature type.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GeophMeasurement* |*GeophModel*
 |Data is spatially referenced outside or on the boundary of the investigated domain |Data is spatially referenced to the internal part of the investigated domain
