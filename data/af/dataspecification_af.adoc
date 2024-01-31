@@ -5558,7 +5558,7 @@ a|
 !Name: !AquacultureActivityValue
 !Definition: !Type of aquaculture activity.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/AquacultureActivityValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/AquacultureActivityValue
 !Values: !
 !===
 
@@ -5617,7 +5617,7 @@ a|
 !Name: !AquacultureInstallationValue
 !Definition: !Type of aquaculture installation.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/AquacultureInstallationValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/AquacultureInstallationValue
 !Values: !
 !===
 
@@ -5712,7 +5712,7 @@ a|
 !Name: !EnvironmentValue
 !Definition: !The type of the environment in which the aquaculture organisms are kept. (a water type classification).
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/EnvironmentValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/EnvironmentValue
 !Values: !
 !===
 
@@ -5765,7 +5765,7 @@ a|
 !Name: !HealthStatusValue
 !Definition: !A code list with the possible status values indicating the granted health status.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/HealthStatusValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/HealthStatusValue
 !Values: !
 !===
 
@@ -5824,7 +5824,7 @@ a|
 !Name: !InstallationPartValue
 !Definition: !Describes the type of the installation part, according to a code list.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/InstallationPartValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/InstallationPartValue
 !Values: !
 !===
 
@@ -5949,7 +5949,7 @@ a|
 !Name: !IrrigationMethodeValue
 !Definition: !List the different methods of irrigation, according to EU regulation EC 1200/2009, annex III, chapter VIII.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/IrrigationMethodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/IrrigationMethodeValue
 !Values: !
 !===
 
@@ -5999,7 +5999,7 @@ a|
 !Name: !PlotActivityValue
 !Definition: !The economic activity executed on the plot, as coded accoring to EU regulation (EC) 1200/2009, annex II, chapter 2. (codes 2.01 - 2.04.07 and 2.06.03 - 2.06.04).
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/PlotActivityValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/PlotActivityValue
 !Values: !
 !===
 
@@ -6717,7 +6717,7 @@ a|
 !Definition: !The type of building, expressed as a code.
 !Description: !animal housing according to EU regulation (EC) 1200/2009 annex III chapter V, codes 5.01 - 5.03.99.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/TypeOfAgriBuildingValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/TypeOfAgriBuildingValue
 !Values: !
 !===
 
@@ -7081,7 +7081,7 @@ a|
 !Name: !WaterSourceValue
 !Definition: !The type of water source, according to Regulation (EC) No 1200/2009.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/WaterSourceValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/WaterSourceValue
 !Values: !
 !===
 

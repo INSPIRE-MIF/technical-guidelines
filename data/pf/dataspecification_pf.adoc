@@ -1663,7 +1663,7 @@ a|
 !Name: !Installation Part Type
 !Definition: !Coded values describing the typology of the Installation Part
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/InstallationPartType
+!Identifier: !http://inspire.ec.europa.eu/codelist/InstallationPartType
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
@@ -1680,7 +1680,7 @@ a|
 !Name: !Installation Type
 !Definition: !Coded values describing the typology of the Installation
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/InstallationType
+!Identifier: !http://inspire.ec.europa.eu/codelist/InstallationType
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
@@ -1697,7 +1697,7 @@ a|
 !Name: !pollution abatement technique value
 !Definition: !The PollutionAbatementTechniqueValue code list hosts the reference values for the attribute technique in the ProductionInstallationPart class.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/PollutionAbatementTechniqueValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/PollutionAbatementTechniqueValue
 !Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
 !===
 
@@ -1714,7 +1714,7 @@ a|
 !Name: !River Basin District
 !Definition: !Code identifiers and/or names assigned to river basin districts.The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/RiverBasinDistrictValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/RiverBasinDistrictValue
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
@@ -2521,7 +2521,7 @@ a|
 !===
 !Name: !destination value
 !Definition: !The DestinationValue enumeration hosts the reference values for the attribute destination in the Emission class.
-!URI: !http://inspire.ec.europa.eu/codeList/DestinationValue
+!URI: !http://inspire.ec.europa.eu/codelist/DestinationValue
 !===
 
 |===
@@ -2536,7 +2536,7 @@ a|
 !===
 !Name: !flow appearance value
 !Definition: !The FlowAppearanceValue enumeration hosts the reference values for the attribute flowAppearance in the Emission class.
-!URI: !http://inspire.ec.europa.eu/codeList/ FlowAppearanceValue
+!URI: !http://inspire.ec.europa.eu/codelist/ FlowAppearanceValue
 !===
 
 a|
@@ -2567,7 +2567,7 @@ a|
 !===
 !Name: !registration nature value
 !Definition: !The RegistrationNatureValue enumeration hosts the reference values for the attribute registrationNature in the Emission class.
-!URI: !http://inspire.ec.europa.eu/codeList/ RegistrationNatureValue
+!URI: !http://inspire.ec.europa.eu/codelist/ RegistrationNatureValue
 !===
 
 a|
@@ -2627,7 +2627,7 @@ a|
 !Definition: !The CLPCodeValue code list hosts the family of reference values for the "substance" item referred to the attribute processItem in the ProcessInput or ProcessOutput classes and to the attribute pollutantSubstance in the Emission class. Substance means any chemical element and its compounds, with the exception of some specific substances.
 !Description: !The exception deals with the following substances: radioactive substances as defined in Article 1 of Council Directive 96/29/Euratom of 13 May 1996 laying down basic safety standards for the protection of the health of workers and the general public against the dangers arising from ionising radiation(2); genetically modified micro-organisms as defined in Article 2(b) of Directive 2009/41/EC of the European Parliament and the Council of 6 May 2009 on the contained use of genetically modified micro-organisms; genetically modified organisms as defined in point 2 of Article 2 of Directive 2001/18/EC of the European Parliament and of the Council of 12 March 2001 on the deliberate release into the environment of genetically modified organisms.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/CLPCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/CLPCodeValue
 !Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
 !===
 
@@ -2645,7 +2645,7 @@ a|
 !Definition: !The CPACodeValue code list hosts the family of reference values for the "product" item referred to the attribute processItem in the ProcessInput or ProcessOutput classes. A product means something that is produced, result of manufacturing, a result of an action or a process.
 !Description: !CPA is the Standard Classification of Economic Products from Annex Regulation (EC) n. 451/2008. It has a hierarchical structure funded on different levels embedded in the activity code referring to the product. The activity code is accompanied by the activity denomination.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/CPACodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/CPACodeValue
 !Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
 !===
 
@@ -2663,7 +2663,7 @@ a|
 !Definition: !The E-PRTRCodeValue code list hosts a family of reference values for the attribute activityCode in the Activity class. The list hosts the classification for the activities according to the E-PRTR register.
 !Description: !E-PRTR classification has a hierarchical structure funded on different levels embedded in the activity code. The activity code is accompanied by the activity denomination.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/E-PRTRCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/E-PRTRCodeValue
 !Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
 !===
 
@@ -2681,7 +2681,7 @@ a|
 !Definition: !The EnergyClassificationValue code list hosts the family of reference values for the "energy" item referred to the attribute processItem in the ProcessInput or ProcessOutput classes. Energy means power derived from physical or chemical resources able to provide light and heat to work machines.
 !Description: !The present classification has been derived from the Country factsheets which provide an overview of the most recent and pertinent annual energy related statistics in Europe, covering the European Union with its Member States. The content of this collection is based on a range of sources, including EUROSTAT, DG ECFIN, and EEA.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/EnergyClassificationValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/EnergyClassificationValue
 !Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
 !===
 
@@ -2699,7 +2699,7 @@ a|
 !Definition: !The EWCCodeValue code list hosts the family of reference values for the "waste" item referred to the attribute processItem in the ProcessInput or ProcessOutput classes. Waste means any substance or object which the holder discards or intends or is required to discard.
 !Description: !EWC classification has a hierarchical structure funded on different levels embedded in the waste code. The waste code is accompanied by the waste denomination.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/EWCCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/EWCCodeValue
 !Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
 !===
 
@@ -2717,7 +2717,7 @@ a|
 !Definition: !The IPPCCodeValue code list hosts a family of reference values for the attribute activityCode in the Activity class. The list hosts the classification for the activities according to the Council Regulation 96/61/EC.
 !Description: !IPPC classification has a hierarchical structure funded on different levels embedded in the activity code. The activity code is accompanied by the activity denomination.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/IPPCCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/IPPCCodeValue
 !Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
 !===
 
@@ -2735,7 +2735,7 @@ a|
 !Definition: !The NACECodeValue code list hosts a family of reference values for the attribute activityCode in the Activity class. The list hosts the classification for the activities according to the Council Regulation 3037/90/EEC.
 !Description: !NACE classification has a hierarchical structure founded on different levels embedded in the activity code. The activity code is accompanied by the activity denomination.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/NACECodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/NACECodeValue
 !Parent: !ClassificationItemTypeValue
 !Values: !The allowed values for this code list comprise only the values specified in "Regulation (EC) No 1893/2006 of the European Parliament and of the Council"
 !===
@@ -2920,28 +2920,28 @@ The values of selected external code lists are included in Annex C for informati
 [cols=",,",]
 |===
 |*Code list* |*Identifiers* |*Examples*
-|NACECodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codeList/ NACECodeValue / |http://ec.europa.eu/competition/mergers/cases/index/nace_all.html
-|IPPCCodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codeList/ IPPCCodeValue/ a|
+|NACECodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codelist/ NACECodeValue / |http://ec.europa.eu/competition/mergers/cases/index/nace_all.html
+|IPPCCodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codelist/ IPPCCodeValue/ a|
 http://nomeports.ecoports.com/ContentFiles/IPPC141.pdf
 
 _Annex V, Table I._
 
 IPPC Code
 
-|E-PRTRCodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codeList/ E-PRTRCodeValue/ a|
+|E-PRTRCodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codelist/ E-PRTRCodeValue/ a|
 
 http://www.epa.ie/downloads/advice/licensee/e_prtr_regulation_%20annex_%20i.pdf
 
 
 Annex I.
 
-|CPACodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codeList/CPACodeValue/ |http://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=CPA_2008&StrLanguageCode=EN&IntPcKey=&StrLayoutCode=HIERARCHIC&IntCurrentPage=1
-|CLPCodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codeList/CLPCodeValue/ a|
+|CPACodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codelist/CPACodeValue/ |http://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=CPA_2008&StrLanguageCode=EN&IntPcKey=&StrLayoutCode=HIERARCHIC&IntCurrentPage=1
+|CLPCodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codelist/CLPCodeValue/ a|
 http://www.prc.cnrs-gif.fr/reach/en/images/annex-6-abstract-en.pdf
 
 Column: Index Num.
 
-|EWCCodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codeList/EWCCodeValue/ a|
+|EWCCodeValue |Append the upper-case alphanumeric "Code" to the URI prefix http://inspire.ec.europa.eu/codelist/EWCCodeValue/ a|
 http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2000:226:0003:0024:EN:PDF
 
 _Chapter: INDEX_
@@ -6000,7 +6000,7 @@ a|
 !Name: !pollution abatement technique value
 !Definition: !The PollutionAbatementTechniqueValue code list hosts the reference values for the attribute technique in the ProductionInstallationPart class.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/PollutionAbatementTechniqueValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/PollutionAbatementTechniqueValue
 !Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
 !===
 
@@ -6097,7 +6097,7 @@ a|
 !Definition: !The CLPCodeValue code list hosts the family of reference values for the "substance" item referred to the attribute processItem in the ProcessInput or ProcessOutput classes and to the attribute pollutantSubstance in the Emission class. Substance means any chemical element and its compounds, with the exception of some specific substances.
 !Description: !The exception deals with the following substances: radioactive substances as defined in Article 1 of Council Directive 96/29/Euratom of 13 May 1996 laying down basic safety standards for the protection of the health of workers and the general public against the dangers arising from ionising radiation(2); genetically modified micro-organisms as defined in Article 2(b) of Directive 2009/41/EC of the European Parliament and the Council of 6 May 2009 on the contained use of genetically modified micro-organisms; genetically modified organisms as defined in point 2 of Article 2 of Directive 2001/18/EC of the European Parliament and of the Council of 12 March 2001 on the deliberate release into the environment of genetically modified organisms.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/CLPCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/CLPCodeValue
 !Values: !
 !===
 
@@ -6114,7 +6114,7 @@ a|
 !Definition: !The CPACodeValue code list hosts the family of reference values for the "product" item referred to the attribute processItem in the ProcessInput or ProcessOutput classes. A product means something that is produced, result of manufacturing, a result of an action or a process.
 !Description: !CPA is the Standard Classification of Economic Products from Annex Regulation (EC) n. 451/2008. It has a hierarchical structure funded on different levels embedded in the activity code referring to the product. The activity code is accompanied by the activity denomination.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/CPACodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/CPACodeValue
 !Values: !
 !===
 
@@ -6131,7 +6131,7 @@ a|
 !Definition: !The E-PRTRCodeValue code list hosts a family of reference values for the attribute activityCode in the Activity class. The list hosts the classification for the activities according to the E-PRTR register.
 !Description: !E-PRTR classification has a hierarchical structure funded on different levels embedded in the activity code. The activity code is accompanied by the activity denomination.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/E-PRTRCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/E-PRTRCodeValue
 !Values: !
 !===
 
@@ -6148,7 +6148,7 @@ a|
 !Definition: !The EWCCodeValue code list hosts the family of reference values for the "waste" item referred to the attribute processItem in the ProcessInput or ProcessOutput classes. Waste means any substance or object which the holder discards or intends or is required to discard.
 !Description: !EWC classification has a hierarchical structure funded on different levels embedded in the waste code. The waste code is accompanied by the waste denomination.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/EWCCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/EWCCodeValue
 !Values: !
 !===
 
@@ -6165,7 +6165,7 @@ a|
 !Definition: !The EnergyClassificationValue code list hosts the family of reference values for the "energy" item referred to the attribute processItem in the ProcessInput or ProcessOutput classes. Energy means power derived from physical or chemical resources able to provide light and heat to work machines.
 !Description: !The present classification has been derived from the Country factsheets which provide an overview of the most recent and pertinent annual energy related statistics in Europe, covering the European Union with its Member States. The content of this collection is based on a range of sources, including EUROSTAT, DG ECFIN, and EEA.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codeList/EnergyClassificationValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/EnergyClassificationValue
 !Values: !
 !===
 
@@ -6242,7 +6242,7 @@ a|
 !Definition: !The IPPCCodeValue code list hosts a family of reference values for the attribute activityCode in the Activity class. The list hosts the classification for the activities according to the Council Regulation 96/61/EC.
 !Description: !IPPC classification has a hierarchical structure funded on different levels embedded in the activity code. The activity code is accompanied by the activity denomination.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/IPPCCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/IPPCCodeValue
 !Values: !
 !===
 
