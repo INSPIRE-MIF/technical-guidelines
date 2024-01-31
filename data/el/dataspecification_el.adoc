@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.II.1 INSPIRE Data Specification on Elevation – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Elevation
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Elevation
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image::./media/image2.jpeg[image,width=93,height=93,align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=100,height=100] **INSPIRE** - *Infrastructu
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/el[D2.8.II.1_v3.2.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/el[D2.8.II.1_v3.3.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -1267,7 +1267,7 @@ This enumeration is defined in Section 5.4.2.1.2.
 
 ====== ElevationPropertyTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ElevationPropertyTypeValue*
 |
@@ -1289,7 +1289,7 @@ EXAMPLE Height, depth.
 
 ====== SurfaceTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*SurfaceTypeValue*
 |
@@ -1700,7 +1700,7 @@ NOTE There is no requirement about the acquisition time of elevation grid covera
 
 ====== ElevationGridCoverage
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*ElevationGridCoverage*
 |Name: |elevation grid coverage
@@ -1777,7 +1777,7 @@ NOTE 2 The domain extent shall be specified at least in space by using EX_Boundi
 
 ====== ElevationGridCoverageAggregation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*ElevationGridCoverageAggregation (association class)*
 |Name: |elevation grid coverage aggregation
@@ -1811,7 +1811,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== DateTime
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*DateTime* |
 |Package: |Date and Time
@@ -1830,7 +1830,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== ElevationPropertyTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*ElevationPropertyTypeValue*
 |Package: |ElevationBaseTypes
@@ -1846,7 +1846,7 @@ EXAMPLE Height, depth.
 
 ====== GM_MultiSurface
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*GM_MultiSurface*
 |Package: |Geometric aggregates
@@ -1855,7 +1855,7 @@ EXAMPLE Height, depth.
 
 ====== Identifier
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Identifier*
 |Package: |Base Types
@@ -1870,7 +1870,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 
 ====== RectifiedGridCoverage
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*RectifiedGridCoverage*
 |Package: |Coverages (Domain and Range)
@@ -1883,7 +1883,7 @@ NOTE This type can be used for both discrete and continuous coverages.
 
 ====== SurfaceTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*SurfaceTypeValue*
 |Package: |ElevationBaseTypes
@@ -1990,7 +1990,7 @@ Since elevation vector objects do not have an external object identifier, the co
 
 *Feature catalogue metadata*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Application Schema |INSPIRE Application Schema ElevationVectorElements
 |Version number |3.0
@@ -2017,7 +2017,7 @@ Since elevation vector objects do not have an external object identifier, the co
 
 ====== BreakLine
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*BreakLine*
 |
@@ -2060,7 +2060,7 @@ NOTE 4 Breaklines are useful as input data for the generation of a more appropri
 
 ====== ContourLine
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ContourLine*
 |
@@ -2111,7 +2111,7 @@ NOTE 2 In the case of depth contours, when the downRight attribute is 'true' thi
 
 ====== ElevationVectorObject
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ElevationVectorObject (abstract)*
 |
@@ -2153,7 +2153,7 @@ EXAMPLE Local datums for referring depths in lakes and navigable rivers.
 
 ====== IsolatedArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*IsolatedArea*
 |
@@ -2176,7 +2176,7 @@ NOTE 2 Isolated areas can be useful as masks when calculating a more appropriate
 
 ====== SpotElevation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*SpotElevation*
 |
@@ -2231,7 +2231,7 @@ NOTE 2 The attribute propertyType is equal to 'height' in the case of spot heigh
 
 ====== VoidArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*VoidArea*
 |
@@ -2256,7 +2256,7 @@ NOTE 2 Void areas can be useful as masks when calculating a more appropriate or 
 
 ====== ChartDatum
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ChartDatum*
 |
@@ -2322,7 +2322,7 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 
 ====== ContourLineTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ContourLineTypeValue*
 |
@@ -2342,7 +2342,7 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 
 ====== BreakLineTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*BreakLineTypeValue*
 |
@@ -2355,7 +2355,7 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 
 ====== SpotElevationClassValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*SpotElevationClassValue*
 |
@@ -2369,7 +2369,7 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 
 ====== SpotElevationTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*SpotElevationTypeValue*
 |
@@ -2386,7 +2386,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== Boolean
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Boolean*
 |
@@ -2396,7 +2396,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== DateTime
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*DateTime*
 |
@@ -2406,7 +2406,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== DirectPosition
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*DirectPosition*
 |
@@ -2416,7 +2416,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== EX_Extent
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*EX_Extent*
 |
@@ -2426,7 +2426,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== ElevationPropertyTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ElevationPropertyTypeValue*
 |
@@ -2442,7 +2442,7 @@ EXAMPLE Height, depth.
 
 ====== GM_Curve
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GM_Curve*
 |
@@ -2452,7 +2452,7 @@ EXAMPLE Height, depth.
 
 ====== GM_Point
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GM_Point*
 |
@@ -2462,7 +2462,7 @@ EXAMPLE Height, depth.
 
 ====== GM_Surface
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GM_Surface*
 |
@@ -2472,7 +2472,7 @@ EXAMPLE Height, depth.
 
 ====== GeographicalName
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GeographicalName*
 |
@@ -2483,7 +2483,7 @@ EXAMPLE Height, depth.
 
 ====== Measure
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Measure*
 |
@@ -2494,7 +2494,7 @@ EXAMPLE Height, depth.
 
 ====== WaterLevelValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*WaterLevelValue*
 |
@@ -2672,7 +2672,7 @@ As established by the requirement about external object identifier included in S
 
 ====== ElevationTIN
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ElevationTIN*
 |
@@ -2730,7 +2730,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== DateTime
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*DateTime*
 |
@@ -2740,7 +2740,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== ElevationPropertyTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ElevationPropertyTypeValue*
 |
@@ -2756,7 +2756,7 @@ EXAMPLE Height, depth.
 
 ====== GM_Tin
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GM_Tin*
 |
@@ -2766,7 +2766,7 @@ EXAMPLE Height, depth.
 
 ====== Identifier
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Identifier*
 |
@@ -2782,7 +2782,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 
 ====== SurfaceTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*SurfaceTypeValue*
 |
@@ -4354,7 +4354,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -4402,7 +4402,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -4449,7 +4449,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -4491,7 +4491,7 @@ Technical Guidelines
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -4517,7 +4517,7 @@ Technical Guidelines
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -4589,7 +4589,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -4665,7 +4665,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -4705,7 +4705,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -4730,7 +4730,7 @@ NOTE The DQ_Result type should be DQ_DescriptiveResult and in the statement (68.
 
 ==== Spatial representation information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Spatial representation information*
 |Definition |Digital representation of spatial information in the dataset.
@@ -4752,7 +4752,7 @@ See B.2.6 in ISO 19115:2003.
 
 ==== Supplemental information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Supplemental information*
 |Definition |Any other descriptive information about the dataset.
@@ -4781,7 +4781,7 @@ This metadata element is recommended to concisely describe general properties of
 
 ==== Process step
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Process step*
 |Definition |Information about an event or transformation in the life of a dataset including the process used to maintain the dataset.
@@ -4818,7 +4818,7 @@ In the case of the data acquisition process it is important to highlight any kno
 
 ==== Data source
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Data source*
 |Definition |Information about the source data used in creating the data specified by the scope.
@@ -4853,7 +4853,7 @@ Metadata on data sources may as well include any specifications available and th
 
 ==== Browse graphic information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Browse graphic information*
 |Definition |Graphic that provides an illustration of the dataset (should include a legend for the graphic).
@@ -4877,7 +4877,7 @@ The following element is mandatory (the multiplicity according to ISO 19115 is s
 
 ==== Digital transfer options information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Digital transfer options information*
 |Definition |Technical means and media by which a resource is obtained from the distributor.
@@ -5285,7 +5285,7 @@ The recommended relation between grid spacing of the DEM and its related RMSE~v~
 
 *Table 7 - Recommended grid spacing in relation to vertical accuracy (RMSE~v~)*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*_Recommended Grid spacing_* |*_Type of terrain_*
 |3 times RMSE~v~ ≤ Grid spacing ≤ 20 times RMSE~v~ |Flat and undulating terrain
@@ -5388,7 +5388,7 @@ The contoue equidistance is also dependent on the vertical accuracy, taking into
 
 *Table 9 – Consistency between contour line vertical interval and vertical accuracy*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |_**Vertical accuracy (RMSE**~v~*) **_ |*_Type of terrain_*
 |1/3 of contour equidistance |Flat terrain (slope < 2 degrees)
@@ -5519,7 +5519,7 @@ None.
 
 ==== Styles for the layer EL.BreakLine
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.BreakLine.Default*
 |*Default Style* |yes
@@ -5562,7 +5562,7 @@ None.
 
 ==== Styles for the layer EL.ContourLine
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.ContourLine.Default*
 |*Default Style* |yes
@@ -5639,7 +5639,7 @@ Depth Contour line is a blue (#0A93FC) 1 pixel width line.
 
 ==== Styles for the layer EL.IsolatedArea 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.IsolatedArea.Default*
 |*Default Style* |yes
@@ -5683,7 +5683,7 @@ Depth Contour line is a blue (#0A93FC) 1 pixel width line.
 
 ==== Styles for the layer EL.SpotElevation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.SpotElevation.Default*
 |*Default Style* |yes
@@ -5805,7 +5805,7 @@ Depth values are labels in Arial 10 blue (#0000FF).
 
 ==== Styles for the layer EL.VoidArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.VoidArea.Default*
 |*Default Style* |yes
@@ -5849,7 +5849,7 @@ Depth values are labels in Arial 10 blue (#0000FF).
 
 ==== Styles for the layer EL.GridCoverage
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.GridCoverage.Default*
 |*Default Style* |yes
@@ -5924,7 +5924,7 @@ NOTE Use of a common style for elevation grid coverages may introduce problems w
 
 ==== Styles for the layer EL.TIN
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.TIN.Default*
 |*Default Style* |yes
@@ -6029,7 +6029,7 @@ image::./media/image33.jpeg[image]
 
 ===== Master contours
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.ContourLine.Master*
 |*Style Title* |Contour Line - for master contours
@@ -6079,7 +6079,7 @@ image::./media/image33.jpeg[image]
 
 ===== Ordinary contours
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.ContourLine.Ordinary*
 |*Style Title* |Contour Line – for ordinary contours
@@ -6130,7 +6130,7 @@ image::./media/image33.jpeg[image]
 
 ===== Auxiliary contours
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.ContourLine.Auxiliary*
 |*Style Title* |Contour Line – for auxiliary contours
@@ -7485,7 +7485,7 @@ Documentation
 
 ==== Maintenance of fairways
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Use Case Description |
 |Name a|
@@ -7619,7 +7619,7 @@ EXAMPLE Ridge line, thalweg."
 |Values: |The allowed values for this code list comprise the values specified in the table below and narrower values defined by data providers.
 |===
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 | *depression*
 |
