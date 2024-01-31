@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.9 Data Specification on Agricultural and Aquaculture Facilities – Technical Guidelines
+:revdate: 2024-01-31
+:keywords: INSPIRE Data Specification for the spatial data theme Agricultural and Aquaculture Facilities
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Agricultural and Aquaculture Facilities
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:lang: en
+
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -30,23 +41,22 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 = D2.8.III.9 Data Specification on _Agricultural and Aquaculture Facilities_ – Technical Guidelines
 
-[cols=",",]
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.9 INSPIRE Data Specification on _Agricultural and Aquaculture Facilities_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Agricultural and Aquaculture Facilities_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Agricultural and Aquaculture Facilities_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Agricultural and Aquaculture Facilities_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Agricultural and Aquaculture Facilities_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.9_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/af[D2.8.III.9_v3.1.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
 
 <<<
@@ -55,7 +65,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 == How to read the document?
 
-This document describes the _"INSPIRE data specification on Agricultural and Aquaculture Facilities – Technical Guidelines"_ version 3.0 as developed by the Thematic Working Group (TWG) _TWG AF_ using both natural and a conceptual schema language.
+This document describes the _"INSPIRE data specification on Agricultural and Aquaculture Facilities – Technical Guidelines"_ version 3.1.0 as developed by the Thematic Working Group (TWG) _TWG AF_ using both natural and a conceptual schema language.
 
 The data specification is based on a common templatefootnote:[The common document template is available in the "Framework documents" section of the data specifications web page at http://inspire.jrc.ec.europa.eu/index.cfm/pageid/2] used for all data specifications, which has been harmonised using the experience from the development of the Annex I, II and III data specifications.
 
@@ -385,7 +395,7 @@ A physical structure designed, built or installed to serve a specific function a
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |CLP |Classification, labelling and packaging of substances and mixtures
@@ -4130,7 +4140,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 ==== Styles for the layer AF.AgriculturalHolding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AF.AgriculturalHolding*
 |*Default Style* |Yes
@@ -4166,7 +4176,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 ==== Styles for the layer AF.AquacultureHolding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AF.AquacultureHolding*
 |*Default Style* |Yes
@@ -4203,7 +4213,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 ==== Styles for the layer AF.Site
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AF.Site*
 |*Default Style* |Yes
@@ -4267,7 +4277,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 ==== Styles for the layer AF.AbstractInstallation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AF.AbstractInstallation*
 |*Default Style* |Yes
@@ -4304,7 +4314,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 ==== Styles for the layer AF.Plot
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AF.Plot*
 |*Default Style* |AF.Plot.Default
@@ -4340,7 +4350,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 ==== Styles for the layer AF.AgriBuilding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AF.AgriBuilding*
 |*Default Style* |AF.AgriBuilding.Default
