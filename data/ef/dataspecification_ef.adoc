@@ -3151,9 +3151,12 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
 
-2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
+
 
 ====
 
