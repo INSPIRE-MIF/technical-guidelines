@@ -1252,7 +1252,7 @@ a|
 NOTE 2 Typically, this code list will be extended with code schemes used within Member States.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/DesignationSchemeValue
-!Values: !The allowed values for this code list comprise only the values specified in INSPIRE Registry and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1287,7 +1287,7 @@ a|
 !Definition: !A code list for the International Union for the Conservation of Nature classification scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/IUCNDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in INSPIRE Registry.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1303,7 +1303,7 @@ a|
 !Definition: !A code list for the National Monuments Record classification scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/NationalMonumentsRecordDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in INSPIRE Registry.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1319,7 +1319,7 @@ a|
 !Definition: !A code list for the Natura2000 designation scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/Natura2000DesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in INSPIRE Registry.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1335,7 +1335,7 @@ a|
 !Definition: !A code list for the Ramsar Convention designatoin scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RamsarDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in INSPIRE Registry.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1351,7 +1351,7 @@ a|
 !Definition: !A code list for the World Heritage Man and Biosphere Programme classification scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/UNESCOManAndBiosphereProgrammeDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in INSPIRE Registry.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1367,7 +1367,7 @@ a|
 !Definition: !A code list for the World Heritage designation scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/UNESCOWorldHeritageDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in INSPIRE Registry.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
