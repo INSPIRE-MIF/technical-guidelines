@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines
-:revdate: 2022-08-01
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Soil
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Soil
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2024.1
 :lang: en
 
 image::./media/image2.jpeg[image,width=131,height=90,align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93] **INSPIRE** - *Infrastructure
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/so/3.1.0[D2.8.III.3_v3.1.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/so[D2.8.III.3_v3.2.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -538,14 +538,12 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 ====
 [.text-center]
 *IR Requirement*
-Article 4
+_Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-1. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
 
-2. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
-
-3. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
 ====
 
@@ -598,7 +596,7 @@ Additional and/or use case-specific information related to the theme _Soil_ shou
 
 These spatial object types and data types should comply with the definitions and constraints and include the attributes and association roles defined in the Annex D.
 
-The enumerations and code lists used in attributes or association roles of spatial object types or data types should comply with the definitions and include the values defined in the Annex D.
+The code lists used in attributes or association roles of spatial object types or data types should comply with the definitions and include the values defined in the Annex D.
 
 ====
 
@@ -622,14 +620,15 @@ The following important rules related to class inheritance and abstract classes 
 ====
 [.text-center]
 *IR Requirement*
-Article 5
+_Article 5_
 *Types*
 
 (...)
 
-2. Types that are a sub-type of another type shall also include all this type's attributes and association roles.
+[arabic, start=2]
+. Types that are a sub-type of another type shall also include all this type's attributes and association roles.
 
-3. Abstract types shall not be instantiated.
+. Abstract types shall not be instantiated.
 
 ====
 
@@ -657,7 +656,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -696,26 +694,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-Article 6
-*Code Lists and Enumerations*
-
-(...)
-
-5) Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -728,20 +706,25 @@ The IRs distinguish the following types of code lists.
 ====
 [.text-center]
 *IR Requirement*
-Article 6
-*Code Lists and Enumerations*
+_Article 6_
+*Code Lists for Spatial Dataset*
 
-1) Code lists shall be of one of the following types, as specified in the Annexes:
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
 
-.. code lists whose allowed values comprise only the values specified in this Regulation;
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
 
-.. code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
 
-.. code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
+. Code lists shall be one of the following types:
+[loweralpha]
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
 
-.. code lists, whose allowed values comprise any values defined by data providers.
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
 
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
@@ -762,18 +745,19 @@ Additional values defined by data providers should not replace or redefine any v
 
 NOTE This data specification may specify recommended values for some of the code lists of type (b), (c) and (d) (see section 5.2.4.3). These recommended values are specified in a dedicated Annex.
 
-In addition, code lists can be hierarchical, as explained in Article 6(2) of the IRs.
+In addition, code lists can be hierarchical, as explained in Article 6(5) of the IRs.
 
 [IMPORTANT]
 ====
 [.text-center]
 *IR Requirement*
-Article 6
-*Code Lists and Enumerations*
+_Article 6_
+*Code Lists for Spatial Data Sets*
 
 (...)
 
-2) Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.
+[arabic, start=5]
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.
 
 ====
 
@@ -785,20 +769,19 @@ The type of code list and whether it is hierarchical or not is also indicated in
 ====
 [.text-center]
 *IR Requirement*
-Article 6
-*Code Lists and Enumerations*
+_Article 6_
+*Code Lists for Spatial Data Sets*
 
-(....)
+(...)
 
-3) Where, for an attribute whose type is a code list as referred to in points (b), (c) or (d) of paragraph 1, a data provider provides a value that is not specified in this Regulation, that value and its definition shall be made available in a register.
-
-4) Attributes or association roles of spatial object types or data types whose type is a code list may only take values that are allowed according to the specification of the code list.
+[arabic, start=6]
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
-Article 6(4) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
+Article 6(6) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
 
-For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(3) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
+For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(6) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
 
 NOTE Guidelines for setting up registers for additional values and how to register additional values in these registers is still an open discussion point between Member States and the Commission.
 
@@ -863,9 +846,9 @@ An empty code list may also be used as a super-class for a number of specific co
 _Article 9_
 *Identifier Management*
 
-1. The data type Identifier defined in Section 2.1 of Annex I shall be used as a type for the external object identifier of a spatial object.
+. The data type Identifier defined in Section 2.1 of Annex I shall be used as a type for the external object identifier of a spatial object.
 
-2. The external object identifier for the unique identification of spatial objects shall not be changed during the life-cycle of a spatial object.
+. The external object identifier for the unique identification of spatial objects shall not be changed during the life-cycle of a spatial object.
 
 ====
 
@@ -884,7 +867,7 @@ NOTE 3 Article 9(2) is ensured if the _namespace_ and _localId_ attributes of th
 _Article 12_
 *Other Requirements & Rules*
 
-1. The value domain of spatial properties defined in this Regulation shall be restricted to the Simple Feature spatial schema as defined in Herring, John R. (ed.), OpenGIS® Implementation Standard for Geographic information – Simple feature access – Part 1: Common architecture, version 1.2.1, Open Geospatial Consortium, 2011, unless specified otherwise for a specific spatial data theme or type.
+. The value domain of spatial properties defined in this Regulation shall be restricted to the Simple Feature spatial schema as defined in Herring, John R. (ed.), OpenGIS® Implementation Standard for Geographic information – Simple feature access – Part 1: Common architecture, version 1.2.1, Open Geospatial Consortium, 2011, unless specified otherwise for a specific spatial data theme or type.
 
 ====
 
@@ -911,7 +894,8 @@ _Article 10_
 
 (...)
 
-3. Where the attributes beginLifespanVersion and endLifespanVersion are used, the value of endLifespanVersion shall not be before the value of beginLifespanVersion.
+[arabic, start=3]
+. Where the attributes beginLifespanVersion and endLifespanVersion are used, the value of endLifespanVersion shall not be before the value of beginLifespanVersion.
 
 ====
 
@@ -942,7 +926,8 @@ _Article 12_
 
 (...)
 
-3. Where the attributes validFrom and validTo are used, the value of validTo shall not be before the value of validFrom.
+[arabic, start=3]
+. Where the attributes validFrom and validTo are used, the value of validTo shall not be before the value of validFrom.
 
 ====
 
@@ -1001,7 +986,7 @@ An observed soil profile represents a geo-referenced soil profile, described in 
 
 A derived soil profile is a non-point-located soil profile with property values that are derived (e.g. averaged) from the values of the corresponding properties of one or more observed soil profiles. Even if such a connection to an observed soil profile exists, it is not mandatory to provide it (nor its data) together with the derived soil profile. Eventually, a derived soil profile could also be a standalone non-geo-referenced soil profile, not associated to an observed soil profile and with property values that are e.g. assessed by expert knowledge.
 
-Any soil profile can be characterized as a whole by a number of properties, of which the following are included in the model: its soil type according to the WRB soil classification scheme (_WRBSoilName_) and/or any other soil classification scheme (_otherSoilName_) with the limitation to one per dataset, and zero or more other parameters, which are expressed through _soilProfileObservation_ associations with _OM_Observation_ objects (see Figure 11). Through the _observedProperty_ role of its _Phenomenon_ association, the _OM_Observation_ object designates the parameter, through the attributes _label_, _basePhenomenon_ (value selected from the codelist _SoilProfileParameterNameValue_) (see Figre 10) and _uom_ (unit of measure). Through the _result_ role of the _Range_ association, a value can be given to the parameter; this value should be of the type _Number_, _RangeType_ (a range of values) or _CharacterString_ (e.g. 'good' or 'very high'). Note that the _SoilProfileParameterNameValue_ codelist can be extended by the data provider when needed.
+Any soil profile can be characterized as a whole by a number of properties, of which the following are included in the model: its soil type according to the WRB soil classification scheme (_WRBSoilName_) and/or any other soil classification scheme (_otherSoilName_) with the limitation to one per dataset, and zero or more other parameters, which are expressed through _soilProfileObservation_ associations with _OM_Observation_ objects (see Figure 11). Through the _observedProperty_ role of its _Phenomenon_ association, the _OM_Observation_ object designates the parameter, through the attributes _label_, _basePhenomenon_ (value selected from the codelist _SoilProfileParameterNameValue_) (see Figre 10) and _uom_ (unit of measure). Through the _result_ role of the _Range_ association, a value can be given to the parameter; this value should be of the type _Number_, _RangeType_ (a range of values, as defined in Section 5.3.2.2.6.) or _CharacterString_ (e.g. 'good' or 'very high'). Note that the _SoilProfileParameterNameValue_ codelist can be extended by the data provider when needed.
 
 [IMPORTANT]
 ====
@@ -1095,7 +1080,7 @@ The specific purpose of the _SoilThemeCoverage_ class (see Figure 8) is to provi
 
 The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_, e.g. _organicCarbonContent_) (see Figure 10) and a unit of measure (e.g. cm). Note that the code list _SoilDerivedObjectParameterNameValue_ can be extended by the data provider when needed.
 
-The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType or CharacterString.
+The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType (as defined in Section 5.3.2.2.6.) or CharacterString.
 
 Since it may be useful to associate to a coverage other coverages of which the cell values are supplementary information to the corresponding grid cells of the coverage itself, the _SoilThemeCoverage_ class has an association to another coverage, the _SoilThemeDescriptiveCoverage_. The _SoilThemeDescriptiveCoverage_ has the same spatial and domain extent as the associated _SoilThemeCoverage_. The attribute _soilThemeDescriptiveParameter_ is of the datatype _SoilThemeDescriptiveParameterType_ that consists of a _soilThemeDescriptiveParameterName_ (characterstring, e.g. _purity_) and a unit of measure (e.g. cm). The _soilThemeDescriptiveParameter_ gives supplementary information on the grid cell values of the associated coverage, often it concerns qualitative information. An example would be the provision of "purity maps" in relation to for instance soil texture maps.
 
@@ -1322,7 +1307,7 @@ a|
 [width="100%",cols="5%,17%,78%"]
 !===
 !  !Name: !profile element depth range
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !Upper and lower depth of the profile element (layer or horizon) measured from the surface (0 cm) of a soil profile (in cm).
 !  !Description: !
 !  !Multiplicity: !1
@@ -1385,7 +1370,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the profile element observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the profile element observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.profileElementObservation.result->oclIsKindOf(Number) or self.profileElementObservation.result->oclIsKindOf(CharacterString) or self.profileElementObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -1580,7 +1565,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the soil derived object observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the soil derived object observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.soilDerivedObjectObservation.result->oclIsKindOf(Number) or self.soilDerivedObjectObservation.result->oclIsKindOf(CharacterString) or self.soilDerivedObjectObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -1987,7 +1972,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the soil profile observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the soil profile observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.soilProfileObservation.result->oclIsKindOf(Number) or self.soilProfileObservation.result->oclIsKindOf(CharacterString) or self.soilProfileObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -2010,10 +1995,10 @@ and/or
  
 b.) the larger piece of land that is directly linked to and described by all soil investigations on its one or more spots (SoilPlots). It thus provides the object to which soil data of different kind (or the same kind, but at different points in time, e.g. in soil monitoring) obtained on different plots is related as if it would have been collected at the very same place. This allows for: 
  
-1. combination of data that cannot be obtained on the very same place 
+. combination of data that cannot be obtained on the very same place 
 EXAMPLE: a soil pit and investigations on earthworm abundance cannot be done in the same place, but possibly some metres apart from each other. Nonetheless shall the results of both investigations be combined to inform about the soil state. 
 or 
-2. comparison of soil condition after some time has elapsed. 
+. comparison of soil condition after some time has elapsed. 
 EXAMPLE: Organic carbon stock has been investigated using data from two monitoring periods that had to be conducted on spatially slightly separated places because the sampling is destructive. Nonetheless are the results of both periods regarded as giving an idea how organic carbon stock has changed over the years at the same place. 
  
 The site is also the object to state the date and time information on validity, etc. 
@@ -2145,7 +2130,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the soil site observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the soil site observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.soilSiteObservation.result->oclIsKindOf(Number) or self.soilSiteObservation.result->oclIsKindOf(CharacterString) or self.soilSiteObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -2255,7 +2240,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: rangeSet->oclIsKindOf(Number) or rangeSet->oclIsKindOf(Characterstring) or rangeSet->oclIsKindOf(RangeType)
 !===
 
@@ -2343,7 +2328,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: rangeSet->oclIsKindOf(Number) or rangeSet->oclIsKindOf(Characterstring) or rangeSet->oclIsKindOf(RangeType)
 !===
 
@@ -2375,7 +2360,7 @@ a|
 [width="100%",cols="5%,17%,78%"]
 !===
 !  !Name: !derived profile percentage range.
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !Interval that defines the minimum and maximum percentage of the area of the soil body represented by a specific derived soil profile.
 !  !Multiplicity: !1
 !  !Stereotypes: !«voidable»
@@ -2615,7 +2600,7 @@ a|
 [width="100%",cols="5%,17%,78%"]
 !===
 !  !Name: !fraction particle size range
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !upper and lower limit of the particle size of the defined fraction (expressed in µm)
 !  !Description: !SOURCE NRCS Natural Resources Conservation Service, Soil survey laboratory information manual, Soil survey investigation report n.45 version 1.0 May 1995 pag. 11 
 EXAMPLE upper limit = 63µm , lower limit =20µm
@@ -3206,7 +3191,7 @@ Specifiers are name elements in WRB restricting the meaning of qualifiers.
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== Boolean
 
@@ -3543,9 +3528,11 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 *1.3.3. Compound Coordinate Reference Systems*
 
-1. For the horizontal component of the compound coordinate reference system, one of the coordinate reference systems specified in section 1.3.2 shall be used.
+--
+. For the horizontal component of the compound coordinate reference system, one of the coordinate reference systems specified in section 1.3.2 shall be used.
 
-2. For the vertical component, one of the following coordinate reference systems shall be used:
+. For the vertical component, one of the following coordinate reference systems shall be used:
+--
 
 * For the vertical component on land, the European Vertical Reference System (EVRS) shall be used to express gravity-related heights within its geographical scope. Other vertical reference systems related to the Earth gravity field shall be used to express gravity-related heights in areas that are outside the geographical scope of EVRS.
 * For the vertical component in the free atmosphere, barometric pressure, converted to height using ISO 2533:1975 International Standard Atmosphere, or other linear or parametric reference systems shall be used. Where other parametric reference systems are used, these shall be described in an accessible reference using EN ISO 19111-2:2012.
@@ -3556,11 +3543,14 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-1. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+. Other coordinate reference systems may be specified for specific spatial data themes.
 
-2. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
+
+
 ====
 
 ===== Display
@@ -3569,7 +3559,7 @@ The geodetic codes and parameters needed to describe these coordinate reference 
 ====
 [.text-center]
 *IR Requirement*
-_Annex II, Section 1.4_
+_Annex II, Section 1.5_
 *Coordinate Reference Systems used in the View Network Service*
 
 For the display of spatial data sets with the view network service as specified in Regulation No 976/2009, at least the coordinate reference systems for two-dimensional geodetic coordinates (latitude, longitude) shall be available.
@@ -3585,19 +3575,19 @@ For the display of spatial data sets with the view network service as specified 
 _Annex II, Section 1.5_
 *Coordinate Reference System Identifiers*
 
-1. Coordinate reference system parameters and identifiers shall be managed in one or several common registers for coordinate reference systems.
+. Coordinate reference system parameters and identifiers shall be managed in one or several common registers for coordinate reference systems.
 
-2. Only identifiers contained in a common register shall be used for referring to the coordinate reference systems listed in this Section.
+. Only identifiers contained in a common register shall be used for referring to the coordinate reference systems listed in this Section.
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register)  . These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 2*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -3606,35 +3596,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-Table 2. http URIs for the default coordinate reference systems
-
-[align=center,width="100%",cols="37%,20%,43%"]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -3645,7 +3606,7 @@ Table 2. http URIs for the default coordinate reference systems
 _Article 11_
 *Temporal Reference Systems*
 
-1. The default temporal reference system referred to in point 5 of part B of the Annex to Commission Regulation (EC) No 1205/2008 (footnote:[OJ L 326, 4.12.2008, p. 12.]) shall be used, unless other temporal reference systems are specified for a specific spatial data theme in Annex II.
+. The default temporal reference system referred to in point 5 of part B of the Annex to Commission Regulation (EC) No 1205/2008 (footnote:[OJ L 326, 4.12.2008, p. 12.]) shall be used, unless other temporal reference systems are specified for a specific spatial data theme in Annex II.
 
 ====
 
@@ -3666,7 +3627,7 @@ _Article 12_
 
 (...)
 
-2. All measurement values shall be expressed using SI units or non-SI units accepted for use with the International System of Units, unless specified otherwise for a specific spatial data theme or type.
+. All measurement values shall be expressed using SI units or non-SI units accepted for use with the International System of Units, unless specified otherwise for a specific spatial data theme or type.
 
 ====
 
@@ -3681,9 +3642,9 @@ _Annex II, Section 2.2_
 
 Either of the grids with fixed and unambiguously defined locations defined in Sections 2.2.1 and 2.2.2 shall be used as a geo-referencing framework to make gridded data available in INSPIRE, unless one of the following conditions holds:
 
-(1) Other grids may be specified for specific spatial data themes in Annexes II-IV. In this case, data exchanged using such a theme-specific grid shall use standards in which the grid definition is either included with the data, or linked by reference.
+. Other grids may be specified for specific spatial data themes in Annexes II-IV. In this case, data exchanged using such a theme-specific grid shall use standards in which the grid definition is either included with the data, or linked by reference.
 
-(2) For grid referencing in regions outside of continental Europe Member States may define their own grid based on a geodetic coordinate reference system compliant with ITRS and a Lambert Azimuthal Equal Area projection, following the same principles as laid down for the grid specified in Section 2.2.1. In this case, an identifier for the coordinate reference system shall be created.
+. For grid referencing in regions outside of continental Europe Member States may define their own grid based on a geodetic coordinate reference system compliant with ITRS and a Lambert Azimuthal Equal Area projection, following the same principles as laid down for the grid specified in Section 2.2.1. In this case, an identifier for the coordinate reference system shall be created.
 
 *2.2 Equal Area Grid*
 
@@ -3725,12 +3686,12 @@ The descriptions of the elements and measures are based on Annex D of ISO/DIS 19
 
 === Data quality elements
 
-[.text-center]
 Table 3 lists all data quality elements and sub-elements that are being used in this specification. Data quality information can be evaluated at level of spatial object, spatial object type, dataset or dataset series. The level at which the evaluation is performed is given in the "Evaluation Scope" column.
 
 The measures to be used for each of the listed data quality sub-elements are defined in the following sub-sections.
 
-Table 3 – Data quality elements used in the spatial data theme _Soil_
+[.text-center]
+*Table 3 – Data quality elements used in the spatial data theme _Soil_*
 
 [align=center,width="100%",cols="12%,19%,15%,36%,18%"]
 |===
@@ -3864,7 +3825,6 @@ For some dataset-level metadata elements, in particular those for reporting data
 
 === Metadata elements defined in INSPIRE Metadata Regulation
 
-[.text-center]
 Table 4 gives an overview of the metadata elements specified in Regulation 1205/2008/EC (implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata).
 
 The table contains the following information:
@@ -3874,7 +3834,8 @@ The table contains the following information:
 * The third column specifies the multiplicity.
 * The fourth column specifies the condition, under which the given element becomes mandatory.
 
-Table 4 – Metadata for spatial datasets and spatial dataset series specified in Regulation 1205/2008/EC
+[.text-center]
+*Table 4 – Metadata for spatial datasets and spatial dataset series specified in Regulation 1205/2008/EC*
 
 [align=center,width="100%",cols="17%,28%,15%,40%"]
 |===
@@ -4056,11 +4017,11 @@ The Metadata Technical Guidelines based on EN ISO 19115 and EN ISO 19119 specifi
 
 To describe the transformation steps and related source data, it is recommended to use the following sub-elements of LI_Lineage:
 
+* For the description of the transformation process of the local to the common INSPIRE data structures, the LI_ProcessStep sub-element should be used.
+
+* For the description of the source data the LI_Source sub-element should be used.
+
 ====
-
-- For the description of the transformation process of the local to the common INSPIRE data structures, the LI_ProcessStep sub-element should be used.
-
-- For the description of the source data the LI_Source sub-element should be used.
 
 NOTE 1 In order to improve the interoperability, domain templates and instructions for using these free text elements (descriptive statements) may be specified here and/or in an Annex of this data specification.
 
@@ -4092,28 +4053,28 @@ It is recommended that at least the date of the last revision of a spatial data 
 ====
 [.text-center]
 *IR Requirement*
-Article 13
+_Article 13_
 *Metadata required for Interoperability*
 
 The metadata describing a spatial data set shall include the following metadata elements required for interoperability:
 
-1. Coordinate Reference System: Description of the coordinate reference system(s) used in the data set.
+. Coordinate Reference System: Description of the coordinate reference system(s) used in the data set.
 
-2. Temporal Reference System: Description of the temporal reference system(s) used in the data set.
-
+. Temporal Reference System: Description of the temporal reference system(s) used in the data set.
++
 This element is mandatory only if the spatial data set contains temporal information that does not refer to the default temporal reference system.
 
-3. Encoding: Description of the computer language construct(s) specifying the representation of data objects in a record, file, message, storage device or transmission channel.
+. Encoding: Description of the computer language construct(s) specifying the representation of data objects in a record, file, message, storage device or transmission channel.
 
-4. Topological Consistency: Correctness of the explicitly encoded topological characteristics of the data set as described by the scope.
-
+. Topological Consistency: Correctness of the explicitly encoded topological characteristics of the data set as described by the scope.
++
 This element is mandatory only if the data set includes types from the Generic Network Model and does not assure centreline topology (connectivity of centrelines) for the network.
 
-5. Character Encoding: The character encoding used in the data set.
-
+. Character Encoding: The character encoding used in the data set.
++
 This element is mandatory only if an encoding is used that is not based on UTF-8.
 
-6. Spatial Representation Type: The method used to spatially represent geographic information.
+. Spatial Representation Type: The method used to spatially represent geographic information.
 
 ====
 
@@ -4346,6 +4307,7 @@ The table contains the following information:
 * The second column specifies the name of the metadata element.
 * The third column specifies the multiplicity.
 
+[.text-center]
 *Table 5 – Optional theme-specific metadata elements for the theme Soil*
 
 [width="100%",cols="12%,73%,15%"]
@@ -4516,9 +4478,9 @@ NOTE The DQ_Result type should be DQ_DescriptiveResult and in the statement (68.
 _Article 8_
 *Updates*
 
-1. Member States shall make available updates of data on a regular basis.
+. Member States shall make available updates of data on a regular basis.
 
-2. All updates shall be made available at the latest 6 months after the change was applied in the source data set, unless a different period is specified for a specific spatial data theme in Annex II.
+. All updates shall be made available at the latest 6 months after the change was applied in the source data set, unless a different period is specified for a specific spatial data theme in Annex II.
 
 ====
 
@@ -4557,11 +4519,13 @@ The IRs contain the following two requirements for the encoding to be used to ma
 [.text-center]
 *IR Requirement*
 _Article 7_
-*Encoding*
+*Encoding*  
 
-1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
 
-2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
 
 ====
 
@@ -4690,13 +4654,16 @@ This clause defines the rules for layers and styles to be used for portrayal of 
 _Article 14_
 *Portrayal*
 
-1. For the portrayal of spatial data sets using a view network service as specified in Commission Regulation No 976/2009 (footnote:[OJ L 274, 20.10.2009, p. 9.]), the following shall be available:
-(a) the layers specified in Annex II for the theme or themes the data set is related to;
-(b) for each layer at least a default portrayal style, with as a minimum an associated title and a unique identifier.
+. For the portrayal of spatial data sets using a view network service as specified in Commission Regulation No 976/2009 (footnote:[OJ L 274, 20.10.2009, p. 9.]), the following shall be available:
+[loweralpha]
+.. the layers specified in Annex II for the theme or themes the data set is related to;
+.. for each layer at least a default portrayal style, with as a minimum an associated title and a unique identifier.
 
-2. For each layer, Annex II defines the following:
-(a) a human readable title of the layer to be used for display in user interface;
-(b) the spatial object type(s), or sub-set thereof, that constitute(s) the content of the layer.
+[arabic, start=2]
+. For each layer, Annex II defines the following:
+[loweralpha]
+.. a human readable title of the layer to be used for display in user interface;
+.. the spatial object type(s), or sub-set thereof, that constitute(s) the content of the layer.
 
 ====
 
@@ -4792,11 +4759,13 @@ _Article 14_
 
 (...)
 
-3. For spatial object types whose objects can be further classified using a code list-valued attribute, several layers may be defined. Each of these layers shall include the spatial objects corresponding to one specific code list value. In the definition of such sets of layers in Annexes II-IV,
-(a) the placeholder <CodeListValueshall represent the values of the relevant code list, with the first letter in upper case,
-(b) the placeholder <human-readable nameshall represent the human-readable name of the code list values;
-(c) the spatial object type shall include the relevant attribute and code list, in parentheses;
-(d) one example of a layer shall be given.
+[arabic, start=3]
+. For spatial object types whose objects can be further classified using a code list-valued attribute, several layers may be defined. Each of these layers shall include the spatial objects corresponding to one specific code list value. In the definition of such sets of layers in Annexes II-IV,
+[loweralpha]
+.. the placeholder <CodeListValueshall represent the values of the relevant code list, with the first letter in upper case,
+.. the placeholder <human-readable nameshall represent the human-readable name of the code list values;
+.. the spatial object type shall include the relevant attribute and code list, in parentheses;
+.. one example of a layer shall be given.
 
 ====
 
@@ -4987,6 +4956,7 @@ EXAMPLE 2 The URI _http://inspire.ec.europa.eu/conformance-class/ir/el/as/el-vec
 
 An overview of the conformance classes and the associated tests is given in the table below.
 
+[.text-center]
 *Table 1. Overview of the tests within this Abstract Test Suite.*
 
 |===
@@ -5074,7 +5044,7 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
 |===
 *Open issue 6*: Even though the last condition can be derived from Art. 8(4) of the Directive, the ISDSS Regulation does not contain requirements concerning the above issue. Therefore, no specific tests have been included in this abstract suite for testing conformity of extended application schemas. Annex F of the Generic Conceptual Model (D2.5) provides an example how to extend INSPIRE application schemas in a compliant way.
@@ -5111,7 +5081,7 @@ a) [underline]#Purpose#: Verification whether each element of the dataset under 
 
 b) [underline]#Reference#: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-c) [underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+c) [underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
@@ -5524,8 +5494,8 @@ b) Test Method: Examine that the number of occurrences of each attribute and/or 
 ==== CRS http URI test
 
 a) [underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
-
-c) Reference: Table 2 in Section 6 of this technical guideline
+    
+c) Reference: Section 6 of this technical guideline
 
 b) Test Method: Compare the URI of the dataset with the URIs in the table.
 
@@ -5801,7 +5771,7 @@ The required data input format could be point/vector maps or raster maps.
 
 Each input dataset is a composition of __SoilDerivedObject__s and is documented in its associated metadata, that includes a title, abstract and would point to the documentation on how the computation for the input data has been accomplished, eventually relying on data coming from observed soil profiles and/or soil bodies.
 
-Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType), and qualitative values (CharacterString).
+Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType, as defined in Section 5.3.2.2.6.), and qualitative values (CharacterString).
 
 For the considered soil input data: name, unit of measure and value would be:
 
@@ -5819,7 +5789,7 @@ Note that, since the parameters _soilDerivedObject_ are linked (through the O&M 
 
 *In case of raster input maps:.*
 
-The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType or CharacterString.
+The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType (as defined in Section 5.3.2.2.6.) or CharacterString.
 
 Unlike the _SoilDerivedObject_'s (where an input dataset could be specified by indicating its contributing data), the input coverages are in essence standalone, although in theory they can be associated to other coverages through the association with zero or more SoilThemeDescriptiveCoverage's that have the same spatial and domain extent as the associated SoilThemeCoverage..
 
@@ -5983,7 +5953,7 @@ The required data input format could be point/vector maps or raster maps.
 
 Each input dataset is a composition of __SoilDerivedObject__s and is documented in its associated metadata, that includes a title, abstract and would point to the documentation on how the computation for the input data has been accomplished, eventually relying on data coming from observed soil profiles and/or soil bodies.
 
-Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType), and qualitative values (CharacterString).
+Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType, as defined in Section 5.3.2.2.6.), and qualitative values (CharacterString).
 
 For the considered soil input data: name, unit of measure and value would be:
 
@@ -6004,7 +5974,7 @@ Note that, since the parameters _soilDerivedObject_ are linked (through the O&M 
 
 *In case of raster input maps:*
 
-The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType or CharacterString.
+The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType (as defined in Section 5.3.2.2.6.) or CharacterString.
 
 Unlike the _SoilDerivedObject_'s (where an input dataset could be specified by indicating its contributing data), the input coverages are in essence standalone, although in theory they can be associated to other coverages through the association with zero or more SoilThemeDescriptiveCoverage's that have the same spatial and domain extent as the associated SoilThemeCoverage..
 
@@ -6026,6 +5996,7 @@ Similar remarks as for the input data concerning extension of the _SoilDerivedOb
 
 The output data take the form of a _SoilThemeCoverage_, which allows the storage of raster data. (the same discussion as above for input data holds).
 
+[.text-center]
 *Table 2: PTR-based information need of AGRI-ENVIRONMENTAL SOIL QUALITY calculations*
 
 NOTE these parts of this scheme are still under testing and development – see bottom
@@ -6122,14 +6093,14 @@ DR
 {empty}* The indicated property is used for the calculation of the following functions:
 
 ====
-* 1 Productivity index (under testing and validation)
-* 2 Fertilizer response rate (under testing and validation)
-* 3 Production stability index (to be developed)
-* 4 Soil environmental quality index (under development)
-** 4a substances filtering
-** 4b substances transforming
-** 4c biodiversity
-** 4d carbon pool
+. Productivity index (under testing and validation)
+. Fertilizer response rate (under testing and validation)
+. Production stability index (to be developed)
+. Soil environmental quality index (under development)
+.. substances filtering
+.. substances transforming
+.. biodiversity
+.. carbon pool
 ====
 
 <<<
@@ -8830,7 +8801,7 @@ a|
 [width="100%",cols="5%,16%,79%"]
 !===
 !  !Name: !groundwater depth range
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !depth of the groundwater.
 !  !Multiplicity: !1
 !===
@@ -9385,7 +9356,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 CharacterString
 

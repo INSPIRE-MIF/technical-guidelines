@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.II.2 Data Specification on Land Cover – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Land Cover
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Land Cover
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -41,24 +41,6 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 = D2.8.II.2 Data Specification on _Land Cover_ – Technical Guidelines
 
-[width="100%",cols="17%,83%"]
-|===
-|*Title* |D2.8.II.2 INSPIRE Data Specification on _Land Cover_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Land Cover_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Land Cover_
-|*Publisher* |European Commission Joint Research Centre
-|*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Land Cover_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Land Cover_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.II.2_v3.0
-|*Language* |En
-|*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
-|===
 
 [width="100%",cols="17%,83%",]
 |===
@@ -72,7 +54,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/lc[D2.8.II.2_v3.0.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/lc[D2.8.II.2_v3.1.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -492,11 +474,9 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 _Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
 
-. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
-
-. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
 ====
 
@@ -551,7 +531,7 @@ Additional and/or use case-specific information related to the theme _Land Cover
 
 These spatial object types and data types should comply with the definitions and constraints and include the attributes and association roles defined in this section.
 
-The enumerations and code lists used in attributes or association roles of spatial object types or data types should comply with the definitions and include the values defined in this section.
+The code lists used in attributes or association roles of spatial object types or data types should comply with the definitions and include the values defined in this section.
 
 ====
 
@@ -611,7 +591,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -650,27 +629,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-_Article 6_
-*Code Lists and Enumerations*
-
-(...)
-
-[arabic, start=5]
-. Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -684,21 +642,23 @@ The IRs distinguish the following types of code lists.
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
 
-. Code lists shall be of one of the following types, as specified in the Annexes:
-+
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
+
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
+
+. Code lists shall be one of the following types:
 [loweralpha]
-.. code lists whose allowed values comprise only the values specified in this Regulation;
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
 
-.. code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
-
-.. code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
-+
-.. code lists, whose allowed values comprise any values defined by data providers.
-
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
@@ -726,12 +686,12 @@ In addition, code lists can be hierarchical, as explained in Article 6(2) of the
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
 (...)
 
-[arabic, start=2]
-. Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.
+[arabic, start=5]
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
 
 ====
 
@@ -744,20 +704,18 @@ The type of code list and whether it is hierarchical or not is also indicated in
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
 (...)
 
-[arabic, start=3]
-. Where, for an attribute whose type is a code list as referred to in points (b), (c) or (d) of paragraph 1, a data provider provides a value that is not specified in this Regulation, that value and its definition shall be made available in a register.
-
-. Attributes or association roles of spatial object types or data types whose type is a code list may only take values that are allowed according to the specification of the code list.
+[arabic, start=6]
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
-Article 6(4) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
+Article 6(6) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
 
-For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(3) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
+For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(6) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
 
 NOTE Guidelines for setting up registers for additional values and how to register additional values in these registers is still an open discussion point between Member States and the Commission.
 
@@ -1134,7 +1092,7 @@ Each nomenclature used by a Land Cover Data set shall be described by at least o
 _Annex III, Section 2.6_
 *Theme-specific Requirements*
 
-If an onlineDescription attribute is provided for a LandCoverNomenclature data type, the referenced online description shall define, for each class, at least a code, a name, a definition and a RGB value to be used for portrayal. If the online description describes the nomenclature for a LandCoverGridCoverage object, an integer grid code shall also be provided for each class. This code shall be used in the range of the LandCoverGridCoverage to represent the corresponding class.
+If an an externalDescription attribute is provided for a LandCoverNomenclature data type, the referenced online description shall define, for each class, at least a code, a name, a definition and a RGB value to be used for portrayal. If the online description describes the nomenclature for a LandCoverGridCoverage object, an integer grid code shall also be provided for each class. This code shall be used in the range of the LandCoverGridCoverage to represent the corresponding class.
 ====
 
 NOTE the grid code is the value used to effectively store classifications in raster formats. Values are consecutive (1, 2, 3), each representing a LC class. For more details, see CORINE Table in Annex E. The following table is an extract with class definitions.
@@ -1341,7 +1299,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _DocumentCitation_
 
@@ -1686,7 +1644,7 @@ A special case is a data set which contains changing information, e.g. the CORIN
 
 *Feature catalogue metadata*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Application Schema |INSPIRE Application Schema LandCoverVector
 |Version number |3.0
@@ -1818,7 +1776,7 @@ a|
 
 [cols=",]
 !===
-!Name: !element
+!Name: !member
 !Value type: !LandCoverUnit
 !Definition: !A Land Cover Unit being part of the data set.
 !Description: !A Land Cover dataset is a collection of LandCover units, each one being called an element.
@@ -1898,6 +1856,17 @@ a|
 !Value type: !LandCoverObservation
 !Definition: !Land cover information at a specific time and place.
 !Multiplicity: !1..*
+!===
+
+a|
+*Association role: dataset*
+
+[cols=",]
+!===
+!Name: !dataset
+!Value type: !LandCoverDataset
+!Definition: !Land Cover data set to which this Land Cover object belongs.
+!Multiplicity: !1
 !===
 
 a|
@@ -2015,7 +1984,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _CharacterString_
 
@@ -2296,7 +2265,7 @@ The Land Cover specification recommends to provide the reference date (c) at cov
 
 *Feature catalogue metadata*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Application Schema |INSPIRE Application Schema LandCoverRaster
 |Version number |3.0
@@ -2435,7 +2404,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _CharacterString_
 
@@ -2615,7 +2584,7 @@ When extending LandCoverVector application schema, same requirements apply, in p
 
 *Feature catalogue metadata*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Application Schema |INSPIRE Application Schema LandCoverExtension
 |Version number |3.0
@@ -2880,7 +2849,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _Boolean_
 
@@ -3043,11 +3012,13 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+. Other coordinate reference systems may be specified for specific spatial data themes.
 
 . For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
+
 ====
 
 ===== Display
@@ -3069,7 +3040,7 @@ For the display of spatial data sets with the view network service as specified 
 ====
 [.text-center]
 *IR Requirement*
-_Annex II, Section 1.4_
+_Annex II, Section 1.5_
 *Coordinate Reference Systems used in the View Network Service*
 
 . Coordinate reference system parameters and identifiers shall be managed in one or several common registers for coordinate reference systems.
@@ -3078,13 +3049,13 @@ _Annex II, Section 1.4_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 8*
 
-The identifiers listed in Table 8 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -3093,35 +3064,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-*Table 8. http URIs for the default coordinate reference systems*
-
-[cols=",,",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -3985,7 +3927,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -4030,7 +3972,7 @@ Example XML encoding	<gmd:referenceSystemInfo>
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -4075,7 +4017,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -4114,7 +4056,7 @@ specification: D2.8.II.2 Data Specification on Land Cover – Technical Guidelin
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -4139,7 +4081,7 @@ specification: D2.8.II.2 Data Specification on Land Cover – Technical Guidelin
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -4211,7 +4153,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -4287,7 +4229,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -4335,7 +4277,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -4416,9 +4358,12 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
 
-. Every encoding rule used to encode spatial data shall be made available.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
+
 
 ====
 
@@ -4753,7 +4698,7 @@ None.
 
 ==== Styles for the layer LC.LandCoverPoints
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*LC.LandCoverPoints.Default*
 |*Default Style* |yes
@@ -4797,7 +4742,7 @@ No scale limit
 
 ==== Style for the layer LC.LandCoverSurfaces
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*LC.LandCoverSurfaces.Default*
 |*Default Style* |yes
@@ -4840,7 +4785,7 @@ No scale limit
 
 ==== Style for the layer LC.LandCoverRaster
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*LC.LandCoverRaster.Default*
 |*Default Style* |yes
@@ -5067,7 +5012,7 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
 ====
 *Open issue 1:* Even though the last condition can be derived from Art. 8(4) of the Directive, the ISDSS Regulation does not contain requirements concerning the above issue. Therefore, no specific tests have been included in this abstract suit for testing conformity of extended application schemas. Annex F of the Generic Conceptual Model (D2.5) provides an example how to extend     INSPIRE application schemas in a compliant way.
@@ -5106,7 +5051,7 @@ a) [.underline]#Purpose#: Verification whether each element of the dataset under
 
 b) [.underline]#Reference#: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-c) [.underline]#Test method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+c) [.underline]#Test method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
@@ -5118,19 +5063,17 @@ b) [.underline]#Reference#: Art. 3, Art.4, Art.6(1), Art.6(4), Art.6(5) and Art.
 
 c) [.underline]#Test method#: Examine whether the value type of each provided attribute or association role adheres to the corresponding value type specified in the target specification.
 
-NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from enumeration and code lists, and the coverage domains.
+NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from code lists, and the coverage domains.
 
 NOTE 2 Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
 ==== Value test
 
-a) [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.
+a) [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.
 
 b) [.underline]#Reference#: Art.4 (3) of Commission Regulation No 1089/2010.
 
-c) [.underline]#Test method#: When an attribute / association role has an enumeration or code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
-
-* shall not take any other value than defined in the enumeration table when its type is an enumeration.
+c) [.underline]#Test method#: When an attribute / association role has a code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
 
 * shall take only values explicitly specified in the code list when the code list's extensibility is "none".
 
@@ -5478,7 +5421,7 @@ c) [.underline]# Test method#: Examine that the number of occurrences of each at
 
 a) [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-b) [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+b) [.underline]#Reference#: Section 6 of this technical guideline
 
 c) [.underline]# Test method#: Compare the URI of the dataset with the URIs in the table.
 
@@ -5847,7 +5790,7 @@ In addition, _GPG-LULUCF_ provides guidance related to the specific features of 
 
 ==== Detailed, structured description
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use Case Description*
 |Name |Land and Ecosystem Accounting (LEAC) - support revision and implementation of UNSD-SEEA (System of Economic and Environmental Accounting) Handbook
@@ -6684,7 +6627,7 @@ The LCML translation of CLC 213 indicated that "Graminae", "Water Body" and "Per
 
 The first basic element is "graminae" which is translated 100% to the PLCC "009_Hherbaceous plants". Other basic elements, properties and optional characteristics are ignored. The second element water body goes easily to PLCC "016_Fresh water body".
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Basic Element* |*PLC component*
 |graminae |009_Herbaceous plants
@@ -6698,7 +6641,7 @@ image::./media/image69.png[image, align=center]
 
 The semantic analysis identified three horizontal patterns for CLC243; "herbaceous or woody crops", "natural vegetation" and "water bodies", considered as integral elements of a single "functional unit". Such complex semantic interpretation requires clear and fixed ranges of proportional percentages between the three patterns. These patterns in turn represent one or more PLC components.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Horizontal Pattern* |*Contributing PLC components*
 |herbaceous or woody crops |004_Arable_land, 009_Herbaceous_plants, 005_Permanent_woody_and_shrub_crops

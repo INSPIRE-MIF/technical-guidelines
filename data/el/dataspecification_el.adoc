@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.II.1 INSPIRE Data Specification on Elevation – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Elevation
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Elevation
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image::./media/image2.jpeg[image,width=93,height=93,align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=100,height=100] **INSPIRE** - *Infrastructu
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/el[D2.8.II.1_v3.2.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/el[D2.8.II.1_v3.3.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -135,7 +135,7 @@ The main purpose of a Digital Elevation Model is to provide an elevation propert
 
 In the case of the vector model, this data specification allows the use of 2-D or 2.5-D geometries. In the first case the vertical component of the coordinates are given as an attribute of a two dimensional spatial object, while in the second all the points in the elevation data set are expressed using three coordinates, where the elevation value is assigned to the (third) Z coordinate.
 
-In line with existing technologies three spatial representation methods have been offered: grid, of mandatory provision, as well as vector and triangulated irregular network (TIN), of optional provision. Each of them is described in a separate package. In addition, generic modelling elements, such as enumerations and generic utilities (data types) are included in the base types application schema.
+In line with existing technologies three spatial representation methods have been offered: grid, of mandatory provision, as well as vector and triangulated irregular network (TIN), of optional provision. Each of them is described in a separate package. In addition, generic modelling elements, such generic utilities (data types) are included in the base types application schema.
 
 The _Elevation_ data specification includes the widely used grid representation, which is based on a coverage geometry, indicating elevation values at the points of a rectified grid. For Pan-European and cross-border purposes the data specification recommends the provision of elevation data using a theme-specific common grid based on ETRS89 geodetic coordinates (shared with the _Orthoimagery_ data specifications), while using real time re-projection for display through view services.
 
@@ -584,20 +584,18 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 ====
 [.text-center]
 *IR Requirement*
-Article 4
+_Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-1. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
 
-2. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
-
-3. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
 ====
 
 The types to be used for the exchange and classification of spatial objects from data sets related to the spatial data theme _Elevation_ are defined in the following application schemas:
 
-* The ElevationBaseTypes application schema, which provides basic enumerations for the rest application schemas of _Elevation_ (Section 5.4).
+* The ElevationBaseTypes application schema, which provides basic codelists for the rest application schemas of _Elevation_ (Section 5.4).
 
 * The ElevationGridCoverage application schema, which defines the model for _Elevation_ data in the grid spatial representation type (Section 5.5).
 
@@ -685,7 +683,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -725,25 +722,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-Article 6
-*Code Lists and Enumerations*
-(...)
-
-5) Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -756,16 +734,25 @@ The IRs distinguish the following types of code lists.
 ====
 [.text-center]
 *IR Requirement*
-Article 6
-*Code Lists and Enumerations*
+_Article 6_
+*Code Lists for Spatial Data Sets*
 
-1. Code lists shall be of one of the following types, as specified in the Annexes:
-	a) code lists whose allowed values comprise only the values specified in this Regulation;
-	b) code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
-	c) code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
-	d) code lists, whose allowed values comprise any values defined by data providers.
- 
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
+
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
+
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
+
+. Code lists shall be one of the following types:
+[loweralpha]
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
+
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
+
 ====
 
 The type of code list is represented in the UML model through the tagged value _extensibility_, which can take the following values:
@@ -785,17 +772,19 @@ Additional values defined by data providers should not replace or redefine any v
 
 NOTE This data specification may specify recommended values for some of the code lists of type (b), (c) and (d) (see section 5.2.4.3). These recommended values are specified in a dedicated Annex.
 
-In addition, code lists can be hierarchical, as explained in Article 6(2) of the IRs.
+In addition, code lists can be hierarchical, as explained in Article 6(5) of the IRs.
 
 [IMPORTANT]
 ====
 [.text-center]
 *IR Requirement*
-Article 6
-*Code Lists and Enumerations*
+_Article 6_
+*Code Lists for Spatial Data Sets*
+
 (...)
 
-2) Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.
+[arabic, start=5]
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.
 
 ====
 
@@ -807,19 +796,19 @@ The type of code list and whether it is hierarchical or not is also indicated in
 ====
 [.text-center]
 *IR Requirement*
-Article 6
-*Code Lists and Enumerations*
+_Article 6_
+*Code Lists for Spatial Data Sets*
+
 (....)
 
-3) Where, for an attribute whose type is a code list as referred to in points (b), (c) or (d) of paragraph 1, a data provider provides a value that is not specified in this Regulation, that value and its definition shall be made available in a register.
-
-4) Attributes or association roles of spatial object types or data types whose type is a code list may only take values that are allowed according to the specification of the code list.
+[arabic, start=6]
+. Where, for an attribute whose type is a code list as referred to in points (b), (c) or (d) of paragraph 1, a data provider provides a value that is not specified in this Regulation, that value and its definition shall be made available in a register.
 
 ====
 
-Article 6(4) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
+Article 6(6) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
 
-For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(3) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
+For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(6) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
 
 NOTE Guidelines for setting up registers for additional values and how to register additional values in these registers is still an open discussion point between Member States and the Commission.
 
@@ -842,36 +831,28 @@ NOTE For some code lists of type (d), no values may be specified in these Techni
 The following two types of code lists are distinguished in INSPIRE:
 
 * _Code lists that are governed by INSPIRE (INSPIRE-governed code lists)._ These code lists will be managed centrally in the INSPIRE code list register. Change requests to these code lists (e.g. to add, deprecate or supersede values) are processed and decided upon using the INSPIRE code list register's maintenance workflows.
-
-====
++
 INSPIRE-governed code lists will be made available in the INSPIRE code list register at http__://inspire.ec.europa.eu/codelist/<CodeListName__>. They will be available in SKOS/RDF, XML and HTML. The maintenance will follow the procedures defined in ISO 19135. This means that the only allowed changes to a code list are the addition, deprecation or supersession of values, i.e. no value will ever be deleted, but only receive different statuses (valid, deprecated, superseded). Identifiers for values of INSPIRE-governed code lists are constructed using the pattern http__://inspire.ec.europa.eu/codelist/<CodeListName>__/<value>.
-====
-
-Code _lists that are governed by an organisation outside of INSPIRE (externally governed code lists)._ These code lists are managed by an organisation outside of INSPIRE, e.g. the World Meteorological Organization (WMO) or the World Health Organization (WHO). Change requests to these code lists follow the maintenance workflows defined by the maintaining organisations. Note that in some cases, no such workflows may be formally defined.
-
-
-* _Since the updates of externally governed code lists is outside the control of INSPIRE, the_ IRs and these Technical Guidelines reference a specific version for such code lists.
-* The tables describing externally governed code lists in this section contain the following columns:
-* The Governance column describes the external organisation that is responsible for maintaining the code list.
-* The Source column specifies a citation for the authoritative source for the values of the code list. For code lists, whose values are mandated in the IRs, this citation should include the version of the code list used in INSPIRE. The version can be specified using a version number or the publication date. For code list values recommended in these Technical Guidelines, the citation may refer to the "latest available version".
-
-====
+    
+* Code _lists that are governed by an organisation outside of INSPIRE (externally governed code lists)._ These code lists are managed by an organisation outside of INSPIRE, e.g. the World Meteorological Organization (WMO) or the World Health Organization (WHO). Change requests to these code lists follow the maintenance workflows defined by the maintaining organisations. Note that in some cases, no such workflows may be formally defined.
+** _Since the updates of externally governed code lists is outside the control of INSPIRE, the_ IRs and these Technical Guidelines reference a specific version for such code lists.
+** The tables describing externally governed code lists in this section contain the following columns:
+** The Governance column describes the external organisation that is responsible for maintaining the code list.
+** The Source column specifies a citation for the authoritative source for the values of the code list. For code lists, whose values are mandated in the IRs, this citation should include the version of the code list used in INSPIRE. The version can be specified using a version number or the publication date. For code list values recommended in these Technical Guidelines, the citation may refer to the "latest available version".
++
 In some cases, for INSPIRE only a subset of an externally governed code list is relevant. The subset is specified using the _Subset_ column.
-
++
 The Availability column specifies from where (e.g. URL) the values of the externally governed code list are available, and in which formats. Formats can include machine-readable (e.g. SKOS/RDF, XML) or human-readable (e.g. HTML, PDF) ones.
-
++
 Code list values are encoded using http URIs and labels. Rules for generating these URIs and labels are specified in a separate table.
 
-** The _http_ URIs and labels used for encoding code list values should be taken from the INSPIRE code list registry for INSPIRE-governed code lists and generated according to the relevant rules specified for externally governed code lists.
+*** The _http_ URIs and labels used for encoding code list values should be taken from the INSPIRE code list registry for INSPIRE-governed code lists and generated according to the relevant rules specified for externally governed code lists.
++
 NOTE Where practicable, the INSPIRE code list register could also provide http URIs and labels for externally governed code lists.
-
-
-** Vocabulary
+*** Vocabulary
 *** For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern _http://inspire.ec.europa.eu/codelist/<UpperCamelCaseName>_.
 *** If the value is missing or empty, this indicates an empty code list. If no sub-classes are defined for this empty code list, this means that any code list may be used that meets the given definition.
 *** An _empty_ code list may also be used as a super-class for a number of specific code lists whose values may be used to specify the attribute value. If the sub-classes specified in the model represent all valid extensions to the empty code list, the subtyping relationship is qualified with the standard UML constraint "\{complete,disjoint}".
-
-====
 
 ==== Consistency between spatial data sets
 
@@ -1120,7 +1101,7 @@ TIN structures according to the _GM_Tin_ class in ISO 19107 – _Spatial schema_
 It is worth to note here that the concept of TIN coverage from ISO 19123 (i.e. 1 value assigned to each triangle) is not applicable in the _Elevation_ theme, where 1 value needs to be assigned to each triangle vertex or control point in a the TIN.
 
 
-The model incorporated in this specification devotes one application schema for each of these spatial representation types, and an additional one where common enumerations and data types are defined.
+The model incorporated in this specification devotes one application schema for each of these spatial representation types, and an additional one where common data types are defined.
 
 ====== Data provision
 
@@ -1178,7 +1159,7 @@ image::./media/image15.png[image, align=center]
 
 * _ElevationBaseTypes_
 +
-This application schema defines basic enumerations and data types which are re-used in the rest of application schemas.
+This application schema defines basic data types which are re-used in the rest of application schemas.
 
 * _ElevationGridCoverage_
 +
@@ -1202,7 +1183,7 @@ Elevation data using this model is provided as TIN structures or collections.
 +
 Each TIN structure is defined according the type GM_Tin type defined in ISO 19107. It consists on a collection of vector spatial objects, such as control points (points having known elevation property values), break lines and stop lines. In addition, this collection stores the necessary parameters which allow the calculation of a triangulation (triangulated surface) in a subsequent process (e.g. a Delaunay triangulation).
 +
-_ElevationGridCoverage_, _ElevationVectorElements_ and _ElevationTIN_ application schemas have dependency relationships to the _ElevationBaseTypes_ application schema, since they use generic enumerations defined in it.
+_ElevationGridCoverage_, _ElevationVectorElements_ and _ElevationTIN_ application schemas have dependency relationships to the _ElevationBaseTypes_ application schema, since they use generic codelists defined in it.
 
 
 ====== Package dependencies
@@ -1226,25 +1207,21 @@ image::./media/image17.png[image, align=center]
 [.text-center]
 *Figure 13 – UML class diagram: Overview of the _ElevationBaseTypes_ application schema*
 
-The _ElevationBaseTypes_ application schema provides the basic framework for the _Elevation_ theme. Regardless of the spatial representation type used for the elevation data, it defines enumerations which are common to the other _Elevation_ application schemas: _ElevationGridCoverage_, _ElevationVectorElements_ and _ElevationTIN_.
+The _ElevationBaseTypes_ application schema provides the basic framework for the _Elevation_ theme. Regardless of the spatial representation type used for the elevation data, it defines codelist which are common to the other _Elevation_ application schemas: _ElevationGridCoverage_, _ElevationVectorElements_ and _ElevationTIN_.
 
-====== ElevationPropertyTypeValue enumeration
+====== ElevationPropertyTypeValue codelist
 
 As stated in this specification, an elevation property is a vertically-constrained dimensional property of a spatial object consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (e.g. a geoid, a specific water level, etc.).
 
-This enumeration establishes the possible types of elevation properties with regard to the orientation of the measurement with respect to the Earth's gravity field direction:
+This codelist establishes the possible types of elevation properties with regard to the orientation of the measurement with respect to the Earth's gravity field direction.
 
-* height (measured in a direction opposite to Earth's gravity field - upwards direction), and;
+This codelist is defined in Section 5.4.2.1.1.
 
-* depth (measured in the same direction of Earth's gravity field - downwards direction).
+====== SurfaceTypeValue codelist
 
-This enumeration is defined in Section 5.4.2.1.1.
+This codelist establishes the different types of DEMs taking into account the relative adherence of the surface modelled to the Earth's bare surface.
 
-====== SurfaceTypeValue enumeration
-
-This enumeration establishes the different types of DEMs taking into account the relative adherence of the surface modelled to the Earth's bare surface. The possible values are DTM and DSM.
-
-This enumeration is defined in Section 5.4.2.1.2.
+This codelist is defined in Section 5.4.2.1.2.
 
 ==== Feature catalogue
 
@@ -1263,56 +1240,36 @@ This enumeration is defined in Section 5.4.2.1.2.
 |*Type* |*Package* |*Stereotypes*
 |===
 
-===== Enumerations
+===== Code lists
 
 ====== ElevationPropertyTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
-|*ElevationPropertyTypeValue*
-|
+2+|*ElevationPropertyTypeValue*
 |Name: |elevation property type value
-|Definition: |Enumeration type which determines the elevation property which has been measured or calculated.
+|Definition: |Code list type which determines the elevation property which has been measured or calculated.
 |Description: |NOTE 1 An elevation property is a vertically-constrained dimensional property of an element consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (geoid, water level, etc.). 
  
 NOTE 2 It does not include relative elevations of the element referenced to other spatial objects. 
  
 EXAMPLE Height, depth.
-|URI: |
-|Value: |*height*
-|Definition: |Elevation property measured along a plumb line in a direction opposite to Earth's gravity field (upwards).
-|Description: |NOTE This definition intentionally avoids making reference to complex geodetic terms. It is only intended to specify the direction in which the elevation property has been measured.
-|Value: |*depth*
-|Definition: |Elevation property measured along a plumb line in a direction coincident to Earth's gravity field (downwards).
-|Description: |NOTE This definition intentionally avoids making reference to complex geodetic terms. It is only intended to specify the direction in which the elevation property has been measured.
+|Extensibility: |none
+|Identifier: |http://inspire.ec.europa.eu/codelist/ElevationPropertyType
+|Value: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 |===
 
 ====== SurfaceTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
-|*SurfaceTypeValue*
-|
+2+|*SurfaceTypeValue*
 |Name: |surface type value
-|Definition: |Enumeration type which determines the elevation surface with regard to its relative adherence to the Earth's bare surface.
+|Definition: |Code list type which determines the elevation surface with regard to its relative adherence to the Earth's bare surface.
 |Description: |EXAMPLE DTM and DSM.
-|URI: |
-|Value: |*DTM*
-|Definition: |Digital terrain model.
-|Description: |EXAMPLE Buildings, bridges or vegetation do not form part of a DTM. 
- 
-NOTE 1 For DTM surfaces describing the floor of water bodies (e.g. the sea-floor), the water bodies are not considered as part of the Earth's bare surface. Hence, they are excluded from the DTM. 
- 
-NOTE 2 For DTM surfaces in which any features placed on the Earth's bare surface have not been totally filtered and excluded, the deviations must be explained in the metadata.
-|Value: |*DSM*
-|Definition: |Digital surface model.
-|Description: |EXAMPLE 1 Vegetation, buildings and bridges are examples of static features. 
- 
-EXAMPLE 2 Cars, trucks and other dynamic features are examples of temporary phenomena. 
- 
-NOTE 1 For DSM surfaces describing the floor of water bodies (e.g. the sea-floor) and those features placed on it, the water bodies are not considered as part of the Earth's bare surface. Hence, they are excluded from the DSM. 
- 
-NOTE 2 For DSM surfaces in which any temporary phenomena have not been totally filtered and excluded, the deviations must be explained in the metadata.
+|Extensibility: |none
+|Identifier |http://inspire.ec.europa.eu/codelist/SurfaceType
+|Value: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 |===
 
 <<<
@@ -1700,7 +1657,7 @@ NOTE There is no requirement about the acquisition time of elevation grid covera
 
 ====== ElevationGridCoverage
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*ElevationGridCoverage*
 |Name: |elevation grid coverage
@@ -1777,7 +1734,7 @@ NOTE 2 The domain extent shall be specified at least in space by using EX_Boundi
 
 ====== ElevationGridCoverageAggregation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*ElevationGridCoverageAggregation (association class)*
 |Name: |elevation grid coverage aggregation
@@ -1807,11 +1764,11 @@ NOTE 2 The domain extent shall be specified at least in space by using EX_Boundi
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== DateTime
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*DateTime* |
 |Package: |Date and Time
@@ -1830,12 +1787,12 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== ElevationPropertyTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*ElevationPropertyTypeValue*
 |Package: |ElevationBaseTypes
 |Reference: |INSPIRE Data specification on Elevation [DS-D2.8.II.1]
-|Definition: |Enumeration type which determines the elevation property which has been measured or calculated.
+|Definition: |Code list type which determines the elevation property which has been measured or calculated.
 |Description: |NOTE 1 An elevation property is a vertically-constrained dimensional property of an element consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (geoid, water level, etc.). 
  
 NOTE 2 It does not include relative elevations of the element referenced to other spatial objects. 
@@ -1846,7 +1803,7 @@ EXAMPLE Height, depth.
 
 ====== GM_MultiSurface
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*GM_MultiSurface*
 |Package: |Geometric aggregates
@@ -1855,7 +1812,7 @@ EXAMPLE Height, depth.
 
 ====== Identifier
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Identifier*
 |Package: |Base Types
@@ -1870,7 +1827,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 
 ====== RectifiedGridCoverage
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*RectifiedGridCoverage*
 |Package: |Coverages (Domain and Range)
@@ -1883,12 +1840,12 @@ NOTE This type can be used for both discrete and continuous coverages.
 
 ====== SurfaceTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*SurfaceTypeValue*
 |Package: |ElevationBaseTypes
 |Reference: |INSPIRE Data specification on Elevation [DS-D2.8.II.1]
-|Definition: |Enumeration type which determines the elevation surface with regard to its relative adherence to the Earth's bare surface.
+|Definition: |Code list type which determines the elevation surface with regard to its relative adherence to the Earth's bare surface.
 |Description: |EXAMPLE DTM and DSM.
 |===
 
@@ -1990,7 +1947,7 @@ Since elevation vector objects do not have an external object identifier, the co
 
 *Feature catalogue metadata*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Application Schema |INSPIRE Application Schema ElevationVectorElements
 |Version number |3.0
@@ -2017,7 +1974,7 @@ Since elevation vector objects do not have an external object identifier, the co
 
 ====== BreakLine
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*BreakLine*
 |
@@ -2060,7 +2017,7 @@ NOTE 4 Breaklines are useful as input data for the generation of a more appropri
 
 ====== ContourLine
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ContourLine*
 |
@@ -2111,7 +2068,7 @@ NOTE 2 In the case of depth contours, when the downRight attribute is 'true' thi
 
 ====== ElevationVectorObject
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ElevationVectorObject (abstract)*
 |
@@ -2153,7 +2110,7 @@ EXAMPLE Local datums for referring depths in lakes and navigable rivers.
 
 ====== IsolatedArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*IsolatedArea*
 |
@@ -2176,7 +2133,7 @@ NOTE 2 Isolated areas can be useful as masks when calculating a more appropriate
 
 ====== SpotElevation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*SpotElevation*
 |
@@ -2231,7 +2188,7 @@ NOTE 2 The attribute propertyType is equal to 'height' in the case of spot heigh
 
 ====== VoidArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*VoidArea*
 |
@@ -2256,7 +2213,7 @@ NOTE 2 Void areas can be useful as masks when calculating a more appropriate or 
 
 ====== ChartDatum
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ChartDatum*
 |
@@ -2318,31 +2275,11 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 |Multiplicity: |1
 |===
 
-===== Enumerations
-
-====== ContourLineTypeValue
-
-[cols=",",options="header",]
-|===
-|*ContourLineTypeValue*
-|
-|Name: |contour line type value
-|Definition: |List of possible categories of contour lines based on the equidistance parameter of the data set.
-|URI: |
-|Value: |*master*
-|Definition: |Contour at a vertical distance which is multiple to the equidistance parameter (corresponding to a certain multiple of the normal contour vertical interval) associated with the nominal scale.
-|Value: |*ordinary*
-|Definition: |Contour at the equidistance parameter (corresponding to the normal contour vertical interval) associated with the nominal scale, and which is not a master contour.
-|Value: |*auxiliary*
-|Definition: |A supplementary contour – not corresponding to the normal contour vertical interval – estimated or interpolated from surrounding contours, used in areas where there is insufficient height information for elevation mapping purposes or to control the creation of a digital elevation model.
-|Description: |NOTE This term is equivalent to the value 'intermediate' used in some Member States.
-|===
-
 ===== Code lists
 
 ====== BreakLineTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*BreakLineTypeValue*
 |
@@ -2355,7 +2292,7 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 
 ====== SpotElevationClassValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*SpotElevationClassValue*
 |
@@ -2369,7 +2306,7 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 
 ====== SpotElevationTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*SpotElevationTypeValue*
 |
@@ -2380,13 +2317,26 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 |Values: |The allowed values for this code list comprise the values specified in INSPIRE Registry and narrower values defined by data providers.
 |===
 
+====== ContourLineTypeValue
+
+[cols=",",options="header",]
+|===
+2+|*ContourLineTypeValue*
+|Name: |contour line type value
+|Definition: |List of possible categories of contour lines based on the equidistance parameter of the data set.
+|Extensibility: |none
+|Identifier: |http://inspire.ec.europa.eu/codelist/CountourLineTypeValue
+|Value: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
+|===
+
+
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== Boolean
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Boolean*
 |
@@ -2396,7 +2346,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== DateTime
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*DateTime*
 |
@@ -2406,7 +2356,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== DirectPosition
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*DirectPosition*
 |
@@ -2416,7 +2366,7 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== EX_Extent
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*EX_Extent*
 |
@@ -2426,13 +2376,13 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== ElevationPropertyTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ElevationPropertyTypeValue*
 |
 |Package: |ElevationBaseTypes
 |Reference: |INSPIRE Data specification on Elevation [DS-D2.8.II.1]
-|Definition: |Enumeration type which determines the elevation property which has been measured or calculated.
+|Definition: |Code list type which determines the elevation property which has been measured or calculated.
 |Description: |NOTE 1 An elevation property is a vertically-constrained dimensional property of an element consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (geoid, water level, etc.). 
  
 NOTE 2 It does not include relative elevations of the element referenced to other spatial objects. 
@@ -2442,7 +2392,7 @@ EXAMPLE Height, depth.
 
 ====== GM_Curve
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GM_Curve*
 |
@@ -2452,7 +2402,7 @@ EXAMPLE Height, depth.
 
 ====== GM_Point
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GM_Point*
 |
@@ -2462,7 +2412,7 @@ EXAMPLE Height, depth.
 
 ====== GM_Surface
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GM_Surface*
 |
@@ -2472,7 +2422,7 @@ EXAMPLE Height, depth.
 
 ====== GeographicalName
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GeographicalName*
 |
@@ -2483,7 +2433,7 @@ EXAMPLE Height, depth.
 
 ====== Measure
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Measure*
 |
@@ -2494,7 +2444,7 @@ EXAMPLE Height, depth.
 
 ====== WaterLevelValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*WaterLevelValue*
 |
@@ -2672,7 +2622,7 @@ As established by the requirement about external object identifier included in S
 
 ====== ElevationTIN
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ElevationTIN*
 |
@@ -2726,11 +2676,11 @@ EXAMPLE An elevation TIN model calculated by means of the Delaunay triangulation
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== DateTime
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*DateTime*
 |
@@ -2740,13 +2690,13 @@ This section lists definitions for feature types, data types and enumerations an
 
 ====== ElevationPropertyTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*ElevationPropertyTypeValue*
 |
 |Package: |ElevationBaseTypes
 |Reference: |INSPIRE Data specification on Elevation [DS-D2.8.II.1]
-|Definition: |Enumeration type which determines the elevation property which has been measured or calculated.
+|Definition: |Code list type which determines the elevation property which has been measured or calculated.
 |Description: |NOTE 1 An elevation property is a vertically-constrained dimensional property of an element consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (geoid, water level, etc.). 
  
 NOTE 2 It does not include relative elevations of the element referenced to other spatial objects. 
@@ -2756,7 +2706,7 @@ EXAMPLE Height, depth.
 
 ====== GM_Tin
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*GM_Tin*
 |
@@ -2766,7 +2716,7 @@ EXAMPLE Height, depth.
 
 ====== Identifier
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Identifier*
 |
@@ -2782,13 +2732,13 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 
 ====== SurfaceTypeValue
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*SurfaceTypeValue*
 |
 |Package: |ElevationBaseTypes
 |Reference: |INSPIRE Data specification on Elevation [DS-D2.8.II.1]
-|Definition: |Enumeration type which determines the elevation surface with regard to its relative adherence to the Earth's bare surface.
+|Definition: |Code list type which determines the elevation surface with regard to its relative adherence to the Earth's bare surface.
 |Description: |EXAMPLE DTM and DSM.
 |===
 
@@ -2861,11 +2811,14 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-1. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+. Other coordinate reference systems may be specified for specific spatial data themes.
 
-2. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
+
+
 ====
 
 ===== Display
@@ -2886,7 +2839,7 @@ For the display of spatial data sets with the view network service as specified 
 ====
 [.text-center]
 *IR Requirement*
-_Annex II, Section 1.4_
+_Annex II, Section 1.5_
 *Coordinate Reference Systems used in the View Network Service*
 
 1. Coordinate reference system parameters and identifiers shall be managed in one or several common registers for coordinate reference systems.
@@ -2894,13 +2847,13 @@ _Annex II, Section 1.4_
 2. Only identifiers contained in a common register shall be used for referring to the coordinate reference systems listed in this Section.
 ====
 
-This Technical Guidance proposes to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+This Technical Guidance proposes to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 3*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 ====
 
 NOTE CRS identifiers may be used e.g. in:
@@ -2908,38 +2861,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-*Table 2. http URIs for the default coordinate reference systems*
-
-[cols=",,",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|Height in EVRS (EVRF2007) |EVRS-EVRF2007 |_http://www.opengis.net/def/crs/EPSG/0/5621_
-|Height in EVRS (EVRF2019) |EVRS-EVRF2019 |_http://www.opengis.net/def/crs/EPSG/0/9389_
-|Mean-tide height in EVRS (EVRF2019) |EVRS-EVRF2019mean |_http://www.opengis.net/def/crs/EPSG/0/9390_
-|===
-
 
 ==== Temporal reference system
 
@@ -4354,7 +4275,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -4402,7 +4323,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -4449,7 +4370,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -4491,7 +4412,7 @@ Technical Guidelines
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -4517,7 +4438,7 @@ Technical Guidelines
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -4589,7 +4510,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -4665,7 +4586,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -4705,7 +4626,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -4730,7 +4651,7 @@ NOTE The DQ_Result type should be DQ_DescriptiveResult and in the statement (68.
 
 ==== Spatial representation information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Spatial representation information*
 |Definition |Digital representation of spatial information in the dataset.
@@ -4752,7 +4673,7 @@ See B.2.6 in ISO 19115:2003.
 
 ==== Supplemental information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Supplemental information*
 |Definition |Any other descriptive information about the dataset.
@@ -4781,7 +4702,7 @@ This metadata element is recommended to concisely describe general properties of
 
 ==== Process step
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Process step*
 |Definition |Information about an event or transformation in the life of a dataset including the process used to maintain the dataset.
@@ -4818,7 +4739,7 @@ In the case of the data acquisition process it is important to highlight any kno
 
 ==== Data source
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Data source*
 |Definition |Information about the source data used in creating the data specified by the scope.
@@ -4853,7 +4774,7 @@ Metadata on data sources may as well include any specifications available and th
 
 ==== Browse graphic information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Browse graphic information*
 |Definition |Graphic that provides an illustration of the dataset (should include a legend for the graphic).
@@ -4877,7 +4798,7 @@ The following element is mandatory (the multiplicity according to ISO 19115 is s
 
 ==== Digital transfer options information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Digital transfer options information*
 |Definition |Technical means and media by which a resource is obtained from the distributor.
@@ -4985,9 +4906,11 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
 
-2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
 
 ====
 
@@ -5285,7 +5208,7 @@ The recommended relation between grid spacing of the DEM and its related RMSE~v~
 
 *Table 7 - Recommended grid spacing in relation to vertical accuracy (RMSE~v~)*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*_Recommended Grid spacing_* |*_Type of terrain_*
 |3 times RMSE~v~ ≤ Grid spacing ≤ 20 times RMSE~v~ |Flat and undulating terrain
@@ -5388,7 +5311,7 @@ The contoue equidistance is also dependent on the vertical accuracy, taking into
 
 *Table 9 – Consistency between contour line vertical interval and vertical accuracy*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |_**Vertical accuracy (RMSE**~v~*) **_ |*_Type of terrain_*
 |1/3 of contour equidistance |Flat terrain (slope < 2 degrees)
@@ -5519,7 +5442,7 @@ None.
 
 ==== Styles for the layer EL.BreakLine
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.BreakLine.Default*
 |*Default Style* |yes
@@ -5562,7 +5485,7 @@ None.
 
 ==== Styles for the layer EL.ContourLine
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.ContourLine.Default*
 |*Default Style* |yes
@@ -5639,7 +5562,7 @@ Depth Contour line is a blue (#0A93FC) 1 pixel width line.
 
 ==== Styles for the layer EL.IsolatedArea 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.IsolatedArea.Default*
 |*Default Style* |yes
@@ -5683,7 +5606,7 @@ Depth Contour line is a blue (#0A93FC) 1 pixel width line.
 
 ==== Styles for the layer EL.SpotElevation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.SpotElevation.Default*
 |*Default Style* |yes
@@ -5805,7 +5728,7 @@ Depth values are labels in Arial 10 blue (#0000FF).
 
 ==== Styles for the layer EL.VoidArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.VoidArea.Default*
 |*Default Style* |yes
@@ -5849,7 +5772,7 @@ Depth values are labels in Arial 10 blue (#0000FF).
 
 ==== Styles for the layer EL.GridCoverage
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.GridCoverage.Default*
 |*Default Style* |yes
@@ -5924,7 +5847,7 @@ NOTE Use of a common style for elevation grid coverages may introduce problems w
 
 ==== Styles for the layer EL.TIN
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.TIN.Default*
 |*Default Style* |yes
@@ -6029,7 +5952,7 @@ image::./media/image33.jpeg[image]
 
 ===== Master contours
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.ContourLine.Master*
 |*Style Title* |Contour Line - for master contours
@@ -6079,7 +6002,7 @@ image::./media/image33.jpeg[image]
 
 ===== Ordinary contours
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.ContourLine.Ordinary*
 |*Style Title* |Contour Line – for ordinary contours
@@ -6130,7 +6053,7 @@ image::./media/image33.jpeg[image]
 
 ===== Auxiliary contours
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EL.ContourLine.Auxiliary*
 |*Style Title* |Contour Line – for auxiliary contours
@@ -6379,7 +6302,7 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
 *Open Issue 1* Even though the last condition can be derived from Art. 8(4) of the Directive, the ISDSS Regulation does not contain requirements concerning the above issue. Therefore, no specific tests have been included in this abstract suit for testing conformity of extended application schemas. Annex F of the Generic Conceptual Model (D2.5) provides an example how to extend INSPIRE application schemas in a compliant way.
 
@@ -6416,7 +6339,7 @@ a) Purpose: Verification whether each element of the dataset under inspection ca
 
 b) Reference: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-c) Test Method: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+c) Test Method: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.1.
 
@@ -6428,19 +6351,18 @@ b) Reference: Art. 3, Art.4, Art.6(1), Art.6(4), Art.6(5) and Art.9(1)of Commiss
 
 c) Test Method: Examine whether the value type of each provided attribute or association role adheres to the corresponding value type specified in the target specification.
 
-NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from enumeration and code lists, and the coverage domains.
+NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from code lists, and the coverage domains.
 
 NOTE 2 Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.1.
 
 ==== Value test
 
-a) Purpose: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.
+a) Purpose: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.
 
 b) Reference: Art.4 (3) of Commission Regulation No 1089/2010.
 
-c) Test Method: When an attributes / association roles has "enumeration" or "codeList" type compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
+c) Test Method: When an attributes / association roles has "codeList" type compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
 
-* Shall not take any other value than defined in the enumeration table when its type is enumeration.
 * Shall take only values explicitly specified in the code list when its type is codeList with extensibility value is "none".
 * Shall take only a value explicitly specified in the code list or shall take a value that is narrower (i.e. more specific) than those explicitly specified in the application schema when the type is codeList with extensibility value is "narrower".
 
@@ -6448,11 +6370,11 @@ NOTE 1 This test is not applicable to code lists with extensibility "any".
 
 NOTE 2 When a data provider only uses code lists with narrower (more specific values) this test can be fully performed based on internal information.
 
-NOTE 3 This test is applicable to all application schemas to verify whether each instance of the property Type attribute takes only the values specified in the ElevationPropertyTypeValue enumeration.
+NOTE 3 This test is applicable to all application schemas to verify whether each instance of the property Type attribute takes only the values specified in the ElevationPropertyTypeValue code list.
 
-NOTE 4 This test is applicable to the ElevationGridCoverage and ElevationTIN schemas to verify whether each instance of the surfaceType attribute takes only the values specified in the SurfaceTypeValue enumeration.
+NOTE 4 This test is applicable to the ElevationGridCoverage and ElevationTIN schemas to verify whether each instance of the surfaceType attribute takes only the values specified in the SurfaceTypeValue code list.
 
-NOTE 5 This test is applicable to the ElevationVectorElements schema to verify whether each instance of the contourLineType attribute takes only values specified in the ContourLineTypeValue enumeration.
+NOTE 5 This test is applicable to the ElevationVectorElements schema to verify whether each instance of the contourLineType attribute takes only values specified in the ContourLineTypeValue codel list.
 
 NOTE 6 This test is applicable to the code lists specified in the ElevationVectorElements schema to verify whether:
 
@@ -6892,7 +6814,7 @@ b) Test Method: Examine that the number of occurrences of each attribute and/or 
 
 a) Purpose: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-c) Reference: Table 2 in Section 6 of this technical guideline
+c) Reference: Section 6 of this technical guideline
 
 b) Test Method: Compare the URI of the dataset with the URIs in the table.
 
@@ -7485,7 +7407,7 @@ Documentation
 
 ==== Maintenance of fairways
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Use Case Description |
 |Name a|
