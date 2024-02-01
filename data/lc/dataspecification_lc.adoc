@@ -1134,7 +1134,7 @@ Each nomenclature used by a Land Cover Data set shall be described by at least o
 _Annex III, Section 2.6_
 *Theme-specific Requirements*
 
-If an onlineDescription attribute is provided for a LandCoverNomenclature data type, the referenced online description shall define, for each class, at least a code, a name, a definition and a RGB value to be used for portrayal. If the online description describes the nomenclature for a LandCoverGridCoverage object, an integer grid code shall also be provided for each class. This code shall be used in the range of the LandCoverGridCoverage to represent the corresponding class.
+If an an externalDescription attribute is provided for a LandCoverNomenclature data type, the referenced online description shall define, for each class, at least a code, a name, a definition and a RGB value to be used for portrayal. If the online description describes the nomenclature for a LandCoverGridCoverage object, an integer grid code shall also be provided for each class. This code shall be used in the range of the LandCoverGridCoverage to represent the corresponding class.
 ====
 
 NOTE the grid code is the value used to effectively store classifications in raster formats. Values are consecutive (1, 2, 3), each representing a LC class. For more details, see CORINE Table in Annex E. The following table is an extract with class definitions.
@@ -1818,7 +1818,7 @@ a|
 
 [cols=",]
 !===
-!Name: !element
+!Name: !member
 !Value type: !LandCoverUnit
 !Definition: !A Land Cover Unit being part of the data set.
 !Description: !A Land Cover dataset is a collection of LandCover units, each one being called an element.
@@ -1898,6 +1898,17 @@ a|
 !Value type: !LandCoverObservation
 !Definition: !Land cover information at a specific time and place.
 !Multiplicity: !1..*
+!===
+
+a|
+*Association role: dataset*
+
+[cols=",]
+!===
+!Name: !dataset
+!Value type: !LandCoverDataset
+!Definition: !Land Cover data set to which this Land Cover object belongs.
+!Multiplicity: !1
 !===
 
 a|
