@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.I.8 Data Specification on Hydrography – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Hydrography
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Hydrography
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/hy[D2.8.I.8_v3.3.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/hy[D2.8.I.8_v3.4.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -168,6 +168,7 @@ Unit H06: Digital Earth and Reference Data
 _http://inspire.ec.europa.eu/index.cfm/pageid/2_
 
 <<<
+[discrete]
 == Table of Contents
 toc::[]
 
@@ -354,7 +355,7 @@ An area of land from which all surface run-off flows through a series of streams
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |EC |European Commission
 |HY |Hydrography
@@ -489,14 +490,13 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 ====
 [.text-center]
 *IR Requirement*
-Article 4
+_Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-1. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
 
-2. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
-3. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
 ====
 
 The types to be used for the exchange and classification of spatial objects from data sets related to the spatial data theme Hydrography are defined in the following application schemas (see sections 5.3, 5.4, 5.5):
@@ -554,14 +554,15 @@ The following important rules related to class inheritance and abstract classes 
 ====
 [.text-center]
 *IR Requirement*
-Article 5
+_Article 5_
 *Types*
 
 (...)
 
-2. Types that are a sub-type of another type shall also include all this type's attributes and association roles.
+[arabic, start=5]
+. Types that are a sub-type of another type shall also include all this type's attributes and association roles.
 
-3. Abstract types shall not be instantiated.
+. Abstract types shall not be instantiated.
 
 ====
 
@@ -577,6 +578,7 @@ NOTE Since "void" is not a concept supported by OCL, OCL constraints cannot incl
 
 In the application schemas in this section several stereotypes are used that have been defined as part of a UML profile for use in INSPIRE [DS-D2.5]. These are explained in Table 1 below.
 
+[.text-center]
 *Table 1 – Stereotypes (adapted from [DS-D2.5])*
 
 [cols=",,",]
@@ -588,7 +590,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -627,26 +628,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-Article 6
-*Code Lists and Enumerations*
-
-(...)
-
-5) Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -659,22 +640,24 @@ The IRs distinguish the following types of code lists.
 ====
 [.text-center]
 *IR Requirement*
-Article 6
-*Code Lists and Enumerations*
+_Article 6_
+*Code Lists for Spatial Data Sets*
 
-[arabic, start=1]
-. Code lists shall be of one of the following types, as specified in the Annexes:
-+
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
+
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
+
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
+
+. Code lists shall be one of the following types:
 [loweralpha]
-.. code lists whose allowed values comprise only the values specified in this Regulation;
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
 
-.. code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
-
-.. code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
-+
-... code lists, whose allowed values comprise any values defined by data providers.
-
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
@@ -701,12 +684,13 @@ In addition, code lists can be hierarchical, as explained in Article 6(2) of the
 ====
 [.text-center]
 *IR Requirement*
-Article 6
-*Code Lists and Enumerations*
+_Article 6_
+*Code Lists for Spatial Data Sets*
 
 (...)
 
-2) Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.
+[arabic, start=5]
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.
 
 ====
 
@@ -718,20 +702,19 @@ The type of code list and whether it is hierarchical or not is also indicated in
 ====
 [.text-center]
 *IR Requirement*
-Article 6
-*Code Lists and Enumerations*
+_Article 6_
+*Code Lists for Spatial Data Sets*
 
 (....)
 
-3) Where, for an attribute whose type is a code list as referred to in points (b), (c) or (d) of paragraph 1, a data provider provides a value that is not specified in this Regulation, that value and its definition shall be made available in a register.
-
-4) Attributes or association roles of spatial object types or data types whose type is a code list may only take values that are allowed according to the specification of the code list.
+[arabic, start=6]
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
-Article 6(4) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
+Article 6(6) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
 
-For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(3) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
+For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(6) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
 
 NOTE Guidelines for setting up registers for additional values and how to register additional values in these registers is still an open discussion point between Member States and the Commission.
 
@@ -754,8 +737,7 @@ NOTE For some code lists of type (d), no values may be specified in these Techni
 The following two types of code lists are distinguished in INSPIRE:
 
 * _Code lists that are governed by INSPIRE (INSPIRE-governed code lists)._ These code lists will be managed centrally in the INSPIRE code list register. Change requests to these code lists (e.g. to add, deprecate or supersede values) are processed and decided upon using the INSPIRE code list register's maintenance workflows.
-
-
++
 INSPIRE-governed code lists will be made available in the INSPIRE code list register at __http://inspire.ec.europa.eu/codelist/<CodeListName__>. They will be available in SKOS/RDF, XML and HTML. The maintenance will follow the procedures defined in ISO 19135. This means that the only allowed changes to a code list are the addition, deprecation or supersession of values, i.e. no value will ever be deleted, but only receive different statuses (valid, deprecated, superseded). Identifiers for values of INSPIRE-governed code lists are constructed using the pattern __http://inspire.ec.europa.eu/codelist/<CodeListName__>/<value>.
 
 
@@ -774,7 +756,7 @@ The tables describing externally governed code lists in this section contain the
 ** The _Availability_ column specifies from where (e.g. URL) the values of the externally governed code list are available, and in which formats. Formats can include machine-readable (e.g. SKOS/RDF, XML) or human-readable (e.g. HTML, PDF) ones.
 
 
-
++
 Code list values are encoded using http URIs and labels. Rules for generating these URIs and labels are specified in a separate table.
 
 
@@ -1247,7 +1229,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _CharacterString_
 
@@ -1324,7 +1306,7 @@ image::./media/image10.png[image,width=694,height=468, align=center]
 image::./media/image11.png[image,width=146,height=147, align=center]
 
 [.text-center]
-*Figure 8 – UML class diagram: 'Hydro – Network' enumerations and code lists*
+*Figure 8 – UML class diagram: 'Hydro – Network' code lists*
 
 image::./media/image12.png[image,width=869,height=361, align=center]
 
@@ -1554,14 +1536,14 @@ a|
 !Definition: !Defines categories for different types of hydrographic network nodes.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HydroNodeCategoryValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _GradeSeparatedCrossing_
 
@@ -1753,7 +1735,7 @@ image::./media/image19.png[image,width=341,height=138, align=center]
 image::./media/image20.png[image,width=531,height=469, align=center]
 
 [.text-center]
-*Figure 17 – UML class diagram: 'Physical Waters' enumerations and code lists*
+*Figure 17 – UML class diagram: 'Physical Waters' code lists*
 
 image::./media/image21.png[image,width=312,height=436, align=center]
 
@@ -1936,7 +1918,7 @@ a|
 
 [cols=","]
 !===
-!Value type: !GM_Surface
+!Value type: !GM_Object
 !Definition: !The geometry of the drainage basin, as a surface.
 !Multiplicity: !1
 !===
@@ -1994,7 +1976,16 @@ a|
 [cols=","]
 !===
 !Natural language: !A river basin may not be contained in any other basin
-!OCL: !inv: self.containsBasin->forall(c | not c.oclIsTypeOf(RiverBasin))
+!OCL: !inv: self.containsBasin->forall(c \| not c.oclIsTypeOf(RiverBasin))
+!===
+
+a|
+*Constraint: geometryType*
+
+[cols=","]
+!===
+!Natural language: !The geometry attribute has to be of type GM_Surface or GM_MultiSurface.
+!OCL: !inv: geometry.oclIsKindOf(GM_Surface) or geometry.oclIsKindOf(GM_MultiSurface)
 !===
 
 |===
@@ -2999,7 +2990,74 @@ a|
 
 |===
 
-===== Enumerations
+===== Code lists
+
+====== _CrossingTypeValue_
+
+[cols="",options="header",]
+|===
+|*CrossingTypeValue*
+a|
+[cols=","]
+!===
+!Definition: !Man-made physical watercourse crossing types.
+!Extensibility: !none
+!Identifier: !http://inspire.ec.europa.eu/codelist/CrossingTypeValue
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
+!===
+
+|===
+
+====== _HydrologicalPersistenceValue_
+
+[cols="",options="header",]
+|===
+|*HydrologicalPersistenceValue*
+a|
+[cols=","]
+!===
+!Definition: !Categories of hydrological persistence of a body of water.
+!Description: !SOURCE [Codelist values based on DFDD].
+!Extensibility: !none
+!Identifier: !http://inspire.ec.europa.eu/codelist/HydrologicalPersistenceValue
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
+!===
+
+|===
+
+====== _ShoreTypeValue_
+
+[cols="",options="header",]
+|===
+|*ShoreTypeValue*
+a|
+[cols=","]
+!===
+!Definition: !Categories of shore area composition.
+!Description: !SOURCE [Codelist items based on DFDD].
+!Extensibility: !none
+!Identifier: !http://inspire.ec.europa.eu/codelist/ShoreTypeValue
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
+!===
+
+|===
+
+====== _WaterLevelValue_
+
+[cols="",options="header",]
+|===
+|*WaterLevelValue*
+a|
+[cols=","]
+!===
+!Definition: !The tidal datum / waterlevel to which depths and heights are referenced.
+!Description: !SOURCE [Codelist values based on DFDD].
+!Extensibility: !none
+!Identifier: !http://inspire.ec.europa.eu/codelist/WaterLevelValue
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
+!===
+
+|===
 
 ====== _OriginValue_
 
@@ -3009,7 +3067,7 @@ a|
 a|
 [cols=","]
 !===
-!Definition: !An enumeration type specifying a set of hydrographic 'origin' categories (natural, man-made) for various hydrographic objects.
+!Definition: !A code list type specifying a set of hydrographic 'origin' categories (natural, man-made) for various hydrographic objects.
 !URI: !
 !===
 
@@ -3030,78 +3088,10 @@ a|
 
 |===
 
-===== Code lists
-
-====== _CrossingTypeValue_
-
-[cols="",options="header",]
-|===
-|*CrossingTypeValue*
-a|
-[cols=","]
-!===
-!Definition: !Man-made physical watercourse crossing types.
-!Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codelist/CrossingTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
-!===
-
-|===
-
-====== _HydrologicalPersistenceValue_
-
-[cols="",options="header",]
-|===
-|*HydrologicalPersistenceValue*
-a|
-[cols=","]
-!===
-!Definition: !Categories of hydrological persistence of a body of water.
-!Description: !SOURCE [Codelist values based on DFDD].
-!Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codelist/HydrologicalPersistenceValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
-!===
-
-|===
-
-====== _ShoreTypeValue_
-
-[cols="",options="header",]
-|===
-|*ShoreTypeValue*
-a|
-[cols=","]
-!===
-!Definition: !Categories of shore area composition.
-!Description: !SOURCE [Codelist items based on DFDD].
-!Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codelist/ShoreTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
-!===
-
-|===
-
-====== _WaterLevelValue_
-
-[cols="",options="header",]
-|===
-|*WaterLevelValue*
-a|
-[cols=","]
-!===
-!Definition: !The tidal datum / waterlevel to which depths and heights are referenced.
-!Description: !SOURCE [Codelist values based on DFDD].
-!Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codelist/WaterLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
-!===
-
-|===
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _Area_
 
@@ -3393,11 +3383,12 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-1. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+. Other coordinate reference systems may be specified for specific spatial data themes.
 
-2. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
 
 ====
 
@@ -3429,13 +3420,13 @@ _Annex II, Section 1.5_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 2*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -3444,34 +3435,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-*Table 2. http URIs for the default coordinate reference systems*
-
-[cols=",,",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -4474,7 +4437,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -4515,7 +4478,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -4556,7 +4519,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -4590,7 +4553,7 @@ specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelin
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -4613,7 +4576,7 @@ specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelin
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -4681,7 +4644,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -4755,7 +4718,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -4800,7 +4763,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -4833,7 +4796,7 @@ For evaluation purpose the Data quality measure and Metadata element _Rate of mi
 
 ==== Identification – Extent
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Extent*
 |Definition |Extent information including the bounding box, bounding polygon, vertical, and temporal extent of the dataset
@@ -4864,7 +4827,7 @@ description: "Rhine, A5001"
 
 ==== Distribution – Digital Transfer Options
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Digital Transfer options*
 |Definition |Provides information about technical means and media by which a resource is obtained from the distributor
@@ -4944,9 +4907,12 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
 
-2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
+
 
 ====
 
@@ -5570,7 +5536,7 @@ None.
 
 ==== Styles for the layer HY.PhysicalWaters.Waterbodies
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.Waterbodies.Default*
 |*Default Style* |yes
@@ -5656,7 +5622,7 @@ image::./media/image63.png[image]
 
 ==== Styles for the layer HY.PhysicalWaters.LandWaterBoundary
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.LandWaterBoundary.Default*
 |*Default Style* |yes
@@ -5696,7 +5662,7 @@ image::./media/image63.png[image]
 
 ==== Styles for the layer HY.PhysicalWaters.Catchments
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.Catchments.Default*
 |*Default Style* |Yes
@@ -5883,7 +5849,7 @@ image::./media/image63.png[image]
 
 ==== Styles for the layer HY.PhysicalWaters.HydroPointOfInterest
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.HydroPointOfInterest.Default*
 |*Default Style* |yes
@@ -6306,7 +6272,7 @@ image::./media/image68.png[image]
 
 ==== HY.PhysicalWaters.Wetland
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.Wetland.Default*
 |*Default Style* |yes
@@ -6346,7 +6312,7 @@ image::./media/image69.png[image]
 
 ==== HY.PhysicalWaters.Shore
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.Shore.Default*
 |*Default Style* |yes
@@ -6797,7 +6763,7 @@ image::./media/image72.png[image]
 
 ==== Styles for the layer HY.PhysicalWaters.LandWaterBoundary
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.LandWaterBoundary*
 |*Style Title* |Land water boundary well defined style
@@ -7110,7 +7076,7 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
 |===
 *Open issue 5:* Even though the last condition can be derived from Art. 8(4) of the Directive, the ISDSS Regulation does not contain requirements concerning the above issue. Therefore, no specific tests have been included in this abstract suite for testing conformity of extended application schemas. Annex F of the Generic Conceptual Model (D2.5) provides an example how to extend INSPIRE application schemas in a compliant way.
@@ -7150,7 +7116,7 @@ a) [.underline]#Purpose#: Verification whether each element of the dataset under
 
 b) [.underline]#Reference#: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-c) [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+c) [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
@@ -7162,19 +7128,17 @@ b) [.underline]#Reference#: Art. 3, Art.4, Art.6(1), Art.6(4), Art.6(5) and Art.
 
 c) [.underline]#Test Method#: Examine whether the value type of each provided attribute or association role adheres to the corresponding value type specified in the target specification.
 
-NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from enumeration and code lists, and the coverage domains.
+NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from code lists, and the coverage domains.
 
 NOTE 2 Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
 ==== Value test
 
-a) [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.
+a) [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.
 
 b) [.underline]#Reference#: Art.4 (3) of Commission Regulation No 1089/2010.
 
-c) [.underline]#Test Method#: When an attribute / association role has an enumeration or code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
-
-* shall not take any other value than defined in the enumeration table when its type is an enumeration.
+c) [.underline]#Test Method#: When an attribute / association role has a code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
 
 * shall take only values explicitly specified in the code list when the code list's extensibility is "none".
 
@@ -7658,7 +7622,7 @@ b) [.underline]#Test Method#: Examine that the number of occurrences of each att
 
 a) [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-c) [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+c) [.underline]#Reference#: Section 6 of this technical guideline
 
 b) [.underline]#Test Method#: Compare the URI of the dataset with the URIs in the table.
 
@@ -7779,7 +7743,7 @@ image::./media/image48.jpeg[7,width=493,height=319]
 [.text-center]
 *Figure 29 – Use case mapping.*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Data requirements a|
 * Main hydrographic elements, both natural and artificial; Facilities and constructions;
@@ -7795,7 +7759,7 @@ image::./media/image48.jpeg[7,width=493,height=319]
 
 It is neither intended nor a goal of the INSPIRE directive to take over and organize the reporting duties of Member States on EU directives. INSPIRE intends to build an infrastructure that helps to organize and implement reporting structures for decentralized European data structures. Reports are however always given in relation to existing geographical structures; even though the reporting units themselves may differ from these due to specific legislation.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Data requirements a|
 Depend on the specific directive / reporting requirement. Examples of identified data requirements:
@@ -8103,7 +8067,7 @@ There are not many attributes on the network features. The reason for this is th
 
 Nodes in a network can have different purposes; this is described using the hydroNodeCategory attribute. The table below describes the purpose of the different node categories and to which HydroNodeCategoryType the feature types of HydroPointOfInterest and ManMadeObjects should be mapped into the network.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Purpose or Feature type* |*HydroNodeCategoryType*
 |SpringOrSeep (Start node) |Source
@@ -8277,70 +8241,10 @@ a|
 !Definition: !Defines categories for different types of hydrographic network nodes.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HydroNodeCategoryValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
-
-[cols=""]
-|===
-a|
-boundary
-[cols=","]
-!===
-!Name: !boundary
-!Definition: !Node used to connect different networks.
-!===
-
-a|
-flowConstriction
-
-[cols=","]
-!===
-!Name: !flow constriction
-!Definition: !A network node unrelated to the network topology per se, but associated with a hydrographic point of interest or facility, or a man-made object, that affects the network flow.
-!===
-
-a|
-flowRegulation
-
-[cols=","]
-!===
-!Name: !flow regulation
-!Definition: !A network node unrelated to the network topology per se, but associated with a hydrographic point of interest or facility, or a man-made object, that regulates the network flow.
-!===
-
-a|
-junction
-
-[cols=","]
-!===
-!Name: !junction
-!Definition: !Node where three or more links connect.
-!===
-
-a|
-outlet
-
-[cols=","]
-!===
-!Name: !outlet
-!Definition: !Ending node of a series of interconnected links.
-!===
-
-a|
-source
-
-[cols=","]
-!===
-!Name: !source
-!Definition: !Starting node of a series of interconnected links.
-!===
-
-|===
-
-_ 
-_
 
 === INSPIRE Application Schema 'Hydro - Physical Waters'
 
@@ -8365,51 +8269,10 @@ a|
 !Definition: !Man-made physical watercourse crossing types.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/CrossingTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
-
-[cols=""]
-|===
-a|
-aqueduct
-
-[cols=","]
-!===
-!Name: !aqueduct
-!Definition: !A pipe or artificial channel that is designed to transport water from a remote source, usually by gravity, for freshwater supply, agricultural, and/or industrial use.
-!===
-
-a|
-bridge
-
-[cols=","]
-!===
-!Name: !bridge
-!Definition: !A structure that connects two locations and provides for the passage of a transportation route over a terrain obstacle.
-!===
-
-a|
-culvert
-
-[cols=","]
-!===
-!Name: !culvert
-!Definition: !An enclosed channel for carrying a watercourse under a route.
-!===
-
-a|
-siphon
-
-[cols=","]
-!===
-!Name: !siphon
-!Definition: !A pipe used for conveying liquid from one level to a lower level, using the liquid pressure differential to force a column of the liquid up to a higher level before it falls to the outlet.
-!===
-
-|===
-
 
 *HydrologicalPersistenceValue*
 
@@ -8423,47 +8286,7 @@ a|
 !Description: !SOURCE [Codelist values based on DFDD].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/HydrologicalPersistenceValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-dry
-
-[cols=","]
-!===
-!Name: !dry
-!Definition: !Filled and/or flowing infrequently, generally only during and/or immediately after heavy precipitation.
-!===
-
-a|
-ephemeral
-
-[cols=","]
-!===
-!Name: !ephemeral
-!Definition: !Filled and/or flowing during and immediately after precipitation.
-!===
-
-a|
-intermittent
-
-[cols=","]
-!===
-!Name: !intermittent
-!Definition: !Filled and/or flowing for part of the year.
-!===
-
-a|
-perennial
-
-[cols=","]
-!===
-!Name: !perennial
-!Definition: !Filled and/or flowing continuously throughout the year.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -8481,83 +8304,7 @@ a|
 !Description: !SOURCE [Codelist items based on DFDD].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/ShoreTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-boulders
-
-[cols=","]
-!===
-!Name: !boulders
-!Definition: !Large water- or weather-worn stones.
-!===
-
-a|
-clay
-
-[cols=","]
-!===
-!Name: !clay
-!Definition: !A stiff tenacious fine-grained earth consisting mainly of hydrated aluminosilicates, which become more plastic when water is added and can be moulded and dried.
-!===
-
-a|
-gravel
-
-[cols=","]
-!===
-!Name: !gravel
-!Definition: !Small water-worn or pounded stones.
-!===
-
-a|
-mud
-
-[cols=","]
-!===
-!Name: !mud
-!Definition: !Soft wet soil, sand, dust, and/or other earthy matter.
-!===
-
-a|
-rock
-
-[cols=","]
-!===
-!Name: !rock
-!Definition: !Stones of any size.
-!===
-
-a|
-sand
-
-[cols=","]
-!===
-!Name: !sand
-!Definition: !Granular material consisting of small eroded fragments of (mainly siliceous) rocks, finer than gravel and larger than a coarse silt grain.
-!===
-
-a|
-shingle
-
-[cols=","]
-!===
-!Name: !shingle
-!Definition: !Small, loose, rounded water-worn pebbles, especially as accumulated on a seashore.
-!===
-
-a|
-stone
-
-[cols=","]
-!===
-!Name: !stone
-!Definition: !Pieces of rock or mineral substance (other than metal) of definite form and size, usually artificially shaped, and used for some special purpose.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -8573,344 +8320,7 @@ a|
 !Description: !SOURCE [Codelist values based on DFDD].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/WaterLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-equinoctialSpringLowWater
-
-[cols=","]
-!===
-!Name: !equinoctial spring low water
-!Definition: !The level of low water springs near the time of an equinox.
-!===
-
-a|
-higherHighWater
-
-[cols=","]
-!===
-!Name: !higher high water
-!Definition: !The highest of the high waters (or single high water) of any specified tidal day due to the declination A1 effects of the moon and sun.
-!===
-
-a|
-higherHighWaterLargeTide
-
-[cols=","]
-!===
-!Name: !higher high water large tide
-!Definition: !The average of the highest high waters, one from each of 19 years of observations.
-!===
-
-a|
-highestAstronomicalTide
-
-[cols=","]
-!===
-!Name: !highest astronomical tide
-!Definition: !The highest tidal level, which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
-!===
-
-a|
-highestHighWater
-
-[cols=","]
-!===
-!Name: !highest high water
-!Definition: !The highest water level observed at a location.
-!===
-
-a|
-highWater
-
-[cols=","]
-!===
-!Name: !high water
-!Definition: !The highest level reached at a location by the water surface in one tidal cycle.
-!===
-
-a|
-highWaterSprings
-
-[cols=","]
-!===
-!Name: !high water springs
-!Definition: !An arbitrary level, approximating that of mean high water springs.
-!===
-
-a|
-indianSpringHighWater
-
-[cols=","]
-!===
-!Name: !indian spring high water
-!Definition: !A tidal surface datum approximating the level of the mean of the higher high water at spring tides.
-!===
-
-a|
-indianSpringLowWater
-
-[cols=","]
-!===
-!Name: !indian spring low water
-!Definition: !A tidal surface datum approximating the level of the mean of the lower low water at spring tides.
-!===
-
-a|
-localDatum
-
-[cols=","]
-!===
-!Name: !local datum
-!Definition: !An arbitrary datum defined by an authority of a local harbour, from which levels and tidal heights are measured by that authority.
-!===
-
-a|
-lowerLowWater
-
-[cols=","]
-!===
-!Name: !lower low water
-!Definition: !The lowest of the low waters (or single low water) of any specified tidal day due to the declination A1 effects of the moon and sun.
-!===
-
-a|
-lowerLowWaterLargeTide
-
-[cols=","]
-!===
-!Name: !lower low water large tide
-!Definition: !The average of the lowest low waters, one from each of 19 years of observations.
-!===
-
-a|
-lowestAstronomicalTide
-
-[cols=","]
-!===
-!Name: !lowest astronomical tide
-!Definition: !The lowest tide level that can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
-!===
-
-a|
-lowestLowWater
-
-[cols=","]
-!===
-!Name: !lowest low water
-!Definition: !An arbitrary level conforming to the lowest tide observed at a location, or somewhat lower.
-!===
-
-a|
-lowestLowWaterSprings
-
-[cols=","]
-!===
-!Name: !lowest low water springs
-!Definition: !An arbitrary level conforming to the lowest water level observed at a location at spring tides during a period shorter than 19 years.
-!===
-
-a|
-lowWater
-
-[cols=","]
-!===
-!Name: !low water
-!Definition: !An approximation of mean low water adopted as the reference level for a limited region, irrespective of better determinations later.
-!===
-
-a|
-lowWaterDatum
-
-[cols=","]
-!===
-!Name: !low water datum
-!Definition: !An approximation of mean low water that has been adopted as a standard reference for a limited area.
-!===
-
-a|
-lowWaterSprings
-
-[cols=","]
-!===
-!Name: !low water springs
-!Definition: !A level approximating that of mean low water springs.
-!===
-
-a|
-meanHigherHighWater
-
-[cols=","]
-!===
-!Name: !mean higher high water
-!Definition: !The average height of higher high waters at a location over a 19-year period.
-!===
-
-a|
-meanHigherHighWaterSprings
-
-[cols=","]
-!===
-!Name: !mean higher high water springs
-!Definition: !The average height of higher high water at spring tides at a location.
-!===
-
-a|
-meanHigherLowWater
-
-[cols=","]
-!===
-!Name: !mean higher low water
-!Definition: !The average of the higher low water height of each tidal day observed over a National Tidal Datum Epoch.
-!===
-
-a|
-meanHighWater
-
-[cols=","]
-!===
-!Name: !mean high water
-!Definition: !The average height of all high waters at a location over a 19-year period.
-!===
-
-a|
-meanHighWaterNeaps
-
-[cols=","]
-!===
-!Name: !mean high water neaps
-!Definition: !The average height of the high waters of the neap tide.
-!===
-
-a|
-meanHighWaterSprings
-
-[cols=","]
-!===
-!Name: !mean high water springs
-!Definition: !The average height of the high waters of spring tides.
-!===
-
-a|
-meanLowerHighWater
-
-[cols=","]
-!===
-!Name: !mean lower high water
-!Definition: !The average of the lower high water height of each tidal day observed over a National Tidal Datum Epoch.
-!===
-
-a|
-meanLowerLowWater
-
-[cols=","]
-!===
-!Name: !mean lower low water
-!Definition: !The average height of the lower low waters at a location over a 19-year period.
-!===
-
-a|
-meanLowerLowWaterSprings
-
-[cols=","]
-!===
-!Name: !mean lower low water springs
-!Definition: !The average height of lower low water at spring tides at a location.
-!===
-
-a|
-meanLowWater
-
-[cols=","]
-!===
-!Name: !mean low water
-!Definition: !The average height of all low waters at a location over a 19-year period.
-!===
-
-a|
-meanLowWaterNeaps
-
-[cols=","]
-!===
-!Name: !mean low water neaps
-!Definition: !The average height of the low waters of the neap tide.
-!===
-
-a|
-meanLowWaterSprings
-
-[cols=","]
-!===
-!Name: !mean low water springs
-!Definition: !The average height of the low waters of spring tides.
-!===
-
-a|
-meanSeaLevel
-
-[cols=","]
-!===
-!Name: !mean sea level
-!Definition: !The average height of the sea at a tide station measured from a fixed predetermined reference level.
-!===
-
-a|
-meanTideLevel
-
-[cols=","]
-!===
-!Name: !mean tide level
-!Definition: !The arithmetic mean of mean high water and mean low water.
-!===
-
-a|
-meanWaterLevel
-
-[cols=","]
-!===
-!Name: !mean water level
-!Definition: !The average of all hourly water levels over the available period of record.
-!===
-
-a|
-nearlyHighestHighWater
-
-[cols=","]
-!===
-!Name: !nearly highest high water
-!Definition: !An arbitrary level approximating the highest water level observed at a location, usually equivalent to the high water springs.
-!===
-
-a|
-nearlyLowestLowWater
-
-[cols=","]
-!===
-!Name: !nearly lowest low water
-!Definition: !A level approximating the lowest water level observed at a location, usually equivalent to Indian spring low water.
-!===
-
-a|
-tropicHigherHighWater
-
-[cols=","]
-!===
-!Name: !tropic higher high water
-!Definition: !The highest of the high waters (or single high water) of the tides occurring semimonthly when the effect of the Moon's maximum declination is greatest.
-!===
-
-a|
-tropicLowerLowWater
-
-[cols=","]
-!===
-!Name: !tropic lower low water
-!Definition: !The lowest of the low waters (or single low water) of the tides occurring semimonthly when the effect of the Moon's maximum declination is greatest.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -8923,16 +8333,16 @@ The following are examples of the INSPIRE Implementing Rule on Metadata customiz
 
 === Topic category
 
-[cols=",,",options="header",]
+[cols=",,"]
 |===
-|ISO 19115 |Number |41
-| |Name |topicCategory
-| |Definition |Main theme(s) of the dataset
-| |XPath |identificationInfo[1]/*/topicCategory
-| |Data type |MD_TopicCategory
-| |Domain |Enumeration (See B.5.27 of ISO 19115)
-| |Example |*lnland waters*
-|Implementing instructions |The topic categories defined in B.2 of the INSPIRE Implementing rules for metadata are derived directly from the topic categories defined in B.5.27 of ISO 19115. INSPIRE Implementing rules for metadata define the INSPIRE data themes to which each topic category is applicable, i.e., Hydrography (I.8) is the INSPIRE theme for which the *lnland waters* topic category is applicable. The value of the ISO 19115/ISO 19119 metadata element is the value appearing in the "name" column of the table in B.5.27 of ISO 19115. |
+.7+^|ISO 19115 |Number |41
+|Name |topicCategory
+|Definition |Main theme(s) of the dataset
+|XPath |identificationInfo[1]/*/topicCategory
+|Data type |MD_TopicCategory
+|Domain |Enumeration (See B.5.27 of ISO 19115)
+|Example |*lnland waters*
+2+|Implementing instructions |The topic categories defined in B.2 of the INSPIRE Implementing rules for metadata are derived directly from the topic categories defined in B.5.27 of ISO 19115. INSPIRE Implementing rules for metadata define the INSPIRE data themes to which each topic category is applicable, i.e., Hydrography (I.8) is the INSPIRE theme for which the *lnland waters* topic category is applicable. The value of the ISO 19115/ISO 19119 metadata element is the value appearing in the "name" column of the table in B.5.27 of ISO 19115. |
 |===
 
 === Keyword
@@ -8992,3 +8402,4 @@ The following properties are expected:
 
 |Implementing instructions |In order to be consistent with ISO 19115, all the keyword values originating from a single version of a single controlled vocabulary shall be grouped in a single instance of the ISO 19115 descriptiveKeywords property. |
 |===
+
