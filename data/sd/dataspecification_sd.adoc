@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.III.19 Data Specification on Species Distribution – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Species Distribution
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Species Distribution
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93] **INSPIRE** *Infrastructure f
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/sd[D2.8.III.19_v3.1.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/sd[D2.8.III.19_v3.2.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -3079,7 +3079,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -3125,7 +3125,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -3171,7 +3171,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -3210,7 +3210,7 @@ specification: D2.8.III.19 Data Specification on Species Distribution – Techni
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -3235,7 +3235,7 @@ specification: D2.8.III.19 Data Specification on Species Distribution – Techni
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -3292,7 +3292,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -3362,7 +3362,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -3406,7 +3406,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -3698,7 +3698,7 @@ None.
 
 ==== Styles for the layer SD.SpeciesDistribution 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |SD.SpeciesDistribution.Default
 |*Default Style* |yes
@@ -3732,7 +3732,7 @@ The SLD specifying the symbology is distributed in a file separately from the da
 
 ==== Styles for the layer SD.SpeciesDistribution 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*SD.SpeciesDistribution.TemporalAggregation*
 |*Style Title* |Species Distribution – temporal aggregation of presence data
@@ -3741,7 +3741,7 @@ The SLD specifying the symbology is distributed in a file separately from the da
 |*Minimum & maximum scales* |<min scale> - <max scale>
 |===
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*SD.SpeciesDistribution.ResidencyStatusDifferentiation*
 |*Style Title* |Species Distribution – differentiation of symbology according to a residency status
@@ -4973,7 +4973,7 @@ Documentation
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !counting method value
 !Definition: !Method for producing numbers indicating the abundance of a species within an aggregation unit.
@@ -5020,7 +5020,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !general counting unit value
 !Definition: !The unit used to express a counted or estimated number indicating the abundance within a SpeciesAggregationUnit (e.g. ccurrences or the population size).
@@ -5114,7 +5114,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !occurrence category value
 !Definition: !The species population density in the SpeciesDistributionUnit.
@@ -5180,7 +5180,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !qualifier value
 !Definition: !This value defines the relation between the taxonomic concepts of a local species name and the reference species name given by reference species identifier or by a reference species scheme.
@@ -5245,7 +5245,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !reference species scheme value
 !Definition: !Reference lists defining a nomenclatural and taxonomical standard to which local names and taxonomic concepts can be mapped.
@@ -5293,7 +5293,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !residency status value
 !Definition: !Category of the residency of the occurrences or estimated population within a given aggregation unit.
@@ -5398,7 +5398,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !general source method value
 !Definition: !The methods that have been used in the sources for compiling the information about the occurrences of the species within a species distribution unit.
