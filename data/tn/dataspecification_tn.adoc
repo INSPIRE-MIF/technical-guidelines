@@ -1371,7 +1371,7 @@ _Annex II, Section 7.9.3_
 
 ====
 
-NOTE Grade separated crossings can be modeled using the GradeSeparatedCrossing class from the GNM. This class enables the ordered linking of two (Transport) Links. In this ordered relationship, the first Link is always the lower of the two.
+*NOTE* Grade separated crossings can be modeled using the GradeSeparatedCrossing class from the GNM. This class enables the ordered linking of two (Transport) Links. In this ordered relationship, the first Link is always the lower of the two.
 
 [NOTE]
 ====
@@ -1382,6 +1382,8 @@ In Transport Networks data, Transport Nodes should be present wherever Transport
 ====
 
 If a Transport Networks data set contains nodes, they can only occur where a connection exists between two Transport Links or where a Transport Link ends (end or dangle node). Nodes shall not occur where two links cross but not intersect, for instance at grade separated crossings.
+*NOTE* An AirNode is not necessarily placed at the end or start of a Transport Link when it is not used for navigation/ATS purposes.
+Example: an AerodromeNode could either simply represent the aerodrome location (significantPoint = false) or act as transport node for connectivity (significantPoint = true).
 
 [IMPORTANT]
 ====
@@ -1394,6 +1396,10 @@ _Annex II, Section 7.9.3_
 . In a Transport Networks data set which contains nodes, these nodes shall only be present where Transport Links connect or end.
 
 ====
+
+|===
+|An AirNode is not required to be present where Transport Links connect or end when it is not intended for navigation/ATS purposes i.e., when its significantPoint attribute is set to 'false'.
+|===
 
 The individual Transport Links can be combined to form Transport Link Sequences, using the mechanism provided by the GNM. As an ordered sequence of Transport Links, Transport Link Sequences have no geometry of their own. Their position is defined by the composing Transport Links.
 
