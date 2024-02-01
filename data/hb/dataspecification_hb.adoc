@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.18 Data Specification on Habitats and Biotopes – Technical Guidelines
+:revdate: 2024-01-31
+:keywords: INSPIRE Data Specification for the spatial data theme Habitats and Biotopes
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Habitats and Biotopes
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:lang: en
+
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -30,23 +41,22 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 = D2.8.III.18 Data Specification on _Habitats and Biotopes_ – Technical Guidelines
 
-[cols=",",]
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.18 INSPIRE Data Specification on _Habitats and Biotopes_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Habitats and Biotopes_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Habitats and Biotopes_
-|*Publisher* |European Commision Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Habitats and Biotopes_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Habitats and Biotopes_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.18_v3.0
-|*Language* |En
-|*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Union (INSPIRE)
-|*Coverage* |Project duration
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/hb[D2.8.III.18_v4.0.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
+|*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
 |===
 
 <<<
@@ -427,7 +437,7 @@ Many vegetation type classification systems exist all over Europe. Some of these
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |EBONE |European Biodiversity Observation Network
@@ -1442,7 +1452,7 @@ a|
 !Name: !eunis habitat type code value
 !Definition: !EUNIS habitat types classification.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/EunisHabitatTypeCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/EunisHabitatTypeCodeValue
 !Values: !The allowed values for this code list comprise only the values specified in "Classification of habitat types according to the EUNIS Biodiversity database, as specified in the EUNIS habitat types classification published on the web site of the European Environment Agency" .
 !===
 
@@ -1459,7 +1469,7 @@ a|
 !Name: !habitat directive code value
 !Definition: !Habitats Directive Annex I habitats.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/HabitatsDirectiveCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/HabitatsDirectiveCodeValue
 !Values: !The allowed values for this code list comprise only the values specified in "Classification of habitat types according to Annex I to Directive 92/43/EEC" .
 !===
 
@@ -1493,7 +1503,7 @@ a|
 !Name: !marine strategy framework directive code value
 !Definition: !Marine Strategy Framework Directive.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/MarineStrategyFrameworkDirectiveCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/MarineStrategyFrameworkDirectiveCodeValue
 !Values: !The allowed values for this code list comprise only the values specified in "Classification of habitat types according to table 1 of Annex III to Directive 2008/56/EC" .
 !===
 
@@ -1510,7 +1520,7 @@ a|
 !Name: !qualifier local name value
 !Definition: !List of values that specify the relation between a locally used name and a name used at the pan-European level.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/QualifierLocalNameValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/QualifierLocalNameValue
 !Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
 !===
 
@@ -1545,7 +1555,7 @@ a|
 !Definition: !This value defines which pan-european habitat classification scheme has been used.
 !Description: !EXAMPLE Eunis
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/ReferenceHabitatTypeSchemeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ReferenceHabitatTypeSchemeValue
 !Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
 !===
 
@@ -2375,7 +2385,7 @@ a|
 !Description: !Describes how the information about the occurrences of the habitats within a a unit has been compiled. 
 NOTE The values of the list are found here: http://circa.europa.eu/Public/irc/env/monnat/library?l=/habitats_reporting/reporting_2007-2012/reporting_guidelines/reporting-formats_1/_EN_1.0_&a=d
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/Article17SourceMethodValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/Article17SourceMethodValue
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
@@ -2688,7 +2698,7 @@ The values of selected external code lists are included in Annex D for informati
 |===
 |*Code list* |*Identifiers* |*Examples*
 |Article17SourceMethodValue |Append the codes in the field '1.1.2 Method used-map' from page 4 of the Reporting Formats for Article 17 to the identifier URI. The codes to be used are 
-3,2,1,0. Refer to the document for more detailed description. For the reporting under Article 12 of the Birds Directive the codes are the same. |http://inspire.ec.europa.eu/codeList/ Article17SourceMethodValue/3
+3,2,1,0. Refer to the document for more detailed description. For the reporting under Article 12 of the Birds Directive the codes are the same. |http://inspire.ec.europa.eu/codelist/ Article17SourceMethodValue/3
 |===
 
 [cols=",,",options="header",]
@@ -2775,12 +2785,13 @@ Spatial data sets shall be made available using at least one of the coordinate r
 *1.3.4. Other Coordinate Reference Systems*
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
+. Other coordinate reference systems may be specified for specific spatial data themes.
 
-. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+.  For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
 
 ====
 
@@ -2812,13 +2823,13 @@ _Annex II, Section 1.5_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 2*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -2827,35 +2838,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-*Table 2. http URIs for the default coordinate reference systems*
-
-[cols=",,",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -3342,7 +3324,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -3388,7 +3370,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -3434,7 +3416,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -3473,7 +3455,7 @@ specification: D2.8.III.18 Data Specification on _Habitats and Biotopes_ – Tec
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -3496,7 +3478,7 @@ specification: D2.8.III.18 Data Specification on _Habitats and Biotopes_ – Tec
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -3559,7 +3541,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -3640,7 +3622,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -3687,7 +3669,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -3769,9 +3751,12 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
 
-. Every encoding rule used to encode spatial data shall be made available.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
+
 
 ====
 
@@ -3989,7 +3974,7 @@ None.
 
 ==== Styles for the layer HB.Habitat
     
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HB.Habitat.Default*
 |*Default Style* |yes
@@ -4134,7 +4119,7 @@ image::./media/image21.png[image,width=485,height=190, align=center]
 
 ==== Styles for the layer HB.HabitatDistribution
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HB.HabitatDistribution.Default*
 |*Default Style* |yes
@@ -4210,7 +4195,7 @@ Example of SLD:
 
 ==== Styles for the layer HB.Habitat
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HB.Habitat*
 |*Style Title* |_Habitats and Biotopes_ (Features) Style
@@ -6025,7 +6010,7 @@ _http://inspire.ec.europa.eu/conformance-class/tg/hb/3.0_
 [loweralpha]
 . [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-. [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+. [.underline]#Reference#: Section 6 of this technical guideline
 
 . [.underline]#Test Method#: Compare the URI of the dataset with the URIs in the table.
 
@@ -6250,7 +6235,7 @@ image::./media/image26.jpeg[Inspire_habitat_example_2,width=300,height=199]
 
 *Reporting format on the 'main results of the surveillance under Article 11' for Annex I Habitats Types*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*_Field definition_* |*_Brief explanations_*
 |*0.1 Member State* |The MS for which the reported data apply; use 2 digit code according to list to be found in the reference portal.
@@ -6279,7 +6264,7 @@ Optional
 |*1.1.5. Range map* |Submit a map that was used for range evaluation following the same standard as under 1.1.1. or 1.1.4.
 |===
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+^|*2. Biogeographical level*
 Complete for each biogeographical region or marine region concerned
@@ -6514,7 +6499,7 @@ a|
 |
 |===
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+^|*2.7 Complementary information*
 |*2.7.1 Typical species* |List the typical species used.
@@ -6535,7 +6520,7 @@ a|
 |*2.7.5 Other relevant information* |Free text
 |===
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+^|
 *2.8. Conclusions*
@@ -7067,7 +7052,7 @@ a|
 !Name: !qualifier local name value
 !Definition: !List of values that specify the relation between a locally used name and a name used at the pan-European level.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/QualifierLocalNameValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/QualifierLocalNameValue
 !Values: !The allowed values for this code list comprise only the values specified in the table below.
 !===
 
@@ -7127,13 +7112,13 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !reference habitat type scheme value
 !Definition: !This value defines which pan-european habitat classification scheme has been used.
 !Description: !EXAMPLE Eunis
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/ReferenceHabitatTypeSchemeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ReferenceHabitatTypeSchemeValue
 !Values: !The allowed values for this code list comprise only the values specified in the table below.
 !===
 

@@ -23,30 +23,40 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
+:revdate: 2024-01-31
+:keywords: INSPIRE Data Specification for the spatial data theme Transport Networks
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Transport Networks
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:lang: en
+
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
 
 [discrete]
-= D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
+= D2.8.I.7 Data Specification on _Transport Networks_ – Technical Guidelines
 
-[cols=",",]
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.I.7 Data Specification on _Transport_ Networks – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Transport_ Networks
-|*Date* |2014-04-17
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Transport_ Networks
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Transport_ Networks
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Transport_ Networks
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.I.7_v3.2
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/tn[D2.8.I.7_v3.3.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
 
 <<<
@@ -514,7 +524,7 @@ There are no new terms defined in this specification.
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |AICM/AIXM |Aeronautical Information Exchange
 |ARP |Airport Reference Point
@@ -926,7 +936,7 @@ The following two types of code lists are distinguished in INSPIRE:
 
 * _Code lists that are governed by INSPIRE (INSPIRE-governed code lists)._ These code lists will be managed centrally in the INSPIRE code list register. Change requests to these code lists (e.g. to add, deprecate or supersede values) are processed and decided upon using the INSPIRE code list register's maintenance workflows.
 +
-INSPIRE-governed code lists will be made available in the INSPIRE code list register at __http://inspire.ec.europa.eu/codeList/<CodeListName__>. They will be available in SKOS/RDF, XML and HTML. The maintenance will follow the procedures defined in ISO 19135. This means that the only allowed changes to a code list are the addition, deprecation or supersession of values, i.e. no value will ever be deleted, but only receive different statuses (valid, deprecated, superseded). Identifiers for values of INSPIRE-governed code lists are constructed using the pattern __http://inspire.ec.europa.eu/codeList/<CodeListName__>/<value>.
+INSPIRE-governed code lists will be made available in the INSPIRE code list register at __http://inspire.ec.europa.eu/codelist/<CodeListName__>. They will be available in SKOS/RDF, XML and HTML. The maintenance will follow the procedures defined in ISO 19135. This means that the only allowed changes to a code list are the addition, deprecation or supersession of values, i.e. no value will ever be deleted, but only receive different statuses (valid, deprecated, superseded). Identifiers for values of INSPIRE-governed code lists are constructed using the pattern __http://inspire.ec.europa.eu/codelist/<CodeListName__>/<value>.
 
 
 * _Code lists that are governed by an organisation outside of INSPIRE (externally governed code lists)._ These code lists are managed by an organisation outside of INSPIRE, e.g. the World Meteorological Organization (WMO) or the World Health Organization (WHO). Change requests to these code lists follow the maintenance workflows defined by the maintaining organisations. Note that in some cases, no such workflows may be formally defined.
@@ -956,7 +966,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 
 ===== Vocabulary
 
-For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern _http://inspire.ec.europa.eu/codeList/<UpperCamelCaseName>_.
+For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern _http://inspire.ec.europa.eu/codelist/<UpperCamelCaseName>_.
 
 If the value is missing or empty, this indicates an empty code list. If no sub-classes are defined for this empty code list, this means that any code list may be used that meets the given definition.
 
@@ -1352,7 +1362,7 @@ _Annex II, Section 7.9.3_
 
 ====
 
-NOTE Grade separated crossings can be modeled using the GradeSeparatedCrossing class from the GNM. This class enables the ordered linking of two (Transport) Links. In this ordered relationship, the first Link is always the lower of the two.
+*NOTE* Grade separated crossings can be modeled using the GradeSeparatedCrossing class from the GNM. This class enables the ordered linking of two (Transport) Links. In this ordered relationship, the first Link is always the lower of the two.
 
 [NOTE]
 ====
@@ -1363,6 +1373,8 @@ In Transport Networks data, Transport Nodes should be present wherever Transport
 ====
 
 If a Transport Networks data set contains nodes, they can only occur where a connection exists between two Transport Links or where a Transport Link ends (end or dangle node). Nodes shall not occur where two links cross but not intersect, for instance at grade separated crossings.
+*NOTE* An AirNode is not necessarily placed at the end or start of a Transport Link when it is not used for navigation/ATS purposes.
+Example: an AerodromeNode could either simply represent the aerodrome location (significantPoint = false) or act as transport node for connectivity (significantPoint = true).
 
 [IMPORTANT]
 ====
@@ -1375,6 +1387,10 @@ _Annex II, Section 7.9.3_
 . In a Transport Networks data set which contains nodes, these nodes shall only be present where Transport Links connect or end.
 
 ====
+
+|===
+|An AirNode is not required to be present where Transport Links connect or end when it is not intended for navigation/ATS purposes i.e., when its significantPoint attribute is set to 'false'.
+|===
 
 The individual Transport Links can be combined to form Transport Link Sequences, using the mechanism provided by the GNM. As an ordered sequence of Transport Links, Transport Link Sequences have no geometry of their own. Their position is defined by the composing Transport Links.
 
@@ -3899,17 +3915,6 @@ a|
 !Stereotypes: !«featureType»
 !===
 
-a|
-*Attribute: fictitious*
-
-[cols=","]
-!===
-!Value type: !Boolean
-!Definition: !The railway link does not represent a real and existing railway track but a fictitious trajectory.
-!Description: !EXAMPLE A fictitious trajectory to connect railway links across a turntable.
-!Multiplicity: !1
-!Stereotypes: !«voidable»
-!===
 
 |===
 
@@ -5029,7 +5034,7 @@ a|
 
 [cols="",options="header",]
 |===
-|*TrafficSeparationScheme (abstract)*
+|*TrafficSeparationScheme*
 a|
 [cols=","]
 !===
@@ -5515,7 +5520,6 @@ The primary aspects modelled for air network elements are:
 * Temporal. All elements in a network may have a temporal validity (i.e. description of when the network element exists in the real world) and also optional information on when data was entered, modified or deleted in the dataset.
 * Thematic. The air schema can be thematically displayed via several of the attributes defined within the specification such as altitude.
 
-*Please Note:* The "ControlTower" feature has been inserted as a Placeholder in this version of the Transport Networks data specification (v3.0.1) for future population by the INSPIRE "Buildings" theme when the "[AppSchemaName]" should be updated. This affects the relevant entry in Table 14 and and in section 5.7.2.1.13.
 
 ===== UML Overview
 
@@ -5714,6 +5718,18 @@ a|
 !Definition: !The four letter ICAO location indicator of the aerodrome (airport/heliport), as listed in ICAO DOC 7910.
 !Description: !SOURCE [AIXM5.0].
 !Multiplicity: !1
+!Stereotypes: !«voidable»
+!===
+
+a|
+*Association role: controlTowers*
+
+[cols=","]
+!===
+!Value type: !Building of the Buildings Base package
+!Definition: !The set of control towers belonging to an aerodrome (airport/heliport).
+!Description: !
+!Multiplicity: !0..*
 !Stereotypes: !«voidable»
 !===
 
@@ -6940,12 +6956,12 @@ Spatial data sets shall be made available using at least one of the coordinate r
 *1.3.4. Other Coordinate Reference Systems*
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
+. Other coordinate reference systems may be specified for specific spatial data themes.
 
-. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+.  For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
-
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
 
 ====
 
@@ -6977,13 +6993,13 @@ _Annex II, Section 1.5_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 2*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -6992,35 +7008,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-*Table 2. http URIs for the default coordinate reference systems*
-
-[cols=",,",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -7940,7 +7927,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -7988,7 +7975,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -8036,7 +8023,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -8077,7 +8064,7 @@ specification: D2.8.I.7 Data Specification on Transport Networks – Technical G
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -8100,7 +8087,7 @@ Example XML encoding	<gmd:characterSet>
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -8171,7 +8158,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -8251,7 +8238,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -8299,7 +8286,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -8386,9 +8373,12 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
 
-. Every encoding rule used to encode spatial data shall be made available.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
+
 
 ====
 
@@ -8511,14 +8501,7 @@ The xml schema document is available from
 _http://inspire.ec.europa.eu/schemas/tn-a/3.0/AirTransportNetwork.xsd_.
 
 [.red.background]
-====
-*Open issue 1:* In the amendment of the Implementing Rules, a number of changes have been introduced to the Annex I data models.
 
-In the Air Transport Elements data model, the type targetElement of the controlTowers property has been changed from the Building placeholder type to the type AbstractConstruction in the Buildings theme.
-
-As a consequence, the Air Transport Elements xml schema needs to be updated to reflect these changes. These changes and the overall process for xml schema maintenance in INSPIRE are currently being discussed in the INSPIRE maintenance and implementation group (MIG). For further information on the status of these discussions, see https://ies-svn.jrc.ec.europa.eu/projects/mig-inspire
-
-====
 
 ====== Encoding rules used
 
@@ -8819,7 +8802,7 @@ None.
 
 ==== Styles for the layer TN.CommonTransportElements.TransportNode
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.CommonTransportElements.TransportNode.Default*
 |*Default Style* |yes
@@ -8860,7 +8843,7 @@ None
 
 ==== Styles for the layer TN.CommonTransportElements.TransportLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.CommonTransportElements.TransportLink.Default*
 |*Default Style* |yes
@@ -8899,7 +8882,7 @@ None
 
 ==== Styles for the layer TN.CommonTransportElements.TransportArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.CommonTransportElements.TransportArea.Default*
 |*Default Style* |yes
@@ -8940,7 +8923,7 @@ None
 
 ==== Styles for the layer TN.RoadTransportNetwork.RoadLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RoadTransportNetwork.RoadLink.Default*
 |*Default Style* |yes
@@ -8980,7 +8963,7 @@ None
 
 ==== Styles for the layer TN.RoadTransportNetwork.RoadServiceArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RoadTransportNetwork.RoadServiceArea.Default*
 |*Default Style* |yes
@@ -9020,7 +9003,7 @@ None
 
 ==== Styles for the layer TN.RoadTransportNetwork.RoadArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RoadTransportNetwork.RoadArea.Default*
 |*Default Style* |yes
@@ -9060,7 +9043,7 @@ None
 
 ==== Styles for the layer TN.RoadTransportNetwork.VehicleTrafficArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RoadTransportNetwork.VehicleTrafficArea.Default*
 |*Default Style* |yes
@@ -9100,7 +9083,7 @@ None
 
 ==== Styles for the layer TN.RailTransportNetwork.RailwayLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RailTransportNetwork.RailwayLink.Default*
 |*Default Style* |yes
@@ -9139,7 +9122,7 @@ None
 
 ==== Styles for the layer TN.RailTransportNetwork.RailwayStationArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RailTransportNetwork.RailwayStationArea.Default*
 |*Default Style* |yes
@@ -9179,7 +9162,7 @@ None
 
 ==== Styles for the layer TN.RailTransportNetwork.RailwayYardArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RailTransportNetwork.RailwayYardArea.Default*
 |*Default Style* |yes
@@ -9219,7 +9202,7 @@ None
 
 ==== Styles for the layer TN.RailTransportNetwork.RailwayArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RailTransportNetwork.RailwayArea.Default*
 |*Default Style* |yes
@@ -9259,7 +9242,7 @@ None
 
 ==== Styles for the layer TN.WaterTransportNetwork.WaterwayLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.WaterTransportNetwork.WaterwayLink.Default*
 |*Default Style* |yes
@@ -9298,7 +9281,7 @@ None
 
 ==== Styles for the layer TN.WaterTransportNetwork.FairwayArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.WaterTransportNetwork.FairwayArea.Default*
 |*Default Style* |yes
@@ -9338,7 +9321,7 @@ None
 
 ==== Styles for the layer TN.WaterTransportNetwork.PortArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.WaterTransportNetwork.PortArea.Default*
 |*Default Style* |yes
@@ -9378,7 +9361,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.AirLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.AirLink.Default*
 |*Default Style* |yes
@@ -9417,7 +9400,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.AerodromeArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.AerodromeArea.Default*
 |*Default Style* |yes
@@ -9457,7 +9440,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.RunwayArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.RunwayArea.Default*
 |*Default Style* |yes
@@ -9497,7 +9480,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.AirSpaceArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.AirSpaceArea.Default*
 |*Default Style* |yes
@@ -9537,7 +9520,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.ApronArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.ApronArea.Default*
 |*Default Style* |yes
@@ -9577,7 +9560,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.TaxiwayArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.TaxiwayArea.Default*
 |*Default Style* |yes
@@ -9617,7 +9600,7 @@ None
 
 ==== Styles for the layer TN.CableTransportNetwork.CablewayLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.CableTransportNetwork.CablewayLink.Default*
 |*Default Style* |yes
@@ -10737,7 +10720,7 @@ http://inspire.ec.europa.eu/conformance-class/tg/tn/as/tn-w/3.2
 [loweralpha]
 . [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-. [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+. [.underline]#Reference#: Section 6 of this technical guideline
 
 . [.underline]#Test Method#: Compare the URI of the dataset with the URIs in the table.
 
@@ -10876,7 +10859,7 @@ a|
 
 === Speed advice
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|Use Case Description
 |Name |Speed advice
@@ -10936,7 +10919,7 @@ Documentation
 
 === Journey planning
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use Case Description*
 |Name |Journey planning
