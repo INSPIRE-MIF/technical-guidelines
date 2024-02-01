@@ -23,30 +23,40 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
+:revdate: 2024-01-31
+:keywords: INSPIRE Data Specification for the spatial data theme Transport Networks
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Transport Networks
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:lang: en
+
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
 
 [discrete]
-= D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
+= D2.8.I.7 Data Specification on _Transport Networks_ – Technical Guidelines
 
-[cols=",",]
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.I.7 Data Specification on _Transport_ Networks – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Transport_ Networks
-|*Date* |2014-04-17
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Transport_ Networks
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Transport_ Networks
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Transport_ Networks
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.I.7_v3.2
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/tn[D2.8.I.7_v3.3.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
 
 <<<
@@ -514,7 +524,7 @@ There are no new terms defined in this specification.
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |AICM/AIXM |Aeronautical Information Exchange
 |ARP |Airport Reference Point
@@ -8252,7 +8262,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -8300,7 +8310,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -8348,7 +8358,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -8389,7 +8399,7 @@ specification: D2.8.I.7 Data Specification on Transport Networks – Technical G
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -8412,7 +8422,7 @@ Example XML encoding	<gmd:characterSet>
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -8483,7 +8493,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -8563,7 +8573,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -8611,7 +8621,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -9131,7 +9141,7 @@ None.
 
 ==== Styles for the layer TN.CommonTransportElements.TransportNode
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.CommonTransportElements.TransportNode.Default*
 |*Default Style* |yes
@@ -9172,7 +9182,7 @@ None
 
 ==== Styles for the layer TN.CommonTransportElements.TransportLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.CommonTransportElements.TransportLink.Default*
 |*Default Style* |yes
@@ -9211,7 +9221,7 @@ None
 
 ==== Styles for the layer TN.CommonTransportElements.TransportArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.CommonTransportElements.TransportArea.Default*
 |*Default Style* |yes
@@ -9252,7 +9262,7 @@ None
 
 ==== Styles for the layer TN.RoadTransportNetwork.RoadLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RoadTransportNetwork.RoadLink.Default*
 |*Default Style* |yes
@@ -9292,7 +9302,7 @@ None
 
 ==== Styles for the layer TN.RoadTransportNetwork.RoadServiceArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RoadTransportNetwork.RoadServiceArea.Default*
 |*Default Style* |yes
@@ -9332,7 +9342,7 @@ None
 
 ==== Styles for the layer TN.RoadTransportNetwork.RoadArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RoadTransportNetwork.RoadArea.Default*
 |*Default Style* |yes
@@ -9372,7 +9382,7 @@ None
 
 ==== Styles for the layer TN.RoadTransportNetwork.VehicleTrafficArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RoadTransportNetwork.VehicleTrafficArea.Default*
 |*Default Style* |yes
@@ -9412,7 +9422,7 @@ None
 
 ==== Styles for the layer TN.RailTransportNetwork.RailwayLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RailTransportNetwork.RailwayLink.Default*
 |*Default Style* |yes
@@ -9451,7 +9461,7 @@ None
 
 ==== Styles for the layer TN.RailTransportNetwork.RailwayStationArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RailTransportNetwork.RailwayStationArea.Default*
 |*Default Style* |yes
@@ -9491,7 +9501,7 @@ None
 
 ==== Styles for the layer TN.RailTransportNetwork.RailwayYardArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RailTransportNetwork.RailwayYardArea.Default*
 |*Default Style* |yes
@@ -9531,7 +9541,7 @@ None
 
 ==== Styles for the layer TN.RailTransportNetwork.RailwayArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.RailTransportNetwork.RailwayArea.Default*
 |*Default Style* |yes
@@ -9571,7 +9581,7 @@ None
 
 ==== Styles for the layer TN.WaterTransportNetwork.WaterwayLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.WaterTransportNetwork.WaterwayLink.Default*
 |*Default Style* |yes
@@ -9610,7 +9620,7 @@ None
 
 ==== Styles for the layer TN.WaterTransportNetwork.FairwayArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.WaterTransportNetwork.FairwayArea.Default*
 |*Default Style* |yes
@@ -9650,7 +9660,7 @@ None
 
 ==== Styles for the layer TN.WaterTransportNetwork.PortArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.WaterTransportNetwork.PortArea.Default*
 |*Default Style* |yes
@@ -9690,7 +9700,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.AirLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.AirLink.Default*
 |*Default Style* |yes
@@ -9729,7 +9739,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.AerodromeArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.AerodromeArea.Default*
 |*Default Style* |yes
@@ -9769,7 +9779,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.RunwayArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.RunwayArea.Default*
 |*Default Style* |yes
@@ -9809,7 +9819,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.AirSpaceArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.AirSpaceArea.Default*
 |*Default Style* |yes
@@ -9849,7 +9859,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.ApronArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.ApronArea.Default*
 |*Default Style* |yes
@@ -9889,7 +9899,7 @@ None
 
 ==== Styles for the layer TN.AirTransportNetwork.TaxiwayArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.AirTransportNetwork.TaxiwayArea.Default*
 |*Default Style* |yes
@@ -9929,7 +9939,7 @@ None
 
 ==== Styles for the layer TN.CableTransportNetwork.CablewayLink
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*TN.CableTransportNetwork.CablewayLink.Default*
 |*Default Style* |yes
@@ -11189,7 +11199,7 @@ a|
 
 === Speed advice
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|Use Case Description
 |Name |Speed advice
@@ -11249,7 +11259,7 @@ Documentation
 
 === Journey planning
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use Case Description*
 |Name |Journey planning
