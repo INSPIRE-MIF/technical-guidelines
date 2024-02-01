@@ -4043,7 +4043,7 @@ The _Agricultural and Aquaculture Facilities_ theme is represented with four dif
 |*Layer Name* |*Layer Title* |*Spatial object type(s)* |*Keywords*
 |AF.AgriculturalHolding |Agricultural Holding |Holding |Holding, Agriculture, Animal Farming, Establishment, Activity Complex, Facility
 |AF.AquacultureHolding |Aquaculture Holding |Holding |Holding, Aquaculture Fish Farming, Establishment, Activity Complex, Facility
-|AF.Sites |Agricultural and Aquaculture Site |Site |Site, Parcel, Polygon, Land, Pasture, Fence.
+|AF.Site |Agricultural and Aquaculture Site |Site |Site, Parcel, Polygon, Land, Pasture, Fence.
 |AF.AbstractInstallation |Agricultural and Aquaculture Integrated Installations |AbstractInstallation |Installation, Plant, Technical unit, technical apparatus.
 |AF.Plots |Agricultural and Aquaculture Integrated Plots |Plot |Plots, Fenced Area, Rearing Area. Relaying Area.
 |AF.Agribuilding |Agricultural and Aquaculture Building |AgriBuilding |Agribuilding, Barn, Storage, Storm, Animal Housing, Greenhouse, Garage, Technical installation
@@ -4106,7 +4106,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 [cols=",",options="header",]
 |===
-|*Style Name* |*AF.AgriculturalHolding*
+|*Style Name* |*AF.AgriculturalHolding.Default*
 |*Default Style* |Yes
 |*Style Title* |Agricultural Holding Default Style
 |*Style Abstract* |The geometry is rendered as a circle with a size of 3 pixels, with a green (#008000) fill and a black outline (#000000).
@@ -4142,7 +4142,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 [cols=",",options="header",]
 |===
-|*Style Name* |*AF.AquacultureHolding*
+|*Style Name* |*AF.AquacultureHolding.Default*
 |*Default Style* |Yes
 |*Style Title* |Aquaculture Holding Default Style
 |*Style Abstract* |The geometry is rendered as a circle with a size of 3 pixels, with a blue fill (#0000FF) and a black outline (#000000).
@@ -4179,7 +4179,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 [cols=",",options="header",]
 |===
-|*Style Name* |*AF.Site*
+|*Style Name* |*AF.Site.Default*
 |*Default Style* |Yes
 |*Style Title* |Agricultural and Aquaculture Site Default Style
 |*Style Abstract* |This layer type is for representation of Agricultural and Aquaculture Sites as Points or Polygons
@@ -4187,9 +4187,9 @@ Portrayal is not defined because currently there is not an agreement in the comm
 *For Polygon geometry:*
 [source, xml]
   <sld:NamedLayer>
-    <se:Name> AF.Sites.Default</se:Name>
+    <se:Name> AF.Site</se:Name>
     <sld:UserStyle>
-      <se:Name>INSPIRE_Default</se:Name>
+      <se:Name>AF.Site.Default</se:Name>
       <sld:IsDefault>1</sld:IsDefault>
       <se:FeatureTypeStyle version="1.1.0">
         <se:Description>
@@ -4243,7 +4243,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 [cols=",",options="header",]
 |===
-|*Style Name* |*AF.AbstractInstallation*
+|*Style Name* |*AF.AbstractInstallation.Default*
 |*Default Style* |Yes
 |*Style Title* |Agricultural and Aquaculture Abstract Installation Default Style
 |*Style Abstract* |The geometry is rendered as a circle with a size of 3 pixels, with a Pink (#FF00FF) fill and a black outline (#000000).
@@ -4280,7 +4280,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 [cols=",",options="header",]
 |===
-|*Style Name* |*AF.Plot*
+|*Style Name* |*AF.Plot.Default*
 |*Default Style* |AF.Plot.Default
 |*Style Title* |Agricultural and Aquaculture Plot Default Style
 |*Style Abstract* |The geometry is rendered using a grey (#808080) fill and a solid Yellow (rgb=#FFFF00) outline with a stroke width of 1 pixel.
@@ -4316,7 +4316,7 @@ Portrayal is not defined because currently there is not an agreement in the comm
 
 [cols=",",options="header",]
 |===
-|*Style Name* |*AF.AgriBuilding*
+|*Style Name* |*AF.AgriBuilding.Default*
 |*Default Style* |AF.AgriBuilding.Default
 |*Style Title* |Agricultural and Aquaculture Agribuilding Default Style
 |*Style Abstract* |The geometry is rendered as a circle with a size of 3 pixels, with a Green (#808000) fill and a black outline (#000000).
