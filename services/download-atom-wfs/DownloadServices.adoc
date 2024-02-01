@@ -32,7 +32,7 @@
 :keywords: INSPIRE Download Services
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2023.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:media/image1.png[image,width=107,height=107] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -46,14 +46,14 @@ image:media/image1.png[image,width=107,height=107] **INSPIRE** *Infrastructure f
 |*Creator* |{author}
 |*Date of publication* |{revdate}
 |*Subject* |{keywords}
-|*Status* |Version 3.2.0
+|*Status* |Version 3.4.0
 |*Publisher* |{producer}
 |*Type* |Text
 |*Description* |{description}
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/download-services/[Technical Guidance Download Services v3.2.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/download-services/[Technical Guidance Download Services v3.4.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Commission Regulation (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
