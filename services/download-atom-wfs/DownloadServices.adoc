@@ -32,7 +32,8 @@
 :keywords: INSPIRE Download Services
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+
 :lang: en
 
 image:media/image1.png[image,width=107,height=107] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -46,14 +47,15 @@ image:media/image1.png[image,width=107,height=107] **INSPIRE** *Infrastructure f
 |*Creator* |{author}
 |*Date of publication* |{revdate}
 |*Subject* |{keywords}
-|*Status* |Version 3.3.0
+|*Status* |Version 3.4.0
 |*Publisher* |{producer}
 |*Type* |Text
 |*Description* |{description}
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/download-services/[Technical Guidance Download Services v3.3.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/download-services/[Technical Guidance Download Services v3.4.0]
+
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Commission Regulation (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
@@ -641,7 +643,7 @@ Provides all necessary information about the service, the available Spatial Data
 |===
 2+|*_Recommended WFS-based implementation_*
 |*_Get Download Service Metadata Request_* a|
-Metadata records for Download Services shall be available in a Discovery Service. The Resource Locator metadata element for the Download Service shall contain a link to the GetCapabilities of the WFS..
+A metadata record for a Download Service is available in a Discovery Service or is provided by the Download Services itself. The Resource Locator metadata element for the Download Service contains a link to the GetCapabilities of the WFS.
 
 The Get Download Service Metadata request is a GetCapabilities request to the WFS indicated in the metadata record.
 
@@ -2321,7 +2323,7 @@ Implement Pre-Defined Dataset Download Service ("Part A") using ISO 19142 Web Fe
 
 _This conformance class is inclusive of:_
 
-_TG Requirement 46 to_ _TG Requirement 60_
+_TG Requirement 46 to TG Requirement 60, plus TG Requirement 79_
 
 _TG Recommendation 14 to_ _TG Recommendation 15_
 ====
@@ -2429,11 +2431,13 @@ In order to make the Download Service INSPIRE metadata elements available via a 
 
 The schema document itself is at http://inspire.ec.europa.eu/schemas/inspire_dls/1.0/inspire_dls.xsd
 
-There are two possible options that may be used and it is up to the implementing Member State to decide which is more appropriate according to need.
+There are three possible options that may be used and it is up to the implementing Member State to decide which is more appropriate according to need.
 
 The first option is to use the ows:ExtendedCapabilities to publish a link to a Download Service metadata record. (e.g. in a discovery service). This should be done using a <inspire_common:MetadataURL> in the extended capabilities section.
 
-The second option is to publish all the metadata elements directly in the WFS capabilities (and ows:ExtendedCapabilities) using the mapping in the following table.
+The second option is to publish all the metadata elements directly in the WFS capabilities and ows:ExtendedCapabilities using the mapping in Table 19a.
+
+The third option is to publish all the metadata elements directly in the WFS capabilities without ows:ExtendedCapabilities using the mapping in Table 19b.
 
 [cols=",",]
 |===
@@ -2516,12 +2520,96 @@ inspire_dls:SpatialDataSetIdentifier/inspire_common:Namespace
 
 |===
 
-*Table 19: Mapping INSPIRE Metadata elements to ISO 19142 WFS*
+*Table 19a: Mapping INSPIRE Metadata elements to ISO 19142 WFS with extended capabilities*
+
+[cols=",,",options="header",]
+|===
+|INSPIRE Metadata element |WFS 2.0 without ExtendedCapabilities
+|Fallback
+|Resource Title (M) |`ows:ServiceIdentification/ows:Title` |
+
+|Resource Abstract (M) |`ows:ServiceIdentification/ows:Abstract` |
+
+|Resource Type (M) |- |Is by default "service"
+
+|Resource Locator (C) |- |Resource Locator of the data set
+
+|Coupled Resource (C) |`wfs:MetadataURL` (per feature type) |
+
+|Spatial Data Service Type (M) |-
+|In a ISO/TS 19139:2007 metadata record dataset: `gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:applicationProfile`
+
+
+|Keyword (M) |`ows:Keywords/ows:Keyword`; note that a keyword indicating
+the
+https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory[spatial
+data service category] is required, see example below this table. |
+
+|Geographic Bounding Box (M) |- |Geographic Bounding Box of the data set
+
+|Temporal Reference (M) |`updateSequence` attribute |If in the optional
+`updateSequence` attribute a timestamp value is not present, the
+Temporal Reference is mapped to the Temporal Reference of the dataset
+metadata, in order of a date of type `publication`,`revision` `creation`.
+
+|Spatial Resolution (C) |- |Spatial Resolution of the data set
+
+|Conformity (M) |`ows:Keywords`/`ows:Keyword` +
+`ows:Keywords`/`ows:Type` |Using a `ows:Keyword` element for each
+specification against the service is *conformant*, included within a
+specific `ows:Keywords` group including the following `ows:Type`
+element:
+`<ows:Type codeSpace="http://data.europa.eu/eli">European Legislation Identifier (ELI)</ows:Type>`
+
+|Conditions for Access and Use (M) |`ows:ServiceIdentification/ows:Fees`
+|
+
+|Limitations on Public Access (M)
+|`ows:ServiceIdentification/ows:AccessConstraints` |
+
+|Responsible Organisation (M) |`ows:ServiceProvider/ows:ProviderName`
+and `ows:ServiceProvider/ows:ServiceContact/ows:ContactInfo` |
+
+|Metadata Point of Contact (M)
+|`WFS_Capabilities/ows:ServiceProvider/ows:ProviderName` and
+`WFS_Capabilities/ows:ServiceProvider/ows:ServiceContact/ows:ContactInfo/ows:Address/ows:ElectronicMailAddress`
+(https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification/issues/41)
+|
+
+|Metadata Date (M) |`updateSequence` attribute |If in the optional
+`updateSequence` attribute a timestamp value is not present, the
+Metadata Date is mapped to the Temporal Reference of the dataset
+metadata, in order of a date of type `publication`,`revision` `creation`.
+
+|Metadata Language (M) |`gmd:MD_Metadata/gmd:language/gmd:LanguageCode`
+in dataset metadata for main language, other supported language (if any)
+will be mapped to the `xml:lang`
+|
+|===
+
+*Table 19b: Mapping INSPIRE Metadata elements to ISO 19142 WFS without extended capabilities*
+
+Example for the the
+https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory[spatial
+data service category]:
+
+[source,xml]
+----
+<ows:Keywords>
+  <ows:Keyword>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/infoFeatureAccessService</ows:Keyword>
+  <ows:Type codeSpace="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory">spatial data service category</ows:Type>
+</ows:Keywords>
+----
+
 
 [IMPORTANT]
 ====
 *TG Requirement 53*
-INSPIRE Metadata for the Download Service shall EITHER be linked to via an <inspire_common:MetadataURL> in an extended capabilities section, OR the extended capabilities section shall contain all the INSPIRE Metadata for the Download Service in accordance with Table 4 and the inspire_dls:ExtendedCapabilities schema.
+The INSPIRE Download Service metadata elements shall be available in one of the following ways:
+
+1. The extended capabilities section of the Download Service is in accordance with the schema at https://inspire.ec.europa.eu/schemas/inspire_ds/1.0/inspire_ds.xsd and contains a link to the metadata record of the service in an INSPIRE Discovery catalogue in element <inspire_common:MetadataURL>;
+2. The capabilities section of the Download Service contains the Download Service metadata elements in accordance with Table 19a and the schema at https://inspire.ec.europa.eu/schemas/inspire_ds/1.0/inspire_ds.xsd;
+3. The capabilities section of the Download Service contains the Download Service metadata elements in accordance with Table 19b.
 ====
 
 The following example shows an inspire_dls:ExtendedCapabilities section.
@@ -2712,6 +2800,34 @@ This *list of supported languages* shall consist of
  
 Regardless of the response language, the *list of supported languages* is invariant for each GetCapabilities-Response.
 ====
+
+[IMPORTANT]
+====
+*TG Requirement 79*
+If the service supports several languages and if there is no Extended Capabilities, the xml:lang attribute shall be used to define the languages used.
+====
+
+[source,xml]
+----
+ <ows:ServiceIdentification>
+      <ows:Title xml:lang="en">My WFS</ows:Title>
+      <ows:Title xml:lang="da">Min WFS</ows:Title>
+      <ows:Abstract xml:lang="en">My abstract</ows:Abstract>
+      <ows:Abstract xml:lang="da">Min abstrakt</ows:Abstract>
+      <ows:Keywords>
+        <ows:Keyword xml:lang="en">My keyword</ows:Keyword>
+        <ows:Keyword xml:lang="da">Mit emneord</ows:Keyword>
+      </ows:Keywords>
+      <ows:ServiceType>WFS</ows:ServiceType>
+      <ows:ServiceTypeVersion>2.0.2</ows:ServiceTypeVersion>
+      <ows:ServiceTypeVersion>2.0.1</ows:ServiceTypeVersion>
+      <ows:ServiceTypeVersion>2.0.0</ows:ServiceTypeVersion>
+      <ows:ServiceTypeVersion>1.1.0</ows:ServiceTypeVersion>
+      <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+      <ows:Fees>NONE</ows:Fees>
+      <ows:AccessConstraints>NONE</ows:AccessConstraints>
+   </ows:ServiceIdentification>
+----
 
 [IMPORTANT]
 ====
