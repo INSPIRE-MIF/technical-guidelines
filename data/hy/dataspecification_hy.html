@@ -464,7 +464,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Date of publication</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2023-07-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-31</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subject</strong></p></td>
@@ -496,11 +496,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Identifier</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://inspire.ec.europa.eu/id/document/tg/hy">D2.8.I.8_v3.3.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://inspire.ec.europa.eu/id/document/tg/hy">D2.8.I.8_v3.4.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Changelog</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2" class="bare">https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1" class="bare">https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Language</strong></p></td>
@@ -670,13 +670,10 @@ Unit H06: Digital Earth and Reference Data<br>
 <em><a href="http://inspire.ec.europa.eu/index.cfm/pageid/2" class="bare">http://inspire.ec.europa.eu/index.cfm/pageid/2</a></em></p>
 </div>
 <div style="page-break-after: always;"></div>
-<div class="sect1">
-<h2 id="_table_of_contents">Table of Contents</h2>
-<div class="sectionbody">
+<h2 id="_table_of_contents" class="discrete">Table of Contents</h2>
 <div id="toc" class="toc">
 <div id="toctitle" class="title"></div>
 <ul class="sectlevel1">
-<li><a href="#_table_of_contents">Table of Contents</a></li>
 <li><a href="#_scope">1. Scope</a></li>
 <li><a href="#_overview">2. Overview</a>
 <ul class="sectlevel2">
@@ -712,24 +709,23 @@ Unit H06: Digital Earth and Reference Data<br>
 </ul>
 </li>
 <li><a href="#_voidable_characteristics">5.2.2. Voidable characteristics</a></li>
-<li><a href="#_enumerations">5.2.3. Enumerations</a></li>
-<li><a href="#_code_lists">5.2.4. Code lists</a>
+<li><a href="#_code_lists">5.2.3. Code lists</a>
 <ul class="sectlevel4">
-<li><a href="#_code_list_types">5.2.4.1. Code list types</a></li>
-<li><a href="#_obligations_on_data_providers">5.2.4.2. Obligations on data providers</a></li>
-<li><a href="#_recommended_code_list_values">5.2.4.3. Recommended code list values</a></li>
-<li><a href="#_governance">5.2.4.4. Governance</a></li>
-<li><a href="#_vocabulary">5.2.4.5. Vocabulary</a></li>
+<li><a href="#_code_list_types">5.2.3.1. Code list types</a></li>
+<li><a href="#_obligations_on_data_providers">5.2.3.2. Obligations on data providers</a></li>
+<li><a href="#_recommended_code_list_values">5.2.3.3. Recommended code list values</a></li>
+<li><a href="#_governance">5.2.3.4. Governance</a></li>
+<li><a href="#_vocabulary">5.2.3.5. Vocabulary</a></li>
 </ul>
 </li>
-<li><a href="#_identifier_management">5.2.5. Identifier management</a></li>
-<li><a href="#_geometry_representation">5.2.6. Geometry representation</a></li>
-<li><a href="#_temporality_representation">5.2.7. Temporality representation</a>
+<li><a href="#_identifier_management">5.2.4. Identifier management</a></li>
+<li><a href="#_geometry_representation">5.2.5. Geometry representation</a></li>
+<li><a href="#_temporality_representation">5.2.6. Temporality representation</a>
 <ul class="sectlevel4">
-<li><a href="#_validity_of_the_real_world_phenomena">5.2.7.1. Validity of the real-world phenomena</a></li>
+<li><a href="#_validity_of_the_real_world_phenomena">5.2.6.1. Validity of the real-world phenomena</a></li>
 </ul>
 </li>
-<li><a href="#_requirements_for_reporting">5.2.8. Requirements for reporting</a></li>
+<li><a href="#_requirements_for_reporting">5.2.7. Requirements for reporting</a></li>
 </ul>
 </li>
 <li><a href="#_application_schema_hydro_base">5.3. Application schema Hydro - base</a>
@@ -849,36 +845,32 @@ Unit H06: Digital Earth and Reference Data<br>
 <li><a href="#_widthrange">5.5.2.2.2. <em>WidthRange</em></a></li>
 </ul>
 </li>
-<li><a href="#_enumerations_2">5.5.2.3. Enumerations</a>
+<li><a href="#_code_lists_3">5.5.2.3. Code lists</a>
 <ul class="sectlevel5">
-<li><a href="#_originvalue">5.5.2.3.1. <em>OriginValue</em></a></li>
+<li><a href="#_crossingtypevalue">5.5.2.3.1. <em>CrossingTypeValue</em></a></li>
+<li><a href="#_hydrologicalpersistencevalue">5.5.2.3.2. <em>HydrologicalPersistenceValue</em></a></li>
+<li><a href="#_shoretypevalue">5.5.2.3.3. <em>ShoreTypeValue</em></a></li>
+<li><a href="#_waterlevelvalue">5.5.2.3.4. <em>WaterLevelValue</em></a></li>
+<li><a href="#_originvalue">5.5.2.3.5. <em>OriginValue</em></a></li>
 </ul>
 </li>
-<li><a href="#_code_lists_3">5.5.2.4. Code lists</a>
+<li><a href="#_imported_types_informative_3">5.5.2.4. Imported types (informative)</a>
 <ul class="sectlevel5">
-<li><a href="#_crossingtypevalue">5.5.2.4.1. <em>CrossingTypeValue</em></a></li>
-<li><a href="#_hydrologicalpersistencevalue">5.5.2.4.2. <em>HydrologicalPersistenceValue</em></a></li>
-<li><a href="#_shoretypevalue">5.5.2.4.3. <em>ShoreTypeValue</em></a></li>
-<li><a href="#_waterlevelvalue">5.5.2.4.4. <em>WaterLevelValue</em></a></li>
-</ul>
-</li>
-<li><a href="#_imported_types_informative_3">5.5.2.5. Imported types (informative)</a>
-<ul class="sectlevel5">
-<li><a href="#_area">5.5.2.5.1. <em>Area</em></a></li>
-<li><a href="#_boolean">5.5.2.5.2. <em>Boolean</em></a></li>
-<li><a href="#_characterstring_2">5.5.2.5.3. <em>CharacterString</em></a></li>
-<li><a href="#_conditionoffacilityvalue">5.5.2.5.4. <em>ConditionOfFacilityValue</em></a></li>
-<li><a href="#_datetime">5.5.2.5.5. <em>DateTime</em></a></li>
-<li><a href="#_gm_curve">5.5.2.5.6. <em>GM_Curve</em></a></li>
-<li><a href="#_gm_multisurface">5.5.2.5.7. <em>GM_MultiSurface</em></a></li>
-<li><a href="#_gm_primitive">5.5.2.5.8. <em>GM_Primitive</em></a></li>
-<li><a href="#_gm_surface">5.5.2.5.9. <em>GM_Surface</em></a></li>
-<li><a href="#_hydroobject_3">5.5.2.5.10. <em>HydroObject</em></a></li>
-<li><a href="#_identifier">5.5.2.5.11. <em>Identifier</em></a></li>
-<li><a href="#_length_2">5.5.2.5.12. <em>Length</em></a></li>
-<li><a href="#_localisedcharacterstring">5.5.2.5.13. <em>LocalisedCharacterString</em></a></li>
-<li><a href="#_md_resolution">5.5.2.5.14. <em>MD_Resolution</em></a></li>
-<li><a href="#_verticalpositionvalue">5.5.2.5.15. <em>VerticalPositionValue</em></a></li>
+<li><a href="#_area">5.5.2.4.1. <em>Area</em></a></li>
+<li><a href="#_boolean">5.5.2.4.2. <em>Boolean</em></a></li>
+<li><a href="#_characterstring_2">5.5.2.4.3. <em>CharacterString</em></a></li>
+<li><a href="#_conditionoffacilityvalue">5.5.2.4.4. <em>ConditionOfFacilityValue</em></a></li>
+<li><a href="#_datetime">5.5.2.4.5. <em>DateTime</em></a></li>
+<li><a href="#_gm_curve">5.5.2.4.6. <em>GM_Curve</em></a></li>
+<li><a href="#_gm_multisurface">5.5.2.4.7. <em>GM_MultiSurface</em></a></li>
+<li><a href="#_gm_primitive">5.5.2.4.8. <em>GM_Primitive</em></a></li>
+<li><a href="#_gm_surface">5.5.2.4.9. <em>GM_Surface</em></a></li>
+<li><a href="#_hydroobject_3">5.5.2.4.10. <em>HydroObject</em></a></li>
+<li><a href="#_identifier">5.5.2.4.11. <em>Identifier</em></a></li>
+<li><a href="#_length_2">5.5.2.4.12. <em>Length</em></a></li>
+<li><a href="#_localisedcharacterstring">5.5.2.4.13. <em>LocalisedCharacterString</em></a></li>
+<li><a href="#_md_resolution">5.5.2.4.14. <em>MD_Resolution</em></a></li>
+<li><a href="#_verticalpositionvalue">5.5.2.4.15. <em>VerticalPositionValue</em></a></li>
 </ul>
 </li>
 </ul>
@@ -1217,8 +1209,6 @@ Unit H06: Digital Earth and Reference Data<br>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="_scope">1. Scope</h2>
 <div class="sectionbody">
@@ -1542,8 +1532,8 @@ Users can extend the schema and add their own spatial objects to support an appl
 <h3 id="_symbols_and_abbreviations">2.5. Symbols and abbreviations</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 14%;">
+<col style="width: 86%;">
 </colgroup>
 <tbody>
 <tr>
@@ -1823,19 +1813,16 @@ Recommendations are shown using this style.</p>
 <td class="content">
 <div class="paragraph text-center">
 <p><strong>IR Requirement</strong><br>
-Article 4<br>
+<em>Article 4</em><br>
 <strong>Types for the Exchange and Classification of Spatial Objects</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.</p>
+<p>For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.</p>
 </li>
 <li>
-<p>Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.</p>
-</li>
-<li>
-<p>The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.</p>
+<p>When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.</p>
 </li>
 </ol>
 </div>
@@ -1942,14 +1929,14 @@ Article 4<br>
 <td class="content">
 <div class="paragraph text-center">
 <p><strong>IR Requirement</strong><br>
-Article 5<br>
+<em>Article 5</em><br>
 <strong>Types</strong></p>
 </div>
 <div class="paragraph">
 <p>(&#8230;&#8203;)</p>
 </div>
 <div class="olist arabic">
-<ol class="arabic">
+<ol class="arabic" start="5">
 <li>
 <p>Types that are a sub-type of another type shall also include all this type&#8217;s attributes and association roles.</p>
 </li>
@@ -1980,7 +1967,7 @@ Article 5<br>
 <div class="paragraph">
 <p>In the application schemas in this section several stereotypes are used that have been defined as part of a UML profile for use in INSPIRE [DS-D2.5]. These are explained in Table 1 below.</p>
 </div>
-<div class="paragraph">
+<div class="paragraph text-center">
 <p><strong>Table 1 – Stereotypes (adapted from [DS-D2.5])</strong></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -2024,11 +2011,6 @@ Article 5<br>
 <td class="tableblock halign-left valign-top"><p class="tableblock">union</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A structured data type without identity where exactly one of the properties of the type is present in any instance.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">enumeration</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An enumeration.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">codeList</p></td>
@@ -2124,50 +2106,12 @@ Article 5<br>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enumerations">5.2.3. Enumerations</h4>
-<div class="paragraph">
-<p>Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>No initial value, but only the attribute name part, is used.</p>
-</li>
-<li>
-<p>The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">📕</div>
-</td>
-<td class="content">
-<div class="paragraph text-center">
-<p><strong>IR Requirement</strong><br>
-Article 6<br>
-<strong>Code Lists and Enumerations</strong></p>
-</div>
-<div class="paragraph">
-<p>(&#8230;&#8203;)</p>
-</div>
-<div class="paragraph">
-<p>5) Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_code_lists">5.2.4. Code lists</h4>
+<h4 id="_code_lists">5.2.3. Code lists</h4>
 <div class="paragraph">
 <p>Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.</p>
 </div>
 <div class="sect4">
-<h5 id="_code_list_types">5.2.4.1. Code list types</h5>
+<h5 id="_code_list_types">5.2.3.1. Code list types</h5>
 <div class="paragraph">
 <p>The IRs distinguish the following types of code lists.</p>
 </div>
@@ -2180,38 +2124,46 @@ Article 6<br>
 <td class="content">
 <div class="paragraph text-center">
 <p><strong>IR Requirement</strong><br>
-Article 6<br>
-<strong>Code Lists and Enumerations</strong></p>
+<em>Article 6</em><br>
+<strong>Code Lists for Spatial Data Sets</strong></p>
 </div>
 <div class="olist arabic">
-<ol class="arabic" start="1">
+<ol class="arabic">
 <li>
-<p>Code lists shall be of one of the following types, as specified in the Annexes:</p>
+<p>The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.</p>
+</li>
+<li>
+<p>The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.</p>
+</li>
+<li>
+<p>The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.</p>
+</li>
+<li>
+<p>Code lists shall be one of the following types:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>code lists whose allowed values comprise only the values specified in this Regulation;</p>
+<p>code lists whose values comprise only the values specified in the INSPIRE code list register;</p>
 </li>
 <li>
-<p>code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;</p>
+<p>code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;</p>
 </li>
 <li>
-<p>code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
+<p>code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;</p>
+</li>
 <li>
-<p>code lists, whose allowed values comprise any values defined by data providers.</p>
+<p>code lists, whose values comprise any values defined by data providers.</p>
 </li>
 </ol>
 </div>
 </li>
-</ol>
-</div>
+<li>
+<p>Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.</p>
+</li>
+<li>
+<p>Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.</p>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p>For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.</p>
 </div>
 </td>
 </tr>
@@ -2268,14 +2220,18 @@ Article 6<br>
 <td class="content">
 <div class="paragraph text-center">
 <p><strong>IR Requirement</strong><br>
-Article 6<br>
-<strong>Code Lists and Enumerations</strong></p>
+<em>Article 6</em><br>
+<strong>Code Lists for Spatial Data Sets</strong></p>
 </div>
 <div class="paragraph">
 <p>(&#8230;&#8203;)</p>
 </div>
-<div class="paragraph">
-<p>2) Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.</p>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.</p>
+</li>
+</ol>
 </div>
 </td>
 </tr>
@@ -2286,7 +2242,7 @@ Article 6<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_obligations_on_data_providers">5.2.4.2. Obligations on data providers</h5>
+<h5 id="_obligations_on_data_providers">5.2.3.2. Obligations on data providers</h5>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -2296,34 +2252,35 @@ Article 6<br>
 <td class="content">
 <div class="paragraph text-center">
 <p><strong>IR Requirement</strong><br>
-Article 6<br>
-<strong>Code Lists and Enumerations</strong></p>
+<em>Article 6</em><br>
+<strong>Code Lists for Spatial Data Sets</strong></p>
 </div>
 <div class="paragraph">
 <p>(&#8230;&#8203;.)</p>
 </div>
-<div class="paragraph">
-<p>3) Where, for an attribute whose type is a code list as referred to in points (b), (c) or (d) of paragraph 1, a data provider provides a value that is not specified in this Regulation, that value and its definition shall be made available in a register.</p>
-</div>
-<div class="paragraph">
-<p>4) Attributes or association roles of spatial object types or data types whose type is a code list may only take values that are allowed according to the specification of the code list.</p>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.</p>
+</li>
+</ol>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Article 6(4) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.</p>
+<p>Article 6(6) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.</p>
 </div>
 <div class="paragraph">
-<p>For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(3) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).</p>
+<p>For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(6) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).</p>
 </div>
 <div class="paragraph">
 <p>NOTE Guidelines for setting up registers for additional values and how to register additional values in these registers is still an open discussion point between Member States and the Commission.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_recommended_code_list_values">5.2.4.3. Recommended code list values</h5>
+<h5 id="_recommended_code_list_values">5.2.3.3. Recommended code list values</h5>
 <div class="paragraph">
 <p>For code lists of type (b), (c) and (d), this data specification may propose additional values as a recommendation (in a dedicated Annex). These values will be included in the INSPIRE code list register. This will facilitate and encourage the usage of the recommended values by data providers since the obligation to make additional values defined by data providers available in a register (see section 5.2.4.2) is already met.</p>
 </div>
@@ -2349,7 +2306,7 @@ Article 6<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_governance">5.2.4.4. Governance</h5>
+<h5 id="_governance">5.2.3.4. Governance</h5>
 <div class="paragraph">
 <p>The following two types of code lists are distinguished in INSPIRE:</p>
 </div>
@@ -2357,14 +2314,10 @@ Article 6<br>
 <ul>
 <li>
 <p><em>Code lists that are governed by INSPIRE (INSPIRE-governed code lists).</em> These code lists will be managed centrally in the INSPIRE code list register. Change requests to these code lists (e.g. to add, deprecate or supersede values) are processed and decided upon using the INSPIRE code list register&#8217;s maintenance workflows.</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
 <p>INSPIRE-governed code lists will be made available in the INSPIRE code list register at <em><a href="http://inspire.ec.europa.eu/codelist/&lt;CodeListName" class="bare">http://inspire.ec.europa.eu/codelist/&lt;CodeListName</a></em>&gt;. They will be available in SKOS/RDF, XML and HTML. The maintenance will follow the procedures defined in ISO 19135. This means that the only allowed changes to a code list are the addition, deprecation or supersession of values, i.e. no value will ever be deleted, but only receive different statuses (valid, deprecated, superseded). Identifiers for values of INSPIRE-governed code lists are constructed using the pattern <em><a href="http://inspire.ec.europa.eu/codelist/&lt;CodeListName" class="bare">http://inspire.ec.europa.eu/codelist/&lt;CodeListName</a></em>&gt;/&lt;value&gt;.</p>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p><em>Code lists that are governed by an organisation outside of INSPIRE (externally governed code lists).</em> These code lists are managed by an organisation outside of INSPIRE, e.g. the World Meteorological Organization (WMO) or the World Health Organization (WHO). Change requests to these code lists follow the maintenance workflows defined by the maintaining organisations. Note that in some cases, no such workflows may be formally defined.</p>
 <div class="paragraph">
@@ -2389,11 +2342,11 @@ Article 6<br>
 </li>
 </ul>
 </div>
-</li>
-</ul>
-</div>
 <div class="paragraph">
 <p>Code list values are encoded using http URIs and labels. Rules for generating these URIs and labels are specified in a separate table.</p>
+</div>
+</li>
+</ul>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2417,7 +2370,7 @@ Article 6<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vocabulary">5.2.4.5. Vocabulary</h5>
+<h5 id="_vocabulary">5.2.3.5. Vocabulary</h5>
 <div class="paragraph">
 <p>For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern <em><a href="http://inspire.ec.europa.eu/codelist/&lt;UpperCamelCaseName&gt" class="bare">http://inspire.ec.europa.eu/codelist/&lt;UpperCamelCaseName&gt</a>;</em>.</p>
 </div>
@@ -2430,7 +2383,7 @@ Article 6<br>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_identifier_management">5.2.5. Identifier management</h4>
+<h4 id="_identifier_management">5.2.4. Identifier management</h4>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -2468,7 +2421,7 @@ Article 6<br>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_geometry_representation">5.2.6. Geometry representation</h4>
+<h4 id="_geometry_representation">5.2.5. Geometry representation</h4>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -2500,7 +2453,7 @@ Article 6<br>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_temporality_representation">5.2.7. Temporality representation</h4>
+<h4 id="_temporality_representation">5.2.6. Temporality representation</h4>
 <div class="paragraph">
 <p>The application schema(s) use(s) the derived attributes "beginLifespanVersion" and "endLifespanVersion" to record the lifespan of a spatial object.</p>
 </div>
@@ -2560,7 +2513,7 @@ Article 6<br>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_validity_of_the_real_world_phenomena">5.2.7.1. Validity of the real-world phenomena</h5>
+<h5 id="_validity_of_the_real_world_phenomena">5.2.6.1. Validity of the real-world phenomena</h5>
 <div class="paragraph">
 <p>The application schema(s) use(s) the attributes "validFrom" and "validTo" to record the validity of the real-world phenomenon represented by a spatial object.</p>
 </div>
@@ -2602,7 +2555,7 @@ Article 6<br>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_reporting">5.2.8. Requirements for reporting</h4>
+<h4 id="_requirements_for_reporting">5.2.7. Requirements for reporting</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -3371,7 +3324,7 @@ EXAMPLE A lock in a mapping view may share the same identifier as a hydro node i
 <div class="sect4">
 <h5 id="_imported_types_informative">5.3.2.3. Imported types (informative)</h5>
 <div class="paragraph">
-<p>This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
+<p>This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
 </div>
 <div class="sect5">
 <h6 id="_characterstring">5.3.2.3.1. <em>CharacterString</em></h6>
@@ -3536,7 +3489,7 @@ EXAMPLE A lock in a mapping view may share the same identifier as a hydro node i
 </div>
 </div>
 <div class="paragraph text-center">
-<p><strong>Figure 8 – UML class diagram: 'Hydro – Network' enumerations and code lists</strong></p>
+<p><strong>Figure 8 – UML class diagram: 'Hydro – Network' code lists</strong></p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -4061,7 +4014,7 @@ EXAMPLE Fictitious examples:<br>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in <em>Annex C</em> .</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -4073,7 +4026,7 @@ EXAMPLE Fictitious examples:<br>
 <div class="sect4">
 <h5 id="_imported_types_informative_2">5.4.2.3. Imported types (informative)</h5>
 <div class="paragraph">
-<p>This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
+<p>This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
 </div>
 <div class="sect5">
 <h6 id="_gradeseparatedcrossing">5.4.2.3.1. <em>GradeSeparatedCrossing</em></h6>
@@ -4501,7 +4454,7 @@ NOTE 2 In the normal case this is when elements intersect in the x/y-plane when 
 </div>
 </div>
 <div class="paragraph text-center">
-<p><strong>Figure 17 – UML class diagram: 'Physical Waters' enumerations and code lists</strong></p>
+<p><strong>Figure 17 – UML class diagram: 'Physical Waters' code lists</strong></p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -5003,7 +4956,7 @@ NOTE 3 Synonyms for drainage basin include: catchment; catchment area; drainage 
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Object</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
@@ -5154,14 +5107,31 @@ NOTE A polder is a drainage basin of man-made origin.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OCL:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">inv: self.containsBasin&#8594;forall(c</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inv: self.containsBasin&#8594;forall(c | not c.oclIsTypeOf(RiverBasin))</p></td>
 </tr>
 </tbody>
 </table></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">not c.oclIsTypeOf(RiverBasin))<br>
-!===</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>Constraint: geometryType</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Natural language:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The geometry attribute has to be of type GM_Surface or GM_MultiSurface.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OCL:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inv: geometry.oclIsKindOf(GM_Surface) or geometry.oclIsKindOf(GM_MultiSurface)</p></td>
+</tr>
+</tbody>
+</table></div></td>
 </tr>
 </tbody>
 </table>
@@ -7703,9 +7673,185 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </div>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_2">5.5.2.3. Enumerations</h5>
+<h5 id="_code_lists_3">5.5.2.3. Code lists</h5>
 <div class="sect5">
-<h6 id="_originvalue">5.5.2.3.1. <em>OriginValue</em></h6>
+<h6 id="_crossingtypevalue">5.5.2.3.1. <em>CrossingTypeValue</em></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>CrossingTypeValue</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Man-made physical watercourse crossing types.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/CrossingTypeValue" class="bare">http://inspire.ec.europa.eu/codelist/CrossingTypeValue</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_hydrologicalpersistencevalue">5.5.2.3.2. <em>HydrologicalPersistenceValue</em></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>HydrologicalPersistenceValue</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Categories of hydrological persistence of a body of water.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE [Codelist values based on DFDD].</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/HydrologicalPersistenceValue" class="bare">http://inspire.ec.europa.eu/codelist/HydrologicalPersistenceValue</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_shoretypevalue">5.5.2.3.3. <em>ShoreTypeValue</em></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>ShoreTypeValue</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Categories of shore area composition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE [Codelist items based on DFDD].</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/ShoreTypeValue" class="bare">http://inspire.ec.europa.eu/codelist/ShoreTypeValue</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_waterlevelvalue">5.5.2.3.4. <em>WaterLevelValue</em></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>WaterLevelValue</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The tidal datum / waterlevel to which depths and heights are referenced.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE [Codelist values based on DFDD].</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/WaterLevelValue" class="bare">http://inspire.ec.europa.eu/codelist/WaterLevelValue</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_originvalue">5.5.2.3.5. <em>OriginValue</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -7725,7 +7871,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An enumeration type specifying a set of hydrographic 'origin' categories (natural, man-made) for various hydrographic objects.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A code list type specifying a set of hydrographic 'origin' categories (natural, man-made) for various hydrographic objects.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI:</p></td>
@@ -7779,191 +7925,12 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_3">5.5.2.4. Code lists</h5>
-<div class="sect5">
-<h6 id="_crossingtypevalue">5.5.2.4.1. <em>CrossingTypeValue</em></h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>CrossingTypeValue</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Man-made physical watercourse crossing types.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/CrossingTypeValue" class="bare">http://inspire.ec.europa.eu/codelist/CrossingTypeValue</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in <em>Annex C</em> .</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="_hydrologicalpersistencevalue">5.5.2.4.2. <em>HydrologicalPersistenceValue</em></h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>HydrologicalPersistenceValue</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Categories of hydrological persistence of a body of water.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE [Codelist values based on DFDD].</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/HydrologicalPersistenceValue" class="bare">http://inspire.ec.europa.eu/codelist/HydrologicalPersistenceValue</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in <em>Annex C</em> .</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="_shoretypevalue">5.5.2.4.3. <em>ShoreTypeValue</em></h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>ShoreTypeValue</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Categories of shore area composition.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE [Codelist items based on DFDD].</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/ShoreTypeValue" class="bare">http://inspire.ec.europa.eu/codelist/ShoreTypeValue</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in <em>Annex C</em> .</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="_waterlevelvalue">5.5.2.4.4. <em>WaterLevelValue</em></h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>WaterLevelValue</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The tidal datum / waterlevel to which depths and heights are referenced.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE [Codelist values based on DFDD].</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/WaterLevelValue" class="bare">http://inspire.ec.europa.eu/codelist/WaterLevelValue</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in <em>Annex C</em> .</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_imported_types_informative_3">5.5.2.5. Imported types (informative)</h5>
+<h5 id="_imported_types_informative_3">5.5.2.4. Imported types (informative)</h5>
 <div class="paragraph">
-<p>This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
+<p>This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
 </div>
 <div class="sect5">
-<h6 id="_area">5.5.2.5.1. <em>Area</em></h6>
+<h6 id="_area">5.5.2.4.1. <em>Area</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -7996,7 +7963,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </table>
 </div>
 <div class="sect5">
-<h6 id="_boolean">5.5.2.5.2. <em>Boolean</em></h6>
+<h6 id="_boolean">5.5.2.4.2. <em>Boolean</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8029,7 +7996,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </table>
 </div>
 <div class="sect5">
-<h6 id="_characterstring_2">5.5.2.5.3. <em>CharacterString</em></h6>
+<h6 id="_characterstring_2">5.5.2.4.3. <em>CharacterString</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8062,7 +8029,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </table>
 </div>
 <div class="sect5">
-<h6 id="_conditionoffacilityvalue">5.5.2.5.4. <em>ConditionOfFacilityValue</em></h6>
+<h6 id="_conditionoffacilityvalue">5.5.2.4.4. <em>ConditionOfFacilityValue</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8099,7 +8066,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </table>
 </div>
 <div class="sect5">
-<h6 id="_datetime">5.5.2.5.5. <em>DateTime</em></h6>
+<h6 id="_datetime">5.5.2.4.5. <em>DateTime</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8132,7 +8099,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_curve">5.5.2.5.6. <em>GM_Curve</em></h6>
+<h6 id="_gm_curve">5.5.2.4.6. <em>GM_Curve</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8165,7 +8132,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_multisurface">5.5.2.5.7. <em>GM_MultiSurface</em></h6>
+<h6 id="_gm_multisurface">5.5.2.4.7. <em>GM_MultiSurface</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8198,7 +8165,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_primitive">5.5.2.5.8. <em>GM_Primitive</em></h6>
+<h6 id="_gm_primitive">5.5.2.4.8. <em>GM_Primitive</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8231,7 +8198,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_surface">5.5.2.5.9. <em>GM_Surface</em></h6>
+<h6 id="_gm_surface">5.5.2.4.9. <em>GM_Surface</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8264,7 +8231,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </table>
 </div>
 <div class="sect5">
-<h6 id="_hydroobject_3">5.5.2.5.10. <em>HydroObject</em></h6>
+<h6 id="_hydroobject_3">5.5.2.4.10. <em>HydroObject</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8305,7 +8272,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 </table>
 </div>
 <div class="sect5">
-<h6 id="_identifier">5.5.2.5.11. <em>Identifier</em></h6>
+<h6 id="_identifier">5.5.2.4.11. <em>Identifier</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8350,7 +8317,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="sect5">
-<h6 id="_length_2">5.5.2.5.12. <em>Length</em></h6>
+<h6 id="_length_2">5.5.2.4.12. <em>Length</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8383,7 +8350,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="sect5">
-<h6 id="_localisedcharacterstring">5.5.2.5.13. <em>LocalisedCharacterString</em></h6>
+<h6 id="_localisedcharacterstring">5.5.2.4.13. <em>LocalisedCharacterString</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8416,7 +8383,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="sect5">
-<h6 id="_md_resolution">5.5.2.5.14. <em>MD_Resolution</em></h6>
+<h6 id="_md_resolution">5.5.2.4.14. <em>MD_Resolution</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8449,7 +8416,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="sect5">
-<h6 id="_verticalpositionvalue">5.5.2.5.15. <em>VerticalPositionValue</em></h6>
+<h6 id="_verticalpositionvalue">5.5.2.4.15. <em>VerticalPositionValue</em></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8610,7 +8577,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Other coordinate reference systems may be specified for specific spatial data themes in this Annex.</p>
+<p>Other coordinate reference systems may be specified for specific spatial data themes.</p>
 </li>
 <li>
 <p>For regions outside of continental Europe, Member States may define suitable coordinate reference systems.</p>
@@ -8618,7 +8585,8 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </ol>
 </div>
 <div class="paragraph">
-<p>The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.</p>
+<p>The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.<br>
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.</p>
 </div>
 </td>
 </tr>
@@ -8676,7 +8644,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="paragraph">
-<p>These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (<em><a href="http://www.epsg-registry.org/" class="bare">http://www.epsg-registry.org/</a></em>).</p>
+<p>These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (<em><a href="http://www.epsg-registry.org/" class="bare">http://www.epsg-registry.org/</a></em>).</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -8689,7 +8657,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 <p><strong>TG Requirement 2</strong></p>
 </div>
 <div class="paragraph">
-<p>The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.</p>
+<p>The identifiers listed in the INSPIRE coordinate reference systems register (<a href="https://inspire.ec.europa.eu/crs" class="bare">https://inspire.ec.europa.eu/crs</a>) shall be used for referring to the coordinate reference systems used in a data set.</p>
 </div>
 </td>
 </tr>
@@ -8711,130 +8679,6 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>Table 2. http URIs for the default coordinate reference systems</strong></p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Coordinate reference system</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Short name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>http URI identifier</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3D Cartesian in ETRS89</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-XYZ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/4936" class="bare">http://www.opengis.net/def/crs/EPSG/0/4936</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3D geodetic in ETRS89 on GRS80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-GRS80h</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/4937" class="bare">http://www.opengis.net/def/crs/EPSG/0/4937</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D geodetic in ETRS89 on GRS80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-GRS80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/4258" class="bare">http://www.opengis.net/def/crs/EPSG/0/4258</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D LAEA projection in ETRS89 on GRS80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-LAEA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3035" class="bare">http://www.opengis.net/def/crs/EPSG/0/3035</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D LCC projection in ETRS89 on GRS80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-LCC</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3034" class="bare">http://www.opengis.net/def/crs/EPSG/0/3034</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM26N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3038" class="bare">http://www.opengis.net/def/crs/EPSG/0/3038</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM27N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3039" class="bare">http://www.opengis.net/def/crs/EPSG/0/3039</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM28N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3040" class="bare">http://www.opengis.net/def/crs/EPSG/0/3040</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM29N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3041" class="bare">http://www.opengis.net/def/crs/EPSG/0/3041</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM30N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3042" class="bare">http://www.opengis.net/def/crs/EPSG/0/3042</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM31N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3043" class="bare">http://www.opengis.net/def/crs/EPSG/0/3043</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM32N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3044" class="bare">http://www.opengis.net/def/crs/EPSG/0/3044</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM33N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3045" class="bare">http://www.opengis.net/def/crs/EPSG/0/3045</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM34N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3046" class="bare">http://www.opengis.net/def/crs/EPSG/0/3046</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM35N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3047" class="bare">http://www.opengis.net/def/crs/EPSG/0/3047</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM36N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3048" class="bare">http://www.opengis.net/def/crs/EPSG/0/3048</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM37N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3049" class="bare">http://www.opengis.net/def/crs/EPSG/0/3049</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM38N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3050" class="bare">http://www.opengis.net/def/crs/EPSG/0/3050</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM39N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3051" class="bare">http://www.opengis.net/def/crs/EPSG/0/3051</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Height in EVRS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EVRS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/5730" class="bare">http://www.opengis.net/def/crs/EPSG/0/5730</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-GRS80-EVRS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/7409" class="bare">http://www.opengis.net/def/crs/EPSG/0/7409</a></em></p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div class="sect3">
@@ -11420,10 +11264,10 @@ Article 13<br>
 </div>
 <div class="sect3">
 <h4 id="_coordinate_reference_system">8.2.1. Coordinate Reference System</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -11511,10 +11355,10 @@ codeSpace: INSPIRE RS registry</p>
 </div>
 <div class="sect3">
 <h4 id="_temporal_reference_system_2">8.2.2. Temporal Reference System</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -11602,10 +11446,10 @@ codeSpace: INSPIRE RS registry</p>
 </div>
 <div class="sect3">
 <h4 id="_encoding">8.2.3. Encoding</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -11681,10 +11525,10 @@ specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelin
 </div>
 <div class="sect3">
 <h4 id="_character_encoding">8.2.4. Character Encoding</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -11748,10 +11592,10 @@ specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelin
 </div>
 <div class="sect3">
 <h4 id="_spatial_representation_type">8.2.5. Spatial representation type</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -11945,10 +11789,10 @@ specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelin
 </div>
 <div class="sect3">
 <h4 id="_maintenance_information">8.3.1. Maintenance Information</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12113,10 +11957,10 @@ At least the following elements should be used (the multiplicity according to IS
 </div>
 <div class="sect4">
 <h5 id="_guidelines_for_reporting_quantitative_results_of_the_data_quality_evaluation">8.3.2.1. Guidelines for reporting quantitative results of the data quality evaluation</h5>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12227,10 +12071,10 @@ At least the following elements should be used (the multiplicity according to IS
 </div>
 <div class="sect4">
 <h5 id="_guidelines_for_reporting_descriptive_results_of_the_data_quality_evaluation">8.3.2.2. Guidelines for reporting descriptive results of the Data Quality evaluation</h5>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12320,10 +12164,10 @@ At least the following elements should be used (the multiplicity according to IS
 </div>
 <div class="sect3">
 <h4 id="_identification_extent">8.3.3. Identification – Extent</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12402,10 +12246,10 @@ description: "Rhine, A5001"</p>
 </div>
 <div class="sect3">
 <h4 id="_distribution_digital_transfer_options">8.3.4. Distribution – Digital Transfer Options</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12584,15 +12428,14 @@ At least the following element should be used (the multiplicity according to ISO
 <em>Article 7</em><br>
 <strong>Encoding</strong></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.</p>
-</li>
-<li>
-<p>Every encoding rule used to encode spatial data shall be made available.</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.</p>
+</div>
+<div class="paragraph">
+<p>2. Every encoding rule used to encode spatial data shall be made available.</p>
+</div>
+<div class="paragraph">
+<p>2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.</p>
 </div>
 </td>
 </tr>
@@ -13871,10 +13714,10 @@ WatercourseLink</p>
 <h3 id="_styles_required_to_be_supported_by_inspire_view_services">11.2. Styles required to be supported by INSPIRE view services</h3>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_hy_physicalwaters_waterbodies">11.2.1. Styles for the layer HY.PhysicalWaters.Waterbodies</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -13990,10 +13833,10 @@ StandingWaters</p>
 </div>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_hy_physicalwaters_landwaterboundary">11.2.2. Styles for the layer HY.PhysicalWaters.LandWaterBoundary</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -14063,10 +13906,10 @@ StandingWaters</p>
 </div>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_hy_physicalwaters_catchments">11.2.3. Styles for the layer HY.PhysicalWaters.Catchments</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -14328,10 +14171,10 @@ StandingWaters</p>
 </div>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_hy_physicalwaters_hydropointofinterest">11.2.5. Styles for the layer HY.PhysicalWaters.HydroPointOfInterest</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -14821,10 +14664,10 @@ StandingWaters</p>
 </div>
 <div class="sect3">
 <h4 id="_hy_physicalwaters_wetland">11.2.7. HY.PhysicalWaters.Wetland</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -14893,10 +14736,10 @@ StandingWaters</p>
 </div>
 <div class="sect3">
 <h4 id="_hy_physicalwaters_shore">11.2.8. HY.PhysicalWaters.Shore</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -15456,10 +15299,10 @@ StandingWaters</p>
 </div>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_hy_physicalwaters_landwaterboundary_2">11.3.3. Styles for the layer HY.PhysicalWaters.LandWaterBoundary</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -16033,7 +15876,7 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <p>all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and</p>
 </li>
 <li>
-<p>all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.</p>
+<p>all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.</p>
 </li>
 </ul>
 </div>
@@ -16100,7 +15943,7 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <p>b) <span class="underline">Reference</span>: Art. 3 and Art.4 of Commission Regulation No 1089/2010</p>
 </div>
 <div class="paragraph">
-<p>c) <span class="underline">Test Method</span>: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.</p>
+<p>c) <span class="underline">Test Method</span>: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.</p>
 </div>
 <div class="paragraph">
 <p>NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.</p>
@@ -16118,7 +15961,7 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <p>c) <span class="underline">Test Method</span>: Examine whether the value type of each provided attribute or association role adheres to the corresponding value type specified in the target specification.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from enumeration and code lists, and the coverage domains.</p>
+<p>NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from code lists, and the coverage domains.</p>
 </div>
 <div class="paragraph">
 <p>NOTE 2 Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.</p>
@@ -16127,19 +15970,16 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <div class="sect3">
 <h4 id="_value_test">A.1.3. Value test</h4>
 <div class="paragraph">
-<p>a) <span class="underline">Purpose</span>: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.</p>
+<p>a) <span class="underline">Purpose</span>: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.</p>
 </div>
 <div class="paragraph">
 <p>b) <span class="underline">Reference</span>: Art.4 (3) of Commission Regulation No 1089/2010.</p>
 </div>
 <div class="paragraph">
-<p>c) <span class="underline">Test Method</span>: When an attribute / association role has an enumeration or code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role</p>
+<p>c) <span class="underline">Test Method</span>: When an attribute / association role has a code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role</p>
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>shall not take any other value than defined in the enumeration table when its type is an enumeration.</p>
-</li>
 <li>
 <p>shall take only values explicitly specified in the code list when the code list&#8217;s extensibility is "none".</p>
 </li>
@@ -16871,7 +16711,7 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <p>a) <span class="underline">Purpose</span>: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.</p>
 </div>
 <div class="paragraph">
-<p>c) <span class="underline">Reference</span>: Table 2 in Section 6 of this technical guideline</p>
+<p>c) <span class="underline">Reference</span>: Section 6 of this technical guideline</p>
 </div>
 <div class="paragraph">
 <p>b) <span class="underline">Test Method</span>: Compare the URI of the dataset with the URIs in the table.</p>
@@ -17075,10 +16915,10 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <div class="paragraph text-center">
 <p><strong>Figure 29 – Use case mapping.</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -17106,10 +16946,10 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <div class="paragraph">
 <p>It is neither intended nor a goal of the INSPIRE directive to take over and organize the reporting duties of Member States on EU directives. INSPIRE intends to build an infrastructure that helps to organize and implement reporting structures for decentralized European data structures. Reports are however always given in relation to existing geographical structures; even though the reporting units themselves may differ from these due to specific legislation.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -17629,10 +17469,10 @@ COM/2004/474 – final (Flood risk Management):<br>
 <div class="paragraph">
 <p>Nodes in a network can have different purposes; this is described using the hydroNodeCategory attribute. The table below describes the purpose of the different node categories and to which HydroNodeCategoryType the feature types of HydroPointOfInterest and ManMadeObjects should be mapped into the network.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -18213,150 +18053,13 @@ Utility and Governmental Services</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the table below.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
 </tr>
 </tbody>
 </table></div></td>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>boundary</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boundary</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Node used to connect different networks.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>flowConstriction</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">flow constriction</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A network node unrelated to the network topology per se, but associated with a hydrographic point of interest or facility, or a man-made object, that affects the network flow.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>flowRegulation</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">flow regulation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A network node unrelated to the network topology per se, but associated with a hydrographic point of interest or facility, or a man-made object, that regulates the network flow.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>junction</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">junction</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Node where three or more links connect.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>outlet</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">outlet</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ending node of a series of interconnected links.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>source</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">source</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Starting node of a series of interconnected links.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>_<br>
-_</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_inspire_application_schema_hydro_physical_waters">C.2. INSPIRE Application Schema 'Hydro - Physical Waters'</h3>
@@ -18413,98 +18116,7 @@ _</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the table below.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>aqueduct</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">aqueduct</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A pipe or artificial channel that is designed to transport water from a remote source, usually by gravity, for freshwater supply, agricultural, and/or industrial use.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>bridge</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">bridge</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A structure that connects two locations and provides for the passage of a transportation route over a terrain obstacle.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>culvert</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">culvert</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An enclosed channel for carrying a watercourse under a route.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>siphon</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">siphon</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A pipe used for conveying liquid from one level to a lower level, using the liquid pressure differential to force a column of the liquid up to a higher level before it falls to the outlet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -18544,98 +18156,7 @@ _</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the table below.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>dry</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dry</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Filled and/or flowing infrequently, generally only during and/or immediately after heavy precipitation.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>ephemeral</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ephemeral</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Filled and/or flowing during and immediately after precipitation.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>intermittent</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">intermittent</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Filled and/or flowing for part of the year.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>perennial</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">perennial</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Filled and/or flowing continuously throughout the year.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -18675,182 +18196,7 @@ _</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the table below.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>boulders</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boulders</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Large water- or weather-worn stones.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>clay</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">clay</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A stiff tenacious fine-grained earth consisting mainly of hydrated aluminosilicates, which become more plastic when water is added and can be moulded and dried.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>gravel</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gravel</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Small water-worn or pounded stones.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>mud</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mud</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Soft wet soil, sand, dust, and/or other earthy matter.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>rock</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rock</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Stones of any size.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>sand</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sand</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Granular material consisting of small eroded fragments of (mainly siliceous) rocks, finer than gravel and larger than a coarse silt grain.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>shingle</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">shingle</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Small, loose, rounded water-worn pebbles, especially as accumulated on a seashore.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>stone</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">stone</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pieces of rock or mineral substance (other than metal) of definite form and size, usually artificially shaped, and used for some special purpose.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -18890,791 +18236,7 @@ _</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the table below.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>equinoctialSpringLowWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">equinoctial spring low water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The level of low water springs near the time of an equinox.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>higherHighWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">higher high water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The highest of the high waters (or single high water) of any specified tidal day due to the declination A1 effects of the moon and sun.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>higherHighWaterLargeTide</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">higher high water large tide</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average of the highest high waters, one from each of 19 years of observations.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>highestAstronomicalTide</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">highest astronomical tide</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The highest tidal level, which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>highestHighWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">highest high water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The highest water level observed at a location.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>highWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">high water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The highest level reached at a location by the water surface in one tidal cycle.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>highWaterSprings</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">high water springs</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An arbitrary level, approximating that of mean high water springs.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>indianSpringHighWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">indian spring high water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A tidal surface datum approximating the level of the mean of the higher high water at spring tides.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>indianSpringLowWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">indian spring low water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A tidal surface datum approximating the level of the mean of the lower low water at spring tides.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>localDatum</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">local datum</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An arbitrary datum defined by an authority of a local harbour, from which levels and tidal heights are measured by that authority.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>lowerLowWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">lower low water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The lowest of the low waters (or single low water) of any specified tidal day due to the declination A1 effects of the moon and sun.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>lowerLowWaterLargeTide</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">lower low water large tide</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average of the lowest low waters, one from each of 19 years of observations.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>lowestAstronomicalTide</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">lowest astronomical tide</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The lowest tide level that can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>lowestLowWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">lowest low water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An arbitrary level conforming to the lowest tide observed at a location, or somewhat lower.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>lowestLowWaterSprings</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">lowest low water springs</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An arbitrary level conforming to the lowest water level observed at a location at spring tides during a period shorter than 19 years.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>lowWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">low water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An approximation of mean low water adopted as the reference level for a limited region, irrespective of better determinations later.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>lowWaterDatum</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">low water datum</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An approximation of mean low water that has been adopted as a standard reference for a limited area.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>lowWaterSprings</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">low water springs</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A level approximating that of mean low water springs.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanHigherHighWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean higher high water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of higher high waters at a location over a 19-year period.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanHigherHighWaterSprings</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean higher high water springs</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of higher high water at spring tides at a location.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanHigherLowWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean higher low water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average of the higher low water height of each tidal day observed over a National Tidal Datum Epoch.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanHighWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean high water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of all high waters at a location over a 19-year period.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanHighWaterNeaps</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean high water neaps</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of the high waters of the neap tide.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanHighWaterSprings</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean high water springs</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of the high waters of spring tides.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanLowerHighWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean lower high water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average of the lower high water height of each tidal day observed over a National Tidal Datum Epoch.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanLowerLowWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean lower low water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of the lower low waters at a location over a 19-year period.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanLowerLowWaterSprings</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean lower low water springs</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of lower low water at spring tides at a location.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanLowWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean low water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of all low waters at a location over a 19-year period.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanLowWaterNeaps</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean low water neaps</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of the low waters of the neap tide.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanLowWaterSprings</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean low water springs</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of the low waters of spring tides.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanSeaLevel</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean sea level</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average height of the sea at a tide station measured from a fixed predetermined reference level.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanTideLevel</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean tide level</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The arithmetic mean of mean high water and mean low water.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>meanWaterLevel</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean water level</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The average of all hourly water levels over the available period of record.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>nearlyHighestHighWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nearly highest high water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An arbitrary level approximating the highest water level observed at a location, usually equivalent to the high water springs.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>nearlyLowestLowWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nearly lowest low water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A level approximating the lowest water level observed at a location, usually equivalent to Indian spring low water.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>tropicHigherHighWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tropic higher high water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The highest of the high waters (or single high water) of the tides occurring semimonthly when the effect of the Moon&#8217;s maximum declination is greatest.</p></td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>tropicLowerLowWater</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tropic lower low water</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The lowest of the low waters (or single low water) of the tides occurring semimonthly when the effect of the Moon&#8217;s maximum declination is greatest.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -19699,48 +18261,39 @@ _</p>
 <col style="width: 33.3333%;">
 <col style="width: 33.3334%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">ISO 19115</th>
-<th class="tableblock halign-left valign-top">Number</th>
-<th class="tableblock halign-left valign-top">41</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-center valign-top" rowspan="7"><p class="tableblock">ISO 19115</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">topicCategory</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Main theme(s) of the dataset</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XPath</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">identificationInfo[1]/*/topicCategory</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Data type</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MD_TopicCategory</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Domain</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enumeration (See B.5.27 of ISO 19115)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>lnland waters</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Implementing instructions</p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Implementing instructions</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The topic categories defined in B.2 of the INSPIRE Implementing rules for metadata are derived directly from the topic categories defined in B.5.27 of ISO 19115. INSPIRE Implementing rules for metadata define the INSPIRE data themes to which each topic category is applicable, i.e., Hydrography (I.8) is the INSPIRE theme for which the <strong>lnland waters</strong> topic category is applicable. The value of the ISO 19115/ISO 19119 metadata element is the value appearing in the "name" column of the table in B.5.27 of ISO 19115.</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>

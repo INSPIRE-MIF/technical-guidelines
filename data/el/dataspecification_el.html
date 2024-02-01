@@ -466,7 +466,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Date of publication</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2023-07-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-31</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subject</strong></p></td>
@@ -498,11 +498,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Identifier</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://inspire.ec.europa.eu/id/document/tg/el">D2.8.II.1_v3.2.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://inspire.ec.europa.eu/id/document/tg/el">D2.8.II.1_v3.3.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Changelog</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2" class="bare">https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1" class="bare">https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Language</strong></p></td>
@@ -629,7 +629,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>In the case of the vector model, this data specification allows the use of 2-D or 2.5-D geometries. In the first case the vertical component of the coordinates are given as an attribute of a two dimensional spatial object, while in the second all the points in the elevation data set are expressed using three coordinates, where the elevation value is assigned to the (third) Z coordinate.</p>
 </div>
 <div class="paragraph">
-<p>In line with existing technologies three spatial representation methods have been offered: grid, of mandatory provision, as well as vector and triangulated irregular network (TIN), of optional provision. Each of them is described in a separate package. In addition, generic modelling elements, such as enumerations and generic utilities (data types) are included in the base types application schema.</p>
+<p>In line with existing technologies three spatial representation methods have been offered: grid, of mandatory provision, as well as vector and triangulated irregular network (TIN), of optional provision. Each of them is described in a separate package. In addition, generic modelling elements, such generic utilities (data types) are included in the base types application schema.</p>
 </div>
 <div class="paragraph">
 <p>The <em>Elevation</em> data specification includes the widely used grid representation, which is based on a coverage geometry, indicating elevation values at the points of a rectified grid. For Pan-European and cross-border purposes the data specification recommends the provision of elevation data using a theme-specific common grid based on ETRS89 geodetic coordinates (shared with the <em>Orthoimagery</em> data specifications), while using real time re-projection for display through view services.</p>
@@ -716,13 +716,12 @@ Fax: 39-0332-7866325<br>
 <ul class="sectlevel3">
 <li><a href="#_notation">5.2.1. Notation</a></li>
 <li><a href="#_voidable_characteristics">5.2.2. Voidable characteristics</a></li>
-<li><a href="#_enumerations">5.2.3. Enumerations</a></li>
-<li><a href="#_code_lists">5.2.4. Code lists</a></li>
-<li><a href="#_consistency_between_spatial_data_sets">5.2.5. Consistency between spatial data sets</a></li>
-<li><a href="#_identifier_management">5.2.6. Identifier management</a></li>
-<li><a href="#_geometry_representation">5.2.7. Geometry representation</a></li>
-<li><a href="#_temporality_representation">5.2.8. Temporality representation</a></li>
-<li><a href="#_coverages">5.2.9. Coverages</a></li>
+<li><a href="#_code_lists">5.2.3. Code lists</a></li>
+<li><a href="#_consistency_between_spatial_data_sets">5.2.4. Consistency between spatial data sets</a></li>
+<li><a href="#_identifier_management">5.2.5. Identifier management</a></li>
+<li><a href="#_geometry_representation">5.2.6. Geometry representation</a></li>
+<li><a href="#_temporality_representation">5.2.7. Temporality representation</a></li>
+<li><a href="#_coverages">5.2.8. Coverages</a></li>
 </ul>
 </li>
 <li><a href="#_application_schema_elevation">5.3. Application schema Elevation</a>
@@ -1748,19 +1747,16 @@ The main purpose of a Digital Elevation Model is to provide an elevation propert
 <td class="content">
 <div class="paragraph text-center">
 <p><strong>IR Requirement</strong><br>
-Article 4<br>
+<em>Article 4</em><br>
 <strong>Types for the Exchange and Classification of Spatial Objects</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.</p>
+<p>For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.</p>
 </li>
 <li>
-<p>Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.</p>
-</li>
-<li>
-<p>The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.</p>
+<p>When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.</p>
 </li>
 </ol>
 </div>
@@ -1774,7 +1770,7 @@ Article 4<br>
 <div class="ulist">
 <ul>
 <li>
-<p>The ElevationBaseTypes application schema, which provides basic enumerations for the rest application schemas of <em>Elevation</em> (Section 5.4).</p>
+<p>The ElevationBaseTypes application schema, which provides basic codelists for the rest application schemas of <em>Elevation</em> (Section 5.4).</p>
 </li>
 <li>
 <p>The ElevationGridCoverage application schema, which defines the model for <em>Elevation</em> data in the grid spatial representation type (Section 5.5).</p>
@@ -1945,11 +1941,6 @@ Article 5<br>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A structured data type without identity where exactly one of the properties of the type is present in any instance.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">enumeration</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An enumeration.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">codeList</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code list.</p></td>
@@ -2043,48 +2034,12 @@ Article 5<br>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enumerations">5.2.3. Enumerations</h4>
-<div class="paragraph">
-<p>Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>No initial value, but only the attribute name part, is used.</p>
-</li>
-<li>
-<p>The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">📕</div>
-</td>
-<td class="content">
-<div class="paragraph text-center">
-<p><strong>IR Requirement</strong><br>
-Article 6<br>
-<strong>Code Lists and Enumerations</strong><br>
-(&#8230;&#8203;)</p>
-</div>
-<div class="paragraph">
-<p>5) Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_code_lists">5.2.4. Code lists</h4>
+<h4 id="_code_lists">5.2.3. Code lists</h4>
 <div class="paragraph">
 <p>Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.</p>
 </div>
 <div class="sect4">
-<h5 id="_code_list_types">5.2.4.1. Code list types</h5>
+<h5 id="_code_list_types">5.2.3.1. Code list types</h5>
 <div class="paragraph">
 <p>The IRs distinguish the following types of code lists.</p>
 </div>
@@ -2097,22 +2052,46 @@ Article 6<br>
 <td class="content">
 <div class="paragraph text-center">
 <p><strong>IR Requirement</strong><br>
-Article 6<br>
-<strong>Code Lists and Enumerations</strong></p>
+<em>Article 6</em><br>
+<strong>Code Lists for Spatial Data Sets</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Code lists shall be of one of the following types, as specified in the Annexes:<br>
-a) code lists whose allowed values comprise only the values specified in this Regulation;<br>
-b) code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;<br>
-c) code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;<br>
-d) code lists, whose allowed values comprise any values defined by data providers.</p>
+<p>The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.</p>
+</li>
+<li>
+<p>The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.</p>
+</li>
+<li>
+<p>The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.</p>
+</li>
+<li>
+<p>Code lists shall be one of the following types:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>code lists whose values comprise only the values specified in the INSPIRE code list register;</p>
+</li>
+<li>
+<p>code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;</p>
+</li>
+<li>
+<p>code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;</p>
+</li>
+<li>
+<p>code lists, whose values comprise any values defined by data providers.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.</p>
+</li>
+<li>
+<p>Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.</p>
+</li>
+<li>
+<p>Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.</p>
+</li>
+</ol>
 </div>
 </td>
 </tr>
@@ -2158,7 +2137,7 @@ d) code lists, whose allowed values comprise any values defined by data provider
 <p>NOTE This data specification may specify recommended values for some of the code lists of type (b), (c) and (d) (see section 5.2.4.3). These recommended values are specified in a dedicated Annex.</p>
 </div>
 <div class="paragraph">
-<p>In addition, code lists can be hierarchical, as explained in Article 6(2) of the IRs.</p>
+<p>In addition, code lists can be hierarchical, as explained in Article 6(5) of the IRs.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -2169,12 +2148,18 @@ d) code lists, whose allowed values comprise any values defined by data provider
 <td class="content">
 <div class="paragraph text-center">
 <p><strong>IR Requirement</strong><br>
-Article 6<br>
-<strong>Code Lists and Enumerations</strong><br>
-(&#8230;&#8203;)</p>
+<em>Article 6</em><br>
+<strong>Code Lists for Spatial Data Sets</strong></p>
 </div>
 <div class="paragraph">
-<p>2) Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.</p>
+<p>(&#8230;&#8203;)</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.</p>
+</li>
+</ol>
 </div>
 </td>
 </tr>
@@ -2185,7 +2170,7 @@ Article 6<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_obligations_on_data_providers">5.2.4.2. Obligations on data providers</h5>
+<h5 id="_obligations_on_data_providers">5.2.3.2. Obligations on data providers</h5>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -2195,32 +2180,35 @@ Article 6<br>
 <td class="content">
 <div class="paragraph text-center">
 <p><strong>IR Requirement</strong><br>
-Article 6<br>
-<strong>Code Lists and Enumerations</strong><br>
-(&#8230;&#8203;.)</p>
+<em>Article 6</em><br>
+<strong>Code Lists for Spatial Data Sets</strong></p>
 </div>
 <div class="paragraph">
-<p>3) Where, for an attribute whose type is a code list as referred to in points (b), (c) or (d) of paragraph 1, a data provider provides a value that is not specified in this Regulation, that value and its definition shall be made available in a register.</p>
+<p>(&#8230;&#8203;.)</p>
 </div>
-<div class="paragraph">
-<p>4) Attributes or association roles of spatial object types or data types whose type is a code list may only take values that are allowed according to the specification of the code list.</p>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Where, for an attribute whose type is a code list as referred to in points (b), (c) or (d) of paragraph 1, a data provider provides a value that is not specified in this Regulation, that value and its definition shall be made available in a register.</p>
+</li>
+</ol>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Article 6(4) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.</p>
+<p>Article 6(6) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.</p>
 </div>
 <div class="paragraph">
-<p>For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(3) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).</p>
+<p>For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(6) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).</p>
 </div>
 <div class="paragraph">
 <p>NOTE Guidelines for setting up registers for additional values and how to register additional values in these registers is still an open discussion point between Member States and the Commission.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_recommended_code_list_values">5.2.4.3. Recommended code list values</h5>
+<h5 id="_recommended_code_list_values">5.2.3.3. Recommended code list values</h5>
 <div class="paragraph">
 <p>For code lists of type (b), (c) and (d), this data specification may propose additional values as a recommendation (in a dedicated Annex). These values will be included in the INSPIRE code list register. This will facilitate and encourage the usage of the recommended values by data providers since the obligation to make additional values defined by data providers available in a register (see section 5.2.4.2) is already met.</p>
 </div>
@@ -2246,7 +2234,7 @@ Article 6<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_governance">5.2.4.4. Governance</h5>
+<h5 id="_governance">5.2.3.4. Governance</h5>
 <div class="paragraph">
 <p>The following two types of code lists are distinguished in INSPIRE:</p>
 </div>
@@ -2254,19 +2242,12 @@ Article 6<br>
 <ul>
 <li>
 <p><em>Code lists that are governed by INSPIRE (INSPIRE-governed code lists).</em> These code lists will be managed centrally in the INSPIRE code list register. Change requests to these code lists (e.g. to add, deprecate or supersede values) are processed and decided upon using the INSPIRE code list register&#8217;s maintenance workflows.</p>
-</li>
-</ul>
-</div>
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
 <p>INSPIRE-governed code lists will be made available in the INSPIRE code list register at http<em>://inspire.ec.europa.eu/codelist/&lt;CodeListName</em>&gt;. They will be available in SKOS/RDF, XML and HTML. The maintenance will follow the procedures defined in ISO 19135. This means that the only allowed changes to a code list are the addition, deprecation or supersession of values, i.e. no value will ever be deleted, but only receive different statuses (valid, deprecated, superseded). Identifiers for values of INSPIRE-governed code lists are constructed using the pattern http<em>://inspire.ec.europa.eu/codelist/&lt;CodeListName&gt;</em>/&lt;value&gt;.</p>
 </div>
-</div>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Code <em>lists that are governed by an organisation outside of INSPIRE (externally governed code lists).</em> These code lists are managed by an organisation outside of INSPIRE, e.g. the World Meteorological Organization (WMO) or the World Health Organization (WHO). Change requests to these code lists follow the maintenance workflows defined by the maintaining organisations. Note that in some cases, no such workflows may be formally defined.</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
@@ -2280,11 +2261,6 @@ Article 6<br>
 </li>
 <li>
 <p>The Source column specifies a citation for the authoritative source for the values of the code list. For code lists, whose values are mandated in the IRs, this citation should include the version of the code list used in INSPIRE. The version can be specified using a version number or the publication date. For code list values recommended in these Technical Guidelines, the citation may refer to the "latest available version".</p>
-</li>
-</ul>
-</div>
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
 <p>In some cases, for INSPIRE only a subset of an externally governed code list is relevant. The subset is specified using the <em>Subset</em> column.</p>
 </div>
@@ -2297,13 +2273,14 @@ Article 6<br>
 <div class="ulist">
 <ul>
 <li>
-<p>The <em>http</em> URIs and labels used for encoding code list values should be taken from the INSPIRE code list registry for INSPIRE-governed code lists and generated according to the relevant rules specified for externally governed code lists.<br>
-NOTE Where practicable, the INSPIRE code list register could also provide http URIs and labels for externally governed code lists.</p>
+<p>The <em>http</em> URIs and labels used for encoding code list values should be taken from the INSPIRE code list registry for INSPIRE-governed code lists and generated according to the relevant rules specified for externally governed code lists.</p>
+<div class="paragraph">
+<p>NOTE Where practicable, the INSPIRE code list register could also provide http URIs and labels for externally governed code lists.</p>
+</div>
 </li>
 <li>
 <p>Vocabulary</p>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern <em><a href="http://inspire.ec.europa.eu/codelist/&lt;UpperCamelCaseName&gt" class="bare">http://inspire.ec.europa.eu/codelist/&lt;UpperCamelCaseName&gt</a>;</em>.</p>
 </li>
@@ -2318,12 +2295,13 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 </li>
 </ul>
 </div>
-</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consistency_between_spatial_data_sets">5.2.5. Consistency between spatial data sets</h4>
+<h4 id="_consistency_between_spatial_data_sets">5.2.4. Consistency between spatial data sets</h4>
 <div class="paragraph">
 <p>This section specifies generic consistency rules which are applicable to all <em>Elevation</em> application schemas.</p>
 </div>
@@ -2347,13 +2325,13 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 <p>Several of these topic areas affect the consistency of elevation data itself and the consistency of elevation data when compared to data from other INSPIRE themes. Hence, both cases are described here separately.</p>
 </div>
 <div class="sect4">
-<h5 id="_self_consistency_of_elevation_data">5.2.5.1. Self-consistency of elevation data</h5>
+<h5 id="_self_consistency_of_elevation_data">5.2.4.1. Self-consistency of elevation data</h5>
 <div class="paragraph">
 <p><em>Elevation</em> data in the different spatial representation types described in this specification should maintain integrity and positional consistency, at least when coming from the same data provider. However, given the current context of elevation data across Europe, it is not possible to establish achievable consistency rules rather than those described in Section 10.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consistency_of_elevation_data_with_other_themes">5.2.5.2. Consistency of elevation data with other themes</h5>
+<h5 id="_consistency_of_elevation_data_with_other_themes">5.2.4.2. Consistency of elevation data with other themes</h5>
 <div class="paragraph">
 <p>Elevation data is widely used as input data when performing spatial analyses or displaying data from other themes (e.g. hydrography, transport networks, orthoimagery, cadastral parcels, sea regions, etc.) for a wide variety of applications and purposes.</p>
 </div>
@@ -2366,7 +2344,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 </div>
 </div>
 <div class="sect3">
-<h4 id="_identifier_management">5.2.6. Identifier management</h4>
+<h4 id="_identifier_management">5.2.5. Identifier management</h4>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -2404,7 +2382,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 </div>
 </div>
 <div class="sect3">
-<h4 id="_geometry_representation">5.2.7. Geometry representation</h4>
+<h4 id="_geometry_representation">5.2.6. Geometry representation</h4>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -2439,7 +2417,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 </div>
 </div>
 <div class="sect3">
-<h4 id="_temporality_representation">5.2.8. Temporality representation</h4>
+<h4 id="_temporality_representation">5.2.7. Temporality representation</h4>
 <div class="paragraph">
 <p>The application schema(s) use(s) the derived attributes "beginLifespanVersion" and "endLifespanVersion" to record the lifespan of a spatial object.</p>
 </div>
@@ -2522,7 +2500,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 </div>
 </div>
 <div class="sect3">
-<h4 id="_coverages">5.2.9. Coverages</h4>
+<h4 id="_coverages">5.2.8. Coverages</h4>
 <div class="paragraph">
 <p>Coverage functions are used to describe characteristics of real-world phenomena that vary over space and/or time. Typical examples are temperature, elevation, precipitation, imagery. A coverage contains a set of such values, each associated with one of the elements in a spatial, temporal or spatio-temporal domain. Typical spatial domains are point sets (e.g. sensor locations), curve sets (e.g. isolines), grids (e.g. orthoimages, elevation models), etc.</p>
 </div>
@@ -2738,7 +2716,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 </ul>
 </div>
 <div class="paragraph">
-<p>The model incorporated in this specification devotes one application schema for each of these spatial representation types, and an additional one where common enumerations and data types are defined.</p>
+<p>The model incorporated in this specification devotes one application schema for each of these spatial representation types, and an additional one where common data types are defined.</p>
 </div>
 </div>
 <div class="sect5">
@@ -2845,7 +2823,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 <li>
 <p><em>ElevationBaseTypes</em></p>
 <div class="paragraph">
-<p>This application schema defines basic enumerations and data types which are re-used in the rest of application schemas.</p>
+<p>This application schema defines basic data types which are re-used in the rest of application schemas.</p>
 </div>
 </li>
 <li>
@@ -2881,7 +2859,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 <p>Each TIN structure is defined according the type GM_Tin type defined in ISO 19107. It consists on a collection of vector spatial objects, such as control points (points having known elevation property values), break lines and stop lines. In addition, this collection stores the necessary parameters which allow the calculation of a triangulation (triangulated surface) in a subsequent process (e.g. a Delaunay triangulation).</p>
 </div>
 <div class="paragraph">
-<p><em>ElevationGridCoverage</em>, <em>ElevationVectorElements</em> and <em>ElevationTIN</em> application schemas have dependency relationships to the <em>ElevationBaseTypes</em> application schema, since they use generic enumerations defined in it.</p>
+<p><em>ElevationGridCoverage</em>, <em>ElevationVectorElements</em> and <em>ElevationTIN</em> application schemas have dependency relationships to the <em>ElevationBaseTypes</em> application schema, since they use generic codelists defined in it.</p>
 </div>
 </li>
 </ul>
@@ -2920,37 +2898,27 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 <p><strong>Figure 13 – UML class diagram: Overview of the <em>ElevationBaseTypes</em> application schema</strong></p>
 </div>
 <div class="paragraph">
-<p>The <em>ElevationBaseTypes</em> application schema provides the basic framework for the <em>Elevation</em> theme. Regardless of the spatial representation type used for the elevation data, it defines enumerations which are common to the other <em>Elevation</em> application schemas: <em>ElevationGridCoverage</em>, <em>ElevationVectorElements</em> and <em>ElevationTIN</em>.</p>
+<p>The <em>ElevationBaseTypes</em> application schema provides the basic framework for the <em>Elevation</em> theme. Regardless of the spatial representation type used for the elevation data, it defines codelist which are common to the other <em>Elevation</em> application schemas: <em>ElevationGridCoverage</em>, <em>ElevationVectorElements</em> and <em>ElevationTIN</em>.</p>
 </div>
 <div class="sect5">
-<h6 id="_elevationpropertytypevalue_enumeration">5.4.1.1.1. ElevationPropertyTypeValue enumeration</h6>
+<h6 id="_elevationpropertytypevalue_codelist">5.4.1.1.1. ElevationPropertyTypeValue codelist</h6>
 <div class="paragraph">
 <p>As stated in this specification, an elevation property is a vertically-constrained dimensional property of a spatial object consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (e.g. a geoid, a specific water level, etc.).</p>
 </div>
 <div class="paragraph">
-<p>This enumeration establishes the possible types of elevation properties with regard to the orientation of the measurement with respect to the Earth&#8217;s gravity field direction:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>height (measured in a direction opposite to Earth&#8217;s gravity field - upwards direction), and;</p>
-</li>
-<li>
-<p>depth (measured in the same direction of Earth&#8217;s gravity field - downwards direction).</p>
-</li>
-</ul>
+<p>This codelist establishes the possible types of elevation properties with regard to the orientation of the measurement with respect to the Earth&#8217;s gravity field direction.</p>
 </div>
 <div class="paragraph">
-<p>This enumeration is defined in Section 5.4.2.1.1.</p>
+<p>This codelist is defined in Section 5.4.2.1.1.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_surfacetypevalue_enumeration">5.4.1.1.2. SurfaceTypeValue enumeration</h6>
+<h6 id="_surfacetypevalue_codelist">5.4.1.1.2. SurfaceTypeValue codelist</h6>
 <div class="paragraph">
-<p>This enumeration establishes the different types of DEMs taking into account the relative adherence of the surface modelled to the Earth&#8217;s bare surface. The possible values are DTM and DSM.</p>
+<p>This codelist establishes the different types of DEMs taking into account the relative adherence of the surface modelled to the Earth&#8217;s bare surface.</p>
 </div>
 <div class="paragraph">
-<p>This enumeration is defined in Section 5.4.2.1.2.</p>
+<p>This codelist is defined in Section 5.4.2.1.2.</p>
 </div>
 </div>
 </div>
@@ -2994,18 +2962,17 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_enumerations_2">5.4.2.1. Enumerations</h5>
+<h5 id="_code_lists_2">5.4.2.1. Code lists</h5>
 <div class="sect5">
 <h6 id="_elevationpropertytypevalue">5.4.2.1.1. ElevationPropertyTypeValue</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>ElevationPropertyTypeValue</strong></th>
-<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top" colspan="2"><strong>ElevationPropertyTypeValue</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -3015,7 +2982,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enumeration type which determines the elevation property which has been measured or calculated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code list type which determines the elevation property which has been measured or calculated.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
@@ -3026,47 +2993,30 @@ NOTE 2 It does not include relative elevations of the element referenced to othe
 EXAMPLE Height, depth.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URI:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/ElevationPropertyType" class="bare">http://inspire.ec.europa.eu/codelist/ElevationPropertyType</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>height</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Elevation property measured along a plumb line in a direction opposite to Earth&#8217;s gravity field (upwards).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NOTE This definition intentionally avoids making reference to complex geodetic terms. It is only intended to specify the direction in which the elevation property has been measured.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>depth</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Elevation property measured along a plumb line in a direction coincident to Earth&#8217;s gravity field (downwards).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NOTE This definition intentionally avoids making reference to complex geodetic terms. It is only intended to specify the direction in which the elevation property has been measured.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
 <h6 id="_surfacetypevalue">5.4.2.1.2. SurfaceTypeValue</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>SurfaceTypeValue</strong></th>
-<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top" colspan="2"><strong>SurfaceTypeValue</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -3076,49 +3026,23 @@ EXAMPLE Height, depth.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enumeration type which determines the elevation surface with regard to its relative adherence to the Earth&#8217;s bare surface.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code list type which determines the elevation surface with regard to its relative adherence to the Earth&#8217;s bare surface.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EXAMPLE DTM and DSM.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URI:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/SurfaceType" class="bare">http://inspire.ec.europa.eu/codelist/SurfaceType</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DTM</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Digital terrain model.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EXAMPLE Buildings, bridges or vegetation do not form part of a DTM.<br>
-<br>
-NOTE 1 For DTM surfaces describing the floor of water bodies (e.g. the sea-floor), the water bodies are not considered as part of the Earth&#8217;s bare surface. Hence, they are excluded from the DTM.<br>
-<br>
-NOTE 2 For DTM surfaces in which any features placed on the Earth&#8217;s bare surface have not been totally filtered and excluded, the deviations must be explained in the metadata.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DSM</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Digital surface model.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EXAMPLE 1 Vegetation, buildings and bridges are examples of static features.<br>
-<br>
-EXAMPLE 2 Cars, trucks and other dynamic features are examples of temporary phenomena.<br>
-<br>
-NOTE 1 For DSM surfaces describing the floor of water bodies (e.g. the sea-floor) and those features placed on it, the water bodies are not considered as part of the Earth&#8217;s bare surface. Hence, they are excluded from the DSM.<br>
-<br>
-NOTE 2 For DSM surfaces in which any temporary phenomena have not been totally filtered and excluded, the deviations must be explained in the metadata.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3802,10 +3726,10 @@ The value domain of spatial properties used in the ElevationGridCoverage package
 <h5 id="_spatial_object_types">5.5.2.1. Spatial object types</h5>
 <div class="sect5">
 <h6 id="_elevationgridcoverage">5.5.2.1.1. ElevationGridCoverage</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -4064,10 +3988,10 @@ NOTE 2 The domain extent shall be specified at least in space by using EX_Boundi
 <h5 id="_data_types">5.5.2.2. Data types</h5>
 <div class="sect5">
 <h6 id="_elevationgridcoverageaggregation">5.5.2.2.1. ElevationGridCoverageAggregation</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -4139,14 +4063,14 @@ NOTE 2 The domain extent shall be specified at least in space by using EX_Boundi
 <div class="sect4">
 <h5 id="_imported_types_informative">5.5.2.3. Imported types (informative)</h5>
 <div class="paragraph">
-<p>This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
+<p>This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
 </div>
 <div class="sect5">
 <h6 id="_datetime">5.5.2.3.1. DateTime</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -4193,10 +4117,10 @@ NOTE 2 The domain extent shall be specified at least in space by using EX_Boundi
 </div>
 <div class="sect5">
 <h6 id="_elevationpropertytypevalue_2">5.5.2.3.3. ElevationPropertyTypeValue</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -4214,7 +4138,7 @@ NOTE 2 The domain extent shall be specified at least in space by using EX_Boundi
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enumeration type which determines the elevation property which has been measured or calculated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code list type which determines the elevation property which has been measured or calculated.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
@@ -4229,10 +4153,10 @@ EXAMPLE Height, depth.</p></td>
 </div>
 <div class="sect5">
 <h6 id="_gm_multisurface">5.5.2.3.4. GM_MultiSurface</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -4253,10 +4177,10 @@ EXAMPLE Height, depth.</p></td>
 </div>
 <div class="sect5">
 <h6 id="_identifier">5.5.2.3.5. Identifier</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -4289,10 +4213,10 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </div>
 <div class="sect5">
 <h6 id="_rectifiedgridcoverage">5.5.2.3.6. RectifiedGridCoverage</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -4323,10 +4247,10 @@ NOTE This type can be used for both discrete and continuous coverages.</p></td>
 </div>
 <div class="sect5">
 <h6 id="_surfacetypevalue_2">5.5.2.3.7. SurfaceTypeValue</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -4344,7 +4268,7 @@ NOTE This type can be used for both discrete and continuous coverages.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enumeration type which determines the elevation surface with regard to its relative adherence to the Earth&#8217;s bare surface.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code list type which determines the elevation surface with regard to its relative adherence to the Earth&#8217;s bare surface.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
@@ -4520,10 +4444,10 @@ NOTE This type can be used for both discrete and continuous coverages.</p></td>
 <div class="paragraph">
 <p><strong>Feature catalogue metadata</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -4611,32 +4535,41 @@ NOTE This type can be used for both discrete and continuous coverages.</p></td>
 <h5 id="_spatial_object_types_2">5.6.2.1. Spatial object types</h5>
 <div class="sect5">
 <h6 id="_breakline">5.6.2.1.1. BreakLine</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>BreakLine</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">breakline</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subtype of:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ElevationVectorObject</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A line of a critical nature which describes the shape of an elevation surface and indicates a discontinuity in the slope of the surface (i.e. an abrupt change in gradient). Triangles included within a TIN model must never cross it.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE Adapted from [ISO 19107:2003].<br>
 <br>
 EXAMPLE<br>
@@ -4652,70 +4585,104 @@ NOTE 4 Breaklines are useful as input data for the generation of a more appropri
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«featureType»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: breakLineType</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">break line type</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BreakLineTypeValue</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of break line with regard the natural or man-made real world characteristic it represents, or the specific function it has in calculating a Digital Elevation Model (DEM).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: geometry</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">geometry</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Represents the geometric properties of the spatial object.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: manMadeBreak</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">man-made break</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Line which represents an elevation break due to an artificial or man-made construction present on the terrain.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«voidable»</p></td>
 </tr>
 </tbody>
@@ -4723,158 +4690,229 @@ NOTE 4 Breaklines are useful as input data for the generation of a more appropri
 </div>
 <div class="sect5">
 <h6 id="_contourline">5.6.2.1.2. ContourLine</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>ContourLine</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contour line</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subtype of:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ElevationVectorObject</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Linear spatial object composed of a set of adjoining locations characterized by having the same elevation property value. It describes, together with other contour lines present in the area, the local morphology of the Earth&#8217;s surface.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE 1 The attribute propertyType is equal to 'height' in the case of contour lines and it is equal to 'depth' in the case of depth contours.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«featureType»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: contourLineType</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contour line type</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ContourLineTypeValue</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of contour line with regard to the normal contour vertical interval (if any).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE This attribute is often applicable to contour lines describing the relief of a land-based area. For depth contours describing the floor of a water body is not always applicable.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«voidable»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: downRight</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">down right</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Property indicating that the contour line spatial object is digitized in a way that the height of the elevation surface is lower at the right side of the line.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE 1 In the case of contour lines, when the downRight attribute is 'true' this indicates that the height of the surface is lower at the right side of the line.<br>
 <br>
 NOTE 2 In the case of depth contours, when the downRight attribute is 'true' this indicates that the depth of the surface is higher at the right side of the line.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«voidable»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: geometry</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">geometry</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Curve</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Represents the geometric properties of the spatial object.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: propertyValue</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">property value</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DirectPosition</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value of the elevation property of the spatial object referred to a specific vertical coordinate reference system.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Constraint: propertyValueDimensionIs1</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Natural language:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The dimension of the property value coordinate shall be 1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OCL:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">inv: propertyValue.dimension=1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Constraint: propertyValueIsReferredToVerticalCRS</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Natural language:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The property value shall be expressed referring to a vertical coordinate reference system</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OCL:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">inv: propertyValue.coordinateReferenceSystem.oclIsKindOf(SC_VerticalCRS)</p></td>
 </tr>
 </tbody>
@@ -4882,130 +4920,187 @@ NOTE 2 In the case of depth contours, when the downRight attribute is 'true' thi
 </div>
 <div class="sect5">
 <h6 id="_elevationvectorobject">5.6.2.1.3. ElevationVectorObject</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>ElevationVectorObject (abstract)</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">elevation vector object</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Elevation spatial object forming part of a vector data set, which participates in the description of the elevation property of a real world surface. It consists of an identity base for all vector objects which can be included as part of an elevation data set.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">It is an abstract feature type which generically describes every possible type of elevation vector object. It includes common attributes, properties and constraints for such spatial objects.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«featureType»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: beginLifespanVersion</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">begin lifespan version</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DateTime</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Date and time at which this version of the spatial object was inserted or changed in the spatial data set.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«voidable,lifeCycleInfo»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: endLifespanVersion</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">end lifespan version</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DateTime</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Date and time at which this version of the spatial object was superseded or retired in the spatial data set.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«voidable,lifeCycleInfo»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: localDepthDatum</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">local depth datum</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ChartDatum</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identification of a local vertical coordinate reference system not included in a registry, which is used to refer depth measurements.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE This data type is applicable only to bathymetric vector objects.<br>
 <br>
 EXAMPLE Local datums for referring depths in lakes and navigable rivers.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: propertyType</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">property type</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ElevationPropertyTypeValue</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Attribute categorizing the elevation vector object as a land-elevation or a bathymetry spatial object. It determines the elevation property represented by the object.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EXAMPLE Height, depth.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 </tbody>
@@ -5013,32 +5108,41 @@ EXAMPLE Local datums for referring depths in lakes and navigable rivers.</p></td
 </div>
 <div class="sect5">
 <h6 id="_isolatedarea">5.6.2.1.4. IsolatedArea</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>IsolatedArea</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">isolated area</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subtype of:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ElevationVectorObject</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Delimitation of an area of the Earth&#8217;s surface where an isolated part of the elevation model exists. Its outside surroundings have no elevation information.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE Adapted from "IslandArea" [GIS4EU D3.5].<br>
 <br>
 NOTE 1 It includes the delimitation of any island of elevation data which are isolated from the main DEM. They may be included inside void areas.<br>
@@ -5047,26 +5151,38 @@ NOTE 2 Isolated areas can be useful as masks when calculating a more appropriate
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«featureType»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: geometry</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">geometry</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Represents the geometric properties of the spatial object.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 </tbody>
@@ -5074,174 +5190,253 @@ NOTE 2 Isolated areas can be useful as masks when calculating a more appropriate
 </div>
 <div class="sect5">
 <h6 id="_spotelevation">5.6.2.1.5. SpotElevation</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>SpotElevation</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">spot elevation</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subtype of:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ElevationVectorObject</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Point spatial object which describes the elevation of an Earth&#8217;s surface at a specific location. It provides a single elevation property value.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE 1 It often represents a singular point in the morphology of a land or water body&#8217;s floor surface.<br>
 <br>
 NOTE 2 The attribute propertyType is equal to 'height' in the case of spot heights. It is equal to 'depth' in the case of spot depths.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«featureType»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: classification</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">classification</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SpotElevationClassValue</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Class of spot elevation according to the LAS specification of the American Society for Photogrammetry and Remote Sensing (ASPRS).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«voidable»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: geographicalName</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">geographical name</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GeographicalName</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A geographical name that is used to identify a named land or water body&#8217;s floor location in the real world, which is represented by the spot elevation spatial object.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«voidable»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: geometry</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">geometry</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Represents the geometric properties of the spatial object.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: propertyValue</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">property value</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DirectPosition</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value of the elevation property of the spatial object referred to a specific vertical coordinate reference system.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: spotElevationType</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">spot elevation type</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SpotElevationTypeValue</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of elevation spot.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«voidable»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Constraint: propertyValueDimensionIs1</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Natural language:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The dimension of the property value coordinate shall be 1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OCL:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">inv: propertyValue.dimension=1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Constraint: propertyValueIsReferredToVerticalCRS</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Natural language:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The property value shall be expressed referring to a vertical coordinate reference system</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OCL:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">inv: propertyValue.coordinateReferenceSystem.oclIsKindOf(SC_VerticalCRS)</p></td>
 </tr>
 </tbody>
@@ -5249,32 +5444,41 @@ NOTE 2 The attribute propertyType is equal to 'height' in the case of spot heigh
 </div>
 <div class="sect5">
 <h6 id="_voidarea">5.6.2.1.6. VoidArea</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>VoidArea</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">void area</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subtype of:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ElevationVectorObject</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Area of the Earth&#8217;s surface where the elevation model is unknown because of missing input data. This area shall be excluded from a DEM.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE "ObscureArea" [GIS4EU D3.5].<br>
 <br>
 NOTE 1 A void area may contain a number of isolated areas with elevation data. These are considered as holes of the container void area.<br>
@@ -5283,26 +5487,38 @@ NOTE 2 Void areas can be useful as masks when calculating a more appropriate or 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«featureType»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: geometry</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">geometry</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Represents the geometric properties of the spatial object.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 </tbody>
@@ -5313,54 +5529,73 @@ NOTE 2 Void areas can be useful as masks when calculating a more appropriate or 
 <h5 id="_data_types_2">5.6.2.2. Data types</h5>
 <div class="sect5">
 <h6 id="_chartdatum">5.6.2.2.1. ChartDatum</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>ChartDatum</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">chart datum</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Local vertical coordinate reference system which is used to refer and portray depth measurements as property values.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE This data type is intended to describe the main characteristics of a vertical CRS for measurement of depths in cases where this information is rarely or not available through a CRS registry (e.g. like EPSG).<br>
 <br>
 EXAMPLE Local datums for referring depths in lakes and navigable rivers.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«dataType»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: datumWaterLevel</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">datum water level</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WaterLevelValue</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Water level determining the origin of depth measurements for the chart datum.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EXAMPLE High water, low water, etc.<br>
 <br>
 NOTE 1 Values in the code list are applicable either for sea or inland waters.<br>
@@ -5369,26 +5604,38 @@ NOTE 2 When defining a depth datum for inland waters, it is recommended the use 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: offset</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">offset</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Measure</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Relative difference between the height of each reference point and the height of the water level determining the chart datum.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE 1 In order to calculate the offset parameter, the height(s) of the reference point(s) and the height of the water level determining the chart datum must be compared in the same vertical CRS.<br>
 <br>
 NOTE 2 When a single reference point is provided, the offset parameter is supposed to be zero (by default). If this condition is true, there is no need to inform the offset parameter.<br>
@@ -5397,26 +5644,38 @@ NOTE 3 When a set of reference points is provided, an individual offset paramete
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: referencePoint</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">reference point</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographical position(s) of: - Case A: a single point which is used to refer depth values within the geographical scope of the chart datum. - Case B: a set of points where water level measurements are performed to determine the water level of the chart datum.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE 1 The altimetric position of each reference point must be its height in a common vertical CRS:<br>
 - in EVRS within its geographical scope (continental Europe).<br>
 - in a vertical CRS identified and documented by the Member State concerned, outside the geographical scope of EVRS (overseas territories).<br>
@@ -5429,26 +5688,38 @@ NOTE 4 The common vertical CRS mentioned in Note 2 and Note 3 shall be the one d
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..*</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: scope</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">scope</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EX_Extent</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographic scope in which the local depth datum is practically used.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE Chart datums should only be used to refer and portray depths at local level, since they are determined by a local water level.<br>
 <br>
 EXAMPLE 1 Lake or part of a lake in which a specific water level is used as depth datum.<br>
@@ -5459,6 +5730,8 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 </tbody>
@@ -5466,9 +5739,159 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 </div>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_3">5.6.2.3. Enumerations</h5>
+<h5 id="_code_lists_3">5.6.2.3. Code lists</h5>
 <div class="sect5">
-<h6 id="_contourlinetypevalue">5.6.2.3.1. ContourLineTypeValue</h6>
+<h6 id="_breaklinetypevalue">5.6.2.3.1. BreakLineTypeValue</h6>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>BreakLineTypeValue</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">breakline type value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of possible type values for break lines based on the physical characteristics of the break line [in the elevation surface].</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">narrower</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/BreakLineTypeValue" class="bare">http://inspire.ec.europa.eu/codelist/BreakLineTypeValue</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise the values specified in INSPIRE Registry and narrower values defined by data providers.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_spotelevationclassvalue">5.6.2.3.2. SpotElevationClassValue</h6>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>SpotElevationClassValue</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">spot elevation classification value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible classification values for spot elevations based on the LAS specification maintained by the American Society for Photogrammetry and Remote Sensing (ASPRS).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NOTE These classes are proposed regardless of the adquisition method of the spot elevation. They correspond to the ASPRS Standard LIDAR Point Classes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">any</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/SpotElevationClassValue" class="bare">http://inspire.ec.europa.eu/codelist/SpotElevationClassValue</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise any values defined by data providers.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_spotelevationtypevalue">5.6.2.3.3. SpotElevationTypeValue</h6>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>SpotElevationTypeValue</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">spot elevation type value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible values for spot elevation points that describe a singularity of the surface.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">narrower</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/SpotElevationTypeValue" class="bare">http://inspire.ec.europa.eu/codelist/SpotElevationTypeValue</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise the values specified in INSPIRE Registry and narrower values defined by data providers.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_contourlinetypevalue">5.6.2.3.4. ContourLineTypeValue</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -5476,8 +5899,7 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>ContourLineTypeValue</strong></th>
-<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top" colspan="2"><strong>ContourLineTypeValue</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -5490,292 +5912,183 @@ EXAMPLE 3 Extent of the sea area in which a specific local tide level is used as
 <td class="tableblock halign-left valign-top"><p class="tableblock">List of possible categories of contour lines based on the equidistance parameter of the data set.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URI:</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/CountourLineTypeValue" class="bare">http://inspire.ec.europa.eu/codelist/CountourLineTypeValue</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>master</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contour at a vertical distance which is multiple to the equidistance parameter (corresponding to a certain multiple of the normal contour vertical interval) associated with the nominal scale.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ordinary</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contour at the equidistance parameter (corresponding to the normal contour vertical interval) associated with the nominal scale, and which is not a master contour.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>auxiliary</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A supplementary contour – not corresponding to the normal contour vertical interval – estimated or interpolated from surrounding contours, used in areas where there is insufficient height information for elevation mapping purposes or to control the creation of a digital elevation model.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NOTE This term is equivalent to the value 'intermediate' used in some Member States.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise only the values specified in the INSPIRE Registry.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_2">5.6.2.4. Code lists</h5>
-<div class="sect5">
-<h6 id="_breaklinetypevalue">5.6.2.4.1. BreakLineTypeValue</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>BreakLineTypeValue</strong></th>
-<th class="tableblock halign-left valign-top"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">breakline type value</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of possible type values for break lines based on the physical characteristics of the break line [in the elevation surface].</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">narrower</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/BreakLineTypeValue" class="bare">http://inspire.ec.europa.eu/codelist/BreakLineTypeValue</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise the values specified in <em>Annex C</em> and narrower values defined by data providers.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="_spotelevationclassvalue">5.6.2.4.2. SpotElevationClassValue</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>SpotElevationClassValue</strong></th>
-<th class="tableblock halign-left valign-top"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spot elevation classification value</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Possible classification values for spot elevations based on the LAS specification maintained by the American Society for Photogrammetry and Remote Sensing (ASPRS).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NOTE These classes are proposed regardless of the adquisition method of the spot elevation. They correspond to the ASPRS Standard LIDAR Point Classes.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">any</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/SpotElevationClassValue" class="bare">http://inspire.ec.europa.eu/codelist/SpotElevationClassValue</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise any values defined by data providers.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="_spotelevationtypevalue">5.6.2.4.3. SpotElevationTypeValue</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>SpotElevationTypeValue</strong></th>
-<th class="tableblock halign-left valign-top"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spot elevation type value</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Possible values for spot elevation points that describe a singularity of the surface.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extensibility:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">narrower</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://inspire.ec.europa.eu/codelist/SpotElevationTypeValue" class="bare">http://inspire.ec.europa.eu/codelist/SpotElevationTypeValue</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise the values specified in <em>Annex C</em> and narrower values defined by data providers.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_imported_types_informative_2">5.6.2.5. Imported types (informative)</h5>
+<h5 id="_imported_types_informative_2">5.6.2.4. Imported types (informative)</h5>
 <div class="paragraph">
-<p>This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
+<p>This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
 </div>
 <div class="sect5">
-<h6 id="_boolean">5.6.2.5.1. Boolean</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_boolean">5.6.2.4.1. Boolean</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>Boolean</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Truth</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographic information&#8201;&#8212;&#8201;Conceptual schema language [ISO/TS 19103:2005]</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_datetime_2">5.6.2.5.2. DateTime</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_datetime_2">5.6.2.4.2. DateTime</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>DateTime</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Date and Time</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographic information&#8201;&#8212;&#8201;Conceptual schema language [ISO/TS 19103:2005]</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_directposition">5.6.2.5.3. DirectPosition</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_directposition">5.6.2.4.3. DirectPosition</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>DirectPosition</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Coordinate geometry</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographic information&#8201;&#8212;&#8201;Spatial schema [ISO 19107:2003]</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_ex_extent_2">5.6.2.5.4. EX_Extent</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_ex_extent_2">5.6.2.4.4. EX_Extent</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>EX_Extent</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Extent information</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographic information&#8201;&#8212;&#8201;Metadata [ISO 19115:2003/Cor 1:2006]</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_elevationpropertytypevalue_3">5.6.2.5.5. ElevationPropertyTypeValue</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_elevationpropertytypevalue_3">5.6.2.4.5. ElevationPropertyTypeValue</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>ElevationPropertyTypeValue</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ElevationBaseTypes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INSPIRE Data specification on Elevation [DS-D2.8.II.1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enumeration type which determines the elevation property which has been measured or calculated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code list type which determines the elevation property which has been measured or calculated.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE 1 An elevation property is a vertically-constrained dimensional property of an element consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (geoid, water level, etc.).<br>
 <br>
 NOTE 2 It does not include relative elevations of the element referenced to other spatial objects.<br>
@@ -5786,166 +6099,204 @@ EXAMPLE Height, depth.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_curve">5.6.2.5.6. GM_Curve</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_gm_curve">5.6.2.4.6. GM_Curve</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>GM_Curve</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geometric primitive</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographic information&#8201;&#8212;&#8201;Spatial schema [ISO 19107:2003]</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_point">5.6.2.5.7. GM_Point</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_gm_point">5.6.2.4.7. GM_Point</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>GM_Point</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geometric primitive</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographic information&#8201;&#8212;&#8201;Spatial schema [ISO 19107:2003]</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_surface">5.6.2.5.8. GM_Surface</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_gm_surface">5.6.2.4.8. GM_Surface</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>GM_Surface</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geometric primitive</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographic information&#8201;&#8212;&#8201;Spatial schema [ISO 19107:2003]</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_geographicalname">5.6.2.5.9. GeographicalName</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_geographicalname">5.6.2.4.9. GeographicalName</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>GeographicalName</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographical Names</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INSPIRE Data specification on Geographical Names [DS-D2.8.I.3]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Proper noun applied to a real world entity.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_measure">5.6.2.5.10. Measure</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_measure">5.6.2.4.10. Measure</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>Measure</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ProductionAndIndustrialFacilitiesExtension</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INSPIRE Data specification on Production and Industrial Facilities [DS-D2.8.III.8]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Declared or measured quantity of any kind of physical entity.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_waterlevelvalue">5.6.2.5.11. WaterLevelValue</h6>
-<table class="tableblock frame-all grid-all stretch">
+<h6 id="_waterlevelvalue">5.6.2.4.11. WaterLevelValue</h6>
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>WaterLevelValue</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hydro - Physical Waters</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INSPIRE Data specification on Hydrography [DS-D2.8.I.8]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The tidal datum / waterlevel to which depths and heights are referenced.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE [Codelist values based on DFDD].</p></td>
 </tr>
 </tbody>
@@ -6313,170 +6664,247 @@ EXAMPLE Height, depth.</p></td>
 <h5 id="_spatial_object_types_3">5.7.2.1. Spatial object types</h5>
 <div class="sect5">
 <h6 id="_elevationtin_2">5.7.2.1.1. ElevationTIN</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>ElevationTIN</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">elevation TIN</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Collection of elevation spatial objects forming a particular tessellation of the space based on a Triangulated Irregular Network (TIN) according the geometry GM_Tin (defined in ISO 19107:2003). Its components are a set of control points whose elevation property values are known, and a set of break lines and stop lines.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE The TIN can be calculated using any triangulation method, which determines the spatial relationships between the spatial objects in the collection.<br>
 <br>
 EXAMPLE An elevation TIN model calculated by means of the Delaunay triangulation method.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«featureType»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: beginLifespanVersion</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">begin lifespan version</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DateTime</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Date and time at which this version of the spatial object was inserted or changed in the spatial data set.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«voidable,lifeCycleInfo»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: endLifespanVersion</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">end lifespan version</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DateTime</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Date and time at which this version of the spatial object was superseded or retired in the spatial data set.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stereotypes:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">«voidable,lifeCycleInfo»</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: geometries</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">geometries</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GM_Tin</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Represents the collection of geometric properties of the elevation TIN spatial object.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: inspireId</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">inspire ID</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">External object identifier of the spatial object.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE An external object identifier is a unique object identifier published by the responsible body, which may be used by external applications to reference the spatial object. The identifier is an identifier of the spatial object, not an identifier of the real-world phenomenon.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: propertyType</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">property type</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ElevationPropertyTypeValue</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Attribute determining the elevation property represented by the elevation TIN.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EXAMPLE Height, depth.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute: surfaceType</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">surface type</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value type:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SurfaceTypeValue</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Attribute indicating the type of elevation surface that the elevation TIN describes in relation to the Earth&#8217;s bare surface.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplicity:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 </tbody>
@@ -6486,28 +6914,33 @@ EXAMPLE An elevation TIN model calculated by means of the Delaunay triangulation
 <div class="sect4">
 <h5 id="_imported_types_informative_3">5.7.2.2. Imported types (informative)</h5>
 <div class="paragraph">
-<p>This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
+<p>This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
 </div>
 <div class="sect5">
 <h6 id="_datetime_3">5.7.2.2.1. DateTime</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>DateTime</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Date and Time</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographic information&#8201;&#8212;&#8201;Conceptual schema language [ISO/TS 19103:2005]</p></td>
 </tr>
 </tbody>
@@ -6515,32 +6948,41 @@ EXAMPLE An elevation TIN model calculated by means of the Delaunay triangulation
 </div>
 <div class="sect5">
 <h6 id="_elevationpropertytypevalue_4">5.7.2.2.2. ElevationPropertyTypeValue</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>ElevationPropertyTypeValue</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ElevationBaseTypes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INSPIRE Data specification on Elevation [DS-D2.8.II.1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enumeration type which determines the elevation property which has been measured or calculated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code list type which determines the elevation property which has been measured or calculated.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE 1 An elevation property is a vertically-constrained dimensional property of an element consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (geoid, water level, etc.).<br>
 <br>
 NOTE 2 It does not include relative elevations of the element referenced to other spatial objects.<br>
@@ -6552,24 +6994,29 @@ EXAMPLE Height, depth.</p></td>
 </div>
 <div class="sect5">
 <h6 id="_gm_tin">5.7.2.2.3. GM_Tin</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>GM_Tin</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Coordinate geometry</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geographic information&#8201;&#8212;&#8201;Spatial schema [ISO 19107:2003]</p></td>
 </tr>
 </tbody>
@@ -6577,32 +7024,41 @@ EXAMPLE Height, depth.</p></td>
 </div>
 <div class="sect5">
 <h6 id="_identifier_2">5.7.2.2.4. Identifier</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>Identifier</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Base Types</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">External unique object identifier published by the responsible body, which may be used by external applications to reference the spatial object.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NOTE1 External object identifiers are distinct from thematic object identifiers.<br>
 <br>
 NOTE 2 The voidable version identifier attribute is not part of the unique identifier of a spatial object and may be used to distinguish two versions of the same spatial object.<br>
@@ -6614,32 +7070,41 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </div>
 <div class="sect5">
 <h6 id="_surfacetypevalue_3">5.7.2.2.5. SurfaceTypeValue</h6>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>SurfaceTypeValue</strong></th>
-<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ElevationBaseTypes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INSPIRE Data specification on Elevation [DS-D2.8.II.1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enumeration type which determines the elevation surface with regard to its relative adherence to the Earth&#8217;s bare surface.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code list type which determines the elevation surface with regard to its relative adherence to the Earth&#8217;s bare surface.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EXAMPLE DTM and DSM.</p></td>
 </tr>
 </tbody>
@@ -6770,7 +7235,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Other coordinate reference systems may be specified for specific spatial data themes in this Annex.</p>
+<p>Other coordinate reference systems may be specified for specific spatial data themes.</p>
 </li>
 <li>
 <p>For regions outside of continental Europe, Member States may define suitable coordinate reference systems.</p>
@@ -6778,7 +7243,8 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </ol>
 </div>
 <div class="paragraph">
-<p>The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.</p>
+<p>The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.<br>
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.</p>
 </div>
 </td>
 </tr>
@@ -6818,7 +7284,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 <td class="content">
 <div class="paragraph text-center">
 <p><strong>IR Requirement</strong><br>
-<em>Annex II, Section 1.4</em><br>
+<em>Annex II, Section 1.5</em><br>
 <strong>Coordinate Reference Systems used in the View Network Service</strong></p>
 </div>
 <div class="olist arabic">
@@ -6836,7 +7302,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="paragraph">
-<p>This Technical Guidance proposes to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (<em><a href="http://www.epsg-registry.org/" class="bare">http://www.epsg-registry.org/</a></em>).</p>
+<p>This Technical Guidance proposes to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (<em><a href="http://www.epsg-registry.org/" class="bare">http://www.epsg-registry.org/</a></em>).</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -6849,7 +7315,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 <p><strong>TG Requirement 3</strong></p>
 </div>
 <div class="paragraph">
-<p>The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.</p>
+<p>The identifiers listed in the INSPIRE coordinate reference systems register (<a href="https://inspire.ec.europa.eu/crs" class="bare">https://inspire.ec.europa.eu/crs</a>) shall be used for referring to the coordinate reference systems used in a data set.</p>
 </div>
 </td>
 </tr>
@@ -6871,145 +7337,6 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>Table 2. http URIs for the default coordinate reference systems</strong></p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Coordinate reference system</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Short name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>http URI identifier</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3D Cartesian in ETRS89</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-XYZ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/4936" class="bare">http://www.opengis.net/def/crs/EPSG/0/4936</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3D geodetic in ETRS89 on GRS80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-GRS80h</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/4937" class="bare">http://www.opengis.net/def/crs/EPSG/0/4937</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D geodetic in ETRS89 on GRS80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-GRS80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/4258" class="bare">http://www.opengis.net/def/crs/EPSG/0/4258</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D LAEA projection in ETRS89 on GRS80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-LAEA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3035" class="bare">http://www.opengis.net/def/crs/EPSG/0/3035</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D LCC projection in ETRS89 on GRS80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-LCC</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3034" class="bare">http://www.opengis.net/def/crs/EPSG/0/3034</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM26N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3038" class="bare">http://www.opengis.net/def/crs/EPSG/0/3038</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM27N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3039" class="bare">http://www.opengis.net/def/crs/EPSG/0/3039</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM28N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3040" class="bare">http://www.opengis.net/def/crs/EPSG/0/3040</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM29N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3041" class="bare">http://www.opengis.net/def/crs/EPSG/0/3041</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM30N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3042" class="bare">http://www.opengis.net/def/crs/EPSG/0/3042</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM31N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3043" class="bare">http://www.opengis.net/def/crs/EPSG/0/3043</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM32N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3044" class="bare">http://www.opengis.net/def/crs/EPSG/0/3044</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM33N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3045" class="bare">http://www.opengis.net/def/crs/EPSG/0/3045</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM34N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3046" class="bare">http://www.opengis.net/def/crs/EPSG/0/3046</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM35N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3047" class="bare">http://www.opengis.net/def/crs/EPSG/0/3047</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM36N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3048" class="bare">http://www.opengis.net/def/crs/EPSG/0/3048</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM37N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3049" class="bare">http://www.opengis.net/def/crs/EPSG/0/3049</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM38N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3050" class="bare">http://www.opengis.net/def/crs/EPSG/0/3050</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-TM39N</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/3051" class="bare">http://www.opengis.net/def/crs/EPSG/0/3051</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Height in EVRS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EVRS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/5730" class="bare">http://www.opengis.net/def/crs/EPSG/0/5730</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ETRS89-GRS80-EVRS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/7409" class="bare">http://www.opengis.net/def/crs/EPSG/0/7409</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Height in EVRS (EVRF2007)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EVRS-EVRF2007</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/5621" class="bare">http://www.opengis.net/def/crs/EPSG/0/5621</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Height in EVRS (EVRF2019)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EVRS-EVRF2019</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/9389" class="bare">http://www.opengis.net/def/crs/EPSG/0/9389</a></em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mean-tide height in EVRS (EVRF2019)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EVRS-EVRF2019mean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://www.opengis.net/def/crs/EPSG/0/9390" class="bare">http://www.opengis.net/def/crs/EPSG/0/9390</a></em></p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div class="sect3">
@@ -10014,10 +10341,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_coordinate_reference_system">8.2.1. Coordinate Reference System</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -10105,10 +10432,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_temporal_reference_system_2">8.2.2. Temporal Reference System</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -10196,10 +10523,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_encoding">8.2.3. Encoding</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -10282,10 +10609,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_character_encoding">8.2.4. Character Encoding</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -10349,10 +10676,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_spatial_representation_type">8.2.5. Spatial representation type</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -10583,10 +10910,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_maintenance_information">8.3.1. Maintenance Information</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -10757,10 +11084,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect4">
 <h5 id="_guidelines_for_reporting_quantitative_results_of_the_data_quality_evaluation">8.3.2.1. Guidelines for reporting quantitative results of the data quality evaluation</h5>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -10845,10 +11172,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect4">
 <h5 id="_guidelines_for_reporting_descriptive_results_of_the_data_quality_evaluation">8.3.2.2. Guidelines for reporting descriptive results of the Data Quality evaluation</h5>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -10921,10 +11248,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_spatial_representation_information">8.3.3. Spatial representation information</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -10987,10 +11314,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_supplemental_information">8.3.4. Supplemental information</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -11073,10 +11400,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_process_step">8.3.5. Process step</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -11170,10 +11497,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_data_source">8.3.6. Data source</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -11260,10 +11587,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_browse_graphic_information">8.3.7. Browse graphic information</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -11333,10 +11660,10 @@ The elements specified below shall be available in the specified ISO/TS 19139 pa
 </div>
 <div class="sect3">
 <h4 id="_digital_transfer_options_information">8.3.8. Digital transfer options information</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -11568,15 +11895,14 @@ Coverage data encoded as multipart messages shall comply with the multipart repr
 <em>Article 7</em><br>
 <strong>Encoding</strong></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.</p>
-</li>
-<li>
-<p>Every encoding rule used to encode spatial data shall be made available.</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.</p>
+</div>
+<div class="paragraph">
+<p>2. Every encoding rule used to encode spatial data shall be made available.</p>
+</div>
+<div class="paragraph">
+<p>2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.</p>
 </div>
 </td>
 </tr>
@@ -12036,10 +12362,10 @@ If the format used for encoding the coverage range also includes information abo
 <div class="paragraph">
 <p><strong>Table 7 - Recommended grid spacing in relation to vertical accuracy (RMSE<sub>v</sub>)</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12290,10 +12616,10 @@ Provision of <em>break line</em> spatial objects is recommended using 2.5D model
 <div class="paragraph">
 <p><strong>Table 9 – Consistency between contour line vertical interval and vertical accuracy</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12589,10 +12915,10 @@ Table 9 .</p>
 <h3 id="_styles_required_to_be_supported_by_inspire_view_services">11.2. Styles required to be supported by INSPIRE view services</h3>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_el_breakline">11.2.1. Styles for the layer EL.BreakLine</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12656,10 +12982,10 @@ Table 9 .</p>
 </div>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_el_contourline">11.2.2. Styles for the layer EL.ContourLine</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12762,10 +13088,10 @@ Table 9 .</p>
 </div>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_el_isolatedarea">11.2.3. Styles for the layer EL.IsolatedArea</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12830,10 +13156,10 @@ Table 9 .</p>
 </div>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_el_spotelevation">11.2.4. Styles for the layer EL.SpotElevation</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -12982,10 +13308,10 @@ Table 9 .</p>
 </div>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_el_voidarea">11.2.5. Styles for the layer EL.VoidArea</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -13049,10 +13375,10 @@ Table 9 .</p>
 </div>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_el_gridcoverage">11.2.6. Styles for the layer EL.GridCoverage</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -13148,10 +13474,10 @@ Table 9 .</p>
 </div>
 <div class="sect3">
 <h4 id="_styles_for_the_layer_el_tin">11.2.7. Styles for the layer EL.TIN</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -13295,10 +13621,10 @@ Table 9 .</p>
 <h4 id="_styles_for_the_layer_el_contourline_2">11.3.1. Styles for the layer EL.ContourLine</h4>
 <div class="sect4">
 <h5 id="_master_contours">11.3.1.1. Master contours</h5>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -13365,10 +13691,10 @@ Table 9 .</p>
 </div>
 <div class="sect4">
 <h5 id="_ordinary_contours">11.3.1.2. Ordinary contours</h5>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -13436,10 +13762,10 @@ Table 9 .</p>
 </div>
 <div class="sect4">
 <h5 id="_auxiliary_contours">11.3.1.3. Auxiliary contours</h5>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -13933,7 +14259,7 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <p>all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and</p>
 </li>
 <li>
-<p>all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.</p>
+<p>all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.</p>
 </li>
 </ul>
 </div>
@@ -13986,7 +14312,7 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <p>b) Reference: Art. 3 and Art.4 of Commission Regulation No 1089/2010</p>
 </div>
 <div class="paragraph">
-<p>c) Test Method: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.</p>
+<p>c) Test Method: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.</p>
 </div>
 <div class="paragraph">
 <p>NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.1.</p>
@@ -14004,7 +14330,7 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <p>c) Test Method: Examine whether the value type of each provided attribute or association role adheres to the corresponding value type specified in the target specification.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from enumeration and code lists, and the coverage domains.</p>
+<p>NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from code lists, and the coverage domains.</p>
 </div>
 <div class="paragraph">
 <p>NOTE 2 Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.1.</p>
@@ -14013,19 +14339,16 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <div class="sect3">
 <h4 id="_value_test">A.1.3. Value test</h4>
 <div class="paragraph">
-<p>a) Purpose: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.</p>
+<p>a) Purpose: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.</p>
 </div>
 <div class="paragraph">
 <p>b) Reference: Art.4 (3) of Commission Regulation No 1089/2010.</p>
 </div>
 <div class="paragraph">
-<p>c) Test Method: When an attributes / association roles has "enumeration" or "codeList" type compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role</p>
+<p>c) Test Method: When an attributes / association roles has "codeList" type compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role</p>
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>Shall not take any other value than defined in the enumeration table when its type is enumeration.</p>
-</li>
 <li>
 <p>Shall take only values explicitly specified in the code list when its type is codeList with extensibility value is "none".</p>
 </li>
@@ -14041,13 +14364,13 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <p>NOTE 2 When a data provider only uses code lists with narrower (more specific values) this test can be fully performed based on internal information.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 3 This test is applicable to all application schemas to verify whether each instance of the property Type attribute takes only the values specified in the ElevationPropertyTypeValue enumeration.</p>
+<p>NOTE 3 This test is applicable to all application schemas to verify whether each instance of the property Type attribute takes only the values specified in the ElevationPropertyTypeValue code list.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 4 This test is applicable to the ElevationGridCoverage and ElevationTIN schemas to verify whether each instance of the surfaceType attribute takes only the values specified in the SurfaceTypeValue enumeration.</p>
+<p>NOTE 4 This test is applicable to the ElevationGridCoverage and ElevationTIN schemas to verify whether each instance of the surfaceType attribute takes only the values specified in the SurfaceTypeValue code list.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 5 This test is applicable to the ElevationVectorElements schema to verify whether each instance of the contourLineType attribute takes only values specified in the ContourLineTypeValue enumeration.</p>
+<p>NOTE 5 This test is applicable to the ElevationVectorElements schema to verify whether each instance of the contourLineType attribute takes only values specified in the ContourLineTypeValue codel list.</p>
 </div>
 <div class="paragraph">
 <p>NOTE 6 This test is applicable to the code lists specified in the ElevationVectorElements schema to verify whether:</p>
@@ -14780,7 +15103,7 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 <p>a) Purpose: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.</p>
 </div>
 <div class="paragraph">
-<p>c) Reference: Table 2 in Section 6 of this technical guideline</p>
+<p>c) Reference: Section 6 of this technical guideline</p>
 </div>
 <div class="paragraph">
 <p>b) Test Method: Compare the URI of the dataset with the URIs in the table.</p>
@@ -15888,10 +16211,10 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 </div>
 <div class="sect3">
 <h4 id="_maintenance_of_fairways">B.1.4. Maintenance of fairways</h4>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all fit-content">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col>
+<col>
 </colgroup>
 <thead>
 <tr>
@@ -16112,86 +16435,7 @@ While this Annex refers to the Commission Regulation (EU) No 1089/2010 of 23 Nov
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise the values specified in the table below and narrower values defined by data providers.</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>bottomOfSlope</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">bottom of slope</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Break line representing the lower boundary of an area having a constant slope in the terrain surface, typically varying approximately between 2? and 40?.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>changeInSlope</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">change in slope</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Break line representing a collection of adjoining points where the terrain has an abrupt change in slope.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>flatAreaBoundary</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">flat area boundary</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Break line that delimits an isolated part of the territory where the elevation model has to be constrained at the same elevation value.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NOTE The boundary of a flat area shall be closed.<br>
-EXAMPLE Boundary of an inland water body (e.g. lake).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>formLine</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">form line</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Break line representing a local direction in which the elevation surface being described takes the greatest slope.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"NOTE 1 Form lines are always perpendicular to contour lines describing the same elevation surface.<br>
-NOTE 2 This special case of break line is often used to describe troughs and ridges of the terrain surface.<br>
-EXAMPLE Ridge line, thalweg."</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>topOfSlope</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">top of slope</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Break line representing the upper boundary of an area having a constant slope in the terrain surface, typically varying approximately between 2? and 40?.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise the values specified in the INSPIRE Registry and narrower values defined by data providers.</p></td>
 </tr>
 </tbody>
 </table>
@@ -16222,95 +16466,7 @@ EXAMPLE Ridge line, thalweg."</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Values:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise the values specified in the table below and narrower values defined by data providers.</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>depression</strong></th>
-<th class="tableblock halign-left valign-top"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">depression</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Point that represents a part of the relief of the land surface or water body&#8217;s floor surface that is lower in elevation when compared to its surrounding points.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EXAMPLE Trough or basin.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>formSpot</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">form spot</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A supplementary spot height, estimated or interpolated from surrounding heights, in areas where few contour lines or other height information exist.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"NOTE 1 Used to control the creation of DEMs.<br>
-<br>
-NOTE 2 This value is only applicable to spot heights, not to spot depths."</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>generic</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">generic</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spot elevation spatial object not fulfilling the description of any of the other values in the current code list.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>pass</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">pass</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Lower point of a depression within a ridge alignment, generally opened along the crest line, which allow passing from one slope of the surface to another.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"NOTE A pass is a point of double curvature, one in the direction of the crest line and another in the direction of the thalwegs born in this point (i.e. with two maximum curvatures - concave and convex, respectively)."</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>summit</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">summit</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definition:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Highest point of a prominence in the relief of a land surface or a water body&#8217;s floor surface.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EXAMPLE The top of a hill or a mountain.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The allowed values for this code list comprise the values specified in the INSPIRE Registry and narrower values defined by data providers.</p></td>
 </tr>
 </tbody>
 </table>
