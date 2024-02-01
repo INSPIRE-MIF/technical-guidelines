@@ -469,7 +469,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Version 3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version 3.4.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Publisher</strong></p></td>
@@ -497,11 +497,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Identifier</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://inspire.ec.europa.eu/id/document/tg/download-services/">Technical Guidance Download Services v3.3.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://inspire.ec.europa.eu/id/document/tg/download-services/">Technical Guidance Download Services v3.4.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Changelog</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2" class="bare">https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1" class="bare">https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Language</strong></p></td>
@@ -538,7 +538,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_mapping_the_atom_based_technical_guidance_to_the_implementing_rules">4.1.1. Mapping the Atom-based Technical Guidance to the Implementing Rules</a></li>
 <li><a href="#_mapping_the_wfs_based_technical_guidance_to_the_implementing_rules">4.1.2. Mapping the WFS-based Technical Guidance to the Implementing Rules</a></li>
-<li><a href="#_mapping_of_spatial_data_set_identifier_parameter">4.1.3. Mapping of Spatial Data Set Identifier parameter</a></li>
+<li><a href="#mapping-spatial-data-set-identifier">4.1.3. Mapping of Spatial Data Set Identifier parameter</a></li>
 </ul>
 </li>
 <li><a href="#_conformance_classes_for_download_services_technical_guidance">4.2. Conformance Classes for Download Services Technical Guidance</a></li>
@@ -1914,7 +1914,7 @@ Allows the declaration, by a Public Authority or a Third Party, of the availabil
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>Get Download Service Metadata Request</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Metadata records for Download Services shall be available in a Discovery Service. The Resource Locator metadata element for the Download Service shall contain a link to the GetCapabilities of the WFS..</p>
+<p>A metadata record for a Download Service is available in a Discovery Service or is provided by the Download Services itself. The Resource Locator metadata element for the Download Service contains a link to the GetCapabilities of the WFS.</p>
 </div>
 <div class="paragraph">
 <p>The Get Download Service Metadata request is a GetCapabilities request to the WFS indicated in the metadata record.</p>
@@ -2410,7 +2410,7 @@ Allows the declaration, by a Public Authority or a Third Party, of the availabil
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mapping_of_spatial_data_set_identifier_parameter">4.1.3. Mapping of Spatial Data Set Identifier parameter</h4>
+<h4 id="mapping-spatial-data-set-identifier">4.1.3. Mapping of Spatial Data Set Identifier parameter</h4>
 <div class="paragraph">
 <p>The Spatial Data Set Identifier parameter is defined in the Network Service regulation [<strong>INS NS</strong>] as <em>"The Spatial Data Set Identifier parameter shall contain the Unique Resource Identifier of the Data Set"</em></p>
 </div>
@@ -2912,31 +2912,54 @@ All OpenSearch information in Atom feeds shall conform to the OpenSearch specifi
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!-- Example "Download Service Feed" --&gt;
-&lt;feed xmlns="http://www.w3.org/2005/Atom"
-    xmlns:georss="http://www.georss.org/georss" xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0" xml:lang="en"&gt;
+&lt;feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss"
+  xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0"
+  xml:lang="en"&gt;
     &lt;!-- feed title --&gt;
     &lt;title&gt;XYZ Example INSPIRE Download Service&lt;/title&gt;
     &lt;!-- feed subtitle --&gt;
     &lt;subtitle&gt;INSPIRE Download Service of organisation XYZ providing Hydrography data&lt;/subtitle&gt;
-    &lt;!-- link to download service ISO 19139 metadata --&gt;
-    &lt;link href="http://xyz.org/metadata/iso19139_document.xml" rel="describedby" type="application/xml"/&gt;
+    &lt;!-- link to download service ISO 19139 metadata (option 2) --&gt;
+    &lt;link
+      href="http://xyz.org/metadata/iso19139_document.xml"
+      rel="describedby"
+      type="application/xml"/&gt;
     &lt;!-- self-referencing link to this feed --&gt;
-    &lt;link href="http://xyz.org/download/en.xml" rel="self" type="application/atom+xml"
-        hreflang="en" title="This document"/&gt;
+    &lt;link
+      href="http://xyz.org/download/en.xml"
+      rel="self"
+      type="application/atom+xml"
+       hreflang="en"
+       title="This document"/&gt;
     &lt;!-- link to Open Search definition file for this service--&gt;
-	&lt;link rel="search" href="http://xyz.org/search/opensearchdescription.xml" type="application/opensearchdescription+xml" title="Open Search Description for XYZ download service"/&gt;
+	&lt;link
+      rel="search"
+      href="http://xyz.org/search/opensearchdescription.xml"
+      type="application/opensearchdescription+xml"
+      title="Open Search Description for XYZ download service"/&gt;
     &lt;!-- link to this feed in another language --&gt;
-    &lt;link href="http://xyz.org/download/de.xml" rel="alternate"
-        type="application/atom+xml" hreflang="de"
-        title="The download service information in German"/&gt;
+    &lt;link
+      href="http://xyz.org/download/de.xml"
+      rel="alternate"
+      type="application/atom+xml"
+      hreflang="de"
+      title="The download service information in German"/&gt;
     &lt;!-- link to another representation of this feed (HTML) --&gt;
-    &lt;link href="http://xyz.org/download/index.html" rel="alternate"
-        type="text/html" hreflang="en"
-        title="An HTML version of this document"/&gt;
+    &lt;link
+      href="http://xyz.org/download/index.html"
+      rel="alternate"
+      type="text/html"
+      hreflang="en"
+       title="An HTML version of this document"/&gt;
     &lt;!-- link to this feed in HTML in another language--&gt;
-    &lt;link href="http://xyz.org/download/index.de.html" rel="alternate"
-        type="text/html" hreflang="de"
-        title="An HTML version of this document in German"/&gt;
+    &lt;link
+      href="http://xyz.org/download/index.de.html"
+      rel="alternate"
+      type="text/html"
+      hreflang="de"
+       title="An HTML version of this document in German"/&gt;
     &lt;!-- identifier --&gt;
     &lt;id&gt;http://xyz.org/download/en.xml&lt;/id&gt;
     &lt;!-- rights, access restrictions --&gt;
@@ -2948,14 +2971,26 @@ All OpenSearch information in Atom feeds shall conform to the OpenSearch specifi
         &lt;name&gt;John Doe&lt;/name&gt;
         &lt;email&gt;doe@xyz.org&lt;/email&gt;
     &lt;/author&gt;
+    &lt;!-- Keywords for the service (option 2) --&gt;
+    &lt;category
+      term="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/infoFeatureAccessService"
+      scheme="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory"/&gt;
+    &lt;category
+      term="http://link/to/entry/in/thesaurus"
+      label="human-readable keyword"
+      scheme="http://link/to/thesaurus"/&gt;
+    &lt;!-- Specifications against which the service is conformant (option 2) --&gt;
+    &lt;category term="http://data.europa.eu/eli/reg/2010/1089"/&gt;
+    &lt;category term="http://data.europa.eu/eli/reg/2009/976"/&gt;
     &lt;!-- entry for a "Dataset Feed" for a pre-defined dataset --&gt;
     &lt;entry&gt;
         &lt;!-- title for "Dataset Feed" for pre-defined dataset --&gt;
         &lt;title&gt;Water network ABC Dataset Feed&lt;/title&gt;
 		   &lt;!--Spatial Dataset Unique Resource Identifier for this dataset--&gt;
-	&lt;inspire_dls:spatial_dataset_identifier_code&gt;wn_id1&lt;/inspire_dls:spatial_dataset_identifier_code&gt;                                  &lt;inspire_dls:spatial_dataset_identifier_namespace&gt;http://xyz.org/&lt;/inspire_dls:spatial_dataset_identifier_namespace&gt;
-		   &lt;!-- link to dataset metadata record --&gt;
-    		 &lt;link href="http://xyz.org/metadata/abcISO19139.xml" rel="describedby" type="application/xml"/&gt;
+        &lt;inspire_dls:spatial_dataset_identifier_code&gt;wn_id1&lt;/inspire_dls:spatial_dataset_identifier_code&gt;
+        &lt;inspire_dls:spatial_dataset_identifier_namespace&gt;http://xyz.org/&lt;/inspire_dls:spatial_dataset_identifier_namespace&gt;
+		 &lt;!-- link to dataset metadata record --&gt;
+    	&lt;link href="http://xyz.org/metadata/abcISO19139.xml" rel="describedby" type="application/xml"/&gt;
         &lt;!-- link to "Dataset Feed" for pre-defined dataset --&gt;
         &lt;link rel="alternate" href="http://xyz.org/data/waternetwork_feed.xml" type="application/atom+xml"
         hreflang="en" title="Feed containing the pre-defined waternetwork dataset (in one or more downloadable formats)"/&gt;
@@ -2966,21 +3001,126 @@ All OpenSearch information in Atom feeds shall conform to the OpenSearch specifi
         &lt;!-- rights, access info for pre-defined dataset --&gt;
         &lt;rights&gt;Copyright (c) 2002-2011, XYZ; all rights reserved&lt;/rights&gt;
         &lt;!-- last date/time this entry was updated --&gt;
-		   &lt;updated&gt;2012-03-31T13:45:03Z&lt;/updated&gt;
-		   &lt;!-- summary --&gt;
-		   &lt;summary&gt;This is the entry for water network ABC Dataset&lt;/summary&gt;
+		&lt;updated&gt;2012-03-31T13:45:03Z&lt;/updated&gt;
+		&lt;!-- summary --&gt;
+		&lt;summary&gt;This is the entry for water network ABC Dataset&lt;/summary&gt;
         &lt;!-- optional GeoRSS-Simple polygon outlining the bounding box of the pre-defined dataset described by the entry. Must be lat lon --&gt;
         &lt;georss:polygon&gt;47.202 5.755 55.183 5.755 55.183 15.253 47.202 15.253 47.202 5.755&lt;/georss:polygon&gt;
         &lt;!-- CRSs in which the pre-defined Dataset is available --&gt;
-			&lt;category term="http://www.opengis.net/def/crs/EPSG/0/25832"  label="ETRS89 / UTM zone 32N"/&gt;
-			&lt;category term="http://www.opengis.net/def/crs/EPSG/0/4258"  label="ETRS89"/&gt;
+		&lt;category term="http://www.opengis.net/def/crs/EPSG/0/25832" label="ETRS89 / UTM zone 32N"/&gt;
+		&lt;category term="http://www.opengis.net/def/crs/EPSG/0/4258" label="ETRS89"/&gt;
     &lt;/entry&gt;
     &lt;!-- Any number of "Dataset Feeds" for different pre-defined datasets may be added here as separate entries --&gt;
 &lt;/feed&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Note that only some of the mandatory INSPIRE Metadata elements for the Download service have been mapped to the Atom feed files.</p>
+<p>The following sections explain in more detail how this example Atom feed is formed and what must be done to meet particular Technical Guidance requirements.</p>
+</div>
+<div class="sect3">
+<h4 id="_download_service_feed_feed_title_element">5.1.1. Download Service Feed: feed 'title' element</h4>
+<div class="paragraph">
+<p>The title element shall be used to provide a title for the feed as a whole.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Example 3: Sample feed title</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!-- feed title --&gt;
+&lt;title&gt;XYZ Example INSPIRE Download Service&lt;/title&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>TG Requirement 5</strong><br>
+The 'title' element of an Atom feed shall be populated with a human readable title for the feed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_download_service_feed_feed_subtitle_element">5.1.2. Download Service Feed: feed 'subtitle' element</h4>
+<div class="paragraph">
+<p>The subtitle element may be used to provide a subtitle (containing additional information) for the feed as a whole.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Example 4: Sample feed subtitle</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!-- feed subtitle --&gt;
+&lt;subtitle&gt;INSPIRE Download Service of organisation XYZ providing Hydrography data&lt;/subtitle&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📒</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>TG Recommendation 1</strong>:<br>
+The 'subtitle' element of an Atom feed may be populated with a human readable subtitle for the feed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_download_service_feed_feed_link_element_service_metadata">5.1.3. Download Service Feed: feed 'link' element – service metadata</h4>
+<div class="paragraph">
+<p>A data provider has two options for the publication of the INSPIRE metadata elements.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>TG Requirement 6</strong><br>
+The INSPIRE Metadata for the Download Service shall be linked to in one of the two following ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The Download Service Feed shall contain an Atom 'link' element that links to the metadata record for this Download Service. The value of the 'rel' attribute of this element shall be 'describedby' and the value of the 'type' attribute shall be either 'application/xml' or 'application/vnd.ogc.csw.GetRecordByIdResponse_xml';</p>
+</li>
+<li>
+<p>The Download Service Feed shall contain the INSPIRE Metadata for the Download Service in accordance with Table 17b.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>NOTE In case of a "hybrid implementation" based on Atom and WFS for Parts B and C, only the Atom service needs to be described through metadata as required by TG Requirement 6. The link to the WFS implementations shall be established through the "related" link element in the Atom feed (see TG Requirement 16).</p>
+</div>
+<div class="paragraph">
+<p>Table 17a provides an overview over the INSPIRE metadata elements for the Download Service that can be found in the Download Service itself in the case of option 1. With this option, all the INSPIRE metadata elements are to be present in the metadata record for the Download Service, which is linked to as in, for example, the statement below.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Example 5: Example service metadata link</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!-- link to service ISO 19139 metadata --&gt;
+&lt;link href="http://xyz.org/metadata/iso19139_document.xml" rel="describedby" type="application/xml"/&gt;</code></pre>
+</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -3097,108 +3237,126 @@ All OpenSearch information in Atom feeds shall conform to the OpenSearch specifi
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>Table 17: Mapping of INSPIRE Metadata elements to Atom</strong></p>
+<p><strong>Table 17a: Mapping of INSPIRE metadata elements to Atom for option 1</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">INSPIRE Metadata element</th>
+<th class="tableblock halign-left valign-top">Atom</th>
+<th class="tableblock halign-left valign-top">Fallback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Title (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/title</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Abstract (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/subtitle</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Type (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Is by default “service”</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Locator (C)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/link[@rel="self"]</code> in the top Atom feed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Locator of the data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coupled Resource (C)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/entry/link[@rel="describedby"]</code> in the<br>
+top Atom feed</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spatial Data Service Type (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:applicationProfile</code><br>
+in the ISO/TS 19139:2007 metadata record dataset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keyword (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/category</code>; note that a keyword indicating the<br>
+<a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory">spatial<br>
+data service category</a> is required, see example below this table.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geographic Bounding Box (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geographic Bounding Box of the data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Temporal Reference (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/updated</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spatial Resolution (C)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spatial Resolution of the data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformity (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/category</code> element</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Using a <code>/feed/category</code><br>
+element for each specification against which the service is <strong>conformant</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conditions for Access and Use (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</code> in<br>
+the ISO/TS 19139:2007 metadata record dataset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Limitations on Public Access (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/rights</code> in the top Atom feed</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responsible Organisation (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/author</code> in the top Atom feed</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata Point of Contact (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/author</code> in the top Atom feed</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata Date (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/feed/updated</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata Language (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">other supported language (if any) will be mapped to<br>
+the <code>xml:lang</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gmd:MD_Metadata/gmd:language/gmd:LanguageCode</code> in dataset metadata for main language</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Table 17b: Mapping of INSPIRE metadata elements to Atom for option 2</strong></p>
 </div>
 <div class="paragraph">
-<p>All the required INSPIRE metadata elements are to be found in the linked ISO 19139 metadata document for the Download service as explained in Section 5.1.3.</p>
-</div>
-<div class="paragraph">
-<p>The following sections explain in more detail how this example Atom feed is formed and what must be done to meet particular Technical Guidance requirements.</p>
-</div>
-<div class="sect3">
-<h4 id="_download_service_feed_feed_title_element">5.1.1. Download Service Feed: feed 'title' element</h4>
-<div class="paragraph">
-<p>The title element shall be used to provide a title for the feed as a whole. Typically this will correspond with the 'Resource Title' in the corresponding service metadata record.</p>
-</div>
-<div class="paragraph">
-<p><strong><em>Example 3: Sample feed title</em></strong></p>
+<p>An example for the <a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory">spatial data service category</a>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!-- feed title --&gt;
-&lt;title&gt;XYZ Example INSPIRE Download Service&lt;/title&gt;</code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;category term="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/infoFeatureAccessService" scheme="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory"/&gt;</code></pre>
 </div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">📕</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p><strong>TG Requirement 5</strong><br>
-The 'title' element of an Atom feed shall be populated with a human readable title for the feed.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_download_service_feed_feed_subtitle_element">5.1.2. Download Service Feed: feed 'subtitle' element</h4>
-<div class="paragraph">
-<p>The subtitle element may be used to provide a subtitle (containing additional information) for the feed as a whole. Typically this will correspond with the 'Resource Abstract' in the corresponding service metadata record.</p>
-</div>
-<div class="paragraph">
-<p><strong><em>Example 4: Sample feed subtitle</em></strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!-- feed subtitle --&gt;
-&lt;subtitle&gt;INSPIRE Download Service of organisation XYZ providing Hydrography data&lt;/subtitle&gt;</code></pre>
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<div class="title">📒</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p><strong>TG Recommendation 1</strong>:<br>
-The 'subtitle' element of an Atom feed may be populated with a human readable subtitle for the feed.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_download_service_feed_feed_link_element_service_metadata">5.1.3. Download Service Feed: feed 'link' element – service metadata</h4>
-<div class="paragraph">
-<p>Every Download Service must have a corresponding Metadata record in a discovery service.</p>
-</div>
-<div class="paragraph">
-<p>An Atom link element shall be provided that links to the metadata record for this Download Service. This should be a discovery service metadata record. The value of the 'rel' attribute for this link shall be "describedby" [<strong>POWDER</strong>] The value of the 'type' attribute shall be "application/xml" or "application/vnd.ogc.csw.GetRecordByIdResponse_xml".</p>
-</div>
-<div class="paragraph">
-<p><strong><em>Example 5: Example service metadata link</em></strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!-- link to service ISO 19139 metadata --&gt;
-&lt;link href="http://xyz.org/metadata/iso19139_document.xml" rel="describedby" type="application/xml"/&gt;</code></pre>
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">📕</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p><strong>TG Requirement 6</strong><br>
-The "Download Service Feed" shall contain an Atom 'link' element that links to the metadata record for this Download Service. The value of the 'rel' attribute of this element shall be "describedby" and the value of the 'type' attribute shall be either "application/xml".</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>NOTE In case of a "hybrid implementation" based on Atom and WFS for Parts B and C, only the Atom service needs to be described through metadata in a discovery service. The link to the WFS implementations shall be established through the "related" link element in the Atom feed (see TG Requirement 16).</p>
 </div>
 </div>
 <div class="sect3">
@@ -3360,7 +3518,7 @@ The 'id' element of a feed shall contain an HTTP URI which dereferences to the f
 <div class="sect3">
 <h4 id="_download_service_feed_feed_rights_element">5.1.9. Download Service Feed: feed 'rights' element</h4>
 <div class="paragraph">
-<p>The 'rights' element shall be used to capture any information about rights or restrictions to the Download Service. Typically this will correspond with the value of 'accessConstraints' in the corresponding service metadata record. Note that rights and restrictions may also be applied to individual pre-defined datasets in the linked "Dataset feed".</p>
+<p>The 'rights' element shall be used to capture any information about rights or restrictions to the Download Service. Note that rights and restrictions may also be applied to individual pre-defined datasets in the linked "Dataset feed".</p>
 </div>
 <div class="paragraph">
 <p><strong><em>Example 9: Example feed rights element</em></strong></p>
@@ -3486,7 +3644,7 @@ The 'author' element of a feed shall contain current contact information for an 
 <div class="sect3">
 <h4 id="_download_service_feed_entry_inspire_identifier_elements">5.1.13. Download Service Feed: entry INSPIRE identifier elements</h4>
 <div class="paragraph">
-<p>Each entry in the download service feed shall contain the INSPIRE Spatial Dataset Unique Resource Identifier for the dataset described by that entry. This is the Spatial Dataset Unique Resource Identifier as described in the INSPIRE Metadata Regulation [<strong>INS MD</strong>]. This shall be provided in two parts, the code (<em>inspire_dls:spatial_dataset_identifier_code</em>) and namespace (<em>inspire_dls:dsid_namspace</em>). The <em>inspire_dls</em> namespace is defined as in the feed as follows:</p>
+<p>Each entry in the download service feed shall contain the INSPIRE Spatial Dataset Unique Resource Identifier for the dataset described by that entry. This is the Spatial Dataset Unique Resource Identifier as described in the INSPIRE Metadata Regulation [<strong>INS MD</strong>]. This can be provided either in one part, the code only (<em>inspire_dls:spatial_dataset_identifier_code</em>), or in two parts, the code and namespace (<em>inspire_dls:dsid_namspace</em>), see also <a href="#mapping-spatial-data-set-identifier">Mapping of Spatial Data Set Identifier parameter</a>. The <em>inspire_dls</em> namespace is defined in the feed as follows:</p>
 </div>
 <div class="paragraph">
 <p><strong><em>Example 13: Namespace declaration for inspire_dls</em></strong></p>
@@ -3497,12 +3655,22 @@ The 'author' element of a feed shall contain current contact information for an 
 </div>
 </div>
 <div class="paragraph">
-<p><strong><em>Example 14: Example Spatial Dataset URI</em></strong></p>
+<p><strong><em>Example 14a: Example Spatial Dataset URI with spatial_dataset_identifier_namespace</em></strong></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!—Spatial Dataset Unique Resourse Identifier for this dataset--&gt;
-&lt;inspire_dls:spatial_dataset_identifier_code&gt;wn_id1&lt;/inspire_dls:spatial_dataset_identifier_code&gt;                                  &lt;inspire_dls:spatial_dataset_identifier_namespace&gt;http://xyz.org/data&lt;/inspire_dls:spatial_dataset_identifier_namespace&gt;</code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!--Spatial Dataset Unique Resource Identifier for this data set--&gt;
+&lt;inspire_dls:spatial_dataset_identifier_code&gt;wn_id1&lt;/inspire_dls:spatial_dataset_identifier_code&gt;
+&lt;inspire_dls:spatial_dataset_identifier_namespace&gt;http://xyz.org/data&lt;/inspire_dls:spatial_dataset_identifier_namespace&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong><em>Example 14b: Example Spatial Dataset URI without spatial_dataset_identifier_namespace</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!--Spatial Dataset Unique Resource Identifier for this data set--&gt;
+&lt;inspire_dls:spatial_dataset_identifier_code&gt;http://xyz.org/data/wn_id1&lt;/inspire_dls:spatial_dataset_identifier_code&gt;</code></pre>
 </div>
 </div>
 <div class="admonitionblock important">
@@ -3514,7 +3682,7 @@ The 'author' element of a feed shall contain current contact information for an 
 <td class="content">
 <div class="paragraph">
 <p><strong>TG Requirement 13</strong><br>
-Each feed 'entry' in a "Download Service Feed" shall contain <em>spatial_dataset_identifier_code</em> and <em>spatial_dataset_identifier_namespace</em> elements which together contain the Spatial Dataset Unique Resource Identifier for the dataset described by the feed. These elements are defined in the <em>inspire_dls</em> schema which shall be included in the namespace declarations of the feed.</p>
+Each feed 'entry' in a "Download Service Feed" shall contain a <em>spatial_dataset_identifier_code</em> element. Each feed 'entry' in a "Download Service Feed" shall also contain a <em>spatial_dataset_identifier_namespace</em> element if the data set identifier has a namespace component. <em>spatial_dataset_identifier_code</em> and <em>spatial_dataset_identifier_namespace</em> are defined in the <em>inspire_dls</em> schema, which shall be included in the namespace declarations of the feed.</p>
 </div>
 </td>
 </tr>
@@ -4708,12 +4876,21 @@ The OpenSearch description shall contain a 'Url' element that describes a templa
 <p>A search template shall be supplied that provides the request mechanism for a Describe Spatial Data Set Operation.</p>
 </div>
 <div class="paragraph">
-<p><strong><em>Example 38: Example Describe Spatial Data Set template</em></strong></p>
+<p><strong><em>Example 38a: Example Describe Spatial Data Set template with spatial_dataset_identifier_namespace</em></strong></p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!--Describe Spatial Data Set Operation request URL template to be used in order to retrieve the description of Spatial Object Types in a Spatial Dataset--&gt;
 &lt;Url type="application/atom+xml" rel="describedby" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;amp;language={language?}&amp;amp;q={searchTerms?}"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong><em>Example 38b: Example Describe Spatial Data Set template without spatial_dataset_identifier_namespace</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!--Describe Spatial Data Set Operation request URL template to be used in order to retrieve the description of Spatial Object Types in a Spatial Dataset--&gt;
+&lt;Url type="application/atom+xml" rel="describedby" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;amp;language={language?}&amp;amp;q={searchTerms?}"/&gt;</code></pre>
 </div>
 </div>
 <div class="admonitionblock important">
@@ -4725,14 +4902,14 @@ The OpenSearch description shall contain a 'Url' element that describes a templa
 <td class="content">
 <div class="paragraph">
 <p><strong>TG Requirement 42</strong><br>
-The OpenSearch description shall contain a 'Url' element that describes a template URL for the Describe Spatial Data Set operation. This template shall accept the INSPIRE parameters "spatial_dataset_identifier_code", "spatial_dataset_identifier_namespace" and the OpenSearch "language" parameter. The 'Url' element shall have an attribute 'type' with a value of "application/atom+xml", "application/xml" or "text/xml" and an attribute 'rel' with the value "describedby".</p>
+The OpenSearch description shall contain a 'Url' element that describes a template URL for the Describe Spatial Data Set operation. This template shall accept the INSPIRE parameters "spatial_dataset_identifier_code" and the OpenSearch "language" parameter. This template shall also accept the INSPIRE parameter "spatial_dataset_identifier_namespace" if the dataset identifier has a namespace component. The 'Url' element shall have an attribute 'type' with a value of "application/atom+xml", "application/xml" or "text/xml" and an attribute 'rel' with the value "describedby".</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>The Describe Spatial Data Set response shall be the description of the Spatial Objects in the requested Spatial Dataset and in the requested language. i.e. it shall be the relevant atom "Dataset Feed" corresponding to the specified spatial_dataset_identifier_code, spatial_dataset_identifier_namespace and language.</p>
+<p>The Describe Spatial Data Set response shall be the description of the Spatial Objects in the requested Spatial Dataset and in the requested language. i.e. it shall be the relevant atom "Dataset Feed" corresponding to the specified spatial_dataset_identifier_code, language and (<a href="#mapping-spatial-data-set-identifier">optional</a>) spatial_dataset_identifier_namespace.</p>
 </div>
 <div class="paragraph">
 <p>In a machine-to-machine interaction, if a client wants to issue a Describe Spatial Data Set request, it will read the Open Search document, extract the 'Url' element with the attributes rel="describedby" and type="application/xml". It will then replace the template arguments with the actual values for the Spatial Dataset Identifier code and namespace, and language.</p>
@@ -4744,7 +4921,7 @@ The OpenSearch description shall contain a 'Url' element that describes a templa
 <p><em>If a client is looking for the description of the Spatial Data Set identified by the code "mycode" and the namespace "mynamespace" in the English language, the following template:</em></p>
 </div>
 <div class="paragraph">
-<p><a href="http://xyz.org/search.php?spatial_dataset_identifier_code=%7binspire_dls:spatial_dataset_identifier_code?%7d&amp;spatial_dataset_identifier_namespace=%7binspire_dls:spatial_dataset_identifier_namespace?%7d&amp;language=%7blanguage?%7d&amp;q=%7bsearchTerms?%7d">http://xyz.org/search.php?spatial_dataset_identifier_code=\{inspire_dls:spatial_dataset_identifier_code?}&amp;spatial_dataset_identifier_namespace=\{inspire_dls:spatial_dataset_identifier_namespace?}&amp;language=\{language?}&amp;q=\{searchTerms?}</a></p>
+<p><code><a href="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;language={language?}&amp;q={searchTerms?}" class="bare">http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;language={language?}&amp;q={searchTerms?}</a></code></p>
 </div>
 <div class="paragraph">
 <p><em>will be used to form the actual URL as follows:</em></p>
@@ -4762,12 +4939,21 @@ The OpenSearch description shall contain a 'Url' element that describes a templa
 <p>A search template shall be supplied that provides the request mechanism for a Get Spatial Data Set Operation.</p>
 </div>
 <div class="paragraph">
-<p><strong><em>Example 40: Example Get Spatial Data Set template</em></strong></p>
+<p><strong><em>Example 40a: Example Get Spatial Data Set template with spatial_dataset_identifier_namespace</em></strong></p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!--Get Spatial Data Set Operation request URL template to be used in order to retrieve a Spatial Data Set--&gt;
 	&lt;Url type="application/x-filegdb" rel="results" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;amp;crs={inspire_dls:crs?}&amp;amp;language={language?}&amp;amp;q={searchTerms?}"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong><em>Example 40b: Example Get Spatial Data Set template without spatial_dataset_identifier_namespace</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!--Get Spatial Data Set Operation request URL template to be used in order to retrieve a Spatial Data Set--&gt;
+	&lt;Url type="application/x-filegdb" rel="results" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;amp;crs={inspire_dls:crs?}&amp;amp;language={language?}&amp;amp;q={searchTerms?}"/&gt;</code></pre>
 </div>
 </div>
 <div class="admonitionblock important">
@@ -4779,7 +4965,7 @@ The OpenSearch description shall contain a 'Url' element that describes a templa
 <td class="content">
 <div class="paragraph">
 <p><strong>TG Requirement 43</strong><br>
-The OpenSearch description shall contain a 'Url' element that describes a template URL for the Get Spatial Data Set operation. This template shall accept the INSPIRE parameters "crs", "spatial_dataset_identifier_code", "spatial_dataset_identifier_namespace" and the OpenSearch "language" parameter. The 'Url' element shall have an attribute 'type' with a value corresponding to the media type of the result and an attribute 'rel' with the value "results".</p>
+The OpenSearch description shall contain a 'Url' element that describes a template URL for the Get Spatial Data Set operation. This template shall accept the INSPIRE parameters "crs", "spatial_dataset_identifier_code" and the OpenSearch "language" parameter. The template shall also accept the INSPIRE parameter "spatial_dataset_identifier_namespace" if the dataset identifier has a namespace component. The 'Url' element shall have an attribute 'type' with a value corresponding to the media type of the result and an attribute 'rel' with the value "results".</p>
 </div>
 </td>
 </tr>
@@ -4792,11 +4978,19 @@ The OpenSearch description shall contain a 'Url' element that describes a templa
 <p>In order to avoid an HTTP multipart response, which is not supported by browsers and would require specific clients, the Get Spatial Dataset operation shall return an Atom feed containing the links to the files to be downloaded instead of the files themselves as in the following example.</p>
 </div>
 <div class="paragraph">
-<p><strong><em>Example 41: OpenSearch URL template returning an Atom feed</em></strong></p>
+<p><strong><em>Example 41a: OpenSearch URL template returning an Atom feed with spatial_dataset_identifier_namespace</em></strong></p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">   &lt;Url type=" application/atom+xml " rel="results" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;amp;crs={inspire_dls:crs?}&amp;amp;language={language?}&amp;amp;q={searchTerms?}"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong><em>Example 41b: OpenSearch URL template returning an Atom feed without spatial_dataset_identifier_namespace</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">   &lt;Url type=" application/atom+xml " rel="results" template="http://xyz.org/search.php?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;amp;crs={inspire_dls:crs?}&amp;amp;language={language?}&amp;amp;q={searchTerms?}"/&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -4806,12 +5000,21 @@ The OpenSearch description shall contain a 'Url' element that describes a templa
 <p>Available Spatial Dataset Identifiers shall be indicated using the OpenSearch "example" query mechanism.</p>
 </div>
 <div class="paragraph">
-<p><strong><em>Example 42: Example Get Spatial Data Set template</em></strong></p>
+<p><strong><em>Example 42a: Example Get Spatial Data Set template with spatial_dataset_identifier_namespace</em></strong></p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!--List of available Spatial Dataset Identifiers --&gt;
-	&lt;Query role="example" inspire_dls:spatial_dataset_identifier_namespace="http://xyz.org/" inspire_dls:spatial_dataset_identifier_code="waternetwork" inspire_dls:crs="http://www.opengis.net/def/crs/EPSG/0/4326" language="en" title="Waternetwork_abc" count="1"/&gt;</code></pre>
+&lt;Query role="example" inspire_dls:spatial_dataset_identifier_namespace="http://xyz.org/" inspire_dls:spatial_dataset_identifier_code="waternetwork" inspire_dls:crs="http://www.opengis.net/def/crs/EPSG/0/4326" language="en" title="Waternetwork_abc" count="1"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong><em>Example 42b: Example Get Spatial Data Set template without spatial_dataset_identifier_namespace</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!--List of available Spatial Dataset Identifiers --&gt;
+&lt;Query role="example" inspire_dls:spatial_dataset_identifier_code="waternetwork" inspire_dls:crs="http://www.opengis.net/def/crs/EPSG/0/4326" language="en" title="Waternetwork_abc" count="1"/&gt;</code></pre>
 </div>
 </div>
 <div class="admonitionblock important">
@@ -4823,14 +5026,14 @@ The OpenSearch description shall contain a 'Url' element that describes a templa
 <td class="content">
 <div class="paragraph">
 <p><strong>TG Requirement 44</strong><br>
-For each dataset available the OpenSearch description shall contain a 'Query' element that has a 'role' attribute with the value "example" and 'spatial_dataset_identifier_code' and 'spatial_dataset_identifier_namespace' attributes together containing unique spatial dataset identifier. The value of the 'crs' and 'language' attributes shall be set to the values considered as the default ones by the service provider.</p>
+For each dataset available the OpenSearch description shall contain a 'Query' element that has a 'role' attribute with the value "example" and that has an attribute 'spatial_dataset_identifier_code'. The 'Query' element shall also contain an attribute 'spatial_dataset_identifier_namespace' if the dataset identifier has a namespace component. TThe 'Query' element shall also have 'crs' and 'language' attributes, which are set to the values considered as the default ones by the service provider.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>The Get Spatial Data Set response shall be the file corresponding to the specified spatial_dataset_identifier_code, spatial_dataset_identifier_namespace, crs and language, as declared in the relevant atom "Dataset Feed".</p>
+<p>The Get Spatial Data Set response shall be the file corresponding to the specified spatial_dataset_identifier_code, crs, language, and (<a href="#mapping-spatial-data-set-identifier">optional</a>) spatial_dataset_identifier_namespace as declared in the relevant atom "Dataset Feed".</p>
 </div>
 </div>
 <div class="sect3">
@@ -4887,7 +5090,7 @@ Implement Pre-Defined Dataset Download Service ("Part A") using ISO 19142 Web Fe
 <p><em>This conformance class is inclusive of:</em></p>
 </div>
 <div class="paragraph">
-<p><em>TG Requirement 46 to</em> <em>TG Requirement 60</em></p>
+<p><em>TG Requirement 46 to TG Requirement 60, plus TG Requirement 79</em></p>
 </div>
 <div class="paragraph">
 <p><em>TG Recommendation 14 to</em> <em>TG Recommendation 15</em></p>
@@ -4989,7 +5192,7 @@ Pre-defined Stored Queries shall be provided to make pre-defined datasets availa
 </table>
 </div>
 <div class="paragraph">
-<p>Any implementation shall ensure that all possible (i.e. available) combinations of CRS/DataSetIdCode/ DataSetIdNamespace/language should be available through a pre-defined stored query.</p>
+<p>Any implementation shall ensure that all possible (i.e. available) combinations of CRS/DataSetIdCode/DataSetIdNamespace/language should be available through a pre-defined stored query. Whether DataSetIdNamespace is present depends on the way the Spatial Data Set Unique Resource Identifier is implemented, see also <a href="#mapping-spatial-data-set-identifier">Mapping of Spatial Data Set Identifier parameter</a>.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -5000,7 +5203,7 @@ Pre-defined Stored Queries shall be provided to make pre-defined datasets availa
 <td class="content">
 <div class="paragraph">
 <p><strong>TG Requirement 50</strong><br>
-Any possible (i.e. available) combinations of CRS/DataSetIdCode/ DataSetIdNamespace/language shall be made available through pre-defined stored queries.</p>
+Any possible (i.e. available) combinations of CRS/DataSetIdCode/Language shall be made available through pre-defined stored queries if the dataset identifier does not have a namespace component. Any possible (i.e. available) combinations of CRS/DataSetIdCode/DataSetIdNamespace/Language shall be made available through pre-defined stored queries if the dataset identifier has a namespace component.</p>
 </div>
 </td>
 </tr>
@@ -5036,7 +5239,7 @@ The following identifier should be used to identify the Stored Query for serving
 <td class="content">
 <div class="paragraph">
 <p><strong>TG Requirement 51</strong><br>
-Pre-defined Stored Queries shall use the parameter names "CRS", "DataSetIdCode", "DataSetIdNamespace" and "Language" to identify the CRS, dataset ID code, dataset ID namespace and language components of a query.</p>
+Pre-defined Stored Queries shall use the parameter names "CRS", "DataSetIdCode", and "Language" to identify the CRS, data set identifier code and language components of a query. Pre-defined Stored Queries shall also use the parameter name "DataSetIdNamespace" for the namespace of the dataset identifier if the data set identifier has a namespace component.</p>
 </div>
 </td>
 </tr>
@@ -5050,11 +5253,11 @@ Pre-defined Stored Queries shall use the parameter names "CRS", "DataSetIdCode",
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">http://www.myinspirewfs.com/request=getFeature&amp;storedquery_id= http://inspire.ec.europa.eu/operation/download/GetSpatialDataSet &amp;DataSetIdCode=mycode&amp;DataSetIdNamespace=mynamespace&amp;CRS=EPSG:4326&amp;Language=eng</code></pre>
+<pre class="highlight"><code>http://www.myinspirewfs.com/request=getFeature&amp;storedquery_id=http://inspire.ec.europa.eu/operation/download/GetSpatialDataSet&amp;DataSetIdCode=mycode&amp;DataSetIdNamespace=mynamespace&amp;CRS=EPSG:4326&amp;Language=eng</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Beyond these four mandated parameter names this Technical Guidance does not place any requirements on other parameter names as they may be dataset specific.</p>
+<p>Beyond these mandated parameter names this Technical Guidance does not place any requirements on other parameter names as they may be dataset specific.</p>
 </div>
 </div>
 <div class="sect2">
@@ -5097,13 +5300,16 @@ A separate WFS endpoint shall be provided for each INSPIRE dataset thus providin
 <p>The schema document itself is at <a href="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0/inspire_dls.xsd" class="bare">http://inspire.ec.europa.eu/schemas/inspire_dls/1.0/inspire_dls.xsd</a></p>
 </div>
 <div class="paragraph">
-<p>There are two possible options that may be used and it is up to the implementing Member State to decide which is more appropriate according to need.</p>
+<p>There are three possible options that may be used and it is up to the implementing Member State to decide which is more appropriate according to need.</p>
 </div>
 <div class="paragraph">
 <p>The first option is to use the ows:ExtendedCapabilities to publish a link to a Download Service metadata record. (e.g. in a discovery service). This should be done using a &lt;inspire_common:MetadataURL&gt; in the extended capabilities section.</p>
 </div>
 <div class="paragraph">
-<p>The second option is to publish all the metadata elements directly in the WFS capabilities (and ows:ExtendedCapabilities) using the mapping in the following table.</p>
+<p>The second option is to publish all the metadata elements directly in the WFS capabilities and ows:ExtendedCapabilities using the mapping in Table 19a.</p>
+</div>
+<div class="paragraph">
+<p>The third option is to publish all the metadata elements directly in the WFS capabilities without ows:ExtendedCapabilities using the mapping in Table 19b.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -5261,7 +5467,143 @@ A separate WFS endpoint shall be provided for each INSPIRE dataset thus providin
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>Table 19: Mapping INSPIRE Metadata elements to ISO 19142 WFS</strong></p>
+<p><strong>Table 19a: Mapping INSPIRE Metadata elements to ISO 19142 WFS with extended capabilities</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">INSPIRE Metadata element</th>
+<th class="tableblock halign-left valign-top">WFS 2.0 without ExtendedCapabilities</th>
+<th class="tableblock halign-left valign-top">Fallback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Title (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ows:ServiceIdentification/ows:Title</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Abstract (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ows:ServiceIdentification/ows:Abstract</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Type (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Is by default "service"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Locator &#169;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Locator of the data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coupled Resource &#169;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>wfs:MetadataURL</code> (per feature type)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spatial Data Service Type (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In a ISO/TS 19139:2007 metadata record dataset: <code>gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:applicationProfile</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keyword (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ows:Keywords/ows:Keyword</code>; note that a keyword indicating<br>
+the<br>
+<a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory">spatial<br>
+data service category</a> is required, see example below this table.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geographic Bounding Box (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geographic Bounding Box of the data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Temporal Reference (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateSequence</code> attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If in the optional<br>
+<code>updateSequence</code> attribute a timestamp value is not present, the<br>
+Temporal Reference is mapped to the Temporal Reference of the dataset<br>
+metadata, in order of a date of type <code>publication</code>,<code>revision</code> <code>creation</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spatial Resolution &#169;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spatial Resolution of the data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformity (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ows:Keywords</code>/<code>ows:Keyword</code><br>
+<code>ows:Keywords</code>/<code>ows:Type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Using a <code>ows:Keyword</code> element for each<br>
+specification against the service is <strong>conformant</strong>, included within a<br>
+specific <code>ows:Keywords</code> group including the following <code>ows:Type</code><br>
+element:<br>
+<code>&lt;ows:Type codeSpace="http://data.europa.eu/eli"&gt;European Legislation Identifier (ELI)&lt;/ows:Type&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conditions for Access and Use (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ows:ServiceIdentification/ows:Fees</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Limitations on Public Access (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ows:ServiceIdentification/ows:AccessConstraints</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responsible Organisation (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ows:ServiceProvider/ows:ProviderName</code><br>
+and <code>ows:ServiceProvider/ows:ServiceContact/ows:ContactInfo</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata Point of Contact (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WFS_Capabilities/ows:ServiceProvider/ows:ProviderName</code> and<br>
+<code>WFS_Capabilities/ows:ServiceProvider/ows:ServiceContact/ows:ContactInfo/ows:Address/ows:ElectronicMailAddress</code><br>
+(<a href="https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification/issues/41" class="bare">https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification/issues/41</a>)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata Date (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateSequence</code> attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If in the optional<br>
+<code>updateSequence</code> attribute a timestamp value is not present, the<br>
+Metadata Date is mapped to the Temporal Reference of the dataset<br>
+metadata, in order of a date of type <code>publication</code>,<code>revision</code> <code>creation</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata Language (M)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gmd:MD_Metadata/gmd:language/gmd:LanguageCode</code><br>
+in dataset metadata for main language, other supported language (if any)<br>
+will be mapped to the <code>xml:lang</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Table 19b: Mapping INSPIRE Metadata elements to ISO 19142 WFS without extended capabilities</strong></p>
+</div>
+<div class="paragraph">
+<p>Example for the the<br>
+<a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory">spatial<br>
+data service category</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ows:Keywords&gt;
+  &lt;ows:Keyword&gt;http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/infoFeatureAccessService&lt;/ows:Keyword&gt;
+  &lt;ows:Type codeSpace="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory"&gt;spatial data service category&lt;/ows:Type&gt;
+&lt;/ows:Keywords&gt;</code></pre>
+</div>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -5272,7 +5614,20 @@ A separate WFS endpoint shall be provided for each INSPIRE dataset thus providin
 <td class="content">
 <div class="paragraph">
 <p><strong>TG Requirement 53</strong><br>
-INSPIRE Metadata for the Download Service shall EITHER be linked to via an &lt;inspire_common:MetadataURL&gt; in an extended capabilities section, OR the extended capabilities section shall contain all the INSPIRE Metadata for the Download Service in accordance with Table 4 and the inspire_dls:ExtendedCapabilities schema.</p>
+The INSPIRE Download Service metadata elements shall be available in one of the following ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The extended capabilities section of the Download Service is in accordance with the schema at <a href="https://inspire.ec.europa.eu/schemas/inspire_ds/1.0/inspire_ds.xsd" class="bare">https://inspire.ec.europa.eu/schemas/inspire_ds/1.0/inspire_ds.xsd</a> and contains a link to the metadata record of the service in an INSPIRE Discovery catalogue in element &lt;inspire_common:MetadataURL&gt;;</p>
+</li>
+<li>
+<p>The capabilities section of the Download Service contains the Download Service metadata elements in accordance with Table 19a and the schema at <a href="https://inspire.ec.europa.eu/schemas/inspire_ds/1.0/inspire_ds.xsd" class="bare">https://inspire.ec.europa.eu/schemas/inspire_ds/1.0/inspire_ds.xsd</a>;</p>
+</li>
+<li>
+<p>The capabilities section of the Download Service contains the Download Service metadata elements in accordance with Table 19b.</p>
+</li>
+</ol>
 </div>
 </td>
 </tr>
@@ -5626,6 +5981,43 @@ The Extended Capabilities shall contain the <strong>list of supported languages<
 </td>
 </tr>
 </table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">📕</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>TG Requirement 79</strong><br>
+If the service supports several languages and if there is no Extended Capabilities, the xml:lang attribute shall be used to define the languages used.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml"> &lt;ows:ServiceIdentification&gt;
+      &lt;ows:Title xml:lang="en"&gt;My WFS&lt;/ows:Title&gt;
+      &lt;ows:Title xml:lang="da"&gt;Min WFS&lt;/ows:Title&gt;
+      &lt;ows:Abstract xml:lang="en"&gt;My abstract&lt;/ows:Abstract&gt;
+      &lt;ows:Abstract xml:lang="da"&gt;Min abstrakt&lt;/ows:Abstract&gt;
+      &lt;ows:Keywords&gt;
+        &lt;ows:Keyword xml:lang="en"&gt;My keyword&lt;/ows:Keyword&gt;
+        &lt;ows:Keyword xml:lang="da"&gt;Mit emneord&lt;/ows:Keyword&gt;
+      &lt;/ows:Keywords&gt;
+      &lt;ows:ServiceType&gt;WFS&lt;/ows:ServiceType&gt;
+      &lt;ows:ServiceTypeVersion&gt;2.0.2&lt;/ows:ServiceTypeVersion&gt;
+      &lt;ows:ServiceTypeVersion&gt;2.0.1&lt;/ows:ServiceTypeVersion&gt;
+      &lt;ows:ServiceTypeVersion&gt;2.0.0&lt;/ows:ServiceTypeVersion&gt;
+      &lt;ows:ServiceTypeVersion&gt;1.1.0&lt;/ows:ServiceTypeVersion&gt;
+      &lt;ows:ServiceTypeVersion&gt;1.0.0&lt;/ows:ServiceTypeVersion&gt;
+      &lt;ows:Fees&gt;NONE&lt;/ows:Fees&gt;
+      &lt;ows:AccessConstraints&gt;NONE&lt;/ows:AccessConstraints&gt;
+   &lt;/ows:ServiceIdentification&gt;</code></pre>
+</div>
 </div>
 <div class="admonitionblock important">
 <table>
