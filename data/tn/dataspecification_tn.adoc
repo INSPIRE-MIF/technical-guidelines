@@ -5816,7 +5816,6 @@ The primary aspects modelled for air network elements are:
 * Temporal. All elements in a network may have a temporal validity (i.e. description of when the network element exists in the real world) and also optional information on when data was entered, modified or deleted in the dataset.
 * Thematic. The air schema can be thematically displayed via several of the attributes defined within the specification such as altitude.
 
-*Please Note:* The "ControlTower" feature has been inserted as a Placeholder in this version of the Transport Networks data specification (v3.0.1) for future population by the INSPIRE "Buildings" theme when the "[AppSchemaName]" should be updated. This affects the relevant entry in Table 14 and and in section 5.7.2.1.13.
 
 ===== UML Overview
 
@@ -6015,6 +6014,18 @@ a|
 !Definition: !The four letter ICAO location indicator of the aerodrome (airport/heliport), as listed in ICAO DOC 7910.
 !Description: !SOURCE [AIXM5.0].
 !Multiplicity: !1
+!Stereotypes: !«voidable»
+!===
+
+a|
+*Association role: controlTowers*
+
+[cols=","]
+!===
+!Value type: !Building of the Buildings Base package
+!Definition: !The set of control towers belonging to an aerodrome (airport/heliport).
+!Description: !
+!Multiplicity: !0..*
 !Stereotypes: !«voidable»
 !===
 
@@ -8812,14 +8823,7 @@ The xml schema document is available from
 _http://inspire.ec.europa.eu/schemas/tn-a/3.0/AirTransportNetwork.xsd_.
 
 [.red.background]
-====
-*Open issue 1:* In the amendment of the Implementing Rules, a number of changes have been introduced to the Annex I data models.
 
-In the Air Transport Elements data model, the type targetElement of the controlTowers property has been changed from the Building placeholder type to the type AbstractConstruction in the Buildings theme.
-
-As a consequence, the Air Transport Elements xml schema needs to be updated to reflect these changes. These changes and the overall process for xml schema maintenance in INSPIRE are currently being discussed in the INSPIRE maintenance and implementation group (MIG). For further information on the status of these discussions, see https://ies-svn.jrc.ec.europa.eu/projects/mig-inspire
-
-====
 
 ====== Encoding rules used
 
