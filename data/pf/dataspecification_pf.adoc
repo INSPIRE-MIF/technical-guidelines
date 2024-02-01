@@ -1189,7 +1189,10 @@ a|
 [cols=","]
 !===
 !Name: !production installation
-!Definition: !A technical unit, such as machinery, apparatus, devices or equipment placed in position or connected for use.
+!Definition: !A stationary technical unit, such as machinery, apparatus, devices or equipment placed in position or connected for use, within which one or more activities listed in Annex I to Regulation (EC) No 166/2006 of the European Parliament and of the Council (^1^) and in Annex I or in Part 1 of Annex VII to Directive 2010/75/EU of the European Parliament and of the Council (^2^) are carried out, and any other directly associated activities which have a technical connection with the activities listed and which could have an effect on emissions and pollution.
+
+(^1^) Commission Regulation (EC) No 166/2006 of 18 January 2006 concerning the establishment of a European Pollutant Release and Transfer Register and amending Council Directives 91/689/EEC and 96/61/EC (OJ L 33, 4.2.2006, p. 1).
+(^2^) Directive 2010/75/EU of the European Parliament and of the Council of 24 November 2010 on industrial emissions (integrated pollution prevention and control) (OJ L 334, 17.12.2010, p. 17).
 !Description: !Stationary technical unit part of a facility where one or more activities are carried out, and any other directly associated activities which have a technical connection to the activities carried out on that site and which could have an effect on the environment. 
 May be a technical unit within an establishment in which dangerous substances are produced, used, handled or stored.
 !Stereotypes: !«featureType»
