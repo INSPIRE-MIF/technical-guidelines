@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.II.2 Data Specification on Land Cover – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Land Cover
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Land Cover
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -41,24 +41,6 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 = D2.8.II.2 Data Specification on _Land Cover_ – Technical Guidelines
 
-[width="100%",cols="17%,83%"]
-|===
-|*Title* |D2.8.II.2 INSPIRE Data Specification on _Land Cover_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Land Cover_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Land Cover_
-|*Publisher* |European Commission Joint Research Centre
-|*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Land Cover_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Land Cover_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.II.2_v3.0
-|*Language* |En
-|*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
-|===
 
 [width="100%",cols="17%,83%",]
 |===
@@ -72,7 +54,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/lc[D2.8.II.2_v3.0.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/lc[D2.8.II.2_v3.1.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -1686,7 +1668,7 @@ A special case is a data set which contains changing information, e.g. the CORIN
 
 *Feature catalogue metadata*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Application Schema |INSPIRE Application Schema LandCoverVector
 |Version number |3.0
@@ -2307,7 +2289,7 @@ The Land Cover specification recommends to provide the reference date (c) at cov
 
 *Feature catalogue metadata*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Application Schema |INSPIRE Application Schema LandCoverRaster
 |Version number |3.0
@@ -2626,7 +2608,7 @@ When extending LandCoverVector application schema, same requirements apply, in p
 
 *Feature catalogue metadata*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Application Schema |INSPIRE Application Schema LandCoverExtension
 |Version number |3.0
@@ -3969,7 +3951,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -4014,7 +3996,7 @@ Example XML encoding	<gmd:referenceSystemInfo>
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -4059,7 +4041,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -4098,7 +4080,7 @@ specification: D2.8.II.2 Data Specification on Land Cover – Technical Guidelin
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -4123,7 +4105,7 @@ specification: D2.8.II.2 Data Specification on Land Cover – Technical Guidelin
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -4195,7 +4177,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -4271,7 +4253,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -4319,7 +4301,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -4740,7 +4722,7 @@ None.
 
 ==== Styles for the layer LC.LandCoverPoints
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*LC.LandCoverPoints.Default*
 |*Default Style* |yes
@@ -4784,7 +4766,7 @@ No scale limit
 
 ==== Style for the layer LC.LandCoverSurfaces
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*LC.LandCoverSurfaces.Default*
 |*Default Style* |yes
@@ -4827,7 +4809,7 @@ No scale limit
 
 ==== Style for the layer LC.LandCoverRaster
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*LC.LandCoverRaster.Default*
 |*Default Style* |yes
@@ -5834,7 +5816,7 @@ In addition, _GPG-LULUCF_ provides guidance related to the specific features of 
 
 ==== Detailed, structured description
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|*Use Case Description*
 |Name |Land and Ecosystem Accounting (LEAC) - support revision and implementation of UNSD-SEEA (System of Economic and Environmental Accounting) Handbook
@@ -6982,7 +6964,7 @@ The LCML translation of CLC 213 indicated that "Graminae", "Water Body" and "Per
 
 The first basic element is "graminae" which is translated 100% to the PLCC "009_Hherbaceous plants". Other basic elements, properties and optional characteristics are ignored. The second element water body goes easily to PLCC "016_Fresh water body".
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Basic Element* |*PLC component*
 |graminae |009_Herbaceous plants
@@ -6996,7 +6978,7 @@ image::./media/image69.png[image, align=center]
 
 The semantic analysis identified three horizontal patterns for CLC243; "herbaceous or woody crops", "natural vegetation" and "water bodies", considered as integral elements of a single "functional unit". Such complex semantic interpretation requires clear and fixed ranges of proportional percentages between the three patterns. These patterns in turn represent one or more PLC components.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Horizontal Pattern* |*Contributing PLC components*
 |herbaceous or woody crops |004_Arable_land, 009_Herbaceous_plants, 005_Permanent_woody_and_shrub_crops

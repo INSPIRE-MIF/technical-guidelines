@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.5 Data Specification on Human Health and Safety – Technical Guidelines
+:revdate: 2024-01-31
+:keywords: INSPIRE Data Specification for the spatial data theme Human Health and Safety
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Human Health and Safety
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:lang: en
+
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -30,23 +41,22 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 = D2.8.III.5 Data Specification on _Human Health and Safety_ – Technical Guidelines
 
-[cols=",",]
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.5 INSPIRE Data Specification on _Human Health and Safety_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Human Health and Safety_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Human Health and Safety_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Human Health and Safety_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Human Health and Safety_
-|*Format* |See file extension
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.5_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/hh[D2.8.III.5_v4.0.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
 
 <<<
@@ -288,7 +298,7 @@ NOTE This is an updated version of "EN ISO 19125-1:2006, Geographic information 
 General terms and definitions helpful for understanding the INSPIRE data specification documents are defined in the INSPIRE Glossaryfootnote:[The INSPIRE Glossary is available from http://inspire-registry.jrc.ec.europa.eu/registers/GLOSSARY].
 
 === Symbols and abbreviations
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |AU |Administrative Units
 |COD |European shortlist of causes of death
@@ -4093,7 +4103,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -4141,7 +4151,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -4189,7 +4199,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -4230,7 +4240,7 @@ specification: D2.8.III.5 Data Specification on _Human Health and Safety_ – Te
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -4253,7 +4263,7 @@ specification: D2.8.III.5 Data Specification on _Human Health and Safety_ – Te
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -4318,7 +4328,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -4401,7 +4411,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -4449,7 +4459,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -4696,7 +4706,7 @@ None.
 
 ==== Styles for the layer HH.HealthStatisticalData
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HH.HealthStatisticalData.Default*
 |*Default Style* |yes
@@ -4721,7 +4731,7 @@ Human health and safety statistical data portrayal rules should follow typical r
 
 ==== Styles for the layer HH.HealthDeterminantMeasure
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HH.HealthDeterminantMeasure.Default*
 |*Default Style* |yes
@@ -4793,7 +4803,7 @@ Outline width: 3pt
 
 ==== Styles for the layer HH.Event
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HH.Event.Default*
 |*Default Style* |yes
@@ -5632,7 +5642,7 @@ This use case is developed for many applications:
 * identify vulnerable population and determinants of exposure to manage and plan remedial actions in order to reduce environmental pollution by choosing options which minimize health risk ;
 * provide exposure dataset to quantify spatial relationships between risk estimates and disease data in epidemiological study context.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+^|*Use Case Description*
 |*Name* |Detection of hotspot exposure area and vulnerable population due to contaminated drinking water consumption
@@ -6106,7 +6116,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !Environment health determinant
 !Definition: !Type of environmental health determinant.
@@ -6173,7 +6183,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !General health type
 !Definition: !Type of health status indicators.
@@ -6249,7 +6259,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !Health services type
 !Definition: !This codelist contains some items included and defined by Eurostat as "Non-expenditure health care data" (http://epp.eurostat.ec.europa.eu/cache/ITY_SDDS/EN/hlth_care_esms.htm).
@@ -6361,7 +6371,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !Environmental health media type
 !Definition: !The media in which the concentration of a health component is measured.
@@ -6456,7 +6466,7 @@ soil
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !Statistical aggregation method
 !Definition: !The types of statistical methods used to aggregate raw measurement data on the statistical unit.
@@ -6544,7 +6554,7 @@ standardDeviation
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !building use value.
 !Definition: !List of values showing the type of use of the building.
@@ -6602,7 +6612,7 @@ healthService
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !consequence type value
 !Definition: !Types of consequence caused by an event.
@@ -6669,7 +6679,7 @@ estimatedCostForSociety
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !fire or explosion type value
 !Definition: !The value allowed for the fire or explosion related event type
@@ -6709,7 +6719,7 @@ explosion
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !hazardous material related event type
 !Definition: !Codes for hazardous materials.
@@ -6776,7 +6786,7 @@ Explosive
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !traffic type value
 !Definition: !List of type of traffic related event.

@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.III.1 Data Specification on Statistical Units – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Statistical Units
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Statistical Units
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -54,7 +54,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/su[D2.8.III.1_v3.1.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/su[D2.8.III.1_v3.2.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -3532,7 +3532,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -3576,7 +3576,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -3620,7 +3620,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -3657,7 +3657,7 @@ specification: D2.8.III.1 Data Specification on _Statistical Units_ – Technica
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -3680,7 +3680,7 @@ specification: D2.8.III.1 Data Specification on _Statistical Units_ – Technica
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -3747,7 +3747,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -3823,7 +3823,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -3868,7 +3868,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -4160,7 +4160,7 @@ None.
 
 ==== Styles for the layer SU.VectorStatisticalUnits
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*SU.VectorStatisticalUnits*
 |*Default Style* |Yes
@@ -4320,7 +4320,7 @@ geometries.geometryDescriptor.geometryType</se:ValueReference>
 
 ==== Styles for the layer SU.StatisticalGridCell
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*SU.StatisticalGridCell*
 |*Default Style* |Yes
@@ -4372,7 +4372,7 @@ image::./media/image21.png[image,width=32,height=32, align=center]
 
 ==== Styles for the layer SU.VectorStatisticalUnits
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*SU.VectorStatisticalUnits.X*
 |*Style Title* |Vector statistical units style.
@@ -4383,7 +4383,7 @@ image::./media/image21.png[image,width=32,height=32, align=center]
 
 ==== Styles for the layer SU.StatisticalGridCell
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*SU.StatisticalGridCell.X*
 |*Style Title* |Statistical grid cell style.
@@ -5171,7 +5171,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !Geometry type value
 !Definition: !The code values for the geometry types.

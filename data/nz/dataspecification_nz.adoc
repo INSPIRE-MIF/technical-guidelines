@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.12 Data Specification on Natural Risk Zones – Technical Guidelines
+:revdate: 2024-01-31
+:keywords: INSPIRE Data Specification for the spatial data theme Natural Risk Zones
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Natural Risk Zones
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:lang: en
+
 image::./media/image1.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image2.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -30,23 +41,22 @@ image:./media/image2.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 = D2.8.III.12 Data Specification on _Natural Risk Zones_ – Technical Guidelines
 
-[cols=",",]
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.12 INSPIRE Data Specification on _Natural Risk Zones_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Natural Risk Zones_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Natural_ Risk Zones
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Natural Risk Zones_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Natural Risk Zones_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.12_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/nz[D2.8.III.12_v3.1.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
 
 <<<
@@ -445,7 +455,7 @@ EXAMPLE: Elderly residents
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |CRED |Centre of Research on the Epidemiology of Disasters)
@@ -3975,7 +3985,7 @@ No scale limits
 
 This style is for the representation of observed events as polygons or grid cells (coverage). Observed events are usually represented using a single colour schema depending on the values taken from the attribute "typeOfHazard". There are different portrayal schemas depending on hazard types. Therefore in this section we propose generic recommendations for the portrayal of observed events. The example in the table below shows a Styled Layer Descriptor (SLD) Symbology for observed floods.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |NZ.ObservedEvent - type of hazard
 |*Style Title* |Observed Event
@@ -3996,7 +4006,7 @@ No scale limits
 
 ==== Styles for the layer NZ.ExposedElement 
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |NZ.ExposedElement
 |*Style Title* |Exposed element
@@ -5070,7 +5080,7 @@ Specific forest fire policies exist in most EU Member States, but a harmonisatio
 Overview and involved actors
 There is lack of consensus in the literature on the meaning of the term "forest fire risk". Allgöwer et al. (2003) identified two main approaches to this term. First, the "wildland fire community" has defined fire risk by looking at the chances of having a fire event. For instance, FAOfootnote:[http://www.fao.org/forestry/firemanagement/13530/en/] defines forest fire risk as "the probability of fire initiation due to the presence and activity of a causative agent". This approach neglect the outcome (damage potential) of a possible fire event (Allgöwer et al., 2003; Chuvieco et al., 2010). Second, the "structural fire community" has implemented a fire risk approach that is more in line with the approach followed in other natural hazards, where risk is a function of probability of occurrence and consequence. In this document we follow the second approach because of its comprehensiveness and the inclusion of the two main components of forest fire risk: fire danger and vulnerability. Within this approach fire risk is the probability of a fire to happen and its consequences, fire danger considers the potential that a fire ignites and propagates, and vulnerability relates to the potential damage caused by the fire. It is noteworthy that the term exposure is not common in the forest fire literature. Being not exhaustive the table below illustrates the terminology used in the Forest Fires Use Case and compares it with the terminology adopted in Chapter 2 by TWG NZ. Figure 2 shows the framework adopted in this document and the interlinks between the factors of forest fire risk.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Data Specification *on Natural Risk Zones* |Forest Fires Use Case
 |Hazard: A dangerous phenomenon, substance, human activity or condition that may cause loss of life, injury or other health impacts, property damage, loss of livelihoods and services, social and economic disruption, or environmental damage. |Forest fire danger can be defined as the probability that a fire with a given intensity ignites and propagates.
@@ -5127,7 +5137,7 @@ This use case describes the main data needed for preparing forest fire danger ma
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|Use case description 
 |Name |Accessing data to assess forest fire danger
@@ -5191,7 +5201,7 @@ This use case describes how these datasets can be accessed so that a vulnerabili
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|Use case description
 |Name |Accessing data to assess vulnerability to forest fires
@@ -5244,7 +5254,7 @@ The implementation of this use case follows the results of the previous use case
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|Use case description
 |Name |Accessing data to assess forest fires risk
@@ -5329,7 +5339,7 @@ Landslide inventories are fundamental for developing rigorous hazard, vulnerabil
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|Use case description
 |Name |Landslides
@@ -5430,7 +5440,7 @@ Damage Assesment Report:
 
 The aim is the vulnerability (damage) assessment against landslides, considering human life, land resources, structures, infrastructure, and cultural heritage.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|Use case description
 |Name |Landslides
@@ -5469,7 +5479,7 @@ Risk assessment and communicating risk should be performed in an easily understo
 
 *Detailed description*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+|Use case description
 |Name |Landslides

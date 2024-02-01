@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.11 Data Specification on Area Management/Restriction/Regulation Zones and Reporting Units – Technical Guidelines
+:revdate: 2024-01-31
+:keywords: INSPIRE Data Specification for the spatial data theme Area Management/Restriction/Regulation Zones and Reporting Units
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Area Management/Restriction/Regulation Zones and Reporting Units
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:lang: en
+
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -30,23 +41,22 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 == D2.8.III.11 Data Specification on _Area Management/Restriction/Regulation Zones and Reporting Units_ – Technical Guidelines
 
-[cols=",",]
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.11 INSPIRE Data Specification on _Area Management/Restriction/Regulation Zones and Reporting Units_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Area Management/Restriction/Regulation Zones and Reporting Units_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Area Management/Restriction/Regulation Zones and Reporting Units_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Area Management/Restriction/Regulation Zones and Reporting Units_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Area Management/Restriction/Regulation Zones and Reporting Units_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.11_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/am[D2.8.III.11_v3.1.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
 
 <<<
@@ -610,7 +620,7 @@ NOTE 1 The classical period is 30 years, as defined by the World Meteorological 
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |AM |Area Management/Restriction/Regulation Zones and Reporting Units
 |AQD |Air Quality Directive (2008/50/EC)
@@ -1315,7 +1325,7 @@ Some ManagementRestrictionOrRegulationZone spatial objects may be assigned more 
 
 The WISE River Basin Districts v1.4 data specification defines the following identifier properties that are assigned to a River Basin District:
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Attribute Name* |*Description*
 |Database Internal Key (Object ID) |Internal unique identifier (Primary Key).
@@ -3480,7 +3490,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.AirQualityManagementZone
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.AirQualityManagementZone.Default*
 |*Default Style* |yes
@@ -3575,7 +3585,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.AnimalHealthRestrictionZone
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.AnimalHealthRestrictionZone.Default*
 |*Default Style* |yes
@@ -3588,7 +3598,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.AreaForDisposalOfWaste
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.AreaForDisposalOfWaste.Default*
 |*Default Style* |yes
@@ -3601,7 +3611,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.BathingWaters
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.BathingWaters.Default*
 |*Default Style* |yes
@@ -3614,7 +3624,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.CoastalZoneManagementArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.CoastalZoneManagementArea.Default*
 |*Default Style* |yes
@@ -3627,7 +3637,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.DesignatedWaters
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.DesignatedWaters.Default*
 |*Default Style* |yes
@@ -3640,7 +3650,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.DrinkingWaterProtectionArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.DrinkingWaterProtectionArea.Default*
 |*Default Style* |yes
@@ -3653,7 +3663,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.FloodUnitOfManagement
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.FloodUnitOfManagement.Default*
 |*Default Style* |yes
@@ -3666,7 +3676,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.ForestManagementArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.ForestManagementArea.Default*
 |*Default Style* |yes
@@ -3679,7 +3689,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.MarineRegion
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.MarineRegion.Default*
 |*Default Style* |yes
@@ -3692,7 +3702,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.NitrateVulnerableZone
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.NitrateVulnerableZone.Default*
 |*Default Style* |yes
@@ -3705,7 +3715,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.NoiseRestrictionZone
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.NoiseRestrictionZone.Default*
 |*Default Style* |yes
@@ -3718,7 +3728,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.PlantHealthProtectionZone
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.PlantHealthProtectionZone.Default*
 |*Default Style* |yes
@@ -3731,7 +3741,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.ProspectingAndMiningPermitArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.ProspectingAndMiningPermitArea.Default*
 |*Default Style* |yes
@@ -3744,7 +3754,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.RegulatedFairwayAtSeaOrLargeInlandWater
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.RegulatedFairwayAtSeaOrLargeInlandWater.Default*
 |*Default Style* |yes
@@ -3757,7 +3767,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.RestrictedZonesAroundContaminatedSites
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.RestrictedZonesAroundContaminatedSites.Default*
 |*Default Style* |yes
@@ -3770,7 +3780,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.RiverBasinDistrict
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.RiverBasinDistrict.Default*
 |*Default Style* |yes
@@ -3783,7 +3793,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.SensitiveArea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.SensitiveArea.Default*
 |*Default Style* |yes
@@ -3796,7 +3806,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 ==== Styles for the layer AM.WaterBodyForWFD
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AM.WaterBodyForWFD.Default*
 |*Default Style* |yes
@@ -3811,7 +3821,7 @@ NOTE The symbology is defined in two SLD/SE fragments describing the layer and s
 
 The table below includes a template to be used for defining the default style for layers not explicitly defined in this data specification. The text in angle brackets (<...>) should be replaced with appropriate text for the layer. The rest of the "boilerplate" text should be left unchanged.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*<UpperCamelCase layer name>.Default*
 |*Default Style* |yes

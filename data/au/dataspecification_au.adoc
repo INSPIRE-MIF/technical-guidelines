@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.I.4 Data Specification on Administrative Units – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Administrative Units
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Administrative Units
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE***Inf
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/au[D2.8.I.4_v3.1.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/au[D2.8.I.4_v3.2.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -1136,7 +1136,7 @@ with nationalLevel=3
 
 Finally, the following associations between boundaries and administrative units have to be built:
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*BOUNDARY* *=>* *UNIT* |*UNIT* *=>* *BOUNDARY*
 a|
@@ -1279,7 +1279,7 @@ BF3.3 = C3.3(P8,P3,P4,P9,P5)
 
 Finally, the following associations between boundaries and administrative units have to be built:
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*BOUNDARY* *=>* *UNIT* |*UNIT* *=>* *BOUNDARY*
 a|
@@ -3480,7 +3480,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -3524,7 +3524,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -3571,7 +3571,7 @@ referenceSystemIdentifier:
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -3608,7 +3608,7 @@ specification: D2.8.I.4 Data Specification on Administrative Units – Technical
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -3631,7 +3631,7 @@ specification: D2.8.I.4 Data Specification on Administrative Units – Technical
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -3695,7 +3695,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -3772,7 +3772,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -3817,7 +3817,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -4133,7 +4133,7 @@ None.
 
 ==== Styles for the layer AU.AdministrativeUnit
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AU.AdministrativeUnit.Default*
 |*Default Style* |yes
@@ -4175,7 +4175,7 @@ image::./media/image27.png[image]
 
 ==== Styles for the layer AU.AdministrativeBoundary
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AU.AdministrativeBoundary.Default*
 |*Default Style* |yes
@@ -4218,7 +4218,7 @@ image::./media/image28.png[image]
 
 ==== Styles for the layer AU.Condominium
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AU.Condominium.Default*
 |*Default Style* |yes
@@ -4260,7 +4260,7 @@ image::./media/image29.png[image]
 
 ==== Styles for the layer AU.Baseline
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AU.Baseline.Default*
 |*Default Style* |yes
@@ -4305,7 +4305,7 @@ image::./media/image30.png[image]
 
 ==== Styles for the layer AU.MaritimeBoundary
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AU.MaritimeBoundary.Default*
 |*Default Style* |yes
@@ -4348,7 +4348,7 @@ image::./media/image31.png[image]
 
 ==== Styles for the layer AU.ContiguousZone
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AU.ContiguousZone.Default*
 |*Default Style* |yes
@@ -4394,7 +4394,7 @@ image::./media/image31.png[image]
 
 ==== Styles for the layer AU.ContinentalShelf
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AU.ContinentalShelf.Default*
 |*Default Style* |yes
@@ -4438,7 +4438,7 @@ image::./media/image33.png[image]
 
 ==== Styles for the layer AU.ExclusiveEconomicZone
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AU.ExclusiveEconomicZone.Default*
 |*Default Style* |yes
@@ -4487,7 +4487,7 @@ image::./media/image34.png[image]
 
 ==== Styles for the layer AU.InternalWaters
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AU.InternalWaters.Default*
 |*Default Style* |yes
@@ -4538,7 +4538,7 @@ image::./media/image35.png[image]
 
 ==== Styles for the layer AU.TerritorialSea
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*AU.TerritorialSea.Default*
 |*Default Style* |yes
@@ -5529,7 +5529,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !maritime zone type value
 !Definition: !Type of maritime zone.

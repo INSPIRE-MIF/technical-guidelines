@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.18 Data Specification on Habitats and Biotopes – Technical Guidelines
+:revdate: 2024-01-31
+:keywords: INSPIRE Data Specification for the spatial data theme Habitats and Biotopes
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Habitats and Biotopes
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:lang: en
+
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -30,23 +41,22 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 = D2.8.III.18 Data Specification on _Habitats and Biotopes_ – Technical Guidelines
 
-[cols=",",]
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.18 INSPIRE Data Specification on _Habitats and Biotopes_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Habitats and Biotopes_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Habitats and Biotopes_
-|*Publisher* |European Commision Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Habitats and Biotopes_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Habitats and Biotopes_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.18_v3.0
-|*Language* |En
-|*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Union (INSPIRE)
-|*Coverage* |Project duration
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/hb[D2.8.III.18_v4.0.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
+|*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
 |===
 
 <<<
@@ -427,7 +437,7 @@ Many vegetation type classification systems exist all over Europe. Some of these
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |EBONE |European Biodiversity Observation Network
@@ -3336,7 +3346,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -3382,7 +3392,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -3428,7 +3438,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -3467,7 +3477,7 @@ specification: D2.8.III.18 Data Specification on _Habitats and Biotopes_ – Tec
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -3490,7 +3500,7 @@ specification: D2.8.III.18 Data Specification on _Habitats and Biotopes_ – Tec
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -3553,7 +3563,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -3634,7 +3644,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -3681,7 +3691,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -3986,7 +3996,7 @@ None.
 
 ==== Styles for the layer HB.Habitat
     
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HB.Habitat.Default*
 |*Default Style* |yes
@@ -4131,7 +4141,7 @@ image::./media/image21.png[image,width=485,height=190, align=center]
 
 ==== Styles for the layer HB.HabitatDistribution
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HB.HabitatDistribution.Default*
 |*Default Style* |yes
@@ -4207,7 +4217,7 @@ Example of SLD:
 
 ==== Styles for the layer HB.Habitat
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HB.Habitat*
 |*Style Title* |_Habitats and Biotopes_ (Features) Style
@@ -6247,7 +6257,7 @@ image::./media/image26.jpeg[Inspire_habitat_example_2,width=300,height=199]
 
 *Reporting format on the 'main results of the surveillance under Article 11' for Annex I Habitats Types*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*_Field definition_* |*_Brief explanations_*
 |*0.1 Member State* |The MS for which the reported data apply; use 2 digit code according to list to be found in the reference portal.
@@ -6276,7 +6286,7 @@ Optional
 |*1.1.5. Range map* |Submit a map that was used for range evaluation following the same standard as under 1.1.1. or 1.1.4.
 |===
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+^|*2. Biogeographical level*
 Complete for each biogeographical region or marine region concerned
@@ -6511,7 +6521,7 @@ a|
 |
 |===
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+^|*2.7 Complementary information*
 |*2.7.1 Typical species* |List the typical species used.
@@ -6532,7 +6542,7 @@ a|
 |*2.7.5 Other relevant information* |Free text
 |===
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 2+^|
 *2.8. Conclusions*
@@ -7124,7 +7134,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !reference habitat type scheme value
 !Definition: !This value defines which pan-european habitat classification scheme has been used.

@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.I.8 Data Specification on Hydrography – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Hydrography
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Hydrography
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/hy[D2.8.I.8_v3.3.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/hy[D2.8.I.8_v3.4.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -354,7 +354,7 @@ An area of land from which all surface run-off flows through a series of streams
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |EC |European Commission
 |HY |Hydrography
@@ -4456,7 +4456,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -4497,7 +4497,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -4538,7 +4538,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -4572,7 +4572,7 @@ specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelin
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -4595,7 +4595,7 @@ specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelin
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -4663,7 +4663,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -4737,7 +4737,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -4782,7 +4782,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -4815,7 +4815,7 @@ For evaluation purpose the Data quality measure and Metadata element _Rate of mi
 
 ==== Identification – Extent
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Extent*
 |Definition |Extent information including the bounding box, bounding polygon, vertical, and temporal extent of the dataset
@@ -4846,7 +4846,7 @@ description: "Rhine, A5001"
 
 ==== Distribution – Digital Transfer Options
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Digital Transfer options*
 |Definition |Provides information about technical means and media by which a resource is obtained from the distributor
@@ -5555,7 +5555,7 @@ None.
 
 ==== Styles for the layer HY.PhysicalWaters.Waterbodies
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.Waterbodies.Default*
 |*Default Style* |yes
@@ -5641,7 +5641,7 @@ image::./media/image63.png[image]
 
 ==== Styles for the layer HY.PhysicalWaters.LandWaterBoundary
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.LandWaterBoundary.Default*
 |*Default Style* |yes
@@ -5681,7 +5681,7 @@ image::./media/image63.png[image]
 
 ==== Styles for the layer HY.PhysicalWaters.Catchments
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.Catchments.Default*
 |*Default Style* |Yes
@@ -5868,7 +5868,7 @@ image::./media/image63.png[image]
 
 ==== Styles for the layer HY.PhysicalWaters.HydroPointOfInterest
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.HydroPointOfInterest.Default*
 |*Default Style* |yes
@@ -6291,7 +6291,7 @@ image::./media/image68.png[image]
 
 ==== HY.PhysicalWaters.Wetland
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.Wetland.Default*
 |*Default Style* |yes
@@ -6331,7 +6331,7 @@ image::./media/image69.png[image]
 
 ==== HY.PhysicalWaters.Shore
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.Shore.Default*
 |*Default Style* |yes
@@ -6782,7 +6782,7 @@ image::./media/image72.png[image]
 
 ==== Styles for the layer HY.PhysicalWaters.LandWaterBoundary
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*HY.PhysicalWaters.LandWaterBoundary*
 |*Style Title* |Land water boundary well defined style
@@ -7764,7 +7764,7 @@ image::./media/image48.jpeg[7,width=493,height=319]
 [.text-center]
 *Figure 29 – Use case mapping.*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Data requirements a|
 * Main hydrographic elements, both natural and artificial; Facilities and constructions;
@@ -7780,7 +7780,7 @@ image::./media/image48.jpeg[7,width=493,height=319]
 
 It is neither intended nor a goal of the INSPIRE directive to take over and organize the reporting duties of Member States on EU directives. INSPIRE intends to build an infrastructure that helps to organize and implement reporting structures for decentralized European data structures. Reports are however always given in relation to existing geographical structures; even though the reporting units themselves may differ from these due to specific legislation.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Data requirements a|
 Depend on the specific directive / reporting requirement. Examples of identified data requirements:
@@ -8088,7 +8088,7 @@ There are not many attributes on the network features. The reason for this is th
 
 Nodes in a network can have different purposes; this is described using the hydroNodeCategory attribute. The table below describes the purpose of the different node categories and to which HydroNodeCategoryType the feature types of HydroPointOfInterest and ManMadeObjects should be mapped into the network.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Purpose or Feature type* |*HydroNodeCategoryType*
 |SpringOrSeep (Start node) |Source

@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.II/III.7 INSPIRE Data Specification on Environmental Monitoring Facilities – Technical Guidelines
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Environmental Monitoring Facilities
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Environmental Monitoring Facilities
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -55,7 +55,7 @@ image:./media/image3.png[image,width=93,height=93, align=center]
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/ef[D2.8.II/III.7_v3.1.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/ef[D2.8.II/III.7_v3.2.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -289,7 +289,7 @@ This aspect was discussed and agreed between the thematic working groups and the
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |EC |European Commission
@@ -972,7 +972,7 @@ Not relevant for the EF data specification.
 
 *Feature catalogue metadata*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Application Schema |INSPIRE Application Schema EnvironmentalMonitoringFacilities
 |Version number |3.0
@@ -2697,7 +2697,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -2739,7 +2739,7 @@ odeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -2781,7 +2781,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -2817,7 +2817,7 @@ Technical Guidelines</gco:CharacterString>
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -2841,7 +2841,7 @@ Technical Guidelines</gco:CharacterString>
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -2898,7 +2898,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -2975,7 +2975,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -3021,7 +3021,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*See chapter 7*
 |Definition |See chapter 7
@@ -3055,7 +3055,7 @@ NOTE The DQ_Result type should be DQ_DescriptiveResult and in the statement (68.
 – Date type: publication 
 – Date: 2013-01-14
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Keyword*
 |Definition a|
@@ -3362,7 +3362,7 @@ None.
 
 ==== Styles for the layer EF.EnvironmentalMonitoringFacilities
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EF.EnvironmentalMonitoringFacilities.Default*
 |*Default Style* |Yes
@@ -3488,7 +3488,7 @@ None
 
 ==== Styles for the layer EF.EnvironmentalMonitoringNetworks
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EF.EnvironmentalMonitoringNetwork.Default*
 |*Default Style* |Yes
@@ -3587,7 +3587,7 @@ None
 
 ==== Styles for the layer EF.EnvironmentalMonitoringProgrammes
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*EF.EnvironmentalMonitoringProgramme.Default*
 |*Default Style* |Yes
@@ -5115,7 +5115,7 @@ Link to the relevant information regarding the reporting exercise concerned.
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !measurement regime
 !Definition: !Categories for different types of the MeasurementRegime.
@@ -5173,7 +5173,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !media
 !Definition: !Categories for different types of media.
@@ -5291,7 +5291,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !result acquisition source
 !Definition: !Categories for different types of the ResultAcquisitionSource.
@@ -5349,7 +5349,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !result nature
 !Definition: !State of the result of an observation.

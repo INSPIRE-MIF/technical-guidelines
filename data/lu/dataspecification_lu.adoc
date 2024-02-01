@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.III.4 Data Specification on Land Use – Technical Guidelines
-:revdate: 2023-01-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Land Us
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Land Us
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/lu[D2.8.III.4_v3.0.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/lu[D2.8.III.4_v3.1.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -477,7 +477,7 @@ NOTE "Zoning is an important component of land-use planning. It commonly include
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |EC |European Commission
@@ -4458,7 +4458,7 @@ NOTE This data quality measure is different than the standard deviation.
 
 For PLU (polygons) the positional accuracy is portrayed as an estimated value based to the scale of the data as follows:
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !*Scale, 1:n* !*Estimated geometric accuracy; normal data quality*
 !1 000 000 !500 m
@@ -4898,7 +4898,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -4942,7 +4942,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |Metadata element name |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -4984,7 +4984,7 @@ referenceSystemIdentifier:
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -5021,7 +5021,7 @@ specification: D2.8.III.4 Data Specification on _Land Use_ – Technical Guideli
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -5044,7 +5044,7 @@ specification: D2.8.III.4 Data Specification on _Land Use_ – Technical Guideli
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -5105,7 +5105,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -5186,7 +5186,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -5234,7 +5234,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -5544,7 +5544,7 @@ None.
 
 ==== Styles for the layer LandUse.ExistingLandUse
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*LandUse.ExistingLandUse.Default*
 |*Default Style* |yes
@@ -5567,7 +5567,7 @@ image::./media/image71.png[image]
 
 ==== Styles for the layer LandUse.SpatialPlan
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*LandUse.SpatialPlan.Default*
 |*Default Style* |yes
@@ -5580,7 +5580,7 @@ image::./media/image71.png[image]
 
 ==== Styles for the layer LandUse.ZoningElement
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*LandUse.ZoningElement.Default*
 |*Default Style* |yes
@@ -5603,7 +5603,7 @@ image::./media/image73.png[image]
 
 ==== Styles for the layer LandUse.SupplementaryRegulation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*LandUse.SupplementaryRegulation.Default*
 |*Default Style* |yes
@@ -7547,7 +7547,7 @@ a|
 a|
 3_2_4_AdministrativeAndSupportServices
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !administrative and support services
 !Definition: !Travel agency, rental, cleaning, security and other administrative and support services.
@@ -10334,7 +10334,7 @@ This list of questions and answers helps the HILUCS user to identify the proper 
 
 Mapping from Flanders Codex RO categories to HILUCS
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*TemplateCode Value* |*HILUCS code*
 |WON = 'wonen' (cfr. Codex RO art. 2.2.3.§1, 1°) |5_1
@@ -10367,7 +10367,7 @@ Mapping from CNIG (France) to HILUCS
 
 Vocation principale d'une zone d'un document d'urbanisme de type POS et PLU.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*CNIG Value* |*HILUCS code*
 |00 : sans objet |6_5
@@ -10385,7 +10385,7 @@ Vocation principale d'une zone d'un document d'urbanisme de type POS et PLU.
 
 Mapping from German 3A data model based on TN classification system to HILUCS. First a translation table from 3A-code to 3A-feature class is given. In the following table a mapping to HILUCS is given.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*3A-code* |*3A-feature class*
 |41001 |AX_Wohnbaufläche
@@ -10851,7 +10851,7 @@ attribute=value (meaning)* a|
 
 Mapping from German XPlanGML standard to HILUCS
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*XPlanGML class* |*HILUCSValue*
 |*BP_AufschuettungsFlaeche* |6_OtherUse
@@ -11124,7 +11124,7 @@ Mapping from German XPlanGML standard to HILUCS
 
 Mapping from Dutch LGN to HILUCS
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*LGN: Code (Main class/Sub class) Class* |*HILUCS code*
 |1: (Agriculture) pasture |1_1_1
@@ -11194,7 +11194,7 @@ Mapping from Dutch LGN to HILUCS
 
 Mapping from Dutch BBG to HILUCS
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*TemplateCode Value* |*HILUCS code*
 |1 Transport |
@@ -11261,7 +11261,7 @@ Mapping from Dutch BBG to HILUCS
 
 Mapping from SIOSE classes (Spain) to HILUCS
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*SIOSE Class (Español / English)* |*HILUCS code*
 |Cultivo de arroz / Rice |1_1_1_CommercialAgriculturalProduction
@@ -11362,7 +11362,7 @@ Casco urbano / Town centre |5_1_PureResidentialUse
 
 Mapping from MCA of Navarra (Spain) to HILUCS
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*MCA Class (Español / English)* |*HILUCS code*
 |Cultivos herbaceos / Herbaceous |1_1_1_CommercialAgriculturalProduction
@@ -11621,7 +11621,7 @@ This section is a contribution of the experts of the TWG-LU. IT is their vision 
 
 ==== _Mapping supplementary regulation in Germany with XPlanGML standard_
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*XPlanGML class* |*HSRCL code*
 |*BP_AufschuettungsFlaeche* |10_OtherSupplementaryRegulation
@@ -11869,7 +11869,7 @@ Ueberschwemmungsgebiet
 
 ==== _Mapping supplementary regulation on structure plan level in Germany with XPlanGML standard_
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*XPlanGML Klasse* |*HSRCL code*
 |Klasse |SupplementrayRegulationValue
