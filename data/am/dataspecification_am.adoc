@@ -1477,7 +1477,7 @@ a|
 !Value type: !ZoneTypeCode
 !Definition: !High level classification defining the type of management, restriction or regulation zone.
 !Multiplicity: !1..*
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 a|
@@ -1518,7 +1518,7 @@ a|
 !Definition: !Classification of the environment domain(s) for which, through the establishment of the zone, certain environmental objectives shall be reached.
 !Description: !A zone may be established within one environmental domain (e.g. water) or may to cover a wide range of environmental objectives that cross-cut several domains. For example, Marine Regions may relate to water, land use, sustainable development.
 !Multiplicity: !1..*
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 a|
@@ -1634,7 +1634,7 @@ a|
 !Definition: !Environmental domain, for which environmental objectives can be defined.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/EnvironmentalDomain
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1649,9 +1649,18 @@ a|
 !===
 !Name: !specialised zone type code
 !Definition: !Additional classification value that defines the specialised type of zone.
-!Description: !
+!Description: a! For some ManagementRestrictionOrRegulationZones each zone may be further specialised. This is used to indicate that additional controls (activities or measures)may be in force depending on its specialised type.
+Example 1: Air Quality Management Zones - can be specialised as either:
+* agglomerations
+* nonAgglomeration
+Example 2: Animal Health Restriction Zones - can be specialised as either:
+* restrictionZone
+* protectionZone
+* controlZone
+* lowerRiskZone
+* surveillanceZone
 !Extensibility: !any
-!Identifier: !
+!Identifier: ! http://inspire.ec.europa.eu/codelist/SpecialisedZoneTypeCode
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
@@ -1669,7 +1678,7 @@ a|
 !Definition: !High-level classification defining the type of Management, Restriction or Regulation Zone.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ZoneTypeCode
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1964,7 +1973,7 @@ Example:
 If the ControlledActivityType is "plantAndAnimalHealth" the specialisedActivity could be "movement" or more specifically "animalMovement" and "humanMovement" (if human movements into an out of a restricted zone apply as was the case with Foot and Mouth disease outbreak in the UK).
 !Multiplicity: !0..*
 !Stereotypes: !«voidable»
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 a|
@@ -2172,7 +2181,7 @@ a|
 !Definition: !Controlled vocabulary or code list defined by domains or Member States of specific controlled activity types related to their domain.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/SpecialisedActivityTypeCode
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -5024,122 +5033,7 @@ a|
 !Definition: !Environmental domain, for which environmental objectives can be defined.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/EnvironmentalDomain
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*soil*
-
-[cols=","]
-!===
-!Name: !soil
-!Definition: !The top layer of the land surface of the earth that is composed of disintegrated rock particles, humus, water and air.
-!Description: !SOURCE: GEMET / CED
-!===
-
-a|
-*noise*
-
-[cols=","]
-!===
-!Name: !noise
-!Definition: !Sound which is unwanted, either because of its effects on humans, its effect on fatigue or malfunction of physical equipment, or its interference with the perception or detection of other sounds.
-!Description: !SOURCE: GEMET / MGH
-!===
-
-a|
-*naturalResources*
-
-[cols=","]
-!===
-!Name: !natural resources
-!Definition: !A feature or component of the natural environment that is of value in serving human needs, e.g. soil, water, plant life, wildlife, etc. Some natural resources have an economic value (e.g. timber) while others have a non-economic value (e.g. scenic beauty).
-!Description: !SOURCE: GEMET / UNUN
-!===
-
-a|
-*climateAndClimateChange*
-
-[cols=","]
-!===
-!Name: !climate and climate change
-!Definition: !State of the climate and/or change in this state that can be identified (e.g., by using statistical tests) by changes in the mean and/or the variability of its properties, and that persists for an extended period, typically decades or longer.
-!Description: !TBD
-!===
-
-a|
-*healthProtection*
-
-[cols=","]
-!===
-!Name: !health protection
-!Definition: !Measures or devices designed to reduce the risk of harm to human health posed by pollutants or other threatening conditions in the ecosystem.
-!Description: !SOURCE: GEMET / TOE (for environmental health protection)
-!===
-
-a|
-*air*
-
-[cols=","]
-!===
-!Name: !air
-!Definition: !A predominantly mechanical mixture of a variety of individual gases forming the earth's enveloping atmosphere.
-!Description: !SOURCE: GEMET / MGH
-!===
-
-a|
-*water*
-
-[cols=","]
-!===
-!Name: !water
-!Definition: !Common liquid (H2O) which forms rain, rivers, the sea, etc., and which makes up a large part of the bodies of organisms.
-!Description: !SOURCE: GEMET / PHC
-!===
-
-a|
-*waste*
-
-[cols=","]
-!===
-!Name: !waste
-!Definition: !Material, often unusable, left over from any manufacturing, industrial, agricultural or other human process; material damaged or altered during a manufacturing process and subsequently left useless.
-!Description: !SOURCE: GEMET / HMD / OED
-!===
-
-a|
-*natureAndBiodiversity*
-
-[cols=","]
-!===
-!Name: !nature and biodiversity
-!Definition: !Active management of the earth's natural resources and environment to ensure their quality is maintained and that they are wisely used.
-!Description: !SOURCE: GEMET / PHC (for nature conservation)
-!===
-
-a|
-*sustainableDevelopment*
-
-[cols=","]
-!===
-!Name: !sustainable development
-!Definition: !Development that provides economic, social and environmental benefits in the long term having regard to the needs of living and future generations.
-!Description: !SOURCE: GEMET 
-NOTE Defined by the World Commission on Environment and Development in 1987 as: development that meets the needs of the present without compromising the ability of future generations to meet their own needs. (Source: GILP96)
-!===
-
-a|
-*landUse*
-
-[cols=","]
-!===
-!Name: !land use
-!Definition: !The term land use deals with the spatial aspects of all human activities on the land and with the way in which the land surface is adapted, or could be adapted, to serve human needs.
-!Description: !SOURCE: GEMET / GOOD
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -5155,222 +5049,7 @@ a|
 !Definition: !High-level classification defining the type of Management, Restriction or Regulation Zone.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ZoneTypeCode
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[cols="",]
-|===
-a|
-*airQualityManagementZone*
-
-[cols=","]
-!===
-!Name: !air quality management zone
-!Definition: !Part of the territory of a Member State, as delimited by that Member State for the purposes of air quality assessment and management.
-!Description: !SOURCE: Air Quality Directive (2008/50/EC).
-!===
-
-a|
-*noiseRestrictionZone*
-
-[cols=","]
-!===
-!Name: !noise restriction zone
-!Definition: !An area delimited by a competent authority to manage and mitigate noise pollution. This includes agglomerations and quiet areas (in agglomerations and open country) as defined in the Directive 2002/49/EC of the European Parliament and of the Council.
-!Description: !NOTE Noise restriction zones may also be defined to manage noise exposure relating to transport (airports, roads, rail), entertainment venues, recreational activities, construction, etc.
-!===
-
-a|
-*animalHealthRestrictionZone*
-
-[cols=","]
-!===
-!Name: !animal health restriction zone
-!Definition: !Restriction zones established for the control and eradication of notifiable animal diseases
-!Description: !EXAMPLE: Bluetongue Restriction Zones (Council Directive 2000/75/EC). 
-EXAMPLE: Avian Influenza Restriction Zones (Council Directive 2005/94/EC). 
-EXAMPLE: African Horse Sickness (Council Directive 92/35/EEC).
-!===
-
-a|
-*prospectingAndMiningPermitArea*
-
-[cols=","]
-!===
-!Name: !prospecting and mining permit area
-!Definition: !The area on which the prospection or extraction of any mineral has been authorised and for which that right or permit is granted.
-!Description: !EXAMPLE: Directive 94/22/EC on conditions for granting and using authorisations for the prospection, exploration and production of hydrocarbons, stipulates that the limits of the geographical areas covered by an authorisation and the duration of that authorisation must be determined in proportion to what is justified in terms of the best possible exercise of the activities from an economic and technical point of view.
-!===
-
-a|
-*regulatedFairwayAtSeaOrLargeInlandWater*
-
-[cols=","]
-!===
-!Name: !regulated fairway at Sea or large inland water
-!Definition: !Regulated navigation areas port-to-port established to organise traffic, prevent accident and pollution and to support management and planning.
-!Description: !EXAMPLE: Regulated fairways established in accordance with Decision 884/2004/EC of the European Parliament and Council of 29 April 2004 amending Decision No 1692/96/EC on Community guidelines for the development of the trans - European transport network to organise sailing traffic, prevent accident and pollution.
-!===
-
-a|
-*restrictedZonesAroundContaminatedSites*
-
-[cols=","]
-!===
-!Name: !restricted zones around contaminated sites
-!Definition: !Zones established to protect human, plant and animal health and control movement and development within a contaminated site.
-!Description: !EXAMPLE: Chernobyl Nuclear Power Plant Exclusion Zone which was established to evacuate the local population and to prevent people from entering the heavily contaminated territory. 
-EXAMPLE: Zone established around an area suffering from soil contamination to restrict development and protect human health.
-!===
-
-a|
-*areaForDisposalOfWaste*
-
-[cols=","]
-!===
-!Name: !area for disposal of waste
-!Definition: !Area affected by disposal of waste as defined in Article 3(19) of Directive 2008/98/EC[1].
-!===
-
-a|
-*coastalZoneManagementArea*
-
-[cols=","]
-!===
-!Name: !coastal zone management area
-!Definition: !Area in which integrated coastal zone management takes place.
-!Description: !DEFINITION: Integrated coastal zone management is a dynamic process for the sustainable management and use of coastal zones, taking into account at the same time the fragility of coastal ecosystems and landscapes, the diversity of activities and uses, their interactions, the maritime orientation of certain activities and uses and their impact on both the marine and land parts. 
-SOURCE: Protocol on Integrated Coastal Zone Management in the Mediterranean - signed in Madrid on 20-21 January 2008.
-!===
-
-a|
-*drinkingWaterProtectionArea*
-
-[cols=","]
-!===
-!Name: !drinking water protection area
-!Definition: !Area in which waste water leakage, use of fertilizer or pesticides, or establishment of waste disposal sites are prohibited.
-!Description: !EXAMPLE: From Directive 80/778, relating to the quality of water intended for human consumption. 
-According to the article 8 providing that Member States shall take all the necessary measures to ensure that any substances used in the preparation of water for human consumption do not remain in concentrations higher than the maximum admissible.
-!===
-
-a|
-*nitrateVulnerableZone*
-
-[cols=","]
-!===
-!Name: !nitrate vulnerable zone
-!Definition: !Areas of land which drain into polluted or threatened waters and which contribute to nitrate pollution.
-!Description: !SOURCE: Art 3 of Council Directive 91/676/EEC of 12 December 1991 concerning the protection of waters against pollution caused by nitrates from agricultural sources.
-!===
-
-a|
-*marineRegion*
-
-[cols=","]
-!===
-!Name: !marine region
-!Definition: !Marine regions and their subregions are sea regions designated under international, Union, national or sub-national legislation for the purpose of assessment, management and regulation.
-!Description: !EXAMPLE 1: For each Marine Region a marine strategy shall be developed and implemented to maintain and improve good environmental status. 
-SOURCE: Marine Strategy Framework Directive (2008/56/EC). 
-EXAMPLE 2: Convention on the Protection of the Marine Environment of the Baltic Sea Area (Helsinki Convention) shall apply to the protection of the marine environment of the Baltic Sea Area which comprises the water-body and the seabed including their living resources and other forms of marine life. 
-EXAMPLE 3: The Convention for the Protection of the marine Environment of the North-East Atlantic (OSPAR Convention) is dealing with specific areas like: prevention and elimination of pollution from land-based sources; prevention and elimination of pollution by dumping or incineration; prevention and elimination of pollution from offshore sources and assessment of the quality of the marine environment. 
-EXAMPLE 4: Convention for the Protection of the Marine Environment and the Coastal Region of the Mediterranean (Barcelona Convention) aims to to prevent, abate and combat pollution of the Mediterranean Sea area and to protect and enhance the marine environment in that area. 
-EXAMPLE 5: The Convention on the Protection of the Black Sea Against Pollution (Bucharest Convention) aims to prevent, reduce and control the pollution and protect the biodiversity and the marine living resources. 
-EXAMPLE 6: UNEP Regional Seas Programme aims to address the accelerating degradation of the world's oceans and coastal areas through the sustainable management and use of the marine and coastal environment.
-!===
-
-a|
-*riverBasinDistrict*
-
-[cols=","]
-!===
-!Name: !river basin district
-!Definition: !Area of land and sea, made up of one or more neighbouring river basins together with their associated groundwaters and coastal waters, identified under Article 3(1) of Directive 2000/60/EC[2] as the main unit for management of river basins.
-!Description: !SOURCE: Art 2 (15) of DIRECTIVE 2000/60/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 23 October 2000 establishing a framework for Community action in the field of water policy. 
-NOTE A river basin district can either be an international or national river basin district or a sub unit of management. 
-NOTE 2: The relatedZone role should be used to link river basin districts. For example, a national river basin district should include a relatedZone attribute linking it to the international river basin district.
-!===
-
-a|
-*bathingWaters*
-
-[cols=","]
-!===
-!Name: !bathing waters
-!Definition: !Coastal waters or inland waters (rivers, lakes) explicitly authorised, or not prohibited for recreational bathing by large numbers of people.
-!Description: !NOTE Bathing waters are set limits for physical, chemical and microbiological parameters to ensuring clean bathing waters to protect public health and the environment.
-!===
-
-a|
-*floodUnitOfManagement*
-
-[cols=","]
-!===
-!Name: !flood unit of management
-!Definition: !Area of land and sea, identified under Directive 2007/60/EC of the European Parliament and Council[3] as the main unit for management when an alternative to the River Basin Districts or Sub-Districts are chosen.
-!Description: !Source: Floods Directive: 2007/60/EU.
-!===
-
-a|
-*waterBodyForWFD*
-
-[cols=","]
-!===
-!Name: !water body under the Water Framework Directive (2000/60/EC)
-!Definition: !The "water body" is a coherent sub-unit in the river basin (district) to which the environmental objectives of the Directive 2000/60/EC must apply. The identification of water bodies is based on geographical and hydrological determinants. This includes surface (river, lake, transitional and coastal) and ground water bodies.
-!Description: !SOURCE: Art 2 (15) of DIRECTIVE 2000/60/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 23 October 2000 establishing a framework for Community action in the field of water policy.
-!===
-
-a|
-*sensitiveArea*
-
-[cols=","]
-!===
-!Name: !sensitive area
-!Definition: !Water bodies identified as sensitive areas, as defined in Annex II to Directive 91/271/EEC[4].
-!Description: !SOURCE: Urban Waste Water Treatment Directive (91/271/EEC).
-!===
-
-a|
-*designatedWaters*
-
-[cols=","]
-!===
-!Name: !designated waters
-!Definition: !Marine, coastal or surface waters designated by Member States as needing protection or improvement in order to support fish life.
-!Description: !Member States are required to define designated waters to protect freshwater fish and shellfish by the Fisheries Directive (2006/44/EC) and Shellfish Waters Directive (2006/113/EC).
-!===
-
-a|
-*plantHealthProtectionZone*
-
-[cols=","]
-!===
-!Name: !plant health protection zone
-!Definition: !Protection zone within which protective measures are established against the introduction of organisms harmful to plants or plant products and against their spread.
-!Description: !SOURCE: COMMISSION REGULATION (EC) No 690/2008.
-!===
-
-a|
-*forestManagementArea*
-
-[cols=","]
-!===
-!Name: !forest management area
-!Definition: !Area designated for the sustainable management of forest resources and functions.
-!Description: a!NOTE FOREST EUROPE (the Ministerial Conference on the Protection of Forests in Europe) has developed and adopted six criteria and a set of associated indicators for sustainable forest management. They provide guidance for developing policies and help assess progress on sustainable forest management. Similar criteria have been developed in other regional and international pro- cesses, all in line with the seven thematic elements of sustain- able forest management agreed by the United Nations. 
-The pan-European criteria describe the different elements and goals as follows: 
-[arabic, start=1]
-. Maintenance and appropriate enhancement of forest resources and their contribution to global carbon cycles; 
-. Maintenance of forest ecosystems' health and vitality; 
-. Maintenance and encouragement of productive functions of forests (wood and non-wood); 
-. Maintenance, conservation and appropriate enhancement of biological diversity in forest ecosystems; 
-. Maintenance, conservation and appropriate en- hancement of protective functions in forest management (notably soil and water); 
-. Maintenance of other socio-economic functions and conditions. 
-SOURCE: http://www.foresteurope.org/filestore/foresteurope/Publications/pdf/Factsheet_Sustainable_Forest_Management_print.pdf]
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Regsitry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -5387,56 +5066,7 @@ a|
 !Definition: !Types of control used to manage activities within the zone.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ControlTypeCode
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers.
-
-[cols=""]
-|===
-a|
-*permitted*
-
-[cols=","]
-!===
-!Name: !permitted
-!Definition: !The activity is allowed to be performed within the zone.
-!Description: !NOTE 1: To achieve or maintain good environmental status only a specific activity or activities may be allowed to be performed in the zone. 
-NOTE 2: If an activity is only allowed between a particular time period then this should be documented in the validTime attribute.
-!===
-
-a|
-*prohibited*
-
-[cols=","]
-!===
-!Name: !prohibited
-!Definition: !An activity is not allowed to be performed within the zone.
-!Description: !NOTE 1: To achieve or maintain good environmental status specific activity or activities may not be allowed to be performed in the zone. 
-NOTE 2: If an activity is prohibited within a particular time period then this should be documented in the schedule.
-!===
-
-a|
-*promoted*
-
-[cols=","]
-!===
-!Name: !promoted
-!Definition: !An activity that is positively promoted or introduced within the zone to achieve good environmental status.
-!===
-
-a|
-*restricted*
-
-[cols=","]
-!===
-!Name: !restricted
-!Definition: !An activity is limited to only be performed within specific bounds.
-!Description: !NOTE 1: To achieve or maintain good environmental status an activity may be restricted to mitigate the risk of environmental degradation. 
-NOTE 2: If an activity is restricted between a particular time period then this should be documented in the validTime attribute 
-EXAMPLE: Water abstraction: is restricted and controlled by licence where the operator may be limited to abstracting a specific amount of water per day.
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -5452,94 +5082,7 @@ a|
 !Description: !A zone may be contain a number of activities that are controlled via regulation/restriction
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ControlledActivityType
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers.
-
-[cols="",]
-|===
-a|
-*agricultureAndAquaculture*
-
-[cols=","]
-!===
-!Name: !agriculture And Aquaculture
-!Definition: !Activities related to agriculture and aquaculture.
-!===
-
-a|
-*conservation*
-
-[cols=","]
-!===
-!Name: !conservation
-!Definition: !Activities related to conservation of nature and cultural heritage.
-!===
-
-a|
-*environmentalPollution*
-
-[cols=","]
-!===
-!Name: !environmental Pollution
-!Definition: !Activities causing environmental pollution.
-!===
-
-a|
-*fishingHuntingOrCollecting*
-
-[cols=","]
-!===
-!Name: !fishing Hunting Or Collecting
-!Definition: !Activities related to fishing, hunting and/or collecting of flora or fauna.
-!===
-
-a|
-*landUseAndPlanning*
-
-[cols=","]
-!===
-!Name: !land Use And Planning
-!Definition: !Activities related to land use and planning.
-!===
-
-a|
-*plantAndAnimalHealth*
-
-[cols=","]
-!===
-!Name: !plant And Animal Health
-!Definition: !Activities related to protection and eradication of harmful organisms and disease related to plant and animal health.
-!===
-
-a|
-*resourceManagement*
-
-[cols=","]
-!===
-!Name: !resource Management
-!Definition: !Activities related to mining and extraction of materials.
-!===
-
-a|
-*riskManagement*
-
-[cols=","]
-!===
-!Name: !risk Management
-!Definition: !Activities related to risk management.
-!===
-
-a|
-*transportation*
-
-[cols=","]
-!===
-!Name: !transportation
-!Definition: !Activities related to transportation.
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -5554,103 +5097,8 @@ a|
 !Definition: !Specified day of the week or period of days
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/DayTypeCode
-!Values: !
-!===
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers.
 
-|===
-
-The table below includes recommended values that may be used by data providers.
-
-[cols="",]
-|===
-a|
-*friday*
-
-[cols=","]
-!===
-!Name: !friday
-!Definition: !Friday is the day of the week between Thursday and Saturday.
-!===
-
-a|
-*monday*
-
-[cols=","]
-!===
-!Name: !monday
-!Definition: !Monday is the day of the week between Sunday and Tuesday
-!===
-
-a|
-*publicHoliday*
-
-[cols=","]
-!===
-!Name: !publicHoliday
-!Definition: !Any day that is a public holiday.
-!===
-
-a|
-*saturday*
-
-[cols=","]
-!===
-!Name: !saturday
-!Definition: !Saturday is the day of the week between Friday and Sunday.
-!===
-
-a|
-*sunday*
-
-[cols=","]
-!===
-!Name: !sunday
-!Definition: !Sunday is the day of the week between Saturday and Monday.
-!===
-
-a|
-*thursday*
-
-[cols=","]
-!===
-!Name: !thursday
-!Definition: !Thursday is the day of the week between Wednesday and Friday.
-!===
-
-a|
-*tuesday*
-
-[cols=","]
-!===
-!Name: !tuesday
-!Definition: !Tuesday is the day of the week between Monday and Wednesday.
-!===
-
-a|
-*wednesday*
-
-[cols=","]
-!===
-!Name: !wednesday
-!Definition: !Wednesday is the day of the week between Tuesday and Thursday.
-!===
-
-a|
-*weekdays*
-
-[cols=","]
-!===
-!Name: !weekdays
-!Definition: !Weekdays refers to all days contained within a working week: Monday, Tuesday, Wednesday, Thursday and Friday.
-!===
-
-a|
-*weekends*
-
-[cols=","]
-!===
-!Name: !weekends
-!Definition: !Weekdays refers to all days contained within a weekend: Saturday and Sunday.
 !===
 
 |===
@@ -6912,6 +6360,5 @@ Water Framework Directive (2000/60/EC) – WFD
 
 
 _http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2000:327:0001:0072:EN:PDF_
-
 
 |===

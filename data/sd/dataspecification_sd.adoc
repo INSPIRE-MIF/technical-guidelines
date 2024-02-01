@@ -1533,7 +1533,7 @@ a|
 !Definition: !Method for producing numbers indicating the abundance of a species within an aggregation unit.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/CountingMethodValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ . _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1602,7 +1602,7 @@ a|
 !Definition: !The unit used to express a counted or estimated number indicating the abundance within a SpeciesAggregationUnit (e.g. ccurrences or the population size).
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeneralCountingUnitValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1655,7 +1655,7 @@ a|
 !Description: !A species population density in classes (common, rare, very rare or present) in an individual SpeciesDistributionUnit.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/OccurrenceCategoryValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1690,7 +1690,7 @@ a|
 !Definition: !This value defines the relation between the taxonomic concepts of a local species name and the reference species name given by reference species identifier or by a reference species scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/QualifierValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ . _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1726,7 +1726,7 @@ a|
 !Description: !The authorized ReferenceSpeciesScheme provides reference species list which defines the ReferenceSpeciesName with its scientific name plus author and ReferenceSpeciesId. In these ReferenceSpeciesSchemes harmonized species names are given GUIDs and the species names are to be retrieved through webservices using GUIDs. Only one of these list must be used for one taxon. The priority is as follows: 1) EU-Nomen, 2) EUNIS, 3) NatureDirectives. This implies: if a taxon is listed in EU-Nomen, this reference must be used as first choice. If it is not listed in EU-Nomen, the second choice is EUNIS, if not in EUNIS, NatureDirectives can be used.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/ReferenceSpeciesSchemeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ . _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1746,7 +1746,7 @@ a|
 NOTE One or more categories of population may be listed in the dataset, giving population size of e.g. permanent and wintering populations.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ResidencyStatusValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2287,7 +2287,7 @@ a|
 !Description: !
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/Article17SourceMethodValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ . _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2305,7 +2305,7 @@ a|
 !Description: !Describes how the information about the occurences of the species within a species distribution unit has been compiled.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeneralSourceMethodValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2323,7 +2323,7 @@ a|
 !Description: !Subclasses for specific domains can be added by member states.
 !Extensibility: !open
 !Identifier: !
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -4937,41 +4937,11 @@ a|
 !Definition: !Method for producing numbers indicating the abundance of a species within an aggregation unit.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/CountingMethodValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-[cols="",options="header",]
-|===
-a|
-*counted*
-
-[cols=","]
-!===
-!Name: !counted
-!Definition: !The units defined by the countUnitValues have been counted.
-!===
-
-a|
-*estimated*
-
-[cols=","]
-!===
-!Name: !estimated
-!Definition: !The units defined by the countUnitValues have been estimated.
-!===
-
-a|
-*calculated*
-
-[cols=","]
-!===
-!Name: !calculated
-!Definition: !The units defined by the countUnitValues have been calculated using a modelling technique.
-!===
-
-|===
 
 *GeneralCountingUnitValue*
 
@@ -4984,88 +4954,11 @@ a|
 !Definition: !The unit used to express a counted or estimated number indicating the abundance within a SpeciesAggregationUnit (e.g. ccurrences or the population size).
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeneralCountingUnitValue
-!Values: !The allowed values for this code list comprise any values defined by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*colonies*
-
-[cols=","]
-!===
-!Name: !colonies
-!Definition: !individualáorganismsáof the sameáspeciesáliving closely together, usually for mutual benefit
-!===
-
-a|
-*individuals*
-
-[cols=","]
-!===
-!Name: !individuals
-!Definition: !single, genetically distinct member of a population
-!===
-
-a|
-*juvenile*
-
-[cols=","]
-!===
-!Name: !juvenile
-!Definition: !not sexually mature individual
-!===
-
-a|
-*larvae*
-
-[cols=","]
-!===
-!Name: !larvae
-!Definition: !a distinct juvenile form manyáanimalsáundergo beforeámetamorphosisáinto adults
-!===
-
-a|
-*pairs*
-
-[cols=","]
-!===
-!Name: !pairs
-!Definition: !mated pairs
-!===
-
-a|
-*shoal*
-
-[cols=","]
-!===
-!Name: !shoal
-!Definition: !A cluster of internal self-coordinated moving individuals, e.g. a fish flock.
-!===
-
-a|
-*shoots*
-
-[cols=","]
-!===
-!Name: !shoots
-!Definition: !Shoots are counted when it is not possible to distinguish individuals, e.g. due to clonal growth.
-!===
-
-a|
-*tufts*
-
-[cols=","]
-!===
-!Name: !tufts
-!Definition: !groups of plants of a single species growing so closely together that it is impossible to distinguish single indivduals without destroying the occurence
-!===
-
-|===
 
 *OccurrenceCategoryValue*
 
@@ -5079,56 +4972,7 @@ a|
 !Description: !A species population density in classes (common, rare, very rare or present) in an individual SpeciesDistributionUnit.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/OccurrenceCategoryValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*common*
-
-[cols=","]
-!===
-!Name: !Common
-!Definition: !The species is regarded as common in the SpeciesDistributionUnit by the data provider.
-!===
-
-a|
-*rare*
-
-[cols=","]
-!===
-!Name: !Rare
-!Definition: !The species is regarded as rare in the SpeciesDistributionUnit by the data provider.
-!===
-
-a|
-*veryRare*
-
-[cols=","]
-!===
-!Name: !Very rare
-!Definition: !The species is regarded as very rare in the SpeciesDistributionUnit by the data provider.
-!===
-
-a|
-*present*
-
-[cols=","]
-!===
-!Name: !Present
-!Definition: !The species is present in the SpeciesDistributionUnit.
-!===
-
-a|
-*absent*
-
-[cols=","]
-!===
-!Name: !Absent
-!Definition: !The species has been searched for but not found in the SpeciesDistributionUnit.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -5144,56 +4988,7 @@ a|
 !Definition: !This value defines the relation between the taxonomic concepts of a local species name and the reference species name given by reference species identifier or by a reference species scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/QualifierValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*congruent*
-
-[cols=","]
-!===
-!Name: !Congruent
-!Definition: !The taxonomic concepts are identical.
-!===
-
-a|
-*includedIn*
-
-[cols=","]
-!===
-!Name: !Included in
-!Definition: !The taxonomic concept of the localSpeciesName is included in the concept of the referenceSpeciesName.
-!===
-
-a|
-*includes*
-
-[cols=","]
-!===
-!Name: !Includes
-!Definition: !The taxonomic concept of the localSpeciesName includes the concept of the referenceSpeciesName.
-!===
-
-a|
-*overlaps*
-
-[cols=","]
-!===
-!Name: !Overlaps
-!Definition: !The taxonomic concepts partially overlap, but each one has a part that is not included in the other.
-!===
-
-a|
-*excludes*
-
-[cols=","]
-!===
-!Name: !Excludes
-!Definition: !The taxonomic concepts exclude each other.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -5210,38 +5005,7 @@ a|
 !Description: !The authorized ReferenceSpeciesScheme provides reference species list which defines the ReferenceSpeciesName with its scientific name plus author and ReferenceSpeciesId. In these ReferenceSpeciesSchemes harmonized species names are given GUIDs and the species names are to be retrieved through webservices using GUIDs. Only one of these list must be used for one taxon. The priority is as follows: 1) EU-Nomen, 2) EUNIS, 3) NatureDirectives. This implies: if a taxon is listed in EU-Nomen, this reference must be used as first choice. If it is not listed in EU-Nomen, the second choice is EUNIS, if not in EUNIS, NatureDirectives can be used.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/ReferenceSpeciesSchemeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*eunomen*
-
-[cols=","]
-!===
-!Name: !Eunomen
-!Definition: !Names and taxonomic concepts as defined by the Pan European Species Inventory, published by the EU-Nomen portal.
-!===
-
-a|
-*eunis*
-
-[cols=","]
-!===
-!Name: !Eunis
-!Definition: !Names and taxonomic concepts as defined by the EUNIS Species list.
-!===
-
-a|
-*natureDirectives*
-
-[cols=","]
-!===
-!Name: !Nature directives
-!Definition: !Names and taxonomic concepts as defined by the species lists in Directives 2009/147/EC (Birds Directive) and 92/43/EEC (Habitats Directive).
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -5260,88 +5024,11 @@ a|
 NOTE One or more categories of population may be listed in the dataset, giving population size of e.g. permanent and wintering populations.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ResidencyStatusValue
-!Values: !The allowed values for this code list comprise any values defined by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*cultivated*
-
-[cols=","]
-!===
-!Name: !cultivated
-!Definition: !Species is cultivated in the spatial unit defined by the speciesDistributionUnit.
-!===
-
-a|
-*extinct*
-
-[cols=","]
-!===
-!Name: !extinct
-!Definition: !Species has been extincted in the spatial unit defined by the speciesDistributionUnit.
-!===
-
-a|
-*introducedEstablished*
-
-[cols=","]
-!===
-!Name: !introduced established
-!Definition: !Species has been introduced and is reproducing with stable populations in the spatial unit defined by the speciesDistributionUnit.
-!===
-
-a|
-*introducedImpermanent*
-
-[cols=","]
-!===
-!Name: !introduced impermanent
-!Definition: !Species has been introduced, but has no stable, reproducing populations in the spatial unit defined by the speciesDistributionUnit.
-!===
-
-a|
-*native*
-
-[cols=","]
-!===
-!Name: !native
-!Definition: !Species is occuring natively in the spatial unit defined by the speciesDistributionUnit.
-!===
-
-a|
-*naturallyImpermanent*
-
-[cols=","]
-!===
-!Name: !naturally impermanent
-!Definition: !Species is naturally introduced (by natural migration), but has no stable, reproducing populations.
-!===
-
-a|
-*probablyExtinct*
-
-[cols=","]
-!===
-!Name: !probably extinct
-!Definition: !Species has not been observed by recent surveys, but no positive proof of extinction is possible in the spatial unit defined by the speciesDistributionUnit.
-!===
-
-a|
-*re-introducedOrTranslocated*
-
-[cols=","]
-!===
-!Name: !re-introduced or translocated
-!Definition: !An extinct population of a formerly native species has been re-introduced as a nature conservation measure in the spatial unit defined by the speciesDistributionUnit.
-!===
-
-|===
 
 *INSPIRE Application Schema 'SpeciesDistributionExtension'*
 
@@ -5363,91 +5050,7 @@ a|
 !Description: !Describes how the information about the occurences of the species within a species distribution unit has been compiled.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeneralSourceMethodValue
-!Values: !The allowed values for this code list comprise any values defined by data providers.
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*collectionExamination*
-
-[cols=","]
-!===
-!Name: !collection examination
-!Definition: !Occurrences/observations collected from examinations of collections.
-!Description: !"EXAMPLE Herbaria, zoological collections etc."
-!===
-
-a|
-*gridMapping*
-
-[cols=","]
-!===
-!Name: !grid mapping
-!Definition: !Occurrences/observations collected by systematic surveys in grid cells.
-!Description: !EXAMPLE Surveillance programs in regular grid cells.
-!===
-
-a|
-*lineSampling*
-
-[cols=","]
-!===
-!Name: !line sampling
-!Definition: !Occurrences/observations collected by systematic surveys along linear transects.
-!Description: !EXAMPLE Regular bird censuses or line transects.
-!===
-
-a|
-*literatureExamination*
-
-[cols=","]
-!===
-!Name: !literature examination
-!Definition: !Occurrences/observations collected from literature examinations like Floras, Faunas or printed maps in distribution atlases.
-!Description: !EXAMPLE Flora Europea.
-!===
-
-a|
-*randomObservations*
-
-[cols=","]
-!===
-!Name: !random observations
-!Definition: !Occurrences/observations collected by randomly distributed collection/observation sites randomly outside a systematic survey.
-!Description: !EXAMPLE Citizen science species reporting systems.
-!===
-
-a|
-*statisticalSampling*
-
-[cols=","]
-!===
-!Name: !statistical sampling
-!Definition: !Occurrences/observations collected on locations selected by statistical sampling methods.
-!Description: !EXAMPLE Weighted randomly selected locations to achieve unbiased figures of numbers.
-!===
-
-a|
-*predictionModeling*
-
-[cols=","]
-!===
-!Name: !prediction modeling
-!Definition: !Occurrences based on prediction models by using real occurrence data in combination with ecological parameters.
-!===
-
-a|
-*estimateExpert*
-
-[cols=","]
-!===
-!Name: !estimate expert
-!Definition: !Estimate based in expert opinion with no or minimal sampling.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===

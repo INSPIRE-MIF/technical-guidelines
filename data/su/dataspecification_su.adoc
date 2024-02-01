@@ -2534,7 +2534,7 @@ a|
 !Definition: !The code values for evolution types.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/EvolutionTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. Annex _C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2551,7 +2551,7 @@ a|
 !Definition: !The code values for the geometry types.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometryTypeValue
-!Values: !The allowed values for this code list comprise the values specified in Annex C and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -5076,8 +5076,7 @@ image::./media/image23.png[Population_change,_by_NUTS_3_regions,_2008,width=604,
 |_StatisticalUnitTypeValue_
 |===
 
-[discrete]
-=== EvolutionTypeValue
+*EvolutionTypeValue*
 
 [cols="",]
 |===
@@ -5088,64 +5087,13 @@ a|
 !Definition: !The code values for evolution types.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/EvolutionTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
-[cols=""]
-|===
-a|
-*creation*
-
-[cols=","]
-!===
-!Name: !creation
-!Definition: !The code value for creation.
-!===
-
-a|
-*change*
-
-[cols=","]
-!===
-!Name: !change
-!Definition: !The code value for change.
-!===
-
-a|
-*deletion*
-
-[cols=","]
-!===
-!Name: !deletion
-!Definition: !The code value for deletion.
-!===
-
-a|
-*aggregation*
-
-[cols=","]
-!===
-!Name: !aggregation
-!Definition: !The code value for aggregation.
-!===
-
-a|
-*splitting*
-
-[cols=","]
-!===
-!Name: !splitting
-!Definition: !The code value for splitting.
-!===
-
-|===
-
-[discrete]
-=== GeometryTypeValue
+*GeometryTypeValue*
 
 [cols="",]
 |===
@@ -5156,59 +5104,7 @@ a|
 !Definition: !The code values for the geometry types.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometryTypeValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*referenceGeometry*
-
-[cols=","]
-!===
-!Name: !reference geometry
-!Definition: !The described geometry is the reference geometry.
-!===
-
-a|
-*pointLabel*
-
-[cols=","]
-!===
-!Name: !point label
-!Definition: !The described geometry is a point geometry for labeling.
-!Description: !"Of course, geometries having this type should be points."
-!===
-
-a|
-*centerOfGravity*
-
-[cols=","]
-!===
-!Name: !center of gravity
-!Definition: !The described geometry is a point geometry located at the center of gravity of the unit.
-!Description: !"Of course, geometries having this type should be points."
-!===
-
-a|
-*generalisedGeometry*
-
-[cols=","]
-!===
-!Name: !generalised geometry
-!Definition: !A generalised geometry of the statistical unit.
-!Description: !Geometries having such a code must have a descriptor for generalised geometries.
-!===
-
-a|
-*other*
-
-[cols=","]
-!===
-!Name: !other
-!Definition: !Other kind of geometry type.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -5381,12 +5277,11 @@ a|
 !Definition: !The code values for the NUTS levels.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/NUTSLevelValue
-!Values: !
+!Values: !The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 [cols=""]
 |===
@@ -5555,7 +5450,7 @@ a|
 !Definition: !The code values for the NUTS levels.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/NUTSLevelValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in this Annex and additional values at any level defined by data providers. This Annex includes recommended values that may be used by data providers.
 !===
 
 |===

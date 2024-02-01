@@ -1177,7 +1177,7 @@ a|
 NOTE 2 Typically, this code list will be extended with code schemes used within Member States.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/DesignationSchemeValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex _C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1212,7 +1212,7 @@ a|
 !Definition: !A code list for the International Union for the Conservation of Nature classification scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/IUCNDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex _C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1228,7 +1228,7 @@ a|
 !Definition: !A code list for the National Monuments Record classification scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/NationalMonumentsRecordDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex _C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1244,7 +1244,7 @@ a|
 !Definition: !A code list for the Natura2000 designation scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/Natura2000DesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex _C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1260,7 +1260,7 @@ a|
 !Definition: !A code list for the Ramsar Convention designatoin scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RamsarDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex _C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1276,7 +1276,7 @@ a|
 !Definition: !A code list for the World Heritage Man and Biosphere Programme classification scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/UNESCOManAndBiosphereProgrammeDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex _C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1292,7 +1292,7 @@ a|
 !Definition: !A code list for the World Heritage designation scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/UNESCOWorldHeritageDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex _C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3849,74 +3849,7 @@ a|
 NOTE 2 Typically, this code list will be extended with code schemes used within Member States.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/DesignationSchemeValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-emeraldNetwork
-
-[cols=","]
-!===
-!Name: !emerald network
-!Definition: !The Protected Site has a designation under the Emerald Network.
-!===
-
-a|
-IUCN
-
-[cols=","]
-!===
-!Name: !IUCN
-!Definition: !The Protected Site has a classification using the International Union for Conservation of Nature classification scheme.
-!===
-
-a|
-nationalMonumentsRecord
-
-[cols=","]
-!===
-!Name: !national monuments record
-!Definition: !The Protected Site has a classification using the National Monuments Record classification scheme.
-!===
-
-a|
-natura2000
-
-[cols=","]
-!===
-!Name: !natura2000
-!Definition: !The Protected Site has a designation under either the Habitat Directive (92/43/EEC) or the Birds Directive (79/409/EEC).
-!===
-
-a|
-ramsar
-
-[cols=","]
-!===
-!Name: !ramsar
-!Definition: !The Protected Site has a designation under the Ramsar Convention.
-!===
-
-a|
-UNESCOManAndBiosphereProgramme
-
-[cols=","]
-!===
-!Name: !UNESCO man and biosphere programme
-!Definition: !The Protected Site has a designation under UNESCO Man and Biosphere programme.
-!===
-
-a|
-UNESCOWorldHeritage
-
-[cols=","]
-!===
-!Name: !UNESCO world heritage
-!Definition: !The Protected Site has a designation under UNESCO World Heritage Convention.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -3931,74 +3864,7 @@ a|
 !Definition: !A code list for the International Union for the Conservation of Nature classification scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/IUCNDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-habitatSpeciesManagementArea
-
-[cols=","]
-!===
-!Name: !habitat species management area
-!Definition: !The Protected Site is classified as a habitat species management area under the IUCN classification scheme.
-!===
-
-a|
-managedResourceProtectedArea
-
-[cols=","]
-!===
-!Name: !managed resource protected area
-!Definition: !The Protected Site is classified as a managed resource protected area under the IUCN classification scheme.
-!===
-
-a|
-nationalPark
-
-[cols=","]
-!===
-!Name: !national park
-!Definition: !The Protected Site is classified as a national park under the IUCN classification scheme.
-!===
-
-a|
-naturalMonument
-
-[cols=","]
-!===
-!Name: !natural monument
-!Definition: !The Protected Site is classified as a natural monument under the IUCN classification scheme.
-!===
-
-a|
-ProtectedLandscapeOrSeascape
-
-[cols=","]
-!===
-!Name: !protected landscape or seascape
-!Definition: !The Protected Site is classified as a protected landscape or seascape under the IUCN classification scheme.
-!===
-
-a|
-strictNatureReserve
-
-[cols=","]
-!===
-!Name: !strict nature reserve
-!Definition: !The Protected Site is classified as a strict nature reserve under the IUCN classification scheme.
-!===
-
-a|
-wildernessArea
-
-[cols=","]
-!===
-!Name: !wilderness area
-!Definition: !The Protected Site is classified as a wilderness area under the IUCN classification scheme.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -4013,173 +3879,7 @@ a|
 !Definition: !A code list for the National Monuments Record classification scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/NationalMonumentsRecordDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-agricultureAndSubsistence
-
-[cols=","]
-!===
-!Name: !agriculture and subsistence
-!Definition: !The Protected Site is classified as an agricultural or subsistence monument under the National Monuments Record classification scheme.
-!===
-
-a|
-civil
-
-[cols=","]
-!===
-!Name: !civil
-!Definition: !The Protected Site is classified as a civil monument under the National Monuments Record classification scheme.
-!===
-
-a|
-commemorative
-
-[cols=","]
-!===
-!Name: !commemorative
-!Definition: !The Protected Site is classified as a commemorative monument under the National Monuments Record classification scheme.
-!===
-
-a|
-commercial
-
-[cols=","]
-!===
-!Name: !commercial
-!Definition: !The Protected Site is classified as a commercial monument under the National Monuments Record classification scheme.
-!===
-
-a|
-communications
-
-[cols=","]
-!===
-!Name: !communications
-!Definition: !The Protected Site is classified as a communications monument under the National Monuments Record classification scheme.
-!===
-
-a|
-defence
-
-[cols=","]
-!===
-!Name: !defence
-!Definition: !The Protected Site is classified as a defence monument under the National Monuments Record classification scheme.
-!===
-
-a|
-domestic
-
-[cols=","]
-!===
-!Name: !domestic
-!Definition: !The Protected Site is classified as a domestic monument under the National Monuments Record classification scheme.
-!===
-
-a|
-education
-
-[cols=","]
-!===
-!Name: !education
-!Definition: !The Protected Site is classified as an education monument under the National Monuments Record classification scheme.
-!===
-
-a|
-gardensParksAndUrbanSpaces
-
-[cols=","]
-!===
-!Name: !gardens parks and urban spaces
-!Definition: !The Protected Site is classified as a garden, park or urban space monument under the National Monuments Record classification scheme.
-!===
-
-a|
-healthAndWelfare
-
-[cols=","]
-!===
-!Name: !health and welfare
-!Definition: !The Protected Site is classified as a health and welfare monument under the National Monuments Record classification scheme.
-!===
-
-a|
-industrial
-
-[cols=","]
-!===
-!Name: !industrial
-!Definition: !The Protected Site is classified as an industrial monument under the National Monuments Record classification scheme.
-!===
-
-a|
-maritime
-
-[cols=","]
-!===
-!Name: !maritime
-!Definition: !The Protected Site is classified as a maritime monument under the National Monuments Record classification scheme.
-!===
-
-a|
-monument
-
-[cols=","]
-!===
-!Name: !monument
-!Definition: !The Protected Site is classified as a monument with some unclassified form under the National Monuments Record classification scheme.
-!===
-
-a|
-recreational
-
-[cols=","]
-!===
-!Name: !recreational
-!Definition: !The Protected Site is classified as a recreational monument under the National Monuments Record classification scheme.
-!===
-
-a|
-religiousRitualAndFunerary
-
-[cols=","]
-!===
-!Name: !religious ritual and funerary
-!Definition: !The Protected Site is classified as a religious, ritual or funerary monument under the National Monuments Record classification scheme.
-!===
-
-a|
-settlement
-
-[cols=","]
-!===
-!Name: !settlement
-!Definition: !The Protected Site is classified as a settlement under the National Monuments Record classification scheme.
-!===
-
-a|
-transport
-
-[cols=","]
-!===
-!Name: !transport
-!Definition: !The Protected Site is classified as a transport monument under the National Monuments Record classification scheme.
-!===
-
-a|
-waterSupplyAndDrainage
-
-[cols=","]
-!===
-!Name: !water supply and drainage
-!Definition: !The Protected Site is classified as a water supply and drainage monument under the National Monuments Record classification scheme.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -4194,56 +3894,7 @@ a|
 !Definition: !A code list for the Natura2000 designation scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/Natura2000DesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-proposedSiteOfCommunityImportance
-
-[cols=","]
-!===
-!Name: !proposed site of community importance
-!Definition: !The Protected Site is proposed as a Site of Community Importance (SCI) under Natura2000.
-!===
-
-a|
-proposedSpecialProtectionArea
-
-[cols=","]
-!===
-!Name: !proposed special protection area
-!Definition: !The Protected Site is proposed as a Special Protection Area (SPA) under Natura2000.
-!===
-
-a|
-siteOfCommunityImportance
-
-[cols=","]
-!===
-!Name: !site of community importance
-!Definition: !The Protected Site is designated as a Site of Community Importance (SCI) under Natura2000.
-!===
-
-a|
-specialAreaOfConservation
-
-[cols=","]
-!===
-!Name: !special area of conservation
-!Definition: !The Protected Site is designated as a Special Area of Conservation (SAC) under Natura2000.
-!===
-
-a|
-specialProtectionArea
-
-[cols=","]
-!===
-!Name: !special protection area
-!Definition: !The Protected Site is designated as a Special Protection Area (SPA) under Natura2000.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -4258,20 +3909,7 @@ a|
 !Definition: !A code list for the Ramsar Convention designatoin scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RamsarDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-ramsar
-
-[cols=","]
-!===
-!Name: !ramsar
-!Definition: !The Protected Site is designated under the Ramsar Convention.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -4286,20 +3924,7 @@ a|
 !Definition: !A code list for the World Heritage Man and Biosphere Programme classification scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/UNESCOManAndBiosphereProgrammeDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-biosphereReserve
-
-[cols=","]
-!===
-!Name: !biosphere reserve
-!Definition: !The Protected Site is designated as a Biosphere Reserve under the Man and Biosphere Programme.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -4314,37 +3939,7 @@ a|
 !Definition: !A code list for the World Heritage designation scheme.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/UNESCOWorldHeritageDesignationValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-cultural
-[cols=","]
-!===
-!Name: !cultural
-!Definition: !The Protected Site is designated as a cultural World Heritage site.
-!===
-
-a|
-mixed
-
-[cols=","]
-!===
-!Name: !mixed
-!Definition: !The Protected Site is designated as a mixed World Heritage site.
-!===
-
-a|
-natural
-
-[cols=","]
-!===
-!Name: !natural
-!Definition: !The Protected Site is designated as a natural World Heritage site.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===

@@ -1691,8 +1691,8 @@ a|
 !Name: !pollution abatement technique value
 !Definition: !The PollutionAbatementTechniqueValue code list hosts the reference values for the attribute technique in the ProductionInstallationPart class.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codelist/PollutionAbatementTechniqueValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Identifier: !http://inspire.ec.europa.eu/codeList/PollutionAbatementTechniqueValue
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -5911,9 +5911,11 @@ image::./media/image28.png[image,width=609,height=751, align=center]
 
 <<<
 [appendix]
-== Code list values - (normative) 
+== Code list values
 
-=== INSPIRE Application Schema 'Production and Industrial Facilities'
+=== Production and Industrial Facilities (normative)
+
+*INSPIRE Application Schema 'Production and Industrial Facilities'*
 
 [cols="",options="header",]
 |===
@@ -5931,62 +5933,15 @@ a|
 !Name: !pollution abatement technique value
 !Definition: !The PollutionAbatementTechniqueValue code list hosts the reference values for the attribute technique in the ProductionInstallationPart class.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codelist/PollutionAbatementTechniqueValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
+!Identifier: !http://inspire.ec.europa.eu/codeList/PollutionAbatementTechniqueValue
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
 
-[cols=""]
-|===
-a|
-*gravitation*
+=== Production And Industrial Facilities Extension (informative)
 
-[cols=","]
-!===
-!Name: !gravitation
-!Definition: !Pollutant abatement by gravitation
-!===
-
-a|
-*dustScrubbers*
-
-[cols=","]
-!===
-!Name: !dust scrubbers
-!Definition: !Pollutant abatement through dust scrubbers
-!===
-
-a|
-*filtration*
-
-[cols=","]
-!===
-!Name: !filtration
-!Definition: !Pollutant abatement by filtration
-!===
-
-a|
-*condensation*
-
-[cols=","]
-!===
-!Name: !condensation
-!Definition: !Pollutant abatement by condensation
-!===
-
-a|
-*adsorption*
-
-[cols=","]
-!===
-!Name: !adsorption
-!Definition: !Pollutant abatement by adsorption
-!===
-
-|===
-
-=== INSPIRE Application Schema 'Production And Industrial Facilities Extension'
+*INSPIRE Application Schema 'Production And Industrial Facilities Extension'*
 
 [cols="",options="header",]
 |===

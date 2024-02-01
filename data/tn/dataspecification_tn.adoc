@@ -2154,7 +2154,7 @@ a|
 !Definition: !Possible restrictions on vehicles that can access a transport element.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RestrictionTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2170,7 +2170,7 @@ a|
 !Definition: !Types of access restrictions for a transport element.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AccessRestrictionValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3200,7 +3200,7 @@ a|
 !Description: !SOURCE [Euroroads].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AreaConditionValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3216,7 +3216,7 @@ a|
 !Definition: !Indication to which part of a road the value of a measurement applies.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/FormOfRoadNodeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3232,7 +3232,7 @@ a|
 !Definition: !Values to indicate whether a road is paved or not paved.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RoadSurfaceCategoryValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3248,7 +3248,7 @@ a|
 !Definition: !Possible sources for speed limits.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/SpeedLimitSourceValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3264,7 +3264,7 @@ a|
 !Definition: !Possible types of vehicles.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/VehicleTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3280,7 +3280,7 @@ a|
 !Definition: !Values to indicate weather conditions that affect speed limits.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/WeatherConditionValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3296,7 +3296,7 @@ a|
 !Definition: !Functions of road nodes within Euroroads.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/FormOfRoadNodeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3313,7 +3313,7 @@ a|
 !Description: !SOURCE Based on [Euroroads].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/FormOfWayValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3329,7 +3329,7 @@ a|
 !Definition: !Types of road service areas.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RoadServiceTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3344,8 +3344,8 @@ a|
 !===
 !Definition: !Possible service facilities available at a road service area.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codelist/ServiceFacilityValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Identifier: !https://inspire.ec.europa.eu/codelist/ServiceFacilityValue
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -4567,7 +4567,7 @@ a|
 !Definition: !The possible types of cableway transport.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/CablewayTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -5283,7 +5283,7 @@ a|
 
 ===== Code lists
 
-FerryUseValue
+====== FerryUseValue
 
 [cols="",options="header",]
 |===
@@ -5294,12 +5294,12 @@ a|
 !Definition: !Types of transport carried out by a ferry.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/FerryUseValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-===== FormOfWaterwayNodeValue
+====== FormOfWaterwayNodeValue
 
 [cols="",options="header",]
 |===
@@ -5310,7 +5310,7 @@ a|
 !Definition: !Function of a WaterwayNode in the water transport network.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/FormOfWaterwayNodeValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6549,10 +6549,10 @@ a|
 !===
 
 |===
-
+    
 ===== Code lists
 
-AerodromeCategoryValue
+====== AerodromeCategoryValue
 
 [cols="",options="header",]
 |===
@@ -6563,12 +6563,12 @@ a|
 !Definition: !Aerodrome possible categories concerning the scope and importance of the air traffic services offered from and to it.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AerodromeCategoryValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-===== AerodromeTypeValue
+====== AerodromeTypeValue
 
 [cols="",options="header",]
 |===
@@ -6580,12 +6580,12 @@ a|
 !Description: !SOURCE [CodeAirportHeliportType - AIXM5.0].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AerodromeTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-===== AirRouteLinkClassValue
+====== AirRouteLinkClassValue
 
 [cols="",options="header",]
 |===
@@ -6601,12 +6601,12 @@ NOTE These values enumerate the possible usages of a AirRouteLink.
 EXAMPLES Conventional, RNAV.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AirRouteLinkClassValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-===== AirRouteTypeValue
+====== AirRouteTypeValue
 
 [cols="",options="header",]
 |===
@@ -6618,12 +6618,12 @@ a|
 !Description: !SOURCE [CodeRouteType - AIXM5.0].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AirRouteTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-===== AirspaceAreaTypeValue
+====== AirspaceAreaTypeValue
 
 [cols="",options="header",]
 |===
@@ -6635,12 +6635,12 @@ a|
 !Description: !SOURCE [CodeAirspaceType - AIXM5.0].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AirspaceAreaTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-===== AirUseRestrictionValue
+====== AirUseRestrictionValue
 
 [cols="",options="header",]
 |===
@@ -6651,12 +6651,12 @@ a|
 !Definition: !The use restrictions for an air network object.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AirUseRestrictionValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-===== NavaidTypeValue
+====== NavaidTypeValue
 
 [cols="",options="header",]
 |===
@@ -6668,12 +6668,12 @@ a|
 !Description: !SOURCE [AIXM5.0].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/NavaidTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-===== PointRoleValue
+====== PointRoleValue
 
 [cols="",options="header",]
 |===
@@ -6685,12 +6685,12 @@ a|
 !Description: !SOURCE [AIXM5.0].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/PointRoleValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-===== RunwayTypeValue
+====== RunwayTypeValue
 
 [cols="",options="header",]
 |===
@@ -6702,12 +6702,12 @@ a|
 !Description: !SOURCE [CodeRunwayType - AIXM5.0].
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RunwayTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-===== SurfaceCompositionValue
+====== SurfaceCompositionValue
 
 [cols="",options="header",]
 |===
@@ -6721,7 +6721,7 @@ a|
 EXAMPLES Asphalt, concrete.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/SurfaceCompositionValue
-!Values: !The allowed values for this code list comprise only the values specified in Annex C .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -10992,65 +10992,7 @@ Documentation
 |Definition: |Types of access restrictions for a transport element.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/AccessRestrictionValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-forbiddenLegally
-
-[cols=","]
-!===
-!Name: !forbidden legally
-!Definition: !Access to the transport element is forbidden by law.
-!===
-
-a|
-physicallyImpossible
-
-[cols=","]
-!===
-!Name: !physically impossible
-!Definition: !Access to the transport element is physically impossible due to the presence of barriers or other physical obstacles.
-!===
-
-a|
-private
-
-[cols=","]
-!===
-!Name: !private
-!Definition: !Access to the transport element is restricted because it is privately owned.
-!===
-
-a|
-publicAccess
-
-[cols=","]
-!===
-!Name: !public access
-!Definition: !The transport element is open to public access.
-!===
-
-a|
-seasonal
-
-[cols=","]
-!===
-!Name: !seasonal
-!Definition: !Access to the transport element depends on the season.
-!===
-
-a|
-toll
-
-[cols=","]
-!===
-!Name: !toll
-!Definition: !Access to the transport element is subject to toll.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -11061,101 +11003,7 @@ toll
 |Definition: |Possible restrictions on vehicles that can access a transport element.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/RestrictionTypeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-maximumDoubleAxleWeight
-
-[cols=","]
-!===
-!Name: !maximum double axle weight
-!Definition: !The maximum weight per double axle of a vehicle allowed at a transport element.
-!===
-
-a|
-maximumDraught
-
-[cols=","]
-!===
-!Name: !maximum draught
-!Definition: !The maximum draught of a vehicle allowed on a transport element.
-!===
-
-a|
-maximumFlightLevel
-
-[cols=","]
-!===
-!Name: !maximum flight level
-!Definition: !The maximum flight level allowed for a vehicle at a transport element.
-!===
-
-a|
-maximumHeight
-
-[cols=","]
-!===
-!Name: !maximum height
-!Definition: !The maximum height of a vehicle which can pass under another object.
-!===
-
-a|
-maximumLength
-
-[cols=","]
-!===
-!Name: !maximum length
-!Definition: !The maximum length of a vehicle allowed at a transport element.
-!===
-
-a|
-maximumSingleAxleWeight
-
-[cols=","]
-!===
-!Name: !maximum single axle weight
-!Definition: !The maximum weight per single axle of a vehicle allowed at a transport element.
-!===
-
-a|
-maximumTotalWeight
-
-[cols=","]
-!===
-!Name: !maximum total weight
-!Definition: !The maximum total weight of a vehicle allowed at a transport element.
-!===
-
-a|
-maximumTripleAxleWeight
-
-[cols=","]
-!===
-!Name: !maximum triple axle weight
-!Definition: !The maximum weight per triple axle of a vehicle allowed at a transport element.
-!===
-
-a|
-maximumWidth
-
-[cols=","]
-!===
-!Name: !maximum width
-!Definition: !The maximum width of a vehicle allowed on a transport element.
-!===
-
-a|
-minimumFlightLevel
-
-[cols=","]
-!===
-!Name: !minimum flight level
-!Definition: !The minimum flight level allowed for a vehicle at a transport element.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -11180,70 +11028,11 @@ minimumFlightLevel
 
 [cols=",",]
 |===
-|
 |Definition: |Speed limit restriction depending on the area.
 |Description: |SOURCE [Euroroads].
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/AreaConditionValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-inNationalPark
-
-[cols=","]
-!===
-!Name: !in national park
-!Definition: !Speed limit restriction inside national park.
-!===
-
-a|
-insideCities
-
-[cols=","]
-!===
-!Name: !inside cities
-!Definition: !Speed limit restriction inside cities.
-!===
-
-a|
-nearRailroadCrossing
-
-[cols=","]
-!===
-!Name: !near railroad crossing
-!Definition: !Speed limit restriction near rail road crossing.
-!===
-
-a|
-nearSchool
-
-[cols=","]
-!===
-!Name: !near school
-!Definition: !Speed limit restriction near school.
-!===
-
-a|
-outsideCities
-
-[cols=","]
-!===
-!Name: !outside cities
-!Definition: !Speed limit restriction outside cities.
-!===
-
-a|
-trafficCalmingArea
-
-[cols=","]
-!===
-!Name: !traffic calming area
-!Definition: !Speed limit restriction in traffic calming area.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -11254,83 +11043,7 @@ trafficCalmingArea
 |Definition: |Functions of road nodes within Euroroads.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/FormOfRoadNodeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-enclosedTrafficArea
-
-[cols=","]
-!===
-!Name: !enclosed traffic area
-!Definition: !The road node is situated inside and/or represents an enclosed traffic area. A traffic area is an area with no internal structure of legally defined driving directions. At least two roads are connected to the area.
-!===
-
-a|
-junction
-
-[cols=","]
-!===
-!Name: !junction
-!Definition: !Road node where three or more road links connect.
-!===
-
-a|
-levelCrossing
-
-[cols=","]
-!===
-!Name: !level crossing
-!Definition: !A road node where the road network is a crossed by a railway at the same level.
-!===
-
-a|
-pseudoNode
-
-[cols=","]
-!===
-!Name: !pseudo node
-!Definition: !Exactly two road links connect to the road node.
-!===
-
-a|
-roadEnd
-
-[cols=","]
-!===
-!Name: !road end
-!Definition: !Only one road link connects to the road node. It signifies the end of a road.
-!===
-
-a|
-roadServiceArea
-
-[cols=","]
-!===
-!Name: !road service area
-!Definition: !Surface annexed to a road and devoted to offer particular services for it.
-!===
-
-a|
-roundabout
-
-[cols=","]
-!===
-!Name: !roundabout
-!Definition: !The road node represents or is a part of a roundabout. A roundabout is a road which forms a ring on which traffic travelling in only one direction is allowed.
-!===
-
-a|
-trafficSquare
-
-[cols=","]
-!===
-!Name: !traffic square
-!Definition: !The road node is situated inside and/or represents a traffic square. A traffic square is an area (partly) enclosed by roads which is used for non-traffic purposes and which is not a roundabout.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -11342,146 +11055,7 @@ trafficSquare
 |Description: |SOURCE Based on [Euroroads].
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/FormOfWayValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-bicycleRoad
-
-[cols=","]
-!===
-!Name: !bicycle road
-!Definition: !Road where bicycles are the only vehicles allowed.
-!===
-
-a|
-dualCarriageway
-
-[cols=","]
-!===
-!Name: !dual carriageway
-!Definition: !Road with physically separated carriageways regardless of the number of lanes, which is not a motorway or a freeway.
-!===
-
-a|
-enclosedTrafficArea
-
-[cols=","]
-!===
-!Name: !enclosed traffic area
-!Definition: !Area with no internal structure of legally defined driving directions. At least two roads are connected to the area.
-!===
-
-a|
-entranceOrExitCarPark
-
-[cols=","]
-!===
-!Name: !entrance or exit car park
-!Definition: !Road specially designed to enter or to leave a parking area.
-!===
-
-a|
-entranceOrExitService
-
-[cols=","]
-!===
-!Name: !entrance or exit service
-!Definition: !Road used only to enter or to leave a service.
-!===
-
-a|
-freeway
-
-[cols=","]
-!===
-!Name: !freeway
-!Definition: !Road having no single level crossings with other roads.
-!===
-
-a|
-motorway
-
-[cols=","]
-!===
-!Name: !motorway
-!Definition: !Road to which regulations will normally apply with regards to entry and use. It has two or more mostly physically separated carriageways and no single level-crossings.
-!===
-
-a|
-pedestrianZone
-
-[cols=","]
-!===
-!Name: !pedestrian zone
-!Definition: !Area with a road network which is especially designed for use by pedestrians.
-!===
-
-a|
-roundabout
-
-[cols=","]
-!===
-!Name: !roundabout
-!Definition: !Road which forms a ring on which traffic travelling in only one direction is allowed.
-!===
-
-a|
-serviceRoad
-
-[cols=","]
-!===
-!Name: !service road
-!Definition: !Road running parallel to, and designed to connect, a road with a relatively high connectivity function with roads with a lower connectivity function.
-!===
-
-a|
-singleCarriageway
-
-[cols=","]
-!===
-!Name: !single carriageway
-!Definition: !Road where the traffic is not separated by any physical object.
-!===
-
-a|
-slipRoad
-
-[cols=","]
-!===
-!Name: !slip road
-!Definition: !Road especially designed to enter or exit another road.
-!===
-
-a|
-tractorRoad
-
-[cols=","]
-!===
-!Name: !tractor road
-!Definition: !Arranged road only usable for a tractor (farm vehicle or forest machine) or terrain vehicle (a vehicle with higher ground clearance, big wheels and 4 wheel drive).
-!===
-
-a|
-trafficSquare
-
-[cols=","]
-!===
-!Name: !traffic square
-!Definition: !Area (partly) enclosed by roads which is used for non-traffic purposes and which is not a roundabout.
-!===
-
-a|
-walkway
-
-[cols=","]
-!===
-!Name: !walkway
-!Definition: !Road reserved for pedestrian use and closed for regular vehicular use by a physically barrier.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -11492,29 +11066,7 @@ walkway
 |Definition: |Indication to which part of a road the value of a measurement applies.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/RoadPartValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-*carriageway*
-
-[cols=","]
-!===
-!Name: !carriageway
-!Definition: !The part of a road which is reserved for traffic.
-!===
-
-a|
-*pavedSurface*
-
-[cols=","]
-!===
-!Name: !paved surface
-!Definition: !The part of the road which is paved.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -11525,47 +11077,7 @@ a|
 |Definition: |Types of road service areas.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/RoadServiceTypeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-*busStation*
-
-[cols=","]
-!===
-!Name: !bus station
-!Definition: !The road service is a bus stop.
-!===
-
-a|
-*parking*
-
-[cols=","]
-!===
-!Name: !parking
-!Definition: !The road service area is a parking facility.
-!===
-
-a|
-*restArea*
-
-[cols=","]
-!===
-!Name: !rest area
-!Definition: !The road service is a rest area.
-!===
-
-a|
-*toll*
-
-[cols=","]
-!===
-!Name: !toll
-!Definition: !Area that provides toll services such as ticket dispensers or toll payment services.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -11576,29 +11088,7 @@ a|
 |Definition: |Values to indicate whether a road is paved or not paved.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/RoadSurfaceCategoryValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-*paved*
-
-[cols=","]
-!===
-!Name: !paved
-!Definition: !Road with a hard paved surface.
-!===
-
-a|
-*unpaved*
-
-[cols=","]
-!===
-!Name: !unpaved
-!Definition: !Road not paved.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -11608,75 +11098,8 @@ a|
 |===
 |Definition: |Possible service facilities available at a road service area.
 |Extensibility: |none
-|Identifier: |
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-*drinks*
-
-[cols=","]
-!===
-!Name: !drinks
-!Definition: !Drinks are available.
-!===
-
-a|
-*food*
-
-[cols=","]
-!===
-!Name: !food
-!Definition: !Food is available.
-!===
-
-a|
-*fuel*
-
-[cols=","]
-!===
-!Name: !fuel
-!Definition: !Fuel is available.
-!===
-
-a|
-*picnicArea*
-
-[cols=","]
-!===
-!Name: !picnic area
-!Definition: !A picnic area is present.
-!===
-
-a|
-*playground*
-
-[cols=","]
-!===
-!Name: !playground
-!Definition: !A playground area is present.
-!===
-
-a|
-*shop*
-
-[cols=","]
-!===
-!Name: !shop
-!Definition: !A shop is present.
-!===
-
-a|
-*toilets*
-
-[cols=","]
-!===
-!Name: !toilets
-!Definition: !Toilets are present.
-!===
+|Identifier: |https://inspire.ec.europa.eu/codelist/ServiceFacilityValue
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -11687,38 +11110,7 @@ a|
 |Definition: |Possible sources for speed limits.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/SpeedLimitSourceValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-|===
-
-[cols=""]
-|===
-a|
-*fixedTrafficSign*
-
-[cols=","]
-!===
-!Name: !fixed traffic sign
-!Definition: !Source is a fixed traffic sign (site specific administrative order, explicit speed limit).
-!===
-
-a|
-*regulation*
-
-[cols=","]
-!===
-!Name: !regulation
-!Definition: !Source is a regulation (national regulation, rule or 'implicit speed limit').
-!===
-
-a|
-*variableTrafficSign*
-
-[cols=","]
-!===
-!Name: !variable traffic sign
-!Definition: !Source is a variable traffic sign.
-!===
-
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 |===
 
 *VehicleTypeValue*
@@ -11728,272 +11120,7 @@ a|
 |Definition: |Possible types of vehicles.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/VehicleTypeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-|===
-
-[cols=""]
-|===
-a|
-*allVehicle*
-
-[cols=","]
-!===
-!Name: !all vehicle
-!Definition: !Any vehicle, not including pedestrians.
-!===
-
-a|
-*bicycle*
-
-[cols=","]
-!===
-!Name: !bicycle
-!Definition: !A pedal-driven two-wheeled vehicle.
-!===
-
-a|
-*carWithTrailer*
-
-[cols=","]
-!===
-!Name: !car with trailer
-!Definition: !A passenger car with an attached trailer.
-!===
-
-a|
-*deliveryTruck*
-
-[cols=","]
-!===
-!Name: !delivery truck
-!Definition: !A truck vehicle of relatively small size, whose principal use is for delivery of goods and materials.
-!===
-
-a|
-*emergencyVehicle*
-
-[cols=","]
-!===
-!Name: !emergency vehicle
-!Definition: !A vehicle engaged in emergency response, including but not limited to police, ambulance and fire.
-!===
-
-a|
-*employeeVehicle*
-
-[cols=","]
-!===
-!Name: !employee vehicle
-!Definition: !A vehicle operated by an employee of an organization that is used according to that organization's procedures.
-!===
-
-a|
-*facilityVehicle*
-
-[cols=","]
-!===
-!Name: !facility vehicle
-!Definition: !A vehicle dedicated to a localized area within a private or restricted estate.
-!===
-
-a|
-*farmVehicle*
-
-[cols=","]
-!===
-!Name: !farm vehicle
-!Definition: !Vehicle commonly associated with farming activities.
-!===
-
-a|
-*highOccupancyVehicle*
-
-[cols=","]
-!===
-!Name: !high occupancy vehicle
-!Definition: !Vehicle populated with a number of occupants corresponding to (or exceeding) the specified minimum number of passengers.
-!===
-
-a|
-*lightRail*
-
-[cols=","]
-!===
-!Name: !light rail
-!Definition: !Train-like transport vehicle limited to a rail network within a limited area.
-!===
-
-a|
-*mailVehicle*
-
-[cols=","]
-!===
-!Name: !mail vehicle
-!Definition: !A vehicle that collects, carries or delivers mail.
-!===
-
-a|
-*militaryVehicle*
-
-[cols=","]
-!===
-!Name: !military vehicle
-!Definition: !Vehicle authorized by a military authority.
-!===
-
-a|
-*moped*
-
-[cols=","]
-!===
-!Name: !moped
-!Definition: !Two or three wheeled vehicle equipped with internal combustion engine, with size less than 50 cc and maximum speed that does not exceed 45 km/h (28mph).
-!===
-
-a|
-*motorcycle*
-
-[cols=","]
-!===
-!Name: !motorcycle
-!Definition: !Two or three wheeled vehicle equipped with internal combustion engine, with size more than 50 cc and maximum speed that does exceed 45 km/h (28mph).
-!===
-
-a|
-*passengerCar*
-
-[cols=","]
-!===
-!Name: !passenger car
-!Definition: !A small vehicle designed for private transport of people.
-!===
-
-a|
-*pedestrian*
-
-[cols=","]
-!===
-!Name: !pedestrian
-!Definition: !A person on foot.
-!===
-
-a|
-*privateBus*
-
-[cols=","]
-!===
-!Name: !private bus
-!Definition: !A vehicle designed for transport of large groups of people, privately owned or chartered.
-!===
-
-a|
-*publicBus*
-
-[cols=","]
-!===
-!Name: !public bus
-!Definition: !A vehicle designed for transport of large groups of people that is generally characterised by published routes and schedules.
-!===
-
-a|
-*residentialVehicle*
-
-[cols=","]
-!===
-!Name: !residential vehicle
-!Definition: !A vehicle whose owner is resident (or a guest) of particular street or town area.
-!===
-
-a|
-*schoolBus*
-
-[cols=","]
-!===
-!Name: !school bus
-!Definition: !Vehicle operated on behalf of a school to transport students.
-!===
-
-a|
-*snowChainEquippedVehicle*
-
-[cols=","]
-!===
-!Name: !snow chain equipped vehicle
-!Definition: !Any vehicle equipped with snow chains.
-!===
-
-a|
-*tanker*
-
-[cols=","]
-!===
-!Name: !tanker
-!Definition: !A truck with more than two axles used to transport liquid or gas loads in bulk.
-!===
-
-a|
-*taxi*
-
-[cols=","]
-!===
-!Name: !taxi
-!Definition: !A vehicle licensed for hire usually fitted with a meter.
-!===
-
-a|
-*transportTruck*
-
-[cols=","]
-!===
-!Name: !transport truck
-!Definition: !A truck vehicle for long range transport of goods.
-!===
-
-a|
-*trolleyBus*
-
-[cols=","]
-!===
-!Name: !trolley bus
-!Definition: !A bus-like mass transport vehicle hooked up to an electrical network for power supply.
-!===
-
-a|
-*vehicleForDisabledPerson*
-
-[cols=","]
-!===
-!Name: !vehicle for disabled person
-!Definition: !A vehicle with supporting identification that designates a vehicle for disabled persons.
-!===
-
-a|
-*vehicleWithExplosiveLoad*
-
-[cols=","]
-!===
-!Name: !vehicle with explosive load
-!Definition: !Vehicle transporting explosive cargo.
-!===
-
-a|
-*vehicleWithOtherDangerousLoad*
-
-[cols=","]
-!===
-!Name: !vehicle with other dangerous load
-!Definition: !Vehicle transporting dangerous cargo other than explosive or water-polluting loads.
-!===
-
-a|
-*vehicleWithWaterPollutingLoad*
-
-[cols=","]
-!===
-!Name: !vehicle with water polluting load
-!Definition: !Vehicle transporting water-polluting cargo.
-!===
-
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 |===
 
 *WeatherConditionValue*
@@ -12003,56 +11130,7 @@ a|
 |Definition: |Values to indicate weather conditions that affect speed limits.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/WeatherConditionValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-*fog*
-
-[cols=","]
-!===
-!Name: !fog
-!Definition: !Speed applies when fog is present.
-!===
-
-a|
-*ice*
-
-[cols=","]
-!===
-!Name: !ice
-!Definition: !Speed applies when ice is present.
-!===
-
-a|
-*rain*
-
-[cols=","]
-!===
-!Name: !rain
-!Definition: !Speed applies when rain is present.
-!===
-
-a|
-*smog*
-
-[cols=","]
-!===
-!Name: !smog
-!Definition: !Speed applies when a certain amount of smog is present.
-!===
-
-a|
-*snow*
-
-[cols=","]
-!===
-!Name: !snow
-!Definition: !Speed applies when snow is present.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12073,56 +11151,7 @@ a|
 |Definition: |The possible functions of a railway node within the railway network.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/FormOfRailwayNodeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-junction
-
-[cols=","]
-!===
-!Name: !junction
-!Definition: !A railway node where the railway network has a mechanism consisting on a railroad track with two movable rails and the necessary connections, which let vehicles turn from one track to another.
-!===
-
-a|
-levelCrossing
-
-[cols=","]
-!===
-!Name: !level crossing
-!Definition: !A railway node where the railway network is a crossed by a road at the same level.
-!===
-
-a|
-pseudoNode
-
-[cols=","]
-!===
-!Name: !pseudo node
-!Definition: !A railway node which represents a point where one or more attributes of the railway links connected to it change their value, or a point necessary to describe the geometry of the network.
-!===
-
-a|
-railwayEnd
-
-[cols=","]
-!===
-!Name: !railway end
-!Definition: !Only one railway link connects to the railway node. It signifies the end of a railway line.
-!===
-
-a|
-railwayStop
-
-[cols=","]
-!===
-!Name: !railway stop
-!Definition: !A place in the railway network where trains stop to load/unload cargo or to let passengers get on and off the train.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12133,83 +11162,7 @@ railwayStop
 |Definition: |The possible types of railway transport.
 |Extensibility: |none
 |Identifier: |!http://inspire.ec.europa.eu/codelist/RailwayTypeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-|===
-
-[cols=""]
-|===
-a|
-cogRailway
-
-[cols=","]
-!===
-!Name: !cog railway
-!Definition: !A railway transport which allows the vehicles to operate on steep gradients, consisting of a railway provided with a toothed rack rail (usually between the running rails) where vehicles are fitted with one or more cog wheels or pinions that mesh with this rack rail.
-!===
-
-a|
-funicular
-
-[cols=","]
-!===
-!Name: !funicular
-!Definition: !A railway transport consisting of a cable attached to a vehicle on rails which moves them up and down a very steep slope. Where possible the ascending and descending vehicles counterbalance each other.
-!===
-
-a|
-magneticLevitation
-
-[cols=","]
-!===
-!Name: !magnetic levitation
-!Definition: !A railway transport based on a single rail which acts as guideway of a vehicle and supports it by means of a magnetic levitation mechanism.
-!===
-
-a|
-metro
-
-[cols=","]
-!===
-!Name: !metro
-!Definition: !An urban railway transport system used in large urban areas, which runs on a separate track from other transport systems, is usually electrically powered and in some cases runs under ground.
-!===
-
-a|
-monorail
-
-[cols=","]
-!===
-!Name: !monorail
-!Definition: !A railway transport based on a single rail which acts as both its only support and guideway.
-!===
-
-a|
-suspendedRail
-
-[cols=","]
-!===
-!Name: !suspended rail
-!Definition: !A railway transport based on a single rail, acting as both support and guideway, from which a vehicle is suspended to move along the railway.
-!===
-
-a|
-train
-
-[cols=","]
-!===
-!Name: !train
-!Definition: !A railway transport usually consisting of two parallel rails on which a powered-vehicle or train machine pulls a connected series of vehicles to move them along the railway in order to transport freight or passengers from one destination to another.
-!===
-
-a|
-tramway
-
-[cols=","]
-!===
-!Name: !tramway
-!Definition: !A railway transport system used in urban areas, which often runs at street level, sharing road space with motor traffic and pedestrians. Tramways are usually electrically powered.
-!===
-
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 |===
 
 *RailwayUseValue*
@@ -12219,47 +11172,7 @@ tramway
 |Definition: |The possible uses of railways.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/RailwayUseValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-cargo
-
-[cols=","]
-!===
-!Name: !cargo
-!Definition: !The use of railway is exclusively for cargo operations.
-!===
-
-a|
-carShuttle
-
-[cols=","]
-!===
-!Name: !car shuttle
-!Definition: !The use of railway is exclusively to perform car shuttle transport.
-!===
-
-a|
-mixed
-
-[cols=","]
-!===
-!Name: !mixed
-!Definition: !The use of railway is mixed. It is used to transport passengers and cargo.
-!===
-
-a|
-passengers
-
-[cols=","]
-!===
-!Name: !passengers
-!Definition: !The use of railway is exclusively to transport passengers.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12278,38 +11191,7 @@ passengers
 |Definition: |The possible types of cableway transport.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/CablewayTypeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-cabinCableCar
-
-[cols=","]
-!===
-!Name: !cabin cable car
-!Definition: !A cableway transport whose vehicles consist of a suspended cabin for carrying groups of people and/or goods inside it from one location to another.
-!===
-
-a|
-chairLift
-
-[cols=","]
-!===
-!Name: !chair lift
-!Definition: !A cableway transport whose vehicles consist of suspended chairs for carrying individuals or groups of people from one location to another via a steel cable or rope which is looped around two points.
-!===
-
-a|
-skiTow
-
-[cols=","]
-!===
-!Name: !ski tow
-!Definition: !A cableway transport for pulling skiers and snowboarders uphill.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12329,56 +11211,7 @@ skiTow
 |Definition: |Types of transport carried out by a ferry.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/FerryUseValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-cars
-
-[cols=","]
-!===
-!Name: !cars
-!Definition: !Ferry carries cars.
-!===
-
-a|
-other
-
-[cols=","]
-!===
-!Name: !other
-!Definition: !Ferry carries others forms of transport than passengers, cars, trucks or trains.
-!===
-
-a|
-passengers
-
-[cols=","]
-!===
-!Name: !passengers
-!Definition: !Ferry carries passengers.
-!===
-
-a|
-train
-
-[cols=","]
-!===
-!Name: !train
-!Definition: !Ferry carries trains.
-!===
-
-a|
-trucks
-
-[cols=","]
-!===
-!Name: !trucks
-!Definition: !Ferry carries trucks.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12389,65 +11222,7 @@ trucks
 |Definition: |Function of a WaterwayNode in the water transport network.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/FormOfWaterwayNodeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-junctionFork
-
-[cols=","]
-!===
-!Name: !junction fork
-!Definition: !Infrastructure elements where one vessel traffic flow crosses another vessel traffic flow or points where vessel traffic flows divide or come together.
-!===
-
-a|
-lockComplex
-
-[cols=","]
-!===
-!Name: !lock complex
-!Definition: !Lock or group of locks, intended for raising and lowering boats between stretches of water of different levels on river and canal waterways.
-!===
-
-a|
-movableBridge
-
-[cols=","]
-!===
-!Name: !movable bridge
-!Definition: !Bridge that can be raised or turned to allow the passage of ships.
-!===
-
-a|
-shipLift
-
-[cols=","]
-!===
-!Name: !ship lift
-!Definition: !A machine for transporting boats between water bodies at two different elevations, which is used as an alternative to the canal locks.
-!===
-
-a|
-turningBasin
-
-[cols=","]
-!===
-!Name: !turning basin
-!Definition: !A place where a canal or narrow waterway is widened to allow boats to turn around.
-!===
-
-a|
-waterTerminal
-
-[cols=","]
-!===
-!Name: !water terminal
-!Definition: !The location where goods are transhipped.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12475,38 +11250,7 @@ waterTerminal
 |Definition: |Aerodrome possible categories concerning the scope and importance of the air traffic services offered from and to it.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/AerodromeCategoryValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols="",]
-|===
-a|
-domesticNational
-
-[cols=","]
-!===
-!Name: !domestic national
-!Definition: !Aerodrome serving domestic national air traffic services.
-!===
-
-a|
-domesticRegional
-
-[cols=","]
-!===
-!Name: !domestic regional
-!Definition: !Aerodrome serving domestic regional air traffic services.
-!===
-
-a|
-international
-
-[cols=","]
-!===
-!Name: !international
-!Definition: !Aerodrome serving international air traffic services.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12518,47 +11262,7 @@ international
 |Description: |SOURCE [CodeAirportHeliportType - AIXM5.0].
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/AerodromeTypeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-aerodromeHeliport
-
-[cols=","]
-!===
-!Name: !aerodrome heliport
-!Definition: !Aerodrome with heliport landing area.
-!===
-
-a|
-aerodromeOnly
-
-[cols=","]
-!===
-!Name: !aerodrome only
-!Definition: !Aerodrome only.
-!===
-
-a|
-heliportOnly
-
-[cols=","]
-!===
-!Name: !heliport only
-!Definition: !Heliport only.
-!===
-
-a|
-landingSite
-
-[cols=","]
-!===
-!Name: !landing site
-!Definition: !Landing site.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12574,38 +11278,7 @@ NOTE These values enumerate the possible usages of a AirRouteLink.
 EXAMPLES Conventional, RNAV.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/AirRouteLinkClassValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-conventional
-
-[cols=","]
-!===
-!Name: !conventional
-!Definition: !Conventional navigation route: An air route which does neither use Area Navigation nor TACAN navigation for air traffic services.
-!===
-
-a|
-RNAV
-
-[cols=","]
-!===
-!Name: !RNAV
-!Definition: !Area navigation route: An air route which uses Area Navigation (RNAV) for air traffic services.
-!===
-
-a|
-TACAN
-
-[cols=","]
-!===
-!Name: !TACAN
-!Definition: !TACAN route: An air route which uses TACAN Navigation for air traffic services.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12617,29 +11290,7 @@ TACAN
 |Description: |SOURCE [CodeRouteType - AIXM5.0].
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/AirRouteTypeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-ATS
-
-[cols=","]
-!===
-!Name: !ATS
-!Definition: !ATS Route as described in ICAO Annex 11.
-!===
-
-a|
-NAT
-
-[cols=","]
-!===
-!Name: !NAT
-!Definition: !North Atlantic Track (part of Organized Track System).
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12650,29 +11301,7 @@ NAT
 |Definition: |The use restrictions for an air network object.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/AirUseRestrictionValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-reservedForMilitary
-
-[cols=","]
-!===
-!Name: !reserved for military
-!Definition: !The air network object is exclusively for military use.
-!===
-
-a|
-temporalRestrictions
-
-[cols=","]
-!===
-!Name: !temporal restrictions
-!Definition: !The temporal restrictions apply to the use of the air network object.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12684,92 +11313,7 @@ temporalRestrictions
 |Description: |SOURCE [CodeAirspaceType - AIXM5.0].
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/AirspaceAreaTypeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-ATZ
-
-[cols=","]
-!===
-!Name: !Airport Traffic Zone
-!Definition: !Airspace of defined dimensions established around an airport for the protection of airport traffic.
-!===
-
-a|
-CTA
-
-[cols=","]
-!===
-!Name: !control area
-!Definition: !A controlled airspace extending upwards from a specified limit above the earth.
-!===
-
-a|
-CTR
-
-[cols=","]
-!===
-!Name: !control zone
-!Definition: !A controlled airspace extending upwards from the surface of the earth to a specified upper limit.
-!===
-
-a|
-D
-
-[cols=","]
-!===
-!Name: !Danger area
-!Definition: !Danger area. Airspace of defined dimensions within which activities dangerous to the flight of aircraft may exist at specified times.
-!===
-
-a|
-FIR
-
-[cols=","]
-!===
-!Name: !Flight Information Region
-!Definition: !Airspace of defined dimensions within which flight information service and alerting service are provided. Might, for example, be used if service provided by more than one unit.
-!===
-
-a|
-P
-
-[cols=","]
-!===
-!Name: !Prohibited area
-!Definition: !Prohibited area. Airspace of defined dimensions, above the land areas or territorial waters of a State, within which the flight of aircraft is prohibited.
-!===
-
-a|
-R
-
-[cols=","]
-!===
-!Name: !Restricted area
-!Definition: !Restricted area. Airspace of defined dimensions, above the land areas or territorial waters of a State, within which the flight of aircraft is restricted in accordance with certain specified conditions.
-!===
-
-a|
-TMA
-
-[cols=","]
-!===
-!Name: !terminal control area
-!Definition: !Control area normally established at the confluence of ATS routes in the vicinity of one or more major aerodromes. Mainly used in Europe under the Flexible Use of Airspace concept.
-!===
-
-a|
-UIR
-
-[cols=","]
-!===
-!Name: !Upper flight Information Region
-!Definition: !An upper airspace of defined dimensions within which flight information service and alerting service are provided. Each state determines its definition for upper airspace.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12781,155 +11325,7 @@ UIR
 |Description: |SOURCE [AIXM5.0].
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/NavaidTypeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-*DME*
-
-[cols=","]
-!===
-!Name: !DME
-!Definition: !Distance Measuring Equipment.
-!===
-
-a|
-*ILS*
-
-[cols=","]
-!===
-!Name: !ILS
-!Definition: !Instrument Landing System.
-!===
-
-a|
-*ILS-DME*
-
-[cols=","]
-!===
-!Name: !ILS-DME
-!Definition: !ILS with collocated DME.
-!===
-
-a|
-*LOC*
-
-[cols=","]
-!===
-!Name: !LOC
-!Definition: !Localizer.
-!===
-
-a|
-*LOC-DME*
-
-[cols=","]
-!===
-!Name: !LOC-DME
-!Definition: !LOC and DME collocated.
-!===
-
-a|
-*MKR*
-
-[cols=","]
-!===
-!Name: !MKR
-!Definition: !Marker Beacon.
-!===
-
-a|
-*MLS*
-
-[cols=","]
-!===
-!Name: !MLS
-!Definition: !Microwave Landing System.
-!===
-
-a|
-*MLS-DME*
-
-[cols=","]
-!===
-!Name: !MLS-DME
-!Definition: !MLS with collocated DME.
-!===
-
-a|
-*NDB*
-
-[cols=","]
-!===
-!Name: !NDB
-!Definition: !Non-Directional Radio Beacon.
-!===
-
-a|
-*NDB-DME*
-
-[cols=","]
-!===
-!Name: !NDB-DME
-!Definition: !NDB and DME collocated.
-!===
-
-a|
-*NDB-MKR*
-
-[cols=","]
-!===
-!Name: !NDB-MKR
-!Definition: !Non-Directional Radio Beacon and Marker Beacon.
-!===
-
-a|
-*TACAN*
-
-[cols=","]
-!===
-!Name: !TACAN
-!Definition: !Tactical Air Navigation Beacon.
-!===
-
-a|
-*TLS*
-
-[cols=","]
-!===
-!Name: !TLS
-!Definition: !Transponder Landing System.
-!===
-
-a|
-*VOR*
-
-[cols=","]
-!===
-!Name: !VOR
-!Definition: !VHF Omnidirectional Radio Range.
-!===
-
-a|
-*VOR-DME*
-
-[cols=","]
-!===
-!Name: !VOR-DME
-!Definition: !VOR and DME collocated.
-!===
-
-a|
-*VORTAC*
-
-[cols=","]
-!===
-!Name: !VORTAC
-!Definition: !VOR and TACAN collocated.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12941,47 +11337,7 @@ a|
 |Description: |SOURCE [AIXM5.0].
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/PointRoleValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-*end*
-
-[cols=","]
-!===
-!Name: !end
-!Definition: !Physical end of a runway direction.
-!===
-
-a|
-*mid*
-
-[cols=","]
-!===
-!Name: !mid
-!Definition: !The mid point of the runway.
-!===
-
-a|
-*start*
-
-[cols=","]
-!===
-!Name: !start
-!Definition: !Physical start of a runway direction.
-!===
-
-a|
-*threshold*
-
-[cols=","]
-!===
-!Name: !threshold
-!Definition: !The beginning of that portion of the runway usable for landing.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -12993,29 +11349,7 @@ a|
 |Description: |SOURCE [CodeRunwayType - AIXM5.0].
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/RunwayTypeValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-*FATO*
-
-[cols=","]
-!===
-!Name: !FATO
-!Definition: !Final Approach and Take Off Area for helicopters.
-!===
-
-a|
-*runway*
-
-[cols=","]
-!===
-!Name: !runway
-!Definition: !Runway for airplanes.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -13029,38 +11363,7 @@ a|
 EXAMPLES Asphalt, concrete.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/SurfaceCompositionValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[cols=""]
-|===
-a|
-*asphalt*
-
-[cols=","]
-!===
-!Name: !asphalt
-!Definition: !Surface made of an asphalt layer.
-!===
-
-a|
-*concrete*
-
-[cols=","]
-!===
-!Name: !concrete
-!Definition: !Surface made of a concrete layer.
-!===
-
-a|
-*grass*
-
-[cols=","]
-!===
-!Name: !grass
-!Definition: !Surface consisting of a grass layer.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 

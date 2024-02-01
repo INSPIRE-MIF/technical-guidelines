@@ -1745,7 +1745,7 @@ a|
 !Definition: !Categories for different types of the MeasurementRegime.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/MeasurementRegimeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1762,7 +1762,7 @@ a|
 !Definition: !Categories for different types of media.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/MediaValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1779,7 +1779,7 @@ a|
 !Definition: !Categories for different process types.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ProcessTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1796,7 +1796,7 @@ a|
 !Definition: !Categories for different purposes of collections.
 !Extensibility: !any
 !Identifier: !none
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1813,7 +1813,7 @@ a|
 !Definition: !Categories for different types of the ResultAcquisitionSource.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ResultAcquisitionSourceValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1830,7 +1830,7 @@ a|
 !Definition: !State of the result of an observation.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ResultNatureValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1847,7 +1847,7 @@ a|
 !Definition: !Categories for different types of EnvironmentalMonitoringFacilities.
 !Extensibility: !any
 !Identifier: !none
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -5096,49 +5096,7 @@ a|
 !Definition: !Categories for different types of the MeasurementRegime.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/MeasurementRegimeValue
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers.
-
-[cols=""]
-|===
-a|
-*continuousDataCollection*
-
-[cols=","]
-!===
-!Name: !continuous data collection
-!Definition: !Data is collected on a continuous basis. there is usually no end date, as further data is collected
-!===
-
-a|
-*demandDrivenDataCollection*
-
-[cols=","options="header",]
-!===
-!Name: !demand driven data collection
-!Definition: !Data is collected on demand.
-!===
-
-a|
-*onceOffDataCollection*
-
-[cols=","options="header",]
-!===
-!Name: !once-off data collection
-!Definition: !Data is collected only once in this configuration. no further observations in this configuration can be expected
-!===
-
-a|
-*periodicDataCollection*
-
-[cols=","options="header",]
-!===
-!Name: !periodic data collection
-!Definition: !Data is collected at regular intervals. No information is available at to the data collection interval.
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -5154,69 +5112,7 @@ a|
 !Definition: !Categories for different types of media.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/MediaValue
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers.
-
-[cols=""]
-|===
-a|
-*air*
-
-[cols=","]
-!===
-!Name: !air
-!===
-
-a|
-*biota*
-
-[cols=","]
-!===
-!Name: !biota
-!===
-
-a|
-*landscape*
-
-[cols=","]
-!===
-!Name: !landscape
-!===
-
-a|
-*sediment*
-
-[cols=","]
-!===
-!Name: !sediment
-!===
-
-a|
-*soil/ground*
-
-[cols=","]
-!===
-!Name: !soil/ground
-!===
-
-a|
-*waste*
-
-[cols=","]
-!===
-!Name: !waste
-!===
-
-a|
-*water*
-
-[cols=","]
-!===
-!Name: !water
+!Values: !The INSPIRE Regisry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -5232,34 +5128,11 @@ a|
 !Definition: !Categories for different process types.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ProcessTypeValue
-!Values: !
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers.
-
-[cols=""]
-|===
-a|
-*process*
-
-[cols=","]
-!===
-!Name: !Process
-!Definition: !Indicates that the class used for the description of methodological information of the Observation (ProcessUsed association) is the Process class defined in the GCM.
-!===
-
-a|
-*sensorML*
-
-[cols=","]
-!===
-!Name: !SensorML
-!Definition: !Indicates that the class used for the description of methodological information of the Observation (ProcessUsed association) comes from SensorML.
-!===
-
-|===
 
 *ResultAcquisitionSourceValue*
 
@@ -5272,49 +5145,7 @@ a|
 !Definition: !Categories for different types of the ResultAcquisitionSource.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ResultAcquisitionSourceValue
-!Values: !
-!===
-
-|===
-
-The table below includes recommended values that may be used by data providers.
-
-[cols=""]
-|===
-a|
-*exSitu*
-
-[cols=","]
-!===
-!Name: !ex-situ
-!Definition: !The FeatureOfInterest is a specimen taken from the ultimate FeatureOfInterest (i.e. the sampledFeature).
-!===
-
-a|
-*inSitu*
-
-[cols=","]
-!===
-!Name: !in-situ
-!Definition: !The FeatureOfInterest is a sampling feature which is co-located with the ultimate FeatureOfInterest (i.e. the sampledFeature).
-!===
-
-a|
-*remoteSensing*
-
-[cols=","]
-!===
-!Name: !remote-sensing
-!Definition: !The FeatureOfInterest is a sampling feature which is also the ultimate FeatureOfInterest (i.e. the sampledFeature).
-!===
-
-a|
-*subsumed*
-
-[cols=","]
-!===
-!Name: !subsumed
-!Definition: !The value is inherited from children.
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -5330,43 +5161,11 @@ a|
 !Definition: !State of the result of an observation.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ResultNatureValue
-!Values: !
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers.
-
-[cols=""]
-|===
-a|
-*primary*
-
-[cols=","]
-!===
-!Name: !primary
-!Definition: !The result provided with the observation is the direct result of an estimate of a property on the featureOfInterest. No further processing has been performed. Processing may have taken place, but only in the sense of the measurement methodology itself, i.e. converting the millivolt returned from the sensor to the concentration of a substance.
-!===
-
-a|
-*processed*
-
-[cols=","]
-!===
-!Name: !processed
-!Definition: !The result provided, while usually based on primary measurements, has been substantially processed. This processing can be of diverse natures, in some situations complex aggregates are provided, in other situations, the existing values are interpolated to a continuum.
-!===
-
-a|
-*simulated*
-
-[cols=","]
-!===
-!Name: !simulated
-!Definition: !The result provided, while usually based on primary measurements, is based on an interpretation model, and provides a simulation of past or future states of the media being analyzed. In this case, the existing values are usually extrapolated into the past or future.
-!===
-
-|===
 
 <<<
 [appendix]

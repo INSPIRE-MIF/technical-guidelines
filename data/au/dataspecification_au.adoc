@@ -1829,7 +1829,7 @@ a|
 !Definition: !Levels of administration in the national administrative hierarchy. This code list reflects the level in the hierarchical pyramid of the administrative structures, which is based on geometric aggregation of territories and does not necessarily describe the subordination between the related administrative authorities.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AdministrativeHierarchyLevel
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2525,7 +2525,7 @@ a|
 !Definition: !The types of baselines used to measure the breadth of the territorial sea.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/BaselineSegmentTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2542,7 +2542,7 @@ a|
 !Definition: !Type of maritime zone.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/MaritimeZoneTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -5356,65 +5356,7 @@ a|
 !Definition: !Levels of administration in the national administrative hierarchy. This code list reflects the level in the hierarchical pyramid of the administrative structures, which is based on geometric aggregation of territories and does not necessarily describe the subordination between the related administrative authorities.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AdministrativeHierarchyLevel
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols="",]
-|===
-a|
-*1stOrder*
-
-[cols=","]
-!===
-!Name: !1st order
-!Definition: !Highest level in the national administrative hierarchy (country level).
-!===
-
-a|
-*2ndOrder*
-
-[cols=","]
-!===
-!Name: !2nd order
-!Definition: !2nd level in the national administrative hierarchy.
-!===
-
-a|
-*3rdOrder*
-
-[cols=","]
-!===
-!Name: !3rd order
-!Definition: !3rd level in the national administrative hierarchy.
-!===
-
-a|
-*4thOrder*
-
-[cols=","]
-!===
-!Name: !4th order
-!Definition: !4th level in the national administrative hierarchy.
-!===
-
-a|
-*5thOrder*
-
-[cols=","]
-!===
-!Name: !5th order
-!Definition: !5th level in the national administrative hierarchy.
-!===
-
-a|
-*6thOrder*
-
-[cols=","]
-!===
-!Name: !6th order
-!Definition: !6th level in the national administrative hierarchy.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -5439,41 +5381,11 @@ a|
 !Definition: !The types of baselines used to measure the breadth of the territorial sea.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/BaselineSegmentTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
-[cols=""]
-|===
-a|
-*normal*
-
-[cols=","]
-!===
-!Name: !normal
-!Definition: !The normal baseline for measuring the breadth of the territorial sea is the low-water line along the coast as marked on large-scale charts officially recognized by the coastal State.
-!===
-
-a|
-*straight*
-
-[cols=","]
-!===
-!Name: !straight
-!Definition: !The baseline for measuring the breadth of the territorial sea is the straight baseline established by joining the appropriate points.
-!===
-
-a|
-*archipelagic*
-
-[cols=","]
-!===
-!Name: !archipelagic
-!Definition: !The baseline for measuring the breadth of the territorial sea is the straight baseline joining the outermost points of the outermost islands and drying reefs of the archipelago.
-!===
-
-|===
 
 *MaritimeZoneTypeValue*
 
@@ -5486,56 +5398,7 @@ a|
 !Definition: !Type of maritime zone.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/MaritimeZoneTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[cols=""]
-|===
-a|
-*internalWaters*
-
-[cols=","]
-!===
-!Name: !Internal Waters
-!Definition: !The waters on the landward side of the baselines of the territorial sea of the coastal State.
-!===
-
-a|
-*territorialSea*
-
-[cols=","]
-!===
-!Name: !Territorial Sea
-!Definition: !A belt of sea of a defined breadth not exceeding 12 nautical miles measured from the baselines determined in accordance to the United Nations Convention of Law on the Sea.
-!===
-
-a|
-*contiguousZone*
-
-[cols=","]
-!===
-!Name: !Contiguous Zone
-!Definition: !A zone contiguous to a territorial sea of a coastal State, which may not extend beyond 24 nautical miles from the baselines from which the breadth of the territorial sea is measured.
-!===
-
-a|
-*exclusiveEconomicZone*
-
-[cols=","]
-!===
-!Name: !Exclusive Economic Zone
-!Definition: !An area beyond and adjacent to the territorial sea of a coastal State, subject to the specific legal regime under which the rights and jurisdiction of the coastal State and the rights and freedoms of other States are governed by the relevant provisions of the United Nations Convention on Law of the Sea.
-!===
-
-a|
-*continentalShelf*
-
-[cols=","]
-!===
-!Name: !Continental Shelf
-!Definition: !A maritime zone beyond and adjacent to the a territorial sea of a coastal State whose outer boundary is determined in accordance with Article 76 of the United Nations Convention on the Law of the Sea.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
