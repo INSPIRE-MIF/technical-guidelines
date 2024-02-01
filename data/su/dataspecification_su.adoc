@@ -1923,6 +1923,7 @@ NOTE Spatial features of any INSPIRE application schema can be considered as a s
 |GeometryDescriptor |Statistical Units Vector |«dataType»
 |GeometryTypeValue |Statistical Units Vector |«codelist»
 |StatisticalTessellation |Statistical Units Vector |«featureType»
+|StatisticalUnitTypeValue |Statistical Units Vector |«codelist»
 |VectorStatisticalUnit |Statistical Units Vector |«featureType»
 |VectorStatisticalUnitGeometry |Statistical Units Vector |«dataType»
 |===
@@ -2330,6 +2331,17 @@ a|
 !===
 
 a|
+*Attribute: statisticalUnitType*
+
+[cols=","]
+!===
+!Name: !Statistical unit type
+!Value type: !StatisticalUnitTypeValue
+!Definition: !Type of territorial unit used for dissemination purposes.
+!Multiplicity: !0..*
+!===
+
+a|
 *Attribute: beginLifespanVersion*
 
 [cols=","]
@@ -2559,6 +2571,23 @@ a|
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometryTypeValue
 !Values: !The allowed values for this code list comprise the values specified in Annex C and additional values at any level defined by data providers.
+!===
+
+|===
+
+====== _StatisticalUnitTypeValue_
+
+[cols="",options="header",]
+|===
+|*StatisticalUnitTypeValue*
+a|
+[cols=","]
+!===
+!Name: !Statistical unit type value
+!Definition: !The code values for statistical unit types.
+!Extensibility: !any
+!Identifier: !http://inspire.ec.europa.eu/codelist/StatisticalUnitTypeValue
+!Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
 |===
@@ -5093,6 +5122,7 @@ image::./media/image23.png[Population_change,_by_NUTS_3_regions,_2008,width=604,
 |*Code List*
 |_EvolutionTypeValue_
 |_GeometryTypeValue_
+|_StatisticalUnitTypeValue_
 |===
 
 [discrete]
@@ -5228,6 +5258,23 @@ a|
 !===
 !Name: !other
 !Definition: !Other kind of geometry type.
+!===
+
+|===
+
+[discrete]
+=== StatisticalUnitTypeValue
+
+[cols="",]
+|===
+a|
+[cols=","]
+!===
+!Name: !Statistical unit type value
+!Definition: !The code values for statistical unit types.
+!Extensibility: !any
+!Identifier: !http://inspire.ec.europa.eu/codelist/StatisticalUnitTypeValue
+!Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
 |===
