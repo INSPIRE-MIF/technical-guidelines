@@ -931,7 +931,7 @@ image::./media/image9.png[image,width=610,height=421, align=center]
 [.text-center]
 *Figure 6: Measure and units, as defined in ISO 19103*
 
-Health determinant raw measurement data are described based on this standard following the diagram shown on the Figure 7. An environmental health determinant measure is characterized by a location, a type, and a measurement time. The measurement data are represented based on ISO 19103 measure class.
+Health determinant raw measurement data are described based on this standard following the diagram shown on the Figure 7. An environmental health determinant measure is characterized by a location, a type, and a measurement time. The measurement data are represented based on ISO 19103 measure class, which types are used by the measure attribute.
 
 image::./media/image10.png[image,width=605,height=276, align=center]
 
@@ -950,14 +950,14 @@ Raw measurement data shall be based on ISO/TS 19103:2005.
 
 ====
 
-The following diagrams provide a specialisation of the ISO 19103 for two specific cases of interest for human health: Noise and concentration. Other similar specialization may be performed for other health determinants.
+The following diagrams provide a specialisation of the EnvHealthDeterminantMeasure feature type for two specific cases of interest for human health: Noise and Concentration. Other similar specialization may be performed for other health determinants.
 
 * [.underline]#Noise#: A noise measure is characterized by a source described in the EIONET code list.
 
 image::./media/image11.png[image,width=522,height=407, align=center]
 
 [.text-center]
-*Figure 8: Noise measure, based on ISO 19103*
+*Figure 8: Noise measure*
 
 [NOTE]
 ====
@@ -972,7 +972,7 @@ Noise measurements should be characterized by a source following the EIONET code
 image::./media/image12.png[image,width=538,height=860, align=center]
 
 [.text-center]
-*Figure 9: Concentration measure, based on ISO 19103*
+*Figure 9: Concentration measure*
 
 [NOTE]
 ====
@@ -1055,7 +1055,7 @@ Health determinant coverages shall be represented using the spatial object types
 [cols=","]
 |===
 |Application Schema |INSPIRE Application Schema HumanHealth
-|Version number |3.0
+|Version number |5.0
 |===
 
 *Types defined in the feature catalogue*
@@ -1077,7 +1077,9 @@ Health determinant coverages shall be represented using the spatial object types
 |Disease |HumanHealth |«featureType»
 |DiseaseMeasure |HumanHealth |«dataType»
 |DiseaseMeasureTypeValue |HumanHealth |«codeList»
+|EnvHealthDeterminantConcentrationMeasure |HumanHealth |«featureType»
 |EnvHealthDeterminantMeasure |HumanHealth |«featureType»
+|EnvHealthDeterminantNoiseMeasure |HumanHealth |«featureType»
 |EnvHealthDeterminantStatisticalData |HumanHealth |«featureType»
 |EnvHealthDeterminantTypeValue |HumanHealth |«codeList»
 |GeneralHealthStatistics |HumanHealth |«featureType»
@@ -1089,6 +1091,7 @@ Health determinant coverages shall be represented using the spatial object types
 |ICDValue |HumanHealth |«codeList»
 |LakeWaterQuality |HumanHealth |«codeList»
 |MatrixValue |HumanHealth |«codeList»
+|MeasureCategoryTypeValue |HumanHealth |«codeList»
 |MediaTypeValue |HumanHealth |«codeList»
 |NoiseSourceTypeValue |HumanHealth |«codeList»
 |ReferencePeriodType |HumanHealth |«dataType»
@@ -1202,6 +1205,44 @@ a|
 
 |===
 
+====== EnvHealthDeterminantConcentrationMeasure
+
+[cols="",options="header",]
+|===
+|*EnvHealthDeterminantConcentrationMeasure*
+a|
+[cols=","]
+!===
+!Name: !Environmental Health Determinant Concentration Measure
+!Subtype of: !EnvHealthDeterminantMeasure
+!Definition: !A concentration measurement that is of interest for human health determinant analysis.
+!Stereotypes: !«featureType»
+!===
+
+a|
+*Attribute: component*
+
+[cols=","]
+!===
+!Name: !Component
+!Value type: !ComponentTypeValue
+!Definition: !The component whose concentration is measured.
+!Multiplicity: !1
+!===
+
+a|
+*Attribute: media*
+
+[cols=","]
+!===
+!Name: !Media
+!Value type: !MediaTypeValue
+!Definition: !The media in which the concentration is measured.
+!Multiplicity: !1
+!===
+
+|===
+
 ====== EnvHealthDeterminantMeasure
 
 [cols="",options="header",]
@@ -1298,13 +1339,60 @@ a|
 !===
 
 a|
-*Association role: measure*
+*Attribute: measure*
 
 [cols=","]
 !===
-!Name: !Measure
+!Name: !measure
 !Value type: !Measure
-!Definition: !The measure
+!Definition: !The measure of the environmental health determinant.
+!Multiplicity: !0..1
+!===
+
+a|
+*Attribute: category*
+
+[cols=","]
+!===
+!Name: !category
+!Value type: !MeasureCategoryTypeValue
+!Definition: !The category of the environmental health determinant measure.
+!Multiplicity: !0..1
+!===
+
+a|
+*Constraint: measureOrCategory*
+
+[cols=",]
+!===
+!Natural language: !Environmental health determinant measure shall be provided, either as measure (attribute ‘measure’) or category of measure (attribute ‘category’).
+!OCL: !
+!===
+
+|===
+
+====== EnvHealthDeterminantNoiseMeasure
+
+[cols="",options="header",]
+|===
+|*EnvHealthDeterminantNoiseMeasure*
+a|
+[cols=","]
+!===
+!Name: !Environmental Health Determinant Noise Measure
+!Subtype of: !EnvHealthDeterminantMeasure
+!Definition: !A noise measurement that is of interest for human health determinant analysis.
+!Stereotypes: !«featureType»
+!===
+
+a|
+*Attribute: source*
+
+[cols=","]
+!===
+!Name: !Source
+!Value type: !NoiseSourceTypeValue
+!Definition: !The noise source type.
 !Multiplicity: !1
 !===
 
@@ -1915,32 +2003,6 @@ a|
 
 |===
 
-====== Concentration
-
-[cols="",options="header",]
-|===
-|*Concentration*
-a|
-[cols=","]
-!===
-!Name: !concentration measure
-!Subtype of: !Measure
-!Definition: !A measure of concentration of a specified component in a specified media.
-!Stereotypes: !«type»
-!===
-
-a|
-*Attribute: uom*
-
-[cols=","]
-!===
-!Name: !unit of measure
-!Value type: !UomConcentration
-!Definition: !The unit of measure.
-!Multiplicity: !1
-!===
-
-|===
 
 ====== DiseaseMeasure
 
@@ -1984,32 +2046,6 @@ a|
 
 |===
 
-====== NoiseMeasure
-
-[cols="",options="header",]
-|===
-|*NoiseMeasure*
-a|
-[cols=","]
-!===
-!Name: !noise measure
-!Subtype of: !Measure
-!Definition: !A measure of noise intensity.
-!Stereotypes: !«type»
-!===
-
-a|
-*Attribute: uom*
-
-[cols=","]
-!===
-!Name: !unit of measure
-!Value type: !UomNoise
-!Definition: !A unit of measure for noise intensity.
-!Multiplicity: !1
-!===
-
-|===
 
 ====== ReferencePeriodType
 
@@ -2048,73 +2084,6 @@ a|
 
 |===
 
-====== UomConcentration
-
-[cols="",options="header",]
-|===
-|*UomConcentration*
-a|
-[cols=","]
-!===
-!Name: !Unit of measure for concentration
-!Subtype of: !UnitOfMeasure
-!Definition: !A unit of measure for concentration of a specified component within a specified media.
-!Stereotypes: !«type»
-!===
-
-a|
-*Attribute: component*
-
-[cols=","]
-!===
-!Name: !component
-!Value type: !ComponentTypeValue
-!Definition: !The component whose concentration is measured.
-!Description: !EXAMPLE: SO2 in ambient air, lead in drinking water, benzo-a-pyrene in indoor air, ragweed pollens in ambient air.
-!Multiplicity: !1
-!===
-
-a|
-*Attribute: media*
-
-[cols=","]
-!===
-!Name: !media
-!Value type: !MediaTypeValue
-!Definition: !The media in which the concentration is measured.
-!Description: !EXAMPLE: SO2 in ambient air, lead in drinking water, benzo-a-pyrene in indoor air, ragweed pollens in ambient air.
-!Multiplicity: !1
-!===
-
-|===
-
-====== UomNoise
-
-[cols="",options="header",]
-|===
-|*UomNoise*
-a|
-[cols=","]
-!===
-!Name: !noise unit of measure
-!Subtype of: !UnitOfMeasure
-!Definition: !A unit of measure for noise intensity.
-!Stereotypes: !«type»
-!===
-
-a|
-*Attribute: source*
-
-[cols=","]
-!===
-!Name: !noise source type
-!Value type: !NoiseSourceTypeValue
-!Definition: !The noise source type.
-!Description: !EXAMPLE: Road traffic, rail traffic, air traffic, industrial activity, etc.
-!Multiplicity: !1
-!===
-
-|===
 
 ===== Code lists
 
@@ -2287,6 +2256,24 @@ a|
 !Definition: !Type of human tissue or compartment for biomarker measurement.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/MatrixValue
+!Values: !The allowed values for this code list comprise any values defined by data providers.
+!===
+
+|===
+
+====== MeasureCategoryTypeValue
+
+[cols="",options="header",]
+|===
+|*MatrixValue*
+a|
+[cols=","]
+!===
+!Name: !MeasureCategoryTypeValue
+!Definition: !The measure categories.
+!Description: !Empty code list to be used as a super-class for a number of specific code lists (e.g. for the Environmental Noise Directive purposes) whose values may be used to specify the attribute value.
+!Extensibility: !any
+!Identifier: !http://inspire.ec.europa.eu/codelist/MeasureCategoryTypeValue
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
