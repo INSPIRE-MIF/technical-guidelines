@@ -1936,7 +1936,7 @@ a|
 
 [cols=","]
 !===
-!Value type: !GM_Surface
+!Value type: !GM_Object
 !Definition: !The geometry of the drainage basin, as a surface.
 !Multiplicity: !1
 !===
@@ -1994,7 +1994,16 @@ a|
 [cols=","]
 !===
 !Natural language: !A river basin may not be contained in any other basin
-!OCL: !inv: self.containsBasin->forall(c | not c.oclIsTypeOf(RiverBasin))
+!OCL: !inv: self.containsBasin->forall(c \| not c.oclIsTypeOf(RiverBasin))
+!===
+
+a|
+*Constraint: geometryType*
+
+[cols=","]
+!===
+!Natural language: !The geometry attribute has to be of type GM_Surface or GM_MultiSurface.
+!OCL: !inv: geometry.oclIsKindOf(GM_Surface) or geometry.oclIsKindOf(GM_MultiSurface)
 !===
 
 |===
