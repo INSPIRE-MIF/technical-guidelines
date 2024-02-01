@@ -13,13 +13,13 @@
 
 // Document properties
 :title: Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
-:revdate: 2023-01-31
+:revdate: 2023-07-31
 :keywords: Technical Guidance for INSPIRE metadata for datasets and services
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: Implementation specification for defining metadata for INSPIRE datasets and services in ISO/TS 19139 based XML format in compliance with the INSPIRE Implementing Rules for metadata.
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution (cc-by) 4.0]
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2023.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2023.2
 :lang: EN
 
 image:./media/image1.png[image,width=107,height=107] **INSPIRE** - *Infrastructure for Spatial Information in Europe*
@@ -33,7 +33,7 @@ image:./media/image1.png[image,width=107,height=107] **INSPIRE** - *Infrastructu
 |*Creator* |{author}
 |*Date of publication* |{revdate}
 |*Subject* |{keywords}
-|*Status* a|Version 2.1.2
+|*Status* a|Version 2.1.3
 
 This document has been endorsed by the INSPIRE maintenance and implementation group (MIG).
 |*Publisher* |{producer}
@@ -1484,7 +1484,7 @@ If the keywords from controlled vocabularies are used and the individual keyword
 
 [TIP]
 ====
-*TG Recommendation 1.9: metadata/2.0/rec/common/use-anchors-for-thesauri*
+*TG Recommendation C.9: metadata/2.0/rec/common/use-anchors-for-thesauri*
 
 For references to well-known thesauri or controlled vocabularies, the _title_ element of the _thesaurusName_ should be encoded using the _gmd:title/gmx:Anchor_ element. The _xlink:href_ attribute of the _gmx:Anchor_ element should be used for referring to the URI of the thesaurus or controlled vocabulary.
 ====
@@ -2345,7 +2345,7 @@ If the spatial resolution is an interval, both bounding values of the interval s
 <gmd:spatialResolution>
   <gmd:MD_Resolution>
     <gmd:distance>
-      <gco:distance uom="dd">0.25</gco:distance>
+      <gco:Distance uom="dd">0.25</gco:Distance>
     </gmd:distance>
   </gmd:MD_Resolution>
 </gmd:spatialResolution>
@@ -2360,12 +2360,12 @@ If the spatial resolution is an interval, both bounding values of the interval s
 <gmd:spatialResolution>
   <gmd:MD_Resolution>
     <gmd:distance>
-      <gco:distance uom="dd">0.24</gco:distance>
+      <gco:Distance uom="dd">0.24</gco:Distance>
     </gmd:distance>
   </gmd:MD_Resolution>
   <gmd:MD_Resolution>
     <gmd:distance>
-      <gco:distance uom="dd">0.26</gco:distance>
+      <gco:Distance uom="dd">0.26</gco:Distance>
     </gmd:distance>
   </gmd:MD_Resolution>
 </gmd:spatialResolution>
@@ -4277,7 +4277,7 @@ In Table 1 of [Regulation 1312/2014], Annex II, Part C, the multiplicity for the
 
 The minimum values for each of the Quality of Service criteria given in Table 6.1 shall be given in the metadata. They shall be encoded using one _gmd:report/gmd:DQ_ConceptualConsistency_ element within the _gmd:DQ_DataQuality_ element scoped for the entire service.
 
-The value of _gmd:DQ_ConceptualConsistency/gmd:nameOfMeasure_ shall be shall be an _gmx:Anchor_ element referring to the code list value for the criterion in the INSPIRE Registryfootnote:[Attribute xlink:href with URL value starting with "http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/" and postfixed with one of values of code list QualityOfServiceCriteriaCode, see Annex D.4] and expressing the name of the criterion in the language of the metadata.
+The value of _gmd:DQ_ConceptualConsistency/gmd:nameOfMeasure_ shall be shall be an _gmx:Anchor_ element referring to the code list value for the criterion in the INSPIRE Registryfootnote:[Attribute xlink:href with URL value starting with "http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria/" and postfixed with one of values of code list QualityOfServiceCriteria, see Annex D.4] and expressing the name of the criterion in the language of the metadata.
 
 The description of the measurement of the criterion shall be encoded using the _gmd:DQ_ConceptualConsistency/gmd:measureDescription_ element.
 
@@ -4293,15 +4293,15 @@ The purpose of these quality of service metadata elements is to describe the min
 [width="100%",cols="24%,26%,50%"]
 |===
 .4+|Minimum availability |Definition |Lower limit of the percentage of time the service is estimated to be available on a yearly basis.
-|Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/availability
+|Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria/availability
 |Value type |xsi:double between 0..100
 |Unit of measure |urn:ogc:def:uom:OGC::percent
 .4+|Minimum performance |Definition |The maximum response time within which a typical request to the Spatial Data Service can be carried out in a normal situation, by returning at least the initial part of the response. The normal situation represents periods out of peak load. It is set at 90% of the time.
-|Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/performance
+|Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria/performance
 |Value type |xsi:double
 |Unit of measure |http://www.opengis.net/def/uom/SI/second
 .4+|Minimum capacity |Definition |Lower limit of the maximum number of simultaneous requests that can be completed within the limits of the declared performance.
-|Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/capacity
+|Identifier URI |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria/capacity
 |Value type |xsi:integer
 |Unit of measure |http://www.opengis.net/def/uom/OGC/1.0/unity
 |===
@@ -4313,7 +4313,7 @@ The purpose of these quality of service metadata elements is to describe the min
 <gmd:report>
   <gmd:DQ_ConceptualConsistency>
     <gmd:nameOfMeasure>
-      <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/performance">performance
+      <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria/performance">performance
       </gmx:Anchor>
     </gmd:nameOfMeasure>
     <gmd:measureDescription>
@@ -6095,7 +6095,7 @@ Capacity (capacity)
 |INSPIRE obligation / condition |Mandatory for interoperable spatial data services
 |INSPIRE multiplicity |[1] For each criteria
 |Data type (and ISO 19115 no.) |MD_Identifier/code
-|Domain |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/availability
+|Domain |http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria/availability
 |Example |INSPIRE QoS2
 |Comments |
 |===

@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.I.9 Data Specification on Protected Sites – Technical Guidelines
-:revdate: 2023-01-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Protected Sites
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Protected Sites
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2023.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/ps[D2.8.I.9_v3.2.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/ps[D2.8.I.9_v4.0.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -307,7 +307,7 @@ The key difference between _AREA MANAGEMENT/RESTRICTION/REGULATION ZONES AND REP
 
 *Table 1a – Examples of Protected Site exclusions and inclusions*
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !*In this theme* !*Not in this theme*
 a!
@@ -385,7 +385,7 @@ Protected Sites and Protected Areas are synonymous in this technical guideline.
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |CDDA |A Common Database on Designated Areas
 |EU |European Union
@@ -764,7 +764,7 @@ The following two types of code lists are distinguished in INSPIRE:
 
 * _Code lists that are governed by INSPIRE (INSPIRE-governed code lists)._ These code lists will be managed centrally in the INSPIRE code list register. Change requests to these code lists (e.g. to add, deprecate or supersede values) are processed and decided upon using the INSPIRE code list register's maintenance workflows.
 +
-INSPIRE-governed code lists will be made available in the INSPIRE code list register at __http://inspire.ec.europa.eu/codeList/<CodeListName__>. They will be available in SKOS/RDF, XML and HTML. The maintenance will follow the procedures defined in ISO 19135. This means that the only allowed changes to a code list are the addition, deprecation or supersession of values, i.e. no value will ever be deleted, but only receive different statuses (valid, deprecated, superseded). Identifiers for values of INSPIRE-governed code lists are constructed using the pattern __http://inspire.ec.europa.eu/codeList/<CodeListName__>/<value>.
+INSPIRE-governed code lists will be made available in the INSPIRE code list register at __http://inspire.ec.europa.eu/codelist/<CodeListName__>. They will be available in SKOS/RDF, XML and HTML. The maintenance will follow the procedures defined in ISO 19135. This means that the only allowed changes to a code list are the addition, deprecation or supersession of values, i.e. no value will ever be deleted, but only receive different statuses (valid, deprecated, superseded). Identifiers for values of INSPIRE-governed code lists are constructed using the pattern __http://inspire.ec.europa.eu/codelist/<CodeListName__>/<value>.
 
 * _Code lists that are governed by an organisation outside of INSPIRE (externally governed code lists)._ These code lists are managed by an organisation outside of INSPIRE, e.g. the World Meteorological Organization (WMO) or the World Health Organization (WHO). Change requests to these code lists follow the maintenance workflows defined by the maintaining organisations. Note that in some cases, no such workflows may be formally defined.
 +
@@ -796,7 +796,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 
 ===== Vocabulary
 
-For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern _http://inspire.ec.europa.eu/codeList/<UpperCamelCaseName>_.
+For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern _http://inspire.ec.europa.eu/codelist/<UpperCamelCaseName>_.
 
 If the value is missing or empty, this indicates an empty code list. If no sub-classes are defined for this empty code list, this means that any code list may be used that meets the given definition.
 
@@ -953,7 +953,7 @@ If a site has multiple designations, different features should be provided for e
 
 ===== Temporality representation
 
-The application schema stores the real world date on which a change to the Protected Site occurs (legalFoundationDate). This is independent of anything that happens in any system. The Simple application schema does not include system lifecycle information and does not store historical versions of features.
+The application schema stores the real world date on which a change of the designation of the Protected Site occurs (legalFoundationDate). This is independent of anything that happens in any system. The Simple application schema does not include system lifecycle information and does not store historical versions of features.
 
 ===== Protected Site names
 
@@ -980,7 +980,7 @@ There is no single classification scheme used for all purposes across all Protec
 [cols=","]
 |===
 |Application Schema |INSPIRE Application Schema Protected Sites Simple
-|Version number |3.0
+|Version number |5.0
 |===
 
 *Types defined in the feature catalogue*
@@ -1029,7 +1029,7 @@ a|
 !===
 
 a|
-*Attribute: inspireID*
+*Attribute: inspireId*
 
 [cols=","]
 !===
@@ -1039,28 +1039,6 @@ a|
 !Multiplicity: !1
 !===
 
-a|
-*Attribute: legalFoundationDate*
-
-[cols=","]
-!===
-!Value type: !DateTime
-!Definition: !The date that the protected site was legally created. This is the date that the real world object was created, not the date that its representation in an information system was created.
-!Description: !NOTE In the case of Natura2000 sites, a protected site may go through several different stages (for example, proposed as SCI, confirmed as SCI, designated as SAC). A new version of the site is created for each of these different stages (because there is a change in the designation), and the new version should have the date on which the new stage was legally assigned as the legalFoundationDate (for example, when designated as a SAC, the version for the SAC would have the designation date as the legalFoundationDate).
-!Multiplicity: !1
-!Stereotypes: !«voidable»
-!===
-
-a|
-*Attribute: legalFoundationDocument*
-
-[cols=","]
-!===
-!Value type: !CI_Citation
-!Definition: !A URL or text citation referencing the legal act that created the Protected Site.
-!Multiplicity: !1
-!Stereotypes: !«voidable»
-!===
 
 a|
 *Attribute: siteDesignation*
@@ -1100,6 +1078,17 @@ a|
 !Stereotypes: !«voidable»
 !===
 
+a|
+*Attribute: thematicId*
+
+[cols=","]
+!===
+!Value type: !ThematicIdentifier
+!Definition: !Thematic object identifier.
+!Multiplicity: !0..*
+!Stereotypes: !«voidable»
+!===
+
 |===
 
 ===== Data types
@@ -1117,22 +1106,22 @@ a|
 !===
 
 a|
-*Attribute: designationScheme*
-
-[cols=","]
-!===
-!Value type: !DesignationSchemeValue
-!Definition: !The scheme from which the designation code comes.
-!Multiplicity: !1
-!===
-
-a|
 *Attribute: designation*
 
 [cols=","]
 !===
 !Value type: !DesignationValue
 !Definition: !The actual Site designation.
+!Multiplicity: !1
+!===
+
+a|
+*Attribute: designationScheme*
+
+[cols=","]
+!===
+!Value type: !DesignationSchemeValue
+!Definition: !The scheme from which the designation code comes.
 !Multiplicity: !1
 !===
 
@@ -1144,6 +1133,29 @@ a|
 !Value type: !Percentage
 !Definition: !The percentage of the site that falls under the designation. This is used in particular for the IUCN categorisation. If a value is not provided for this attribute, it is assumed to be 100%
 !Multiplicity: !0..1
+!===
+
+a|
+*Attribute: legalFoundationDate*
+
+[cols=","]
+!===
+!Value type: !Date
+!Definition: !The date that the protected site was legally created. This is the date that the real world object was created, not the date that its representation in an information system was created.
+!Description: !NOTE In the case of Natura2000 sites, a protected site may go through several different stages (for example, proposed as SCI, confirmed as SCI, designated as SAC). A new version of the site is created for each of these different stages (because there is a change in the designation), and the new version should have the date on which the new stage was legally assigned as the legalFoundationDate (for example, when designated as a SAC, the version for the SAC would have the designation date as the legalFoundationDate).
+!Multiplicity: !1
+!Stereotypes: !«voidable»
+!===
+
+a|
+*Attribute: legalFoundationDocument*
+
+[cols=","]
+!===
+!Value type: !CI_Citation
+!Definition: !A URL or text citation referencing the legal act that created the Protected Site.
+!Multiplicity: !1
+!Stereotypes: !«voidable»
 !===
 
 a|
@@ -1265,13 +1277,13 @@ NOTE 2 Typically, this code list will be extended with code schemes used within 
 a|
 [cols=","]
 !===
-!Definition: !Abstract base type for code lists containing the classificaiton and desigation types under different schemes.
+!Definition: !Classification and designation types under different schemes.
 !Description: !NOTE 1Some of these designation and classification lists are closed (for example, Natura2000), while some change regularly. 
  
 NOTE 2 Typically, additional code lists will be created as sub-types of this type to represent designation or classification values within Member States, e.g. natuurbeschermingsGebieden, rijksBeschermdeArcheologischeGebieden, nationaleParken, nationaleLandschappen etc. in the Netherlands.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/DesignationValue
-!Values: !The code list can be extended with additional values at any level, i.e. its allowed values comprise the values specified in this register and additional values at any level defined by data providers.
+!Values: !The code list can be extended with additional values at any level, i.e. its allowed values comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1524,11 +1536,12 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-1. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+. Other coordinate reference systems may be specified for specific spatial data themes.
 
-2. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
 
 ====
 
@@ -1566,7 +1579,7 @@ These Technical Guidelines propose to use the http URIs provided by the Open Geo
 ====
 *TG Requirement 2*
 
-The identifiers listed in Table 1 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -1575,34 +1588,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-*Table 3 - http URIs for the default coordinate reference systems*
-
-[cols=",,",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -2137,7 +2122,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -2179,7 +2164,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -2223,7 +2208,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -2258,7 +2243,7 @@ specification: D2.8.I.9 Data Specification on Protected Sites – Technical Guid
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -2281,7 +2266,7 @@ specification: D2.8.I.9 Data Specification on Protected Sites – Technical Guid
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -2344,7 +2329,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -2420,7 +2405,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -2466,7 +2451,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -2568,9 +2553,12 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
 
-2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
+
 
 ====
 
@@ -2793,7 +2781,7 @@ PS.ProtectedSites<siteDesignation.designation with first letter capitalised>
 
 Several of the layers are aggregations of other layers in the _Protected Sites_ theme, as shown in the Table 7.
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Aggregated Layer* |*Component Layer*
 |PS.ProtectedSite a|
@@ -2821,7 +2809,7 @@ PS.ProtectedSitesGeological+
 
 ==== Styles for the layer PS.ProtectedSite
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*PS.ProtectedSite.Default*
 |*Default Style* |yes
@@ -3397,7 +3385,7 @@ c) [.underline]#Test Method#: Examine that the number of occurrences of each att
 
 a) [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-b) [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+b) [.underline]#Reference#: Section 6 of this technical guideline
 
 c) [.underline]#Test Method#: Compare the URI of the dataset with the URIs in the table.
 

@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines
-:revdate: 2022-08-01
+:revdate: 2024-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Soil
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Soil
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2022.2
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/2024.1
 :lang: en
 
 image::./media/image2.jpeg[image,width=131,height=90,align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93] **INSPIRE** - *Infrastructure
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/so/3.1.0[D2.8.III.3_v3.1.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/so[D2.8.III.3_v3.2.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -1001,7 +1001,7 @@ An observed soil profile represents a geo-referenced soil profile, described in 
 
 A derived soil profile is a non-point-located soil profile with property values that are derived (e.g. averaged) from the values of the corresponding properties of one or more observed soil profiles. Even if such a connection to an observed soil profile exists, it is not mandatory to provide it (nor its data) together with the derived soil profile. Eventually, a derived soil profile could also be a standalone non-geo-referenced soil profile, not associated to an observed soil profile and with property values that are e.g. assessed by expert knowledge.
 
-Any soil profile can be characterized as a whole by a number of properties, of which the following are included in the model: its soil type according to the WRB soil classification scheme (_WRBSoilName_) and/or any other soil classification scheme (_otherSoilName_) with the limitation to one per dataset, and zero or more other parameters, which are expressed through _soilProfileObservation_ associations with _OM_Observation_ objects (see Figure 11). Through the _observedProperty_ role of its _Phenomenon_ association, the _OM_Observation_ object designates the parameter, through the attributes _label_, _basePhenomenon_ (value selected from the codelist _SoilProfileParameterNameValue_) (see Figre 10) and _uom_ (unit of measure). Through the _result_ role of the _Range_ association, a value can be given to the parameter; this value should be of the type _Number_, _RangeType_ (a range of values) or _CharacterString_ (e.g. 'good' or 'very high'). Note that the _SoilProfileParameterNameValue_ codelist can be extended by the data provider when needed.
+Any soil profile can be characterized as a whole by a number of properties, of which the following are included in the model: its soil type according to the WRB soil classification scheme (_WRBSoilName_) and/or any other soil classification scheme (_otherSoilName_) with the limitation to one per dataset, and zero or more other parameters, which are expressed through _soilProfileObservation_ associations with _OM_Observation_ objects (see Figure 11). Through the _observedProperty_ role of its _Phenomenon_ association, the _OM_Observation_ object designates the parameter, through the attributes _label_, _basePhenomenon_ (value selected from the codelist _SoilProfileParameterNameValue_) (see Figre 10) and _uom_ (unit of measure). Through the _result_ role of the _Range_ association, a value can be given to the parameter; this value should be of the type _Number_, _RangeType_ (a range of values, as defined in Section 5.3.2.2.6.) or _CharacterString_ (e.g. 'good' or 'very high'). Note that the _SoilProfileParameterNameValue_ codelist can be extended by the data provider when needed.
 
 [IMPORTANT]
 ====
@@ -1095,7 +1095,7 @@ The specific purpose of the _SoilThemeCoverage_ class (see Figure 8) is to provi
 
 The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_, e.g. _organicCarbonContent_) (see Figure 10) and a unit of measure (e.g. cm). Note that the code list _SoilDerivedObjectParameterNameValue_ can be extended by the data provider when needed.
 
-The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType or CharacterString.
+The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType (as defined in Section 5.3.2.2.6.) or CharacterString.
 
 Since it may be useful to associate to a coverage other coverages of which the cell values are supplementary information to the corresponding grid cells of the coverage itself, the _SoilThemeCoverage_ class has an association to another coverage, the _SoilThemeDescriptiveCoverage_. The _SoilThemeDescriptiveCoverage_ has the same spatial and domain extent as the associated _SoilThemeCoverage_. The attribute _soilThemeDescriptiveParameter_ is of the datatype _SoilThemeDescriptiveParameterType_ that consists of a _soilThemeDescriptiveParameterName_ (characterstring, e.g. _purity_) and a unit of measure (e.g. cm). The _soilThemeDescriptiveParameter_ gives supplementary information on the grid cell values of the associated coverage, often it concerns qualitative information. An example would be the provision of "purity maps" in relation to for instance soil texture maps.
 
@@ -1322,7 +1322,7 @@ a|
 [width="100%",cols="5%,17%,78%"]
 !===
 !  !Name: !profile element depth range
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !Upper and lower depth of the profile element (layer or horizon) measured from the surface (0 cm) of a soil profile (in cm).
 !  !Description: !
 !  !Multiplicity: !1
@@ -1385,7 +1385,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the profile element observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the profile element observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.profileElementObservation.result->oclIsKindOf(Number) or self.profileElementObservation.result->oclIsKindOf(CharacterString) or self.profileElementObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -1580,7 +1580,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the soil derived object observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the soil derived object observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.soilDerivedObjectObservation.result->oclIsKindOf(Number) or self.soilDerivedObjectObservation.result->oclIsKindOf(CharacterString) or self.soilDerivedObjectObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -1987,7 +1987,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the soil profile observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the soil profile observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.soilProfileObservation.result->oclIsKindOf(Number) or self.soilProfileObservation.result->oclIsKindOf(CharacterString) or self.soilProfileObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -2145,7 +2145,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !The result of the soil site observation shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !The result of the soil site observation shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: self.soilSiteObservation.result->oclIsKindOf(Number) or self.soilSiteObservation.result->oclIsKindOf(CharacterString) or self.soilSiteObservation.result->oclIsKindOf(RangeType)
 !===
 
@@ -2255,7 +2255,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: rangeSet->oclIsKindOf(Number) or rangeSet->oclIsKindOf(Characterstring) or rangeSet->oclIsKindOf(RangeType)
 !===
 
@@ -2343,7 +2343,7 @@ a|
 
 [width="100%",cols="5%,17%,78%"]
 !===
-!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType.
+!  !Natural language: !rangeSet values shall be of type Number, CharacterString or RangeType (as defined in Section 5.3.2.2.6.).
 !  !OCL: !inv: rangeSet->oclIsKindOf(Number) or rangeSet->oclIsKindOf(Characterstring) or rangeSet->oclIsKindOf(RangeType)
 !===
 
@@ -2375,7 +2375,7 @@ a|
 [width="100%",cols="5%,17%,78%"]
 !===
 !  !Name: !derived profile percentage range.
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !Interval that defines the minimum and maximum percentage of the area of the soil body represented by a specific derived soil profile.
 !  !Multiplicity: !1
 !  !Stereotypes: !«voidable»
@@ -2615,7 +2615,7 @@ a|
 [width="100%",cols="5%,17%,78%"]
 !===
 !  !Name: !fraction particle size range
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !upper and lower limit of the particle size of the defined fraction (expressed in µm)
 !  !Description: !SOURCE NRCS Natural Resources Conservation Service, Soil survey laboratory information manual, Soil survey investigation report n.45 version 1.0 May 1995 pag. 11 
 EXAMPLE upper limit = 63µm , lower limit =20µm
@@ -3556,11 +3556,14 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-1. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+. Other coordinate reference systems may be specified for specific spatial data themes.
 
-2. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
+
+
 ====
 
 ===== Display
@@ -3569,7 +3572,7 @@ The geodetic codes and parameters needed to describe these coordinate reference 
 ====
 [.text-center]
 *IR Requirement*
-_Annex II, Section 1.4_
+_Annex II, Section 1.5_
 *Coordinate Reference Systems used in the View Network Service*
 
 For the display of spatial data sets with the view network service as specified in Regulation No 976/2009, at least the coordinate reference systems for two-dimensional geodetic coordinates (latitude, longitude) shall be available.
@@ -3591,13 +3594,13 @@ _Annex II, Section 1.5_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register)  . These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 2*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -3606,35 +3609,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-Table 2. http URIs for the default coordinate reference systems
-
-[align=center,width="100%",cols="37%,20%,43%"]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -4557,11 +4531,14 @@ The IRs contain the following two requirements for the encoding to be used to ma
 [.text-center]
 *IR Requirement*
 _Article 7_
-*Encoding*
+*Encoding*  
 
-1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
 
-2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
+
 
 ====
 
@@ -5524,8 +5501,8 @@ b) Test Method: Examine that the number of occurrences of each attribute and/or 
 ==== CRS http URI test
 
 a) [underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
-
-c) Reference: Table 2 in Section 6 of this technical guideline
+    
+c) Reference: Section 6 of this technical guideline
 
 b) Test Method: Compare the URI of the dataset with the URIs in the table.
 
@@ -5801,7 +5778,7 @@ The required data input format could be point/vector maps or raster maps.
 
 Each input dataset is a composition of __SoilDerivedObject__s and is documented in its associated metadata, that includes a title, abstract and would point to the documentation on how the computation for the input data has been accomplished, eventually relying on data coming from observed soil profiles and/or soil bodies.
 
-Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType), and qualitative values (CharacterString).
+Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType, as defined in Section 5.3.2.2.6.), and qualitative values (CharacterString).
 
 For the considered soil input data: name, unit of measure and value would be:
 
@@ -5819,7 +5796,7 @@ Note that, since the parameters _soilDerivedObject_ are linked (through the O&M 
 
 *In case of raster input maps:.*
 
-The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType or CharacterString.
+The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType (as defined in Section 5.3.2.2.6.) or CharacterString.
 
 Unlike the _SoilDerivedObject_'s (where an input dataset could be specified by indicating its contributing data), the input coverages are in essence standalone, although in theory they can be associated to other coverages through the association with zero or more SoilThemeDescriptiveCoverage's that have the same spatial and domain extent as the associated SoilThemeCoverage..
 
@@ -5983,7 +5960,7 @@ The required data input format could be point/vector maps or raster maps.
 
 Each input dataset is a composition of __SoilDerivedObject__s and is documented in its associated metadata, that includes a title, abstract and would point to the documentation on how the computation for the input data has been accomplished, eventually relying on data coming from observed soil profiles and/or soil bodies.
 
-Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType), and qualitative values (CharacterString).
+Each _SoilDerivedObject_ carries a geometry (could be a point or a polygon) and carries (through the association _soilDerivedObjectObservation_ with an OM_Observation object) a parameter with a given value. The parameter is selected from the codelist _SoilDerivedObjectParameterNameValue_; note that this code list can be extended by the data provider when needed. For the exact mechanism, see Chapter 5. Note that this mechanism allows also to specifiy the 'unit of measure' and that the type of values include: single numerical values (Number), ranges of numerical values (RangeType, as defined in Section 5.3.2.2.6.), and qualitative values (CharacterString).
 
 For the considered soil input data: name, unit of measure and value would be:
 
@@ -6004,7 +5981,7 @@ Note that, since the parameters _soilDerivedObject_ are linked (through the O&M 
 
 *In case of raster input maps:*
 
-The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType or CharacterString.
+The input data take the form of _SoilThemeCoverage_'s, which allows the storage of raster data. The attribute _soilThemeParameter_ is of the datatype _SoilThemeParameterType_ that consists of a _soilThemeParameterName_ (to be taken from the codelist _SoilDerivedObjectParameterNameValue_ and a unit of measure). The values of the gridcells are covered by a rangeSet constraint that says that values shall be of one of the types Number; RangeType (as defined in Section 5.3.2.2.6.) or CharacterString.
 
 Unlike the _SoilDerivedObject_'s (where an input dataset could be specified by indicating its contributing data), the input coverages are in essence standalone, although in theory they can be associated to other coverages through the association with zero or more SoilThemeDescriptiveCoverage's that have the same spatial and domain extent as the associated SoilThemeCoverage..
 
@@ -13504,7 +13481,7 @@ a|
 [width="100%",cols="5%,16%,79%"]
 !===
 !  !Name: !groundwater depth range
-!  !Value type: !RangeType
+!  !Value type: !RangeType (as defined in Section 5.3.2.2.6.)
 !  !Definition: !depth of the groundwater.
 !  !Multiplicity: !1
 !===
