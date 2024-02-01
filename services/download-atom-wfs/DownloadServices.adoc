@@ -1094,31 +1094,54 @@ The following Download Service Feed example contains a single Atom entry which p
 *_Example 2: Sample "Download Service Feed" (Atom) with an entry for a Hydrography dataset_*
 [source, xml]
 <!-- Example "Download Service Feed" -->
-<feed xmlns="http://www.w3.org/2005/Atom"
-    xmlns:georss="http://www.georss.org/georss" xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0" xml:lang="en">
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss"
+  xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0"
+  xml:lang="en">
     <!-- feed title -->
     <title>XYZ Example INSPIRE Download Service</title>
     <!-- feed subtitle -->
     <subtitle>INSPIRE Download Service of organisation XYZ providing Hydrography data</subtitle>
-    <!-- link to download service ISO 19139 metadata -->
-    <link href="http://xyz.org/metadata/iso19139_document.xml" rel="describedby" type="application/xml"/>
+    <!-- link to download service ISO 19139 metadata (option 2) -->
+    <link
+      href="http://xyz.org/metadata/iso19139_document.xml"
+      rel="describedby"
+      type="application/xml"/>
     <!-- self-referencing link to this feed -->
-    <link href="http://xyz.org/download/en.xml" rel="self" type="application/atom+xml"
-        hreflang="en" title="This document"/>
+    <link
+      href="http://xyz.org/download/en.xml"
+      rel="self"
+      type="application/atom+xml"
+       hreflang="en"
+       title="This document"/>
     <!-- link to Open Search definition file for this service-->
-	<link rel="search" href="http://xyz.org/search/opensearchdescription.xml" type="application/opensearchdescription+xml" title="Open Search Description for XYZ download service"/>
+	<link
+      rel="search"
+      href="http://xyz.org/search/opensearchdescription.xml"
+      type="application/opensearchdescription+xml"
+      title="Open Search Description for XYZ download service"/>
     <!-- link to this feed in another language -->
-    <link href="http://xyz.org/download/de.xml" rel="alternate"
-        type="application/atom+xml" hreflang="de"
-        title="The download service information in German"/>
+    <link
+      href="http://xyz.org/download/de.xml"
+      rel="alternate"
+      type="application/atom+xml"
+      hreflang="de"
+      title="The download service information in German"/>
     <!-- link to another representation of this feed (HTML) --> 
-    <link href="http://xyz.org/download/index.html" rel="alternate"
-        type="text/html" hreflang="en"
-        title="An HTML version of this document"/>
+    <link
+      href="http://xyz.org/download/index.html"
+      rel="alternate"
+      type="text/html"
+      hreflang="en"
+       title="An HTML version of this document"/>
     <!-- link to this feed in HTML in another language-->
-    <link href="http://xyz.org/download/index.de.html" rel="alternate"
-        type="text/html" hreflang="de"
-        title="An HTML version of this document in German"/>
+    <link
+      href="http://xyz.org/download/index.de.html"
+      rel="alternate"
+      type="text/html"
+      hreflang="de"
+       title="An HTML version of this document in German"/>
     <!-- identifier -->
     <id>http://xyz.org/download/en.xml</id>
     <!-- rights, access restrictions -->
@@ -1130,14 +1153,26 @@ The following Download Service Feed example contains a single Atom entry which p
         <name>John Doe</name>
         <email>doe@xyz.org</email>
     </author>
+    <!-- Keywords for the service (option 2) -->
+    <category
+      term="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/infoFeatureAccessService"
+      scheme="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory"/>
+    <category
+      term="http://link/to/entry/in/thesaurus"
+      label="human-readable keyword"
+      scheme="http://link/to/thesaurus"/>
+    <!-- Specifications against which the service is conformant (option 2) -->
+    <category term="http://data.europa.eu/eli/reg/2010/1089"/>
+    <category term="http://data.europa.eu/eli/reg/2009/976"/>
     <!-- entry for a "Dataset Feed" for a pre-defined dataset -->
     <entry>
         <!-- title for "Dataset Feed" for pre-defined dataset -->
         <title>Water network ABC Dataset Feed</title>
 		   <!--Spatial Dataset Unique Resource Identifier for this dataset-->
-	<inspire_dls:spatial_dataset_identifier_code>wn_id1</inspire_dls:spatial_dataset_identifier_code>                                  <inspire_dls:spatial_dataset_identifier_namespace>http://xyz.org/</inspire_dls:spatial_dataset_identifier_namespace>
-		   <!-- link to dataset metadata record -->
-    		 <link href="http://xyz.org/metadata/abcISO19139.xml" rel="describedby" type="application/xml"/>
+        <inspire_dls:spatial_dataset_identifier_code>wn_id1</inspire_dls:spatial_dataset_identifier_code>
+        <inspire_dls:spatial_dataset_identifier_namespace>http://xyz.org/</inspire_dls:spatial_dataset_identifier_namespace>
+		 <!-- link to dataset metadata record -->
+    	<link href="http://xyz.org/metadata/abcISO19139.xml" rel="describedby" type="application/xml"/>
         <!-- link to "Dataset Feed" for pre-defined dataset -->
         <link rel="alternate" href="http://xyz.org/data/waternetwork_feed.xml" type="application/atom+xml" 
         hreflang="en" title="Feed containing the pre-defined waternetwork dataset (in one or more downloadable formats)"/>
@@ -1148,20 +1183,73 @@ The following Download Service Feed example contains a single Atom entry which p
         <!-- rights, access info for pre-defined dataset -->
         <rights>Copyright (c) 2002-2011, XYZ; all rights reserved</rights>
         <!-- last date/time this entry was updated -->
-		   <updated>2012-03-31T13:45:03Z</updated>
-		   <!-- summary -->
-		   <summary>This is the entry for water network ABC Dataset</summary>
+		<updated>2012-03-31T13:45:03Z</updated>
+		<!-- summary -->
+		<summary>This is the entry for water network ABC Dataset</summary>
         <!-- optional GeoRSS-Simple polygon outlining the bounding box of the pre-defined dataset described by the entry. Must be lat lon -->
         <georss:polygon>47.202 5.755 55.183 5.755 55.183 15.253 47.202 15.253 47.202 5.755</georss:polygon>
         <!-- CRSs in which the pre-defined Dataset is available -->
-			<category term="http://www.opengis.net/def/crs/EPSG/0/25832"  label="ETRS89 / UTM zone 32N"/>
-			<category term="http://www.opengis.net/def/crs/EPSG/0/4258"  label="ETRS89"/>
+		<category term="http://www.opengis.net/def/crs/EPSG/0/25832" label="ETRS89 / UTM zone 32N"/>
+		<category term="http://www.opengis.net/def/crs/EPSG/0/4258" label="ETRS89"/>
     </entry>
     <!-- Any number of "Dataset Feeds" for different pre-defined datasets may be added here as separate entries -->
 </feed>
 
+The following sections explain in more detail how this example Atom feed is formed and what must be done to meet particular Technical Guidance requirements.
 
-Note that only some of the mandatory INSPIRE Metadata elements for the Download service have been mapped to the Atom feed files.
+==== Download Service Feed: feed 'title' element
+
+The title element shall be used to provide a title for the feed as a whole.
+
+
+*_Example 3: Sample feed title_*
+[source, xml]
+<!-- feed title -->
+<title>XYZ Example INSPIRE Download Service</title>
+
+[IMPORTANT]
+====
+*TG Requirement 5*
+The 'title' element of an Atom feed shall be populated with a human readable title for the feed.
+====
+
+==== Download Service Feed: feed 'subtitle' element
+
+The subtitle element may be used to provide a subtitle (containing additional information) for the feed as a whole.
+
+*_Example 4: Sample feed subtitle_*
+[source, xml]
+<!-- feed subtitle -->
+<subtitle>INSPIRE Download Service of organisation XYZ providing Hydrography data</subtitle>
+
+[TIP]
+====
+*TG Recommendation 1*:
+The 'subtitle' element of an Atom feed may be populated with a human readable subtitle for the feed.
+====
+
+==== Download Service Feed: feed 'link' element – service metadata
+
+A data provider has two options for the publication of the INSPIRE metadata elements.
+
+[IMPORTANT]
+====
+*TG Requirement 6*
+The INSPIRE Metadata for the Download Service shall be linked to in one of the two following ways:
+
+. The Download Service Feed shall contain an Atom 'link' element that links to the metadata record for this Download Service. The value of the 'rel' attribute of this element shall be 'describedby' and the value of the 'type' attribute shall be either 'application/xml' or 'application/vnd.ogc.csw.GetRecordByIdResponse_xml';
+. The Download Service Feed shall contain the INSPIRE Metadata for the Download Service in accordance with Table 17b.
+====
+
+NOTE In case of a "hybrid implementation" based on Atom and WFS for Parts B and C, only the Atom service needs to be described through metadata as required by TG Requirement 6. The link to the WFS implementations shall be established through the "related" link element in the Atom feed (see TG Requirement 16).
+
+Table 17a provides an overview over the INSPIRE metadata elements for the Download Service that can be found in the Download Service itself in the case of option 1. With this option, all the INSPIRE metadata elements are to be present in the metadata record for the Download Service, which is linked to as in, for example, the statement below.
+
+*_Example 5: Example service metadata link_*
+
+[source, xml]
+<!-- link to service ISO 19139 metadata -->
+<link href="http://xyz.org/metadata/iso19139_document.xml" rel="describedby" type="application/xml"/>
 
 [cols=",",options="header",]
 |===
@@ -1214,62 +1302,68 @@ Feed level link in the top Atom feed
 
 |===
 
-*Table 17: Mapping of INSPIRE Metadata elements to Atom*
+*Table 17a: Mapping of INSPIRE metadata elements to Atom for option 1*
 
-All the required INSPIRE metadata elements are to be found in the linked ISO 19139 metadata document for the Download service as explained in Section 5.1.3.
+[cols=",,",options="header",]
+|===
+|INSPIRE Metadata element |Atom |Fallback
+|Resource Title (M) |`+/feed/title+` |
 
-The following sections explain in more detail how this example Atom feed is formed and what must be done to meet particular Technical Guidance requirements.
+|Resource Abstract (M) |`+/feed/subtitle+` |
 
-==== Download Service Feed: feed 'title' element
+|Resource Type (M) |- |Is by default “service”
 
-The title element shall be used to provide a title for the feed as a whole. Typically this will correspond with the 'Resource Title' in the corresponding service metadata record.
+|Resource Locator \(C) |`+/feed/link[@rel="self"]+` in the top Atom feed
+|Resource Locator of the data set
+
+|Coupled Resource \(C) |`+/feed/entry/link[@rel="describedby"]+` in the
+top Atom feed |
+
+|Spatial Data Service Type (M) |-
+|`+gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:applicationProfile+`
+in the ISO/TS 19139:2007 metadata record dataset
+
+|Keyword (M) |`+/feed/category+`; note that a keyword indicating the
+https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory[spatial
+data service category] is required, see example below this table. |
+
+|Geographic Bounding Box (M) |- |Geographic Bounding Box of the data set
+
+|Temporal Reference (M) |`+/feed/updated+` |
+
+|Spatial Resolution \(C) |- |Spatial Resolution of the data set
+
+|Conformity (M) |`+/feed/category+` element |Using a `+/feed/category+`
+element for each specification against which the service is *conformant*
+
+|Conditions for Access and Use (M) |-
+|`+identificationInfo[1]/*/resourceConstraints/*/accessConstraints+` in
+the ISO/TS 19139:2007 metadata record dataset
+
+|Limitations on Public Access (M) |`+/feed/rights+` in the top Atom feed
+|
+
+|Responsible Organisation (M) |`+/feed/author+` in the top Atom feed |
+
+|Metadata Point of Contact (M) |`+/feed/author+` in the top Atom feed |
+
+|Metadata Date (M) |`+/feed/updated+` |
+
+|Metadata Language (M)
+|other supported language (if any) will be mapped to
+the `+xml:lang+` | `+gmd:MD_Metadata/gmd:language/gmd:LanguageCode+` in dataset metadata for main language 
+|===
+
+*Table 17b: Mapping of INSPIRE metadata elements to Atom for option 2*
+
+An example for the https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory[spatial data service category]:
+
+[source,xml]
+----
+<category term="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/infoFeatureAccessService" scheme="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory"/>
+----
 
 
-*_Example 3: Sample feed title_*
-[source, xml]
-<!-- feed title -->
-<title>XYZ Example INSPIRE Download Service</title>
-
-[IMPORTANT]
-====
-*TG Requirement 5*
-The 'title' element of an Atom feed shall be populated with a human readable title for the feed.
-====
-
-==== Download Service Feed: feed 'subtitle' element
-
-The subtitle element may be used to provide a subtitle (containing additional information) for the feed as a whole. Typically this will correspond with the 'Resource Abstract' in the corresponding service metadata record.
-
-*_Example 4: Sample feed subtitle_*
-[source, xml]
-<!-- feed subtitle -->
-<subtitle>INSPIRE Download Service of organisation XYZ providing Hydrography data</subtitle>
-
-[TIP]
-====
-*TG Recommendation 1*:
-The 'subtitle' element of an Atom feed may be populated with a human readable subtitle for the feed.
-====
-
-==== Download Service Feed: feed 'link' element – service metadata
-
-Every Download Service must have a corresponding Metadata record in a discovery service.
-
-An Atom link element shall be provided that links to the metadata record for this Download Service. This should be a discovery service metadata record. The value of the 'rel' attribute for this link shall be "describedby" [*POWDER*] The value of the 'type' attribute shall be "application/xml" or "application/vnd.ogc.csw.GetRecordByIdResponse_xml".
-
-*_Example 5: Example service metadata link_*
-
-[source, xml]
-<!-- link to service ISO 19139 metadata -->
-<link href="http://xyz.org/metadata/iso19139_document.xml" rel="describedby" type="application/xml"/>
-
-[IMPORTANT]
-====
-*TG Requirement 6*
-The "Download Service Feed" shall contain an Atom 'link' element that links to the metadata record for this Download Service. The value of the 'rel' attribute of this element shall be "describedby" and the value of the 'type' attribute shall be either "application/xml".
-====
-
-NOTE In case of a "hybrid implementation" based on Atom and WFS for Parts B and C, only the Atom service needs to be described through metadata in a discovery service. The link to the WFS implementations shall be established through the "related" link element in the Atom feed (see TG Requirement 16).
 
 ==== Download Service Feed: feed 'link' element – self-reference
 
@@ -1363,7 +1457,7 @@ The 'id' element of a feed shall contain an HTTP URI which dereferences to the f
 
 ==== Download Service Feed: feed 'rights' element
 
-The 'rights' element shall be used to capture any information about rights or restrictions to the Download Service. Typically this will correspond with the value of 'accessConstraints' in the corresponding service metadata record. Note that rights and restrictions may also be applied to individual pre-defined datasets in the linked "Dataset feed".
+The 'rights' element shall be used to capture any information about rights or restrictions to the Download Service. Note that rights and restrictions may also be applied to individual pre-defined datasets in the linked "Dataset feed".
 
 *_Example 9: Example feed rights element_*
 [source, xml]
