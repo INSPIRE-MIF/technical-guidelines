@@ -980,7 +980,7 @@ There is no single classification scheme used for all purposes across all Protec
 [cols=","]
 |===
 |Application Schema |INSPIRE Application Schema Protected Sites Simple
-|Version number |3.0
+|Version number |5.0
 |===
 
 *Types defined in the feature catalogue*
