@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.1 Data Specification on Statistical Units – Technical Guidelines
+:revdate: 2024-01-31
+:keywords: INSPIRE Data Specification for the spatial data theme Statistical Units
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Statistical Units
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:lang: en
+
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -30,23 +41,23 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 = D2.8.III.1 Data Specification on _Statistical Units_ – Technical Guidelines
 
-[cols=",",]
+
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.1 INSPIRE Data Specification on _Statistical Units_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Statistical Units_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Statistical Units_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Statistical Units_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Statistical Units_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.1_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/su[D2.8.III.1_v3.2.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
 
 <<<
@@ -315,7 +326,7 @@ General terms and definitions helpful for understanding the INSPIRE data specifi
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |EC |European Commission
@@ -437,11 +448,9 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 _Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
 
-. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
-
-. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
 ====
 
@@ -532,7 +541,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -571,27 +579,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-_Article 6_
-*Code Lists and Enumerations*
-
-(...)
-
-[arabic, start=5]
-. Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -605,16 +592,23 @@ The IRs distinguish the following types of code lists.
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
-. Code lists shall be of one of the following types, as specified in the Annexes:
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
+
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
+
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
+
+. Code lists shall be one of the following types:
 [loweralpha]
-.. code lists whose allowed values comprise only the values specified in this Regulation;
-.. code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
-.. code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
-.. code lists, whose allowed values comprise any values defined by data providers.
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
 
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
@@ -635,19 +629,19 @@ Additional values defined by data providers should not replace or redefine any v
 
 NOTE This data specification may specify recommended values for some of the code lists of type (b), (c) and (d) (see section 5.2.4.3). These recommended values are specified in a dedicated Annex.
 
-In addition, code lists can be hierarchical, as explained in Article 6(2) of the IRs.
+In addition, code lists can be hierarchical, as explained in Article 6(5) of the IRs.
 
 [IMPORTANT]
 ====
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
 (...)
 
-[arabic, start=2]
-. Code lists may be hierarchical. Values of hierarchical code lists may have a more generic parent value. Where the valid values of a hierarchical code list are specified in a table in this Regulation, the parent values are listed in the last column.
+[arabic, start=5]
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
 
 ====
 
@@ -660,20 +654,18 @@ The type of code list and whether it is hierarchical or not is also indicated in
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
 (....)
 
-[arabic, start=3]
-. Where, for an attribute whose type is a code list as referred to in points (b), (c) or (d) of paragraph 1, a data provider provides a value that is not specified in this Regulation, that value and its definition shall be made available in a register.
-
-. Attributes or association roles of spatial object types or data types whose type is a code list may only take values that are allowed according to the specification of the code list.
+[arabic, start=6]
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
-Article 6(4) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
+Article 6(6) obliges data providers to use only values that are allowed according to the specification of the code list. The "allowed values according to the specification of the code list" are the values explicitly defined in the IRs plus (in the case of code lists of type (b), (c) and (d)) additional values defined by data providers.
 
-For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(3) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
+For attributes whose type is a code list of type (b), (c) or (d) data providers may use additional values that are not defined in the IRs. Article 6(6) requires that such additional values and their definition be made available in a register. This enables users of the data to look up the meaning of the additional values used in a data set, and also facilitates the re-use of additional values by other data providers (potentially across Member States).
 
 NOTE Guidelines for setting up registers for additional values and how to register additional values in these registers is still an open discussion point between Member States and the Commission.
 
@@ -1044,7 +1036,7 @@ For pan-European applications, there is a need to specify some common European g
 _Annex IV, Section 1.5_
 *Theme-specific Requirements*
 
-For pan-European usage, the Equal Area Grid defined in Section 2.2.1 of Annex II shall be used.
+For pan-European usage, the Equal Area Grid defined in Section 2.2.1 of Annex II shall be used. For pan-European usage additional allowed grid cell sizes are 2m, 5m, 20m, 50m, 200m, 500m, 2 000m, 5 000m, 20 000m, 50 000m.
 ====
 
 ====== _Vector package_
@@ -1079,6 +1071,7 @@ The following constraints are added:
 * Each vector statistical unit cannot have more than one geometry with a type _referenceGeometry_,
 * Geometry descriptors with a _generalisedGeometry_ type have to be instances of _GeneralisedGeometryDescriptor_ class.
 * Vector statistical units with a reference geometry instance of _GM_MultiSurface_ must be instances of the specialised class _AreaStatisticalUnit_.
+* The reference geometry of an area statistical units should be a _GM_MultiSurface_.
 
 [NOTE]
 ====
@@ -1369,7 +1362,7 @@ a|
 
 Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _AggregatedEnergy_
 
@@ -1398,7 +1391,7 @@ a|
 
 *Types defined in the feature catalogue*
 
-[cols=","]
+[cols=",,",options="header",]
 |===
 |*Type* |*Package* |*Stereotypes*
 |GridPosition |Statistical Units Grid |«dataType»
@@ -1568,8 +1561,9 @@ a|
 !Value type: !CharacterString
 !Definition: !A cell code.
 !Description: !This code is composed of: 
-1. A coordinate reference system part, represented by the word CRS, followed by the EPSG code. 
-2. A resolution and position part: 
+1. A two-letter country code as defined in the Interinstitutional Style Guide published by the Publications Office of the European Union.
+2. A coordinate reference system part, represented by the word CRS, followed by the EPSG code. 
+3. A resolution and position part: 
 - If the coordinate reference system is projected, the word RES followed by the grid resolution in meters and the letter m. Then, the letter N followed by the northing value in meters, and the letter E followed by the easting value in meters too. 
 - If the coordinate reference system is not projected, the word RES followed by the grid resolution in degree-minute-second, followed by the word dms. Then the word LON followed by the longitude value in degree-minute-second, and word LAT followed by the latitude value in degree-minute-second. 
 For both cases, the given position is the position of the lower left cell corner. 
@@ -1652,7 +1646,7 @@ a|
 
 [cols=","]
 !===
-!Natural language: !The code shall be composed of: (1) A coordinate reference system part, represented by the word CRS, followed by the EPSG code. (2) A resolution and position part: – If the coordinate reference system is projected, the word RES followed by the grid resolution in meters and the letter m. Then, the letter N followed by the northing value in meters, and the letter E followed by the easting value in meters. – If the coordinate reference system is not projected, the word RES followed by the grid resolution in degree-minute-second, followed by the word dms. Then the word LON followed by the longitude value in degree-minute-second, and word LAT followed by the latitude value in degree-minute-second. For both cases, the given position shall be the position of the lower left cell corner.
+!Natural language: !The code shall be composed of: (1) A two-letter country code as defined in the Interinstitutional Style Guide published by the Publications Office of the European Union. (2) A coordinate reference system part, represented by the word CRS, followed by the EPSG code. (3) A resolution and position part: – If the coordinate reference system is projected, the word RES followed by the grid resolution in meters and the letter m. Then, the letter N followed by the northing value in meters, and the letter E followed by the easting value in meters. – If the coordinate reference system is not projected, the word RES followed by the grid resolution in degree-minute-second, followed by the word dms. Then the word LON followed by the longitude value in degree-minute-second, and word LAT followed by the latitude value in degree-minute-second. For both cases, the given position shall be the position of the lower left cell corner.
 !OCL: !
 !===
 
@@ -1763,7 +1757,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _Angle_
 
@@ -1910,6 +1904,7 @@ NOTE Spatial features of any INSPIRE application schema can be considered as a s
 |GeometryDescriptor |Statistical Units Vector |«dataType»
 |GeometryTypeValue |Statistical Units Vector |«codelist»
 |StatisticalTessellation |Statistical Units Vector |«featureType»
+|StatisticalUnitTypeValue |Statistical Units Vector |«codelist»
 |VectorStatisticalUnit |Statistical Units Vector |«featureType»
 |VectorStatisticalUnitGeometry |Statistical Units Vector |«dataType»
 |===
@@ -2032,6 +2027,15 @@ a|
 !Definition: !The tesselation composed of units.
 !Multiplicity: !0..1
 !Stereotypes: !«voidable»
+!===
+
+a|
+*Constraint: AreaStatisticalUnitsGeometryConstraint*
+
+[cols=","]
+!===
+!Natural language: !The reference geometry of an area statistical units should be a _GM_MultiSurface_.
+!OCL: !
 !===
 
 |===
@@ -2308,6 +2312,17 @@ a|
 !===
 
 a|
+*Attribute: statisticalUnitType*
+
+[cols=","]
+!===
+!Name: !Statistical unit type
+!Value type: !StatisticalUnitTypeValue
+!Definition: !Type of territorial unit used for dissemination purposes.
+!Multiplicity: !0..*
+!===
+
+a|
 *Attribute: beginLifespanVersion*
 
 [cols=","]
@@ -2519,7 +2534,7 @@ a|
 !Definition: !The code values for evolution types.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/EvolutionTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. Annex _C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2536,14 +2551,31 @@ a|
 !Definition: !The code values for the geometry types.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometryTypeValue
-!Values: !The allowed values for this code list comprise the values specified in Annex C and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in INSPIRE Registry and additional values at any level defined by data providers.
+!===
+
+|===
+
+====== _StatisticalUnitTypeValue_
+
+[cols="",options="header",]
+|===
+|*StatisticalUnitTypeValue*
+a|
+[cols=","]
+!===
+!Name: !Statistical unit type value
+!Definition: !The code values for statistical unit types.
+!Extensibility: !any
+!Identifier: !http://inspire.ec.europa.eu/codelist/StatisticalUnitTypeValue
+!Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
 |===
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _AdministrativeUnit_
 
@@ -2802,12 +2834,13 @@ Spatial data sets shall be made available using at least one of the coordinate r
 *1.3.4. Other Coordinate Reference Systems*
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
+. Other coordinate reference systems may be specified for specific spatial data themes.
 
-. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+.  For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
 ====
 
 ===== Display
@@ -2816,7 +2849,7 @@ The geodetic codes and parameters needed to describe these coordinate reference 
 ====
 [.text-center]
 *IR Requirement*
-_Annex II, Section 1.4_
+_Annex II, Section 1.5_
 *Coordinate Reference Systems used in the View Network Service*
 
 For the display of spatial data sets with the view network service as specified in Regulation No 976/2009, at least the coordinate reference systems for two-dimensional geodetic coordinates (latitude, longitude) shall be available.
@@ -2829,7 +2862,7 @@ For the display of spatial data sets with the view network service as specified 
 ====
 [.text-center]
 *IR Requirement*
-_Annex II, Section 1.4_
+_Annex II, Section 1.5_
 *Coordinate Reference Systems used in the View Network Service*
 
 . Coordinate reference system parameters and identifiers shall be managed in one or several common registers for coordinate reference systems.
@@ -2838,13 +2871,13 @@ _Annex II, Section 1.4_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 3*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -2853,35 +2886,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-*Table 2. http URIs for the default coordinate reference systems*
-
-[cols=",,",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -3509,7 +3513,7 @@ NOTE While this not explicitly required by any of the INSPIRE Implementing Rules
 
 ==== Coordinate Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Coordinate Reference System*
 |Definition |Description of the coordinate reference system used in the dataset.
@@ -3553,7 +3557,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Temporal Reference System
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Temporal Reference System*
 |Definition |Description of the temporal reference systems used in the dataset.
@@ -3597,7 +3601,7 @@ codeSpace: INSPIRE RS registry
 
 ==== Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Encoding*
 |Definition |Description of the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission channel
@@ -3634,7 +3638,7 @@ specification: D2.8.III.1 Data Specification on _Statistical Units_ – Technica
 
 ==== Character Encoding
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Character Encoding*
 |Definition |The character encoding used in the data set.
@@ -3657,7 +3661,7 @@ specification: D2.8.III.1 Data Specification on _Statistical Units_ – Technica
 
 ==== Spatial representation type
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Spatial representation type*
 |Definition |The method used to spatially represent geographic information.
@@ -3724,7 +3728,7 @@ For implementing the metadata elements included in this section using ISO 19115,
 
 ==== Maintenance Information
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*Maintenance information*
 |Definition |Information about the scope and frequency of updating
@@ -3800,7 +3804,7 @@ NOTE In the level element of DQ_Scope, the value featureType is used to denote s
 
 ===== Guidelines for reporting quantitative results of the data quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -3845,7 +3849,7 @@ NOTE The DQ_Result type should be DQ_QuantitativeResult and the value(s) represe
 
 ===== Guidelines for reporting descriptive results of the Data Quality evaluation
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Metadata element name* |*See chapter 7*
 |Definition |See chapter 7
@@ -3924,9 +3928,12 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
 
-. Every encoding rule used to encode spatial data shall be made available.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
+
 
 ====
 
@@ -4134,7 +4141,7 @@ None.
 
 ==== Styles for the layer SU.VectorStatisticalUnits
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*SU.VectorStatisticalUnits*
 |*Default Style* |Yes
@@ -4294,7 +4301,7 @@ geometries.geometryDescriptor.geometryType</se:ValueReference>
 
 ==== Styles for the layer SU.StatisticalGridCell
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*SU.StatisticalGridCell*
 |*Default Style* |Yes
@@ -4346,7 +4353,7 @@ image::./media/image21.png[image,width=32,height=32, align=center]
 
 ==== Styles for the layer SU.VectorStatisticalUnits
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*SU.VectorStatisticalUnits.X*
 |*Style Title* |Vector statistical units style.
@@ -4357,7 +4364,7 @@ image::./media/image21.png[image,width=32,height=32, align=center]
 
 ==== Styles for the layer SU.StatisticalGridCell
 
-[cols=",",options="header",]
+[%autowidth,options="header"]
 |===
 |*Style Name* |*SU.StatisticalGridCell.X*
 |*Style Title* |Statistical grid cell style.
@@ -4520,7 +4527,7 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
 ====
 *Open issue 1:* Even though the last condition can be derived from Art. 8(4) of the Directive, the ISDSS Regulation does not contain requirements concerning the above issue. Therefore, no specific tests have been included in this abstract suit for testing conformity of extended application schemas. Annex F of the Generic Conceptual Model (D2.5) provides an example how to extend INSPIRE application schemas in a compliant way.
@@ -4555,19 +4562,17 @@ a) [.underline]#Purpose#: Verification whether each element of the dataset under
 
 b) [.underline]#Reference#: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-c) [.underline]#Test method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+c) [.underline]#Test method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
 ==== Value test
 
-a) [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.
+a) [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.
 
 b) [.underline]#Reference#: Art.4 (3) of Commission Regulation No 1089/2010.
 
-c) [.underline]#Test method#: When an attribute / association role has an enumeration or code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
-
-* shall not take any other value than defined in the enumeration table when its type is an enumeration.
+c) [.underline]#Test method#: When an attribute / association role has a code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
 
 * shall take only values explicitly specified in the code list when the code list's extensibility is "none".
 
@@ -4912,7 +4917,7 @@ c) [.underline]#Test method#: Examine that the number of occurrences of each att
 
 a) [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-b) [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+b) [.underline]#Reference#: Section 6 of this technical guideline
 
 c) [.underline]#Test method#: Compare the URI of the dataset with the URIs in the table.
 
@@ -5068,10 +5073,10 @@ image::./media/image23.png[Population_change,_by_NUTS_3_regions,_2008,width=604,
 |*Code List*
 |_EvolutionTypeValue_
 |_GeometryTypeValue_
+|_StatisticalUnitTypeValue_
 |===
 
-[discrete]
-=== EvolutionTypeValue
+*EvolutionTypeValue*
 
 [cols="",]
 |===
@@ -5082,127 +5087,41 @@ a|
 !Definition: !The code values for evolution types.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/EvolutionTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
-[cols=""]
-|===
-a|
-*creation*
-
-[cols=","]
-!===
-!Name: !creation
-!Definition: !The code value for creation.
-!===
-
-a|
-*change*
-
-[cols=","]
-!===
-!Name: !change
-!Definition: !The code value for change.
-!===
-
-a|
-*deletion*
-
-[cols=","]
-!===
-!Name: !deletion
-!Definition: !The code value for deletion.
-!===
-
-a|
-*aggregation*
-
-[cols=","]
-!===
-!Name: !aggregation
-!Definition: !The code value for aggregation.
-!===
-
-a|
-*splitting*
-
-[cols=","]
-!===
-!Name: !splitting
-!Definition: !The code value for splitting.
-!===
-
-|===
-
-[discrete]
-=== GeometryTypeValue
+*GeometryTypeValue*
 
 [cols="",]
 |===
 a|
-[cols=",",options="header",]
+[%autowidth,options="header"]
 !===
 !Name: !Geometry type value
 !Definition: !The code values for the geometry types.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometryTypeValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
 
-[cols=""]
+[discrete]
+=== StatisticalUnitTypeValue
+
+[cols="",]
 |===
 a|
-*referenceGeometry*
-
 [cols=","]
 !===
-!Name: !reference geometry
-!Definition: !The described geometry is the reference geometry.
-!===
-
-a|
-*pointLabel*
-
-[cols=","]
-!===
-!Name: !point label
-!Definition: !The described geometry is a point geometry for labeling.
-!Description: !"Of course, geometries having this type should be points."
-!===
-
-a|
-*centerOfGravity*
-
-[cols=","]
-!===
-!Name: !center of gravity
-!Definition: !The described geometry is a point geometry located at the center of gravity of the unit.
-!Description: !"Of course, geometries having this type should be points."
-!===
-
-a|
-*generalisedGeometry*
-
-[cols=","]
-!===
-!Name: !generalised geometry
-!Definition: !A generalised geometry of the statistical unit.
-!Description: !Geometries having such a code must have a descriptor for generalised geometries.
-!===
-
-a|
-*other*
-
-[cols=","]
-!===
-!Name: !other
-!Definition: !Other kind of geometry type.
+!Name: !Statistical unit type value
+!Definition: !The code values for statistical unit types.
+!Extensibility: !any
+!Identifier: !http://inspire.ec.europa.eu/codelist/StatisticalUnitTypeValue
+!Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
 |===
@@ -5358,12 +5277,11 @@ a|
 !Definition: !The code values for the NUTS levels.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/NUTSLevelValue
-!Values: !
+!Values: !The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 [cols=""]
 |===
@@ -5532,14 +5450,14 @@ a|
 !Definition: !The code values for the NUTS levels.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/NUTSLevelValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in this Annex and additional values at any level defined by data providers. This Annex includes recommended values that may be used by data providers.
 !===
 
 |===
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _AreaStatisticalUnit_
 
@@ -5830,7 +5748,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _AreaStatisticalUnit_
 
@@ -6041,7 +5959,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== _VectorStatisticalUnit_
 
