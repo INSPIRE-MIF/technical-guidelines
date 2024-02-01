@@ -1077,6 +1077,17 @@ a|
 !===
 
 a|
+*Attribute: thematicId*
+
+[cols=","]
+!===
+!Value type: !ThematicIdentifier
+!Definition: !Thematic object identifier.
+!Multiplicity: !0..*
+!Stereotypes: !«voidable»
+!===
+
+a|
 *Attribute: name*
 
 [cols=","]
