@@ -4090,17 +4090,6 @@ a|
 !Stereotypes: !«featureType»
 !===
 
-a|
-*Attribute: fictitious*
-
-[cols=","]
-!===
-!Value type: !Boolean
-!Definition: !The railway link does not represent a real and existing railway track but a fictitious trajectory.
-!Description: !EXAMPLE A fictitious trajectory to connect railway links across a turntable.
-!Multiplicity: !1
-!Stereotypes: !«voidable»
-!===
 
 |===
 
