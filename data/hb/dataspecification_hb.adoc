@@ -1464,7 +1464,7 @@ a|
 !Name: !eunis habitat type code value
 !Definition: !EUNIS habitat types classification.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/EunisHabitatTypeCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/EunisHabitatTypeCodeValue
 !Values: !The allowed values for this code list comprise only the values specified in "Classification of habitat types according to the EUNIS Biodiversity database, as specified in the EUNIS habitat types classification published on the web site of the European Environment Agency" .
 !===
 
@@ -1481,7 +1481,7 @@ a|
 !Name: !habitat directive code value
 !Definition: !Habitats Directive Annex I habitats.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/HabitatsDirectiveCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/HabitatsDirectiveCodeValue
 !Values: !The allowed values for this code list comprise only the values specified in "Classification of habitat types according to Annex I to Directive 92/43/EEC" .
 !===
 
@@ -1515,7 +1515,7 @@ a|
 !Name: !marine strategy framework directive code value
 !Definition: !Marine Strategy Framework Directive.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/MarineStrategyFrameworkDirectiveCodeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/MarineStrategyFrameworkDirectiveCodeValue
 !Values: !The allowed values for this code list comprise only the values specified in "Classification of habitat types according to table 1 of Annex III to Directive 2008/56/EC" .
 !===
 
@@ -1532,7 +1532,7 @@ a|
 !Name: !qualifier local name value
 !Definition: !List of values that specify the relation between a locally used name and a name used at the pan-European level.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/QualifierLocalNameValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/QualifierLocalNameValue
 !Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
 !===
 
@@ -1567,7 +1567,7 @@ a|
 !Definition: !This value defines which pan-european habitat classification scheme has been used.
 !Description: !EXAMPLE Eunis
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/ReferenceHabitatTypeSchemeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ReferenceHabitatTypeSchemeValue
 !Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
 !===
 
@@ -2397,7 +2397,7 @@ a|
 !Description: !Describes how the information about the occurrences of the habitats within a a unit has been compiled. 
 NOTE The values of the list are found here: http://circa.europa.eu/Public/irc/env/monnat/library?l=/habitats_reporting/reporting_2007-2012/reporting_guidelines/reporting-formats_1/_EN_1.0_&a=d
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/Article17SourceMethodValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/Article17SourceMethodValue
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
 
@@ -2710,7 +2710,7 @@ The values of selected external code lists are included in Annex D for informati
 |===
 |*Code list* |*Identifiers* |*Examples*
 |Article17SourceMethodValue |Append the codes in the field '1.1.2 Method used-map' from page 4 of the Reporting Formats for Article 17 to the identifier URI. The codes to be used are 
-3,2,1,0. Refer to the document for more detailed description. For the reporting under Article 12 of the Birds Directive the codes are the same. |http://inspire.ec.europa.eu/codeList/ Article17SourceMethodValue/3
+3,2,1,0. Refer to the document for more detailed description. For the reporting under Article 12 of the Birds Directive the codes are the same. |http://inspire.ec.europa.eu/codelist/ Article17SourceMethodValue/3
 |===
 
 [cols=",,",options="header",]
@@ -7064,7 +7064,7 @@ a|
 !Name: !qualifier local name value
 !Definition: !List of values that specify the relation between a locally used name and a name used at the pan-European level.
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/QualifierLocalNameValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/QualifierLocalNameValue
 !Values: !The allowed values for this code list comprise only the values specified in the table below.
 !===
 
@@ -7130,7 +7130,7 @@ a|
 !Definition: !This value defines which pan-european habitat classification scheme has been used.
 !Description: !EXAMPLE Eunis
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/ReferenceHabitatTypeSchemeValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ReferenceHabitatTypeSchemeValue
 !Values: !The allowed values for this code list comprise only the values specified in the table below.
 !===
 

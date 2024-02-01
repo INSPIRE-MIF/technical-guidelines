@@ -712,7 +712,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 
 ===== Vocabulary
 
-For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern _http://inspire.ec.europa.eu/codeList/<UpperCamelCaseName>_.
+For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern _http://inspire.ec.europa.eu/codelist/<UpperCamelCaseName>_.
 
 If the value is missing or empty, this indicates an empty code list. If no sub-classes are defined for this empty code list, this means that any code list may be used that meets the given definition.
 
@@ -2362,7 +2362,7 @@ a|
 !Definition: !Disease as defined in the ICD-10 update 2007 "ICD (International Classification of Diseases, 10th revision)".
 !Description: !As values in the INSPIRE data, the code could be used (e.g A00, A01, A01.1, ...).
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/ICDvalue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ICDvalue
 !Values: !The allowed values for this code list comprise only the values specified in "10th Revision of the International Statistical Classification of Diseases and Related Health Problems, published by the World Health Organization" .
 !===
 
@@ -2381,7 +2381,7 @@ a|
 !Description: !COD data refer to the underlying cause which - according to the World Health Organisation (WHO) - is "the disease or injury which initiated the train of morbid events leading directly to death, or the circumstances of the accident or violence which produced the fatal injury". Causes of death are classified by the 65 causes of the "European shortlist" of causes of death. This shortlist is based on the International Statistical Classification of Diseases and Related Health Problems (ICD). 
 As values in the INSPIRE data, the numeric code could be used (e.g 01, 02, 03...).
 !Extensibility: !none
-!Identifier: !http://inspire.ec.europa.eu/codeList/CODvalue
+!Identifier: !http://inspire.ec.europa.eu/codelist/CODvalue
 !Values: !The allowed values for this code list comprise only the values specified in "European Shortlist for Causes of Death published by Eurostat" .
 !===
 
@@ -2590,8 +2590,8 @@ The externally governed code lists included in this application schema are speci
 [cols=",,,",options="header",]
 |===
 |*Code list* |*Identifiers* |*Identifier examples* |*Labels*
-|ICDValue |Append the upper-case alphanumeric code in the "Code" column of Annex A6 to the URI prefix http://inspire.ec.europa.eu/codeList/ICDValue/ |_http://inspire.ec.europa.eu/codeList/ICDValue/A00 for Cholera_ |The name after the code in the ICD10online website; e.g Cholera
-|CODValue |Append the two numeric code in the "Code" column of Annex A6 to the URI prefix http://inspire.ec.europa.eu/codeList/CODValue/ |_http://inspire.ec.europa.eu/codeList/CODValue/29_ |The name after the code in the COD website; e.g Alcohol abuse
+|ICDValue |Append the upper-case alphanumeric code in the "Code" column of Annex A6 to the URI prefix http://inspire.ec.europa.eu/codelist/ICDValue/ |_http://inspire.ec.europa.eu/codelist/ICDValue/A00 for Cholera_ |The name after the code in the ICD10online website; e.g Cholera
+|CODValue |Append the two numeric code in the "Code" column of Annex A6 to the URI prefix http://inspire.ec.europa.eu/codelist/CODValue/ |_http://inspire.ec.europa.eu/codelist/CODValue/29_ |The name after the code in the COD website; e.g Alcohol abuse
 |===
 
 === Application schema Safety
