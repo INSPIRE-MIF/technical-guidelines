@@ -953,7 +953,7 @@ If a site has multiple designations, different features should be provided for e
 
 ===== Temporality representation
 
-The application schema stores the real world date on which a change to the Protected Site occurs (legalFoundationDate). This is independent of anything that happens in any system. The Simple application schema does not include system lifecycle information and does not store historical versions of features.
+The application schema stores the real world date on which a change of the designation of the Protected Site occurs (legalFoundationDate). This is independent of anything that happens in any system. The Simple application schema does not include system lifecycle information and does not store historical versions of features.
 
 ===== Protected Site names
 
@@ -980,7 +980,7 @@ There is no single classification scheme used for all purposes across all Protec
 [cols=","]
 |===
 |Application Schema |INSPIRE Application Schema Protected Sites Simple
-|Version number |3.0
+|Version number |5.0
 |===
 
 *Types defined in the feature catalogue*
@@ -1029,7 +1029,7 @@ a|
 !===
 
 a|
-*Attribute: inspireID*
+*Attribute: inspireId*
 
 [cols=","]
 !===
@@ -1039,28 +1039,6 @@ a|
 !Multiplicity: !1
 !===
 
-a|
-*Attribute: legalFoundationDate*
-
-[cols=","]
-!===
-!Value type: !DateTime
-!Definition: !The date that the protected site was legally created. This is the date that the real world object was created, not the date that its representation in an information system was created.
-!Description: !NOTE In the case of Natura2000 sites, a protected site may go through several different stages (for example, proposed as SCI, confirmed as SCI, designated as SAC). A new version of the site is created for each of these different stages (because there is a change in the designation), and the new version should have the date on which the new stage was legally assigned as the legalFoundationDate (for example, when designated as a SAC, the version for the SAC would have the designation date as the legalFoundationDate).
-!Multiplicity: !1
-!Stereotypes: !«voidable»
-!===
-
-a|
-*Attribute: legalFoundationDocument*
-
-[cols=","]
-!===
-!Value type: !CI_Citation
-!Definition: !A URL or text citation referencing the legal act that created the Protected Site.
-!Multiplicity: !1
-!Stereotypes: !«voidable»
-!===
 
 a|
 *Attribute: siteDesignation*
@@ -1100,6 +1078,17 @@ a|
 !Stereotypes: !«voidable»
 !===
 
+a|
+*Attribute: thematicId*
+
+[cols=","]
+!===
+!Value type: !ThematicIdentifier
+!Definition: !Thematic object identifier.
+!Multiplicity: !0..*
+!Stereotypes: !«voidable»
+!===
+
 |===
 
 ===== Data types
@@ -1117,22 +1106,22 @@ a|
 !===
 
 a|
-*Attribute: designationScheme*
-
-[cols=","]
-!===
-!Value type: !DesignationSchemeValue
-!Definition: !The scheme from which the designation code comes.
-!Multiplicity: !1
-!===
-
-a|
 *Attribute: designation*
 
 [cols=","]
 !===
 !Value type: !DesignationValue
 !Definition: !The actual Site designation.
+!Multiplicity: !1
+!===
+
+a|
+*Attribute: designationScheme*
+
+[cols=","]
+!===
+!Value type: !DesignationSchemeValue
+!Definition: !The scheme from which the designation code comes.
 !Multiplicity: !1
 !===
 
@@ -1144,6 +1133,29 @@ a|
 !Value type: !Percentage
 !Definition: !The percentage of the site that falls under the designation. This is used in particular for the IUCN categorisation. If a value is not provided for this attribute, it is assumed to be 100%
 !Multiplicity: !0..1
+!===
+
+a|
+*Attribute: legalFoundationDate*
+
+[cols=","]
+!===
+!Value type: !Date
+!Definition: !The date that the protected site was legally created. This is the date that the real world object was created, not the date that its representation in an information system was created.
+!Description: !NOTE In the case of Natura2000 sites, a protected site may go through several different stages (for example, proposed as SCI, confirmed as SCI, designated as SAC). A new version of the site is created for each of these different stages (because there is a change in the designation), and the new version should have the date on which the new stage was legally assigned as the legalFoundationDate (for example, when designated as a SAC, the version for the SAC would have the designation date as the legalFoundationDate).
+!Multiplicity: !1
+!Stereotypes: !«voidable»
+!===
+
+a|
+*Attribute: legalFoundationDocument*
+
+[cols=","]
+!===
+!Value type: !CI_Citation
+!Definition: !A URL or text citation referencing the legal act that created the Protected Site.
+!Multiplicity: !1
+!Stereotypes: !«voidable»
 !===
 
 a|
@@ -1265,13 +1277,13 @@ NOTE 2 Typically, this code list will be extended with code schemes used within 
 a|
 [cols=","]
 !===
-!Definition: !Abstract base type for code lists containing the classificaiton and desigation types under different schemes.
+!Definition: !Classification and designation types under different schemes.
 !Description: !NOTE 1Some of these designation and classification lists are closed (for example, Natura2000), while some change regularly. 
  
 NOTE 2 Typically, additional code lists will be created as sub-types of this type to represent designation or classification values within Member States, e.g. natuurbeschermingsGebieden, rijksBeschermdeArcheologischeGebieden, nationaleParken, nationaleLandschappen etc. in the Netherlands.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/DesignationValue
-!Values: !The code list can be extended with additional values at any level, i.e. its allowed values comprise the values specified in this register and additional values at any level defined by data providers.
+!Values: !The code list can be extended with additional values at any level, i.e. its allowed values comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
