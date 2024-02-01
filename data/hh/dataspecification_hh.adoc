@@ -1055,7 +1055,7 @@ Health determinant coverages shall be represented using the spatial object types
 [cols=","]
 |===
 |Application Schema |INSPIRE Application Schema HumanHealth
-|Version number |4.0
+|Version number |5.0
 |===
 
 *Types defined in the feature catalogue*
