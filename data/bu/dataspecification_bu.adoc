@@ -9361,7 +9361,7 @@ None.
 
 [cols=",",options="header",]
 |===
-|*Style Name* |BU.Building.default
+|*Style Name* |BU.Building.Default
 |*Default Style* |yes
 |*Style Title* |Building Default Style
 |*Style Abstract* a|
@@ -9487,7 +9487,7 @@ NOTE 1: The scale range enables the user to discover buildings from scale 1/ 25Â
 
 [cols=",",options="header",]
 |===
-|*Style Name* |BU.Building.default
+|*Style Name* |BU.BuildingPart.Default
 |*Default Style* |yes
 |*Style Title* |BuildingPart Default Style
 |*Style Abstract* a|
