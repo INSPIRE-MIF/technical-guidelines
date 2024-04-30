@@ -224,9 +224,10 @@ This document specifies requirements and recommendations based on the European d
 
 The INSPIRE Profile of [ISO 19128] also make use of the OGC™ Styled Layer Descriptor Profile [*OGC SLD*], and the OGC™ Symbology Encoding Implementation Specification [*OGC SEIS*]. In addition this document defines how to handle multilingual aspects of INSPIRE View Services.
 
-While the recommended approach to implement INSPIRE view services is the [*ISO 19128*] – Web Map Service (WMS) 1.3.0, an INSPIRE View Service may also be implemented based on the OGC™ WMS 1.1.1 or OGC™ Web Mapping Tiling Service - WMTS 1.0.0 specifications. An INSPIRE Profile of WMTS 1.0.0 is defined in Section 0 and examples of WMS-C (Tile Cashing WMS) profile for WMS 1.1.1 and WMS 1.1.1 are given in Annex A and Annex B respectively.
+While the recommended approach to implement INSPIRE view services is the [*ISO 19128*] – Web Map Service (WMS) 1.3.0, an INSPIRE View Service may also be implemented based on the OGC™ Web Mapping Tiling Service - WMTS 1.0.0 specification. An INSPIRE Profile of WMTS 1.0.0 is defined in Section 5.
 
-This is the initial version of the Technical Guidance document and it has been validated and tested in collaboration with the Initial Operating Capability Task Force. It may be used by the Member States for the initial implementation of the INSPIRE View Services.
+An INSPIRE View Service cannot be implemented using the OGC™ WMS 1.1.1 specification due to its deprecation and security issues associated with INSPIRE Reference Validator validation.
+
 
 == Normative references
 
@@ -422,7 +423,6 @@ Which, however breaks compatibility with existing clients. The disadvantages of 
 ** The schemas from ISO 19139 version 2005-DIS (Draft International Standard) dated 2006 May 4 (http://schemas.opengis.net/iso/19139/20060504/[+++20060504/+++]) depend on the unofficial GML 3.2.0 version, but on the other hand is used in ISO AP 1.0 for CSW;
 ** The ISO/TS 19139 Schemas dated 2007 April 17 (http://schemas.opengis.net/iso/19139/20070417/[+++20070417/+++]) depend on the official GML version 3.2.1 which relies on a different namespace but does not make available the implementation for the "srv" namespace for service metadata;
 * CSW schema version 2.0.2 includes OGC filter version 1.1.0 which in turn includes GML version 3.1.1;
-* An INSPIRE View Service may also be implemented using WMS 1.1.1. The WMS 1.1.1 schema however is officially implemented only through DTD technology. There is no official DTD implementation for ISO 19139.
 
 As a result for the discovery service capabilities document this approach would require reference to three different versions of GML in the same document.
 
