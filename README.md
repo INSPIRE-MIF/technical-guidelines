@@ -65,7 +65,7 @@ Change proposals to the TGs can be proposed and discussed in the [issue tracker]
 
 # IACS Spatial Data Sharing - Technical Guidelines
 
-IACS technical guidelines are available [here](/iacs).
+IACS technical guidelines are available [here](iacs).
 
 
 ## Code of Conduct
