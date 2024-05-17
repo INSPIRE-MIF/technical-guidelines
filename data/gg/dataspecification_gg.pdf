@@ -4,10 +4,10 @@
 << /Title (Untitled)
 /Author (Temporary MIWP 2021-2024 sub-group 2.3.1)
 /Keywords (INSPIRE Data Specification for the spatial data theme Geographical Grid Systems)
-/Creator (Asciidoctor PDF 2.3.11, based on Prawn 2.4.0)
+/Creator (Asciidoctor PDF 2.3.15, based on Prawn 2.4.0)
 /Producer (Temporary MIWP 2021-2024 sub-group 2.3.1)
-/ModDate (D:20240201150515+00'00')
-/CreationDate (D:20240201151414+00'00')
+/ModDate (D:20240517080552+00'00')
+/CreationDate (D:20240517081445+00'00')
 >>
 endobj
 2 0 obj
@@ -24998,7 +24998,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /b4ea58+NotoSerif
 /FontFile2 289 0 R
-/FontBBox [-212 -250 1246 1047]
+/FontBBox [-518 -250 1246 1047]
 /Flags 6
 /StemV 0
 /ItalicAngle 0
@@ -25081,7 +25081,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /9760fe+NotoSerif-Bold
 /FontFile2 293 0 R
-/FontBBox [-212 -250 1306 1058]
+/FontBBox [-555 -250 1306 1058]
 /Flags 6
 /StemV 0
 /ItalicAngle 0
@@ -25140,7 +25140,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /eec88e+NotoSerif-BoldItalic
 /FontFile2 297 0 R
-/FontBBox [-265 -250 1289 1058]
+/FontBBox [-476 -250 1289 1058]
 /Flags 70
 /StemV 0
 /ItalicAngle -12
@@ -25211,7 +25211,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /27e732+NotoSerif-Italic
 /FontFile2 301 0 R
-/FontBBox [-254 -250 1238 1047]
+/FontBBox [-421 -250 1238 1047]
 /Flags 70
 /StemV 0
 /ItalicAngle -12
@@ -25336,7 +25336,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /a82ff4+NotoSerif
 /FontFile2 313 0 R
-/FontBBox [-212 -250 1246 1047]
+/FontBBox [-518 -250 1246 1047]
 /Flags 6
 /StemV 0
 /ItalicAngle 0

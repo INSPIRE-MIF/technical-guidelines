@@ -4,10 +4,10 @@
 << /Title (Untitled)
 /Author (Temporary MIWP 2021-2024 sub-group 2.3.1)
 /Keywords (INSPIRE View Services)
-/Creator (Asciidoctor PDF 2.3.11, based on Prawn 2.4.0)
+/Creator (Asciidoctor PDF 2.3.15, based on Prawn 2.4.0)
 /Producer (Temporary MIWP 2021-2024 sub-group 2.3.1)
-/ModDate (D:20240201150517+00'00')
-/CreationDate (D:20240201150614+00'00')
+/ModDate (D:20240517080554+00'00')
+/CreationDate (D:20240517081455+00'00')
 >>
 endobj
 2 0 obj
@@ -162854,7 +162854,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /f61536+NotoSerif
 /FontFile2 611 0 R
-/FontBBox [-212 -250 1246 1047]
+/FontBBox [-518 -250 1246 1047]
 /Flags 6
 /StemV 0
 /ItalicAngle 0
@@ -162928,7 +162928,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /212260+NotoSerif-Bold
 /FontFile2 615 0 R
-/FontBBox [-212 -250 1306 1058]
+/FontBBox [-555 -250 1306 1058]
 /Flags 6
 /StemV 0
 /ItalicAngle 0
@@ -163002,7 +163002,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /a4cd46+NotoSerif-Italic
 /FontFile2 619 0 R
-/FontBBox [-254 -250 1238 1047]
+/FontBBox [-421 -250 1238 1047]
 /Flags 70
 /StemV 0
 /ItalicAngle -12
@@ -163052,7 +163052,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /06925f+NotoSerif
 /FontFile2 623 0 R
-/FontBBox [-212 -250 1246 1047]
+/FontBBox [-518 -250 1246 1047]
 /Flags 6
 /StemV 0
 /ItalicAngle 0
@@ -163315,7 +163315,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /c47cdf+NotoSerif-BoldItalic
 /FontFile2 643 0 R
-/FontBBox [-265 -250 1289 1058]
+/FontBBox [-476 -250 1289 1058]
 /Flags 70
 /StemV 0
 /ItalicAngle -12
@@ -163358,7 +163358,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /bbf95d+NotoSerif-Italic
 /FontFile2 647 0 R
-/FontBBox [-254 -250 1238 1047]
+/FontBBox [-421 -250 1238 1047]
 /Flags 70
 /StemV 0
 /ItalicAngle -12
