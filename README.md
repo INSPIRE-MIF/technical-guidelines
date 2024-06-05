@@ -15,7 +15,8 @@ Currently, the following TGs have been converted:
   * [Metadata-iso19139](metadata/metadata-iso19139) ([PDF](https://inspire-mif.github.io/technical-guidelines/metadata/metadata-iso19139/metadata-iso19139.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/metadata/metadata-iso19139/metadata-iso19139.html))
 * Services
   * [Discovery Services](services/discovery-cws) ([PDF](https://inspire-mif.github.io/technical-guidelines/services/discovery-cws/DiscoveryServices.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/services/discovery-cws/DiscoveryServices.html))
-  * [Download Services](services/download-atom-wfs) ([PDF](https://inspire-mif.github.io/technical-guidelines/services/download-atom-wfs/DownloadServices.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/services/download-atom-wfs/DownloadServices.html))
+  * [Download Services - ATOM/WFS](services/download-atom-wfs) ([PDF](https://inspire-mif.github.io/technical-guidelines/services/download-atom-wfs/DownloadServices.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/services/download-atom-wfs/DownloadServices.html))
+  * [Download Services - WCS](services/download-wcs) ([PDF](https://inspire-mif.github.io/technical-guidelines/services/download-wcs/CoverageServices.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/services/download-wcs/CoverageServices.html))
   * [View Services](services/view-wms) ([PDF](https://inspire-mif.github.io/technical-guidelines/services/view-wms/ViewServices.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/services/view-wms/ViewServices.html))
 * Data
   * [Addresses](data/ad) ([PDF](https://inspire-mif.github.io/technical-guidelines/data/ad/dataspecification_ad.pdf), [HTML](https://inspire-mif.github.io/technical-guidelines/data/ad/dataspecification_ad.html))
@@ -58,7 +59,8 @@ The following TGs are available in the original pdf format:
 
 * Services
 
-
+  * [SOS Services](services/download-sos) ([PDF](https://inspire-mif.github.io/technical-guidelines/services/download-sos/SOSDownloadServices.pdf))
+  * [Transformation Services](services/transformation) ([PDF](https://inspire-mif.github.io/technical-guidelines/services/transformation/TransformationService.pdf))
 
 
 
