@@ -2,5 +2,7 @@
 
 This folder contains the Technical Guidelines for the following network services:
 
-* [Download Services](download-atom-wfs)
+* [Discovery Services](discovery-cws)
+* [Download Services - ATOM-WFS](download-atom-wfs)
+* [Download Services - WCS](download-wcs)
 * [View Services](view-wms)
