@@ -12,8 +12,8 @@
 // Empty TOC title (the title is in the document)
 :toc-title:
 
-// TOC level depth5
-:toclevels: 
+// TOC level depth
+:toclevels: 5
 
 // Section numbering level depth
 :sectnumlevels: 8
