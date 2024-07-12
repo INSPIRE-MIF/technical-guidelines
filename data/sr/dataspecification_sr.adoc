@@ -2733,6 +2733,7 @@ or (using a citation):
 				<gmd:date>
 					<gco:Date>2012-12-17</gco:Date>
 				</gmd:date>
+				
 				<gmd:dateType>
 					<gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resou
 rces/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
@@ -4662,7 +4663,7 @@ a|
 !Name: !Sea Area Type Classifcation Value
 !Definition: !Classification type of the SeaArea, e.g. estuary, openOcean
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/SeaAreaTypeClassificationValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/SeaAreaTypeClassificationValue
 !Values: !
 !===
 
@@ -4733,7 +4734,7 @@ a|
 --Governance-- 
 May be extended by member states
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/SeaBedCoverValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/SeaBedCoverValue
 !Values: !
 !===
 
@@ -4882,7 +4883,7 @@ a|
 !Definition: !Types of sea surface layers found on sea surfaces.
 !Description: !Codelist for types of sea surface layers found on sea surfaces (.e.g oil, ice etc).
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/SeaSurfaceClassificationValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/SeaSurfaceClassificationValue
 !Values: !
 !===
 
@@ -4950,7 +4951,7 @@ a|
 !Definition: !Types of the stability of shore segments.
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/ShoreStabilityValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ShoreStabilityValue
 !Values: !
 !===
 
@@ -5027,7 +5028,7 @@ a|
 !Definition: !Types of shore segments.
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/ShoreTypeClassificationValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ShoreTypeClassificationValue
 !Values: !
 !===
 
