@@ -3042,18 +3042,18 @@ The values of selected external code lists are included in Annex C for informati
 [width="100%",cols="20%,21%,33%,26%",options="header",]
 |===
 |*Code list* |*Identifiers* |*Examples* |*Labels*
-|EnergyProductValue |Append using lowerCamelCase the name of the energy product in Annex B to the URI prefix http://inspire.ec.europa.eu/codeList/ EnergyProductValue/ a|
-_http://inspire.ec.europa.eu/codeList/EnergyProductValue/cokingCoal_
+|EnergyProductValue |Append using lowerCamelCase the name of the energy product in Annex B to the URI prefix http://inspire.ec.europa.eu/codelist/ EnergyProductValue/ a|
+_http://inspire.ec.europa.eu/codelist/EnergyProductValue/cokingCoal_
 
-_http://inspire.ec.europa.eu/codeList/EnergyProductValue/peat_
+_http://inspire.ec.europa.eu/codelist/EnergyProductValue/peat_
 
 |The name of the energy product as written in Annex B of the Regulation
-|EnergyStatisticsAggregateValue |Append using lowerCamelCase the name of the first-order statistical aggregate in Annex B to the URI prefix http://inspire.ec.europa.eu/codeList/ EnergyStatisticsAggregateValue / a|
-_http://inspire.ec.europa.eu/codeList/EnergyStatisticsAggregate/primaryProduction_
+|EnergyStatisticsAggregateValue |Append using lowerCamelCase the name of the first-order statistical aggregate in Annex B to the URI prefix http://inspire.ec.europa.eu/codelist/ EnergyStatisticsAggregateValue / a|
+_http://inspire.ec.europa.eu/codelist/EnergyStatisticsAggregate/primaryProduction_
 
-_http://inspire.ec.europa.eu/codeList/EnergyStatisticsAggregate/imports_
+_http://inspire.ec.europa.eu/codelist/EnergyStatisticsAggregate/imports_
 
-_http://inspire.ec.europa.eu/codeList/EnergyStatisticsAggregate/transformationOutput_
+_http://inspire.ec.europa.eu/codelist/EnergyStatisticsAggregate/transformationOutput_
 
 |The name of the statistical aggregate as written in Annex B of the Regulation
 |===
