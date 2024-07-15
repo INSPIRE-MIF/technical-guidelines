@@ -1110,7 +1110,7 @@ a|
 !Definition: !Codes defining the classification level of the region class.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RegionClassificationLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry .
 !===
 
 |===
@@ -1127,7 +1127,7 @@ a|
 !Definition: !Codes defining the various bio-geographical regions.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/RegionClassificationSchemeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1144,7 +1144,7 @@ a|
 !Definition: !Codes defining the various bio-geographical regions.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/RegionClassificationValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -3546,47 +3546,7 @@ _Map of the natural vegetation of Europe: scale 1:2,500,000, Part 2: Legend, Bun
 |Definition: |Codes defining the classification level of the region class.
 |Extensibility: |none
 |Identifier: |http://inspire.ec.europa.eu/codelist/RegionClassificationLevelValue
-|Values: |The allowed values for this code list comprise only the values specified in the table below.
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*international*
-
-[width="100%",cols="15%,85%",options="header",]
-!===
-!Name: !International
-!Definition: !This is a region classification on the international level.
-!===
-
-a|
-*local*
-
-[width="100%",cols="15%,85%",options="header",]
-!===
-!Name: !Local
-!Definition: !This is a region classification on the local level.
-!===
-
-a|
-*national*
-
-[width="100%",cols="15%,85%",options="header",]
-!===
-!Name: !National
-!Definition: !This is a region classification on the national level.
-!===
-
-a|
-*regional*
-
-[width="100%",cols="15%,85%",options="header",]
-!===
-!Name: !Regional
-!Definition: !This is a region classification on the regional level.
-!===
+|Values: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
 |===
 
@@ -3601,50 +3561,8 @@ a|
 !Definition: !Codes defining the various bio-geographical regions.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/RegionClassificationSchemeValue
-!Values: !The table below includes recommended values that may be used by data providers.
+!Values: !The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
-
-a|
-*environmentalStratification*
-
-[width="100%",cols="15%,85%",options="header",]
-!===
-!Name: !environmental stratification
-!Definition: !A set of code lists to be used to define the Environmental Stratification.
-!Description: !See Metzger et al. 2005
-!===
-
-a|
-*natura2000AndEmeraldBio-geographicalRegion*
-
-[width="100%",cols="15%,85%",options="header",]
-!===
-!Name: !natura 2000 and emerald bio-geographical region
-!Definition: !A set of code lists to be used to define the Natura 2000 and Emerald network Biogeographical regions.
-!Description: !See Habitats Directive (1992)
-!===
-
-a|
-*naturalVegetation*
-
-[width="100%",cols="15%,85%",options="header",]
-!===
-!Name: !natural vegetation
-!Definition: !A set of code lists to be used to define the natural vegetation.
-!Description: !See Bohn et al. (2000)
-!===
-
-a|
-*marineStrategyFrameworkDirective*
-
-[width="100%",cols="15%,85%",options="header",]
-!===
-!Name: !marine strategy framework directive
-!Definition: !A set of codes to be used for the Marine Stategy Framework Diretive region classification.
-!Description: !See Marine Strategy Framework Directive (2008)
-!===
-
-|===
 
 *RegionClassificationValue*
 
