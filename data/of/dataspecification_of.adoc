@@ -1415,7 +1415,7 @@ Feature catalogue metadata
 |_BODC_P01ParameterUsageValue_ |Oceanographic Geographical Features |**«**codeList»
 |===
 
-Code lists
+==== Code lists
 
 ===== BODC_P01ParameterUsageValue
 
@@ -1434,7 +1434,7 @@ a|
 
 |===
 
-INSPIRE governed code lists are given in Annex C.
+INSPIRE governed code lists are given in the INSPIRE Registry.
 
 ==== Externally governed code lists
 
