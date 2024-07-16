@@ -2409,7 +2409,7 @@ a|
 !Description: !NOTE Information on what type of spatial feature the geographic position of the address was created or derived from, is represented by the GeometrySpecificationValue.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometryMethodValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2432,7 +2432,7 @@ EXAMPLE 1 The same point (e.g., centre point of the polygon) is used for each ad
 EXAMPLE 2 Each point position is unique within the polygon to be able to visually distinguish the representation of each address.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometrySpecificationValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2448,7 +2448,7 @@ a|
 !Definition: !Description of the semantics of the locator designator.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2467,7 +2467,7 @@ a|
 EXAMPLE In The Netherlands a single locator, the address number, identifies a dwelling or business entity unit (unit level locator). In Spain up to four locators could be needed to obtain the same level of detail: Address number, entrance number, stair identifier plus a floor and door identifier.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2483,7 +2483,7 @@ a|
 !Definition: !Description of the semantics of the locator name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorNameTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2499,7 +2499,7 @@ a|
 !Definition: !A classification of the part of name according to its semantics in the complete thoroughfare name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/PartTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2518,7 +2518,7 @@ a|
 NOTE 2 The status value relates to the real world address or address component and not to the property to which the address or address component is assigned (the addressable object).
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/StatusValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6420,38 +6420,7 @@ a|
 !Description: !NOTE Information on what type of spatial feature the geographic position of the address was created or derived from, is represented by the GeometrySpecificationValue.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometryMethodValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-byAdministrator
-
-[cols=","]
-!===
-!Name: !by administrator
-!Definition: !Decided and recorded manually by the official body responsible for address allocation or by the dataset custodian.
-!===
-
-a|
-byOtherParty
-
-[cols=","]
-!===
-!Name: !by other party
-!Definition: !Decided and recorded manually by another party.
-!===
-
-a|
-fromFeature
-
-[cols=","]
-!===
-!Name: !from feature
-!Definition: !Derived automatically from another INSPIRE spatial object which is related to the address or address component.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6473,146 +6442,7 @@ EXAMPLE 1 The same point (e.g., centre point of the polygon) is used for each ad
 EXAMPLE 2 Each point position is unique within the polygon to be able to visually distinguish the representation of each address.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometrySpecificationValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-addressArea
-
-[cols=","]
-!===
-!Name: !address area
-!Definition: !Position derived from the related address area.
-!===
-
-a|
-adminUnit1stOrder
-
-[cols=","]
-!===
-!Name: !admin unit 1st order
-!Definition: !Position derived from the related administrative unit of 1st order.
-!===
-
-a|
-adminUnit2ndOrder
-
-[cols=","]
-!===
-!Name: !admin unit 2nd order
-!Definition: !Position derived from the related administrative unit of 2nd order.
-!===
-
-a|
-adminUnit3rdOrder
-
-[cols=","]
-!===
-!Name: !admin unit 3rd order
-!Definition: !Position derived from the related administrative unit of 3rd order.
-!===
-
-a|
-adminUnit4thOrder
-
-[cols=","]
-!===
-!Name: !admin unit 4th order
-!Definition: !Position derived from the related administrative unit of 4th order.
-!===
-
-a|
-adminUnit5thOrder
-
-[cols=","]
-!===
-!Name: !admin unit 5th order
-!Definition: !Position derived from the related administrative unit of 5th order.
-!===
-
-a|
-adminUnit6thOrder
-
-[cols=","]
-!===
-!Name: !admin unit 6th order
-!Definition: !Position derived from the related administrative unit of 6th order.
-!===
-
-a|
-building
-
-[cols=","]
-!===
-!Name: !building
-!Definition: !Position aims at identifying the related building.
-!===
-
-a|
-entrance
-
-[cols=","]
-!===
-!Name: !entrance
-!Definition: !Position aims at identifying the entrance door or gate.
-!===
-
-a|
-parcel
-
-[cols=","]
-!===
-!Name: !parcel
-!Definition: !Position aims at identifying the related land parcel.
-!===
-
-a|
-postalDelivery
-
-[cols=","]
-!===
-!Name: !postal delivery
-!Definition: !Position aims at identifying a postal delivery point.
-!===
-
-a|
-postalDescriptor
-
-[cols=","]
-!===
-!Name: !postal descriptor
-!Definition: !Position derived from the related postcode area.
-!===
-
-a|
-segment
-
-[cols=","]
-!===
-!Name: !segment
-!Definition: !Position derived from the related segment of a thoroughfare.
-!===
-
-a|
-thoroughfareAccess
-
-[cols=","]
-!===
-!Name: !thoroughfare access
-!Definition: !Position aims at identifying the access point from the thoroughfare.
-!===
-
-a|
-utilityService
-
-[cols=","]
-!===
-!Name: !utility service
-!Definition: !Position aims at identifying a point of utility service.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6627,137 +6457,7 @@ a|
 !Definition: !Description of the semantics of the locator designator.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*addressIdentifierGeneral*
-
-[cols=","]
-!===
-!Name: !address identifier general
-!Definition: !Address identifier composed by numbers and/or characters.
-!===
-
-a|
-*addressNumber*
-
-[cols=","]
-!===
-!Name: !address number
-!Definition: !Address identifier composed only by numbers.
-!===
-
-a|
-*addressNumber2ndExtension*
-
-[cols=","]
-!===
-!Name: !address number 2nd extension
-!Definition: !Second extension to the address number.
-!===
-
-a|
-*addressNumberExtension*
-
-[cols=","]
-!===
-!Name: !address number extension
-!Definition: !Extension to the address number.
-!===
-
-a|
-*buildingIdentifier*
-
-[cols=","]
-!===
-!Name: !building identifier
-!Definition: !Building identifier composed by numbers and/or characters.
-!===
-
-a|
-*buildingIdentifierPrefix*
-
-[cols=","]
-!===
-!Name: !building identifier prefix
-!Definition: !Prefix to the building number.
-!===
-
-a|
-*cornerAddress1stIdentifier*
-
-[cols=","]
-!===
-!Name: !corner address 1st identifier
-!Definition: !Address identifier related to the primary thoroughfare name in a corner address.
-!===
-
-a|
-*cornerAddress2ndIdentifier*
-
-[cols=","]
-!===
-!Name: !corner address 2nd identifier
-!Definition: !Address identifier related to the secondary thoroughfare name in a corner address.
-!===
-
-a|
-*entranceDoorIdentifier*
-
-[cols=","]
-!===
-!Name: !entrance door identifier
-!Definition: !Identifier for an entrance door, entrance gate, or covered entranceway.
-!===
-
-a|
-*floorIdentifier*
-
-[cols=","]
-!===
-!Name: !floor identifier
-!Definition: !Identifier of a floor or level inside a building.
-!===
-
-a|
-*kilometrePoint*
-
-[cols=","]
-!===
-!Name: !kilometre point
-!Definition: !A mark on a road whose number identifies the existing distance between the origin point of the road and that mark, measured along the road.
-!===
-
-a|
-*postalDeliveryIdentifier*
-
-[cols=","]
-!===
-!Name: !postal delivery identifier
-!Definition: !Identifier of a postal delivery point.
-!===
-
-a|
-*staircaseIdentifier*
-
-[cols=","]
-!===
-!Name: !staircase identifier
-!Definition: !Identifier for a staircase, normally inside a building.
-!===
-
-a|
-*unitIdentifier*
-
-[cols=","]
-!===
-!Name: !unit identifier
-!Definition: !Identifier of a door, dwelling, suite or room inside a building.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6775,47 +6475,7 @@ a|
 EXAMPLE In The Netherlands a single locator, the address number, identifies a dwelling or business entity unit (unit level locator). In Spain up to four locators could be needed to obtain the same level of detail: Address number, entrance number, stair identifier plus a floor and door identifier.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*accessLevel*
-
-[cols=","]
-!===
-!Name: !access level
-!Definition: !The locator identifies a specific access to a plot of land, building or similar by use of an entrance number or similar identifier.
-!===
-
-a|
-*postalDeliveryPoint*
-
-[cols=","]
-!===
-!Name: !postal delivery point
-!Definition: !The locator identifies a postal delivery point.
-!===
-
-a|
-*siteLevel*
-
-[cols=","]
-!===
-!Name: !site level
-!Definition: !The locator identifies a specific plot of land, building or similar property by use of an address number, building number, building or property name.
-!===
-
-a|
-*unitLevel*
-
-[cols=","]
-!===
-!Name: !unit level
-!Definition: !The locator identifies a specific part of a building.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6830,47 +6490,7 @@ a|
 !Definition: !Description of the semantics of the locator name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorNameTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*buildingName*
-
-[cols=","]
-!===
-!Name: !building name
-!Definition: !Name of building or part of building.
-!===
-
-a|
-*descriptiveLocator*
-
-[cols=","]
-!===
-!Name: !descriptive locator
-!Definition: !Narrative, textual description of the location or addressable object.
-!===
-
-a|
-*roomName*
-
-[cols=","]
-!===
-!Name: !room name
-!Definition: !Identifier of a dwelling, suite or room inside a building.
-!===
-
-a|
-*siteName*
-
-[cols=","]
-!===
-!Name: !site name
-!Definition: !Name of real estate, building complex or site.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6885,47 +6505,7 @@ a|
 !Definition: !A classification of the part of name according to its semantics in the complete thoroughfare name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/PartTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*name*
-
-[cols=","]
-!===
-!Name: !name
-!Definition: !The part of name constitutes the core or root of the thoroughfare name.
-!===
-
-a|
-*namePrefix*
-
-[cols=","]
-!===
-!Name: !name prefix
-!Definition: !The part of name is used to separate connecting words without sorting significance from the core of the thoroughfare name.
-!===
-
-a|
-*qualifier*
-
-[cols=","]
-!===
-!Name: !qualifier
-!Definition: !The part of name qualifies the thoroughfare name.
-!===
-
-a|
-*type*
-
-[cols=","]
-!===
-!Name: !type
-!Definition: !The part of name indicates the category or type of thoroughfare.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6943,56 +6523,7 @@ a|
 NOTE 2 The status value relates to the real world address or address component and not to the property to which the address or address component is assigned (the addressable object).
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/StatusValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*alternative*
-
-[cols=","]
-!===
-!Name: !alternative
-!Definition: !An address or address component in common use but different from the master address or address component as determined by the official body responsible for address allocation or by the dataset custodian.
-!===
-
-a|
-*current*
-
-[cols=","]
-!===
-!Name: !current
-!Definition: !Current and valid address or address component according to official body responsible for address allocation or deemed, by the dataset custodian, to be the most appropriate, commonly used address.
-!===
-
-a|
-*proposed*
-
-[cols=","]
-!===
-!Name: !proposed
-!Definition: !An address or address component awaiting approval by the dataset custodian or official body responsible for address allocation.
-!===
-
-a|
-*reserved*
-
-[cols=","]
-!===
-!Name: !reserved
-!Definition: !An address or address component approved by the official body responsible for address allocation or by the dataset custodian, but yet to be implemented.
-!===
-
-a|
-*retired*
-
-[cols=","]
-!===
-!Name: !retired
-!Definition: !An address or address component no longer in every day use or abolished by the official body responsible for address allocation or by the dataset custodian.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
