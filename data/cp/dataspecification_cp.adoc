@@ -1850,7 +1850,7 @@ a|
 !Description: !NOTE The higher levels in the administrative units theme (province, state) are not repeated in this code list.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/CadastralZoningLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -5070,42 +5070,10 @@ a|
 !Description: !NOTE The higher levels in the administrative units theme (province, state) are not repeated in this code list.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/CadastralZoningLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
-
-[width="100%",cols="100%"]
-|===
-a|
-1stOrder
-
-[width="100%",cols=","]
-!===
-!Name: !1st order
-!Definition: !Uppermost level (largest areas) in the hierarchy of cadastral zonings, equal or equivalent to municipalities.
-!===
-
-a|
-2ndOrder
-
-[width="100%",cols=","]
-!===
-!Name: !2nd order
-!Definition: !Second level in the hierarchy of cadastral zonings.
-!===
-
-a|
-3rdOrder
-
-[width="100%",cols=","]
-!===
-!Name: !3rd order
-!Definition: !Third level in the hierarchy of cadastral zonings.
-!===
-
-|===
-
 
 <<<
 [appendix]
