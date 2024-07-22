@@ -396,7 +396,52 @@ Geophysical activity extending over a limited time range and limited area for pr
 
 === Symbols and abbreviations
 
-*Error! Not a valid link.*
+[cols=","]
+|===
+|AM |Area management/restriction/regulation zones and reporting units
+|AP |Assessment Point
+|ATS |Abstract Test Suite
+|EC |European Commission
+|EEA |European Environmental Agency
+|EF |Environmental Monitoring Facilities
+|ETRS89 |European Terrestrial Reference System 1989
+|ETRS89-LAEA |Lambert Azimuthal Equal Area
+|EVRS |European Vertical Reference System
+|FOI |Feature of interest
+|GCM |General Conceptual Model
+|GDE |Groundwater dependent ecosystems
+|GE |Geology
+|GeoSciML |GeoScience Markup Language
+|GIS |Geographical Information System
+|GML |Geography Markup Language
+|GSHP |Ground Source Heat Pumps
+|GWB |Groundwater bodies
+|GWD |Groundwater Directive
+|GWML |GroundWater Markup Language
+|HY |Hydrography
+|ICS |International Commission on Stratigraphy
+|IR |Implementing Rule
+|ISDSS |Interoperability of Spatial Data Sets and Services
+|ISO |International Organization for Standardization
+|ITRS |International Terrestrial Reference System
+|IUGS |International Union of Geological Sciences
+|LAT |Lowest Astronomical Tide
+|LMO |Legally Mandated Organisation
+|LU |Land Use
+|RBD |River Basin District
+|RBMP |River Basin Management Plan
+|SDIC |Spatial Data Interest Community
+|SO |Soil
+|SR |Sea Region
+|SRS |Spatial Reference System
+|SWE |Sensor Web Enablement
+|TG |Technical Guidance
+|UML |Unified Modeling Language
+|UTC |Coordinated Universal Time
+|WFD |Water Framework Directive
+|WISE |Water Information System of Europe
+|XML |EXtensible Markup Language
+|===
 
 === How the Technical Guidelines map to the Implementing Rules
 
