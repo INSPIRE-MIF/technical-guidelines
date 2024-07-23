@@ -473,7 +473,7 @@ Geographic features providing supplementary information and/or limitation of the
 +
 A partition where the planned land use is depicted, making explicit the rights and prohibitions regarding new constructions that apply within each partition element. 
  
-NOTE "Zoning is an important component of land-use planning. It commonly includes regulation of the kinds of activities which will be acceptable on particular lots (such as open spaces, residential, agricultural, commercial or industrial), the densities at which those activities can be performed, the amount of space structures may occupy, etc." : Spatial development glossary European Conference of Ministers responsible for Spatial/Regional Planning (CEMAT), _http://rm.coe.int/CoERMPublicCommonSearchServices/DisplayDCTMContent?documentId=09000016804895e5_
+NOTE "Zoning is an important component of land-use planning. It commonly includes regulation of the kinds of activities which will be acceptable on particular lots (such as open spaces, residential, agricultural, commercial or industrial), the densities at which those activities can be performed, the amount of space structures may occupy, etc." : Spatial development glossary European Conference of Ministers responsible for Spatial/Regional Planning (CEMAT), _http://www.coe.int/t/dg4/cultureheritage/heritage/cemat/VersionGlossaire/Bilingue-en-fr.pdf_
 
 === Symbols and abbreviations
 
