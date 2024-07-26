@@ -3376,7 +3376,7 @@ a|
 !Definition: !The status of a geographical name, that is the information enabling to discern which credit should be given to the name with respect to its standardisation and/or its topicality.
 !Description: !NOTE The precise definition of the values 'Official', 'Standardised', 'Historical' and 'Other' can only be decided by Member States according to their legislation and practice.
 !Extensibility: !none
-!Identifier: !
+!Identifier: !http://inspire.ec.europa.eu/codelist/NameStatusValue
 !Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
