@@ -1613,7 +1613,7 @@ a|
 !Definition: !Code values for age by 5 years classification items.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AgeBy5YearsValue
-!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1630,7 +1630,7 @@ a|
 !Definition: !Code values for age by year classification items.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AgeByYearValue
-!Values: !The allowed values for this code list comprise only the values specified in "AgeByYearValue" .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1731,7 +1731,7 @@ a|
 !Name: !Statistical data status value
 !Definition: !Code values for statistical data status.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codelist/StatusValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/StatisticalDataStatusValue
 !Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
@@ -3030,7 +3030,7 @@ a|
 !Name: !Statistical data status value
 !Definition: !Code values for statistical data status.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codelist/StatusValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/StatisticalDataStatusValue
 !Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
