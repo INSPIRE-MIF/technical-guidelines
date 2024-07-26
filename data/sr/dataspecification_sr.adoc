@@ -1919,7 +1919,7 @@ a|
 !Definition: !Types of marine circulation zones
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !
+!Identifier: !http://inspire.ec.europa.eu/codelist/ZoneTypeValue
 !Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
@@ -4760,7 +4760,7 @@ a|
 !Definition: !Types of marine circulation zones
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !
+!Identifier: !http://inspire.ec.europa.eu/codelist/ZoneTypeValue
 !Values: !
 !===
 
