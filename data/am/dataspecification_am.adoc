@@ -3269,11 +3269,11 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 ===== Default encoding(s) for application schema Area Management, Restriction and Regulation Zones
 
 *Name: Area Management, Restriction and Regulation Zones GML Application Schema*
-Version: version 3.0
+Version: 4.0
 Specification: D2.8.III.11 Data Specification on _Area Management/Restriction/Regulation Zones and Reporting Units_ – Technical Guidelines
 Character set: UTF-8
 
-The xml schema document is available from _http://inspire.ec.europa.eu/schemas/am/3.0/AreaManagementRestrictionRegulationZone.xsd_.
+The xml schema document is available from _http://inspire.ec.europa.eu/schemas/am/4.0/AreaManagementRestrictionRegulationZone.xsd_.
 
 ====== _Encoding rules used_
 
@@ -3284,7 +3284,7 @@ NOTE Annex B of [DS-D2.7], version 3.3rc2, requires that the "encoding rule spec
 ===== Default encoding(s) for application schema Controlled Activities
 
 *Name: Controlled Activities GML Application Schema*
-Version: version 3.0
+Version: 3.0
 Specification: D2.8.III.11 Data Specification on _Area Management/Restriction/Regulation Zones and Reporting Units_ – Technical Guidelines
 Character set: UTF-8
 
