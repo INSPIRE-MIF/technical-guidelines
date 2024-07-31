@@ -1273,14 +1273,12 @@ a|
 !===
 
 a|
-*Attribute: extent*
+*Constraint: only one extent*
 
 [cols=","]
 !===
-!Name: !extent
-!Value type: !MarineExtent
-!Definition: !The extent of the Marine Circulation Zone at a particular tidal state Extent of the Marine Circulation Zone.
-!Multiplicity: !1
+!Natural language: !MarineCirculationZone shall have only one value fore the extent attribute
+!OCL: !inv: self.extent = 1
 !===
 
 |===
@@ -1419,16 +1417,6 @@ a|
 !Stereotypes: !«featureType»
 !===
 
-a|
-*Attribute: extent*
-
-[cols=","]
-!===
-!Name: !extent
-!Value type: !MarineExtent
-!Definition: !The extent of the Sea at Mean High Water
-!Multiplicity: !1
-!===
 
 a|
 *Constraint: extent.waterLevel must be meanHighWater*
@@ -1437,6 +1425,15 @@ a|
 !===
 !Natural language: !Sea is defined at Mean High Water. This constraint can be relaxed if there is not significant tidal variation in water level
 !OCL: !inv: self.extent.waterLevel = 'meanHighWater'
+!===
+
+a|
+*Constraint: only one extent*
+
+[cols=","]
+!===
+!Natural language: !Sea shall have only one value fore the extent attribute
+!OCL: !inv: self.extent = 1
 !===
 
 |===
