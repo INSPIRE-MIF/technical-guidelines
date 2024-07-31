@@ -1190,7 +1190,7 @@ a|
 !Description: !NOTE Most of the listed classification frameworks only focus on fossil fuels.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ClassificationFrameworkValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1207,7 +1207,7 @@ a|
 !Definition: !Different sublevels within a resource for distinguishing real from potential or expected amount of fossil fuel resources.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/FossilFuelClassValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1224,7 +1224,7 @@ a|
 !Definition: !Types of fossil fuels.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/FossilFuelValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1242,7 +1242,7 @@ a|
 !Description: !NOTE Waste values have been included in this code list to simplify the code lists rather than to imply that only renewable waste is included.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RenewableAndWasteValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1259,7 +1259,7 @@ a|
 !Definition: !Values indicating the reference level of the vertical extent.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/VerticalReferenceValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2321,7 +2321,7 @@ a|
 !Definition: !Types of potential geothermal energy.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeothermalPotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2338,7 +2338,7 @@ a|
 !Definition: !Types of potential hydro energy.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/HydroPotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2372,7 +2372,7 @@ a|
 !Definition: !Types of potential solar energy.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/SolarPotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2389,7 +2389,7 @@ a|
 !Definition: !Types of potential tidal energy.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/TidalPotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2406,7 +2406,7 @@ a|
 !Definition: !Types of potential wind energy.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/WindPotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2855,7 +2855,7 @@ EXAMPLE combustible fuels, heat, renewable
 energy, electricity, or any other form of energy
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/EnergyProductValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -6040,100 +6040,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*NPD*
-
-[cols=","]
-!===
-!Name: !Norwegian Petroleum Directorate classification (NPD-2001)
-!Definition: !Norwegian Petroleum Directorate classification (NPD-2001)
-!Description: !"The Norwegian Petroleum Directorate classification (NPD-2001) is based on the SPE/WPC/AAPG 2000 classification but expanded to utilize categories that differentiate projects based on their commerciality, that is, their maturity towards full producing status."
-!===
-
-a|
-*PERC*
-
-[cols=","]
-!===
-!Name: !"Pan-European Code for Reporting of Exploration Results, Mineral Resources and Reserves (PERC)."
-!Definition: !Pan-European Code for Reporting of Exploration Results, Mineral Resources and Reserves (PERC).
-!Description: !"The PERC Code for Reporting of Exploration Results, Mineral Resources and Mineral Reserves sets out minimum standards, recommendations and guidelines for Public Reporting of Exploration Results, Mineral Resources and Mineral Reserves in the United Kingdom, Ireland and Europe. The Code has been adopted by the Institute of Materials, Minerals and Mining (IoM3), the Geological Society of London (GSL), the European Federation of Geologists (EFG) and the Institute of Geologists of Ireland (IGI), and is therefore binding on their individual members."
-!===
-
-a|
-*RF*
-
-[cols=","]
-!===
-!Name: !Russian reserve guidelines.
-!Definition: !Russian reserve guidelines.
-!Description: !Russian reserve guidelines are in a state of transition from the system utilized within Soviet state companies to a new system more closely aligned with the needs of private industry.
-!===
-
-a|
-*SPE/WPC/AAPG(PRMS)*
-
-[cols=","]
-!===
-!Name: !Petroleum Resources Management System
-!Definition: !Petroleum Resources Management System
-!Description: !"In 2000, the Society of Petroleum Engineers (SPE) jointly with the World Petroleum Council (WPC) and the American Association of Petroleum Geologists (AAPG) published a Reserve and Resource Classification to address the requirement for an international standard. The underlying Reserves Definitions were unchanged from those published by the SPE/WPC in 1997. Additionally, in 2001 the SPE/WPC/AAPG jointly published Guidelines for the Evaluation of Petroleum Reserves and Resources as clarifications for the application of the 2001 and 1997 documents. Further clarification was provided in the Glossary of 2005, in particular by the definition of the term commercial, and thereby reserves."
-!===
-
-a|
-*UNFC1997*
-
-[cols=","]
-!===
-!Name: !United Nations Framework Classification (1997).
-!Definition: !United Nations Framework Classification (1997).
-!Description: !The classification is based on three key attributes: 
-ò Economic (E) 
-ò Field Project Sta-tus/Feasibility (F) 
-ò Geological (G)
-!===
-
-a|
-*UNFC2004*
-
-[cols=","]
-!===
-!Name: !United Nations Framework Classification (2004).
-!Definition: !United Nations Framework Classification (2004).
-!Description: !The classification is based on three key attributes: 
-ò Economic (E) 
-ò Field Project Sta-tus/Feasibility (F) 
-ò Geological (G)
-!===
-
-a|
-*UNFC2009*
-
-[cols=","]
-!===
-!Name: !United Nations Framework Classification (2009).
-!Definition: !United Nations Framework Classification (2009).
-!Description: !The classification is based on three key attributes: 
-ò Economic (E) 
-ò Field Project Sta-tus/Feasibility (F) 
-ò Geological (G)
-!===
-
-a|
-*USGS*
-
-[cols=","]
-!===
-!Name: !United States Geological Survey
-!Definition: !United States Geological Survey
-!Description: !The USGS classifi-cation is based on two parameters whereby resources are classified by feasibility of eco-nomic recovery and degree of geologic certainty.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *FossilFuelClassValue*
 
@@ -6151,41 +6058,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*contingentResources*
-
-[cols=","]
-!===
-!Name: !contingent resources
-!Definition: !Contingent resources are those quantities of energy resources estimated, as of a given date, to be potentially recoverable from known accumulations or deposits using established technology or technology under development. For coal organisations this category is often referred to as reserves.
-!Description: !"These quantities are not (yet) commercial. Maturing of the project to produce this quantity, or technical abilities or economic factors may convert these contingent resources into reserves."
-!===
-
-a|
-*resourcesInitiallyInPlace*
-
-[cols=","]
-!===
-!Name: !resources initially in place
-!Definition: !The total amount of a resource initially present in an accumulation or deposit.
-!Description: !"Hydrocarbons initially in place (HCIIP, GIIP, or STOOIP for Hydrocarbon, gas or oil respectively) is the quantity estimated to be initially present in an accumulation or deposit."
-!===
-
-a|
-*provenReserves*
-
-[cols=","]
-!===
-!Name: !proven reserves
-!Definition: !The estimated remaining quantities of a resource anticipated to be economically producible, as of a given date, by the application of development projects to known accumulations or deposits.
-!Description: !Proven reserves are that part of the reserves for which the presence is 90 % certain.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *FossilFuelValue*
 
@@ -6198,91 +6071,7 @@ a|
 !Definition: !Types of fossil fuels.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/FossilFuelValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*hardCoal*
-
-[cols=","]
-!===
-!Name: !hard coal
-!Definition: !Black, combustible, solid, organic fossil sediment often referred to as High Rank, due to their high calorific value, or Black Coals, given their physical characteristic. This category includes anthracite, coking coal and other bituminous coal.
-!Description: !These coals have a gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0.6. SOURCE Adapted from IEA (2011): Coal Information 2011 Edition - Documentation For Beyond 2020 Files and Directive 2008/1099/EC.
-!===
-
-a|
-*lowRankCoal*
-
-[cols=","]
-!===
-!Name: !low-rank coal
-!Definition: !Combustible brown to black organic fossil sediment which are non-agglomerating and are often referred to as Low Rank Coals due to their lower calorific value or Brown Coals, due to their physical characteristics. This category includes both sub-bituminous coals and lignite.
-!Description: !These coals have gross calorific values less that 23 865 kJ/kg (5 700 kcal/kg) on an ash free but moist basis. The sub type of sub-bituminous coal refers to . non-agglomerating coal with a gross calorific value between 17 435 kJ/kg (4 165 kcal/kg) and 23 865 kJ/kg (5 700 kcal/kg) containing more than 31% volatile matter on a dry mineral matter free basis.
-!===
-
-a|
-*peat*
-
-[cols=","]
-!===
-!Name: !peat
-!Definition: !A combustible soft, porous or compressed, sedimentary deposit of plant origin with high water content (up to 90 % in the raw state), easily cut, of light to dark brown colour.
-!Description: !Lignite is a non-agglomerating coal with a gross calorific value less than 17 435 kJ/kg (4 165 kcal/kg) and greater than 31% volatile matter on a dry mineral matter free basis.
-!===
-
-a|
-*crudeOil*
-
-[cols=","]
-!===
-!Name: !crude oil
-!Definition: !Crude oil is a mineral oil of natural origin comprising a mixture of hydrocarbons and associated impurities, such as sulphur. It exists in the liquid phase under normal surface temperature and pressure and its physical characteristics (density, viscosity, etc.) are highly variable.
-!Description: !SOURCE Adapted from IEA (2011): Coal Information 2011 Edition - Documentation For Beyond 2020 Files and Directive 2008/1099/EC.
-!===
-
-a|
-*naturalGas*
-
-[cols=","]
-!===
-!Name: !natural gas
-!Definition: !Gases occurring in underground deposits, whether liquefied or gaseous, consisting mainly of methane.
-!Description: !Peat used for non-energy purposes is not included.
-!===
-
-a|
-*naturalGasLiquids*
-
-[cols=","]
-!===
-!Name: !natural gas liquids
-!Definition: !Liquid or liquefied hydrocarbons recovered from natural gas in separation facilities or gas processing plants.
-!Description: !"SOURCE Adapted from Directive 2008/1099/EC which is also without prejudice to the definition of renewable energy sources in """"Directive 2001/77/EC and to the 2006 IPCC Guidelines for National Greenhouse Gas inventories."
-!===
-
-a|
-*oilSands*
-
-[cols=","]
-!===
-!Name: !oil sands
-!Definition: !Oil sands, tar sands or, more technically, bituminous sands, are loose sand or partially consolidated sandstone saturated with a dense and extremely viscous form of petroleum technically referred to as bitumen.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*oilShales*
-
-[cols=","]
-!===
-!Name: !oil shales
-!Definition: !Oil shale, also known as kerogen shale, is an organic-rich fine-grained sedimentary rock containing kerogen (immature hydrocarbons).
-!Description: !"It includes both non-associated gas originating from fields producing hydrocarbons only in gaseous form, and associated gas produced in association with crude oil as well as methane recovered from coal mines (coal mine methane) or from coal seams (coal seam gas)."
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6299,119 +6088,7 @@ a|
 !Description: !NOTE Waste values have been included in this code list to simplify the code lists rather than to imply that only renewable waste is included.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RenewableAndWasteValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*biogas*
-
-[cols=","]
-!===
-!Name: !biogas
-!Definition: !A gas composed principally of methane and carbon dioxide produced by anaerobic digestion of biomass.
-!Description: !It does not include gases created by anaerobic digestion of biomass (e.g. municipal or sewage gas) nor gasworks gas.
-!===
-
-a|
-*geothermal*
-
-[cols=","]
-!===
-!Name: !geothermal
-!Definition: !Energy available as heat emitted from within the Earth's crust, usually in the form of hot water or steam. This energy production is the difference between the enthalpy of the fluid produced in the production borehole and that of the fluid eventually disposed of. It is exploited at suitable sites for electricity generation or directly as heat.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*hydro*
-
-[cols=","]
-!===
-!Name: !hydro power
-!Definition: !Potential and kinetic energy of water converted into electricity in hydroelectric plants.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*industrialWaste*
-
-[cols=","]
-!===
-!Name: !industrial waste
-!Definition: !Waste of industrial non-renewable origin (solids or liquids) combusted directly for the production of electricity and/or heat.
-!===
-
-a|
-*liquidBiofuels*
-
-[cols=","]
-!===
-!Name: !liquid biofuels
-!Definition: !Liquid biofuels are biogasoline, bio-diesels or other biofuels directly used as fuel.
-!===
-
-a|
-*municipalSolidWaste*
-
-[cols=","]
-!===
-!Name: !municipal solid waste
-!Definition: !Waste produced by households, industry, hospitals and the tertiary sector which contains biodegradable materials that are incinerated at specific installations.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*solarPhotovoltaic*
-
-[cols=","]
-!===
-!Name: !solar photovoltaic
-!Definition: !Sunlight converted into electricity by the use of solar cells usually made of semi-conducting material which, when exposed to light, will generate electricity.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*solarThermal*
-
-[cols=","]
-!===
-!Name: !solar thermal
-!Definition: !Heat from solar radiationthat can consist ofsolar thermal-electric plants or of equipment for the production of heat.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*solidBiomass*
-
-[cols=","]
-!===
-!Name: !solid biomass
-!Definition: !Covers organic, non-fossil material of biological origin which may be used as fuel for heat production or electricity generation.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*tideWaveOcean*
-
-[cols=","]
-!===
-!Name: !"tide, wave, ocean"
-!Definition: !Mechanical energy derived from tidal movement, wave motion or ocean current and exploited for electricity generation.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*wind*
-
-[cols=","]
-!===
-!Name: !wind
-!Definition: !Kinetic energy of wind exploited for electricity generation in wind turbines.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6432,48 +6109,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*groundLevel*
-
-[cols=","]
-!===
-!Name: !ground level
-!Definition: !The EarthÆs surface
-!===
-
-a|
-*lowestAstronomicalTide*
-
-[cols=","]
-!===
-!Name: !lowest astronomical tide
-!Definition: !The lowest tide level that can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
-!===
-
-a|
-*meanSeaLevel*
-
-[cols=","]
-!===
-!Name: !mean sea level
-!Definition: !The average height of the sea at a tide station measured from a fixed predetermined reference level.
-!Description: !"Ordnance Datum, often used as a reference point for defining vertical heights, uses the mean Sea Level as its reference point and therefore is also included within this value."
-!===
-
-a|
-*seafloor*
-
-[cols=","]
-!===
-!Name: !seafloor
-!Definition: !The bottom of a sea or ocean.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 === Energy Resources Coverage
 
@@ -6505,29 +6141,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*geothermalGradient*
-
-[width="100%",cols=","]
-!===
-!Name: !geothermal gradient
-!Definition: !Geothermal gradient is the rate of increasing temperature with respect to increasing depth in the Earth's interior in ?C/km.
-!===
-
-a|
-*temperature*
-
-[cols=","]
-!===
-!Name: !temperature
-!Definition: !Temperature measured in ?C.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *HydroPotentialValue*
 
@@ -6544,20 +6158,7 @@ a|[cols=","]
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*potentialHydroPower*
-
-[cols=","]
-!===
-!Name: !potential hydro power
-!Definition: !Yearly potential hydro power production.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *SolarPotentialValue*
 
@@ -6575,65 +6176,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*diffuseIrradiance*
-
-[cols=","]
-!===
-!Name: !diffuse irradiance
-!Definition: !Part of solar power (instantaneous rate of radiant energy), falling on a surface on the Earth per unit time, which is scattered by air molecules or atmospheric particles such as aerosols or clouds [W.m-2].
-!===
-
-a|
-*diffuseIrradiation*
-
-[cols=","]
-!===
-!Name: !diffuse irradiation
-!Definition: !Amount of solar energy (integrated over a time), falling on a surface on the Earth, which is scattered by air molecules or atmospheric particles such as aerosols or clouds [Wh.m-2].
-!===
-
-a|
-*directNormalIrradiance*
-
-[cols=","]
-!===
-!Name: !direct normal irradiation
-!Definition: !Part of solar power (instantaneous rate of radiant energy), falling on a surface perpendicular to the Sun's rays per unit time, which is not scattered or reflected by air molecules or atmospheric particles [Wh.m-2].
-!===
-
-a|
-*directNormalIrradiation*
-
-[cols=","]
-!===
-!Name: !direct normal irradiation
-!Definition: !Amount of solar energy (integrated over a time), falling on a surface perpendicular to sunrays, which is not scattered or reflected by air molecules or atmospheric particles [Wh.m-2].
-!===
-
-a|
-*globalHorizontalIrradiance*
-
-[cols=","]
-!===
-!Name: !global horizontal irradiance
-!Definition: !Solar power (instantaneous rate of total radiant energy) attenuated by all constituents of the atmosphere and falling on a horizontal surface on the Earth per unit time. Global horizontal irradiance integrates direct, diffuse and reflected components of solar power [W.m-2].
-!===
-
-a|
-*globalHorizontalIrradiation*
-
-[cols=","]
-!===
-!Name: !global horizontal irradiation
-!Definition: !Amount of solar energy (integrated over a time) attenuated by all constituents of the atmosphere and falling on a horizontal surface on the Earth. Global horizontal irradiation integrates direct, diffuse and reflected components of solar energy [Wh.m-2].
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *TidalPotentialValue*
 
@@ -6651,83 +6194,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*averagePeakFlow*
-
-[cols=","]
-!===
-!Name: !average peak flow
-!Definition: !Peak velocity of tidal stream for whole tidal cycle.
-!===
-
-a|
-*averageTidalPower*
-
-[cols=","]
-!===
-!Name: !average tidal power
-!Definition: !Average tidal power obtainable over a complete year.
-!===
-
-a|
-*meanNeapTidalPower*
-
-[cols=","]
-!===
-!Name: !mean neap tidal power
-!Definition: !Average neap power taking into account the peak only of the neap tidal curve.
-!===
-
-a|
-*meanNeapTidalRange*
-
-[cols=","]
-!===
-!Name: !mean neap tidal range
-!Definition: !Vertical distance between high and low tide during neap tidal curve.
-!===
-
-a|
-*meanNeapTidePeakFlow*
-
-[cols=","]
-!===
-!Name: !mean neap tide peak flow
-!Definition: !Peak velocity of neap tidal stream.
-!===
-
-a|
-*meanSpringTidalPower*
-
-[cols=","]
-!===
-!Name: !mean spring tidal power
-!Definition: !Average spring power taking account the peak only of the spring tidal curve.
-!===
-
-a|
-*meanSpringTidalRange*
-
-[cols=","]
-!===
-!Name: !mean spring tidal range
-!Definition: !Vertical distance between high and low tide during spring tidal curve
-!===
-
-a|
-*meanSpringTidePeakFlow*
-
-[cols=","]
-!===
-!Name: !mean spring tide peak flow
-!Definition: !Peak velocity of spring tidal stream.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *WindPotentialValue*
 
@@ -6745,29 +6212,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*averageMeanWindPowerDensity*
-
-[cols=","]
-!===
-!Name: !average mean wind power density
-!Definition: !The availability of energy at a location for conversion by a wind turbine.
-!===
-
-a|
-*averageMeanWindSpeed*
-
-[cols=","]
-!===
-!Name: !average mean wind speed
-!Definition: !Annual Mean wind speed at a location.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 === Energy Resources Statistics
 
@@ -6799,20 +6244,7 @@ energy, electricity, or any other form of energy
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*Energy product value*
-
-[width="100%",cols=","]
-!===
-!Name: !A codelist of energy product values.
-!Definition: !This codelist itself is an empty placeholder and should be based on the EU regulation on Energy Statistics.\nEXAMPLE combustible fuels, heat, renewable\nenergy, electricity, or any other form of energy
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *EnergyStatisticsAggregateValue*
 
@@ -6832,18 +6264,8 @@ EXAMPLE indigenous production of natural gas.
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
-[width="100%",cols="100%"]
-|===
-a|
-*Energy statistics aggregate value*
-
-[width="100%",cols=","]
-!===
-!Name: !A codelist of aggregates that the statistical data are representing.
-!Definition: !This codelist itself is an empty placeholder and should be based on the EU regulation on Energy Statistics.\nEXAMPLE indigenous production of natural gas.
-!===
 
 |===
 

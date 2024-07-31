@@ -1269,7 +1269,7 @@ a|
 !Definition: !The grammatical gender of a geographical name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GrammaticalGenderValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry .
 !===
 
 |===
@@ -1285,7 +1285,7 @@ a|
 !Definition: !The grammatical number of a geographical name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GrammaticalNumberValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1301,7 +1301,7 @@ a|
 !Definition: !The type of a named place.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/NamedPlaceTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1318,7 +1318,7 @@ a|
 !Description: !NOTE The precise definition of the values 'Official', 'Standardised', 'Historical' and 'Other' can only be decided by Member States according to their legislation and practice.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/NameStatusValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1334,7 +1334,7 @@ a|
 !Definition: !The nativeness of a geographical name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/NativenessValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3303,47 +3303,7 @@ a|
 !Definition: !The grammatical gender of a geographical name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GrammaticalGenderValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-common
-
-[cols=","]
-!===
-!Name: !common
-!Definition: !'Common' grammatical gender (the merging of 'masculine' and 'feminine').
-!===
-
-a|
-feminine
-
-[cols=","]
-!===
-!Name: !feminine
-!Definition: !Feminine grammatical gender.
-!===
-
-a|
-masculine
-
-[cols=","]
-!===
-!Name: !masculine
-!Definition: !Masculine grammatical gender.
-!===
-
-a|
-neuter
-
-[cols=","]
-!===
-!Name: !neuter
-!Definition: !Neuter grammatical gender.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3358,38 +3318,7 @@ a|
 !Definition: !The grammatical number of a geographical name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GrammaticalNumberValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-dual
-
-[cols=","]
-!===
-!Name: !dual
-!Definition: !Dual grammatical number.
-!===
-
-a|
-plural
-
-[cols=","]
-!===
-!Name: !plural
-!Definition: !Plural grammatical number.
-!===
-
-a|
-singular
-
-[cols=","]
-!===
-!Name: !singular
-!Definition: !Singular grammatical number.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3404,48 +3333,8 @@ a|
 !Definition: !The status of a geographical name, that is the information enabling to discern which credit should be given to the name with respect to its standardisation and/or its topicality.
 !Description: !NOTE The precise definition of the values 'Official', 'Standardised', 'Historical' and 'Other' can only be decided by Member States according to their legislation and practice.
 !Extensibility: !none
-!Identifier: !
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-historical
-
-[cols=","]
-!===
-!Name: !historical
-!Definition: !Historical name not in current use.
-!===
-
-a|
-official
-
-[cols=","]
-!===
-!Name: !official
-!Definition: !Name in current use and officially approved or established by legislation.
-!===
-
-a|
-other
-
-[cols=","]
-!===
-!Name: !other
-!Definition: !Current, but not official, nor approved name.
-!===
-
-a|
-standardised
-
-[cols=","]
-!===
-!Name: !standardised
-!Definition: !Name in current use and accepted or recommended by a body assigned advisory function and/or power of decision in matters of toponymy.
+!Identifier: !http://inspire.ec.europa.eu/codelist/NameStatusValue
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3460,92 +3349,7 @@ a|
 !Definition: !The type of a named place.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/NamedPlaceTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-administrativeUnit
-
-[cols=","]
-!===
-!Name: !administrative unit
-!Definition: !Units of administration, dividing areas where Member States have and/or exercise jurisdictional rights, for local, regional and national governance, separated by administrative boundaries.
-!===
-
-a|
-building
-
-[cols=","]
-!===
-!Name: !building
-!Definition: !Geographical location of buildings.
-!===
-
-a|
-hydrography
-
-[cols=","]
-!===
-!Name: !hydrography
-!Definition: !Hydrographic elements, including marine areas and all other water bodies and items related to them, including river basins and sub-basins.
-!===
-
-a|
-landcover
-
-[cols=","]
-!===
-!Name: !landcover
-!Definition: !Physical and biological cover of the earth's surface including artificial surfaces, agricultural areas, forests, (semi-)natural areas, wetlands.
-!===
-
-a|
-landform
-
-[cols=","]
-!===
-!Name: !landform
-!Definition: !Geomorphologic terrain feature.
-!===
-
-a|
-other
-
-[cols=","]
-!===
-!Name: !other
-!Definition: !A spatial object not included in the other types of the code list.
-!===
-
-a|
-populatedPlace
-
-[cols=","]
-!===
-!Name: !populated place
-!Definition: !A place inhabited by people.
-!===
-
-a|
-protectedSite
-
-[cols=","]
-!===
-!Name: !protected site
-!Definition: !Area designated or managed within a framework of international, Community and Member States' legislation to achieve specific conservation objectives.
-!===
-
-a|
-transportNetwork
-
-[cols=","]
-!===
-!Name: !transport network
-!Definition: !Road, rail, air, water and cable transport networks and related infrastructure. Includes links between different networks.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -3560,29 +3364,7 @@ a|
 !Definition: !The nativeness of a geographical name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/NativenessValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-endonym
-
-[cols=","]
-!===
-!Name: !endonym
-!Definition: !Name for a geographical feature in an official or well-established language occurring in that area where the feature is situated.
-!===
-
-a|
-exonym
-
-[cols=","]
-!===
-!Name: !exonym
-!Definition: !Name used in a specific language for a geographical feature situated outside the area where that language is widely spoken, and differing in form from the respective endonym(s) in the area where the geographical feature is situated.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===

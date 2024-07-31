@@ -1809,7 +1809,7 @@ a|
 !Definition: !Classification type of the SeaArea, e.g. estuary, openOcean
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/SeaAreaTypeClassificationValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1830,7 +1830,7 @@ a|
 May be extended by member states
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/SeaBedCoverValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1848,7 +1848,7 @@ a|
 !Description: !Codelist for types of sea surface layers found on sea surfaces (.e.g oil, ice etc).
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/SeaSurfaceClassificationValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1866,7 +1866,7 @@ a|
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ShoreStabilityValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1884,7 +1884,7 @@ a|
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ShoreTypeClassificationValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1901,8 +1901,8 @@ a|
 !Definition: !Types of marine circulation zones
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Identifier: !http://inspire.ec.europa.eu/codelist/ZoneTypeValue
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -4623,56 +4623,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols="",]
-|===
-a|
-*breakingZone*
-
-[cols=","]
-!===
-!Name: !breaking zone
-!Definition: !Sea Area is a breaking Zone
-!===
-
-a|
-*delta*
-
-[cols=","]
-!===
-!Name: !delta
-!Definition: !Sea Area is a delta
-!===
-
-a|
-*estuary*
-
-[cols=","]
-!===
-!Name: !estuary
-!Definition: !Sea Area is an estuary
-!===
-
-a|
-*openOcean*
-
-[cols=","]
-!===
-!Name: !open ocean
-!Definition: !Sea Area is open ocean or sea
-!===
-
-a|
-*shelfSea*
-
-[cols=","]
-!===
-!Name: !shelf sea
-!Definition: !Sea Area is shelf sea
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *SeaBedCoverValue*
 
@@ -4694,137 +4645,7 @@ May be extended by member states
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*sand*
-
-[cols=","]
-!===
-!Name: !sand
-!Definition: !area of sand
-!===
-
-a|
-*mud*
-
-[cols=","]
-!===
-!Name: !mud
-!Definition: !area of mud
-!===
-
-a|
-*clay*
-
-[cols=","]
-!===
-!Name: !clay
-!Definition: !area of clay
-!===
-
-a|
-*silt*
-
-[cols=","]
-!===
-!Name: !silt
-!Definition: !area of silt
-!===
-
-a|
-*stones*
-
-[cols=","]
-!===
-!Name: !stones
-!Definition: !area of stones
-!===
-
-a|
-*gravel*
-
-[cols=","]
-!===
-!Name: !gravel
-!Definition: !area of gravel
-!===
-
-a|
-*pebbles*
-
-[cols=","]
-!===
-!Name: !pebbles
-!Definition: !area of pebbles
-!===
-
-a|
-*cobbles*
-
-[cols=","]
-!===
-!Name: !cobbles
-!Definition: !area of cobbles
-!===
-
-a|
-*rock*
-
-[cols=","]
-!===
-!Name: !rock
-!Definition: !area of rock
-!===
-
-a|
-*coral*
-
-[cols=","]
-!===
-!Name: !coral
-!Definition: !area of coral
-!===
-
-a|
-*shells*
-
-[cols=","]
-!===
-!Name: !shells
-!Definition: !area of shells
-!===
-
-a|
-*weed*
-
-[cols=","]
-!===
-!Name: !weed
-!Definition: !area of weed, including kelp
-!===
-
-a|
-*sandWaves*
-
-[cols=","]
-!===
-!Name: !sand waves
-!Definition: !area with sand waves (mobile bottom)
-!===
-
-a|
-*freshwaterSprings*
-
-[cols=","]
-!===
-!Name: !freshwater springs
-!Definition: !area with freshwater springs in seabed
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *SeaSurfaceClassificationValue*
 
@@ -4843,56 +4664,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*ice*
-
-[cols=","]
-!===
-!Name: !ice
-!Definition: !Sea surface is ice
-!===
-
-a|
-*oil*
-
-[cols=","]
-!===
-!Name: !oil
-!Definition: !Sea surface is oil
-!===
-
-a|
-*snow*
-
-[cols=","]
-!===
-!Name: !snow
-!Definition: !Sea surface is snow or slush
-!===
-
-a|
-*litter*
-
-[cols=","]
-!===
-!Name: !litter
-!Definition: !Sea surface is litter
-!===
-
-a|
-*algae*
-
-[cols=","]
-!===
-!Name: !algae
-!Definition: !Sea surface is algae
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *ShoreStabilityValue*
 
@@ -4911,65 +4683,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*stable*
-
-[cols=","]
-!===
-!Name: !stable
-!Definition: !Stretch of shore is stable
-!===
-
-a|
-*probableErosionTrend*
-
-[cols=","]
-!===
-!Name: !probable erosion trend
-!Definition: !Stretch of shore is
-!===
-
-a|
-*confirmedErosionTrend*
-
-[cols=","]
-!===
-!Name: !confirmed erosion trend
-!Definition: !Stretch of shore is confirmed to be eroding
-!===
-
-a|
-*probableAccretionTrend*
-
-[cols=","]
-!===
-!Name: !probable accretion trend
-!Definition: !Stretch of shore is probably accreting
-!===
-
-a|
-*confirmedAccretionTrend*
-
-[cols=","]
-!===
-!Name: !confirmed accretion trend
-!Definition: !Stretch of shore is confirmed to be accreting
-!===
-
-a|
-*unknown*
-
-[cols=","]
-!===
-!Name: !unknown
-!Definition: !Stability of stretch of shore is unknown
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *ShoreTypeClassificationValue*
 
@@ -4988,92 +4702,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*estuaryRiverMouth*
-
-[cols=","]
-!===
-!Name: !estuary
-!Definition: !Shore type is estuary/river mouth
-!===
-
-a|
-*rock*
-
-[cols=","]
-!===
-!Name: !rock
-!Definition: !Shore type is rock
-!===
-
-a|
-*sand*
-
-[cols=","]
-!===
-!Name: !sand
-!Definition: !Shore type is sand
-!===
-
-a|
-*tidalMarsh*
-
-[cols=","]
-!===
-!Name: !tidal marsh
-!Definition: !Shore type is tidal marsh
-!===
-
-a|
-*narrowVegetisedShore*
-
-[cols=","]
-!===
-!Name: !narrow vegetised shore
-!Definition: !Shore type is narrow vegetisedshore
-!===
-
-a|
-*artificialCoastline*
-
-[cols=","]
-!===
-!Name: !artificial coastline
-!Definition: !Shore type is artifical
-!===
-
-a|
-*harbourLimits*
-
-[cols=","]
-!===
-!Name: !harbour limits
-!Definition: !Shore type is harbour limits
-!===
-
-a|
-*gravel*
-
-[cols=","]
-!===
-!Name: !gravel
-!Definition: !Shore type is gravel
-!===
-
-a|
-*mud*
-
-[cols=","]
-!===
-!Name: !mud
-!Definition: !Shore type is mud
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *ZoneTypeValue*
 
@@ -5086,44 +4715,14 @@ a|
 !Definition: !Types of marine circulation zones
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !
+!Identifier: !http://inspire.ec.europa.eu/codelist/ZoneTypeValue
 !Values: !
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
-[cols=""]
-|===
-a|
-*mixingZone*
-
-[cols=","]
-!===
-!Name: !mixing zone
-!Definition: !The area is a mixing zone
-!===
-
-a|
-*sedimentCell*
-
-[cols=","]
-!===
-!Name: !sediment cell
-!Definition: !The area is a sediment cell.
-!===
-
-a|
-*coastalWaters*
-
-[cols=","]
-!===
-!Name: !coastal waters
-!Definition: !The area is coastal water.
-!===
-
-|===
 
 <<<
 [appendix]

@@ -1205,7 +1205,7 @@ a|
 
 |===
 
-INSPIRE governed code lists are given in Annex C.
+INSPIRE governed code lists are given in the INSPIRE Registry.
 
 ==== Externally governed code lists
 
@@ -5579,22 +5579,28 @@ The table shows the environmental objectives for selected pollutants. See 2011/8
 [appendix]
 == Code list values - (normative) 
 
-INSPIRE Application Schema 'Atmospheric Conditions and Meteorological Geographical Features'
+*INSPIRE Application Schema 'Atmospheric Conditions and Meteorological Geographical Features'*
 
-*EU_AirQualityReferenceComponentValue*
-Name: EU Air Quality Reference Component Value
-Definition: Definitions of phenomena regarding air quality in the context of reporting under Union legislation.
-Extensibility: any
-Identifier: http://www.eionet.europa.eu/aqportal/codelists
-Parent: PhenomenonTypeValue
-Values:
+[cols=","]
+|===
+2+|*EU_AirQualityReferenceComponentValue*
+|Name: |EU Air Quality Reference Component Value
+|Definition: |Definitions of phenomena regarding air quality in the context of reporting under Union legislation.
+|Extensibility: |any
+|Identifier: |http://www.eionet.europa.eu/aqportal/codelists
+|Parent: |PhenomenonTypeValue
+|Values:|
+|===
 
-*GRIB_CodeTable4_2Value*
-Name: WMO GRIB Code Table Table 4_2 Value
-Definition: Definitions of phenomena observed in meteorology.
-Extensibility: any
-Identifier: http://vocab.nerc.ac.uk/collection/I01/current
-Values:
+[cols=","]
+|===
+2+|*GRIB_CodeTable4_2Value*
+|Name: |WMO GRIB Code Table Table 4_2 Value
+|Definition: |Definitions of phenomena observed in meteorology.
+|Extensibility: |any
+|Identifier: |http://vocab.nerc.ac.uk/collection/I01/current
+|Values:|
+|===
 
 <<<
 [appendix]
