@@ -5,11 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="description" content="This document describes the INSPIRE Data Specification for the spatial data theme Cadastral Parcels">
-<meta name="keywords" content="INSPIRE Data Specification for the spatial data theme Cadastral Parcels">
-<meta name="author" content="Temporary MIWP 2021-2024 sub-group 2.3.1">
-<meta name="copyright" content="Public">
-<title>D2.8.I.6 Data Specification on Cadastral Parcels – Technical Guidelines</title>
+<title>Scope</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -442,6 +438,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 </div>
 <div id="content">
+<div class="paragraph">
+<p>de
+:sectnumlevels: 8</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="./media/image2.jpeg" alt="logo_ce-en-rvb-lr" width="131" height="90">
@@ -459,7 +459,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Title</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">D2.8.I.6 Data Specification on Cadastral Parcels – Technical Guidelines</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{doctitle}</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Creator</strong></p></td>
@@ -747,24 +747,24 @@ Unit H06: Digital Earth and Reference Data<br>
 <ul class="sectlevel3">
 <li><a href="#_notation">5.2.1. Notation</a>
 <ul class="sectlevel4">
-<li><a href="#_unified_modeling_language_uml">5.2.1.1. Unified Modeling Language (UML)</a></li>
-<li><a href="#_stereotypes">5.2.1.2. Stereotypes</a></li>
+<li><a href="#_unified_modeling_language_uml">Unified Modeling Language (UML)</a></li>
+<li><a href="#_stereotypes">Stereotypes</a></li>
 </ul>
 </li>
 <li><a href="#_voidable_characteristics">5.2.2. Voidable characteristics</a></li>
 <li><a href="#_code_lists">5.2.3. Code lists</a>
 <ul class="sectlevel4">
-<li><a href="#_code_list_types">5.2.3.1. Code list types</a></li>
-<li><a href="#_obligations_on_data_providers">5.2.3.2. Obligations on data providers</a></li>
-<li><a href="#_recommended_code_list_values">5.2.3.3. Recommended code list values</a></li>
-<li><a href="#_governance">5.2.3.4. Governance</a></li>
-<li><a href="#_vocabulary">5.2.3.5. Vocabulary</a></li>
+<li><a href="#_code_list_types">Code list types</a></li>
+<li><a href="#_obligations_on_data_providers">Obligations on data providers</a></li>
+<li><a href="#_recommended_code_list_values">Recommended code list values</a></li>
+<li><a href="#_governance">Governance</a></li>
+<li><a href="#_vocabulary">Vocabulary</a></li>
 </ul>
 </li>
 <li><a href="#_identifier_management">5.2.4. Identifier management</a></li>
 <li><a href="#_temporality_representation">5.2.5. Temporality representation</a>
 <ul class="sectlevel4">
-<li><a href="#_validity_of_the_real_world_phenomena">5.2.5.1. Validity of the real-world phenomena</a></li>
+<li><a href="#_validity_of_the_real_world_phenomena">Validity of the real-world phenomena</a></li>
 </ul>
 </li>
 </ul>
@@ -773,53 +773,53 @@ Unit H06: Digital Earth and Reference Data<br>
 <ul class="sectlevel3">
 <li><a href="#_description">5.3.1. Description</a>
 <ul class="sectlevel4">
-<li><a href="#_narrative_description">5.3.1.1. Narrative description</a></li>
-<li><a href="#_uml_overview">5.3.1.2. UML Overview</a></li>
-<li><a href="#_consistency_between_spatial_data_sets">5.3.1.3. Consistency between spatial data sets</a></li>
-<li><a href="#_modelling_of_object_references">5.3.1.4. Modelling of object references</a></li>
-<li><a href="#_geometry_representation">5.3.1.5. Geometry representation</a></li>
-<li><a href="#_temporality_representation_2">5.3.1.6. Temporality representation</a></li>
+<li><a href="#_narrative_description">Narrative description</a></li>
+<li><a href="#_uml_overview">UML Overview</a></li>
+<li><a href="#_consistency_between_spatial_data_sets">Consistency between spatial data sets</a></li>
+<li><a href="#_modelling_of_object_references">Modelling of object references</a></li>
+<li><a href="#_geometry_representation">Geometry representation</a></li>
+<li><a href="#_temporality_representation_2">Temporality representation</a></li>
 </ul>
 </li>
 <li><a href="#_feature_catalogue">5.3.2. Feature catalogue</a>
 <ul class="sectlevel4">
-<li><a href="#_spatial_object_types">5.3.2.1. Spatial object types</a>
+<li><a href="#_spatial_object_types">Spatial object types</a>
 <ul class="sectlevel5">
-<li><a href="#_basicpropertyunit">5.3.2.1.1. BasicPropertyUnit</a></li>
-<li><a href="#_cadastralboundary">5.3.2.1.2. CadastralBoundary</a></li>
-<li><a href="#_cadastralparcel">5.3.2.1.3. CadastralParcel</a></li>
-<li><a href="#_cadastralzoning">5.3.2.1.4. CadastralZoning</a></li>
+<li><a href="#_basicpropertyunit">BasicPropertyUnit</a></li>
+<li><a href="#_cadastralboundary">CadastralBoundary</a></li>
+<li><a href="#_cadastralparcel">CadastralParcel</a></li>
+<li><a href="#_cadastralzoning">CadastralZoning</a></li>
 </ul>
 </li>
-<li><a href="#_code_lists_2">5.3.2.2. Code lists</a>
+<li><a href="#_code_lists_2">Code lists</a>
 <ul class="sectlevel5">
-<li><a href="#_cadastralzoninglevelvalue">5.3.2.2.1. CadastralZoningLevelValue</a></li>
+<li><a href="#_cadastralzoninglevelvalue">CadastralZoningLevelValue</a></li>
 </ul>
 </li>
-<li><a href="#_imported_types_informative">5.3.2.3. Imported types (informative)</a>
+<li><a href="#_imported_types_informative">Imported types (informative)</a>
 <ul class="sectlevel5">
-<li><a href="#_administrativeunit">5.3.2.3.1. AdministrativeUnit</a></li>
-<li><a href="#_area">5.3.2.3.2. Area</a></li>
-<li><a href="#_characterstring">5.3.2.3.3. CharacterString</a></li>
-<li><a href="#_datetime">5.3.2.3.4. DateTime</a></li>
-<li><a href="#_gm_curve">5.3.2.3.5. GM_Curve</a></li>
-<li><a href="#_gm_multisurface">5.3.2.3.6. GM_MultiSurface</a></li>
-<li><a href="#_gm_object">5.3.2.3.7. GM_Object</a></li>
-<li><a href="#_gm_point">5.3.2.3.8. GM_Point</a></li>
-<li><a href="#_geographicalname">5.3.2.3.9. GeographicalName</a></li>
-<li><a href="#_identifier">5.3.2.3.10. Identifier</a></li>
-<li><a href="#_integer">5.3.2.3.11. Integer</a></li>
-<li><a href="#_length">5.3.2.3.12. Length</a></li>
-<li><a href="#_localisedcharacterstring">5.3.2.3.13. LocalisedCharacterString</a></li>
+<li><a href="#_administrativeunit">AdministrativeUnit</a></li>
+<li><a href="#_area">Area</a></li>
+<li><a href="#_characterstring">CharacterString</a></li>
+<li><a href="#_datetime">DateTime</a></li>
+<li><a href="#_gm_curve">GM_Curve</a></li>
+<li><a href="#_gm_multisurface">GM_MultiSurface</a></li>
+<li><a href="#_gm_object">GM_Object</a></li>
+<li><a href="#_gm_point">GM_Point</a></li>
+<li><a href="#_geographicalname">GeographicalName</a></li>
+<li><a href="#_identifier">Identifier</a></li>
+<li><a href="#_integer">Integer</a></li>
+<li><a href="#_length">Length</a></li>
+<li><a href="#_localisedcharacterstring">LocalisedCharacterString</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#_externally_governed_code_lists">5.3.3. Externally governed code lists</a>
 <ul class="sectlevel4">
-<li><a href="#_governance_and_authoritative_source">5.3.3.1. Governance and authoritative source</a></li>
-<li><a href="#_availability">5.3.3.2. Availability</a></li>
-<li><a href="#_rules_for_code_list_values">5.3.3.3. Rules for code list values</a></li>
+<li><a href="#_governance_and_authoritative_source">Governance and authoritative source</a></li>
+<li><a href="#_availability">Availability</a></li>
+<li><a href="#_rules_for_code_list_values">Rules for code list values</a></li>
 </ul>
 </li>
 </ul>
@@ -832,10 +832,10 @@ Unit H06: Digital Earth and Reference Data<br>
 <ul class="sectlevel3">
 <li><a href="#_coordinate_reference_systems">6.1.1. Coordinate reference systems</a>
 <ul class="sectlevel4">
-<li><a href="#_datum">6.1.1.1. Datum</a></li>
-<li><a href="#_coordinate_reference_systems_2">6.1.1.2. Coordinate reference systems</a></li>
-<li><a href="#_display">6.1.1.3. Display</a></li>
-<li><a href="#_identifiers_for_coordinate_reference_systems">6.1.1.4. Identifiers for coordinate reference systems</a></li>
+<li><a href="#_datum">Datum</a></li>
+<li><a href="#_coordinate_reference_systems_2">Coordinate reference systems</a></li>
+<li><a href="#_display">Display</a></li>
+<li><a href="#_identifiers_for_coordinate_reference_systems">Identifiers for coordinate reference systems</a></li>
 </ul>
 </li>
 <li><a href="#_temporal_reference_system">6.1.2. Temporal reference system</a></li>
@@ -888,8 +888,8 @@ Unit H06: Digital Earth and Reference Data<br>
 <li><a href="#_maintenance_information">8.3.1. Maintenance Information</a></li>
 <li><a href="#_metadata_elements_for_reporting_data_quality">8.3.2. Metadata elements for reporting data quality</a>
 <ul class="sectlevel4">
-<li><a href="#_guidelines_for_reporting_quantitative_results_of_the_data_quality_evaluation">8.3.2.1. Guidelines for reporting quantitative results of the data quality evaluation</a></li>
-<li><a href="#_guidelines_for_reporting_descriptive_results_of_the_data_quality_evaluation">8.3.2.2. Guidelines for reporting descriptive results of the Data Quality evaluation</a></li>
+<li><a href="#_guidelines_for_reporting_quantitative_results_of_the_data_quality_evaluation">Guidelines for reporting quantitative results of the data quality evaluation</a></li>
+<li><a href="#_guidelines_for_reporting_descriptive_results_of_the_data_quality_evaluation">Guidelines for reporting descriptive results of the Data Quality evaluation</a></li>
 </ul>
 </li>
 </ul>
@@ -904,10 +904,10 @@ Unit H06: Digital Earth and Reference Data<br>
 <ul class="sectlevel3">
 <li><a href="#_default_encodings">9.3.1. Default Encoding(s)</a>
 <ul class="sectlevel4">
-<li><a href="#_specific_requirements_for_gml_encoding">9.3.1.1. Specific requirements for GML encoding</a></li>
-<li><a href="#_default_encodings_for_application_schema_application_schema_name">9.3.1.2. Default encoding(s) for application schema &lt;application schema name&gt;</a>
+<li><a href="#_specific_requirements_for_gml_encoding">Specific requirements for GML encoding</a></li>
+<li><a href="#_default_encodings_for_application_schema_application_schema_name">Default encoding(s) for application schema &lt;application schema name&gt;</a>
 <ul class="sectlevel5">
-<li><a href="#_encoding_rules_used">9.3.1.2.1. Encoding rules used</a></li>
+<li><a href="#_encoding_rules_used">Encoding rules used</a></li>
 </ul>
 </li>
 </ul>
@@ -1558,7 +1558,7 @@ Unit H06: Digital Earth and Reference Data<br>
 <div class="sect3">
 <h4 id="_notation">5.2.1. Notation</h4>
 <div class="sect4">
-<h5 id="_unified_modeling_language_uml">5.2.1.1. Unified Modeling Language (UML)</h5>
+<h5 id="_unified_modeling_language_uml">Unified Modeling Language (UML)</h5>
 <div class="paragraph">
 <p>The application schemas included in this section are specified in UML, version 2.1. The spatial object types, their properties and associated types are shown in UML class diagrams.</p>
 </div>
@@ -1614,7 +1614,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_stereotypes">5.2.1.2. Stereotypes</h5>
+<h5 id="_stereotypes">Stereotypes</h5>
 <div class="paragraph">
 <p>In the application schemas in this section several stereotypes are used that have been defined as part of a UML profile for use in INSPIRE [DS-D2.5]. These are explained in Table 1 below.</p>
 </div>
@@ -1764,7 +1764,7 @@ Unit H06: Digital Earth and Reference Data<br>
 <p>Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.</p>
 </div>
 <div class="sect4">
-<h5 id="_code_list_types">5.2.3.1. Code list types</h5>
+<h5 id="_code_list_types">Code list types</h5>
 <div class="paragraph">
 <p>The IRs distinguish the following types of code lists.</p>
 </div>
@@ -1895,7 +1895,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_obligations_on_data_providers">5.2.3.2. Obligations on data providers</h5>
+<h5 id="_obligations_on_data_providers">Obligations on data providers</h5>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -1936,7 +1936,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_recommended_code_list_values">5.2.3.3. Recommended code list values</h5>
+<h5 id="_recommended_code_list_values">Recommended code list values</h5>
 <div class="paragraph">
 <p>For code lists of type (b), (c) and (d), this data specification may propose additional values as a recommendation (in a dedicated Annex). These values will be included in the INSPIRE code list register. This will facilitate and encourage the usage of the recommended values by data providers since the obligation to make additional values defined by data providers available in a register (see section 5.2.4.2) is already met.</p>
 </div>
@@ -1962,7 +1962,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_governance">5.2.3.4. Governance</h5>
+<h5 id="_governance">Governance</h5>
 <div class="paragraph">
 <p>The following two types of code lists are distinguished in INSPIRE:</p>
 </div>
@@ -2026,7 +2026,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vocabulary">5.2.3.5. Vocabulary</h5>
+<h5 id="_vocabulary">Vocabulary</h5>
 <div class="paragraph">
 <p>For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern <em><a href="http://inspire.ec.europa.eu/codelist/&lt;UpperCamelCaseName&gt" class="bare">http://inspire.ec.europa.eu/codelist/&lt;UpperCamelCaseName&gt</a>;</em>.</p>
 </div>
@@ -2137,7 +2137,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_validity_of_the_real_world_phenomena">5.2.5.1. Validity of the real-world phenomena</h5>
+<h5 id="_validity_of_the_real_world_phenomena">Validity of the real-world phenomena</h5>
 <div class="paragraph">
 <p>The application schema(s) use(s) the attributes "validFrom" and "validTo" to record the validity of the real-world phenomenon represented by a spatial object.</p>
 </div>
@@ -2184,7 +2184,7 @@ Unit H06: Digital Earth and Reference Data<br>
 <div class="sect3">
 <h4 id="_description">5.3.1. Description</h4>
 <div class="sect4">
-<h5 id="_narrative_description">5.3.1.1. Narrative description</h5>
+<h5 id="_narrative_description">Narrative description</h5>
 <div class="paragraph">
 <p><strong><em>General attributes for all spatial object types</em>:</strong></p>
 </div>
@@ -2353,7 +2353,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_uml_overview">5.3.1.2. UML Overview</h5>
+<h5 id="_uml_overview">UML Overview</h5>
 <div class="imageblock">
 <div class="content">
 <img src="./media/image5.png" alt="image">
@@ -2372,7 +2372,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consistency_between_spatial_data_sets">5.3.1.3. Consistency between spatial data sets</h5>
+<h5 id="_consistency_between_spatial_data_sets">Consistency between spatial data sets</h5>
 <div class="paragraph">
 <p><span class="underline">Consistency across borders</span></p>
 </div>
@@ -2410,7 +2410,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_modelling_of_object_references">5.3.1.4. Modelling of object references</h5>
+<h5 id="_modelling_of_object_references">Modelling of object references</h5>
 <div class="paragraph">
 <p><span class="underline">Reference to other information in national registers</span></p>
 </div>
@@ -2464,7 +2464,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_geometry_representation">5.3.1.5. Geometry representation</h5>
+<h5 id="_geometry_representation">Geometry representation</h5>
 <div class="paragraph">
 <p>Art. 12(1) of Regulation 1089/2010 restricts the value domain of spatial properties to the Simple Feature spatial schema as defined in the <em>OpenGIS® Implementation Standard for Geographic information – Simple feature access – Part 1: Common architecture, version 1.2.1</em>, unless specified otherwise for a specific spatial data theme or type.</p>
 </div>
@@ -2689,7 +2689,7 @@ Unit H06: Digital Earth and Reference Data<br>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_temporality_representation_2">5.3.1.6. Temporality representation</h5>
+<h5 id="_temporality_representation_2">Temporality representation</h5>
 <div class="paragraph">
 <p>EXAMPLE On 01/01/2008, there has been new delineation of a cadastral parcel (A) and a new value for attribute areaValue has been computed. Two cases may occur, depending on the life-cycle information management at national level:</p>
 </div>
@@ -2889,9 +2889,9 @@ Unit H06: Digital Earth and Reference Data<br>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_spatial_object_types">5.3.2.1. Spatial object types</h5>
+<h5 id="_spatial_object_types">Spatial object types</h5>
 <div class="sect5">
-<h6 id="_basicpropertyunit">5.3.2.1.1. BasicPropertyUnit</h6>
+<h6 id="_basicpropertyunit">BasicPropertyUnit</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -3239,7 +3239,7 @@ NOTE 4 Some countries, such as Norway, may have parcels which belong to several 
 </table>
 </div>
 <div class="sect5">
-<h6 id="_cadastralboundary">5.3.2.1.2. CadastralBoundary</h6>
+<h6 id="_cadastralboundary">CadastralBoundary</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -3571,7 +3571,7 @@ NOTE 4 Some countries, such as Norway, may have parcels which belong to several 
 </table>
 </div>
 <div class="sect5">
-<h6 id="_cadastralparcel">5.3.2.1.3. CadastralParcel</h6>
+<h6 id="_cadastralparcel">CadastralParcel</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4085,7 +4085,7 @@ NOTE 2 The label can be used for label in portrayal.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_cadastralzoning">5.3.2.1.4. CadastralZoning</h6>
+<h6 id="_cadastralzoning">CadastralZoning</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4669,9 +4669,9 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_2">5.3.2.2. Code lists</h5>
+<h5 id="_code_lists_2">Code lists</h5>
 <div class="sect5">
-<h6 id="_cadastralzoninglevelvalue">5.3.2.2.1. CadastralZoningLevelValue</h6>
+<h6 id="_cadastralzoninglevelvalue">CadastralZoningLevelValue</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4717,12 +4717,12 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </div>
 </div>
 <div class="sect4">
-<h5 id="_imported_types_informative">5.3.2.3. Imported types (informative)</h5>
+<h5 id="_imported_types_informative">Imported types (informative)</h5>
 <div class="paragraph">
 <p>This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.</p>
 </div>
 <div class="sect5">
-<h6 id="_administrativeunit">5.3.2.3.1. AdministrativeUnit</h6>
+<h6 id="_administrativeunit">AdministrativeUnit</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4759,7 +4759,7 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </table>
 </div>
 <div class="sect5">
-<h6 id="_area">5.3.2.3.2. Area</h6>
+<h6 id="_area">Area</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4792,7 +4792,7 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </table>
 </div>
 <div class="sect5">
-<h6 id="_characterstring">5.3.2.3.3. CharacterString</h6>
+<h6 id="_characterstring">CharacterString</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4825,7 +4825,7 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </table>
 </div>
 <div class="sect5">
-<h6 id="_datetime">5.3.2.3.4. DateTime</h6>
+<h6 id="_datetime">DateTime</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4858,7 +4858,7 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_curve">5.3.2.3.5. GM_Curve</h6>
+<h6 id="_gm_curve">GM_Curve</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4891,7 +4891,7 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_multisurface">5.3.2.3.6. GM_MultiSurface</h6>
+<h6 id="_gm_multisurface">GM_MultiSurface</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4924,7 +4924,7 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_object">5.3.2.3.7. GM_Object</h6>
+<h6 id="_gm_object">GM_Object</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4957,7 +4957,7 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </table>
 </div>
 <div class="sect5">
-<h6 id="_gm_point">5.3.2.3.8. GM_Point</h6>
+<h6 id="_gm_point">GM_Point</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4990,7 +4990,7 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </table>
 </div>
 <div class="sect5">
-<h6 id="_geographicalname">5.3.2.3.9. GeographicalName</h6>
+<h6 id="_geographicalname">GeographicalName</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -5027,7 +5027,7 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 </table>
 </div>
 <div class="sect5">
-<h6 id="_identifier">5.3.2.3.10. Identifier</h6>
+<h6 id="_identifier">Identifier</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -5072,7 +5072,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="sect5">
-<h6 id="_integer">5.3.2.3.11. Integer</h6>
+<h6 id="_integer">Integer</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -5105,7 +5105,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="sect5">
-<h6 id="_length">5.3.2.3.12. Length</h6>
+<h6 id="_length">Length</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -5138,7 +5138,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="sect5">
-<h6 id="_localisedcharacterstring">5.3.2.3.13. LocalisedCharacterString</h6>
+<h6 id="_localisedcharacterstring">LocalisedCharacterString</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -5178,7 +5178,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 <p>The externally governed code lists included in this application schema are specified in the tables in this section.</p>
 </div>
 <div class="sect4">
-<h5 id="_governance_and_authoritative_source">5.3.3.1. Governance and authoritative source</h5>
+<h5 id="_governance_and_authoritative_source">Governance and authoritative source</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -5208,7 +5208,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="sect4">
-<h5 id="_availability">5.3.3.2. Availability</h5>
+<h5 id="_availability">Availability</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 19%;">
@@ -5237,7 +5237,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </table>
 </div>
 <div class="sect4">
-<h5 id="_rules_for_code_list_values">5.3.3.3. Rules for code list values</h5>
+<h5 id="_rules_for_code_list_values">Rules for code list values</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -5313,7 +5313,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 <div class="sect3">
 <h4 id="_coordinate_reference_systems">6.1.1. Coordinate reference systems</h4>
 <div class="sect4">
-<h5 id="_datum">6.1.1.1. Datum</h5>
+<h5 id="_datum">Datum</h5>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -5335,7 +5335,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 </div>
 </div>
 <div class="sect4">
-<h5 id="_coordinate_reference_systems_2">6.1.1.2. Coordinate reference systems</h5>
+<h5 id="_coordinate_reference_systems_2">Coordinate reference systems</h5>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -5442,7 +5442,7 @@ The Commission shall be assisted by the INSPIRE Commission expert group in the m
 </div>
 </div>
 <div class="sect4">
-<h5 id="_display">6.1.1.3. Display</h5>
+<h5 id="_display">Display</h5>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -5464,7 +5464,7 @@ The Commission shall be assisted by the INSPIRE Commission expert group in the m
 </div>
 </div>
 <div class="sect4">
-<h5 id="_identifiers_for_coordinate_reference_systems">6.1.1.4. Identifiers for coordinate reference systems</h5>
+<h5 id="_identifiers_for_coordinate_reference_systems">Identifiers for coordinate reference systems</h5>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -6368,7 +6368,7 @@ data set</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at <em><a href="http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101" class="bare">http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101</a></em>. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.</p>
+<p>Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at <em><a href="https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en" class="bare">https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en</a></em>. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.</p>
 </div>
 <div class="sect3">
 <h4 id="_conformity">8.1.1. Conformity</h4>
@@ -7022,7 +7022,7 @@ codeSpace: INSPIRE RS registry</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>name: &lt;Application schema name&gt; GML application schema<br>
-version: version 3.1rc1<br>
+version: 4.0<br>
 specification: D2.8.I.6 Data Specification on Cadastral Parcels – Technical Guidelines</p>
 </div></div></td>
 </tr>
@@ -7035,7 +7035,7 @@ specification: D2.8.I.6 Data Specification on Cadastral Parcels – Technical Gu
 		&lt;gco:CharacterString&gt;SomeApplicationSchema GML application schema&lt;/gco:CharacterString&gt;
 	&lt;/gmd:name&gt;
 	&lt;gmd:version&gt;
-		&lt;gco:CharacterString&gt;3.1rc1&lt;/gco:CharacterString&gt;
+		&lt;gco:CharacterString&gt;4.0&lt;/gco:CharacterString&gt;
 	&lt;/gmd:version&gt;
 	&lt;gmd:specification&gt;
 		&lt;gco:CharacterString&gt;D2.8.I.6 Data Specification on Cadastral Parcels – Technical Guidelines&lt;/gco:CharacterString&gt;
@@ -7458,7 +7458,7 @@ specification: D2.8.I.6 Data Specification on Cadastral Parcels – Technical Gu
 <p>NOTE In the level element of DQ_Scope, the value featureType is used to denote spatial object type.</p>
 </div>
 <div class="sect4">
-<h5 id="_guidelines_for_reporting_quantitative_results_of_the_data_quality_evaluation">8.3.2.1. Guidelines for reporting quantitative results of the data quality evaluation</h5>
+<h5 id="_guidelines_for_reporting_quantitative_results_of_the_data_quality_evaluation">Guidelines for reporting quantitative results of the data quality evaluation</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 36%;">
@@ -7572,7 +7572,7 @@ specification: D2.8.I.6 Data Specification on Cadastral Parcels – Technical Gu
 </table>
 </div>
 <div class="sect4">
-<h5 id="_guidelines_for_reporting_descriptive_results_of_the_data_quality_evaluation">8.3.2.2. Guidelines for reporting descriptive results of the Data Quality evaluation</h5>
+<h5 id="_guidelines_for_reporting_descriptive_results_of_the_data_quality_evaluation">Guidelines for reporting descriptive results of the Data Quality evaluation</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 36%;">
@@ -7780,7 +7780,7 @@ specification: D2.8.I.6 Data Specification on Cadastral Parcels – Technical Gu
 <div class="sect3">
 <h4 id="_default_encodings">9.3.1. Default Encoding(s)</h4>
 <div class="sect4">
-<h5 id="_specific_requirements_for_gml_encoding">9.3.1.1. Specific requirements for GML encoding</h5>
+<h5 id="_specific_requirements_for_gml_encoding">Specific requirements for GML encoding</h5>
 <div class="paragraph">
 <p>This data specification proposes the use of GML as the default encoding, as recommended in sections 7.2 and 7.3 of [DS-D2.7]. GML is an XML encoding in compliance with ISO 19118, as required in Article 7(1). For details, see [ISO 19136], and in particular Annex E (UML-to-GML application schema encoding rules).</p>
 </div>
@@ -7812,18 +7812,18 @@ specification: D2.8.I.6 Data Specification on Cadastral Parcels – Technical Gu
 </div>
 </div>
 <div class="sect4">
-<h5 id="_default_encodings_for_application_schema_application_schema_name">9.3.1.2. Default encoding(s) for application schema &lt;application schema name&gt;</h5>
+<h5 id="_default_encodings_for_application_schema_application_schema_name">Default encoding(s) for application schema &lt;application schema name&gt;</h5>
 <div class="paragraph">
 <p><strong>Name: Cadastral Parcels GML Application Schema</strong><br>
-Version: version 3.0<br>
+Version: 4.0<br>
 Specification: D2.8.I.6 Data Specification on Cadastral Parcels – Technical Guidelines<br>
 Character set: UTF-8</p>
 </div>
 <div class="paragraph">
-<p>The xml schema document is available from <em><a href="http://inspire.ec.europa.eu/schemas/cp/3.0/CadastralParcels.xsd" class="bare">http://inspire.ec.europa.eu/schemas/cp/3.0/CadastralParcels.xsd</a>.</em></p>
+<p>The xml schema document is available from <em><a href="https://inspire.ec.europa.eu/schemas/cp/4.0/CadastralParcels.xsd" class="bare">https://inspire.ec.europa.eu/schemas/cp/4.0/CadastralParcels.xsd</a>.</em></p>
 </div>
 <div class="sect5">
-<h6 id="_encoding_rules_used">9.3.1.2.1. Encoding rules used</h6>
+<h6 id="_encoding_rules_used">Encoding rules used</h6>
 <div class="paragraph">
 <p>The encoding rule used for this encoding is specified in Annex B of [DS-D2.7].</p>
 </div>
@@ -9268,16 +9268,16 @@ Character set: UTF-8</p>
 <h2 id="_bibliography">Bibliography</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, <a href="http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf" class="bare">http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf</a></p>
+<p>[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, <a href="https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en" class="bare">https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en</a></p>
 </div>
 <div class="paragraph">
-<p>[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.4rc2, <em><a href="http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3.4rc2.pdf" class="bare">http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3.4rc2.pdf</a></em></p>
+<p>[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.4rc2, <em><a href="https://knowledge-base.inspire.ec.europa.eu/publications/inspire-generic-conceptual-model_en" class="bare">https://knowledge-base.inspire.ec.europa.eu/publications/inspire-generic-conceptual-model_en</a></em></p>
 </div>
 <div class="paragraph">
-<p>[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, <a href="http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf" class="bare">http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf</a></p>
+<p>[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, <a href="https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en" class="bare">https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en</a></p>
 </div>
 <div class="paragraph">
-<p>[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.3rc2, <em><a href="http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.3rc2.pdf" class="bare">http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.3rc2.pdf</a></em></p>
+<p>[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.3rc2, <em><a href="https://knowledge-base.inspire.ec.europa.eu/publications/guidelines-encoding-spatial-data_en" class="bare">https://knowledge-base.inspire.ec.europa.eu/publications/guidelines-encoding-spatial-data_en</a></em></p>
 </div>
 <div class="paragraph">
 <p>[DS-D2.8.I.3] INSPIRE DS-D2.8.I.3, INSPIRE data specification on Geographical names – Guidelines, v3.0</p>
