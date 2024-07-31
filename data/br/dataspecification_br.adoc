@@ -53,7 +53,7 @@ image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE** *Infrastructure fo
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/XX[D2.8.III.17_v3.0.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/br[D2.8.III.17_v3.0.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
