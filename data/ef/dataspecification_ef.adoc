@@ -2427,7 +2427,7 @@ The table contains the following information:
 |10.3 |Metadata language |1 |
 |===
 
-Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
+Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
 
 ==== Conformity
 
@@ -2770,7 +2770,7 @@ codeSpace: INSPIRE RS registry
 |Implementing instructions |
 |Example a|
 name: <Theme Name> GML application schema
-version: version x.y(.z), GML, version 3.2.1
+version: 4.0, GML, version 3.2.1
 specification: D2.8.II/III.x Data Specification on <Theme Name> –
 Technical Guidelines
 |Example XML encoding a|
@@ -2780,7 +2780,7 @@ Technical Guidelines
 	    <gco:CharacterString> <Theme Name> GML application schema </gco:CharacterString>
 	</gmd:name>
 	<gmd:version>
-	    <gco:CharacterString>x.y(.z), GML, version 3.2.1</gco:CharacterString>
+	    <gco:CharacterString>4.0</gco:CharacterString>
 	</gmd:version>
 	<gmd:specification>
 		<gco:CharacterString>D2.8.II/III.x Data Specification on <Theme Name> –
@@ -3668,15 +3668,15 @@ No other styles are recommended.
 :sectnums!:
 == Bibliography
 
-[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf
+[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en
 
-[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.3, http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3_3.pdf
+[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.3, https://knowledge-base.inspire.ec.europa.eu/publications/inspire-generic-conceptual-model_en
 
-[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf
+[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en
 
-[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.2, http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.2.pdf
+[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.2, https://knowledge-base.inspire.ec.europa.eu/publications/guidelines-encoding-spatial-data_en
 
-[DS-D2.9] INSPIRE DS-D2.9, Guidelines for the use of Observations & Measurements and Sensor Web Enablement-related standards in INSPIRE Annex II and III data specification development, v1.0, http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.9_O&M_Guidelines_V1.0.pdf
+[DS-D2.9] INSPIRE DS-D2.9, Guidelines for the use of Observations & Measurements and Sensor Web Enablement-related standards in INSPIRE Annex II and III data specification development, v1.0, https://knowledge-base.inspire.ec.europa.eu/publications/guidelines-use-observations-measurements-and-sensor-web-enablement-related-standards-inspire_en
 
 [ISO 19101] EN ISO 19101:2005 Geographic information – Reference model (ISO 19101:2002)
 

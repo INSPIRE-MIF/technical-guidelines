@@ -7619,7 +7619,7 @@ The table contains the following information:
 |10.3 |Metadata language |1 |
 |===
 
-Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
+Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
 
 ==== Conformity
 
@@ -8115,7 +8115,7 @@ specification: D2.8.III.2 Data Specification on _Buildings_ – Technical Guidel
 		<gco:CharacterString>SomeApplicationSchema GML application schema</gco:CharacterString>
 	</gmd:name>
 	<gmd:version>
-		<gco:CharacterString>3.0</gco:CharacterString>
+		<gco:CharacterString>4.0</gco:CharacterString>
 	</gmd:version>
 	<gmd:specification>
 		<gco:CharacterString>D2.8.III.2 Data Specification on Buildings – Technical Guidelines</gco:CharacterString>
@@ -8518,7 +8518,7 @@ _http://inspire.ec.europa.eu/schemas/bu-core3d/4.0/BuildingsCore3D.xsd_.
 ===== Default encoding(s) for application schema BuildingsExtendedBase
 
 *Name: BuildingsExtendedBase GML Application Schema*
-Version: version 3.0
+Version: 3.0
 Specification: D2.8.III.2 Data Specification on _Buildings_ – Technical Guidelines
 Character set: UTF-8
 
@@ -8528,7 +8528,7 @@ _http://inspire.ec.europa.eu/draft-schemas/bu-ext/3.0/BuildingsExtendedBase.xsd_
 ===== Default encoding(s) for application schema BuildingsExtended2D
 
 *Name: BuildingsExtended2D GML Application Schema*
-Version: version 3.0
+Version: 3.0
 Specification: D2.8.III.2 Data Specification on _Buildings_ – Technical Guidelines
 Character set: UTF-8
 
@@ -8538,7 +8538,7 @@ _http://inspire.ec.europa.eu/schemas/draft-schemas/bu-ext2d/3.0/BuildingsExtende
 ===== Default encoding(s) for application schema BuildingsExtended3D
 
 *Name: BuildingsExtended3D GML Application Schema*
-Version: version 3.0
+Version: 3.0
 Specification: D2.8.III.2 Data Specification on _Buildings_ – Technical Guidelines
 Character set: UTF-8
 
@@ -9625,13 +9625,13 @@ DIRECTIVE 2002/91/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 16 Decembe
 
 DIRECTIVE 2008/50/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 21 May 2008 on ambient air quality and cleaner air for Europe - Official Journal of the European Communities
 
-[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf_
+[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en_
 
-[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.3, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3_3.pdf_
+[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.3, _https://knowledge-base.inspire.ec.europa.eu/publications/inspire-generic-conceptual-model_en_
 
-[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf_
+[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en_
 
-[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.2.pdf_
+[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.2, _https://knowledge-base.inspire.ec.europa.eu/publications/guidelines-encoding-spatial-data_en_
 
 [ISO 19101] EN ISO 19101:2005 Geographic information – Reference model (ISO 19101:2002)
 

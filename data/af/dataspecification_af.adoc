@@ -3180,7 +3180,7 @@ The table contains the following information:
 |10.3 |Metadata language |1 |
 |===
 
-Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
+Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
 
 ==== Conformity
 
@@ -3520,7 +3520,7 @@ codeSpace: INSPIRE RS registry
 |Implementing instructions |
 |Example a|
 name: <Application schema name> GML application schema
-version: version 3.0
+version: 4.0
 specification: D2.8.III.9 Data Specification on _Agricultural and Aquaculture Facilities_ – Technical Guidelines
 
 |Example XML encoding a|
@@ -3530,7 +3530,7 @@ specification: D2.8.III.9 Data Specification on _Agricultural and Aquaculture Fa
 		<gco:CharacterString>SomeApplicationSchema GML application schema</gco:CharacterString>
 	</gmd:name>
 	<gmd:version>
-		<gco:CharacterString>3.0</gco:CharacterString>
+		<gco:CharacterString>4.0</gco:CharacterString>
 	</gmd:version>
 	<gmd:specification>
 		<gco:CharacterString>D2.8.III.9 Data Specification on Agricultural and Aquaculture Facilities – Technical Guidelines</gco:CharacterString>
@@ -3876,7 +3876,7 @@ The xml schema document is available from _https://inspire.ec.europa.eu/schemas/
 ===== Default encoding(s) for application schema Agricultural and Aquaculture Facilities Extended Model
 
 *Name: Agricultural and Aquaculture Facilities Extended Model GML Application Schema*
-Version: version 3.0
+Version: 2.0
 Specification: D2.8.III.9 Data Specification on _Agricultural and Aquaculture Facilities_ – Guidelines
 Character set: UTF-8
 
@@ -4349,13 +4349,13 @@ No other Recommended Styles
 <<<
 == Bibliography
 
-[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf
+[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en
 
-[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.4rc2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3.4rc2.pdf_
+[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.4rc2, _https://knowledge-base.inspire.ec.europa.eu/publications/inspire-generic-conceptual-model_en_
 
-[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf
+[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en
 
-[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.3rc2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.3rc2.pdf_
+[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.3rc2, _https://knowledge-base.inspire.ec.europa.eu/publications/guidelines-encoding-spatial-data_en_
 
 [ISO 19101] EN ISO 19101:2005 Geographic information – Reference model (ISO 19101:2002)
 
