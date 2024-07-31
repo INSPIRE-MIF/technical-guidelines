@@ -5817,20 +5817,20 @@ GeoSciML v 4.1 is the community developed exchange format for providing detailed
 ===== Default encoding(s) for application schema Hydrogeology
 
 *Name: Hydrogeology GML Application Schema*
-Version: version 3.0,
+Version: 4.0,
 Specification: D2.8.II.4 Data Specification on _Geology_ – Technical Guidelines
 Character set: UTF-8
 
-The xml schema document is available on the INSPIRE website _http://inspire.ec.europa.eu/schemas/ge_hg/3.0/Hydrogeology.xsd_
+The xml schema document is available on the INSPIRE website _https://inspire.ec.europa.eu/schemas/ge_hg/4.0/HydrogeologyCore.xsd_
 
 ===== Default encoding(s) for application schema Geophysics
 
 *Name: Geology GML Application Schema*
-Version: version 3.0,
+Version: 4.0,
 Specification: D2.8.II.4 Data Specification on _Geology_ – Technical Guidelines
 Character set: UTF-8
 
-The xml schema document is available on the INSPIRE website _http://inspire.ec.europa.eu/schemas/ge_gp/3.0/Geophysics.xsd_
+The xml schema document is available on the INSPIRE website _https://inspire.ec.europa.eu/schemas/ge_gp/4.0/GeophysicsCore.xsd_
 
 ==== Recommended Encoding(s)
 
@@ -5845,11 +5845,11 @@ It is recommended that also the encodings specified in this section be provided 
 ===== The use of inspire.ec.europa.eu/schemas/ge-core/4.0/GeologyCore.xsd encoding
 
 *Name: Geology GML Application Schema*
-Version: version 43.0,
-Specification: D2.8.II.4 Data Specification on Geology – Technical Guidelines Character set: UTF-8
+Version: 4.0,
+Specification: D2.8.II.4 Data Specification on _Geology_ – Technical Guidelines Character set: UTF-8
 
 The xml schema document is available on the INSPIRE website
-_http://inspire.ec.europa.eu/schemas/ge-core/43.0/GeologyCore.xsd_
+_https://inspire.ec.europa.eu/schemas/ge-core/4.0/GeologyCore.xsd_
 
 
 === Options for delivering coverage data
