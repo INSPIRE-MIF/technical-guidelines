@@ -23,30 +23,40 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.I.5 Data Specification on Addresses – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Addresses
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Addresses
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[logo_ce-en-rvb-lr,width=131,height=90]
 
 image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE** *Infrastructure for Spatial Information in Europe*
 
 [discrete]
-= D2.8.I.5 Data Specification on Addresses – Technical Guidelines
+= D2.8.I.5 Data Specification on _Addresses_ – Technical Guidelines
 
 [width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.I.5 Data Specification on _Addresses_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Addresses_
-|*Date* |2014-03-07
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Addresses_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Addresses_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Addresses_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.I.5_v3.1
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/ad[D2.8.I.5_v3.2.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
 
 <<<
@@ -393,7 +403,7 @@ Although these postal designators originally were intended solely for the use of
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |NUTS |Nomenclature of Territorial Units for Statistics – the Statistical Regions of the EU
 |PO |Post Office
@@ -1363,7 +1373,7 @@ If life-cycle information and or validity status is maintained, the data provide
 |===
 |*Address*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !An identification of the fixed location of property by means of a structured composition of geographic names and identifiers.
 !Description: !NOTE 1 The spatial object, referenced by the address, is defined as the "addressable object". The addressable object is not within the application schema, but it is possible to represent the address' reference to a cadastral parcel or a building through associations. It should, however, be noted that in different countries and regions, different traditions and/or regulations determine which object types should be regarded as addressable objects. 
@@ -1385,7 +1395,7 @@ EXAMPLE 3 Addresses can be represented differently. In a human readable form an 
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the address.
@@ -1403,7 +1413,7 @@ Version identifier: 12-02-2008T10:05:0101:00
 a|
 *Attribute: alternativeIdentifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !External, thematic identifier of the address spatial object, which enables interoperability with existing legacy systems or applications.
@@ -1419,7 +1429,7 @@ EXAMPLE In Denmark many legacy systems (e.g. in the Statistics Denmark or the Ce
 a|
 *Attribute: position*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicPosition
 !Definition: !Position of a characteristic point which represents the location of the address according to a certain specification, including information on the origin of the position.
@@ -1429,7 +1439,7 @@ a|
 a|
 *Attribute: status*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !StatusValue
 !Definition: !Validity of the address within the life-cycle (version) of the address spatial object.
@@ -1441,7 +1451,7 @@ a|
 a|
 *Attribute: locator*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !AddressLocator
 !Definition: !Human readable designator or name.
@@ -1451,7 +1461,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time of which this version of the address was or will be valid in the real world.
@@ -1463,7 +1473,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the address ceased or will cease to exist in the real world.
@@ -1474,7 +1484,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1486,7 +1496,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1498,7 +1508,7 @@ a|
 a|
 *Association role: component*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !AddressComponent
 !Definition: !Represents that the address component is engaged as a part of the address.
@@ -1509,7 +1519,7 @@ a|
 a|
 *Association role: parcel*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CadastralParcel
 !Definition: !Cadastral parcel that this address is assigned to or associated with.
@@ -1523,7 +1533,7 @@ EXAMPLE In the street "Wildersgade" in Copenhagen, Denmark, the address designat
 a|
 *Association role: parentAddress*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Address
 !Definition: !The main (parent) address with which this (sub) address is tightly connected.
@@ -1543,7 +1553,7 @@ EXAMPLE 3 In The Netherlands only one level of addresses exists.
 a|
 *Association role: building*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !building
 !Value type: !AbstractConstruction
@@ -1558,7 +1568,7 @@ EXAMPLE In Praha, The Czech Republic, the address designated "NaPankráci 1690/1
 a|
 *Constraint: AddressCountry*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !An address shall have an admin unit address component spatial object whose level is 1 (Country)
 !OCL: !inv: self.component -> forAll (a1 \| exists(a1.parent.oclIsTypeOf(AdminUnitName) and a1.parent.level=1))
@@ -1567,7 +1577,7 @@ a|
 a|
 *Constraint: AddressPosition*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !An address shall have exactly one default geographic position (default attribute of GeographicPosition must be true)
 !OCL: !inv: self.position -> one(a1 \| a1.default = true)
@@ -1576,7 +1586,7 @@ a|
 a|
 *Constraint: EndLifeSpanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If date set endLifespanVersion must be later than beginLifespanVersion (if set)
 !OCL: !inv: self.endLifespanVersion.isAfter(self.beginLifespanVersion)
@@ -1590,7 +1600,7 @@ a|
 |===
 |*AddressAreaName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !AddressComponent
 !Definition: !An address component which represents the name of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit.
@@ -1609,7 +1619,7 @@ EXAMPLE 3 In Denmark "Supplerende bynavn" (en: Supplementary town name) is somet
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !Proper noun applied to the address area.
@@ -1620,7 +1630,7 @@ a|
 a|
 *Association role: namedPlace*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !NamedPlace
 !Definition: !The named place that this address area name represents.
@@ -1639,7 +1649,7 @@ EXAMPLE The geographical name "Huskvarna", which represents a part of the munici
 |===
 |*AddressComponent (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Identifier or geographic name of a specific geographic area, location, or other spatial object which defines the scope of an address.
 !Description: !NOTE 1 Four different subclasses of address components are defined: 
@@ -1658,7 +1668,7 @@ EXAMPLE The combination of the locator "13" and the address components "Calle Ma
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the address component.
@@ -1676,7 +1686,7 @@ Version identifier: 12-02-2008T10:05:0101:00
 a|
 *Attribute: alternativeIdentifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !External, thematic identifier of the address component spatial object, which enables interoperability with existing legacy systems or applications.
@@ -1692,7 +1702,7 @@ EXAMPLE 2 In Denmark the four character municipal "road name code" (0001-9899) i
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1704,7 +1714,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1716,7 +1726,7 @@ a|
 a|
 *Attribute: status*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !StatusValue
 !Definition: !Validity of the address component within the life-cycle (version) of the address component spatial object.
@@ -1728,7 +1738,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time of which this version of the address component was or will be valid in the real world.
@@ -1740,7 +1750,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which the address component ceased or will cease to exist in the real world.
@@ -1751,7 +1761,7 @@ a|
 a|
 *Association role: situatedWithin*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !AddressComponent
 !Definition: !Another address component within which the geographic feature represented by this address component is situated.
@@ -1771,7 +1781,7 @@ EXAMPLE 2 In Denmark, several address area names entitled "Strandby" exists. In 
 a|
 *Constraint: EndLifeSpanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If date set endLifespanVersion must be later than beginLifespanVersion (if set)
 !OCL: !inv: self.endLifespanVersion .isAfter(self.beginLifespanVersion)
@@ -1785,7 +1795,7 @@ a|
 |===
 |*AdminUnitName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !AddressComponent
 !Definition: !An address component which represents the name of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance.
@@ -1795,7 +1805,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !Official, geographical name of the administrative unit, given in different languages where required.
@@ -1806,7 +1816,7 @@ a|
 a|
 *Attribute: level*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !AdministrativeHierarchyLevel
 !Definition: !The level of administration in the national administrative hierarchy.
@@ -1816,7 +1826,7 @@ a|
 a|
 *Association role: adminUnit*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !AdministrativeUnit
 !Definition: !The administrative unit that is the source of the content of the administrative unit name.
@@ -1833,7 +1843,7 @@ a|
 |===
 |*PostalDescriptor*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !AddressComponent
 !Definition: !An address component which represents the identification of a subdivision of addresses and postal delivery points in a country, region or city for postal purposes.
@@ -1860,7 +1870,7 @@ EXAMPLE 4 In Germany the lowest level of the Postal descriptor (the 5 digit Post
 a|
 *Attribute: postName*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.
@@ -1875,7 +1885,7 @@ NOTE 3 Even though the post name is the same as the name of an administrative un
 a|
 *Attribute: postCode*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !A code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.
@@ -1890,7 +1900,7 @@ EXAMPLE In the UK postcodes starting with W covers the Western (W1) and Paddingt
 a|
 *Constraint: PostCodeEmpty*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If no post code exists, a post name is required.
 !OCL: !inv: self.postCode->isEmpty() implies self.postName->notEmpty()
@@ -1899,7 +1909,7 @@ a|
 a|
 *Constraint: PostNameEmpty*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If no post name exists, a post code is required.
 !OCL: !inv: self.postName->isEmpty() implies self.postCode->notEmpty()
@@ -1913,7 +1923,7 @@ a|
 |===
 |*ThoroughfareName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !AddressComponent
 !Definition: !An address component which represents the name of a passage or way through from one location to another.
@@ -1926,7 +1936,7 @@ NOTE 2 Thoroughfare names includes names of squares and of cul de sacs, and they
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !Name of the thoroughfare.
@@ -1941,7 +1951,7 @@ NOTE 3 The data type also allows a representation of the thoroughfare name in se
 a|
 *Association role: transportLink*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !TransportLink
 !Definition: !One or several transport network links to which the spatial object of the thoroughfare name has been designated.
@@ -1960,7 +1970,7 @@ a|
 |===
 |*AddressLocator*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Human readable designator or name that allows a user or application to reference and distinguish the address from neighbour addresses, within the scope of a thoroughfare name, address area name, administrative unit name or postal designator, in which the address is situated.
 !Description: !NOTE 1 The most common locators are designators like an address number, building number or flat identifier as well as the name of the property, complex or building. 
@@ -1984,7 +1994,7 @@ EXAMPLE 4 Sometimes the building name is an alternative identifier to the addres
 a|
 *Attribute: designator*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LocatorDesignator
 !Definition: !A number or a sequence of characters that uniquely identifies the locator within the relevant scope(s).
@@ -1994,7 +2004,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LocatorName
 !Definition: !A geographic name or descriptive text associated to a property identified by the locator.
@@ -2011,7 +2021,7 @@ EXAMPLE In the address "Calle Santiago, 15, Elizondo-Baztán, Navarra, Spain" th
 a|
 *Attribute: level*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LocatorLevelValue
 !Definition: !The level to which the locator refers.
@@ -2021,7 +2031,7 @@ a|
 a|
 *Association role: withinScopeOf*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !AddressComponent
 !Definition: !The address component that defines the scope within which the address locator is assigned according to rules ensuring unambiguousness.
@@ -2041,7 +2051,7 @@ EXAMPLE 3 In the Czech Republic in some cities an address has two locator design
 a|
 *Constraint: DesignatorEmpty*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If no designator exists, a name is required.
 !OCL: !inv: self.designator->isEmpty() implies self.name->notEmpty()
@@ -2050,7 +2060,7 @@ a|
 a|
 *Constraint: NameEmpty*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If no name exists, a designator is required.
 !OCL: !inv: self.name->isEmpty() implies self.designator->notEmpty()
@@ -2064,7 +2074,7 @@ a|
 |===
 |*AddressRepresentation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Representation of an address spatial object for use in external application schemas that need to include the basic, address information in a readable way.
 !Description: !NOTE 1 The data type includes the all necessary readable address components as well as the address locator(s), which allows the identification of the address spatial objects, e.g., country, region, municipality, address area, post code, street name and address number. It also includes an optional reference to the full address spatial object. 
@@ -2076,7 +2086,7 @@ NOTE 2 The datatype could be used in application schemas that wish to include ad
 a|
 *Attribute: adminUnit*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance.
@@ -2086,7 +2096,7 @@ a|
 a|
 *Attribute: locatorDesignator*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !A number or a sequence of characters which allows a user or an application to interpret, parse and format the locator within the relevant scope. A locator may include more locator designators.
@@ -2096,7 +2106,7 @@ a|
 a|
 *Attribute: locatorName*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !Proper noun(s) applied to the real world entity identified by the locator.
@@ -2106,7 +2116,7 @@ a|
 a|
 *Attribute: addressArea*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit.
@@ -2117,7 +2127,7 @@ a|
 a|
 *Attribute: postName*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.
@@ -2128,7 +2138,7 @@ a|
 a|
 *Attribute: postCode*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !A code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.
@@ -2139,7 +2149,7 @@ a|
 a|
 *Attribute: thoroughfare*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !The name or names of a passage or way through from one location to another like a road or a waterway.
@@ -2150,7 +2160,7 @@ a|
 a|
 *Association role: addressFeature*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Address
 !Definition: !Reference to the address spatial object.
@@ -2166,7 +2176,7 @@ a|
 |===
 |*GeographicPosition*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The position of a characteristic point which represents the location of the address according to a certain specification, including information on the origin of the position.
 !Stereotypes: !«dataType»
@@ -2175,7 +2185,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Point
 !Definition: !The position of the point expressed in coordinates in the chosen spatial reference system.
@@ -2185,7 +2195,7 @@ a|
 a|
 *Attribute: specification*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeometrySpecificationValue
 !Definition: !Information defining the specification used to create or derive this geographic position of the address.
@@ -2196,7 +2206,7 @@ a|
 a|
 *Attribute: method*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeometryMethodValue
 !Definition: !Description of how and by whom the geographic position of the address was created or derived.
@@ -2208,7 +2218,7 @@ a|
 a|
 *Attribute: default*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Boolean
 !Definition: !Specifies whether or not this position should be considered as the default.
@@ -2224,7 +2234,7 @@ a|
 |===
 |*LocatorDesignator*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators.
 !Description: !NOTE 1 Locator designators are often assigned according to a set of commonly known rules which enables a user or application to "parse" the information: Address numbers are most often assigned in ascending order with odd and even numbers on each side of the thoroughfare. In a building, the floor identifier represents the level according to the traditions within the area, e.g., 1, 2, 3. 
@@ -2238,7 +2248,7 @@ EXAMPLE In Paris, France a locator could be composed by two locator designators:
 a|
 *Attribute: designator*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !The identifying part of the locator designator composed by one or more digits or other characters.
@@ -2251,7 +2261,7 @@ EXAMPLE Address number "2065", Address number suffix "B", Floor identifier "7" d
 a|
 *Attribute: type*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LocatorDesignatorTypeValue
 !Definition: !The type of locator value, which enables an application to interpret, parse or format it according to certain rules.
@@ -2267,7 +2277,7 @@ a|
 |===
 |*LocatorName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Proper noun applied to the real world entity identified by the locator.
 !Description: !NOTE The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.
@@ -2277,7 +2287,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !The identifying part of the locator name.
@@ -2300,7 +2310,7 @@ EXAMPLE 3 "Multi-storey car park at Southampton Magistrates Courts" in Southampt
 a|
 *Attribute: type*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LocatorNameTypeValue
 !Definition: !The type of locator value, which enables an application to interpret, parse or format it according to certain rules.
@@ -2316,7 +2326,7 @@ a|
 |===
 |*PartOfName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A part of the full name resulting from the subdivision of the thoroughfare name into separate, semantic parts, using the same language and script as the full thoroughfare name.
 !Description: !NOTE Each part of the name must be qualified by using the type attribute.
@@ -2326,7 +2336,7 @@ a|
 a|
 *Attribute: part*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !The character string that expresses the separate part of the name using the same language and script as the full thoroughfare name.
@@ -2336,7 +2346,7 @@ a|
 a|
 *Attribute: type*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !PartTypeValue
 !Definition: !A classification of the part of name according to its semantics (meaning) in the complete thoroughfare name.
@@ -2351,7 +2361,7 @@ a|
 |===
 |*ThoroughfareNameValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Proper noun applied to thoroughfare optionally including a subdivision of the name into parts.
 !Description: !NOTE 1 The data type allows names in different languages and scripts as well as inclusion of alternative name, alternative spellings, historical name and exonyms. 
@@ -2363,7 +2373,7 @@ NOTE 2 The data type allows optionally a representation of the thoroughfare name
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !Proper noun applied to the thoroughfare.
@@ -2376,7 +2386,7 @@ NOTE 2 The data type allows names in different languages as well as inclusion of
 a|
 *Attribute: nameParts*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !PartOfName
 !Definition: !One or several parts into which the thoroughfare name can be subdivided.
@@ -2403,7 +2413,7 @@ EXAMPLE In France the thoroughfare name "Avenue de la Poste" could be subdivided
 |===
 |*GeometryMethodValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Description of how and by whom this geographic position of the address was created or derived.
 !Description: !NOTE Information on what type of spatial feature the geographic position of the address was created or derived from, is represented by the GeometrySpecificationValue.
@@ -2420,7 +2430,7 @@ a|
 |===
 |*GeometrySpecificationValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Information defining the specification used to create or derive this geographic position of the address.
 !Description: !NOTE 1 Multiple address points can be derived from one polygon spatial object. 
@@ -2443,7 +2453,7 @@ EXAMPLE 2 Each point position is unique within the polygon to be able to visuall
 |===
 |*LocatorDesignatorTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Description of the semantics of the locator designator.
 !Extensibility: !none
@@ -2459,7 +2469,7 @@ a|
 |===
 |*LocatorLevelValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The level to which the locator refers.
 !Description: !NOTE The locator level attribute enables the comparison of locators from different countries. 
@@ -2478,7 +2488,7 @@ EXAMPLE In The Netherlands a single locator, the address number, identifies a dw
 |===
 |*LocatorNameTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Description of the semantics of the locator name.
 !Extensibility: !none
@@ -2494,7 +2504,7 @@ a|
 |===
 |*PartTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A classification of the part of name according to its semantics in the complete thoroughfare name.
 !Extensibility: !none
@@ -2510,7 +2520,7 @@ a|
 |===
 |*StatusValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Current validity of the real world address or address component.
 !Description: !NOTE 1 This element enables the application schema to represent a full life-cycle of an address and address component, from proposed to reserved, current and retired, or even alternative. 
@@ -2533,7 +2543,7 @@ This section lists definitions for feature types, data types and enumerations an
 |===
 |*AbstractConstruction (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !BuildingsBase
 !Reference: !INSPIRE Data specification on Buildings [DS-D2.8.III.2]
@@ -2549,7 +2559,7 @@ a|
 |===
 |*AdministrativeHierarchyLevel*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !AdministrativeUnits
 !Reference: !INSPIRE Data specification on Administrative Units [DS-D2.8.I.4]
@@ -2564,7 +2574,7 @@ a|
 |===
 |*AdministrativeUnit*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !AdministrativeUnits
 !Reference: !INSPIRE Data specification on Administrative Units [DS-D2.8.I.4]
@@ -2579,7 +2589,7 @@ a|
 |===
 |*Boolean*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Truth
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2593,7 +2603,7 @@ a|
 |===
 |*CadastralParcel*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !CadastralParcels
 !Reference: !INSPIRE Data specification on Cadastral Parcels [DS-D2.8.I.6]
@@ -2611,7 +2621,7 @@ NOTE As much as possible, in the INSPIRE context, cadastral parcels should be fo
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2625,7 +2635,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2639,7 +2649,7 @@ a|
 |===
 |*GM_Point*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -2653,7 +2663,7 @@ a|
 |===
 |*GeographicalName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geographical Names
 !Reference: !INSPIRE Data specification on Geographical Names [DS-D2.8.I.3]
@@ -2668,7 +2678,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2688,7 +2698,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*NamedPlace*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geographical Names
 !Reference: !INSPIRE Data specification on Geographical Names [DS-D2.8.I.3]
@@ -2703,7 +2713,7 @@ a|
 |===
 |*TransportLink (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Common Transport Elements
 !Reference: !INSPIRE Data specification on Transport Networks [DS-D2.8.I.7]
@@ -6430,7 +6440,7 @@ a|
 a|
 byAdministrator
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !by administrator
 !Definition: !Decided and recorded manually by the official body responsible for address allocation or by the dataset custodian.
@@ -6439,7 +6449,7 @@ byAdministrator
 a|
 byOtherParty
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !by other party
 !Definition: !Decided and recorded manually by another party.
@@ -6448,7 +6458,7 @@ byOtherParty
 a|
 fromFeature
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !from feature
 !Definition: !Derived automatically from another INSPIRE spatial object which is related to the address or address component.
@@ -6483,7 +6493,7 @@ EXAMPLE 2 Each point position is unique within the polygon to be able to visuall
 a|
 addressArea
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !address area
 !Definition: !Position derived from the related address area.
@@ -6492,7 +6502,7 @@ addressArea
 a|
 adminUnit1stOrder
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !admin unit 1st order
 !Definition: !Position derived from the related administrative unit of 1st order.
@@ -6501,7 +6511,7 @@ adminUnit1stOrder
 a|
 adminUnit2ndOrder
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !admin unit 2nd order
 !Definition: !Position derived from the related administrative unit of 2nd order.
@@ -6510,7 +6520,7 @@ adminUnit2ndOrder
 a|
 adminUnit3rdOrder
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !admin unit 3rd order
 !Definition: !Position derived from the related administrative unit of 3rd order.
@@ -6519,7 +6529,7 @@ adminUnit3rdOrder
 a|
 adminUnit4thOrder
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !admin unit 4th order
 !Definition: !Position derived from the related administrative unit of 4th order.
@@ -6528,7 +6538,7 @@ adminUnit4thOrder
 a|
 adminUnit5thOrder
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !admin unit 5th order
 !Definition: !Position derived from the related administrative unit of 5th order.
@@ -6537,7 +6547,7 @@ adminUnit5thOrder
 a|
 adminUnit6thOrder
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !admin unit 6th order
 !Definition: !Position derived from the related administrative unit of 6th order.
@@ -6546,7 +6556,7 @@ adminUnit6thOrder
 a|
 building
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !building
 !Definition: !Position aims at identifying the related building.
@@ -6555,7 +6565,7 @@ building
 a|
 entrance
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !entrance
 !Definition: !Position aims at identifying the entrance door or gate.
@@ -6564,7 +6574,7 @@ entrance
 a|
 parcel
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !parcel
 !Definition: !Position aims at identifying the related land parcel.
@@ -6573,7 +6583,7 @@ parcel
 a|
 postalDelivery
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !postal delivery
 !Definition: !Position aims at identifying a postal delivery point.
@@ -6582,7 +6592,7 @@ postalDelivery
 a|
 postalDescriptor
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !postal descriptor
 !Definition: !Position derived from the related postcode area.
@@ -6591,7 +6601,7 @@ postalDescriptor
 a|
 segment
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !segment
 !Definition: !Position derived from the related segment of a thoroughfare.
@@ -6600,7 +6610,7 @@ segment
 a|
 thoroughfareAccess
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !thoroughfare access
 !Definition: !Position aims at identifying the access point from the thoroughfare.
@@ -6609,7 +6619,7 @@ thoroughfareAccess
 a|
 utilityService
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !utility service
 !Definition: !Position aims at identifying a point of utility service.
@@ -6637,7 +6647,7 @@ a|
 a|
 *addressIdentifierGeneral*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !address identifier general
 !Definition: !Address identifier composed by numbers and/or characters.
@@ -6646,7 +6656,7 @@ a|
 a|
 *addressNumber*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !address number
 !Definition: !Address identifier composed only by numbers.
@@ -6655,7 +6665,7 @@ a|
 a|
 *addressNumber2ndExtension*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !address number 2nd extension
 !Definition: !Second extension to the address number.
@@ -6664,7 +6674,7 @@ a|
 a|
 *addressNumberExtension*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !address number extension
 !Definition: !Extension to the address number.
@@ -6673,7 +6683,7 @@ a|
 a|
 *buildingIdentifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !building identifier
 !Definition: !Building identifier composed by numbers and/or characters.
@@ -6682,7 +6692,7 @@ a|
 a|
 *buildingIdentifierPrefix*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !building identifier prefix
 !Definition: !Prefix to the building number.
@@ -6691,7 +6701,7 @@ a|
 a|
 *cornerAddress1stIdentifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !corner address 1st identifier
 !Definition: !Address identifier related to the primary thoroughfare name in a corner address.
@@ -6700,7 +6710,7 @@ a|
 a|
 *cornerAddress2ndIdentifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !corner address 2nd identifier
 !Definition: !Address identifier related to the secondary thoroughfare name in a corner address.
@@ -6709,7 +6719,7 @@ a|
 a|
 *entranceDoorIdentifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !entrance door identifier
 !Definition: !Identifier for an entrance door, entrance gate, or covered entranceway.
@@ -6718,7 +6728,7 @@ a|
 a|
 *floorIdentifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !floor identifier
 !Definition: !Identifier of a floor or level inside a building.
@@ -6727,7 +6737,7 @@ a|
 a|
 *kilometrePoint*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !kilometre point
 !Definition: !A mark on a road whose number identifies the existing distance between the origin point of the road and that mark, measured along the road.
@@ -6736,7 +6746,7 @@ a|
 a|
 *postalDeliveryIdentifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !postal delivery identifier
 !Definition: !Identifier of a postal delivery point.
@@ -6745,7 +6755,7 @@ a|
 a|
 *staircaseIdentifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !staircase identifier
 !Definition: !Identifier for a staircase, normally inside a building.
@@ -6754,7 +6764,7 @@ a|
 a|
 *unitIdentifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !unit identifier
 !Definition: !Identifier of a door, dwelling, suite or room inside a building.
@@ -6785,7 +6795,7 @@ EXAMPLE In The Netherlands a single locator, the address number, identifies a dw
 a|
 *accessLevel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !access level
 !Definition: !The locator identifies a specific access to a plot of land, building or similar by use of an entrance number or similar identifier.
@@ -6794,7 +6804,7 @@ a|
 a|
 *postalDeliveryPoint*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !postal delivery point
 !Definition: !The locator identifies a postal delivery point.
@@ -6803,7 +6813,7 @@ a|
 a|
 *siteLevel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !site level
 !Definition: !The locator identifies a specific plot of land, building or similar property by use of an address number, building number, building or property name.
@@ -6812,7 +6822,7 @@ a|
 a|
 *unitLevel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !unit level
 !Definition: !The locator identifies a specific part of a building.
@@ -6840,7 +6850,7 @@ a|
 a|
 *buildingName*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !building name
 !Definition: !Name of building or part of building.
@@ -6849,7 +6859,7 @@ a|
 a|
 *descriptiveLocator*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !descriptive locator
 !Definition: !Narrative, textual description of the location or addressable object.
@@ -6858,7 +6868,7 @@ a|
 a|
 *roomName*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !room name
 !Definition: !Identifier of a dwelling, suite or room inside a building.
@@ -6867,7 +6877,7 @@ a|
 a|
 *siteName*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !site name
 !Definition: !Name of real estate, building complex or site.
@@ -6895,7 +6905,7 @@ a|
 a|
 *name*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !name
 !Definition: !The part of name constitutes the core or root of the thoroughfare name.
@@ -6904,7 +6914,7 @@ a|
 a|
 *namePrefix*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !name prefix
 !Definition: !The part of name is used to separate connecting words without sorting significance from the core of the thoroughfare name.
@@ -6913,7 +6923,7 @@ a|
 a|
 *qualifier*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !qualifier
 !Definition: !The part of name qualifies the thoroughfare name.
@@ -6922,7 +6932,7 @@ a|
 a|
 *type*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !type
 !Definition: !The part of name indicates the category or type of thoroughfare.
@@ -6953,7 +6963,7 @@ NOTE 2 The status value relates to the real world address or address component a
 a|
 *alternative*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !alternative
 !Definition: !An address or address component in common use but different from the master address or address component as determined by the official body responsible for address allocation or by the dataset custodian.
@@ -6962,7 +6972,7 @@ a|
 a|
 *current*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !current
 !Definition: !Current and valid address or address component according to official body responsible for address allocation or deemed, by the dataset custodian, to be the most appropriate, commonly used address.
@@ -6971,7 +6981,7 @@ a|
 a|
 *proposed*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !proposed
 !Definition: !An address or address component awaiting approval by the dataset custodian or official body responsible for address allocation.
@@ -6980,7 +6990,7 @@ a|
 a|
 *reserved*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !reserved
 !Definition: !An address or address component approved by the official body responsible for address allocation or by the dataset custodian, but yet to be implemented.
@@ -6989,7 +6999,7 @@ a|
 a|
 *retired*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !retired
 !Definition: !An address or address component no longer in every day use or abolished by the official body responsible for address allocation or by the dataset custodian.
