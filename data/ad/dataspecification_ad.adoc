@@ -18,9 +18,10 @@
 // Section numbering level depth
 :sectnumlevels: 8
 
-// Line Break Doc Title
-:hardbreaks-option:
+// Line Break Doc Titlehttps://inspire.ec.europa.eu/schemas/ge-core/4.0/GeologyCore.xsdversion 3.0
 
+:hardbreaks-option:
+https://inspire.ec.europa.eu/schemas/ge-core/4.0/GeologyCore.xsd
 :appendix-caption: Annex
 
 // Document properties
@@ -3872,11 +3873,11 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 ===== Default encoding(s) for application schema Addresses
 
 *Name: Addresses GML Application Schema*
-Version: version 3.0, GML version 3.2.1
+Version: 4.1, GML version 3.2.1
 Specification: D2.8.I.5 Data Specification on Addresses – Technical Guidelines
 Character set: UTF-8
 
-The xml schema document is available from _http://inspire.ec.europa.eu/schemas/ad/3.0/Addresses.xsd._
+The xml schema document is available from _http://inspire.ec.europa.eu/schemas/ad/4.0/Addresses.xsd._
 
 ====== Encoding rules used
 
