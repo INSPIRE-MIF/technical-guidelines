@@ -1268,7 +1268,7 @@ EXAMPLE Height, depth.
 |Definition: |Code list type which determines the elevation surface with regard to its relative adherence to the Earth's bare surface.
 |Description: |EXAMPLE DTM and DSM.
 |Extensibility: |none
-|Identifier |http://inspire.ec.europa.eu/codelist/SurfaceType
+|Identifier |http://inspire.ec.europa.eu/codelist/SurfaceTypeValue
 |Value: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 |===
 
