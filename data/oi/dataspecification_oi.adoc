@@ -2483,7 +2483,7 @@ The table contains the following information:
 |10.3 |Metadata language |1 |
 |===
 
-Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
+Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
 
 ==== Conformity
 
@@ -2823,7 +2823,7 @@ referenceSystemIdentifier:
 |Implementing instructions |
 |Example a|
 name: Orthoimagery GML application schema
-version: version 3.0, GML, version 3.2.1
+version: 4.0, GML, version 3.2.1
 specification: D2.8.II.3 Data Specification on _Orthoimagery_ –
 Technical Guidelines
 |Example XML encoding a|
@@ -3361,11 +3361,11 @@ The proposed default encoding(s) meet the requirements in Article 7 of the IRs, 
 ===== Default encodings for application schema Orthoimagery
 
 *Name: Orthoimagery GML Application Schema*
-Version: version 3.0
+Version: 4.0
 Specification: D2.8.II.3 Data Specification on _Orthoimagery_ – Technical Guidelines
 Character set: UTF-8
 
-The xml schema document is available on the INSPIRE website http://inspire.ec.europa.eu.
+The xml schema document is available on the INSPIRE website https://inspire.ec.europa.eu/schemas/oi/4.0/Orthoimagery.xsd.
 
 *Name: GML Application Schema for Coverages (for the coverage domain)*
 Version: version 1.0.0
@@ -3807,11 +3807,11 @@ No other recommended style.
 
 [DGIWG-108] DGIWG-108, GeoTIFF Profile for Georeferenced Imagery, edition 1.1.1
 
-[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf_
+[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en_
 
 [DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.3, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.5_v3.3.pdf_
 
-[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf_
+[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en_
 
 [DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.2, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.7_v3.2.pdf_
 

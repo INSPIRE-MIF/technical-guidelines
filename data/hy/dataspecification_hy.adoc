@@ -3068,23 +3068,9 @@ a|
 [cols=","]
 !===
 !Definition: !A code list type specifying a set of hydrographic 'origin' categories (natural, man-made) for various hydrographic objects.
-!URI: !
+!URI: !http://inspire.ec.europa.eu/codelist/OriginValue
 !===
 
-a|
-[cols=","]
-!===
-!Value: !*natural*
-!Definition: !An indication that a spatial object is natural.
-!===
-
-a|
-[cols=","]
-!===
-!Value: !*manMade*
-!Definition: !An indication that a spatial object is man-made.
-!Description: !SOURCE [DFDD].
-!===
 
 |===
 
@@ -4187,7 +4173,7 @@ The table contains the following information:
 |10.3 |Metadata language |1 |
 |===
 
-Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
+Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
 
 ==== Conformity
 
@@ -4532,7 +4518,7 @@ codeSpace: INSPIRE RS registry
 |Implementing instructions |
 |Example a|
 name: <Application schema name> GML application schema
-version: version 3.1rc1
+version: 4.0
 specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelines
 |Example XML encoding a|
 [source, xml]
@@ -4541,7 +4527,7 @@ specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelin
 		<gco:CharacterString>SomeApplicationSchema GML application schema</gco:CharacterString>
 	</gmd:name>
 	<gmd:version>
-		<gco:CharacterString>3.1rc1</gco:CharacterString>
+		<gco:CharacterString>4.0</gco:CharacterString>
 	</gmd:version>
 	<gmd:specification>
 		<gco:CharacterString>D2.8.I.8 Data Specification on Hydrography – Technical Guidelines</gco:CharacterString>
@@ -4949,11 +4935,11 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 ===== Default encoding(s) for application schema Hydro - base
 
 *Name: Hydro - base Application Schema*
-Version: version 3.0,
+Version: 5.0
 Specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelines
 Character set: UTF-8
 
-The xml schema document is available from _http://inspire.ec.europa.eu/schemas/hy/3.0/HydroBase.xsd_.
+The xml schema document is available from _https://inspire.ec.europa.eu/schemas/hy/5.0/HydroBase.xsd_.
 
 |===
 *Open issue 3:* In the amendment of the Implementing Rules, a number of changes have been introduced to the Annex I data models.
@@ -4975,13 +4961,13 @@ NOTE Annex B of [DS-D2.7], version 3.3, requires that the "encoding rule specifi
 ===== Default encoding(s) for application schema Hydro – Physical Waters
 
 *Name: Hydro – Physical Waters Application Schema*
-Version: version 3.0,
+Version: 5.0
 Specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelines
 Character set: UTF-8
 
 The xml schema document is available from
 
-_http://inspire.ec.europa.eu/schemas/hy-p/3.0/PhysicalWaters.xsd_.
+_https://inspire.ec.europa.eu/schemas/hy-p/5.0/HydroPhysicalWaters.xsd_.
 
 |===
 *Open issue 4*:In the amendment of the Implementing Rules, a number of changes have been introduced to the Annex I data models.
@@ -5000,13 +4986,13 @@ NOTE Annex B of [DS-D2.7], version 3.3, requires that the "encoding rule specifi
 ===== Default encoding(s) for application schema Hydro - Network
 
 *Name: Hydro – Network Application Schema*
-Version: version 3.0
+Version: 4.0
 Specification: D2.8.I.8 Data Specification on Hydrography – Technical Guidelines
 Character set: UTF-8
 
 The xml schema document is available from
 
-_http://inspire.ec.europa.eu/schemas/hy-n/3.1/HydroNetwork.xsd_.
+_https://inspire.ec.europa.eu/schemas/hy-n/4.0/HydroNetwork.xsd_.
 
 ====== Encoding rules used
 

@@ -1268,7 +1268,7 @@ EXAMPLE Height, depth.
 |Definition: |Code list type which determines the elevation surface with regard to its relative adherence to the Earth's bare surface.
 |Description: |EXAMPLE DTM and DSM.
 |Extensibility: |none
-|Identifier |http://inspire.ec.europa.eu/codelist/SurfaceType
+|Identifier |http://inspire.ec.europa.eu/codelist/SurfaceTypeValue
 |Value: |The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 |===
 
@@ -4014,7 +4014,7 @@ The table contains the following information:
 |10.3 |Metadata language |1 |
 |===
 
-Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
+Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
 
 ==== Conformity
 
@@ -4384,7 +4384,7 @@ codeSpace: INSPIRE RS registry
 |Example a|
 name: Elevation GML application schema
 
-version: version 3.0(.3), GML, version 3.2.1
+version: 4.0, GML, version 3.2.1
 
 specification: D2.8.II.II Data Specification on Elevation –
 
@@ -4398,7 +4398,7 @@ Technical Guidelines
 		<gco:CharacterString> Elevation GML application schema</gco:CharacterString>
 	</gmd:name>
 	<gmd:version>
-		<gco:CharacterString>3.0(.3), GML, version 3.2.1</gco:CharacterString>
+		<gco:CharacterString>4.0</gco:CharacterString>
 	</gmd:version>
 	<gmd:specification>
 		<gco:CharacterString>D2.8.II.II Data Specification on Elevation – Technical Guidelines</gco:CharacterString>
@@ -4952,13 +4952,13 @@ Data related to the theme _Elevation_ shall be made available in at least the en
 
 *Name: _ElevationGridCoverage_ GML Application Schema*
 
-Version: version 3.0,
+Version: 5.0
 
 Specification: D2.8.*II*.1 Data Specification on _Elevation_ – Technical Guidelines
 
 Character set: UTF-8
 
-The xml schema document is available on the INSPIRE website http://inspire.jrc.ec.europa.eu/schemas/el-bas/3.0rc3/ElevationBaseTypes.xsd
+The xml schema document is available on the INSPIRE website _https://inspire.ec.europa.eu/schemas/el-cov/5.0/ElevationGridCoverage.xsd_
 
 *Name: GML Application Schema for Coverages (for the coverage domain)*
 
@@ -5116,7 +5116,7 @@ Table 6. Mappings between conceptual UML classes and the associated GML object e
 
 *Name: _ElevationVectorElements_ GML Application Schema*
 
-Version: version 3.0,
+Version: 5.0
 
 Specification: D2.8.II.1 Data Specification on _Elevation_ – Technical Guidelines
 
@@ -5124,7 +5124,7 @@ Character set: UTF-8
 
 The GML Application Schema is distributed in a zip-file separately from the data specification document.
 
-The xml schema document is available on the INSPIRE website http://inspire.ec.europa.eu
+The xml schema document is available on the INSPIRE website https://inspire.ec.europa.eu/schemas/el-vec/5.0/ElevationVectorElements.xsd
 
 ====== Encoding rules used
 
@@ -5136,8 +5136,7 @@ NOTE Annex B of [DS-D2.7], version 3.3rc2, requires that the "encoding rule spec
 
 *Name: _ElevationTIN_ GML Application Schema*
 
-Version: version 3.0,
-
+Version: 5.0
 Specification: D2.8.II.1 Data Specification on _Elevation_ – Technical Guidelines
 
 Character set: UTF-8
@@ -5146,7 +5145,7 @@ The GML Application Schema is distributed in a zip-file separately from the data
 
 NOTE GML allows the encoding of TINs through the use of GML TIN.
 
-The xml schema document is available on the INSPIRE website http://inspire.ec.europa.eu
+The xml schema document is available on the INSPIRE website https://inspire.ec.europa.eu/schemas/el-tin/5.0/ElevationTin.xsd
 
 ====== Encoding rules used
 
@@ -6114,13 +6113,13 @@ image::./media/image34.jpeg[image]
 
 [BAG V1] Open Navigation Surface - Format Specification Document - Description of Bathymetric Attributed Grid Object (BAG), Version 1.0.0, 2006-04-07 - Open Navigation Surface Working Group (ONSWG)
 
-[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf_
+[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en_
 
-[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.3, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3_3.pdf_
+[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.3, _https://knowledge-base.inspire.ec.europa.eu/publications/inspire-generic-conceptual-model_en_
 
-[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf_
+[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en_
 
-[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.2.pdf_
+[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.2, _https://knowledge-base.inspire.ec.europa.eu/publications/guidelines-encoding-spatial-data_en_
 
 [ENGO 573] Digital Terrain Modelling – ENGO 573, University of Calgary, Naser El-Sheimy (Geomatics Engineering Department), September 1999
 

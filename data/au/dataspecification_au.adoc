@@ -3190,7 +3190,7 @@ The table contains the following information:
 |10.3 |Metadata language |1 |
 |===
 
-Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
+Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
 
 ==== Conformity
 
@@ -3538,7 +3538,7 @@ referenceSystemIdentifier:
 |Example a|
 name: <Application schema name> GML application schema
 
-version: version 3.1rc1
+version: 4.0
 
 specification: D2.8.I.4 Data Specification on Administrative Units – Technical Guidelines
 
@@ -3549,7 +3549,7 @@ specification: D2.8.I.4 Data Specification on Administrative Units – Technical
 		<gco:CharacterString>SomeApplicationSchema GML application schema</gco:CharacterString>
 	</gmd:name>
 	<gmd:version>
-		<gco:CharacterString>3.1rc1</gco:CharacterString>
+		<gco:CharacterString>4.0</gco:CharacterString>
 	</gmd:version>
 	<gmd:specification>
 		<gco:CharacterString>D2.8.I.4 Data Specification on Administrative Units – Technical Guidelines</gco:CharacterString>
@@ -3904,7 +3904,7 @@ Data related to the theme Administrative Units shall be made available in at lea
 
 *Name: AdministrativeUnits GML Application Schema*
 
-Version: version 3.1
+Version: 5.0
 
 Specification: D2.8.I.4 Data Specification on Administrative Units – Technical Guidelines
 
@@ -3912,7 +3912,7 @@ Character set: UTF-8
 
 The xml schema document is available from:
 
-_http://inspire.ec.europa.eu/schemas/au/3.1/AdministrativeUnits.xsd_
+_https://inspire.ec.europa.eu/schemas/au/5.0/AdministrativeUnits.xsd_
 
 
 ====
@@ -3934,7 +3934,7 @@ NOTE Annex B of [DS-D2.7], version 3.3rc3, requires that the "encoding rule spec
 
 *Name: MaritimeUnits GML Application Schema*
 
-Version: version 3.1
+Version: 4.0
 
 Specification: D2.8.I.4 Data Specification on Administrative Units – Technical Guidelines
 
@@ -3942,7 +3942,7 @@ Character set: UTF-8
 
 The xml schema document is available from:
 
-http://inspire.ec.europa.eu/schemas/au-mu/3.1/MaritimeUnits.xsd
+_https://inspire.ec.europa.eu/schemas/mu/4.0/MaritimeUnits.xsd_
 
 ====== Encoding rules used
 
@@ -4555,13 +4555,13 @@ No other styles are recommended for the spatial data theme Administrative Units.
 URL : http://www.eionet.europa.eu/gis/docs/EEA_GISguide_v2.doc
 
 
-[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf
+[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en
 
-[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.4rc2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3.4rc2.pdf_
+[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.4rc2, _https://knowledge-base.inspire.ec.europa.eu/publications/inspire-generic-conceptual-model_en_
 
-[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf
+[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en
 
-[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.3rc2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.3rc2.pdf_
+[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.3rc2, _https://knowledge-base.inspire.ec.europa.eu/publications/guidelines-encoding-spatial-data_en_
 
 [DS-D2.8.I.3] INSPIRE DS-D2.8.I.3, INSPIRE data specification on Geographical names – Guidelines, v3.0
 

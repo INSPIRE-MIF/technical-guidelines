@@ -7679,7 +7679,7 @@ The table contains the following information:
 |10.3 |Metadata language |1 |
 |===
 
-Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
+Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
 
 ==== Conformity
 
@@ -8042,7 +8042,7 @@ a|
 |Implementing instructions |
 |Example a|
 name: <Application schema name> GML application schema
-version: version 3.2rc1
+version: 5.0
 specification: D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
 
 |Example XML encoding a|
@@ -8052,7 +8052,7 @@ specification: D2.8.I.7 Data Specification on Transport Networks – Technical G
 		<gco:CharacterString>SomeApplicationSchema GML application schema</gco:CharacterString>
 	</gmd:name>
 	<gmd:version>
-		<gco:CharacterString>3.2rc1</gco:CharacterString>
+		<gco:CharacterString>5.0</gco:CharacterString>
 	</gmd:version>
 	<gmd:specification>
 		<gco:CharacterString>D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines</gco:CharacterString>
@@ -8415,11 +8415,11 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 ===== Default encoding(s) for application schema Common Transport Elements
 
 *Name: Common Transport Elements GML Application Schema*
-Version: version 3.0
+Version: 5.0
 Specification: D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
 Character set: UTF-8
 
-The xml schema document is available from _http://inspire.ec.europa.eu/schemas/tn/3.0/CommonTransportElements.xsd_
+The xml schema document is available from _http://inspire.ec.europa.eu/schemas/tn/5.0/CommonTransportElements.xsd_
 
 ====== Encoding rules used
 
@@ -8430,12 +8430,12 @@ NOTE Annex B of [DS-D2.7], version 3.3rc3, requires that the "encoding rule spec
 ===== Default encoding(s) for application schema Road transport Elements
 
 *Name: Road Transport Elements GML Application Schema*
-Version: version 3.0
+Version: 5.0
 Specification: D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
 Character set: UTF-8
 
 The xml schema document is available from
-_http://inspire.ec.europa.eu/schemas/tn-ro/3.0/RoadTransportNetwork.xsd_
+_http://inspire.ec.europa.eu/schemas/tn-ro/5.0/RoadTransportNetwork.xsd_
 
 ====== Encoding rules used
 
@@ -8446,11 +8446,11 @@ NOTE Annex B of [DS-D2.7], version 3.3rc3, requires that the "encoding rule spec
 ===== Default encoding(s) for application schema Rail Transport Elements
 
 *Name: Rail Transport Elements GML Application Schema*
-Version: version 3.0
+Version: 5.0
 Specification: D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
 Character set: UTF-8
 
-The xml schema document is available from _http://inspire.jrc.ec.europa.eu/schemas/tn-ra/3.0/RailwayTransportNetwork.xsd_
+The xml schema document is available from _https://inspire.ec.europa.eu/schemas/tn-ra/5.0/RailwayTransportNetwork.xsd_
 
 ====== Encoding rules used
 
@@ -8461,12 +8461,12 @@ NOTE Annex B of [DS-D2.7], version 3.3rc3, requires that the "encoding rule spec
 ===== Default encoding(s) for application schema Cable Transport Elements
 
 *Name: Cable Transport Elements GML Application Schema*
-Version: version 3.0
+Version: 4.0
 Specification: D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
 Character set: UTF-8
 
 The xml schema document is available from
-_http://inspire.ec.europa.eu/schemas/tn-c/3.0/CableTransportNetwork.xsd_
+_http://inspire.ec.europa.eu/schemas/tn-c/4.0/CableTransportNetwork.xsd_
 
 ====== Encoding rules used
 
@@ -8477,12 +8477,12 @@ NOTE Annex B of [DS-D2.7], version 3.3rc3, requires that the "encoding rule spec
 ===== Default encoding(s) for application schema Water Transport Elements
 
 *Name: Water Transport Elements GML Application Schema*
-Version: version 3.0,
+Version: 5.0
 Specification: D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
 Character set: UTF-8
 
 The xml schema document is available from
-_http://inspire.ec.europa.eu/schemas/tn-w/3.0/WaterTransportNetwork.xsd._
+_http://inspire.ec.europa.eu/schemas/tn-w/5.0/WaterTransportNetwork.xsd._
 
 ====== Encoding rules used
 
@@ -8493,12 +8493,12 @@ NOTE Annex B of [DS-D2.7], version 3.3rc3, requires that the "encoding rule spec
 ===== Default encoding(s) for application schema Air Transport Elements
 
 *Name: Air Transport Elements Application Schema*
-Version: version 3.0,
+Version: 4.0
 Specification: D2.8.I.7 Data Specification on Transport Networks – Technical Guidelines
 Character set: UTF-8
 
 The xml schema document is available from
-_http://inspire.ec.europa.eu/schemas/tn-a/3.0/AirTransportNetwork.xsd_.
+_http://inspire.ec.europa.eu/schemas/tn-a/4.0/AirTransportNetwork.xsd_.
 
 [.red.background]
 
@@ -9770,10 +9770,10 @@ Draft EuroSpec Feature Catalogue for topographic data – Transport
 EuroGeographics
 _www.eurogeographics.org_
 
-|[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf
-|[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.4rc2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3.4rc2.pdf_
-|[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf
-|[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.3rc2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.3rc2.pdf_
+|[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en
+|[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.4rc2, _https://knowledge-base.inspire.ec.europa.eu/publications/inspire-generic-conceptual-model_en_
+|[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en
+|[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.3rc2, _https://knowledge-base.inspire.ec.europa.eu/publications/guidelines-encoding-spatial-data_en_
 |[DS-D2.8.I.3] INSPIRE DS-D2.8.I.3, INSPIRE Data Specifiications on Geographical Names – Guidelines, v3.0
 a|
 EDC-11031 EuroRegioMap EuroRegionalMap: Incremental Development of a Pan-European Database at Medium Scale

@@ -1808,7 +1808,7 @@ The table contains the following information:
 |10.3 |Metadata language |1 |
 |===
 
-Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
+Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
 
 ==== Conformity
 
@@ -2149,7 +2149,7 @@ codeSpace: INSPIRE RS registry
 |Implementing instructions |
 |Example a|
 name: <Application schema name> GML application schema
-version: version 3.2rc1
+version: 5.0
 specification: D2.8.I.9 Data Specification on Protected Sites – Technical Guidelines
 
 |Example XML encoding a|
@@ -2159,7 +2159,7 @@ specification: D2.8.I.9 Data Specification on Protected Sites – Technical Guid
 		<gco:CharacterString>SomeApplicationSchema GML application schema</gco:CharacterString>
 	</gmd:name>
 	<gmd:version>
-		<gco:CharacterString>3.2rc1</gco:CharacterString>
+		<gco:CharacterString>5.0</gco:CharacterString>
 	</gmd:version>
 	<gmd:specification>
 		<gco:CharacterString>D2.8.I.9 Data Specification on Protected sites – Technical Guidelines</gco:CharacterString>
@@ -2523,10 +2523,10 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 ===== Default encoding(s) for application schema Protected Sites Simple
 
 *Name: Protected Sites Simple GML Application Schema*
-Version: version 3.1,
+Version: 5.0
 Specification: D2.8.I.9 Data Specification on Protected Sites – Technical Guidelines
 Character set: UTF-8
-The xml schema document is available from _http://inspire.ec.europa.eu/schemas/ps/3.0/ProtectedSites.xsd_
+The xml schema document is available from _https://inspire.ec.europa.eu/schemas/ps/5.0/ProtectedSites.xsd_
 
 ====== _Encoding rules used_
 
