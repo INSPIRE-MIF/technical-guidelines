@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.16 Data Specification on Sea Regions – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Sea Regions
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Sea Regions
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -30,25 +41,24 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 = D2.8.III.16 Data Specification on _Sea Regions_ – Technical Guidelines
 
-[cols=",",]
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.16 INSPIRE Data Specification on _Sea Regions_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Sea Regions_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Sea Regions_
-|*Publisher* a|
-INSPIRE Thematic Working Group _Oceanographic Geographical Features and Sea Regions_
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Sea Regions_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Oceanographic Geographical Features and Sea Regions_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.16_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/sr[D2.8.III.16_v3.1.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
+
 
 <<<
 [discrete]
@@ -342,7 +352,7 @@ General terms and definitions helpful for understanding the INSPIRE data specifi
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |EC |European Commission
@@ -885,7 +895,7 @@ In addition, some themes make reference to the types TimeValuePair and Timeserie
 
 Where possible, only these coverage types (or a subtype thereof) are used in INSPIRE application schemas.
 
-[cols=","]
+[%autowidth]
 |===
 a|image::./media/image6.png[image,width=222,height=207, align=center] a|image::./media/image7.png[image,width=309,height=209, align=center]
 ^|(Source: ISO 19136:2007) ^|(Source: GML 3.3.0)
@@ -1146,7 +1156,7 @@ SeaAreas are represented as 2-dimensional geometries.
 
 *Feature catalogue metadata*
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema _Sea Regions_
 |Version number |3.0
@@ -1187,7 +1197,7 @@ SeaAreas are represented as 2-dimensional geometries.
 |===
 |*Coastline*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Coastline
 !Subtype of: !Shoreline
@@ -1199,7 +1209,7 @@ a|
 a|
 *Constraint: coastline is special case of shoreline at Mean High Water Level*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Coastline is a special case of shoreline at Mean High Water Level. Coastline is the boundary between land and sea to be used for viewing, discovery and general purpose applications where a land/marine boundary is required. Where there is not significant variation in water level, MSL can be used as a substitute for MHW
 !OCL: !
@@ -1213,7 +1223,7 @@ a|
 |===
 |*InterTidalArea*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Intertidal Area
 !Subtype of: !Shore
@@ -1225,7 +1235,7 @@ a|
 a|
 *Attribute: highWaterLevel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !high water level
 !Value type: !WaterLevelValue
@@ -1236,7 +1246,7 @@ a|
 a|
 *Attribute: lowWaterLevel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !low water level
 !Value type: !WaterLevelValue
@@ -1252,7 +1262,7 @@ a|
 |===
 |*MarineCirculationZone*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Marine Circulation Zone
 !Subtype of: !SeaArea
@@ -1264,7 +1274,7 @@ a|
 a|
 *Attribute: zoneType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Zone Type
 !Value type: !ZoneTypeValue
@@ -1275,7 +1285,7 @@ a|
 a|
 *Attribute: extent*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !extent
 !Value type: !MarineExtent
@@ -1291,7 +1301,7 @@ a|
 |===
 |*MarineContour*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Marine Contour
 !Definition: !A set of isolines representing the value of some phenomenon at a particular time.
@@ -1302,7 +1312,7 @@ a|
 a|
 *Attribute: isoline*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !isoline
 !Value type: !MarineIsoline
@@ -1313,7 +1323,7 @@ a|
 a|
 *Attribute: phenomenon*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Phenomeneon
 !Value type: !AbstractObservableProperty
@@ -1324,7 +1334,7 @@ a|
 a|
 *Attribute: validTime*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Valid Time
 !Value type: !TM_Instant
@@ -1335,7 +1345,7 @@ a|
 a|
 *Association role: sourceObservations*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Source observations
 !Value type: !ObservationSet
@@ -1351,7 +1361,7 @@ a|
 |===
 |*MarineLayer (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Marine Layer
 !Definition: !A Marine Layer describes any layer that may cover any part of a sea surface or sea bottom.
@@ -1363,7 +1373,7 @@ As these phenomena have a dynamic characteristic, the extent they describe (GM_S
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Geometry
 !Value type: !GM_Object
@@ -1374,7 +1384,7 @@ a|
 a|
 *Attribute: validTime*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Valid Time
 !Value type: !TM_Period
@@ -1385,7 +1395,7 @@ a|
 a|
 *Association role: subLayer*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Sub layer
 !Value type: !MarineLayer
@@ -1396,7 +1406,7 @@ a|
 a|
 *Constraint: geometry should be a GM_Point or GM_Surface*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !A Marine Layer can be represented as either a surface or a point. The point type geometry reflects the reality that many Marine Layers are identified by point observations.
 !OCL: !inv:self.geometry.oclIsKindOf(GM_Point) OR self.geometry.oclIsKindOf(GM_Surface)
@@ -1410,7 +1420,7 @@ a|
 |===
 |*Sea*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Sea
 !Subtype of: !SeaArea
@@ -1422,7 +1432,7 @@ a|
 a|
 *Attribute: extent*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !extent
 !Value type: !MarineExtent
@@ -1433,7 +1443,7 @@ a|
 a|
 *Constraint: extent.waterLevel must be meanHighWater*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Sea is defined at Mean High Water. This constraint can be relaxed if there is not significant tidal variation in water level
 !OCL: !inv: self.extent.waterLevel = 'meanHighWater'
@@ -1447,7 +1457,7 @@ a|
 |===
 |*SeaArea*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Sea Area
 !Subtype of: !HydroObject
@@ -1460,7 +1470,7 @@ Typically however, specialisations of SeaArea will restrict the geometry to a pa
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !inspire ID
 !Value type: !Identifier
@@ -1472,7 +1482,7 @@ a|
 a|
 *Attribute: seaAreaType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Sea Area Type
 !Value type: !SeaAreaTypeClassificationValue
@@ -1483,7 +1493,7 @@ a|
 a|
 *Attribute: extent*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !extent
 !Value type: !MarineExtent
@@ -1494,7 +1504,7 @@ a|
 a|
 *Attribute: parameterValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !parameter value
 !Value type: !ParameterValuePair
@@ -1506,7 +1516,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Begin lifespan version
 !Value type: !DateTime
@@ -1518,7 +1528,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !End lifespan version
 !Value type: !DateTime
@@ -1530,7 +1540,7 @@ a|
 a|
 *Association role: subArea*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SeaArea
 !Definition: !SeaAreas can consist of sub areas. e.g. A SeaArea defining all european seas could be an aggregation of multiple SeaAreas (North Sea, Mediterranean Sea etc)
@@ -1545,7 +1555,7 @@ a|
 |===
 |*SeaBedArea*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Sea Bed Area
 !Subtype of: !MarineLayer
@@ -1557,7 +1567,7 @@ a|
 a|
 *Attribute: surfaceType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Surface Type
 !Value type: !SeaBedCoverValue
@@ -1574,7 +1584,7 @@ a|
 |===
 |*SeaSurfaceArea*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Sea Surface Area
 !Subtype of: !MarineLayer
@@ -1586,7 +1596,7 @@ a|
 a|
 *Attribute: surfaceType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !surface type
 !Value type: !SeaSurfaceClassificationValue
@@ -1602,7 +1612,7 @@ a|
 |===
 |*Shoreline*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Shoreline
 !Subtype of: !HydroObject
@@ -1613,7 +1623,7 @@ a|
 a|
 *Attribute: segment*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !segment
 !Value type: !ShoreSegment
@@ -1624,7 +1634,7 @@ a|
 a|
 *Attribute: waterLevel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !water level
 !Value type: !WaterLevelValue
@@ -1641,7 +1651,7 @@ a|
 |===
 |*ShoreSegment*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Shore Segment
 !Definition: !A Shore Segment is a section of shore line.
@@ -1652,7 +1662,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !geometry
 !Value type: !GM_Curve
@@ -1663,7 +1673,7 @@ a|
 a|
 *Attribute: shoreClassification*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !shore classification
 !Value type: !ShoreTypeClassificationValue
@@ -1675,7 +1685,7 @@ a|
 a|
 *Attribute: shoreStability*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !shore stability
 !Value type: !ShoreStabilityValue
@@ -1694,7 +1704,7 @@ a|
 |===
 |*MarineExtent*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Marine Extent
 !Definition: !The extent of a sea area for a given tidal state
@@ -1705,7 +1715,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !geometry
 !Value type: !GM_MultiSurface
@@ -1717,7 +1727,7 @@ a|
 a|
 *Attribute: waterLevel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !water level
 !Value type: !WaterLevelValue
@@ -1733,7 +1743,7 @@ a|
 |===
 |*MarineIsoline*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Marine Isoline
 !Definition: !An isoline representing a particular value of some marine physical or chemical phenomenon such as temperature, salinity or wave height.
@@ -1744,7 +1754,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Geometry
 !Value type: !GM_MultiCurve
@@ -1755,7 +1765,7 @@ a|
 a|
 *Attribute: value*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Value --- Definition -- Values attributed to the isolines.
 !Value type: !Measure
@@ -1770,7 +1780,7 @@ a|
 |===
 |*ParameterValuePair*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Parameter Value Pair
 !Definition: !A parameter value pair contains a value of some observed property. e.g. Annual Mean Sea Surface Temperature.
@@ -1780,7 +1790,7 @@ a|
 a|
 *Attribute: parameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !parameter
 !Value type: !AbstractObservableProperty
@@ -1791,7 +1801,7 @@ a|
 a|
 *Attribute: value*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !value
 !Value type: !Measure
@@ -1802,7 +1812,7 @@ a|
 a|
 *Attribute: validTime*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !valid time
 !Value type: !TM_Object
@@ -1821,7 +1831,7 @@ a|
 |===
 |*SeaAreaTypeClassificationValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Sea Area Type Classifcation Value
 !Definition: !Classification type of the SeaArea, e.g. estuary, openOcean
@@ -1838,7 +1848,7 @@ a|
 |===
 |*SeaBedCoverValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Sea Bed Cover Value
 !Definition: !Types of cover found on sea beds.
@@ -1859,7 +1869,7 @@ May be extended by member states
 |===
 |*SeaSurfaceClassificationValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Sea Surface Classification Value
 !Definition: !Types of sea surface layers found on sea surfaces.
@@ -1877,7 +1887,7 @@ a|
 |===
 |*ShoreStabilityValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Shore Stability Value
 !Definition: !Types of the stability of shore segments.
@@ -1895,7 +1905,7 @@ a|
 |===
 |*ShoreTypeClassificationValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Shore Type Classification Value
 !Definition: !Types of shore segments.
@@ -1913,7 +1923,7 @@ a|
 |===
 |*ZoneTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Zone Type Value Codelist
 !Definition: !Types of marine circulation zones
@@ -1935,7 +1945,7 @@ This section lists definitions for feature types, data types and enumerations an
 |===
 |*AbstractObservableProperty (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Observable Properties
 !Reference: !Guidelines for the use of Observations & Measurements and Sensor Web Enablement-related standards in INSPIRE [DS-D2.9]
@@ -1951,7 +1961,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1965,7 +1975,7 @@ a|
 |===
 |*GM_Curve*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1979,7 +1989,7 @@ a|
 |===
 |*GM_MultiCurve*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric aggregates
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1993,7 +2003,7 @@ a|
 |===
 |*GM_MultiSurface*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric aggregates
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -2007,7 +2017,7 @@ a|
 |===
 |*GM_Object (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometry root
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -2021,7 +2031,7 @@ a|
 |===
 |*HydroObject (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Hydro - base
 !Reference: !INSPIRE Data specification on Hydrography [DS-D2.8.I.8]
@@ -2037,7 +2047,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2057,7 +2067,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*Measure*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !ProductionAndIndustrialFacilitiesExtension
 !Reference: !INSPIRE Data specification on Production and Industrial Facilities [DS-D2.8.III.8]
@@ -2072,7 +2082,7 @@ a|
 |===
 |*ObservationSet*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Observation References
 !Reference: !Guidelines for the use of Observations & Measurements and Sensor Web Enablement-related standards in INSPIRE [DS-D2.9]
@@ -2088,7 +2098,7 @@ a|
 |===
 |*Shore*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Hydro - Physical Waters
 !Reference: !INSPIRE Data specification on Hydrography [DS-D2.8.I.8]
@@ -2106,7 +2116,7 @@ NOTE Regarded as a candidate spatial object in Annex II theme 'Land cover' due t
 |===
 |*TM_Instant*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Objects
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -2120,7 +2130,7 @@ a|
 |===
 |*TM_Object*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Objects
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -2134,7 +2144,7 @@ a|
 |===
 |*TM_Period*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Objects
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -2148,7 +2158,7 @@ a|
 |===
 |*WaterLevelValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Hydro - Physical Waters
 !Reference: !INSPIRE Data specification on Hydrography [DS-D2.8.I.8]
@@ -4675,7 +4685,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *breakingZone*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !breaking zone
 !Definition: !Sea Area is a breaking Zone
@@ -4684,7 +4694,7 @@ a|
 a|
 *delta*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !delta
 !Definition: !Sea Area is a delta
@@ -4693,7 +4703,7 @@ a|
 a|
 *estuary*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !estuary
 !Definition: !Sea Area is an estuary
@@ -4702,7 +4712,7 @@ a|
 a|
 *openOcean*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !open ocean
 !Definition: !Sea Area is open ocean or sea
@@ -4711,7 +4721,7 @@ a|
 a|
 *shelfSea*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !shelf sea
 !Definition: !Sea Area is shelf sea
@@ -4746,7 +4756,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *sand*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !sand
 !Definition: !area of sand
@@ -4755,7 +4765,7 @@ a|
 a|
 *mud*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !mud
 !Definition: !area of mud
@@ -4764,7 +4774,7 @@ a|
 a|
 *clay*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !clay
 !Definition: !area of clay
@@ -4773,7 +4783,7 @@ a|
 a|
 *silt*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !silt
 !Definition: !area of silt
@@ -4782,7 +4792,7 @@ a|
 a|
 *stones*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !stones
 !Definition: !area of stones
@@ -4791,7 +4801,7 @@ a|
 a|
 *gravel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !gravel
 !Definition: !area of gravel
@@ -4800,7 +4810,7 @@ a|
 a|
 *pebbles*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !pebbles
 !Definition: !area of pebbles
@@ -4809,7 +4819,7 @@ a|
 a|
 *cobbles*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !cobbles
 !Definition: !area of cobbles
@@ -4818,7 +4828,7 @@ a|
 a|
 *rock*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !rock
 !Definition: !area of rock
@@ -4827,7 +4837,7 @@ a|
 a|
 *coral*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !coral
 !Definition: !area of coral
@@ -4836,7 +4846,7 @@ a|
 a|
 *shells*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !shells
 !Definition: !area of shells
@@ -4845,7 +4855,7 @@ a|
 a|
 *weed*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !weed
 !Definition: !area of weed, including kelp
@@ -4854,7 +4864,7 @@ a|
 a|
 *sandWaves*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !sand waves
 !Definition: !area with sand waves (mobile bottom)
@@ -4863,7 +4873,7 @@ a|
 a|
 *freshwaterSprings*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !freshwater springs
 !Definition: !area with freshwater springs in seabed
@@ -4895,7 +4905,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *ice*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !ice
 !Definition: !Sea surface is ice
@@ -4904,7 +4914,7 @@ a|
 a|
 *oil*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !oil
 !Definition: !Sea surface is oil
@@ -4913,7 +4923,7 @@ a|
 a|
 *snow*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !snow
 !Definition: !Sea surface is snow or slush
@@ -4922,7 +4932,7 @@ a|
 a|
 *litter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !litter
 !Definition: !Sea surface is litter
@@ -4931,7 +4941,7 @@ a|
 a|
 *algae*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !algae
 !Definition: !Sea surface is algae
@@ -4963,7 +4973,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *stable*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !stable
 !Definition: !Stretch of shore is stable
@@ -4972,7 +4982,7 @@ a|
 a|
 *probableErosionTrend*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !probable erosion trend
 !Definition: !Stretch of shore is
@@ -4981,7 +4991,7 @@ a|
 a|
 *confirmedErosionTrend*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !confirmed erosion trend
 !Definition: !Stretch of shore is confirmed to be eroding
@@ -4990,7 +5000,7 @@ a|
 a|
 *probableAccretionTrend*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !probable accretion trend
 !Definition: !Stretch of shore is probably accreting
@@ -4999,7 +5009,7 @@ a|
 a|
 *confirmedAccretionTrend*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !confirmed accretion trend
 !Definition: !Stretch of shore is confirmed to be accreting
@@ -5008,7 +5018,7 @@ a|
 a|
 *unknown*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !unknown
 !Definition: !Stability of stretch of shore is unknown
@@ -5040,7 +5050,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *estuaryRiverMouth*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !estuary
 !Definition: !Shore type is estuary/river mouth
@@ -5049,7 +5059,7 @@ a|
 a|
 *rock*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !rock
 !Definition: !Shore type is rock
@@ -5058,7 +5068,7 @@ a|
 a|
 *sand*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !sand
 !Definition: !Shore type is sand
@@ -5067,7 +5077,7 @@ a|
 a|
 *tidalMarsh*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !tidal marsh
 !Definition: !Shore type is tidal marsh
@@ -5076,7 +5086,7 @@ a|
 a|
 *narrowVegetisedShore*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !narrow vegetised shore
 !Definition: !Shore type is narrow vegetisedshore
@@ -5085,7 +5095,7 @@ a|
 a|
 *artificialCoastline*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !artificial coastline
 !Definition: !Shore type is artifical
@@ -5094,7 +5104,7 @@ a|
 a|
 *harbourLimits*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !harbour limits
 !Definition: !Shore type is harbour limits
@@ -5103,7 +5113,7 @@ a|
 a|
 *gravel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !gravel
 !Definition: !Shore type is gravel
@@ -5112,7 +5122,7 @@ a|
 a|
 *mud*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !mud
 !Definition: !Shore type is mud
@@ -5144,7 +5154,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *mixingZone*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !mixing zone
 !Definition: !The area is a mixing zone
@@ -5153,7 +5163,7 @@ a|
 a|
 *sedimentCell*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !sediment cell
 !Definition: !The area is a sediment cell.
@@ -5162,7 +5172,7 @@ a|
 a|
 *coastalWaters*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !coastal waters
 !Definition: !The area is coastal water.
