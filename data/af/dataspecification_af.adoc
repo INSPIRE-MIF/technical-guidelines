@@ -3867,11 +3867,11 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 ===== Default encoding(s) for application schema Agricultural and Aquaculture Facilities Model
 
 *Name: Agricultural and Aquaculture Facilities Core Model GML Application Schema*
-Version: version 3.0
+Version: 4.0
 Specification: D2.8.III.9 Data Specification on _Agricultural and Aquaculture Facilities_ – Guidelines
 Character set: UTF-8
 
-The xml schema document is available from _http://inspire.jrc.ec.europa.eu/schemas/af/3.0_
+The xml schema document is available from _https://inspire.ec.europa.eu/schemas/af/4.0/AgriculturalAndAquacultureFacilities.xsd_
 
 ===== Default encoding(s) for application schema Agricultural and Aquaculture Facilities Extended Model
 
@@ -3880,7 +3880,7 @@ Version: version 3.0
 Specification: D2.8.III.9 Data Specification on _Agricultural and Aquaculture Facilities_ – Guidelines
 Character set: UTF-8
 
-The xml schema document is available from _http://inspire.jrc.ec.europa.eu/draft-schemas/af-ext/3.0_
+The xml schema document is available from _https://inspire.ec.europa.eu/draft-schemas/af-ext/2.0/AgriculturalAndAquacultureFacilitiesExtension.xsd_
 
 <<<
 == Data Capture
