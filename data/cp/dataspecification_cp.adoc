@@ -864,15 +864,15 @@ Core and auxiliary data are represented in figure 1.
 
 ===== UML Overview
 
-image::./media/image5.png[image,width=652,height=738]
+image::./media/image5.png[image]
 
 [.text-center]
 *Figure 2 – UML class diagram: Overview of the _Cadastral Parcels_ application schema*
 
-image::./media/image6.png[image,width=232,height=252]
+image::./media/image6.png[image]
 
 [.text-center]
-*Figure 3 – UML class diagram: Overview of the _Cadastral parcels_ application schema with only core data*
+*Figure 3 – UML class diagram: Overview of the external relations of the _Cadastral parcels_ application schema*
 
 ===== Consistency between spatial data sets
 
