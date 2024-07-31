@@ -521,11 +521,10 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 _Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types, associated data types and code lists that are defined in Annexes II, III and IV to this Regulation for the themes the data sets relate to.
 
-. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
-. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
 
 ====
 
@@ -580,7 +579,7 @@ Additional and/or use case-specific information related to the theme _Energy Res
 
 These spatial object types and data types should comply with the definitions and constraints and include the attributes and association roles defined in this section.
 
-The enumerations and code lists used in attributes or association roles of spatial object types or data types should comply with the definitions and include the values defined in this section.
+The code lists used in attributes or association roles of spatial object types or data types should comply with the definitions and include the values defined in this section.
 
 ====
 
@@ -639,7 +638,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -678,27 +676,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-_Article 6_
-*Code Lists and Enumerations*
-
-(...)
-
-[arabic, start=5]
-. Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -712,16 +689,23 @@ The IRs distinguish the following types of code lists.
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
-. Code lists shall be of one of the following types, as specified in the Annexes:
-[loweralpha]
-.. code lists whose allowed values comprise only the values specified in this Regulation;
-.. code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
-.. code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
-.. code lists, whose allowed values comprise any values defined by data providers.
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
 
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
+
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
+
+. Code lists shall be one of the following types:
+
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
+
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
@@ -749,7 +733,7 @@ In addition, code lists can be hierarchical, as explained in Article 6(2) of the
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists*
 
 (...)
 
@@ -767,7 +751,7 @@ The type of code list and whether it is hierarchical or not is also indicated in
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists*
 
 (....)
 
@@ -1217,7 +1201,7 @@ a|
 !Description: !NOTE Most of the listed classification frameworks only focus on fossil fuels.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ClassificationFrameworkValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1234,7 +1218,7 @@ a|
 !Definition: !Different sublevels within a resource for distinguishing real from potential or expected amount of fossil fuel resources.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/FossilFuelClassValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1251,7 +1235,7 @@ a|
 !Definition: !Types of fossil fuels.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/FossilFuelValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1269,7 +1253,7 @@ a|
 !Description: !NOTE Waste values have been included in this code list to simplify the code lists rather than to imply that only renewable waste is included.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RenewableAndWasteValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1286,14 +1270,14 @@ a|
 !Definition: !Values indicating the reference level of the vertical extent.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/VerticalReferenceValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== Length
 
@@ -1875,7 +1859,7 @@ a|
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== ClassificationAndQuantificationFrameworkValue
 
@@ -2348,7 +2332,7 @@ a|
 !Definition: !Types of potential geothermal energy.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeothermalPotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2365,7 +2349,7 @@ a|
 !Definition: !Types of potential hydro energy.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/HydroPotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2399,7 +2383,7 @@ a|
 !Definition: !Types of potential solar energy.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/SolarPotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2416,7 +2400,7 @@ a|
 !Definition: !Types of potential tidal energy.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/TidalPotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2433,14 +2417,14 @@ a|
 !Definition: !Types of potential wind energy.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/WindPotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== CharacterString
 
@@ -2882,7 +2866,7 @@ EXAMPLE combustible fuels, heat, renewable
 energy, electricity, or any other form of energy
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/EnergyProductValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2908,7 +2892,7 @@ EXAMPLE indigenous production of natural gas.
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== CharacterString
 
@@ -3053,18 +3037,18 @@ The values of selected external code lists are included in Annex C for informati
 [width="100%",cols="20%,21%,33%,26%",options="header",]
 |===
 |*Code list* |*Identifiers* |*Examples* |*Labels*
-|EnergyProductValue |Append using lowerCamelCase the name of the energy product in Annex B to the URI prefix http://inspire.ec.europa.eu/codeList/ EnergyProductValue/ a|
-_http://inspire.ec.europa.eu/codeList/EnergyProductValue/cokingCoal_
+|EnergyProductValue |Append using lowerCamelCase the name of the energy product in Annex B to the URI prefix http://inspire.ec.europa.eu/codelist/ EnergyProductValue/ a|
+_http://inspire.ec.europa.eu/codelist/EnergyProductValue/cokingCoal_
 
-_http://inspire.ec.europa.eu/codeList/EnergyProductValue/peat_
+_http://inspire.ec.europa.eu/codelist/EnergyProductValue/peat_
 
 |The name of the energy product as written in Annex B of the Regulation
-|EnergyStatisticsAggregateValue |Append using lowerCamelCase the name of the first-order statistical aggregate in Annex B to the URI prefix http://inspire.ec.europa.eu/codeList/ EnergyStatisticsAggregateValue / a|
-_http://inspire.ec.europa.eu/codeList/EnergyStatisticsAggregate/primaryProduction_
+|EnergyStatisticsAggregateValue |Append using lowerCamelCase the name of the first-order statistical aggregate in Annex B to the URI prefix http://inspire.ec.europa.eu/codelist/ EnergyStatisticsAggregateValue / a|
+_http://inspire.ec.europa.eu/codelist/EnergyStatisticsAggregate/primaryProduction_
 
-_http://inspire.ec.europa.eu/codeList/EnergyStatisticsAggregate/imports_
+_http://inspire.ec.europa.eu/codelist/EnergyStatisticsAggregate/imports_
 
-_http://inspire.ec.europa.eu/codeList/EnergyStatisticsAggregate/transformationOutput_
+_http://inspire.ec.europa.eu/codelist/EnergyStatisticsAggregate/transformationOutput_
 
 |The name of the statistical aggregate as written in Annex B of the Regulation
 |===
@@ -3148,11 +3132,12 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+.	Other coordinate reference systems may be specified for specific spatial data themes.
 
-. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+.	 For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
 
 ====
 
@@ -3184,13 +3169,13 @@ _Annex II, Section 1.5_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 2*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -3199,35 +3184,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-*Table 2. http URIs for the default coordinate reference systems*
-
-[align=center,width="100%",cols="37%,20%,43%",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -4143,9 +4099,10 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
 
-. Every encoding rule used to encode spatial data shall be made available.
 
 ====
 
@@ -5195,7 +5152,7 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
 [.red.background]
 ====
@@ -5238,7 +5195,7 @@ http://inspire.ec.europa.eu/conformance-class/ir/er/as/er-s
 
 . [.underline]#Reference#: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
@@ -5251,18 +5208,18 @@ NOTE Further technical information is in the Feature catalogue and UML diagram o
 
 . [.underline]#Test Method#: Examine whether the value type of each provided attribute or association role adheres to the corresponding value type specified in the target specification.
 
-NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from enumeration and code lists, and the coverage domains.
+NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from code lists, and the coverage domains.
 
 NOTE 2 Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
 ==== Value test
 
 [loweralpha]
-. [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.
+. [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.
 
 . [.underline]#Reference#: Art.4 (3) of Commission Regulation No 1089/2010.
 
-. [.underline]#Test Method#: When an attribute / association role has an enumeration or code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
+. [.underline]#Test Method#: When an attribute / association role has a code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
 +
 * shall take only values explicitly specified in the code list when the code list's extensibility is "none".
 
@@ -5618,7 +5575,7 @@ _http://inspire.ec.europa.eu/conformance-class/tg/er/3.0_
 [loweralpha]
 . [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-. [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+. [.underline]#Reference#: Section 6 of this technical guideline
 
 . [.underline]#Test Method#: Compare the URI of the dataset with the URIs in the table.
 
@@ -6094,100 +6051,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*NPD*
-
-[%autowidth]
-!===
-!Name: !Norwegian Petroleum Directorate classification (NPD-2001)
-!Definition: !Norwegian Petroleum Directorate classification (NPD-2001)
-!Description: !"The Norwegian Petroleum Directorate classification (NPD-2001) is based on the SPE/WPC/AAPG 2000 classification but expanded to utilize categories that differentiate projects based on their commerciality, that is, their maturity towards full producing status."
-!===
-
-a|
-*PERC*
-
-[%autowidth]
-!===
-!Name: !"Pan-European Code for Reporting of Exploration Results, Mineral Resources and Reserves (PERC)."
-!Definition: !Pan-European Code for Reporting of Exploration Results, Mineral Resources and Reserves (PERC).
-!Description: !"The PERC Code for Reporting of Exploration Results, Mineral Resources and Mineral Reserves sets out minimum standards, recommendations and guidelines for Public Reporting of Exploration Results, Mineral Resources and Mineral Reserves in the United Kingdom, Ireland and Europe. The Code has been adopted by the Institute of Materials, Minerals and Mining (IoM3), the Geological Society of London (GSL), the European Federation of Geologists (EFG) and the Institute of Geologists of Ireland (IGI), and is therefore binding on their individual members."
-!===
-
-a|
-*RF*
-
-[%autowidth]
-!===
-!Name: !Russian reserve guidelines.
-!Definition: !Russian reserve guidelines.
-!Description: !Russian reserve guidelines are in a state of transition from the system utilized within Soviet state companies to a new system more closely aligned with the needs of private industry.
-!===
-
-a|
-*SPE/WPC/AAPG(PRMS)*
-
-[%autowidth]
-!===
-!Name: !Petroleum Resources Management System
-!Definition: !Petroleum Resources Management System
-!Description: !"In 2000, the Society of Petroleum Engineers (SPE) jointly with the World Petroleum Council (WPC) and the American Association of Petroleum Geologists (AAPG) published a Reserve and Resource Classification to address the requirement for an international standard. The underlying Reserves Definitions were unchanged from those published by the SPE/WPC in 1997. Additionally, in 2001 the SPE/WPC/AAPG jointly published Guidelines for the Evaluation of Petroleum Reserves and Resources as clarifications for the application of the 2001 and 1997 documents. Further clarification was provided in the Glossary of 2005, in particular by the definition of the term commercial, and thereby reserves."
-!===
-
-a|
-*UNFC1997*
-
-[%autowidth]
-!===
-!Name: !United Nations Framework Classification (1997).
-!Definition: !United Nations Framework Classification (1997).
-!Description: !The classification is based on three key attributes: 
-ò Economic (E) 
-ò Field Project Sta-tus/Feasibility (F) 
-ò Geological (G)
-!===
-
-a|
-*UNFC2004*
-
-[%autowidth]
-!===
-!Name: !United Nations Framework Classification (2004).
-!Definition: !United Nations Framework Classification (2004).
-!Description: !The classification is based on three key attributes: 
-ò Economic (E) 
-ò Field Project Sta-tus/Feasibility (F) 
-ò Geological (G)
-!===
-
-a|
-*UNFC2009*
-
-[%autowidth]
-!===
-!Name: !United Nations Framework Classification (2009).
-!Definition: !United Nations Framework Classification (2009).
-!Description: !The classification is based on three key attributes: 
-ò Economic (E) 
-ò Field Project Sta-tus/Feasibility (F) 
-ò Geological (G)
-!===
-
-a|
-*USGS*
-
-[%autowidth]
-!===
-!Name: !United States Geological Survey
-!Definition: !United States Geological Survey
-!Description: !The USGS classifi-cation is based on two parameters whereby resources are classified by feasibility of eco-nomic recovery and degree of geologic certainty.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *FossilFuelClassValue*
 
@@ -6205,41 +6069,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*contingentResources*
-
-[%autowidth]
-!===
-!Name: !contingent resources
-!Definition: !Contingent resources are those quantities of energy resources estimated, as of a given date, to be potentially recoverable from known accumulations or deposits using established technology or technology under development. For coal organisations this category is often referred to as reserves.
-!Description: !"These quantities are not (yet) commercial. Maturing of the project to produce this quantity, or technical abilities or economic factors may convert these contingent resources into reserves."
-!===
-
-a|
-*resourcesInitiallyInPlace*
-
-[%autowidth]
-!===
-!Name: !resources initially in place
-!Definition: !The total amount of a resource initially present in an accumulation or deposit.
-!Description: !"Hydrocarbons initially in place (HCIIP, GIIP, or STOOIP for Hydrocarbon, gas or oil respectively) is the quantity estimated to be initially present in an accumulation or deposit."
-!===
-
-a|
-*provenReserves*
-
-[%autowidth]
-!===
-!Name: !proven reserves
-!Definition: !The estimated remaining quantities of a resource anticipated to be economically producible, as of a given date, by the application of development projects to known accumulations or deposits.
-!Description: !Proven reserves are that part of the reserves for which the presence is 90 % certain.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *FossilFuelValue*
 
@@ -6252,91 +6082,7 @@ a|
 !Definition: !Types of fossil fuels.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/FossilFuelValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*hardCoal*
-
-[%autowidth]
-!===
-!Name: !hard coal
-!Definition: !Black, combustible, solid, organic fossil sediment often referred to as High Rank, due to their high calorific value, or Black Coals, given their physical characteristic. This category includes anthracite, coking coal and other bituminous coal.
-!Description: !These coals have a gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0.6. SOURCE Adapted from IEA (2011): Coal Information 2011 Edition - Documentation For Beyond 2020 Files and Directive 2008/1099/EC.
-!===
-
-a|
-*lowRankCoal*
-
-[%autowidth]
-!===
-!Name: !low-rank coal
-!Definition: !Combustible brown to black organic fossil sediment which are non-agglomerating and are often referred to as Low Rank Coals due to their lower calorific value or Brown Coals, due to their physical characteristics. This category includes both sub-bituminous coals and lignite.
-!Description: !These coals have gross calorific values less that 23 865 kJ/kg (5 700 kcal/kg) on an ash free but moist basis. The sub type of sub-bituminous coal refers to . non-agglomerating coal with a gross calorific value between 17 435 kJ/kg (4 165 kcal/kg) and 23 865 kJ/kg (5 700 kcal/kg) containing more than 31% volatile matter on a dry mineral matter free basis.
-!===
-
-a|
-*peat*
-
-[%autowidth]
-!===
-!Name: !peat
-!Definition: !A combustible soft, porous or compressed, sedimentary deposit of plant origin with high water content (up to 90 % in the raw state), easily cut, of light to dark brown colour.
-!Description: !Lignite is a non-agglomerating coal with a gross calorific value less than 17 435 kJ/kg (4 165 kcal/kg) and greater than 31% volatile matter on a dry mineral matter free basis.
-!===
-
-a|
-*crudeOil*
-
-[%autowidth]
-!===
-!Name: !crude oil
-!Definition: !Crude oil is a mineral oil of natural origin comprising a mixture of hydrocarbons and associated impurities, such as sulphur. It exists in the liquid phase under normal surface temperature and pressure and its physical characteristics (density, viscosity, etc.) are highly variable.
-!Description: !SOURCE Adapted from IEA (2011): Coal Information 2011 Edition - Documentation For Beyond 2020 Files and Directive 2008/1099/EC.
-!===
-
-a|
-*naturalGas*
-
-[%autowidth]
-!===
-!Name: !natural gas
-!Definition: !Gases occurring in underground deposits, whether liquefied or gaseous, consisting mainly of methane.
-!Description: !Peat used for non-energy purposes is not included.
-!===
-
-a|
-*naturalGasLiquids*
-
-[%autowidth]
-!===
-!Name: !natural gas liquids
-!Definition: !Liquid or liquefied hydrocarbons recovered from natural gas in separation facilities or gas processing plants.
-!Description: !"SOURCE Adapted from Directive 2008/1099/EC which is also without prejudice to the definition of renewable energy sources in """"Directive 2001/77/EC and to the 2006 IPCC Guidelines for National Greenhouse Gas inventories."
-!===
-
-a|
-*oilSands*
-
-[%autowidth]
-!===
-!Name: !oil sands
-!Definition: !Oil sands, tar sands or, more technically, bituminous sands, are loose sand or partially consolidated sandstone saturated with a dense and extremely viscous form of petroleum technically referred to as bitumen.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*oilShales*
-
-[%autowidth]
-!===
-!Name: !oil shales
-!Definition: !Oil shale, also known as kerogen shale, is an organic-rich fine-grained sedimentary rock containing kerogen (immature hydrocarbons).
-!Description: !"It includes both non-associated gas originating from fields producing hydrocarbons only in gaseous form, and associated gas produced in association with crude oil as well as methane recovered from coal mines (coal mine methane) or from coal seams (coal seam gas)."
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6353,119 +6099,7 @@ a|
 !Description: !NOTE Waste values have been included in this code list to simplify the code lists rather than to imply that only renewable waste is included.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/RenewableAndWasteValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*biogas*
-
-[%autowidth]
-!===
-!Name: !biogas
-!Definition: !A gas composed principally of methane and carbon dioxide produced by anaerobic digestion of biomass.
-!Description: !It does not include gases created by anaerobic digestion of biomass (e.g. municipal or sewage gas) nor gasworks gas.
-!===
-
-a|
-*geothermal*
-
-[%autowidth]
-!===
-!Name: !geothermal
-!Definition: !Energy available as heat emitted from within the Earth's crust, usually in the form of hot water or steam. This energy production is the difference between the enthalpy of the fluid produced in the production borehole and that of the fluid eventually disposed of. It is exploited at suitable sites for electricity generation or directly as heat.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*hydro*
-
-[%autowidth]
-!===
-!Name: !hydro power
-!Definition: !Potential and kinetic energy of water converted into electricity in hydroelectric plants.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*industrialWaste*
-
-[%autowidth]
-!===
-!Name: !industrial waste
-!Definition: !Waste of industrial non-renewable origin (solids or liquids) combusted directly for the production of electricity and/or heat.
-!===
-
-a|
-*liquidBiofuels*
-
-[%autowidth]
-!===
-!Name: !liquid biofuels
-!Definition: !Liquid biofuels are biogasoline, bio-diesels or other biofuels directly used as fuel.
-!===
-
-a|
-*municipalSolidWaste*
-
-[%autowidth]
-!===
-!Name: !municipal solid waste
-!Definition: !Waste produced by households, industry, hospitals and the tertiary sector which contains biodegradable materials that are incinerated at specific installations.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*solarPhotovoltaic*
-
-[%autowidth]
-!===
-!Name: !solar photovoltaic
-!Definition: !Sunlight converted into electricity by the use of solar cells usually made of semi-conducting material which, when exposed to light, will generate electricity.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*solarThermal*
-
-[%autowidth]
-!===
-!Name: !solar thermal
-!Definition: !Heat from solar radiationthat can consist ofsolar thermal-electric plants or of equipment for the production of heat.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*solidBiomass*
-
-[%autowidth]
-!===
-!Name: !solid biomass
-!Definition: !Covers organic, non-fossil material of biological origin which may be used as fuel for heat production or electricity generation.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*tideWaveOcean*
-
-[%autowidth]
-!===
-!Name: !"tide, wave, ocean"
-!Definition: !Mechanical energy derived from tidal movement, wave motion or ocean current and exploited for electricity generation.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
-!===
-
-a|
-*wind*
-
-[%autowidth]
-!===
-!Name: !wind
-!Definition: !Kinetic energy of wind exploited for electricity generation in wind turbines.
-!Description: !SOURCE Adapted from Energy Statistics Regulation EC 1099/2008 .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6485,49 +6119,7 @@ a|
 !===
 
 |===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*groundLevel*
-
-[%autowidth]
-!===
-!Name: !ground level
-!Definition: !The EarthÆs surface
-!===
-
-a|
-*lowestAstronomicalTide*
-
-[%autowidth]
-!===
-!Name: !lowest astronomical tide
-!Definition: !The lowest tide level that can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
-!===
-
-a|
-*meanSeaLevel*
-
-[%autowidth]
-!===
-!Name: !mean sea level
-!Definition: !The average height of the sea at a tide station measured from a fixed predetermined reference level.
-!Description: !"Ordnance Datum, often used as a reference point for defining vertical heights, uses the mean Sea Level as its reference point and therefore is also included within this value."
-!===
-
-a|
-*seafloor*
-
-[%autowidth]
-!===
-!Name: !seafloor
-!Definition: !The bottom of a sea or ocean.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 === Energy Resources Coverage
 
@@ -6559,29 +6151,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*geothermalGradient*
-
-[width="100%",cols=","]
-!===
-!Name: !geothermal gradient
-!Definition: !Geothermal gradient is the rate of increasing temperature with respect to increasing depth in the Earth's interior in ?C/km.
-!===
-
-a|
-*temperature*
-
-[%autowidth]
-!===
-!Name: !temperature
-!Definition: !Temperature measured in ?C.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *HydroPotentialValue*
 
@@ -6598,20 +6168,7 @@ a|[%autowidth]
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*potentialHydroPower*
-
-[%autowidth]
-!===
-!Name: !potential hydro power
-!Definition: !Yearly potential hydro power production.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *SolarPotentialValue*
 
@@ -6629,65 +6186,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*diffuseIrradiance*
-
-[%autowidth]
-!===
-!Name: !diffuse irradiance
-!Definition: !Part of solar power (instantaneous rate of radiant energy), falling on a surface on the Earth per unit time, which is scattered by air molecules or atmospheric particles such as aerosols or clouds [W.m-2].
-!===
-
-a|
-*diffuseIrradiation*
-
-[%autowidth]
-!===
-!Name: !diffuse irradiation
-!Definition: !Amount of solar energy (integrated over a time), falling on a surface on the Earth, which is scattered by air molecules or atmospheric particles such as aerosols or clouds [Wh.m-2].
-!===
-
-a|
-*directNormalIrradiance*
-
-[%autowidth]
-!===
-!Name: !direct normal irradiation
-!Definition: !Part of solar power (instantaneous rate of radiant energy), falling on a surface perpendicular to the Sun's rays per unit time, which is not scattered or reflected by air molecules or atmospheric particles [Wh.m-2].
-!===
-
-a|
-*directNormalIrradiation*
-
-[%autowidth]
-!===
-!Name: !direct normal irradiation
-!Definition: !Amount of solar energy (integrated over a time), falling on a surface perpendicular to sunrays, which is not scattered or reflected by air molecules or atmospheric particles [Wh.m-2].
-!===
-
-a|
-*globalHorizontalIrradiance*
-
-[%autowidth]
-!===
-!Name: !global horizontal irradiance
-!Definition: !Solar power (instantaneous rate of total radiant energy) attenuated by all constituents of the atmosphere and falling on a horizontal surface on the Earth per unit time. Global horizontal irradiance integrates direct, diffuse and reflected components of solar power [W.m-2].
-!===
-
-a|
-*globalHorizontalIrradiation*
-
-[%autowidth]
-!===
-!Name: !global horizontal irradiation
-!Definition: !Amount of solar energy (integrated over a time) attenuated by all constituents of the atmosphere and falling on a horizontal surface on the Earth. Global horizontal irradiation integrates direct, diffuse and reflected components of solar energy [Wh.m-2].
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *TidalPotentialValue*
 
@@ -6705,83 +6204,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*averagePeakFlow*
-
-[%autowidth]
-!===
-!Name: !average peak flow
-!Definition: !Peak velocity of tidal stream for whole tidal cycle.
-!===
-
-a|
-*averageTidalPower*
-
-[%autowidth]
-!===
-!Name: !average tidal power
-!Definition: !Average tidal power obtainable over a complete year.
-!===
-
-a|
-*meanNeapTidalPower*
-
-[%autowidth]
-!===
-!Name: !mean neap tidal power
-!Definition: !Average neap power taking into account the peak only of the neap tidal curve.
-!===
-
-a|
-*meanNeapTidalRange*
-
-[%autowidth]
-!===
-!Name: !mean neap tidal range
-!Definition: !Vertical distance between high and low tide during neap tidal curve.
-!===
-
-a|
-*meanNeapTidePeakFlow*
-
-[%autowidth]
-!===
-!Name: !mean neap tide peak flow
-!Definition: !Peak velocity of neap tidal stream.
-!===
-
-a|
-*meanSpringTidalPower*
-
-[%autowidth]
-!===
-!Name: !mean spring tidal power
-!Definition: !Average spring power taking account the peak only of the spring tidal curve.
-!===
-
-a|
-*meanSpringTidalRange*
-
-[%autowidth]
-!===
-!Name: !mean spring tidal range
-!Definition: !Vertical distance between high and low tide during spring tidal curve
-!===
-
-a|
-*meanSpringTidePeakFlow*
-
-[%autowidth]
-!===
-!Name: !mean spring tide peak flow
-!Definition: !Peak velocity of spring tidal stream.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *WindPotentialValue*
 
@@ -6799,29 +6222,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*averageMeanWindPowerDensity*
-
-[%autowidth]
-!===
-!Name: !average mean wind power density
-!Definition: !The availability of energy at a location for conversion by a wind turbine.
-!===
-
-a|
-*averageMeanWindSpeed*
-
-[%autowidth]
-!===
-!Name: !average mean wind speed
-!Definition: !Annual Mean wind speed at a location.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 === Energy Resources Statistics
 
@@ -6853,20 +6254,7 @@ energy, electricity, or any other form of energy
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*Energy product value*
-
-[width="100%",cols=","]
-!===
-!Name: !A codelist of energy product values.
-!Definition: !This codelist itself is an empty placeholder and should be based on the EU regulation on Energy Statistics.\nEXAMPLE combustible fuels, heat, renewable\nenergy, electricity, or any other form of energy
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *EnergyStatisticsAggregateValue*
 
@@ -6886,18 +6274,8 @@ EXAMPLE indigenous production of natural gas.
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
-[width="100%",cols="100%"]
-|===
-a|
-*Energy statistics aggregate value*
-
-[width="100%",cols=","]
-!===
-!Name: !A codelist of aggregates that the statistical data are representing.
-!Definition: !This codelist itself is an empty placeholder and should be based on the EU regulation on Energy Statistics.\nEXAMPLE indigenous production of natural gas.
-!===
 
 |===
 

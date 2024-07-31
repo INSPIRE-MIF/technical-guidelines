@@ -481,11 +481,9 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 _Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types, associated data types and code lists that are defined in Annexes II, III and IV to this Regulation for the themes the data sets relate to.
 
-. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
-
-. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
 ====
 
@@ -582,7 +580,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -621,27 +618,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-_Article 6_
-*Code Lists and Enumerations*
-
-(...)
-
-[arabic, start=5]
-. Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -655,17 +631,23 @@ The IRs distinguish the following types of code lists.
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
-[arabic, start=1]
-. Code lists shall be of one of the following types, as specified in the Annexes:
-[loweralpha]
-.. code lists whose allowed values comprise only the values specified in this Regulation;
-.. code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
-.. code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
-.. code lists, whose allowed values comprise any values defined by data providers.
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
 
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
+
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
+
+. Code lists shall be one of the following types:
+
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
+
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
@@ -693,7 +675,7 @@ In addition, code lists can be hierarchical, as explained in Article 6(2) of the
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists*
 
 (...)
 
@@ -711,7 +693,7 @@ The type of code list and whether it is hierarchical or not is also indicated in
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists*
 
 (....)
 
@@ -1182,7 +1164,7 @@ SeaAreas are represented as 2-dimensional geometries.
 |_SeaBedCoverValue_ |_Sea Regions_ |«codelist»
 |_SeaSurfaceArea_ |_Sea Regions_ |«featureType»
 |_SeaSurfaceClassificationValue_ |_Sea Regions_ |«codelist»
-|_ShoreSegment_ |_Sea Regions_ |«featureType»
+|_ShoreSegment_ |_Sea Regions_ |«dataType»
 |_ShoreStabilityValue_ |_Sea Regions_ |«codelist»
 |_ShoreTypeClassificationValue_ |_Sea Regions_ |«codelist»
 |_Shoreline_ |_Sea Regions_ |«featureType»
@@ -1283,14 +1265,12 @@ a|
 !===
 
 a|
-*Attribute: extent*
+*Constraint: only one extent*
 
 [%autowidth]
 !===
-!Name: !extent
-!Value type: !MarineExtent
-!Definition: !The extent of the Marine Circulation Zone at a particular tidal state Extent of the Marine Circulation Zone.
-!Multiplicity: !1
+!Natural language: !MarineCirculationZone shall have only one value fore the extent attribute
+!OCL: !inv: self.extent = 1
 !===
 
 |===
@@ -1429,16 +1409,6 @@ a|
 !Stereotypes: !«featureType»
 !===
 
-a|
-*Attribute: extent*
-
-[%autowidth]
-!===
-!Name: !extent
-!Value type: !MarineExtent
-!Definition: !The extent of the Sea at Mean High Water
-!Multiplicity: !1
-!===
 
 a|
 *Constraint: extent.waterLevel must be meanHighWater*
@@ -1447,6 +1417,15 @@ a|
 !===
 !Natural language: !Sea is defined at Mean High Water. This constraint can be relaxed if there is not significant tidal variation in water level
 !OCL: !inv: self.extent.waterLevel = 'meanHighWater'
+!===
+
+a|
+*Constraint: only one extent*
+
+[%autowidth]
+!===
+!Natural language: !Sea shall have only one value fore the extent attribute
+!OCL: !inv: self.extent = 1
 !===
 
 |===
@@ -1645,56 +1624,6 @@ a|
 
 |===
 
-====== ShoreSegment
-
-[cols="",options="header",]
-|===
-|*ShoreSegment*
-a|
-[%autowidth]
-!===
-!Name: !Shore Segment
-!Definition: !A Shore Segment is a section of shore line.
-!Description: !Where it is possible to provide attributes about shore stability (eroding, stable etc) and/or shore type (sand, rock, harbour etc). Then the Shore Segment should be used in place of the GML LineString element to describe curve segments.
-!Stereotypes: !«featureType»
-!===
-
-a|
-*Attribute: geometry*
-
-[%autowidth]
-!===
-!Name: !geometry
-!Value type: !GM_Curve
-!Definition: !The geometry of the ShoreSegment.
-!Multiplicity: !1
-!===
-
-a|
-*Attribute: shoreClassification*
-
-[%autowidth]
-!===
-!Name: !shore classification
-!Value type: !ShoreTypeClassificationValue
-!Definition: !The primary type of the shore segment, taken from the ShoreTypeClassification codelist.
-!Multiplicity: !0..1
-!Stereotypes: !«voidable»
-!===
-
-a|
-*Attribute: shoreStability*
-
-[%autowidth]
-!===
-!Name: !shore stability
-!Value type: !ShoreStabilityValue
-!Definition: !The primary stability type of the shore segment, taken from the ShoreStability codelist.
-!Multiplicity: !0..1
-!Stereotypes: !«voidable»
-!===
-
-|===
 
 ===== Data types
 
@@ -1823,6 +1752,57 @@ a|
 
 |===
 
+====== ShoreSegment
+
+[cols="",options="header",]
+|===
+|*ShoreSegment*
+a|
+[cols=","]
+!===
+!Name: !Shore Segment
+!Definition: !A Shore Segment is a section of shore line.
+!Description: !Where it is possible to provide attributes about shore stability (eroding, stable etc) and/or shore type (sand, rock, harbour etc). Then the Shore Segment should be used in place of the GML LineString element to describe curve segments.
+!Stereotypes: !«featureType»
+!===
+
+a|
+*Attribute: geometry*
+
+[cols=","]
+!===
+!Name: !geometry
+!Value type: !GM_Curve
+!Definition: !The geometry of the ShoreSegment.
+!Multiplicity: !1
+!===
+
+a|
+*Attribute: shoreClassification*
+
+[cols=","]
+!===
+!Name: !shore classification
+!Value type: !ShoreTypeClassificationValue
+!Definition: !The primary type of the shore segment, taken from the ShoreTypeClassification codelist.
+!Multiplicity: !0..1
+!Stereotypes: !«voidable»
+!===
+
+a|
+*Attribute: shoreStability*
+
+[cols=","]
+!===
+!Name: !shore stability
+!Value type: !ShoreStabilityValue
+!Definition: !The primary stability type of the shore segment, taken from the ShoreStability codelist.
+!Multiplicity: !0..1
+!Stereotypes: !«voidable»
+!===
+
+|===
+
 ===== Code lists
 
 ====== SeaAreaTypeClassificationValue
@@ -1837,7 +1817,7 @@ a|
 !Definition: !Classification type of the SeaArea, e.g. estuary, openOcean
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/SeaAreaTypeClassificationValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1858,7 +1838,7 @@ a|
 May be extended by member states
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/SeaBedCoverValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1876,7 +1856,7 @@ a|
 !Description: !Codelist for types of sea surface layers found on sea surfaces (.e.g oil, ice etc).
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/SeaSurfaceClassificationValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1894,7 +1874,7 @@ a|
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ShoreStabilityValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1912,7 +1892,7 @@ a|
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ShoreTypeClassificationValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1929,15 +1909,15 @@ a|
 !Definition: !Types of marine circulation zones
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Identifier: !http://inspire.ec.europa.eu/codelist/ZoneTypeValue
+!Values: !The allowed values for this code list comprise any values defined by data providers. The INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== AbstractObservableProperty
 
@@ -2242,11 +2222,12 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+.	Other coordinate reference systems may be specified for specific spatial data themes.
 
-. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+.	 For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
 
 ====
 
@@ -2269,7 +2250,7 @@ For the display of spatial data sets with the view network service as specified 
 ====
 [.text-center]
 *IR Requirement*
-_Annex II, Section 1.4_
+_Annex II, Section 1.5_
 *Coordinate Reference Systems used in the View Network Service*
 
 . Coordinate reference system parameters and identifiers shall be managed in one or several common registers for coordinate reference systems.
@@ -2278,13 +2259,13 @@ _Annex II, Section 1.4_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 5*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (_https://inspire.ec.europa.eu/crs_) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -2293,35 +2274,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-*Table 2. http URIs for the default coordinate reference systems*
-
-[cols=",,",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -2743,6 +2695,7 @@ or (using a citation):
 				<gmd:date>
 					<gco:Date>2012-12-17</gco:Date>
 				</gmd:date>
+				
 				<gmd:dateType>
 					<gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resou
 rces/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
@@ -3327,11 +3280,12 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
-
-. Every encoding rule used to encode spatial data shall be made available.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
 
 ====
+
 
 NOTE ISO 19118:2011 specifies the requirements for defining encoding rules used for interchange of geographic data within the set of International Standards known as the "ISO 19100 series". An encoding rule allows geographic information defined by application schemas and standardized schemas to be coded into a system-independent data structure suitable for transport and storage. The encoding rule specifies the types of data being coded and the syntax, structure and coding schemes used in the resulting data structure. Specifically, ISO 19118:2011 includes
 
@@ -3749,7 +3703,7 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
 [.red.background]
 ====
@@ -3787,7 +3741,7 @@ http://inspire.ec.europa.eu/conformance-class/ir/sr/as/sr
 
 . [.underline]#Reference#: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
@@ -3800,20 +3754,19 @@ NOTE Further technical information is in the Feature catalogue and UML diagram o
 
 . [.underline]#Test Method#: Examine whether the value type of each provided attribute or association role adheres to the corresponding value type specified in the target specification.
 
-NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from enumeration and code lists, and the coverage domains.
+NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from code lists, and the coverage domains.
 
 NOTE 2 Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
 ==== Value test
 
 [loweralpha]
-. [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.
+. [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.
 
 . [.underline]#Reference#: Art.4 (3) of Commission Regulation No 1089/2010.
 
-. [.underline]#Test Method#: When an attribute / association role has an enumeration or code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
+. [.underline]#Test Method#: When an attribute / association role has a code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
 +
-* shall not take any other value than defined in the enumeration table when its type is an enumeration.
 * shall take only values explicitly specified in the code list when the code list's extensibility is "none".
 * shall take only a value explicitly specified in the code list or shall take a value that is narrower (i.e. more specific) than those explicitly specified in the application schema when the code list's extensibility is "narrower".
 
@@ -4211,7 +4164,7 @@ _http://inspire.ec.europa.eu/conformance-class/tg/sr/3.0_
 [loweralpha]
 . [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-. [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+. [.underline]#Reference#: Section 6 of this technical guideline
 
 . [.underline]#Test Method#: Compare the URI of the dataset with the URIs in the table.
 
@@ -4672,62 +4625,13 @@ a|
 !Name: !Sea Area Type Classifcation Value
 !Definition: !Classification type of the SeaArea, e.g. estuary, openOcean
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/SeaAreaTypeClassificationValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/SeaAreaTypeClassificationValue
 !Values: !
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols="",]
-|===
-a|
-*breakingZone*
-
-[%autowidth]
-!===
-!Name: !breaking zone
-!Definition: !Sea Area is a breaking Zone
-!===
-
-a|
-*delta*
-
-[%autowidth]
-!===
-!Name: !delta
-!Definition: !Sea Area is a delta
-!===
-
-a|
-*estuary*
-
-[%autowidth]
-!===
-!Name: !estuary
-!Definition: !Sea Area is an estuary
-!===
-
-a|
-*openOcean*
-
-[%autowidth]
-!===
-!Name: !open ocean
-!Definition: !Sea Area is open ocean or sea
-!===
-
-a|
-*shelfSea*
-
-[%autowidth]
-!===
-!Name: !shelf sea
-!Definition: !Sea Area is shelf sea
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *SeaBedCoverValue*
 
@@ -4743,143 +4647,12 @@ a|
 --Governance-- 
 May be extended by member states
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/SeaBedCoverValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/SeaBedCoverValue
 !Values: !
 !===
 
 |===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*sand*
-
-[%autowidth]
-!===
-!Name: !sand
-!Definition: !area of sand
-!===
-
-a|
-*mud*
-
-[%autowidth]
-!===
-!Name: !mud
-!Definition: !area of mud
-!===
-
-a|
-*clay*
-
-[%autowidth]
-!===
-!Name: !clay
-!Definition: !area of clay
-!===
-
-a|
-*silt*
-
-[%autowidth]
-!===
-!Name: !silt
-!Definition: !area of silt
-!===
-
-a|
-*stones*
-
-[%autowidth]
-!===
-!Name: !stones
-!Definition: !area of stones
-!===
-
-a|
-*gravel*
-
-[%autowidth]
-!===
-!Name: !gravel
-!Definition: !area of gravel
-!===
-
-a|
-*pebbles*
-
-[%autowidth]
-!===
-!Name: !pebbles
-!Definition: !area of pebbles
-!===
-
-a|
-*cobbles*
-
-[%autowidth]
-!===
-!Name: !cobbles
-!Definition: !area of cobbles
-!===
-
-a|
-*rock*
-
-[%autowidth]
-!===
-!Name: !rock
-!Definition: !area of rock
-!===
-
-a|
-*coral*
-
-[%autowidth]
-!===
-!Name: !coral
-!Definition: !area of coral
-!===
-
-a|
-*shells*
-
-[%autowidth]
-!===
-!Name: !shells
-!Definition: !area of shells
-!===
-
-a|
-*weed*
-
-[%autowidth]
-!===
-!Name: !weed
-!Definition: !area of weed, including kelp
-!===
-
-a|
-*sandWaves*
-
-[%autowidth]
-!===
-!Name: !sand waves
-!Definition: !area with sand waves (mobile bottom)
-!===
-
-a|
-*freshwaterSprings*
-
-[%autowidth]
-!===
-!Name: !freshwater springs
-!Definition: !area with freshwater springs in seabed
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *SeaSurfaceClassificationValue*
 
@@ -4892,62 +4665,13 @@ a|
 !Definition: !Types of sea surface layers found on sea surfaces.
 !Description: !Codelist for types of sea surface layers found on sea surfaces (.e.g oil, ice etc).
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/SeaSurfaceClassificationValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/SeaSurfaceClassificationValue
 !Values: !
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*ice*
-
-[%autowidth]
-!===
-!Name: !ice
-!Definition: !Sea surface is ice
-!===
-
-a|
-*oil*
-
-[%autowidth]
-!===
-!Name: !oil
-!Definition: !Sea surface is oil
-!===
-
-a|
-*snow*
-
-[%autowidth]
-!===
-!Name: !snow
-!Definition: !Sea surface is snow or slush
-!===
-
-a|
-*litter*
-
-[%autowidth]
-!===
-!Name: !litter
-!Definition: !Sea surface is litter
-!===
-
-a|
-*algae*
-
-[%autowidth]
-!===
-!Name: !algae
-!Definition: !Sea surface is algae
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *ShoreStabilityValue*
 
@@ -4960,71 +4684,13 @@ a|
 !Definition: !Types of the stability of shore segments.
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/ShoreStabilityValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ShoreStabilityValue
 !Values: !
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*stable*
-
-[%autowidth]
-!===
-!Name: !stable
-!Definition: !Stretch of shore is stable
-!===
-
-a|
-*probableErosionTrend*
-
-[%autowidth]
-!===
-!Name: !probable erosion trend
-!Definition: !Stretch of shore is
-!===
-
-a|
-*confirmedErosionTrend*
-
-[%autowidth]
-!===
-!Name: !confirmed erosion trend
-!Definition: !Stretch of shore is confirmed to be eroding
-!===
-
-a|
-*probableAccretionTrend*
-
-[%autowidth]
-!===
-!Name: !probable accretion trend
-!Definition: !Stretch of shore is probably accreting
-!===
-
-a|
-*confirmedAccretionTrend*
-
-[%autowidth]
-!===
-!Name: !confirmed accretion trend
-!Definition: !Stretch of shore is confirmed to be accreting
-!===
-
-a|
-*unknown*
-
-[%autowidth]
-!===
-!Name: !unknown
-!Definition: !Stability of stretch of shore is unknown
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *ShoreTypeClassificationValue*
 
@@ -5037,98 +4703,12 @@ a|
 !Definition: !Types of shore segments.
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !http://inspire.ec.europa.eu/codeList/ShoreTypeClassificationValue
+!Identifier: !http://inspire.ec.europa.eu/codelist/ShoreTypeClassificationValue
 !Values: !
 !===
 
 |===
-
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[cols=""]
-|===
-a|
-*estuaryRiverMouth*
-
-[%autowidth]
-!===
-!Name: !estuary
-!Definition: !Shore type is estuary/river mouth
-!===
-
-a|
-*rock*
-
-[%autowidth]
-!===
-!Name: !rock
-!Definition: !Shore type is rock
-!===
-
-a|
-*sand*
-
-[%autowidth]
-!===
-!Name: !sand
-!Definition: !Shore type is sand
-!===
-
-a|
-*tidalMarsh*
-
-[%autowidth]
-!===
-!Name: !tidal marsh
-!Definition: !Shore type is tidal marsh
-!===
-
-a|
-*narrowVegetisedShore*
-
-[%autowidth]
-!===
-!Name: !narrow vegetised shore
-!Definition: !Shore type is narrow vegetisedshore
-!===
-
-a|
-*artificialCoastline*
-
-[%autowidth]
-!===
-!Name: !artificial coastline
-!Definition: !Shore type is artifical
-!===
-
-a|
-*harbourLimits*
-
-[%autowidth]
-!===
-!Name: !harbour limits
-!Definition: !Shore type is harbour limits
-!===
-
-a|
-*gravel*
-
-[%autowidth]
-!===
-!Name: !gravel
-!Definition: !Shore type is gravel
-!===
-
-a|
-*mud*
-
-[%autowidth]
-!===
-!Name: !mud
-!Definition: !Shore type is mud
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *ZoneTypeValue*
 
@@ -5141,44 +4721,14 @@ a|
 !Definition: !Types of marine circulation zones
 !Description: !The allowed values for this code list comprise any values defined by data providers.
 !Extensibility: !any
-!Identifier: !
+!Identifier: !http://inspire.ec.europa.eu/codelist/ZoneTypeValue
 !Values: !
 !===
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
-[cols=""]
-|===
-a|
-*mixingZone*
-
-[%autowidth]
-!===
-!Name: !mixing zone
-!Definition: !The area is a mixing zone
-!===
-
-a|
-*sedimentCell*
-
-[%autowidth]
-!===
-!Name: !sediment cell
-!Definition: !The area is a sediment cell.
-!===
-
-a|
-*coastalWaters*
-
-[%autowidth]
-!===
-!Name: !coastal waters
-!Definition: !The area is coastal water.
-!===
-
-|===
 
 <<<
 [appendix]

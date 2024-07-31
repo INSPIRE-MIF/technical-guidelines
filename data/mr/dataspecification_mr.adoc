@@ -528,11 +528,9 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 _Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types, associated data types and code lists that are defined in Annexes II, III and IV to this Regulation for the themes the data sets relate to.
 
-. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
-
-. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
 ====
 
@@ -632,7 +630,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -671,27 +668,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-_Article 6_
-*Code Lists and Enumerations*
-
-(...)
-
-[arabic, start=5]
-. Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -705,16 +681,23 @@ The IRs distinguish the following types of code lists.
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
-. Code lists shall be of one of the following types, as specified in the Annexes:
-[loweralpha]
-.. code lists whose allowed values comprise only the values specified in this Regulation;
-.. code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
-.. code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
-.. code lists, whose allowed values comprise any values defined by data providers.
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
 
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
+
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
+
+. Code lists shall be one of the following types:
+
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
+
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
@@ -742,7 +725,7 @@ In addition, code lists can be hierarchical, as explained in Article 6(2) of the
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists*
 
 (...)
 
@@ -760,7 +743,7 @@ The type of code list and whether it is hierarchical or not is also indicated in
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists*
 
 (....)
 
@@ -2001,7 +1984,7 @@ a|
 !Description: !EXAMPLE: JORC, PERC, Unspecified, UNESCO/World Bank and the Canadian CIM.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ClassificationMethodUsedValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2018,7 +2001,7 @@ a|
 !Description: !EXAMPLE: Cu, Au, Dimension Stone etc.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/CommodityCodeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2035,7 +2018,7 @@ a|
 !Description: !EXAMPLE: for energy, fertilizer, building raw material etc.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/EndusePotentialValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2051,7 +2034,7 @@ a|
 !Definition: !Types of exploration activity carried out.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ExplorationActivityTypeValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2067,7 +2050,7 @@ a|
 !Definition: !Values indicating the result of the exploration activity.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ExplorationResultValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2084,7 +2067,7 @@ a|
 !Description: !Such a ranking is based on a statistical study of a large set of deposits throughout the world to ensure that it is valid. It is made using histograms allowing for each commodity to define class boundaries and what is a very large, a large, a medium-sized etc deposit for this commodity.. This classification is based on the potential or endowment: reserves  resources.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/ImportanceValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2101,7 +2084,7 @@ a|
 !Description: !EXAMPLE: host rock, host structure, commodity, association with similar mineral processes e.g. porphyry.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/MineralDepositGroupValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2134,7 +2117,7 @@ a|
 !Definition: !The type of mineral occurrence.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/MineralOccurrenceTypeValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2150,7 +2133,7 @@ a|
 !Definition: !Values indicating the operational status of the mine.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/MineStatusValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2166,7 +2149,7 @@ a|
 !Definition: !The type of mining activity, processing activity, or production.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/MiningActivityTypeValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2182,7 +2165,7 @@ a|
 !Definition: !Values indicating the type of processing carried out during a mining activity.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ProcessingActivityTypeValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -2198,7 +2181,7 @@ a|
 !Definition: !The level of confidence of the estimate of the reserve.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ReserveCategoryValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -2214,14 +2197,14 @@ a|
 !Definition: !Indication whether the resource is measured, indicated, or inferred.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ResourceCategoryValue
-!Values: !The allowed values for this code list comprise the values specified in _Annex C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== Boolean
 
@@ -2523,11 +2506,13 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+.	Other coordinate reference systems may be specified for specific spatial data themes.
 
-. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+.	 For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
+
 
 ====
 
@@ -2559,13 +2544,13 @@ _Annex II, Section 1.5_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 2*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -2574,35 +2559,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-*Table 2. http URIs for the default coordinate reference systems*
-
-[align=center,width="100%",cols="37%,20%,43%",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -3462,9 +3418,10 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
 
-. Every encoding rule used to encode spatial data shall be made available.
 
 ====
 
@@ -4076,7 +4033,7 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
 ====
 *Open issue 1:* Even though the last condition can be derived from Art. 8(4) of the Directive, the ISDSS Regulation does not contain requirements concerning the above issue. Therefore, no specific tests have been included in this abstract suite for testing conformity of extended application schemas. Annex F of the Generic Conceptual Model (D2.5) provides an example how to extend INSPIRE application schemas in a compliant way.
@@ -4112,7 +4069,7 @@ http://inspire.ec.europa.eu/conformance-class/ir/mr/as/MineralResources
 
 . [.underline]#Reference#: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
@@ -4125,21 +4082,20 @@ NOTE Further technical information is in the Feature catalogue and UML diagram o
 
 . [.underline]#Test Method#: Examine whether the value type of each provided attribute or association role adheres to the corresponding value type specified in the target specification.
 
-NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from enumeration and code lists, and the coverage domains.
+NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from code lists, and the coverage domains.
 
 NOTE 2 Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
 ==== Value test
 
 [loweralpha]
-. [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.
+. [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.
 
 . [.underline]#Reference#: Art.4 (3) of Commission Regulation No 1089/2010.
 
-. [.underline]#Test Method#: When an attribute / association role has an enumeration or code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
+. [.underline]#Test Method#: When an attribute / association role has a code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
 +
 [arabic, start=1]
-.. shall not take any other value than defined in the enumeration table when its type is an enumeration.
 .. shall take only values explicitly specified in the code list when the code list's extensibility is "none".
 .. shall take only a value explicitly specified in the code list or shall take a value that is narrower (i.e. more specific) than those explicitly specified in the application schema when the code list's extensibility is "narrower".
 
@@ -4477,7 +4433,7 @@ _http://inspire.ec.europa.eu/conformance-class/tg/mr/3.0 rc3_
 [loweralpha]
 . [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-. [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+. [.underline]#Reference#: Section 6 of this technical guideline
 
 . [.underline]#Test Method#: Compare the URI of the dataset with the URIs in the table.
 
@@ -4935,137 +4891,7 @@ a|
 !Description: !EXAMPLE: JORC, PERC, Unspecified, UNESCO/World Bank and the Canadian CIM.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ClassificationMethodUsedValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*JORCcode*
-
-[%autowidth]
-!===
-!Name: !JORC code
-!Definition: !The Australasian Code for Reporting of Exploration Results, Mineral Resources and Ore Reserves.
-!===
-
-a|
-*NI43-101*
-
-[%autowidth]
-!===
-!Name: !NI 43-101
-!Definition: !National Instrument 43-101 (the NI 43-101 or the NI) is a mineral resource classification scheme used for the public disclosure of information relating to mineral properties in Canada.
-!===
-
-a|
-*CIMstandards*
-
-[%autowidth]
-!===
-!Name: !CIM standards
-!Definition: !The CIM Definition Standards on Mineral Resources and Reserves (CIM Definition Standards) establish definitions and guidelines for the reporting of exploration information, mineral resources and mineral reserves in Canada
-!===
-
-a|
-*SAMRECcode*
-
-[%autowidth]
-!===
-!Name: !SAMREC code
-!Definition: !The South African Code for Reporting of Exploration Results, Mineral Resources and Mineral Reserves.
-!===
-
-a|
-*IMMReportingCode*
-
-[%autowidth]
-!===
-!Name: !IMM Reporting Code
-!Definition: !The Code for Reporting of Mineral Resources and Mineral Reserves sets out minimum standards, recommendations and guidelines for Public Reporting of Mineral Exploration Results, Mineral Resources and Mineral Reserves in the United Kingdom, Ireland and Europe.
-!===
-
-a|
-*SMEGuide*
-
-[%autowidth]
-!===
-!Name: !SME Guide
-!Definition: !A guide for reporting exploration information, mineral resources, and mineral reserves - USA.
-!===
-
-a|
-*IIMChCode*
-
-[%autowidth]
-!===
-!Name: !IIMCh Code
-!Definition: !Certification Code for Exploration Prospects, Mineral Resources & Ore Reserves. This Codeßis the result of a Collaboration Agreement between the Institution of Mining Engineers of Chile (IIMCh) and the Ministry of Mining.
-!===
-
-a|
-*peruvianCode*
-
-[%autowidth]
-!===
-!Name: !Peruvian Code
-!Definition: !This Code was prepared by a Joint Committee formed by members of the Lima Stock Exchange and by professionals dedicated to the exploration and evaluation of mineral resources.
-!===
-
-a|
-*CRIRSCOCode*
-
-[%autowidth]
-!===
-!Name: !CRIRSCO Code
-!Definition: !The International Template for Reporting of Exploration Results, Mineral Resources and Mineral Reserves of the Committee for Mineral Reserves International Reporting Standards (CRIRSCO) integrates the minimum standards being adopted in national reporting codes worldwide with recommendations and interpretive guidelines for the public reporting of exploration results, mineral resources and mineral reserves.
-!===
-
-a|
-*UNFCCode*
-
-[%autowidth]
-!===
-!Name: !UNFC Code
-!Definition: !The United Nations Framework Classification for Fossil Energy and Mineral Reserves and Resources 2009 (UNFC-2009) is a universally applicable scheme for classifying/evaluating energy and mineral reserves and resources - it is the successor to UNFC-2004.
-!===
-
-a|
-*SECGuide*
-
-[%autowidth]
-!===
-!Name: !SEC Guide
-!Definition: !Description of Property by Issuers Engaged or to be Engaged in Significant Mining Operations. Developed by the United States Securities and Exchange Commission.
-!===
-
-a|
-*PERCCode*
-
-[%autowidth]
-!===
-!Name: !PERC Code
-!Definition: !The Pan European Reserves and Resources Reporting Committee (PERC) Code for Reporting of Exploration Results, Mineral Resources and Mineral Reserves (further referred to as µthe Code?) sets out minimum standards, recommendations and guidelines for Public Reporting of Exploration Results, Mineral Resources and Mineral Reserves in the United Kingdom, Ireland and Europe.
-!===
-
-a|
-*russianCode*
-
-[%autowidth]
-!===
-!Name: !Russian Code
-!Definition: !Currently effective in Russia is the Code approved by the Decree of the Ministry of Natural Resources, RF No 278 of 11 December, 2006. Full title of the Document: Classification of resources/reserves and prognostic resources of solid minerals.
-!===
-
-a|
-*historicResourceEstimate*
-
-[%autowidth]
-!===
-!Name: !Historic resource estimate
-!Definition: !Term for resource estimation before standard codes (e.g. JORC etc.)
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -5086,1749 +4912,30 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
-[width="100%",cols="100%"]
-|===
-a|
-*"abrasiveMinerals;garnet, staurolite"*
-
-[%autowidth]
-!===
-!Name: !"Abrasive minerals: garnet, staurolite (substance)"
-!Definition: !Abrasive minerals: garnet, staurolite (substance)
-!===
-
-a|
-*SilverMetal*
-
-[%autowidth]
-!===
-!Name: !Silver (metal)
-!Definition: !Silver (metal)
-!===
-
-a|
-*aggregateSubstance*
-
-[%autowidth]
-!===
-!Name: !Aggregate (substance)
-!Definition: !Aggregate (substance)
-!===
-
-a|
-*alluvialAggregateSubstance*
-
-[%autowidth]
-!===
-!Name: !Alluvial aggregate (substance)
-!Definition: !Alluvial aggregate (substance)
-!===
-
-a|
-*chertSiliceousConcretionSubstance*
-
-[%autowidth]
-!===
-!Name: !"Chert, siliceous concretion (substance)"
-!Definition: !Chert, siliceous concretion (substance)
-!===
-
-a|
-*crushedAggregateSubstance*
-
-[%autowidth]
-!===
-!Name: !Crushed aggregate (substance)
-!Definition: !Crushed aggregate (substance)
-!===
-
-a|
-*crushedAggregateFromCarbonateSubstance*
-
-[%autowidth]
-!===
-!Name: !Crushed aggregate from carbonate (substance)
-!Definition: !Crushed aggregate from carbonate (substance)
-!===
-
-a|
-*crushedAggregateFromMagmaticRockSubstance*
-
-[%autowidth]
-!===
-!Name: !Crushed aggregate from magmatic rock (substance)
-!Definition: !Crushed aggregate from magmatic rock (substance)
-!===
-
-a|
-*crushedAggregateFromSandstoneQuartziteSubstance*
-
-[%autowidth]
-!===
-!Name: !"Crushed aggregate from sandstone, quartzite (substance)"
-!Definition: !Crushed aggregate from sandstone, quartzite (substance)
-!===
-
-a|
-*sandSandAndGravelSubstance*
-
-[%autowidth]
-!===
-!Name: !"Sand, sand and gravel (substance)"
-!Definition: !Sand, sand and gravel (substance)
-!===
-
-a|
-*veryFineSandSubstance*
-
-[%autowidth]
-!===
-!Name: !Very fine sand (substance)
-!Definition: !Very fine sand (substance)
-!===
-
-a|
-*aquamarineSubstance*
-
-[%autowidth]
-!===
-!Name: !Aquamarine (substance)
-!Definition: !Aquamarine (substance)
-!===
-
-a|
-*agataChalcedonyJasperSubstance*
-
-[%autowidth]
-!===
-!Name: !"Agata, chalcedony, jasper (substance)"
-!Definition: !Agata, chalcedony, jasper (substance)
-!===
-
-a|
-*aluminiumBauxiteOre*
-
-[%autowidth]
-!===
-!Name: !Aluminium (Bauxite ore)
-!Definition: !Aluminium (Bauxite ore)
-!===
-
-a|
-*alunite*
-
-[%autowidth]
-!===
-!Name: !Alunite
-!Definition: !Alunite
-!===
-
-a|
-*amber*
-
-[%autowidth]
-!===
-!Name: !Amber
-!Definition: !Amber
-!===
-
-a|
-*amethysQuartzCitrineAventurineSubstance*
-
-[%autowidth]
-!===
-!Name: !"Amethyst, quartz, citrine, aventurine (substance)"
-!Definition: !Amethyst, quartz, citrine, aventurine (substance)
-!===
-
-a|
-*amazoniteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Amazonite, gemstone (substance)"
-!Definition: !Amazonite, gemstone (substance)
-!===
-
-a|
-*andalusiteKyaniteGroupSubstance*
-
-[%autowidth]
-!===
-!Name: !Andalusite-kyanite group (substance)
-!Definition: !Andalusite-kyanite group (substance)
-!===
-
-a|
-*andalusiteSubstance*
-
-[%autowidth]
-!===
-!Name: !Andalusite (substance)
-!Definition: !Andalusite (substance)
-!===
-
-a|
-*antophylliteAsbestosSubstance*
-
-[%autowidth]
-!===
-!Name: !Antophyllite (Asbestos) (substance)
-!Definition: !Antophyllite (Asbestos) (substance)
-!===
-
-a|
-*apatiteGemstoneCatsEyeSubstance*
-
-[%autowidth]
-!===
-!Name: !"Apatite, gemstone (cat's eye), (substance)"
-!Definition: !Apatite, gemstone (cat's eye), (substance)
-!===
-
-a|
-*arsenicMetal*
-
-[%autowidth]
-!===
-!Name: !Arsenic (metal)
-!Definition: !Arsenic (metal)
-!===
-
-a|
-*asbestosSubstance*
-
-[%autowidth]
-!===
-!Name: !Asbestos (substance)
-!Definition: !Asbestos (substance)
-!===
-
-a|
-*attapulgiteSepioliteSubstance*
-
-[%autowidth]
-!===
-!Name: !"Attapulgite, sepiolite (substance)"
-!Definition: !Attapulgite, sepiolite (substance)
-!===
-
-a|
-*goldMmetal*
-
-[%autowidth]
-!===
-!Name: !Gold (metal)
-!Definition: !Gold (metal)
-!===
-
-a|
-*berylliumBeO*
-
-[%autowidth]
-!===
-!Name: !Beryllium (BeO)
-!Definition: !Beryllium (BeO)
-!===
-
-a|
-*bismuthMetal*
-
-[%autowidth]
-!===
-!Name: !Bismuth (metal)
-!Definition: !Bismuth (metal)
-!===
-
-a|
-*bituminousRocksTonsOfOil*
-
-[%autowidth]
-!===
-!Name: !Bituminous rocks (tons of oil)
-!Definition: !Bituminous rocks (tons of oil)
-!===
-
-a|
-*bentoniteSubstance*
-
-[%autowidth]
-!===
-!Name: !Bentonite (substance)
-!Definition: !Bentonite (substance)
-!===
-
-a|
-*boratesB2O3*
-
-[%autowidth]
-!===
-!Name: !Borates (B2O3)
-!Definition: !Borates (B2O3)
-!===
-
-a|
-*bromineSubstance*
-
-[%autowidth]
-!===
-!Name: !Bromine (substance)
-!Definition: !Bromine (substance)
-!===
-
-a|
-*berylGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Beryl, gemstone (substance)"
-!Definition: !Beryl, gemstone (substance)
-!===
-
-a|
-*bariteBaSO4*
-
-[%autowidth]
-!===
-!Name: !Barite (BaSO4)
-!Definition: !Barite (BaSO4)
-!===
-
-a|
-*CalciteFilleForPaperCaCO3*
-
-[%autowidth]
-!===
-!Name: !"Calcite, filler for paper (CaCO3)"
-!Definition: !Calcite, filler for paper (CaCO3)
-!===
-
-a|
-*calciteOpticalUseCaCO3*
-
-[%autowidth]
-!===
-!Name: !"Calcite, optical use (CaCO3)"
-!Definition: !Calcite, optical use (CaCO3)
-!===
-
-a|
-*chrysoberylGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Chrysoberyl, gemstone (substance)"
-!Definition: !Chrysoberyl, gemstone (substance)
-!===
-
-a|
-*cadmiumMetal*
-
-[%autowidth]
-!===
-!Name: !Cadmium (metal)
-!Definition: !Cadmium (metal)
-!===
-
-a|
-*ceriumCe2O3*
-
-[%autowidth]
-!===
-!Name: !Cerium (Ce2O3)
-!Definition: !Cerium (Ce2O3)
-!===
-
-a|
-*chrysotileAsbestosSubstance*
-
-[%autowidth]
-!===
-!Name: !Chrysotile (Asbestos) (substance)
-!Definition: !Chrysotile (Asbestos) (substance)
-!===
-
-a|
-*chrysopraseGreenOpalSubstance*
-
-[%autowidth]
-!===
-!Name: !"Chrysoprase, green opal (substance)"
-!Definition: !Chrysoprase, green opal (substance)
-!===
-
-a|
-*claysUnknownUseSubstance*
-
-[%autowidth]
-!===
-!Name: !"Clays, unknown use (substance)"
-!Definition: !Clays, unknown use (substance)
-!===
-
-a|
-*commonClaysForBrickTileSubstance*
-
-[%autowidth]
-!===
-!Name: !"Common clays for brick, tile (substance)"
-!Definition: !Common clays for brick, tile (substance)
-!===
-
-a|
-*claysForCementWorksSubstance*
-
-[%autowidth]
-!===
-!Name: !Clays for cement works (substance)
-!Definition: !Clays for cement works (substance)
-!===
-
-a|
-*whiteFiringClaysRrefractoryCeramicSubstance*
-
-[%autowidth]
-!===
-!Name: !White-firing clays (refractory & ceramic) (subst.)
-!Definition: !White-firing clays (refractory & ceramic) (subst.)
-!===
-
-a|
-*cobaltMetal*
-
-[%autowidth]
-!===
-!Name: !Cobalt (metal)
-!Definition: !Cobalt (metal)
-!===
-
-a|
-*coalLigniteSubstance*
-
-[%autowidth]
-!===
-!Name: !"Coal, lignite (substance)"
-!Definition: !Coal, lignite (substance)
-!===
-
-a|
-*ioliteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Iolite, gemstone (substance)"
-!Definition: !Iolite, gemstone (substance)
-!===
-
-a|
-*corundumGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Corundum, gemstone (substance)"
-!Definition: !Corundum, gemstone (substance)
-!===
-
-a|
-*chromeCr2O3*
-
-[%autowidth]
-!===
-!Name: !Chrome (Cr2O3)
-!Definition: !Chrome (Cr2O3)
-!===
-
-a|
-*corundumSubstance*
-
-[%autowidth]
-!===
-!Name: !Corundum (substance)
-!Definition: !Corundum (substance)
-!===
-
-a|
-*CrocidoliteAsbestosSubstance*
-
-[%autowidth]
-!===
-!Name: !Crocidolite (Asbestos) (substance)
-!Definition: !Crocidolite (Asbestos) (substance)
-!===
-
-a|
-*cesiumCs2O*
-
-[%autowidth]
-!===
-!Name: !Cesium (Cs2O)
-!Definition: !Cesium (Cs2O)
-!===
-
-a|
-*copperMetal*
-
-[%autowidth]
-!===
-!Name: !Copper (metal)
-!Definition: !Copper (metal)
-!===
-
-a|
-*diamondIndustrialAndGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Diamond, industrial and gemstone (substance)"
-!Definition: !Diamond, industrial and gemstone (substance)
-!===
-
-a|
-*dioptaseGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Dioptase, gemstone (substance)"
-!Definition: !Dioptase, gemstone (substance)
-!===
-
-a|
-*dolomiteSubstance*
-
-[%autowidth]
-!===
-!Name: !Dolomite (substance)
-!Definition: !Dolomite (substance)
-!===
-
-a|
-*DiatomiteKieselguhrSubstance*
-
-[%autowidth]
-!===
-!Name: !Diatomite (kieselguhr) (substance)
-!Definition: !Diatomite (kieselguhr) (substance)
-!===
-
-a|
-*dumortieriteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Dumortierite, gemstone (substance)"
-!Definition: !Dumortierite, gemstone (substance)
-!===
-
-a|
-*emeraldSubstance*
-
-[%autowidth]
-!===
-!Name: !Emerald (substance)
-!Definition: !Emerald (substance)
-!===
-
-a|
-*diopsideEnstatiteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Diopside-enstatite, gemstone (substance)"
-!Definition: !Diopside-enstatite, gemstone (substance)
-!===
-
-a|
-*euclaseGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Euclase, gemstone (substance)"
-!Definition: !Euclase, gemstone (substance)
-!===
-
-a|
-*ironMetal*
-
-[%autowidth]
-!===
-!Name: !Iron (metal)
-!Definition: !Iron (metal)
-!===
-
-a|
-*feldsparNephelineSubstance*
-
-[%autowidth]
-!===
-!Name: !"Feldspar, nepheline (substance)"
-!Definition: !Feldspar, nepheline (substance)
-!===
-
-a|
-*fluoriteOrFluosparCaF2*
-
-[%autowidth]
-!===
-!Name: !Fluorite or Fluospar (CaF2)
-!Definition: !Fluorite or Fluospar (CaF2)
-!===
-
-a|
-*galliumMetal*
-
-[%autowidth]
-!===
-!Name: !Gallium (metal)
-!Definition: !Gallium (metal)
-!===
-
-a|
-*gabbroDoleriteEtcOrnamentalSubstance*
-
-[%autowidth]
-!===
-!Name: !"Gabbro, dolerite, etc., ornamental (substance)"
-!Definition: !Gabbro, dolerite, etc., ornamental (substance)
-!===
-
-a|
-*germaniumMetal*
-
-[%autowidth]
-!===
-!Name: !Germanium (metal)
-!Definition: !Germanium (metal)
-!===
-
-a|
-*gemstonesGeneralSubstance*
-
-[%autowidth]
-!===
-!Name: !"Gemstones, general (substance)"
-!Definition: !Gemstones, general (substance)
-!===
-
-a|
-*semipreciousStoneGeneralSubstance*
-
-[%autowidth]
-!===
-!Name: !"Semiprecious stone, general (substance)"
-!Definition: !Semiprecious stone, general (substance)
-!===
-
-a|
-*gypsumAnhydriteSubstance*
-
-[%autowidth]
-!===
-!Name: !"Gypsum, anhydrite (substance)"
-!Definition: !Gypsum, anhydrite (substance)
-!===
-
-a|
-*graphiteSubstance*
-
-[%autowidth]
-!===
-!Name: !Graphite (substance)
-!Definition: !Graphite (substance)
-!===
-
-a|
-*graniteSyeniteEtcOrnamentalSubstance*
-
-[%autowidth]
-!===
-!Name: !"Granite, syenite, etc., ornamental (substance)"
-!Definition: !Granite, syenite, etc., ornamental (substance)
-!===
-
-a|
-*sandstoneQuartziteSubstance*
-
-[%autowidth]
-!===
-!Name: !"Sandstone, quartzite (substance)"
-!Definition: !Sandstone, quartzite (substance)
-!===
-
-a|
-*garnetGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Garnet, gemstone (substance)"
-!Definition: !Garnet, gemstone (substance)
-!===
-
-a|
-*hafniumMetal*
-
-[%autowidth]
-!===
-!Name: !Hafnium (metal)
-!Definition: !Hafnium (metal)
-!===
-
-a|
-*mercuryMetal*
-
-[%autowidth]
-!===
-!Name: !Mercury (metal)
-!Definition: !Mercury (metal)
-!===
-
-a|
-*heavyMineralsGeneralSubstance*
-
-[%autowidth]
-!===
-!Name: !"Heavy minerals, general (substance)"
-!Definition: !Heavy minerals, general (substance)
-!===
-
-a|
-*iodineSubstance*
-
-[%autowidth]
-!===
-!Name: !Iodine (substance)
-!Definition: !Iodine (substance)
-!===
-
-a|
-*indiumMetal*
-
-[%autowidth]
-!===
-!Name: !Indium (metal)
-!Definition: !Indium (metal)
-!===
-
-a|
-*kimberliteMineralMarkers*
-
-[%autowidth]
-!===
-!Name: !Kimberlite mineral markers
-!Definition: !Kimberlite mineral markers
-!===
-
-a|
-*kaolinSubstance*
-
-[%autowidth]
-!===
-!Name: !Kaolin (substance)
-!Definition: !Kaolin (substance)
-!===
-
-a|
-*kornerupineGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Kornerupine, gemstone (substance)"
-!Definition: !Kornerupine, gemstone (substance)
-!===
-
-a|
-*kyaniteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Kyanite, gemstone (substance)"
-!Definition: !Kyanite, gemstone (substance)
-!===
-
-a|
-*kyaniteSubstance*
-
-[%autowidth]
-!===
-!Name: !Kyanite (substance)
-!Definition: !Kyanite (substance)
-!===
-
-a|
-*lithiumLi2O*
-
-[%autowidth]
-!===
-!Name: !Lithium (Li2O)
-!Definition: !Lithium (Li2O)
-!===
-
-a|
-*limestoneOrnementalSubstance*
-
-[%autowidth]
-!===
-!Name: !"Limestone, ornemental (substance)"
-!Definition: !Limestone, ornemental (substance)
-!===
-
-a|
-*cementLimestoneSubstance*
-
-[%autowidth]
-!===
-!Name: !Cement limestone (substance)
-!Definition: !Cement limestone (substance)
-!===
-
-a|
-*chalkSubstance*
-
-[%autowidth]
-!===
-!Name: !Chalk (substance)
-!Definition: !Chalk (substance)
-!===
-
-a|
-*limestoneForLimeSubstance*
-
-[%autowidth]
-!===
-!Name: !Limestone for lime (substance)
-!Definition: !Limestone for lime (substance)
-!===
-
-a|
-*lazuliteOornamentalSubstance*
-
-[%autowidth]
-!===
-!Name: !"Lazulite, ornamental (substance)"
-!Definition: !Lazulite, ornamental (substance)
-!===
-
-a|
-*malachiteSubstance*
-
-[%autowidth]
-!===
-!Name: !Malachite (substance)
-!Definition: !Malachite (substance)
-!===
-
-a|
-*magnesiumMagnesiteMgCO3*
-
-[%autowidth]
-!===
-!Name: !"Magnesium, magnesite (MgCO3)"
-!Definition: !Magnesium, magnesite (MgCO3)
-!===
-
-a|
-*magnesiumSaltsAndBrinesMgO*
-
-[%autowidth]
-!===
-!Name: !"Magnesium, salts and brines (MgO)"
-!Definition: !Magnesium, salts and brines (MgO)
-!===
-
-a|
-*micaSheetSubstance*
-
-[%autowidth]
-!===
-!Name: !"Mica, sheet (substance)"
-!Definition: !Mica, sheet (substance)
-!===
-
-a|
-*manganeseMetal*
-
-[%autowidth]
-!===
-!Name: !Manganese (metal)
-!Definition: !Manganese (metal)
-!===
-
-a|
-*molybdenumMetal*
-
-[%autowidth]
-!===
-!Name: !Molybdenum (metal)
-!Definition: !Molybdenum (metal)
-!===
-
-a|
-*moonstoneAdulariaGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Moonstone (adularia), gemstone (substance)"
-!Definition: !Moonstone (adularia), gemstone (substance)
-!===
-
-a|
-*marbleOrnementalSubstance*
-
-[%autowidth]
-!===
-!Name: !"Marble, ornemental (substance)"
-!Definition: !Marble, ornemental (substance)
-!===
-
-a|
-*commodityNotAvailable*
-
-[%autowidth]
-!===
-!Name: !Commodity not available
-!Definition: !Commodity not available
-!===
-
-a|
-*sodiumSulphateNa2SO4*
-
-[%autowidth]
-!===
-!Name: !Sodium sulphate (Na2SO4)
-!Definition: !Sodium sulphate (Na2SO4)
-!===
-
-a|
-*sodiumCarbonateNatronNa2CO3*
-
-[%autowidth]
-!===
-!Name: !Sodium carbonate (natron) (Na2CO3)
-!Definition: !Sodium carbonate (natron) (Na2CO3)
-!===
-
-a|
-*niobiumColumbiumNb2O5*
-
-[%autowidth]
-!===
-!Name: !Niobium - columbium (Nb2O5)
-!Definition: !Niobium - columbium (Nb2O5)
-!===
-
-a|
-*nickelMetal*
-
-[%autowidth]
-!===
-!Name: !Nickel (metal)
-!Definition: !Nickel (metal)
-!===
-
-a|
-*nitratesNO3*
-
-[%autowidth]
-!===
-!Name: !Nitrates (NO3)
-!Definition: !Nitrates (NO3)
-!===
-
-a|
-*peridotGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Peridot, gemstone (substance)"
-!Definition: !Peridot, gemstone (substance)
-!===
-
-a|
-*opalGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Opal, gemstone (substance)"
-!Definition: !Opal, gemstone (substance)
-!===
-
-a|
-*osmiridiumMetal*
-
-[%autowidth]
-!===
-!Name: !Osmiridium (metal)
-!Definition: !Osmiridium (metal)
-!===
-
-a|
-*otherOrnamentalStoneExceptGabbGranSubstance*
-
-[%autowidth]
-!===
-!Name: !"Other ornamental stone, except Gabb-Gran (subst.)"
-!Definition: !Other ornamental stone, except Gabb-Gran (subst.)
-!===
-
-a|
-*leadMetal*
-
-[%autowidth]
-!===
-!Name: !Lead (metal)
-!Definition: !Lead (metal)
-!===
-
-a|
-*leadZincMetal*
-
-[%autowidth]
-!===
-!Name: !Lead  Zinc (metal)
-!Definition: !Lead  Zinc (metal)
-!===
-
-a|
-*palladiumMetal*
-
-[%autowidth]
-!===
-!Name: !Palladium (metal)
-!Definition: !Palladium (metal)
-!===
-
-a|
-*peatSubstance*
-
-[%autowidth]
-!===
-!Name: !Peat (substance)
-!Definition: !Peat (substance)
-!===
-
-a|
-*perliteSubstance*
-
-[%autowidth]
-!===
-!Name: !Perlite (substance)
-!Definition: !Perlite (substance)
-!===
-
-a|
-*phenakiteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Phenakite, gemstone (substance)"
-!Definition: !Phenakite, gemstone (substance)
-!===
-
-a|
-*phosphateP2O5*
-
-[%autowidth]
-!===
-!Name: !Phosphate (P2O5)
-!Definition: !Phosphate (P2O5)
-!===
-
-a|
-*mineralPigmentSubstance*
-
-[%autowidth]
-!===
-!Name: !Mineral pigment (substance)
-!Definition: !Mineral pigment (substance)
-!===
-
-a|
-*platinumGroupElementsPGEGroupMmetal*
-
-[%autowidth]
-!===
-!Name: !"Platinum group elements (PGE), group (metal)"
-!Definition: !Platinum group elements (PGE), group (metal)
-!===
-
-a|
-*pumicePozzolanSubstance*
-
-[%autowidth]
-!===
-!Name: !"Pumice, pozzolan (substance)"
-!Definition: !Pumice, pozzolan (substance)
-!===
-
-a|
-*pyrophylliteSubstance*
-
-[%autowidth]
-!===
-!Name: !Pyrophyllite (substance)
-!Definition: !Pyrophyllite (substance)
-!===
-
-a|
-*platinumMetal*
-
-[%autowidth]
-!===
-!Name: !Platinum (metal)
-!Definition: !Platinum (metal)
-!===
-
-a|
-*potashSylviteCarnalliteK20*
-
-[%autowidth]
-!===
-!Name: !"Potash (sylvite, carnallite) (K20)"
-!Definition: !Potash (sylvite, carnallite) (K20)
-!===
-
-a|
-*pyriteFeS2*
-
-[%autowidth]
-!===
-!Name: !Pyrite (FeS2)
-!Definition: !Pyrite (FeS2)
-!===
-
-a|
-*massiveQuartzBlocksForFerrosiliconSiO2*
-
-[%autowidth]
-!===
-!Name: !"Massive quartz, blocks for ferrosilicon (SiO2)"
-!Definition: !Massive quartz, blocks for ferrosilicon (SiO2)
-!===
-
-a|
-*quartzOpticalPiezoelectricalUseSiO2*
-
-[%autowidth]
-!===
-!Name: !"Quartz, optical & piezoelectrical use (SiO2)"
-!Definition: !Quartz, optical & piezoelectrical use (SiO2)
-!===
-
-a|
-*roseQuartzGgemstone*
-
-[%autowidth]
-!===
-!Name: !Rose quartz (gemstone)
-!Definition: !Rose quartz (gemstone)
-!===
-
-a|
-*rubidiumRb2O*
-
-[%autowidth]
-!===
-!Name: !Rubidium (Rb2O)
-!Definition: !Rubidium (Rb2O)
-!===
-
-a|
-*rheniumMetal*
-
-[%autowidth]
-!===
-!Name: !Rhenium (metal)
-!Definition: !Rhenium (metal)
-!===
-
-a|
-*rareEarthsRE2O3*
-
-[%autowidth]
-!===
-!Name: !Rare Earths (RE2O3)
-!Definition: !Rare Earths (RE2O3)
-!===
-
-a|
-*rhodiumMetal*
-
-[%autowidth]
-!===
-!Name: !Rhodium (metal)
-!Definition: !Rhodium (metal)
-!===
-
-a|
-*rhodoniteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Rhodonite, gemstone (substance)"
-!Definition: !Rhodonite, gemstone (substance)
-!===
-
-a|
-*rubySubstance*
-
-[%autowidth]
-!===
-!Name: !Ruby (substance)
-!Definition: !Ruby (substance)
-!===
-
-a|
-*sulphurSubstance*
-
-[%autowidth]
-!===
-!Name: !Sulphur (substance)
-!Definition: !Sulphur (substance)
-!===
-
-a|
-*rockSaltNaCl*
-
-[%autowidth]
-!===
-!Name: !Rock salt (NaCl)
-!Definition: !Rock salt (NaCl)
-!===
-
-a|
-*sapphireSubstance*
-
-[%autowidth]
-!===
-!Name: !Sapphire (substance)
-!Definition: !Sapphire (substance)
-!===
-
-a|
-*antimonyMetal*
-
-[%autowidth]
-!===
-!Name: !Antimony (metal)
-!Definition: !Antimony (metal)
-!===
-
-a|
-*scandiumMetal*
-
-[%autowidth]
-!===
-!Name: !Scandium (metal)
-!Definition: !Scandium (metal)
-!===
-
-a|
-*scapoliteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Scapolite, gemstone (substance)"
-!Definition: !Scapolite, gemstone (substance)
-!===
-
-a|
-*seleniumSubstance*
-
-[%autowidth]
-!===
-!Name: !Selenium (substance)
-!Definition: !Selenium (substance)
-!===
-
-a|
-*silicaSilicaSandSubstance*
-
-[%autowidth]
-!===
-!Name: !"Silica, silica sand (substance)"
-!Definition: !Silica, silica sand (substance)
-!===
-
-a|
-*sillimaniteSubstance*
-
-[%autowidth]
-!===
-!Name: !Sillimanite (substance)
-!Definition: !Sillimanite (substance)
-!===
-
-a|
-*sinhaliteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Sinhalite, gemstone (substance)"
-!Definition: !Sinhalite, gemstone (substance)
-!===
-
-a|
-*slateSubstance*
-
-[%autowidth]
-!===
-!Name: !Slate (substance)
-!Definition: !Slate (substance)
-!===
-
-a|
-*tinMetal*
-
-[%autowidth]
-!===
-!Name: !Tin (metal)
-!Definition: !Tin (metal)
-!===
-
-a|
-*sodaliteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Sodalite, gemstone (substance)"
-!Definition: !Sodalite, gemstone (substance)
-!===
-
-a|
-*spinelGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Spinel, gemstone (substance)"
-!Definition: !Spinel, gemstone (substance)
-!===
-
-a|
-*strontiumSrCO3OrSrSO4*
-
-[%autowidth]
-!===
-!Name: !Strontium (SrCO3 or SrSO4)
-!Definition: !Strontium (SrCO3 or SrSO4)
-!===
-
-a|
-*sunstoneAventurineTigersEyeGemstone*
-
-[%autowidth]
-!===
-!Name: !"Sunstone, aventurine (Tiger's eye), gemstone"
-!Definition: !Sunstone, aventurine (Tiger's eye), gemstone
-!===
-
-a|
-*tantalumTa2O5*
-
-[%autowidth]
-!===
-!Name: !Tantalum (Ta2O5)
-!Definition: !Tantalum (Ta2O5)
-!===
-
-a|
-*tanzaniteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Tanzanite, gemstone (substance)"
-!Definition: !Tanzanite, gemstone (substance)
-!===
-
-a|
-*telluriumMetal*
-
-[%autowidth]
-!===
-!Name: !Tellurium (metal)
-!Definition: !Tellurium (metal)
-!===
-
-a|
-*thoriumMetal*
-
-[%autowidth]
-!===
-!Name: !Thorium (metal)
-!Definition: !Thorium (metal)
-!===
-
-a|
-*titaniumGeneralTiO2*
-
-[%autowidth]
-!===
-!Name: !"Titanium, general (TiO2)"
-!Definition: !Titanium, general (TiO2)
-!===
-
-a|
-*titaniumIlmeniteTiO2*
-
-[%autowidth]
-!===
-!Name: !"Titanium, ilmenite (TiO2)"
-!Definition: !Titanium, ilmenite (TiO2)
-!===
-
-a|
-*titaniumRutileTiO2*
-
-[%autowidth]
-!===
-!Name: !"Titanium, rutile (TiO2)"
-!Definition: !Titanium, rutile (TiO2)
-!===
-
-a|
-*thalliumMetal*
-
-[%autowidth]
-!===
-!Name: !Thallium (metal)
-!Definition: !Thallium (metal)
-!===
-
-a|
-*talcSubstance*
-
-[%autowidth]
-!===
-!Name: !Talc (substance)
-!Definition: !Talc (substance)
-!===
-
-a|
-*tourmalineGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Tourmaline, gemstone (substance)"
-!Definition: !Tourmaline, gemstone (substance)
-!===
-
-a|
-*topazSubstance*
-
-[%autowidth]
-!===
-!Name: !Topaz (substance)
-!Definition: !Topaz (substance)
-!===
-
-a|
-*travertineSubstance*
-
-[%autowidth]
-!===
-!Name: !Travertine (substance)
-!Definition: !Travertine (substance)
-!===
-
-a|
-*tremoliteActinoliteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Tremolite-actinolite, gemstone (substance)"
-!Definition: !Tremolite-actinolite, gemstone (substance)
-!===
-
-a|
-*tsavoriteGreenGrossularGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Tsavorite (green grossular), gemstone (substance)"
-!Definition: !Tsavorite (green grossular), gemstone (substance)
-!===
-
-a|
-*turquoiseSubstance*
-
-[%autowidth]
-!===
-!Name: !Turquoise (substance)
-!Definition: !Turquoise (substance)
-!===
-
-a|
-*uraniumMetal*
-
-[%autowidth]
-!===
-!Name: !Uranium (metal)
-!Definition: !Uranium (metal)
-!===
-
-a|
-*vanadiumMetal*
-
-[%autowidth]
-!===
-!Name: !Vanadium (metal)
-!Definition: !Vanadium (metal)
-!===
-
-a|
-*vesuvianiteGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Vesuvianite, gemstone (substance)"
-!Definition: !Vesuvianite, gemstone (substance)
-!===
-
-a|
-*vermiculiteSubstance*
-
-[%autowidth]
-!===
-!Name: !Vermiculite (substance)
-!Definition: !Vermiculite (substance)
-!===
-
-a|
-*wolframWO3*
-
-[%autowidth]
-!===
-!Name: !Wolfram (WO3)
-!Definition: !Wolfram (WO3)
-!===
-
-a|
-*wollastoniteSubstance*
-
-[%autowidth]
-!===
-!Name: !Wollastonite (substance)
-!Definition: !Wollastonite (substance)
-!===
-
-a|
-*yttriumY2O3*
-
-[%autowidth]
-!===
-!Name: !Yttrium (Y2O3)
-!Definition: !Yttrium (Y2O3)
-!===
-
-a|
-*zeolitesSubstance*
-
-[%autowidth]
-!===
-!Name: !Zeolites (substance)
-!Definition: !Zeolites (substance)
-!===
-
-a|
-*zincMetal*
-
-[%autowidth]
-!===
-!Name: !Zinc (metal)
-!Definition: !Zinc (metal)
-!===
-
-a|
-*zirconiumZrO2*
-
-[%autowidth]
-!===
-!Name: !Zirconium (ZrO2)
-!Definition: !Zirconium (ZrO2)
-!===
-
-a|
-*zirconGemstoneSubstance*
-
-[%autowidth]
-!===
-!Name: !"Zircon, gemstone (substance)"
-!Definition: !Zircon, gemstone (substance)
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *EndusePotentialValue*
 
+
 [width="100%",cols="100%"]
 |===
 a|
+
 [width="100%",cols="17%,83%"]
+
 !===
 !Definition: !Values indicating the end-use potential of the mineral.
 !Description: !EXAMPLE: for energy, fertilizer, building raw material etc.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/EndusePotentialValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
+
 
 |===
 
-[width="100%",cols="100%"]
-|===
-a|
-*metallicMinerals*
-
-[%autowidth]
-!===
-!Name: !metallic minerals
-!Definition: !Mineral occurrences including any type of metallic mineral.
-!===
-
-a|
-*preciousMetals*
-
-[%autowidth]
-!===
-!Name: !precious metals
-!Definition: !Mineral occurrences including Silver; Gold; Platinoids in general.
-!Parent: !metallicMinerals
-!===
-
-a|
-*baseMetals*
-
-[%autowidth]
-!===
-!Name: !base metals
-!Definition: !Mineral occurrences including Aluminium; Copper; Lead; Lead  Zinc; Tin; Zinc
-!Parent: !metallicMinerals
-!===
-
-a|
-*ironFerroalloyMetals*
-
-[%autowidth]
-!===
-!Name: !iron and ferro-alloy metals
-!Definition: !Mineral occurrences including Cobalt; Chromium; Iron; Manganese; Molybdenum; Niobium; Nickel; Vanadium; Tungsten.
-!Parent: !metallicMinerals
-!===
-
-a|
-*specialityAndRareMetals*
-
-[%autowidth]
-!===
-!Name: !speciality and rare metals
-!Definition: !Mineral occurrences including Beryllium; Bismuth; Cadmium; Germanium, Gallium; Hafnium; Mercury; Indium; Lithium; Rubidium, Cesium; Rhenium; Rare Earths (undifferentiated); Antimony; Selenium; Tantalum; Tellurium; Titanium (ilmenite, rutile); Zirconium (zircon, baddeleyite).
-!Parent: !metallicMinerals
-!===
-
-a|
-*nonMetallicMinerals*
-
-[%autowidth]
-!===
-!Name: !non-metallic minerals
-!Definition: !Mineral occurrences including any type of non-metallic mineral.
-!===
-
-a|
-*buildingRawMaterial*
-
-[%autowidth]
-!===
-!Name: !building raw material
-!Definition: !Mineral occurrences including Aggregate; Dimension & ornamental stones (granite, gabbro, travertine,etc.); Gypsum, anhydrite; Cement limestone; Limestone for lime; Marble.
-!Parent: !nonMetallicMinerals
-!===
-
-a|
-*ceramicAndRefractory*
-
-[%autowidth]
-!===
-!Name: !ceramic and refractory
-!Definition: !Mineral occurrences including common clays (brick, tile); White-firing clays (refractory and ceramic clays); Dolomite; Feldspar, nepheline; Kaolin; Andalusite group (andalusite, kyanite, sillimanite).
-!Parent: !nonMetallicMinerals
-!===
-
-a|
-*chemicalMinerals*
-
-[%autowidth]
-!===
-!Name: !chemical minerals
-!Definition: !Mineral occurrences including Borates; Barite; Fluorite; Magnesium (magnesite); Sodium sulphate; Sodium carbonate (trona); Pyrite; Sulphur; Rock salt; Strontium; Zeolites.
-!Parent: !nonMetallicMinerals
-!===
-
-a|
-*energyCoverMinerals*
-
-[%autowidth]
-!===
-!Name: !energy cover minerals
-!Definition: !Mineral occurrences including Bituminous sandstone/limestone, oil shale; Coal; Lignite; Peat; Thorium; Uranium.
-!Parent: !nonMetallicMinerals
-!===
-
-a|
-*fertilizer*
-
-[%autowidth]
-!===
-!Name: !fertilizer
-!Definition: !Mineral occurrences including Phosphate; Potash (sylvite, carnalite).
-!Parent: !nonMetallicMinerals
-!===
-
-a|
-*preciousAndSemiPreciousStones*
-
-[%autowidth]
-!===
-!Name: !precious and semi-precious stones
-!Definition: !Mineral occurrences including Diamond (industrial and gemstone); Emerald; Ruby, Sapphire, Corundum (gemstone); Beryls, quartz, tourmalines, garnets, topaz, peridot, zircon, etc. (gemstones).
-!Parent: !nonMetallicMinerals
-!===
-
-a|
-*SpecialityAndOtherIndustrialMinerals*
-
-[%autowidth]
-!===
-!Name: !speciality and other industrial rocks and minerals
-!Definition: !Mineral occurrences including Abrasives: garnet, staurolite, corundum; Asbestos (antophyllite, chrysotile, crocidolite); Attapulgite, sepiolite (clay); Bentonite (clay); Limestone, calcite (filler); Diatomite (kieselguhr); Graphite; Mica; Perlite; Quartz (massive / block for ferrosilicon); Quartz, optical & piezoelectrical use; Silica sand; Talc, pyrophyllite; Vermiculite; Wollastonite.
-!Parent: !nonMetallicMinerals
-!===
-
-a|
-*recycledWaste*
-
-[%autowidth]
-!===
-!Name: !recycled waste
-!Definition: !Mineral occurrences including metals or minerals coming from mining waste treatment.
-!===
-
-|===
-
-The table below includes additional recommended values that may also be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*Other*
-
-[%autowidth]
-!===
-!Name: !Other
-!Definition: !Other
-!===
-
-|===
+The INSPIRE Registry includes additional recommended values that may also be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *ExplorationActivityTypeValue*
 
@@ -6836,397 +4943,31 @@ a|
 |===
 a|
 [width="100%",cols="17%,83%"]
+
 !===
 !Definition: !Types of exploration activity carried out.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ExplorationActivityTypeValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
 
-[width="100%",cols="100%"]
-|===
-a|
-*regionalReconnaissance*
-
-[%autowidth]
-!===
-!Name: !regional reconnaissance
-!Definition: !Regional investigation to identify anomalies (geochemical, geophysical, mineralogical) and discover occurrences.
-!===
-
-a|
-*hammerProspectingAndGeologicalReconnaissance*
-
-[%autowidth]
-!===
-!Name: !hammer prospecting and geological reconnaissance
-!Definition: !Drafting of a very preliminary geological map with the main formations and the main structures, including the location of discovered mineral showings.
-!Parent: !regionalReconnaissance
-!===
-
-a|
-*regionalGeochemistry*
-
-[%autowidth]
-!===
-!Name: !regional geochemistry
-!Definition: !The detection of abnormal concentrations of chemical elements in superficial water, soils or organisms, usually accomplished by instrumental, spot-test, or rapid techniques which are applicable in the field.
-!Parent: !regionalReconnaissance
-!===
-
-a|
-*airborneGeophysics*
-
-[%autowidth]
-!===
-!Name: !airborne geophysics
-!Definition: !Exploration technique based on the detection of anomalous physical characteristics of a ground.
-!Parent: !regionalReconnaissance
-!===
-
-a|
-*regionalHeavy mineralSampling*
-
-[%autowidth]
-!===
-!Name: !regional heavy mineral sampling
-!Definition: !Prospecting with a hand-held washing tool, usually shaped like a plate or a flat cone, at the bottom of which the densest fractions of a soil, a stream sediment are collected.
-!Parent: !regionalReconnaissance
-!===
-
-a|
-*detailedSurfaceExploration*
-
-[%autowidth]
-!===
-!Name: !detailed surface exploration
-!Definition: !Detailed surface exploration to delineate anomalies and describe occurrences in their refined geological context.
-!===
-
-a|
-*geologicalMappingAndSampling*
-
-[%autowidth]
-!===
-!Name: !geological mapping and sampling
-!Definition: !Detailed geological mapping of the area(s) of interest.
-!Parent: !detailedSurfaceExploration
-!===
-
-a|
-*detailedGeochemistry*
-
-[%autowidth]
-!===
-!Name: !detailed geochemistry
-!Definition: !Detailed surveys (often on a grid) with the most appropriate method, in order to confirm and better delineate and characterize geochemical anomalies identified during the previous phase.
-!Parent: !detailedSurfaceExploration
-!===
-
-a|
-*detailedGeophysics*
-
-[%autowidth]
-!===
-!Name: !detailed geophysics
-!Definition: !Detailed surveys (often on a grid) with the most appropriate method, in order to confirm and better delineate and characterize geophysical anomalies identified during the previous phase.
-!Parent: !detailedSurfaceExploration
-!===
-
-a|
-*detailedHeavy mineralSampling*
-
-[%autowidth]
-!===
-!Name: !detailed heavy mineral sampling
-!Definition: !Detail prospecting in a local scale with a hand-held washing tool, usually shaped like a plate or a flat cone, at the bottom of which the densest fractions of a soil, a stream sediment are collected.
-!Parent: !detailedSurfaceExploration
-!===
-
-a|
-*subsurfaceExploration*
-
-[%autowidth]
-!===
-!Name: !subsurface exploration
-!Definition: !Subsurface exploration using the low costs techniques (trenching, destructive drilling, etc.), of resources appraisal.
-!===
-
-a|
-*trenchingChannelSampling*
-
-[%autowidth]
-!===
-!Name: !"removal of overburden, trenching, channel sampling"
-!Definition: !Shallow ditch from which a sample can be taken and a geological observation made.
-!Parent: !subsurfaceExploration
-!===
-
-a|
-*augerDrilling*
-
-[%autowidth]
-!===
-!Name: !auger drilling
-!Definition: !Drilling of a cylindrical hole with an ad hoc tool in order to collect a rock sample, or to carry out a physical measurement or a geological observation. By extension, designates also the drill hole, whatever the latter's purpose. In this case drilling is performed by means of an auger, i.e. with a helical screw which is driven into the ground with rotation.
-!Parent: !subsurfaceExploration
-!===
-
-a|
-*percussionDrilling*
-
-[%autowidth]
-!===
-!Name: !percussion drilling
-!Definition: !Drilling of a cylindrical hole with an ad hoc tool in order to collect a rock sample, or to carry out a physical measurement or a geological observation. By extension, designates also the drill hole, whatever the latter's purpose. In this case, drilling is performed with a percussion tool.
-!Parent: !subsurfaceExploration
-!===
-
-a|
-*assesmentOfResource*
-
-[%autowidth]
-!===
-!Name: !assesmantof the resource
-!Definition: !The aim of this phase is the (still rough) delineation of the envelope of an orebody. Logging of cores, sampling of mineralized sections to better understand the distinctive features of the deposit, the physical properties of the ore, and finally to lead to a first (still approximate) calculation of the resource.
-!===
-
-a|
-*reconnaissancePercussionDrilling*
-
-[%autowidth]
-!===
-!Name: !reconnaissance percussion drilling
-!Definition: !The assessment of the resource using percussion drilling, sometimes on a grid with a wide mesh. The aim of this phase is the (still rough) delineation of the envelope of an orebody. Logging of cores, sampling of mineralized sections to better understand the distinctive features of the deposit, the physical properties of the ore, and finally to lead to a first (still approximate) calculation of the resource
-!Parent: !assesmentOfResource
-!===
-
-a|
-*reconnaissanceCoreDrilling*
-
-[%autowidth]
-!===
-!Name: !reconnaissance core drilling
-!Definition: !Drilling of a cylindrical hole with an ad hoc tool in order to collect a rock sample, or to carry out a physical measurement or a geological observation. By extension, designates also the drill hole, whatever the latter's purpose. Boreholes are drilled by coring. This technique is used to collect undisturbed rock cylinders and allows to confirm/to precise results from percussion drilling.
-!Parent: !assesmentOfResource
-!===
-
-a|
-*geologicalInterpretation*
-
-[%autowidth]
-!===
-!Name: !geological interpretation
-!Definition: !Compilation and synthesis of all the available geological information in order to get an as precise as possible model of the mineral resource.
-!Parent: !assesmentOfResource
-!===
-
-a|
-*oreBeneficiation Test*
-
-[%autowidth]
-!===
-!Name: !ore beneficiation tests
-!Definition: !Technique designed to treat run of mine material.
-!Parent: !assesmentOfResource
-!===
-
-a|
-*approximateResourceCalculation*
-
-[%autowidth]
-!===
-!Name: !approximate calculation of the resource
-!Definition: !Rough evaluation of the tonnage and grade essentially based on drill holes information, by correlation and interpolation of intersected mineralized sections.
-!Parent: !assesmentOfResource
-!===
-
-a|
-*evaluationOfOreDeposit*
-
-[%autowidth]
-!===
-!Name: !evaluation of the ore deposit
-!Definition: !This the final phase of evaluation leading to the final yes/no mining decision.
-!===
-
-a|
-*systematicReconnaissanceCoreDrilling*
-
-[%autowidth]
-!===
-!Name: !systematic reconnaissance core drilling
-!Definition: !The evaluation of the ore deposit with the aim of getting very detailed information on the whole deposit and best quality samples. This the final phase of evaluation leading to the final yes/no mining decision
-!Parent: !evaluationOfOreDeposit
-!===
-
-a|
-*miningWorkings*
-
-[%autowidth]
-!===
-!Name: !mining workings
-!Definition: !Reconnaissance workings aimed at getting a better understanding of the deposit, and allowing to get large ore samples for detailed beneficiation tests.
-!Parent: !evaluationOfOreDeposit
-!===
-
-a|
-*geostatisticalEstimates*
-
-[%autowidth]
-!===
-!Name: !geostatistical estimates
-!Definition: !Technique based on probability theory that is used to compute regionalized variables, the values of which depend on their position in space, such as the metal content or grade in a deposit.
-!Parent: !evaluationOfOreDeposit
-!===
-
-a|
-*feasibilityStudyReport*
-
-[%autowidth]
-!===
-!Name: !feasibility study and report
-!Definition: !Technical economic study aimed at assessing the possibility to launching a mine venture.
-!Parent: !evaluationOfOreDeposit
-!===
-
-a|
-*miningPilot*
-
-[%autowidth]
-!===
-!Name: !mining pilot
-!Definition: !Intermediate phase between laboratory tests and actual plant.
-!Parent: !evaluationOfOreDeposit
-!===
-
-|===
 
 *ExplorationResultValue*
 
+
 [width="100%",cols="100%"]
 |===
 a|
+
 [width="100%",cols="17%,83%"]
+
 !===
 !Definition: !Values indicating the result of the exploration activity.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ExplorationResultValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*isolatedMineralizedStones*
-
-[%autowidth]
-!===
-!Name: !"isolated mineralized stones, showings, occurrences, altered areas"
-!Definition: !Identification of possible markers of a mineralized area.
-!===
-
-a|
-*anomalies*
-
-[%autowidth]
-!===
-!Name: !anomalies
-!Definition: !Anomaly or anomalous area which geophysical or geochemical properties are different from areas around and which might indicate the presence of a mineralizing process in the vicinity.
-!===
-
-a|
-*keyMineralsIdentification*
-
-[%autowidth]
-!===
-!Name: !identification of key minerals
-!Definition: !Identification of particular minerals which may indicate a possible mineralized area or accompany a mineralizing process.
-!===
-
-a|
-*detailedProspect Map*
-
-[%autowidth]
-!===
-!Name: !detailed prospect map with location of mineralized areas
-!Definition: !A detailed map with location of all the mineralized occurrences whatever their size and representation of their relationships with lithology, structures, alteration zones, anomalous areas, sampling analysis results.
-!===
-
-a|
-*structuredAnomalies*
-
-[%autowidth]
-!===
-!Name: !structured anomalies
-!Definition: !Narrowing of the area under mineral prospection, and a more detailed internal structure
-!===
-
-a|
-*prospectBoundariesRefinement*
-
-[%autowidth]
-!===
-!Name: !prospect boundaries refinement
-!Definition: !Progressively reducing the surface area until the discovery of a mineral deposit.
-!===
-
-a|
-*primaryReconnaissanceMineralization*
-
-[%autowidth]
-!===
-!Name: !mineralization primary reconnaissance
-!Definition: !The first attempts to see (removal of overburdens, trenching) or to intercept (auger, subsurface percussion drilling), and to sample primary mineralization.
-!===
-
-a|
-*indicatedMineralization*
-
-[%autowidth]
-!===
-!Name: !mineralization indicated
-!Definition: !The first attempts to roughly delineate the ore body, using reconnaissance drilling (percussion and then core drilling), to sample it in detail, and to approximately evaluate the resource using geological interpretation, beneficiation tests.
-!===
-
-a|
-*indicatedOreDeposit*
-
-[%autowidth]
-!===
-!Name: !ore deposit indicated
-!Definition: !The presence of an ore body has been demonstrated using systematic core drilling and sometimes some preliminary mining workings. The external geometry of the ore body and its internal structure (including ore grade distribution) starts to be well-known.
-!===
-
-a|
-*indicatedAndEstimatedOreDeposit*
-
-[%autowidth]
-!===
-!Name: !ore deposit indicated and estimated
-!Definition: !Refinement of previous knowledge using statistical tools allowing for example interpolations between drill holes, and definition of enriched areas.
-!===
-
-a|
-*feasibilityStudy ForMiningDecision*
-
-[%autowidth]
-!===
-!Name: !feasibility study report available for mining decision
-!Definition: !Technical economic study aimed at assessing the possibility to launching a mine venture.
-!===
-
-a|
-*industrialTest*
-
-[%autowidth]
-!===
-!Name: !industrial test
-!Definition: !Intermediate phase between laboratory tests and actual plant.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -7247,56 +4988,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*veryLargeDeposit*
-
-[%autowidth]
-!===
-!Name: !Very large deposit
-!Definition: !Several commodities may be of interest inside a deposit. A deposit may be a very large deposit for one commodity (this commodity is the main one) and only a medium-sized deposit for some other commodities. Such a ranking is based on a statistical study of a large set of deposits throughout the world to ensure that it is valid. It is made using histograms allowing for each commodity to define class boundaries. This classification is based on the potential or endowment: reserves  resources.
-!===
-
-a|
-*largeDeposit*
-
-[%autowidth]
-!===
-!Name: !Large deposit
-!Definition: !Ditto
-!===
-
-a|
-*mediumSizedDeposit*
-
-[%autowidth]
-!===
-!Name: !Medium sized deposit
-!Definition: !Ditto
-!===
-
-a|
-*smallDeposit*
-
-[%autowidth]
-!===
-!Name: !Small deposit
-!Definition: !Ditto
-!===
-
-a|
-*occurrence*
-
-[%autowidth]
-!===
-!Name: !Occurrence
-!Definition: !Any ore or economic mineral in any concentration found in bedrock or as float; esp. a valuable mineral in sufficient concentration to suggest further exploration.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *MineStatusValue*
 
@@ -7308,138 +5000,7 @@ a|
 !Definition: !Values indicating the operational status of the mine.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/MineStatusValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*operating*
-
-[%autowidth]
-!===
-!Name: !operating
-!Definition: !A mine is operating.
-!===
-
-a|
-*operatingContinuously*
-
-[%autowidth]
-!===
-!Name: !operating continuously
-!Definition: !A mine is operating continuously.
-!Parent: !operating
-!===
-
-a|
-*operatingIntermittently*
-
-[%autowidth]
-!===
-!Name: !operating intermittently
-!Definition: !A mine is operating intermittently.
-!Parent: !operating
-!===
-
-a|
-*notOperating*
-
-[%autowidth]
-!===
-!Name: !not operating
-!Definition: !A mine is not operating.
-!===
-
-a|
-*closed*
-
-[%autowidth]
-!===
-!Name: !closed
-!Definition: !A mine can be closed for technical, economical or technico-economical reasons.
-!Parent: !notOperating
-!===
-
-a|
-*abandoned*
-
-[%autowidth]
-!===
-!Name: !abandoned
-!Definition: !A mine is abandoned.
-!Parent: !notOperating
-!===
-
-a|
-*careAndMaintenance*
-
-[%autowidth]
-!===
-!Name: !care and maintenance
-!Definition: !A mine is under care and maintenance.
-!Parent: !notOperating
-!===
-
-a|
-*retention*
-
-[%autowidth]
-!===
-!Name: !retention
-!Definition: !A mine can be kept unexploited until the price of contained commodity(ies) makes it economical.
-!Parent: !notOperating
-!===
-
-a|
-*historic*
-
-[%autowidth]
-!===
-!Name: !historic
-!Definition: !An 'old' mine which has been exploited before 1900.
-!Parent: !notOperating
-!===
-
-a|
-*underDevelopment*
-
-[%autowidth]
-!===
-!Name: !under development
-!Definition: !Under development.
-!===
-
-a|
-*construction*
-
-[%autowidth]
-!===
-!Name: !under construction
-!Definition: !Under construction.
-!Parent: !underDevelopment
-!===
-
-a|
-*pendingApproval*
-
-[%autowidth]
-!===
-!Name: !pending approval
-!Definition: !A mine waiting for the exploitation authorization, generally given by a State Mining Engineering Department.
-!Parent: !underDevelopment
-!===
-
-a|
-*feasibility*
-
-[%autowidth]
-!===
-!Name: !feasibility
-!Definition: !Technical economic study aimed at assessing the possibility to launching a mine venture.
-!Parent: !underDevelopment
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -7455,173 +5016,7 @@ a|
 !Description: !EXAMPLE: host rock, host structure, commodity, association with similar mineral processes e.g. porphyry.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/MineralDepositGroupValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*organic*
-
-[%autowidth]
-!===
-!Name: !organic
-!Definition: !Organic deposits result from the concentration of organic matter on, or close to the surface, by sedimentation and early diagenesis.
-!===
-
-a|
-*residualOrSurficial*
-
-[%autowidth]
-!===
-!Name: !residual/surficial
-!Definition: !Surficial processes are the physical and chemical phenomena which cause concentration of ore material within the regolith, generally by removal of chemical constituents by aqueous leaching. This includes laterite deposits and residual or eluvial deposits.
-!===
-
-a|
-*placer*
-
-[%autowidth]
-!===
-!Name: !placer
-!Definition: !Placer deposits represent concentrations of heavy minerals of certain elements, particularly of Au, U, and PGE, by sedimentary processes.
-!===
-
-a|
-*continetalSedimentAndVolcanics*
-
-[%autowidth]
-!===
-!Name: !continental sediments and volcanics
-!Definition: !Mineral deposits associated with sediments or volcanic material on continental crust. They form where volcanic rocks and ash layers react with alkaline groundwater, and may also crystallize in post-depositional environments over periods ranging from thousands to millions of years in shallow marine basins.
-!===
-
-a|
-*sedimentHosted*
-
-[%autowidth]
-!===
-!Name: !sediment-hosted
-!Definition: !Sediment-hosted deposits can be divided into two major subtypes. The first subtype is clastic-dominated lead-zinc ores, which are hosted in shale, sandstone, siltstone, or mixed clastic rocks, or occur as carbonate replacement, within a clastic-dominated sedimentary rock sequence. This subtype includes deposits that have been traditionally referred to as sedimentary exhalative (SEDEX) deposits. The second subtype of sediment-hosted Pb-Zn deposits is the Mississippi Valley-type that occurs in platform carbonate sequences, typically in passive-margin tectonic settings.
-!===
-
-a|
-*chemicalSediment*
-
-[%autowidth]
-!===
-!Name: !chemical sediment
-!Definition: !Mineral deposits, mainly Fe or Mn, of sedimentary origin which originated as chemical precipitates from ancient ocean water. The process of accumulating these sedimentary deposits is controlled by the physicochemical properties inherent in iron and manganese.
-!===
-
-a|
-*marineVolcanicAssociation*
-
-[%autowidth]
-!===
-!Name: !marine volcanic association
-!Definition: !Mineral deposits formed in a marine volcanic environment. Magmatic and hydrothermal fluids react with sea water for giving volcanogenic massive sulphides (VMS), which are at the origin stratiform deposits of Cu, Zn, Pb, Ag, Au.
-!===
-
-a|
-*epithermal*
-
-[%autowidth]
-!===
-!Name: !epithermal
-!Definition: !Epithermal deposits occur largely in volcano-plutonic arcs associated with subduction zones, with ages similar to those of volcanism. The deposits form at shallow depth, less than 1 km, in the temperature range of 50?-200?C, are hosted mainly by volcanic rocks, and occur mainly as veins.
-!===
-
-a|
-*veinBrecciaStockwork*
-
-[%autowidth]
-!===
-!Name: !"vein, breccia and stockwork"
-!Definition: !It is a systematic group with special occurrence of mineral deposits in a finite volume within a rock. Vein: Fracture filling deposits which often have great lateral and/or depth extent but which are usually very narrow. Breccia: A fissure containing numerous wall-rock fragments, with mineral deposits in the interstices. Stockwork: a complex system of structurally controlled or randomly oriented veins.
-!===
-
-a|
-*manto*
-
-[%autowidth]
-!===
-!Name: !manto
-!Definition: !Manto ore deposits are defined by a strict stratigraphic control on their distribution, generally within a porous formation within a structural trap site. The source of ore within manto deposits is considered to be interformational, from a sedimentary source within an adjacent sedimentary basin, or from ore fluids driven off from intrusive rocks.
-!===
-
-a|
-*skarn*
-
-[%autowidth]
-!===
-!Name: !skarn
-!Definition: !Mineral deposits formed by replacement of limestone by ore and calc-silicate minerals, usually adjacent to a felsic or granitic intrusive body.
-!===
-
-a|
-*porphyry*
-
-[%autowidth]
-!===
-!Name: !porphyry
-!Definition: !Porphyry deposits are intrusion-related, large tonnage low grade mineral deposits with metal assemblages that may include all or some of copper, molybdenum, gold and silver. The genesis of these deposits is related to the emplacement of intermediate to felsic, hypabyssal, generally porphyritic intrusions that are commonly formed at convergent plate margins.
-!===
-
-a|
-*ultramficOrMafic*
-
-[%autowidth]
-!===
-!Name: !ultramafic / mafic
-!Definition: !Mineral deposits related to mafic and ultramafic plutonism and resulting from magmatic processes such as fractional crystallisation. The main types of deposits are chromite and platinoids in ophiolitic peridotites, titanum within anorthosites, nickel, copper and platino?ds in ultramafic complexes.
-!===
-
-a|
-*carbonatite*
-
-[%autowidth]
-!===
-!Name: !carbonatites
-!Definition: !Carbonatites are intrusive carbonate-mineral-rich igneous rocks, many of which contain distinctive abundances of apatite, magnetite, barite, and fluorite, that may contain economic or anomalous concentrations of rare earth elements, phosphorus, niobium, uranium, thorium, copper, iron, titanium, barium, fluorine, zirconium, and other rare or incompatible elements. They may also be sources of mica or vermiculite. Carbonatites may form central plugs within zoned alkalic intrusive complexes, or as dikes, sills, breccias, and veins.
-!===
-
-a|
-*pegmatite*
-
-[%autowidth]
-!===
-!Name: !pegmatite
-!Definition: !Pegmatites tend to occur in the aureoles of granites in most cases, and are usually granitic in character, often closely matching the compositions of nearby granites. Pegmatites should thus represent exsolved granitic material which crystallises in the country rocks. However, an origin of pegmatite fluids by devolatilisation (dewatering) of metamorphic rocks is also envisaged. Pegmatites are coarse-grained rocks, mainly composed of quartz, feldspar and mica and are important because they often contain rare earth minerals and gemstones, such as aquamarine, tourmaline, topaz, fluorite, apatite and corundum, often along with tin and tungsten minerals, among others.
-!===
-
-a|
-*metamorphicHosted*
-
-[%autowidth]
-!===
-!Name: !metamorphic-hosted
-!Definition: !Mineral deposits associated to deep metamorphism, more than ten km, in a context in which carbonic and aqueous fluids may give birth to gold veins.
-!===
-
-a|
-*gemsOrSemipreciousStones*
-
-[%autowidth]
-!===
-!Name: !gems and semi-precious stones
-!Definition: !A piece of mineral, which, in cut and polished form, is used to make jewelry or other adornments.
-!===
-
-a|
-*industrialRocks*
-
-[%autowidth]
-!===
-!Name: !industrial rocks
-!Definition: !Industrial minerals are geological materials which are mined for their commercial value, which are not fuel minerals and are not sources of metallic minerals. They are used in their natural state or after beneficiation either as raw materials or as additives in a wide range of applications.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -7636,83 +5031,7 @@ a|
 !Definition: !The type of mineral occurrence.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/MineralOccurrenceTypeValue
-!Values: !
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*mineralDeposit*
-
-[%autowidth]
-!===
-!Name: !mineral deposit
-!Definition: !A mass of naturally occurring mineral material, e.g. metal ores or non-metallic minerals, usually of economic value, without regard to mode of origin. Accumulations of coal and petroleum may or may not be included.
-!===
-
-a|
-*oreDeposit*
-
-[%autowidth]
-!===
-!Name: !ore deposit
-!Definition: !The naturally occurring material from which a mineral or minerals of economic value can be extracted at a reasonable profit.
-!===
-
-a|
-*occurrence*
-
-[%autowidth]
-!===
-!Name: !occurrence
-!Definition: !Any ore or economic mineral in any concentration found in bedrock or as float.
-!===
-
-a|
-*prospect*
-
-[%autowidth]
-!===
-!Name: !prospect
-!Definition: !An area that is a potential site of mineral deposits, based on preliminary exploration, previous exploration. A geologic or geophysical anomaly, especially one recommended for additional exploration.
-!===
-
-a|
-*province*
-
-[%autowidth]
-!===
-!Name: !province
-!Definition: !Geologic provinces classified by mineral resources.
-!===
-
-a|
-*district*
-
-[%autowidth]
-!===
-!Name: !district
-!Definition: !Geologic districts classified by mineral resources.
-!===
-
-a|
-*field*
-
-[%autowidth]
-!===
-!Name: !field
-!Definition: !A region or area that possesses or is characterized by a particular mineral resource.
-!===
-
-a|
-*lode*
-
-[%autowidth]
-!===
-!Name: !lode
-!Definition: !A mineral deposit consisting of a zone of veins, veinlets, disseminations, or planar breccias.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -7727,155 +5046,7 @@ a|
 !Definition: !The type of mining activity, processing activity, or production.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/MiningActivityTypeValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*adit*
-
-[%autowidth]
-!===
-!Name: !adit
-!Definition: !A horizontal passage from the surface into a mine.
-!===
-
-a|
-*alluvial*
-
-[%autowidth]
-!===
-!Name: !alluvial
-!Definition: !Said of a placer formed by the action of running water, as in a stream channel or alluvial fan; also, said of the valuable mineral, e.g. gold or diamond, associated with an alluvial placer.
-!===
-
-a|
-*decline*
-
-[%autowidth]
-!===
-!Name: !decline
-!Definition: !Passage or adit driven on a decline from the surface to provide access to a mine.
-!===
-
-a|
-*diggings*
-
-[%autowidth]
-!===
-!Name: !diggings
-!Definition: !A term applied in the western U.S. to diggings for gold or other precious minerals located on a bar or in the shallows of a stream, and worked when the water is low.
-!===
-
-a|
-*dredging*
-
-[%autowidth]
-!===
-!Name: !dredging
-!Definition: !A form of open pit mining in which the digging machinery and processing plant are situated on a floating barge or hull.
-!===
-
-a|
-*multiple*
-
-[%autowidth]
-!===
-!Name: !multiple
-!Definition: !A multiple activity.
-!===
-
-a|
-*openPit*
-
-[%autowidth]
-!===
-!Name: !open pit
-!Definition: !An open-sky excavation (also open-sky mine) for the extraction of metallic ores and /or commodities.
-!===
-
-a|
-*openPitAndUnderground*
-
-[%autowidth]
-!===
-!Name: !open pit and underground
-!Definition: !Covers both the open pit and underground mining activity.
-!===
-
-a|
-*quarry*
-
-[%autowidth]
-!===
-!Name: !quarry
-!Definition: !Open workings, usually for the extraction of stone.
-!===
-
-a|
-*reworking*
-
-[%autowidth]
-!===
-!Name: !reworking
-!Definition: !New mining activities carried out on already explored mines.
-!===
-
-a|
-*shaft*
-
-[%autowidth]
-!===
-!Name: !shaft
-!Definition: !A vertical or inclined excavation through which a mine is worked.
-!===
-
-a|
-*sluicing*
-
-[%autowidth]
-!===
-!Name: !sluicing
-!Definition: !Concentrating heavy minerals, e.g., gold or cassiterite, by washing unconsolidated material through boxes (sluices) equipped with riffles that trap the heavier minerals on the floor of the box.
-!===
-
-a|
-*solutionMining*
-
-[%autowidth]
-!===
-!Name: !solution mining
-!Definition: !(a) The in-place dissolution of water-soluble mineral components of an ore deposit by permitting a leaching solution, usually aqueous, to trickle downward through the fractured ore to collection galleries at depth. b) The mining of soluble rock material, esp. salt, from underground deposits by pumping water down wells into contact with the deposit and removing the artificial brine thus created.
-!===
-
-a|
-*surfaceMining*
-
-[%autowidth]
-!===
-!Name: !surface mining
-!Definition: !Broad category of mining in which soil and rock overlying the mineral deposit (the overburden) are removed.
-!===
-
-a|
-*surfaceMining AndUnderground*
-
-[%autowidth]
-!===
-!Name: !surface mining and underground
-!Definition: !Covers both surface and underground mining.
-!===
-
-a|
-*underground*
-
-[%autowidth]
-!===
-!Name: !underground
-!Definition: !An underground excavation for the extraction of mineral deposits, in contrast to surface excavations
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -7890,406 +5061,12 @@ a|
 !Definition: !Values indicating the type of processing carried out during a mining activity.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ProcessingActivityTypeValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
 
-[width="100%",cols="100%"]
-|===
-a|
-*physicalTreatment*
-
-[%autowidth]
-!===
-!Name: !physical treatment
-!Definition: !Sorting process using physical separation methods.
-!===
-
-a|
-*physicalChemicalTreatment*
-
-[%autowidth]
-!===
-!Name: !physical chemical treatment
-!Definition: !Sorting process combining physical and chemical separation methods.
-!===
-
-a|
-*chemicalTreatment*
-
-[%autowidth]
-!===
-!Name: !chemical treatment
-!Definition: !Sorting process using chemical separation methods.
-!===
-
-a|
-*unknownTreatment*
-
-[%autowidth]
-!===
-!Name: !unknown treatment
-!Definition: !Sorting process - treatment is unknown.
-!===
-
-|===
-
-The table below includes additional recommended values that may also be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*opticalMethodsColourShapeLustre*
-
-[%autowidth]
-!===
-!Name: !"Optical methods (colour, shape, lustre)"
-!Definition: !Ore sorting refers to the process of separating an ore into separate constituent parts. Today, ore sorters are widely used in industrial mineral mines, diamond mines and base and precious metal mines. Ores are typically sorted to increase the efficiency of other ore dressing and refining processes, by reducing the amount of material to be processed while simultaneously increasing its purity. Modern, automated sorting applies optical sensors (visible spectrum, near infrared, X-ray, ultraviolet), that can be coupled with electrical conductivity and magnetic susceptibility sensors, to control the mechanical separation of ore into two or more categories.
-!Parent: !physicalTreatment
-!===
-
-a|
-*manualSortingHandpicking*
-
-[%autowidth]
-!===
-!Name: !Manual sorting (handpicking)
-!Definition: !Sorting a coarse material into two or more classes on the basis of physical characteristics: appearance, colour, conductivity, fluorescence, etc., manually.
-!Parent: !physicalTreatment
-!===
-
-a|
-*automaticSorting*
-
-[%autowidth]
-!===
-!Name: !Automatic sorting
-!Definition: !Sorting a coarse material into two or more classes on the basis of physical characteristics: appearance, colour, conductivity, fluorescence, etc. This process may take place automatically by machines.
-!Parent: !physicalTreatment
-!===
-
-a|
-*gravimetricMethodsDensityShape*
-
-[%autowidth]
-!===
-!Name: !"Gravimetric methods (density, shape)"
-!Definition: !Process in which the valuable particles are separated from the gangue by virtue of the difference between their specific volumes. This causes their settling rates within a medium - air or water - to be different. This process is therefore affected by particle size.
-!Parent: !physicalTreatment
-!===
-
-a|
-*stratificationJig*
-
-[%autowidth]
-!===
-!Name: !Stratification (jig)
-!Definition: !Jig: Gravity separation concentrator in which the pulp is subjected to an alternating vertical motion that is imparted: (1) either by an alternating liquid stream moved by a piston, a diaphragm, or any other device, through a fixed perforated plate. There are two compartments: one housing the piston, the diaphragm, or the compressed air, and the other where the actual concentration takes place; (2) or by altering vertical or inclined motion of the grate on which the feed is resting (e.g. Hancock jig).
-!Parent: !physicalTreatment
-!===
-
-a|
-*lamellarLayeringSluiceConeSpiral*
-
-[%autowidth]
-!===
-!Name: !"Lamellar layering (sluice, cone, spiral)"
-!Definition: !Sluice: Gravity concentration units consisting of a slanting trough fitted with riffles or with moquette to trap the denser particles. Cone classifier: Hydraulic classifier consisting of pyramidal hopper with bottom apex. Spiral concentrator: Concentration device consisting of a spiral-shaped trough, along which the pulp flows. The finer and lighter particles are carried towards the outer edge, whereas the denser particles move towards the helix axis, where they are removed.
-!Parent: !physicalTreatment
-!===
-
-a|
-*shakingTable*
-
-[%autowidth]
-!===
-!Name: !Shaking (table)
-!Definition: !Gravity concentration consisting of an inclined desk fitted with riffles. Its shaking promotes the segregation of different dense particles and keeps them moving across the deck in different angles down to the discharge end. A transverse water stream helps to separate the particles.
-!Parent: !physicalTreatment
-!===
-
-a|
-*centrifugalForceRadialAccelerationKnelsonFalcon*
-
-[%autowidth]
-!===
-!Name: !"Centrifugal force (radial acceleration: Knelson, Falcon)"
-!Definition: !Classifying or thickening machine in which centrifugal force is of the essence: it causes the particles in the pulp movement against the sides of a bowl or basket.
-!Parent: !physicalTreatment
-!===
-
-a|
-*densitySeparationHeavyMedium*
-
-[%autowidth]
-!===
-!Name: !Density separation (heavy medium)
-!Definition: !Concentration process based on the ability of denser particles to float to the surface and lighter particles to sink to the bottom of a medium when the specific gravity of the medium is between those of the denser and lighter particles.. The medium may be a dense liquid, a solution, or a finely ground material in suspension in water (heavy media). The process may static. It takes place in a drum or a tank. It may be dynamic. It is then effected in a cyclone. The lighter product is sometimes referred to as float, the heavier as sink. This is a gravity separation process.
-!Parent: !physicalTreatment
-!===
-
-a|
-*magneticElecromagneticSeparationHighOrLowIntensity*
-
-[%autowidth]
-!===
-!Name: !Magnetic /elecromagnetic separation (high or low intensity)
-!Definition: !Separation process based on the difference in magnetic susceptibility between minerals. The intensity may be low, medium or high. Sometimes a high-gradient magnetic field is used. The magnetic field may be produced either by a series of permanent magnets or by electromagnets. The magnetic field is used either to deviate the magnetic particles from their course, or to lift the magnetic particles.
-!Parent: !physicalTreatment
-!===
-
-a|
-*electrostaticSeparation*
-
-[%autowidth]
-!===
-!Name: !Electrostatic separation
-!Definition: !Separation process based on the difference in electrical conductivity between the various minerals.
-!Parent: !physicalTreatment
-!===
-
-a|
-*foucaultCurrents*
-
-[%autowidth]
-!===
-!Name: !Foucault currents
-!Definition: !Eddy (or Foucault) currents: The principle is that an electric charge is induced into a conductor by changes in magnetic flux cutting through it. Such changes in magnetic flux can be achieved by rotating permanent magnets past an electrical conductor. The effect of such currents is to induce a secondary magnetic field around the non-ferrous particle. This field reacts with the magnetic field of the rotor, resulting in a combined driving and repelling force which literally ejects the conducted particle from the stream of mixed materials. This repulsion force in combination with the product belt speed and the optimization of the product splitter plate provides the means for an effective separation.
-!Parent: !physicalTreatment
-!===
-
-a|
-*liquidSolidSeparation*
-
-[%autowidth]
-!===
-!Name: !Liquid-solid separation
-!Definition: !Includes: Thickening: Process in which a portion of the liquid of a pulp is removed to thicken the latter. Mostly achieved by decantation, but sometimes by filtration or cycloning. Decantation (clarification, dewatering): (1) Spontaneous separation by gravity of a solid phase in suspension within a liquid (settling), or of non-miscible liquids. (2) When solids are settling out they always retain some trapped liquid. But, as the settled phase has a higher solids percentage than the initial pulp, the end result is a thickening. Filtration: Process of separating solid particles in suspension in a fluid by forcing the latter to pass through some porous material (fabric, diatom layer, ...) that retains the solid particles.
-!Parent: !physicalTreatment
-!===
-
-a|
-*comminutionCrushingGrindingPulverising*
-
-[%autowidth]
-!===
-!Name: !Comminution (crushing-grinding-pulverising)
-!Definition: !Breaking solid particles to reduce their sizes; general term encompassing crushing and grinding (there is no clearcut boundary between these processes). Synonymous with fragmentation.
-!Parent: !physicalTreatment
-!===
-
-a|
-*particleSizingScreeningSievingCycloning*
-
-[%autowidth]
-!===
-!Name: !Particle sizing (screening-sieving-cycloning)
-!Definition: !Classification: separation of the pieces of a fragmented material into several classes, according to a particular criterion: size, density, equivalence, shape, etc. It is used more specifically with size separation. Screening/sieving: sizing by means of screens or sieves: particle with a size larger than the screen or sieve opening are said to form the oversize fraction, the others form the undersize fraction.
-!Parent: !physicalTreatment
-!===
-
-a|
-*flotation*
-
-[%autowidth]
-!===
-!Name: !Flotation
-!Definition: !Process in which particles are separated according to their tendency to adhere more or less to air bubbles to form a mineralized froth: this feature is linked to the natural or designed hydrophobic property of the particle surface.
-!Parent: !physicalChemicalTreatment
-!===
-
-a|
-*agglomerationOrPelletization*
-
-[%autowidth]
-!===
-!Name: !Agglomeration or pelletization
-!Definition: !Agglomeration: process designed to bind together finely ground particles. The result is an agglomerate or a sinter. Pelletization: process designed to produce spherical agglomerates of a few mm diameter, called pellets, through a rotating device (balling drum, balling disc) after the addition of some binding material (swelling clay, lime, cement, etc.) and water.
-!Parent: !physicalChemicalTreatment
-!===
-
-a|
-*coagulation*
-
-[%autowidth]
-!===
-!Name: !Coagulation
-!Definition: !In a dispersed system, particles of all species can be aggregated into larger structures by several mechanisms. Aggregation, based on reducing inter-particle repulsion forces, is known as coagulation and the aggregates are called coagula. If coagulation is induced by a polymer-bridging action, the process is called flocculation and the aggregates are called flocs. When aggregation is achieved as a result of the action of an immersible bridging liquid, such as oil, the process is called agglomeration and the aggregates are referred to as agglomerates. The mechanisms include both those in coagulation (i.e. action of electrolytes) and bridging flocculation by either inorganic polymers or by precipitating metal hydroxides. The latter is known as sweep flocculation.
-!Parent: !physicalChemicalTreatment
-!===
-
-a|
-*flocculation*
-
-[%autowidth]
-!===
-!Name: !Flocculation
-!Definition: !Flocculation is the coagulation between particles induced by the bridging action of long-chain organic polymers.
-!Parent: !physicalChemicalTreatment
-!===
-
-a|
-*hydrometallurgy*
-
-[%autowidth]
-!===
-!Name: !Hydrometallurgy
-!Definition: !Hydrometallurgy is part of the field of extractive metallurgy involving the use of aqueous chemistry for the recovery of metals from ores, concentrates, and recycled or residual materials. Hydrometallurgy is typically divided into three general areas: leaching, solution concentration and purification, and metal recovery.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*leachingBacterialOxidativeReductiveComplexationGasScrubbing*
-
-[%autowidth]
-!===
-!Name: !"Leaching (bacterial, oxidative, reductive, complexation, gas scrubbing)"
-!Definition: !Action of chemical reagents on a material resulting in the dissolution of some of its elements.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*solventExtraction*
-
-[%autowidth]
-!===
-!Name: !Solvent extraction
-!Definition: !Extraction with a solvent. This may be achieved on: (1) the soluble part of a solid matter (solid/liquid extraction), (2) the elements within a liquid phase (liquid/liquid extraction).
-!Parent: !chemicalTreatment
-!===
-
-a|
-*cementation*
-
-[%autowidth]
-!===
-!Name: !Cementation
-!Definition: !In metallurgy, cementation is a process in which ions are reduced to zero valence at a solid metallic interface
-!Parent: !chemicalTreatment
-!===
-
-a|
-*electrolysis*
-
-[%autowidth]
-!===
-!Name: !Electrolysis
-!Definition: !Electrolysis: Electrowinning and electrorefining respectively involve the recovery and purification of metals using electrodeposition of metals at the cathode, and either metal dissolution or a competing oxidation reaction at the anode.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*adsorption*
-
-[%autowidth]
-!===
-!Name: !Adsorption
-!Definition: !Taking up of ions, molecules or colloids on the surface of a material.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*distillation*
-
-[%autowidth]
-!===
-!Name: !Distillation
-!Definition: !Distillation is a method of separating mixtures based on differences in volatilities of components in a boiling liquid mixture. Distillation is a unit operation, or a physical separation process, and not a chemical reaction.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*crystallization*
-
-[%autowidth]
-!===
-!Name: !Crystallization
-!Definition: !Crystallization is the (natural or artificial) process of formation of solid crystals precipitating from a solution, melt or more rarely deposited directly from a gas. Crystallization is also a chemical solid-liquid separation technique, in which mass transfer of a solute from the liquid solution to a pure solid crystalline phase occurs. In chemical engineering crystallization occurs in a crystallizer. Crystallization is therefore an aspect of precipitation, obtained through a variation of the solubility conditions of the solute in the solvent, as compared to precipitation due to chemical reaction.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*precipitation*
-
-[%autowidth]
-!===
-!Name: !Precipitation
-!Definition: !Precipitation in hydrometallurgy involves the chemical precipitation of either metals and their compounds or of the contaminants from aqueous solutions. Precipitation will proceed when, through reagent addition, evaporation, pH change or temperature manipulation, any given species exceeds its limit of solubility. In order to improve efficiency in downstream processes, seeding to initiate crystallization is often used.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*evaporationDrying*
-
-[%autowidth]
-!===
-!Name: !Evaporation - drying
-!Definition: !Drying is thermal removal of liquid moisture (not chemically bound) from a material. Drying is usually accomplished by contacting the moist solids with hot combustion gases generated by burning fossil fuels. In some cases, heat for drying can be provided by hot air or inert gas that has been indirectly heated. The amount of heat required for a given drying operation corresponds to the heat required to vaporize the liquid moisture, the heat required to raise the temperature of the products (dry solids and water vapor) to the final drying temperature, and heat required to offset radiant heat losses. Usually the drying temperature is set at a nominal value above the boiling point of water, often about 120?C. In special cases, such as in the drying of certain water-soluble salts, higher drying temperatures are required. In salt drying, the feed moisture is saturated with dissolved salts, which alters the boiling point and requires higher drying temperatures. Drying of moist solids is carried out in several types of industrial dryers, including rotary dryers, fluidized bed dryers, and flash dryers. Another type of drying, called spray drying, is carried out when the material to be dried is completely dissolved in aqueous solution. The solution is sprayed (usually through a specially designed nozzle) into a heated chamber and as the water is evaporated, solids crystallize. The water vapor is exhausted from the dryer, and dry solids are collected, usually in a conical section of the dryer. Solid material produced from a spray dryer often has special particle size and shape characteristics, which may be controlled by the concentration of dissolved material in the solution, and the design of the atomizing spray nozzle.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*pyrometallurgy*
-
-[%autowidth]
-!===
-!Name: !Pyrometallurgy
-!Definition: !Pyrometallurgy is a branch of extractive metallurgy. It consists of the thermal treatment of minerals and metallurgical ores and concentrates to bring about physical and chemical transformations in the materials to enable recovery of valuable metals. Pyrometallurgical treatment may produce saleable products such as pure metals, or intermediate compounds or alloys, suitable as feed for further processing. Examples of elements extracted by pyrometallurgical processes include the oxides of less reactive elements like Fe, Cu, Zn, Chromium, Tin, Manganese.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*roastingOxidizingReducingChlorizingSulphating*
-
-[%autowidth]
-!===
-!Name: !"Roasting (oxidizing, reducing, chlorizing, sulphating)"
-!Definition: !Roasting is a step in the processing of certain ores. More specifically, roasting is a metallurgical process involving gas?solid reactions at elevated temperatures with the goal of purifying the metal component(s). Roasting consists of thermal gas?solid reactions, which can include oxidation, reduction, chlorination, sulfation, and pyrohydrolysis. In roasting, the ore or ore concentrate is treated with very hot air.÷ http://en.wikipedia.org/wiki/Roasting_(metallurgy)
-!Parent: !chemicalTreatment
-!===
-
-a|
-*smelting*
-
-[%autowidth]
-!===
-!Name: !Smelting
-!Definition: !Smelting is a form of extractive metallurgy; its main use is to produce a metal from its ore. Smelting involves thermal reactions in which at least one product is a molten phase. Metal oxides can then be smelted by heating with coke or charcoal (forms of carbon), a reducing agent that liberates the oxygen as carbon dioxide leaving a refined mineral. Carbonate ores are also smelted with charcoal, but are sometimes need to be calcined first. Other materials may need to be added as flux, aiding the melting of the oxide ores and assisting in the formation of a slag, as the flux reacts with impurities, such as silicon compounds. Smelting usually takes place at a temperature above the melting point of the metal, but processes vary considerably according to the ore involved and other matters.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*burning*
-
-[%autowidth]
-!===
-!Name: !Burning
-!Definition: !The utilization of coal-oil agglomerates in the recovery of gold is based on the natural hydrophobicity/oleophilicity of gold, a property which according to the consensus of most surface chemistry experts is brought about by the ease by which gold surface becomes contaminated, though is possible to recover gold by agglomerating them with oil, the amount of gold in the ore is usually small that there is insufficient gold particles to form agglomerates. Thus, the need to use other hydrophobic materials (e.g. coal) to either form agglomerates together with gold or act as a carrier of gold particles. Agglomerates are prepared in a previous step and then added to the ore pulp in a second step. The gold particles, being oilfilic, penetrate into the agglomerates. In a continuous operation the agglomerates would be maintained in contacting tanks until they reach a pre-determined gold content. The tailings are discarded by means of a screen situated at the upper part of the tanks. The recovery of gold from agglomerates is obtained in a later step by burning the agglomerates and then separating the gold from the ashes.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*calcining*
-
-[%autowidth]
-!===
-!Name: !Calcining
-!Definition: !A more general definition is ?Calcination (also referred to as calcining) is a thermal treatment process in presence of air applied to ores and other solid materials to bring about a thermal decomposition, phase transition, or removal of a volatile fraction. The calcination process normally takes place at temperatures below the melting point of the product materials. Calcination is to be distinguished from roasting, in which more complex gas?solid reactions take place between the furnace atmosphere and the solids.
-!Parent: !chemicalTreatment
-!===
-
-a|
-*incineration*
-
-[%autowidth]
-!===
-!Name: !Incineration
-!Definition: !A method used for drying and reducing sludge volume and weight. Since incineration requires auxiliary fuel to obtain and maintain high temperature and to evaporate the water contained in the incoming sludge, concentration techniques should be applied before incineration. Sludge incineration is a two-step process involving drying and combustion after a preceding dewatering process, such as filters, drying beds, or centrifuges.
-!Parent: !chemicalTreatment
-!===
-
-|===
+The INSPIRE Registry includes additional recommended values that may also be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *ReserveCategoryValue*
 
@@ -8301,50 +5078,11 @@ a|
 !Definition: !The level of confidence of the estimate of the reserve.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ReserveCategoryValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
 
-[width="100%",cols="100%"]
-|===
-a|
-*provedOreReserves*
-
-[%autowidth]
-!===
-!Name: !proved ore reserves
-!Definition: !A µProved Ore Reserve? is the economically mineable part of a Measured Mineral Resource. It includes diluting materials and allowances for losses which may occur when the material is mined.
-!===
-
-a|
-*probableOreReserves*
-
-[%autowidth]
-!===
-!Name: !probable ore reserves
-!Definition: !A µProbable Ore Reserve? is the economically mineable part of an Indicated, and in some circumstances, a measured mineral resource. It includes diluting materials and allowances for losses which may occur when the material is mined.
-!===
-
-a|
-*provedAnd ProbableOreReserves*
-
-[%autowidth]
-!===
-!Name: !proved and probable ore reserves
-!Definition: !Covers both the Proved Ore Reserves and Probable Ore Reserves.
-!===
-
-a|
-*inaccessibleDocumentation*
-
-[%autowidth]
-!===
-!Name: !inaccessible documentation
-!Definition: !Ore reserve without any accessible documentation.
-!===
-
-|===
 
 *ResourceCategoryValue*
 
@@ -8356,74 +5094,7 @@ a|
 !Definition: !Indication whether the resource is measured, indicated, or inferred.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ResourceCategoryValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*measuredMineralResource*
-
-[%autowidth]
-!===
-!Name: !measured mineral resource
-!Definition: !The part of a Mineral Resource for which tonnage, densities, shape, physical characteristics, grade and mineral content can be estimated with a high level of confidence.
-!===
-
-a|
-*indicatedMineralResource*
-
-[%autowidth]
-!===
-!Name: !indicated mineral resource
-!Definition: !The part of a Mineral Resource for which tonnage, densities, shape, physical characteristics, grade and mineral content can be estimated with a reasonable level of confidence.
-!===
-
-a|
-*inferredMineralResource*
-
-[%autowidth]
-!===
-!Name: !inferred mineral resource
-!Definition: !The part of a Mineral Resource for which tonnage, grade and mineral content can be estimated with a low level of confidence. It is inferred from geological evidence and assumed but not verified geological and/or grade continuity.
-!===
-
-a|
-*measuredAndIndicatedMineralRresource*
-
-[%autowidth]
-!===
-!Name: !measured and indicated mineral resource
-!Definition: !A combination of measured mineral resource and indicated mineral resource.
-!===
-
-a|
-*measuredIndicatedAndInferredMineralResource*
-
-[%autowidth]
-!===
-!Name: !"measured, indicated and inferred mineral resource"
-!Definition: !A combination of measured mineral resource, indicated mineral resource and inferred mineral resource.
-!===
-
-a|
-*indicatedandInferredMineralResource*
-
-[%autowidth]
-!===
-!Name: !indicated and inferred mineral resource
-!Definition: !A combination of indicated mineral resource and inferred mineral resource.
-!===
-
-a|
-*poorlyDocumented*
-
-[%autowidth]
-!===
-!Name: !poorly documented
-!Definition: !Poorly estimated or documented mineral resource.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===

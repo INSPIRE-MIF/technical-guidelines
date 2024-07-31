@@ -419,11 +419,10 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 _Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types, associated data types and code lists that are defined in Annexes II, III and IV to this Regulation for the themes the data sets relate to.
 
-. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
-. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
 
 ====
 
@@ -514,7 +513,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -553,27 +551,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-_Article 6_
-*Code Lists and Enumerations*
-
-(...)
-
-[arabic, start=5]
-. Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -587,19 +564,23 @@ The IRs distinguish the following types of code lists.
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
-. Code lists shall be of one of the following types, as specified in the Annexes:
-[loweralpha]
-.. code lists whose allowed values comprise only the values specified in this Regulation;
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
 
-.. code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
 
-.. code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
 
-.. code lists, whose allowed values comprise any values defined by data providers.
+. Code lists shall be one of the following types:
 
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
+
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
@@ -627,7 +608,7 @@ In addition, code lists can be hierarchical, as explained in Article 6(2) of the
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists*
 
 (...)
 
@@ -645,7 +626,7 @@ The type of code list and whether it is hierarchical or not is also indicated in
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists*
 
 (....)
 
@@ -1624,7 +1605,7 @@ a|
 !Definition: !Code values for age by 5 years classification items.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AgeBy5YearsValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1641,7 +1622,7 @@ a|
 !Definition: !Code values for age by year classification items.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/AgeByYearValue
-!Values: !The allowed values for this code list comprise only the values specified in "AgeByYearValue" .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -1658,7 +1639,7 @@ a|
 !Definition: !Code values for age group classification items.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/AgeGroupValue
-!Values: !The allowed values for this code list comprise the values specified in Annex _C_ and additional values at any level defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1675,7 +1656,7 @@ a|
 !Definition: !Code values for classification items.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ClassificationItemTypeValue
-!Values: !The allowed values for this code list comprise the values specified in Annex _C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1692,7 +1673,7 @@ a|
 !Definition: !Code values for classification types.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ClassificationTypeValue
-!Values: !The allowed values for this code list comprise the values specified in Annex _C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1709,7 +1690,7 @@ a|
 !Code values for NACE classification items.
 !none
 !http://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=CL_NACE2
-!The allowed values for this code list comprise only the values specified in "Regulation (EC) No 1893/2006 of the European Parliament and of the Council" . _Annex C_ includes recommended values that may be used by data providers.
+!The allowed values for this code list comprise only the values specified in "Regulation (EC) No 1893/2006 of the European Parliament and of the Council". INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
@@ -1726,7 +1707,7 @@ a|
 !Definition: !Code values for special values.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/SpecialValue
-!Values: !The allowed values for this code list comprise the values specified in Annex _C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1742,8 +1723,8 @@ a|
 !Name: !Statistical data status value
 !Definition: !Code values for statistical data status.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codelist/StatusValue
-!Values: !The allowed values for this code list comprise the values specified in Annex _C_ and additional values at any level defined by data providers.
+!Identifier: !http://inspire.ec.europa.eu/codelist/StatisticalDataStatusValue
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1760,7 +1741,7 @@ a|
 !Definition: !Code values for statistics measurement method.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/StatisticsMeasurementMethodValue
-!Values: !The allowed values for this code list comprise the values specified in Annex _C_ and additional values at any level defined by data providers.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -1777,14 +1758,14 @@ a|
 !Definition: !Code values for variable names.
 !Extensibility: !any
 !Identifier: !http://inspire.ec.europa.eu/codelist/VariableValue
-!Values: !The allowed values for this code list comprise any values defined by data providers. _Annex C_ includes recommended values that may be used by data providers.
+!Values: !The allowed values for this code list comprise any values defined by data providers. INSPIRE Registry includes recommended values that may be used by data providers.
 !===
 
 |===
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
 ====== DateTime
 
@@ -1982,11 +1963,13 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+.	Other coordinate reference systems may be specified for specific spatial data themes.
 
-. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+.	 For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
+
 
 ====
 
@@ -2009,7 +1992,7 @@ For the display of spatial data sets with the view network service as specified 
 ====
 [.text-center]
 *IR Requirement*
-_Annex II, Section 1.4_
+_Annex II, Section 1.5_
 *Coordinate Reference Systems used in the View Network Service*
 
 . Coordinate reference system parameters and identifiers shall be managed in one or several common registers for coordinate reference systems.
@@ -2018,13 +2001,13 @@ _Annex II, Section 1.4_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 2*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed in the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -2033,35 +2016,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-*Table 2. http URIs for the default coordinate reference systems*
-
-[align=center,width="100%",cols="37%,20%,43%",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -2200,11 +2154,12 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
-
-. Every encoding rule used to encode spatial data shall be made available.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
 
 ====
+
 
 NOTE ISO 19118:2011 specifies the requirements for defining encoding rules used for interchange of geographic data within the set of International Standards known as the "ISO 19100 series". An encoding rule allows geographic information defined by application schemas and standardized schemas to be coded into a system-independent data structure suitable for transport and storage. The encoding rule specifies the types of data being coded and the syntax, structure and coding schemes used in the resulting data structure. Specifically, ISO 19118:2011 includes
 
@@ -2457,7 +2412,7 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
 [.red.background]
 ====
@@ -2494,7 +2449,7 @@ http://inspire.ec.europa.eu/conformance-class/ir/pd/as/Population distribution-d
 
 . [.underline]#Reference#: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
@@ -2832,7 +2787,7 @@ _http://inspire.ec.europa.eu/conformance-class/tg/pd/3.0_
 [loweralpha]
 . [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-. [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+. [.underline]#Reference#: Section 6 of this technical guideline
 
 . [.underline]#Test Method#: Compare the URI of the dataset with the URIs in the table.
 
@@ -2942,220 +2897,9 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
-[width="100%",cols="100%"]
-|===
-a|
-*0-5*
-
-[%autowidth]
-!===
-!Name: !0-5
-!Definition: !0 to less than 5
-!===
-
-a|
-*10-May*
-
-[%autowidth]
-!===
-!Name: !10-May
-!Definition: !5 to less than 10
-!===
-
-a|
-*15-Oct*
-
-[%autowidth]
-!===
-!Name: !15-Oct
-!Definition: !10 to less than 15
-!===
-
-a|
-*15-20*
-
-[%autowidth]
-!===
-!Name: !15-20
-!Definition: !15 to less than 20
-!===
-
-a|
-*20-25*
-
-[%autowidth]
-!===
-!Name: !20-25
-!Definition: !20 to less than 25
-!===
-
-a|
-*25-30*
-
-[%autowidth]
-!===
-!Name: !25-30
-!Definition: !25 to less than 30
-!===
-
-a|
-*30-35*
-
-[%autowidth]
-!===
-!Name: !30-35
-!Definition: !30 to less than 35
-!===
-
-a|
-*35-40*
-
-[%autowidth]
-!===
-!Name: !35-40
-!Definition: !35 to less than 40
-!===
-
-a|
-*40-45*
-
-[%autowidth]
-!===
-!Name: !40-45
-!Definition: !40 to less than 45
-!===
-
-a|
-*45-50*
-
-[%autowidth]
-!===
-!Name: !45-50
-!Definition: !45 to less than 50
-!===
-
-a|
-*50-55*
-
-[%autowidth]
-!===
-!Name: !50-55
-!Definition: !50 to less than 55
-!===
-
-a|
-*55-60*
-
-[%autowidth]
-!===
-!Name: !55-60
-!Definition: !55 to less than 60
-!===
-
-a|
-*60-65*
-
-[%autowidth]
-!===
-!Name: !60-65
-!Definition: !60 to less than 65
-!===
-
-a|
-*65-70*
-
-[%autowidth]
-!===
-!Name: !65-70
-!Definition: !65 to less than 70
-!===
-
-a|
-*70-75*
-
-[%autowidth]
-!===
-!Name: !70-75
-!Definition: !70 to less than 75
-!===
-
-a|
-*75-80*
-
-[%autowidth]
-!===
-!Name: !75-80
-!Definition: !75 to less than 80
-!===
-
-a|
-*80-85*
-
-[%autowidth]
-!===
-!Name: !80-85
-!Definition: !80 to less than 85
-!===
-
-a|
-*85-90*
-
-[%autowidth]
-!===
-!Name: !85-90
-!Definition: !85 to less than 90
-!===
-
-a|
-*90*
-
-[%autowidth]
-!===
-!Name: !90
-!Definition: !90 and more
-!===
-
-a|
-*90-95*
-
-[%autowidth]
-!===
-!Name: !90-95
-!Definition: !90 to less than 95
-!===
-
-a|
-*95*
-
-[%autowidth]
-!===
-!Name: !95
-!Definition: !95 and more
-!===
-
-a|
-*95-100*
-
-[%autowidth]
-!===
-!Name: !95-100
-!Definition: !95 to less than 100
-!===
-
-a|
-*100*
-
-[%autowidth]
-!===
-!Name: !100
-!Definition: !100 and more
-!===
-
-|===
-
-AgeByYearValue
+*AgeByYearValue*
 
 [width="100%",cols="100%"]
 |===
@@ -3171,920 +2915,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*0_1*
-
-[%autowidth]
-!===
-!Name: !0_1
-!Definition: !0 to less than 1
-!===
-
-a|
-*1_2*
-
-[%autowidth]
-!===
-!Name: !1_2
-!Definition: !1 to less than 2
-!===
-
-a|
-*2_3*
-
-[%autowidth]
-!===
-!Name: !2_3
-!Definition: !2 to less than 3
-!===
-
-a|
-*3_4*
-
-[%autowidth]
-!===
-!Name: !3_4
-!Definition: !3 to less than 4
-!===
-
-a|
-*4_5*
-
-[%autowidth]
-!===
-!Name: !4_5
-!Definition: !4 to less than 5
-!===
-
-a|
-*5_6*
-
-[%autowidth]
-!===
-!Name: !5_6
-!Definition: !5 to less than 6
-!===
-
-a|
-*6_7*
-
-[%autowidth]
-!===
-!Name: !6_7
-!Definition: !6 to less than 7
-!===
-
-a|
-*7_8*
-
-[%autowidth]
-!===
-!Name: !7_8
-!Definition: !7 to less than 8
-!===
-
-a|
-*8_9*
-
-[%autowidth]
-!===
-!Name: !8_9
-!Definition: !8 to less than 9
-!===
-
-a|
-*9_10*
-
-[%autowidth]
-!===
-!Name: !9_10
-!Definition: !9 to less than 10
-!===
-
-a|
-*10_11*
-
-[%autowidth]
-!===
-!Name: !10_11
-!Definition: !10 to less than 11
-!===
-
-a|
-*11_12*
-
-[%autowidth]
-!===
-!Name: !11_12
-!Definition: !11 to less than 12
-!===
-
-a|
-*12_13*
-
-[%autowidth]
-!===
-!Name: !12_13
-!Definition: !12 to less than 13
-!===
-
-a|
-*13_14*
-
-[%autowidth]
-!===
-!Name: !13_14
-!Definition: !13 to less than 14
-!===
-
-a|
-*14_15*
-
-[%autowidth]
-!===
-!Name: !14_15
-!Definition: !14 to less than 15
-!===
-
-a|
-*15_16*
-
-[%autowidth]
-!===
-!Name: !15_16
-!Definition: !15 to less than 16
-!===
-
-a|
-*16_17*
-
-[%autowidth]
-!===
-!Name: !16_17
-!Definition: !16 to less than 17
-!===
-
-a|
-*17_18*
-
-[%autowidth]
-!===
-!Name: !17_18
-!Definition: !17 to less than 18
-!===
-
-a|
-*18_19*
-
-[%autowidth]
-!===
-!Name: !18_19
-!Definition: !18 to less than 19
-!===
-
-a|
-*19_20*
-
-[%autowidth]
-!===
-!Name: !19_20
-!Definition: !19 to less than 20
-!===
-
-a|
-*20_21*
-
-[%autowidth]
-!===
-!Name: !20_21
-!Definition: !20 to less than 21
-!===
-
-a|
-*21_22*
-
-[%autowidth]
-!===
-!Name: !21_22
-!Definition: !21 to less than 22
-!===
-
-a|
-*22_23*
-
-[%autowidth]
-!===
-!Name: !22_23
-!Definition: !22 to less than 23
-!===
-
-a|
-*23_24*
-
-[%autowidth]
-!===
-!Name: !23_24
-!Definition: !23 to less than 24
-!===
-
-a|
-*24_25*
-
-[%autowidth]
-!===
-!Name: !24_25
-!Definition: !24 to less than 25
-!===
-
-a|
-*25_26*
-
-[%autowidth]
-!===
-!Name: !25_26
-!Definition: !25 to less than 26
-!===
-
-a|
-*26_27*
-
-[%autowidth]
-!===
-!Name: !26_27
-!Definition: !26 to less than 27
-!===
-
-a|
-*27_28*
-
-[%autowidth]
-!===
-!Name: !27_28
-!Definition: !27 to less than 28
-!===
-
-a|
-*28_29*
-
-[%autowidth]
-!===
-!Name: !28_29
-!Definition: !28 to less than 29
-!===
-
-a|
-*29_30*
-
-[%autowidth]
-!===
-!Name: !29_30
-!Definition: !29 to less than 30
-!===
-
-a|
-*30_31*
-
-[%autowidth]
-!===
-!Name: !30_31
-!Definition: !30 to less than 31
-!===
-
-a|
-*31_32*
-
-[%autowidth]
-!===
-!Name: !31_32
-!Definition: !31 to less than 32
-!===
-
-a|
-*32_33*
-
-[%autowidth]
-!===
-!Name: !32_33
-!Definition: !32 to less than 33
-!===
-
-a|
-*33_34*
-
-[%autowidth]
-!===
-!Name: !33_34
-!Definition: !33 to less than 34
-!===
-
-a|
-*34_35*
-
-[%autowidth]
-!===
-!Name: !34_35
-!Definition: !34 to less than 35
-!===
-
-a|
-*35_36*
-
-[%autowidth]
-!===
-!Name: !35_36
-!Definition: !35 to less than 36
-!===
-
-a|
-*36_37*
-
-[%autowidth]
-!===
-!Name: !36_37
-!Definition: !36 to less than 37
-!===
-
-a|
-*37_38*
-
-[%autowidth]
-!===
-!Name: !37_38
-!Definition: !37 to less than 38
-!===
-
-a|
-*38_39*
-
-[%autowidth]
-!===
-!Name: !38_39
-!Definition: !38 to less than 39
-!===
-
-a|
-*39_40*
-
-[%autowidth]
-!===
-!Name: !39_40
-!Definition: !39 to less than 40
-!===
-
-a|
-*40_41*
-
-[%autowidth]
-!===
-!Name: !40_41
-!Definition: !40 to less than 41
-!===
-
-a|
-*41_42*
-
-[%autowidth]
-!===
-!Name: !41_42
-!Definition: !41 to less than 42
-!===
-
-a|
-*42_43*
-
-[%autowidth]
-!===
-!Name: !42_43
-!Definition: !42 to less than 43
-!===
-
-a|
-*43_44*
-
-[%autowidth]
-!===
-!Name: !43_44
-!Definition: !43 to less than 44
-!===
-
-a|
-*44_45*
-
-[%autowidth]
-!===
-!Name: !44_45
-!Definition: !44 to less than 45
-!===
-
-a|
-*45_46*
-
-[%autowidth]
-!===
-!Name: !45_46
-!Definition: !45 to less than 46
-!===
-
-a|
-*46_47*
-
-[%autowidth]
-!===
-!Name: !46_47
-!Definition: !46 to less than 47
-!===
-
-a|
-*47_48*
-
-[%autowidth]
-!===
-!Name: !47_48
-!Definition: !47 to less than 48
-!===
-
-a|
-*48_49*
-
-[%autowidth]
-!===
-!Name: !48_49
-!Definition: !48 to less than 49
-!===
-
-a|
-*49_50*
-
-[%autowidth]
-!===
-!Name: !49_50
-!Definition: !49 to less than 50
-!===
-
-a|
-*50_51*
-
-[%autowidth]
-!===
-!Name: !50_51
-!Definition: !50 to less than 51
-!===
-
-a|
-*51_52*
-
-[%autowidth]
-!===
-!Name: !51_52
-!Definition: !51 to less than 52
-!===
-
-a|
-*52_53*
-
-[%autowidth]
-!===
-!Name: !52_53
-!Definition: !52 to less than 53
-!===
-
-a|
-*53_54*
-
-[%autowidth]
-!===
-!Name: !53_54
-!Definition: !53 to less than 54
-!===
-
-a|
-*54_55*
-
-[%autowidth]
-!===
-!Name: !54_55
-!Definition: !54 to less than 55
-!===
-
-a|
-*55_56*
-
-[%autowidth]
-!===
-!Name: !55_56
-!Definition: !55 to less than 56
-!===
-
-a|
-*56_57*
-
-[%autowidth]
-!===
-!Name: !56_57
-!Definition: !56 to less than 57
-!===
-
-a|
-*57_58*
-
-[%autowidth]
-!===
-!Name: !57_58
-!Definition: !57 to less than 58
-!===
-
-a|
-*58_59*
-
-[%autowidth]
-!===
-!Name: !58_59
-!Definition: !58 to less than 59
-!===
-
-a|
-*59_60*
-
-[%autowidth]
-!===
-!Name: !59_60
-!Definition: !59 to less than 60
-!===
-
-a|
-*60_61*
-
-[%autowidth]
-!===
-!Name: !60_61
-!Definition: !60 to less than 61
-!===
-
-a|
-*61_62*
-
-[%autowidth]
-!===
-!Name: !61_62
-!Definition: !61 to less than 62
-!===
-
-a|
-*62_63*
-
-[%autowidth]
-!===
-!Name: !62_63
-!Definition: !62 to less than 63
-!===
-
-a|
-*63_64*
-
-[%autowidth]
-!===
-!Name: !63_64
-!Definition: !63 to less than 64
-!===
-
-a|
-*64_65*
-
-[%autowidth]
-!===
-!Name: !64_65
-!Definition: !64 to less than 65
-!===
-
-a|
-*65_66*
-
-[%autowidth]
-!===
-!Name: !65_66
-!Definition: !65 to less than 66
-!===
-
-a|
-*66_67*
-
-[%autowidth]
-!===
-!Name: !66_67
-!Definition: !66 to less than 67
-!===
-
-a|
-*67_68*
-
-[%autowidth]
-!===
-!Name: !67_68
-!Definition: !67 to less than 68
-!===
-
-a|
-*68_69*
-
-[%autowidth]
-!===
-!Name: !68_69
-!Definition: !68 to less than 69
-!===
-
-a|
-*69_70*
-
-[%autowidth]
-!===
-!Name: !69_70
-!Definition: !69 to less than 70
-!===
-
-a|
-*70_71*
-
-[%autowidth]
-!===
-!Name: !70_71
-!Definition: !70 to less than 71
-!===
-
-a|
-*71_72*
-
-[%autowidth]
-!===
-!Name: !71_72
-!Definition: !71 to less than 72
-!===
-
-a|
-*72_73*
-
-[%autowidth]
-!===
-!Name: !72_73
-!Definition: !72 to less than 73
-!===
-
-a|
-*73_74*
-
-[%autowidth]
-!===
-!Name: !73_74
-!Definition: !73 to less than 74
-!===
-
-a|
-*74_75*
-
-[%autowidth]
-!===
-!Name: !74_75
-!Definition: !74 to less than 75
-!===
-
-a|
-*75_76*
-
-[%autowidth]
-!===
-!Name: !75_76
-!Definition: !75 to less than 76
-!===
-
-a|
-*76_77*
-
-[%autowidth]
-!===
-!Name: !76_77
-!Definition: !76 to less than 77
-!===
-
-a|
-*77_78*
-
-[%autowidth]
-!===
-!Name: !77_78
-!Definition: !77 to less than 78
-!===
-
-a|
-*78_79*
-
-[%autowidth]
-!===
-!Name: !78_79
-!Definition: !78 to less than 79
-!===
-
-a|
-*79_80*
-
-[%autowidth]
-!===
-!Name: !79_80
-!Definition: !79 to less than 80
-!===
-
-a|
-*80_81*
-
-[%autowidth]
-!===
-!Name: !80_81
-!Definition: !80 to less than 81
-!===
-
-a|
-*81_82*
-
-[%autowidth]
-!===
-!Name: !81_82
-!Definition: !81 to less than 82
-!===
-
-a|
-*82_83*
-
-[%autowidth]
-!===
-!Name: !82_83
-!Definition: !82 to less than 83
-!===
-
-a|
-*83_84*
-
-[%autowidth]
-!===
-!Name: !83_84
-!Definition: !83 to less than 84
-!===
-
-a|
-*84_85*
-
-[%autowidth]
-!===
-!Name: !84_85
-!Definition: !84 to less than 85
-!===
-
-a|
-*85_86*
-
-[%autowidth]
-!===
-!Name: !85_86
-!Definition: !85 to less than 86
-!===
-
-a|
-*86_87*
-
-[%autowidth]
-!===
-!Name: !86_87
-!Definition: !86 to less than 87
-!===
-
-a|
-*87_88*
-
-[%autowidth]
-!===
-!Name: !87_88
-!Definition: !87 to less than 88
-!===
-
-a|
-*88_89*
-
-[%autowidth]
-!===
-!Name: !88_89
-!Definition: !88 to less than 89
-!===
-
-a|
-*89_90*
-
-[%autowidth]
-!===
-!Name: !89_90
-!Definition: !89 to less than 90
-!===
-
-a|
-*90_91*
-
-[%autowidth]
-!===
-!Name: !90_91
-!Definition: !90 to less than 91
-!===
-
-a|
-*91_92*
-
-[%autowidth]
-!===
-!Name: !91_92
-!Definition: !91 to less than 92
-!===
-
-a|
-*92_93*
-
-[%autowidth]
-!===
-!Name: !92_93
-!Definition: !92 to less than 93
-!===
-
-a|
-*93_94*
-
-[%autowidth]
-!===
-!Name: !93_94
-!Definition: !93 to less than 94
-!===
-
-a|
-*94_95*
-
-[%autowidth]
-!===
-!Name: !94_95
-!Definition: !94 to less than 95
-!===
-
-a|
-*95_96*
-
-[%autowidth]
-!===
-!Name: !95_96
-!Definition: !95 to less than 96
-!===
-
-a|
-*96_97*
-
-[%autowidth]
-!===
-!Name: !96_97
-!Definition: !96 to less than 97
-!===
-
-a|
-*97_98*
-
-[%autowidth]
-!===
-!Name: !97_98
-!Definition: !97 to less than 98
-!===
-
-a|
-*98_99*
-
-[%autowidth]
-!===
-!Name: !98_99
-!Definition: !98 to less than 99
-!===
-
-a|
-*99_100*
-
-[%autowidth]
-!===
-!Name: !99_100
-!Definition: !99 to less than 100
-!===
-
-a|
-*100*
-
-[%autowidth]
-!===
-!Name: !100
-!Definition: !100 and more
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *AgeGroupValue*
 
@@ -4102,38 +2933,8 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
-[width="100%",cols="100%"]
-|===
-a|
-*0_15*
-
-[cols=""]
-!===
-!Name: !0_15
-!Definition: !0 to less than 15
-!===
-
-a|
-*15_65*
-
-[cols=""]
-!===
-!Name: !15_65
-!Definition: !15 to less than 65
-!===
-
-a|
-*65*
-
-[cols=""]
-!===
-!Name: !65
-!Definition: !65 and more
-!===
-
-|===
 
 *ClassificationItemTypeValue*
 
@@ -4146,218 +2947,7 @@ a|
 !Definition: !Code values for classification items.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/ClassificationItemTypeValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[width="100%",cols="100%]
-|===
-a|
-*0-5*
-
-[%autowidth]
-!===
-!Name: !0-5
-!Definition: !0 to less than 5
-!===
-
-a|
-*10-May*
-
-[%autowidth]
-!===
-!Name: !10-May
-!Definition: !5 to less than 10
-!===
-
-a|
-*15-Oct*
-
-[%autowidth]
-!===
-!Name: !15-Oct
-!Definition: !10 to less than 15
-!===
-
-a|
-*15-20*
-
-[%autowidth]
-!===
-!Name: !15-20
-!Definition: !15 to less than 20
-!===
-
-a|
-*20-25*
-
-[%autowidth]
-!===
-!Name: !20-25
-!Definition: !20 to less than 25
-!===
-
-a|
-*25-30*
-
-[%autowidth]
-!===
-!Name: !25-30
-!Definition: !25 to less than 30
-!===
-
-a|
-*30-35*
-
-[%autowidth]
-!===
-!Name: !30-35
-!Definition: !30 to less than 35
-!===
-
-a|
-*35-40*
-
-[%autowidth]
-!===
-!Name: !35-40
-!Definition: !35 to less than 40
-!===
-
-a|
-*40-45*
-
-[%autowidth]
-!===
-!Name: !40-45
-!Definition: !40 to less than 45
-!===
-
-a|
-*45-50*
-
-[%autowidth]
-!===
-!Name: !45-50
-!Definition: !45 to less than 50
-!===
-
-a|
-*50-55*
-
-[%autowidth]
-!===
-!Name: !50-55
-!Definition: !50 to less than 55
-!===
-
-a|
-*55-60*
-
-[%autowidth]
-!===
-!Name: !55-60
-!Definition: !55 to less than 60
-!===
-
-a|
-*60-65*
-
-[%autowidth]
-!===
-!Name: !60-65
-!Definition: !60 to less than 65
-!===
-
-a|
-*65-70*
-
-[%autowidth]
-!===
-!Name: !65-70
-!Definition: !65 to less than 70
-!===
-
-a|
-*70-75*
-
-[%autowidth]
-!===
-!Name: !70-75
-!Definition: !70 to less than 75
-!===
-
-a|
-*75-80*
-
-[%autowidth]
-!===
-!Name: !75-80
-!Definition: !75 to less than 80
-!===
-
-a|
-*80-85*
-
-[%autowidth]
-!===
-!Name: !80-85
-!Definition: !80 to less than 85
-!===
-
-a|
-*85-90*
-
-[%autowidth]
-!===
-!Name: !85-90
-!Definition: !85 to less than 90
-!===
-
-a|
-*90*
-
-[%autowidth]
-!===
-!Name: !90
-!Definition: !90 and more
-!===
-
-a|
-*90-95*
-
-[%autowidth]
-!===
-!Name: !90-95
-!Definition: !90 to less than 95
-!===
-
-a|
-*95*
-
-[%autowidth]
-!===
-!Name: !95
-!Definition: !95 and more
-!===
-
-a|
-*95-100*
-
-[%autowidth]
-!===
-!Name: !95-100
-!Definition: !95 to less than 100
-!===
-
-a|
-*100*
-
-[%autowidth]
-!===
-!Name: !100
-!Definition: !100 and more
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -4378,56 +2968,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*ageBy5Years*
-
-[%autowidth]
-!===
-!Name: !age by 5 years
-!Definition: !Age by 5 years periods.
-!===
-
-a|
-*ageGroup*
-
-[%autowidth]
-!===
-!Name: !age by group
-!Definition: !Age by group
-!===
-
-a|
-*ageByYear*
-
-[%autowidth]
-!===
-!Name: !age by year
-!Definition: !Age by year.
-!===
-
-a|
-*gender*
-
-[%autowidth]
-!===
-!Name: !gender
-!Definition: !Female, male or unknown
-!===
-
-a|
-*Nace2*
-
-[%autowidth]
-!===
-!Name: !NACE
-!Definition: !The economic activity classification NACE Version 2 (Classification of Economic Activities in the European Community).
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *SpecialValue*
 
@@ -4440,38 +2981,7 @@ a|
 !Definition: !Code values for special values.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/SpecialValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*confidential*
-
-[%autowidth]
-!===
-!Name: !confidential
-!Definition: !The value is not provided for confidentiality reasons.
-!===
-
-a|
-*unknown*
-
-[%autowidth]
-!===
-!Name: !unknown
-!Definition: !The value could have been measured but was not.
-!===
-
-a|
-*notApplicable*
-
-[%autowidth]
-!===
-!Name: !not applicable
-!Definition: !The value would not have any sense.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -4486,63 +2996,13 @@ a|
 !Name: !Statistical data status value
 !Definition: !Code values for statistical data status.
 !Extensibility: !open
-!Identifier: !http://inspire.ec.europa.eu/codelist/StatusValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*definitive*
-
-[%autowidth]
-!===
-!Name: !definitive
-!Definition: !A definitive statistical data value.
-!===
-
-a|
-*final*
-
-[%autowidth]
-!===
-!Name: !final
-!Definition: !A final statistical data value.
-!===
-
-a|
-*preliminary*
-
-[%autowidth]
-!===
-!Name: !preliminary
-!Definition: !A preliminary statistical data value.
-!===
-
-a|
-*provisional*
-
-[%autowidth]
-!===
-!Name: !provisional
-!Definition: !A provisional statistical data value.
-!===
-
-a|
-*semiDefinitive*
-
-[%autowidth]
-!===
-!Name: !semi-definitive
-!Definition: !A semi-definitive statistical data value.
+!Identifier: !http://inspire.ec.europa.eu/codelist/StatisticalDataStatusValue
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
 
 *StatisticsMeasurementMethodValue*
-
 [width="100%",cols="100%"]
 |===
 a|
@@ -4552,51 +3012,7 @@ a|
 !Definition: !Code values for statistics measurement method.
 !Extensibility: !open
 !Identifier: !http://inspire.ec.europa.eu/codelist/StatisticsMeasurementMethodValue
-!Values: !The allowed values for this code list comprise the values specified in the table below and additional values at any level defined by data providers.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*count*
-
-[%autowidth]
-!===
-!Name: !count
-!Definition: !A simple count.
-!Description: !EXAMPLE: The number of persons.
-!===
-
-a|
-*relativeCount*
-
-[%autowidth]
-!===
-!Name: !relative count
-!Definition: !A ratio combining two different kinds of statistical population.
-!Description: !EXAMPLE: The mean number of cars per dwelling.
-!===
-
-a|
-*percentage*
-
-[%autowidth]
-!===
-!Name: !percentage
-!Definition: !A proportion expressed as a ratio whose denominator is 100.
-!Description: !EXAMPLE 1: The percentage of unemployed people.
-!===
-
-a|
-*median*
-
-[%autowidth]
-!===
-!Name: !median
-!Definition: !The median.
-!Description: !EXAMPLE 2: The population growth rate.
+!Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
 
 |===
@@ -4617,65 +3033,7 @@ a|
 
 |===
 
-The table below includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
-
-[width="100%",cols="100%"]
-|===
-a|
-*births*
-
-[%autowidth]
-!===
-!Name: !births
-!Definition: !The number of births.
-!===
-
-a|
-*income*
-
-[%autowidth]
-!===
-!Name: !income
-!Definition: !The income.
-!===
-
-a|
-*populationAtResidencePlace*
-
-[%autowidth]
-!===
-!Name: !population at residence place
-!Definition: !The number of people measured in the place where they sleep.
-!===
-
-a|
-*populationAtWorkPlace*
-
-[%autowidth]
-!===
-!Name: !population at work place
-!Definition: !The number of people measured in the place they where they work.
-!===
-
-a|
-*unemployedPopulation*
-
-[%autowidth]
-!===
-!Name: !unemployed population
-!Definition: !The unemployed population.
-!===
-
-a|
-*employedPopulation*
-
-[%autowidth]
-!===
-!Name: !employed population
-!Definition: !The employed population.
-!===
-
-|===
+The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 <<<
 [appendix]

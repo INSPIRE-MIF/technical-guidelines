@@ -396,7 +396,52 @@ Geophysical activity extending over a limited time range and limited area for pr
 
 === Symbols and abbreviations
 
-*Error! Not a valid link.*
+[width="100%",cols="14%,86%"]
+|===
+|AM |Area management/restriction/regulation zones and reporting units
+|AP |Assessment Point
+|ATS |Abstract Test Suite
+|EC |European Commission
+|EEA |European Environmental Agency
+|EF |Environmental Monitoring Facilities
+|ETRS89 |European Terrestrial Reference System 1989
+|ETRS89-LAEA |Lambert Azimuthal Equal Area
+|EVRS |European Vertical Reference System
+|FOI |Feature of interest
+|GCM |General Conceptual Model
+|GDE |Groundwater dependent ecosystems
+|GE |Geology
+|GeoSciML |GeoScience Markup Language
+|GIS |Geographical Information System
+|GML |Geography Markup Language
+|GSHP |Ground Source Heat Pumps
+|GWB |Groundwater bodies
+|GWD |Groundwater Directive
+|GWML |GroundWater Markup Language
+|HY |Hydrography
+|ICS |International Commission on Stratigraphy
+|IR |Implementing Rule
+|ISDSS |Interoperability of Spatial Data Sets and Services
+|ISO |International Organization for Standardization
+|ITRS |International Terrestrial Reference System
+|IUGS |International Union of Geological Sciences
+|LAT |Lowest Astronomical Tide
+|LMO |Legally Mandated Organisation
+|LU |Land Use
+|RBD |River Basin District
+|RBMP |River Basin Management Plan
+|SDIC |Spatial Data Interest Community
+|SO |Soil
+|SR |Sea Region
+|SRS |Spatial Reference System
+|SWE |Sensor Web Enablement
+|TG |Technical Guidance
+|UML |Unified Modeling Language
+|UTC |Coordinated Universal Time
+|WFD |Water Framework Directive
+|WISE |Water Information System of Europe
+|XML |EXtensible Markup Language
+|===
 
 === How the Technical Guidelines map to the Implementing Rules
 
@@ -5761,12 +5806,13 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 
 ===== Default encoding(s) for application schema Geology
 
-*Name: Geology GML Application Schema*
-Version: version 3.0,
-Specification: D2.8.II.4 Data Specification on _Geology_ – Technical Guidelines
+*Name: GeoSciML*
+Version: 4.1, GML, version 3.2.1,
+Specification: http://www.opengeospatial.org/standards/geosciml
+Schemas: http://schemas.opengis.net/gsml/4.1
 Character set: UTF-8
 
-The xml schema document is available on the INSPIRE website _http://inspire.ec.europa.eu/schemas/ge/3.0/Geology.xsd_
+GeoSciML v 4.1 is the community developed exchange format for providing detailed geoscientific information and has now reached maturity as a global OGC standard (http://www.opengeospatial.org/standards/geosciml). It also served as the basis for the more simplified INSPIRE Geology core data model and the GeoSciML 4.1 Basic and Borehole schemas fulfill the INSPIRE requirements whilst allowing full access to the extended rich content possibilities of GeoSciML including the GeoSciML-Lite Simple Feature SF0 WFS and INSPIRE compliant View (WMS) services. The detailed  guidelines,  entitled  “GeoSciML  4.1   Encoding  Cookbook  for  OneGeology and INSPIRE” document how to use GeoSciML Basic  and Borehole for INSPIRE andis available at http://www.onegeology.org/docs/technical/GeoSciML_Cookbook_1.3.pdf
 
 ===== Default encoding(s) for application schema Hydrogeology
 
@@ -5796,18 +5842,15 @@ It is recommended that also the encodings specified in this section be provided 
 
 ====
 
-===== The use of GeoSciML encoding 
+===== The use of inspire.ec.europa.eu/schemas/ge-core/4.0/GeologyCore.xsd encoding
 
-*Name: GeoSciML*
-Version: 3.2, GML, version 3.2.1
-Specification: http://www.geosciml.org
-Character set: UTF-8
+*Name: Geology GML Application Schema*
+Version: version 43.0,
+Specification: D2.8.II.4 Data Specification on Geology – Technical Guidelines Character set: UTF-8
 
-GeoSciML v 3.2 is the community developed exchange format for providing detailed geoscientific information. It also served as the basis for the more simplified INSPIRE _Geology_ core data model. The detailed guidelines, entitled "GeoSciML 3.2 Encoding Cookbook for INSPIRE WFS services" document how to use GeoSciML for INSPIRE and are available at__:__
+The xml schema document is available on the INSPIRE website
+_http://inspire.ec.europa.eu/schemas/ge-core/43.0/GeologyCore.xsd_
 
-http://www.geosciml.org/geosciml/3.2/documentation/cookbook/INSPIRE_GeoSciML_Cookbook%20_1.0.pdf__.__
-
-*_NOTE These aim at providing a unique encoding solution (e.g. a transformation tool) to fully address both INSPIRE and GeoSciML requirements. However, this proposed solution still needs to be tested by the wider stakeholder community as part of the INSPIRE Maintenance and Implementation Framework. Based on the results, it should be discussed whether the current default INSPIRE encoding (see Section 9.3.1. ) can be replaced by the GeoSciML encoding._*
 
 === Options for delivering coverage data
 
@@ -6026,7 +6069,36 @@ _Article 14_
 
 ==== Layers organisation
 
-None.
+Community wide practice has identified that the IR required layer name "GE.GeologicUnit" and layer title "Geologic Units" above does not describe logically the view of this dataset that normal users expect and require – which is very often a view of the dataset classified by .Lithology and/or by .Age. or for layers of the same type but at a different scale A practical solution has been implemented widely and become a community convention whereby the WMS service that provides these views expresses the GE.GeologicUnit layer name as a GROUP layer name with the user expected view layers under that group, expressed in the WMS GetCapabilities response and therefore callable by a user/software client.
+This has been found to work with all commonly used WMS software which is configured such that:
+
+{empty}[SERVICE / ROOT LAYER NAME]
+{empty}-> [ROOT LAYER TITLE]
+{empty}- - + - - + [GROUP LAYER NAME ~ follows data specification naming requirement]
+{empty}->-> [GROUP LAYER TITLE ~ follows data specification naming requirement]
+{empty}- - + - - + - - + [LAYER NAME ~ layer of the data specification TYPE BUT following community convention]
+...
+ 
+For example:
+ 
+{empty}- - + BGS_EN_Bedrock_and_Surface_Geology
+{empty}-> BGS OGE bedrock and surface geology
+{empty} - - + - - + GE.GeologicFault
+{empty}->-> Geologic Faults
+{empty}ABSTRACT: MappedFeature (spatial objects whose specification property is of type ShearDisplacementStructure)
+{empty}- - + - - + - - + GE.GeologicFault.BGS.EN.1M.Surface
+{empty}- - + - - + - - + GE.GeologicFault.BGS.EN.1M.Bedrock
+{empty}- - + - - + GE.GeologicUnit
+{empty}->-> Geologic Units
+{empty}ABSTRACT: MappedFeature (spatial objects whose specification property is of type GeologicUnit)
+{empty}- - + - - + - - + GE.GeologicUnit.BGS.EN.1M.Surface.Lithology
+{empty}- - + - - + - - + GE.GeologicUnit.BGS.EN.1M.Surface.Age
+{empty}- - + - - + - - + GE.GeologicUnit.BGS.EN.1M.Bedrock.Lithology
+{empty}- - + - - + - - + GE.GeologicUnit.BGS.EN.1M.Bedrock.Age
+
+The community concluded that this approach follows the IR at the service group layer whilst providing what real users want.
+The Land Cover theme has identified exactly the same requirements including using these layer names to express the scale of the data viewable in the layer allowing different scales for the same data type to be expressed in a single service which the generic IR for all view services also wants to be available.
+
 
 === Styles required to be supported by INSPIRE view services
 
@@ -6305,11 +6377,13 @@ None
 |geotechnicalSurvey | |179w
 |geothermalEnergy | |236-w2
 |groundwaterLevelMonitoring |  |162-w2  178-w
+|heatStorage| |114-w3  + 226-w2
 |hydrogeologicalSurvey | |162-w2
 |industrialWaterSupply |  |163-w2  236-w2
 |irrigation |  |163-w2  231-w2
 |mineralExplorationExtraction | |185-w2
 |mitigation | |156-w2
+|multidisciplinaryScientificResearch||114-w3 + 443-w2
 |pedologicalSurvey | |195-w2
 |pollutionMonitoring | |88-w2
 |recharge | |167-w2
@@ -6332,6 +6406,18 @@ w2 = Windings2
 | |
 |===
 
+[%autowidth,options="header"]
+|===
+|*Style Name* |GE.Borehole
+|*Style Title* |Borehole Depth Type
+|*Style Abstract* |The colour ramp is to differentiate based on *BoreholeLength* measure of a borehole depth.
+A proposal was created for EPOS IP project. This colour ramp representation can be used in combination with the *BoreholePurposeValue* classification.
+|*Symbology* |See the colour table below
+|*Minimum & maximum scales* a|None
+|===
+
+image::./media/image67.png[image,align=center]
+
 ==== Styles for the layer GE.Aquifer – Aquifer Type 
 
 [%autowidth]
@@ -6343,7 +6429,6 @@ w2 = Windings2
 |*Minimum & maximum scales* a|
 
 None
-
 
 |===
 
@@ -8897,9 +8982,7 @@ The INSPIRE _Geology_ and Geophysics models are both simple and designed to enab
 
 === Use of GeoSciML
 
-GeoSciML is a model for the exchange of detailed geoscience information which has been developed by the international geosciences community, in particular Geological Survey Organisations (_http://www.geosciml.org/_). GeoSciML version 3.1 was the starting point in developing the INSPIRE GE model and has heavily influenced its design. However GeoSciML has much broader scope than is required for INSPIRE so the INSPIRE GE model has been developed through a simplification of the required parts of GeoSciML, while aiming to retain the same overall design pattern and key features. Therefore mapping between the INSPIRE GE model and GeoSciML currently in version 3.2 is possible. The detailed mapping between both models is described in the document: *"GeoSciML 3.2 Encoding Cookbook for INSPIRE WFS services"* that is be available at:
-
-http://www.geosciml.org/geosciml/3.2/documentation/cookbook/INSPIRE_GeoSciML_Cookbook%20_1.0.pdf.
+GeoSciML is a model for the exchange of detailed geoscience information which has been developed by the international geosciences community, in particular Geological Survey Organisations (_http://www.geosciml.org/_) and now approved as a global OGC application schema standard (http://www.opengeospatial.org/standards/geosciml). GeoSciML version 3.1 was the starting point in developing the INSPIRE GE model and has heavily influenced its design. However full GeoSciML has much broader scope than is required for INSPIRE so the INSPIRE GE model has been developed through a simplification of the required parts of GeoSciML, while aiming to retain the same overall design pattern and key features. The new OGC GeoSciML 4.1 “Basic” module schema has been designed just to fulfill the INSPIRE requirements allowing access to any desired truly extended schemas from the Extension schemas separate from Basic (as with many other INSPIRE theme extended models). The detailed mapping between both models is described in the document: GeoSciML  4.1   Encoding  Cookbook  for  OneGeology and INSPIRE andis available at http://www.onegeology.org/docs/technical/GeoSciML_Cookbook_1.3.pdf.
 
 === Data model extension for Geophysics
 

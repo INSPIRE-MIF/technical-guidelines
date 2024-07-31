@@ -507,11 +507,9 @@ Articles 3, 4 and 5 of the Implementing Rules lay down the requirements for the 
 _Article 4_
 *Types for the Exchange and Classification of Spatial Objects*
 
-. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types and associated data types, enumerations and code lists that are defined in Annexes II, III and IV for the themes the data sets relate to.
+. For the exchange and classification of spatial objects from data sets meeting the conditions laid down in Article 4 of Directive 2007/2/EC, Member States shall use the spatial object types, associated data types and code lists that are defined in Annexes II, III and IV to this Regulation for the themes the data sets relate to.
 
-. Spatial object types and data types shall comply with the definitions and constraints and include the attributes and association roles set out in the Annexes.
-
-. The enumerations and code lists used in attributes or association roles of spatial object types or data types shall comply with the definitions and include the values set out in Annex II. The enumeration and code list values are uniquely identified by language-neutral mnemonic codes for computers. The values may also include a language-specific name to be used for human interaction.
+. When exchanging spatial objects, Member States shall comply with the definitions and constraints set out in the Annexes and provide values for all attributes and association roles set out for the relevant spatial object types and data types in the Annexes. For voidable attributes and association roles for which no value exists, Member States may omit the value.
 
 ====
 
@@ -604,7 +602,6 @@ In the application schemas in this section several stereotypes are used that hav
 |type |Class |A type that is not directly instantiable, but is used as an abstract collection of operation, attribute and relation signatures. This stereotype should usually not be used in INSPIRE application schemas as these are on a different conceptual level than classifiers with this stereotype.
 |dataType |Class |A structured data type without identity.
 |union |Class |A structured data type without identity where exactly one of the properties of the type is present in any instance.
-|enumeration |Class |An enumeration.
 |codeList |Class |A code list.
 |import |Dependency |The model elements of the supplier package are imported.
 |voidable |Attribute, association role |A voidable attribute or association role (see section 5.2.2).
@@ -643,27 +640,6 @@ In both cases, the «voidable» stereotype can be applied. In cases where the mi
 
 EXAMPLE If an address does not have a house number, the corresponding Address object should not have any value for the «voidable» attribute house number. If the house number is simply not known or not populated in the data set, the Address object should receive a value of _void_ (with the corresponding void reason) for the house number attribute.
 
-==== Enumerations
-
-Enumerations are modelled as classes in the application schemas. Their values are modelled as attributes of the enumeration class using the following modelling style:
-
-* No initial value, but only the attribute name part, is used.
-* The attribute name conforms to the rules for attributes names, i.e. is a lowerCamelCase name. Exceptions are words that consist of all uppercase letters (acronyms).
-
-[IMPORTANT]
-====
-[.text-center]
-*IR Requirement*
-_Article 6_
-*Code Lists and Enumerations*
-
-(...)
-
-[arabic, start=5]
-. Attributes or association roles of spatial object types or data types that have an enumeration type may only take values from the lists specified for the enumeration type."
-
-====
-
 ==== Code lists
 
 Code lists are modelled as classes in the application schemas. Their values, however, are managed outside of the application schema.
@@ -677,16 +653,23 @@ The IRs distinguish the following types of code lists.
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists for Spatial Data Sets*
 
-. Code lists shall be of one of the following types, as specified in the Annexes:
-[loweralpha]
-.. code lists whose allowed values comprise only the values specified in this Regulation;
-.. code lists whose allowed values comprise the values specified in this Regulation and narrower values defined by data providers;
-.. code lists whose allowed values comprise the values specified in this Regulation and additional values at any level defined by data providers;
-.. code lists, whose allowed values comprise any values defined by data providers.
+. The code lists included in this Regulation set out the multilingual thesauri to be used for the key attributes, in accordance with Article 8(2), point (c), of Directive 2007/2/EC.
 
-For the purposes of points (b), (c) and (d), in addition to the allowed values, data providers may use the values specified in the relevant INSPIRE Technical Guidance document available on the INSPIRE web site of the Joint Research Centre.
+. The Commission shall establish and operate an INSPIRE code list register at Union level for managing and making publicly available the values that are included in the code lists referred to in paragraph 1.
+
+. The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the code list values.
+
+. Code lists shall be one of the following types:
+
+.. code lists whose values comprise only the values specified in the INSPIRE code list register;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and narrower values defined by data providers;
+.. code lists whose values comprise the values specified in the INSPIRE code list register and additional values at any level defined by data providers;
+.. code lists, whose values comprise any values defined by data providers.
+
+. Code lists may be hierarchical. Values of hierarchical code lists may have a more general parent value.
+. Where, for an attribute whose type is a code list as referred to in paragraph 4, points (b), (c) or (d), a data provider provides a value that is not specified in the INSPIRE code list register, that value and its definition and label shall be made available in another register.
 
 ====
 
@@ -714,7 +697,7 @@ In addition, code lists can be hierarchical, as explained in Article 6(2) of the
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists*
 
 (...)
 
@@ -732,7 +715,7 @@ The type of code list and whether it is hierarchical or not is also indicated in
 [.text-center]
 *IR Requirement*
 _Article 6_
-*Code Lists and Enumerations*
+*Code Lists*
 
 (....)
 
@@ -769,7 +752,7 @@ The following two types of code lists are distinguished in INSPIRE:
 
 * _Code lists that are governed by INSPIRE (INSPIRE-governed code lists)._ These code lists will be managed centrally in the INSPIRE code list register. Change requests to these code lists (e.g. to add, deprecate or supersede values) are processed and decided upon using the INSPIRE code list register's maintenance workflows.
 +
-INSPIRE-governed code lists will be made available in the INSPIRE code list register at __http://inspire.ec.europa.eu/codeList/<CodeListName__>. They will be available in SKOS/RDF, XML and HTML. The maintenance will follow the procedures defined in ISO 19135. This means that the only allowed changes to a code list are the addition, deprecation or supersession of values, i.e. no value will ever be deleted, but only receive different statuses (valid, deprecated, superseded). Identifiers for values of INSPIRE-governed code lists are constructed using the pattern __http://inspire.ec.europa.eu/codeList/<CodeListName__>/<value>.
+INSPIRE-governed code lists will be made available in the INSPIRE code list register at __http://inspire.ec.europa.eu/codelist/<CodeListName__>. They will be available in SKOS/RDF, XML and HTML. The maintenance will follow the procedures defined in ISO 19135. This means that the only allowed changes to a code list are the addition, deprecation or supersession of values, i.e. no value will ever be deleted, but only receive different statuses (valid, deprecated, superseded). Identifiers for values of INSPIRE-governed code lists are constructed using the pattern __http://inspire.ec.europa.eu/codelist/<CodeListName__>/<value>.
 
 
 * _Code lists that are governed by an organisation outside of INSPIRE (externally governed code lists)._ These code lists are managed by an organisation outside of INSPIRE, e.g. the World Meteorological Organization (WMO) or the World Health Organization (WHO). Change requests to these code lists follow the maintenance workflows defined by the maintaining organisations. Note that in some cases, no such workflows may be formally defined.
@@ -799,7 +782,7 @@ NOTE Where practicable, the INSPIRE code list register could also provide http U
 
 ===== Vocabulary
 
-For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern _http://inspire.ec.europa.eu/codeList/<UpperCamelCaseName>_.
+For each code list, a tagged value called "vocabulary" is specified to define a URI identifying the values of the code list. For INSPIRE-governed code lists and externally governed code lists that do not have a persistent identifier, the URI is constructed following the pattern _http://inspire.ec.europa.eu/codelist/<UpperCamelCaseName>_.
 
 If the value is missing or empty, this indicates an empty code list. If no sub-classes are defined for this empty code list, this means that any code list may be used that meets the given definition.
 
@@ -1083,7 +1066,7 @@ _Annex II, Section 5.5.2_
 
 The application schema includes a voidable 0...* association from the address object type to the cadastral parcel object type from the INSPIRE Annex I theme "Cadastral parcels". This association represents that the address is assigned to or related with one or more cadastral parcels.
 
-The application schema also includes a voidable 0...* association form the address object type to the INSPIRE Annex III theme "Buildings". The association represents that the address is assigned to or related with one or more buildings. As the application schema for buildings is not yet developed, a temporary placeholder for the building object type has been created.
+The application schema also includes a voidable 0...* association form the address object type to the INSPIRE Annex III theme "Buildings". The association represents that the address is assigned to or related with one or more buildings.
 
 [NOTE]
 ====
@@ -1556,7 +1539,7 @@ a|
 [%autowidth]
 !===
 !Name: !building
-!Value type: !AbstractConstruction
+!Value type: !Building of the Buildings Base package
 !Definition: !Building that the address is assigned to or associated with.
 !Description: !NOTE An address could potentially have an association to zero, one or several buildings. Also it is possible (but this is not expressed in this application schema) that several addresses are associated to a single building. 
  
@@ -2419,7 +2402,7 @@ a|
 !Description: !NOTE Information on what type of spatial feature the geographic position of the address was created or derived from, is represented by the GeometrySpecificationValue.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometryMethodValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2442,7 +2425,7 @@ EXAMPLE 1 The same point (e.g., centre point of the polygon) is used for each ad
 EXAMPLE 2 Each point position is unique within the polygon to be able to visually distinguish the representation of each address.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometrySpecificationValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2458,7 +2441,7 @@ a|
 !Definition: !Description of the semantics of the locator designator.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2477,7 +2460,7 @@ a|
 EXAMPLE In The Netherlands a single locator, the address number, identifies a dwelling or business entity unit (unit level locator). In Spain up to four locators could be needed to obtain the same level of detail: Address number, entrance number, stair identifier plus a floor and door identifier.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2493,7 +2476,7 @@ a|
 !Definition: !Description of the semantics of the locator name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorNameTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2509,7 +2492,7 @@ a|
 !Definition: !A classification of the part of name according to its semantics in the complete thoroughfare name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/PartTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -2528,27 +2511,27 @@ a|
 NOTE 2 The status value relates to the real world address or address component and not to the property to which the address or address component is assigned (the addressable object).
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/StatusValue
-!Values: !The allowed values for this code list comprise only the values specified in _Annex C_ .
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
 
 ===== Imported types (informative)
 
-This section lists definitions for feature types, data types and enumerations and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
+This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
-====== AbstractConstruction
+====== Building of the Buildings Base package
 
 [cols="",options="header",]
 |===
-|*AbstractConstruction (abstract)*
+|*Building*
 a|
 [%autowidth]
 !===
 !Package: !BuildingsBase
 !Reference: !INSPIRE Data specification on Buildings [DS-D2.8.III.2]
-!Definition: !Abstract spatial object type grouping the semantic properties of buildings, building parts and of some optional spatial object types that may be added in order to provide more information about the theme Buildings.
-!Description: !The optional spatial object types that may be added to core profiles are described in the extended profiles. The ones inheriting from the attributes of AbstractConstruction are Installation and OtherConstruction.
+!Definition: !A Building is an enclosed construction above and/or underground, used or intended for the shelter of humans, animals or things or for the production of economic goods. A building refers to any structure permanently constructed or erected on its site.
+!Description: !
 !===
 
 |===
@@ -2785,11 +2768,13 @@ Spatial data sets shall be made available using at least one of the coordinate r
 
 Exceptions, where other coordinate reference systems than those listed in 1.3.1, 1.3.2 or 1.3.3 may be used, are:
 
-. Other coordinate reference systems may be specified for specific spatial data themes in this Annex.
+.	Other coordinate reference systems may be specified for specific spatial data themes.
 
-. For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
+.	 For regions outside of continental Europe, Member States may define suitable coordinate reference systems.
 
-The geodetic codes and parameters needed to describe these coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created, according to EN ISO 19111 and ISO 19127.
+The geodetic codes and parameters needed to describe these other coordinate reference systems and to allow conversion and transformation operations shall be documented and an identifier shall be created in a coordinate systems register established and operated by the Commission, according to EN ISO 19111 and ISO 19127.
+The Commission shall be assisted by the INSPIRE Commission expert group in the maintenance and update of the coordinate systems register.
+
 
 ====
 
@@ -2821,13 +2806,13 @@ _Annex II, Section 1.5_
 
 ====
 
-These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs below). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
+These Technical Guidelines propose to use the http URIs provided by the Open Geospatial Consortium as coordinate reference system identifiers (see identifiers for the default CRSs in the INSPIRE coordinate reference systems register). These are based on and redirect to the definition in the EPSG Geodetic Parameter Registry (_http://www.epsg-registry.org/_).
 
 [TIP]
 ====
 *TG Requirement 2*
 
-The identifiers listed in Table 2 shall be used for referring to the coordinate reference systems used in a data set.
+The identifiers listed the INSPIRE coordinate reference systems register (https://inspire.ec.europa.eu/crs) shall be used for referring to the coordinate reference systems used in a data set.
 
 ====
 
@@ -2836,35 +2821,6 @@ NOTE CRS identifiers may be used e.g. in:
 * data encoding,
 * data set and service metadata, and
 * requests to INSPIRE network services.
-
-[.text-center]
-*Table 2. http URIs for the default coordinate reference systems*
-
-[align=center,width="100%",cols="37%,20%,43%",options="header",]
-|===
-|*Coordinate reference system* |*Short name* |*http URI identifier*
-|3D Cartesian in ETRS89 |ETRS89-XYZ |_http://www.opengis.net/def/crs/EPSG/0/4936_
-|3D geodetic in ETRS89 on GRS80 |ETRS89-GRS80h |_http://www.opengis.net/def/crs/EPSG/0/4937_
-|2D geodetic in ETRS89 on GRS80 |ETRS89-GRS80 |_http://www.opengis.net/def/crs/EPSG/0/4258_
-|2D LAEA projection in ETRS89 on GRS80 |ETRS89-LAEA |_http://www.opengis.net/def/crs/EPSG/0/3035_
-|2D LCC projection in ETRS89 on GRS80 |ETRS89-LCC |_http://www.opengis.net/def/crs/EPSG/0/3034_
-|2D TM projection in ETRS89 on GRS80, zone 26N (30°W to 24°W) |ETRS89-TM26N |_http://www.opengis.net/def/crs/EPSG/0/3038_
-|2D TM projection in ETRS89 on GRS80, zone 27N (24°W to 18°W) |ETRS89-TM27N |_http://www.opengis.net/def/crs/EPSG/0/3039_
-|2D TM projection in ETRS89 on GRS80, zone 28N (18°W to 12°W) |ETRS89-TM28N |_http://www.opengis.net/def/crs/EPSG/0/3040_
-|2D TM projection in ETRS89 on GRS80, zone 29N (12°W to 6°W) |ETRS89-TM29N |_http://www.opengis.net/def/crs/EPSG/0/3041_
-|2D TM projection in ETRS89 on GRS80, zone 30N (6°W to 0°) |ETRS89-TM30N |_http://www.opengis.net/def/crs/EPSG/0/3042_
-|2D TM projection in ETRS89 on GRS80, zone 31N (0° to 6°E) |ETRS89-TM31N |_http://www.opengis.net/def/crs/EPSG/0/3043_
-|2D TM projection in ETRS89 on GRS80, zone 32N (6°E to 12°E) |ETRS89-TM32N |_http://www.opengis.net/def/crs/EPSG/0/3044_
-|2D TM projection in ETRS89 on GRS80, zone 33N (12°E to 18°E) |ETRS89-TM33N |_http://www.opengis.net/def/crs/EPSG/0/3045_
-|2D TM projection in ETRS89 on GRS80, zone 34N (18°E to 24°E) |ETRS89-TM34N |_http://www.opengis.net/def/crs/EPSG/0/3046_
-|2D TM projection in ETRS89 on GRS80, zone 35N (24°E to 30°E) |ETRS89-TM35N |_http://www.opengis.net/def/crs/EPSG/0/3047_
-|2D TM projection in ETRS89 on GRS80, zone 36N (30°E to 36°E) |ETRS89-TM36N |_http://www.opengis.net/def/crs/EPSG/0/3048_
-|2D TM projection in ETRS89 on GRS80, zone 37N (36°E to 42°E) |ETRS89-TM37N |_http://www.opengis.net/def/crs/EPSG/0/3049_
-|2D TM projection in ETRS89 on GRS80, zone 38N (42°E to 48°E) |ETRS89-TM38N |_http://www.opengis.net/def/crs/EPSG/0/3050_
-|2D TM projection in ETRS89 on GRS80, zone 39N (48°E to 54°E) |ETRS89-TM39N |_http://www.opengis.net/def/crs/EPSG/0/3051_
-|Height in EVRS |EVRS |_http://www.opengis.net/def/crs/EPSG/0/5730_
-|3D compound: 2D geodetic in ETRS89 on GRS80, and EVRS height |ETRS89-GRS80-EVRS |_http://www.opengis.net/def/crs/EPSG/0/7409_
-|===
 
 ==== Temporal reference system
 
@@ -3876,9 +3832,10 @@ The IRs contain the following two requirements for the encoding to be used to ma
 _Article 7_
 *Encoding*
 
-. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}1. Every encoding rule used to encode spatial data shall conform to EN ISO 19118. In particular, it shall specify schema conversion rules for all spatial object types and all attributes and association roles and the output data structure used.
+{empty}2. Every encoding rule used to encode spatial data shall be made available.
+{empty}2a. Every encoding rule used to encode spatial data shall also specify whether and how to represent attributes and association roles for which a corresponding value exists but is not contained in the spatial data sets maintained by a Member State, or cannot be derived from existing values at reasonable costs.
 
-. Every encoding rule used to encode spatial data shall be made available.
 
 ====
 
@@ -4444,12 +4401,8 @@ It should be noted that data providers are not obliged to integrate / decompose 
 A *dataset that contain more spatial object and/or data types* may be regarded as conformant when
 
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
-* all additional elements of the source model (spatial object types, data types, attributes, constraints, code lists and enumerations together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
+* all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
-====
-*Open issue 1:* Even though the last condition can be derived from Art. 8(4) of the Directive, the ISDSS Regulation does not contain requirements concerning the above issue. Therefore, no specific tests have been included in this abstract suite for testing conformity of extended application schemas. Annex F of the Generic Conceptual Model (D2.5) provides an example how to extend INSPIRE application schemas in a compliant way.
-
-====
 
 The ATS contains a detailed list of abstract tests. It should be noted that some tests in the Application schema conformance class can be automated by utilising xml *schema validation tools.* It should be noted that failing such validation test does not necessary reflect non-compliance to the application schema; it may be the results of erroneous encoding.
 
@@ -4481,7 +4434,7 @@ http://inspire.ec.europa.eu/conformance-class/ir/ad/as/ad
 
 . [.underline]#Reference#: Art. 3 and Art.4 of Commission Regulation No 1089/2010
 
-. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles, code lists, and enumerations) are mapped to the target schema with the correct designation of mnemonic names.
+. [.underline]#Test Method#: Examine whether the corresponding elements of the source schema (spatial object types, data types, attributes, association roles and code lists) are mapped to the target schema with the correct designation of mnemonic names.
 
 NOTE Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
@@ -4494,20 +4447,19 @@ NOTE Further technical information is in the Feature catalogue and UML diagram o
 
 . [.underline]#Test Method#: Examine whether the value type of each provided attribute or association role adheres to the corresponding value type specified in the target specification.
 
-NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from enumeration and code lists, and the coverage domains.
+NOTE 1 This test comprises testing the value types of INSPIRE identifiers, the value types of attributes and association roles that should be taken from code lists, and the coverage domains.
 
 NOTE 2 Further technical information is in the Feature catalogue and UML diagram of the application schema(s) in section 5.2.
 
 ==== Value test
 
 [loweralpha]
-. [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list or enumeration take the values set out therein.
+. [.underline]#Purpose#: Verify whether all attributes or association roles whose value type is a code list take the values set out therein.
 
 . [.underline]#Reference#: Art.4 (3) of Commission Regulation No 1089/2010.
 
-. [.underline]#Test Method#: When an attribute / association role has an enumeration or code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
+. [.underline]#Test Method#: When an attribute / association role has a code list as its type, compare the values of each instance with those provided in the application schema. To pass this tests any instance of an attribute / association role
 +
-* shall not take any other value than defined in the enumeration table when its type is an enumeration.
 * shall take only values explicitly specified in the code list when the code list's extensibility is "none".
 
 NOTE 1 This test is not applicable to code lists with extensibility "open" or "any".
@@ -4847,7 +4799,7 @@ _http://inspire.ec.europa.eu/conformance-class/tg/ad/3.1_
 [loweralpha]
 . [.underline]#Purpose#: Verify whether the coordinate reference system used to deliver data for INSPIRE network services has been identified by URIs according to the EPSG register.
 
-. [.underline]#Reference#: Table 2 in Section 6 of this technical guideline
+. [.underline]#Reference#: Section 6 of this technical guideline
 
 . [.underline]#Test Method#: Compare the URI of the dataset with the URIs in the table.
 
@@ -6430,38 +6382,9 @@ a|
 !Description: !NOTE Information on what type of spatial feature the geographic position of the address was created or derived from, is represented by the GeometrySpecificationValue.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometryMethodValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-byAdministrator
-
-[%autowidth]
-!===
-!Name: !by administrator
-!Definition: !Decided and recorded manually by the official body responsible for address allocation or by the dataset custodian.
-!===
-
-a|
-byOtherParty
-
-[%autowidth]
-!===
-!Name: !by other party
-!Definition: !Decided and recorded manually by another party.
-!===
-
-a|
-fromFeature
-
-[%autowidth]
-!===
-!Name: !from feature
-!Definition: !Derived automatically from another INSPIRE spatial object which is related to the address or address component.
+>>> 2024.2
 !===
 
 |===
@@ -6483,146 +6406,7 @@ EXAMPLE 1 The same point (e.g., centre point of the polygon) is used for each ad
 EXAMPLE 2 Each point position is unique within the polygon to be able to visually distinguish the representation of each address.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/GeometrySpecificationValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-addressArea
-
-[%autowidth]
-!===
-!Name: !address area
-!Definition: !Position derived from the related address area.
-!===
-
-a|
-adminUnit1stOrder
-
-[%autowidth]
-!===
-!Name: !admin unit 1st order
-!Definition: !Position derived from the related administrative unit of 1st order.
-!===
-
-a|
-adminUnit2ndOrder
-
-[%autowidth]
-!===
-!Name: !admin unit 2nd order
-!Definition: !Position derived from the related administrative unit of 2nd order.
-!===
-
-a|
-adminUnit3rdOrder
-
-[%autowidth]
-!===
-!Name: !admin unit 3rd order
-!Definition: !Position derived from the related administrative unit of 3rd order.
-!===
-
-a|
-adminUnit4thOrder
-
-[%autowidth]
-!===
-!Name: !admin unit 4th order
-!Definition: !Position derived from the related administrative unit of 4th order.
-!===
-
-a|
-adminUnit5thOrder
-
-[%autowidth]
-!===
-!Name: !admin unit 5th order
-!Definition: !Position derived from the related administrative unit of 5th order.
-!===
-
-a|
-adminUnit6thOrder
-
-[%autowidth]
-!===
-!Name: !admin unit 6th order
-!Definition: !Position derived from the related administrative unit of 6th order.
-!===
-
-a|
-building
-
-[%autowidth]
-!===
-!Name: !building
-!Definition: !Position aims at identifying the related building.
-!===
-
-a|
-entrance
-
-[%autowidth]
-!===
-!Name: !entrance
-!Definition: !Position aims at identifying the entrance door or gate.
-!===
-
-a|
-parcel
-
-[%autowidth]
-!===
-!Name: !parcel
-!Definition: !Position aims at identifying the related land parcel.
-!===
-
-a|
-postalDelivery
-
-[%autowidth]
-!===
-!Name: !postal delivery
-!Definition: !Position aims at identifying a postal delivery point.
-!===
-
-a|
-postalDescriptor
-
-[%autowidth]
-!===
-!Name: !postal descriptor
-!Definition: !Position derived from the related postcode area.
-!===
-
-a|
-segment
-
-[%autowidth]
-!===
-!Name: !segment
-!Definition: !Position derived from the related segment of a thoroughfare.
-!===
-
-a|
-thoroughfareAccess
-
-[%autowidth]
-!===
-!Name: !thoroughfare access
-!Definition: !Position aims at identifying the access point from the thoroughfare.
-!===
-
-a|
-utilityService
-
-[%autowidth]
-!===
-!Name: !utility service
-!Definition: !Position aims at identifying a point of utility service.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6637,137 +6421,9 @@ a|
 !Definition: !Description of the semantics of the locator designator.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 
-|===
 
-[width="100%",cols="100%"]
-|===
-a|
-*addressIdentifierGeneral*
-
-[%autowidth]
-!===
-!Name: !address identifier general
-!Definition: !Address identifier composed by numbers and/or characters.
-!===
-
-a|
-*addressNumber*
-
-[%autowidth]
-!===
-!Name: !address number
-!Definition: !Address identifier composed only by numbers.
-!===
-
-a|
-*addressNumber2ndExtension*
-
-[%autowidth]
-!===
-!Name: !address number 2nd extension
-!Definition: !Second extension to the address number.
-!===
-
-a|
-*addressNumberExtension*
-
-[%autowidth]
-!===
-!Name: !address number extension
-!Definition: !Extension to the address number.
-!===
-
-a|
-*buildingIdentifier*
-
-[%autowidth]
-!===
-!Name: !building identifier
-!Definition: !Building identifier composed by numbers and/or characters.
-!===
-
-a|
-*buildingIdentifierPrefix*
-
-[%autowidth]
-!===
-!Name: !building identifier prefix
-!Definition: !Prefix to the building number.
-!===
-
-a|
-*cornerAddress1stIdentifier*
-
-[%autowidth]
-!===
-!Name: !corner address 1st identifier
-!Definition: !Address identifier related to the primary thoroughfare name in a corner address.
-!===
-
-a|
-*cornerAddress2ndIdentifier*
-
-[%autowidth]
-!===
-!Name: !corner address 2nd identifier
-!Definition: !Address identifier related to the secondary thoroughfare name in a corner address.
-!===
-
-a|
-*entranceDoorIdentifier*
-
-[%autowidth]
-!===
-!Name: !entrance door identifier
-!Definition: !Identifier for an entrance door, entrance gate, or covered entranceway.
-!===
-
-a|
-*floorIdentifier*
-
-[%autowidth]
-!===
-!Name: !floor identifier
-!Definition: !Identifier of a floor or level inside a building.
-!===
-
-a|
-*kilometrePoint*
-
-[%autowidth]
-!===
-!Name: !kilometre point
-!Definition: !A mark on a road whose number identifies the existing distance between the origin point of the road and that mark, measured along the road.
-!===
-
-a|
-*postalDeliveryIdentifier*
-
-[%autowidth]
-!===
-!Name: !postal delivery identifier
-!Definition: !Identifier of a postal delivery point.
-!===
-
-a|
-*staircaseIdentifier*
-
-[%autowidth]
-!===
-!Name: !staircase identifier
-!Definition: !Identifier for a staircase, normally inside a building.
-!===
-
-a|
-*unitIdentifier*
-
-[%autowidth]
-!===
-!Name: !unit identifier
-!Definition: !Identifier of a door, dwelling, suite or room inside a building.
 !===
 
 |===
@@ -6785,47 +6441,7 @@ a|
 EXAMPLE In The Netherlands a single locator, the address number, identifies a dwelling or business entity unit (unit level locator). In Spain up to four locators could be needed to obtain the same level of detail: Address number, entrance number, stair identifier plus a floor and door identifier.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorLevelValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*accessLevel*
-
-[%autowidth]
-!===
-!Name: !access level
-!Definition: !The locator identifies a specific access to a plot of land, building or similar by use of an entrance number or similar identifier.
-!===
-
-a|
-*postalDeliveryPoint*
-
-[%autowidth]
-!===
-!Name: !postal delivery point
-!Definition: !The locator identifies a postal delivery point.
-!===
-
-a|
-*siteLevel*
-
-[%autowidth]
-!===
-!Name: !site level
-!Definition: !The locator identifies a specific plot of land, building or similar property by use of an address number, building number, building or property name.
-!===
-
-a|
-*unitLevel*
-
-[%autowidth]
-!===
-!Name: !unit level
-!Definition: !The locator identifies a specific part of a building.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6840,47 +6456,7 @@ a|
 !Definition: !Description of the semantics of the locator name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/LocatorNameTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*buildingName*
-
-[%autowidth]
-!===
-!Name: !building name
-!Definition: !Name of building or part of building.
-!===
-
-a|
-*descriptiveLocator*
-
-[%autowidth]
-!===
-!Name: !descriptive locator
-!Definition: !Narrative, textual description of the location or addressable object.
-!===
-
-a|
-*roomName*
-
-[%autowidth]
-!===
-!Name: !room name
-!Definition: !Identifier of a dwelling, suite or room inside a building.
-!===
-
-a|
-*siteName*
-
-[%autowidth]
-!===
-!Name: !site name
-!Definition: !Name of real estate, building complex or site.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6895,47 +6471,7 @@ a|
 !Definition: !A classification of the part of name according to its semantics in the complete thoroughfare name.
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/PartTypeValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*name*
-
-[%autowidth]
-!===
-!Name: !name
-!Definition: !The part of name constitutes the core or root of the thoroughfare name.
-!===
-
-a|
-*namePrefix*
-
-[%autowidth]
-!===
-!Name: !name prefix
-!Definition: !The part of name is used to separate connecting words without sorting significance from the core of the thoroughfare name.
-!===
-
-a|
-*qualifier*
-
-[%autowidth]
-!===
-!Name: !qualifier
-!Definition: !The part of name qualifies the thoroughfare name.
-!===
-
-a|
-*type*
-
-[%autowidth]
-!===
-!Name: !type
-!Definition: !The part of name indicates the category or type of thoroughfare.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
@@ -6953,56 +6489,7 @@ a|
 NOTE 2 The status value relates to the real world address or address component and not to the property to which the address or address component is assigned (the addressable object).
 !Extensibility: !none
 !Identifier: !http://inspire.ec.europa.eu/codelist/StatusValue
-!Values: !The allowed values for this code list comprise only the values specified in the table below.
-!===
-
-|===
-
-[width="100%",cols="100%"]
-|===
-a|
-*alternative*
-
-[%autowidth]
-!===
-!Name: !alternative
-!Definition: !An address or address component in common use but different from the master address or address component as determined by the official body responsible for address allocation or by the dataset custodian.
-!===
-
-a|
-*current*
-
-[%autowidth]
-!===
-!Name: !current
-!Definition: !Current and valid address or address component according to official body responsible for address allocation or deemed, by the dataset custodian, to be the most appropriate, commonly used address.
-!===
-
-a|
-*proposed*
-
-[%autowidth]
-!===
-!Name: !proposed
-!Definition: !An address or address component awaiting approval by the dataset custodian or official body responsible for address allocation.
-!===
-
-a|
-*reserved*
-
-[%autowidth]
-!===
-!Name: !reserved
-!Definition: !An address or address component approved by the official body responsible for address allocation or by the dataset custodian, but yet to be implemented.
-!===
-
-a|
-*retired*
-
-[%autowidth]
-!===
-!Name: !retired
-!Definition: !An address or address component no longer in every day use or abolished by the official body responsible for address allocation or by the dataset custodian.
+!Values: !The allowed values for this code list comprise only the values specified in the INSPIRE Registry.
 !===
 
 |===
