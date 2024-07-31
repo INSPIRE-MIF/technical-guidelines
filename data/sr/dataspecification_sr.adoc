@@ -1154,7 +1154,7 @@ SeaAreas are represented as 2-dimensional geometries.
 |_SeaBedCoverValue_ |_Sea Regions_ |«codelist»
 |_SeaSurfaceArea_ |_Sea Regions_ |«featureType»
 |_SeaSurfaceClassificationValue_ |_Sea Regions_ |«codelist»
-|_ShoreSegment_ |_Sea Regions_ |«featureType»
+|_ShoreSegment_ |_Sea Regions_ |«dataType»
 |_ShoreStabilityValue_ |_Sea Regions_ |«codelist»
 |_ShoreTypeClassificationValue_ |_Sea Regions_ |«codelist»
 |_Shoreline_ |_Sea Regions_ |«featureType»
@@ -1255,14 +1255,12 @@ a|
 !===
 
 a|
-*Attribute: extent*
+*Constraint: only one extent*
 
 [cols=","]
 !===
-!Name: !extent
-!Value type: !MarineExtent
-!Definition: !The extent of the Marine Circulation Zone at a particular tidal state Extent of the Marine Circulation Zone.
-!Multiplicity: !1
+!Natural language: !MarineCirculationZone shall have only one value fore the extent attribute
+!OCL: !inv: self.extent = 1
 !===
 
 |===
@@ -1401,16 +1399,6 @@ a|
 !Stereotypes: !«featureType»
 !===
 
-a|
-*Attribute: extent*
-
-[cols=","]
-!===
-!Name: !extent
-!Value type: !MarineExtent
-!Definition: !The extent of the Sea at Mean High Water
-!Multiplicity: !1
-!===
 
 a|
 *Constraint: extent.waterLevel must be meanHighWater*
@@ -1419,6 +1407,15 @@ a|
 !===
 !Natural language: !Sea is defined at Mean High Water. This constraint can be relaxed if there is not significant tidal variation in water level
 !OCL: !inv: self.extent.waterLevel = 'meanHighWater'
+!===
+
+a|
+*Constraint: only one extent*
+
+[cols=","]
+!===
+!Natural language: !Sea shall have only one value fore the extent attribute
+!OCL: !inv: self.extent = 1
 !===
 
 |===
@@ -1617,56 +1614,6 @@ a|
 
 |===
 
-====== ShoreSegment
-
-[cols="",options="header",]
-|===
-|*ShoreSegment*
-a|
-[cols=","]
-!===
-!Name: !Shore Segment
-!Definition: !A Shore Segment is a section of shore line.
-!Description: !Where it is possible to provide attributes about shore stability (eroding, stable etc) and/or shore type (sand, rock, harbour etc). Then the Shore Segment should be used in place of the GML LineString element to describe curve segments.
-!Stereotypes: !«featureType»
-!===
-
-a|
-*Attribute: geometry*
-
-[cols=","]
-!===
-!Name: !geometry
-!Value type: !GM_Curve
-!Definition: !The geometry of the ShoreSegment.
-!Multiplicity: !1
-!===
-
-a|
-*Attribute: shoreClassification*
-
-[cols=","]
-!===
-!Name: !shore classification
-!Value type: !ShoreTypeClassificationValue
-!Definition: !The primary type of the shore segment, taken from the ShoreTypeClassification codelist.
-!Multiplicity: !0..1
-!Stereotypes: !«voidable»
-!===
-
-a|
-*Attribute: shoreStability*
-
-[cols=","]
-!===
-!Name: !shore stability
-!Value type: !ShoreStabilityValue
-!Definition: !The primary stability type of the shore segment, taken from the ShoreStability codelist.
-!Multiplicity: !0..1
-!Stereotypes: !«voidable»
-!===
-
-|===
 
 ===== Data types
 
@@ -1790,6 +1737,57 @@ a|
 !Value type: !TM_Object
 !Definition: !The time for which the attributed value is valid. This may be a time instant or a duration.
 !Multiplicity: !1
+!Stereotypes: !«voidable»
+!===
+
+|===
+
+====== ShoreSegment
+
+[cols="",options="header",]
+|===
+|*ShoreSegment*
+a|
+[cols=","]
+!===
+!Name: !Shore Segment
+!Definition: !A Shore Segment is a section of shore line.
+!Description: !Where it is possible to provide attributes about shore stability (eroding, stable etc) and/or shore type (sand, rock, harbour etc). Then the Shore Segment should be used in place of the GML LineString element to describe curve segments.
+!Stereotypes: !«featureType»
+!===
+
+a|
+*Attribute: geometry*
+
+[cols=","]
+!===
+!Name: !geometry
+!Value type: !GM_Curve
+!Definition: !The geometry of the ShoreSegment.
+!Multiplicity: !1
+!===
+
+a|
+*Attribute: shoreClassification*
+
+[cols=","]
+!===
+!Name: !shore classification
+!Value type: !ShoreTypeClassificationValue
+!Definition: !The primary type of the shore segment, taken from the ShoreTypeClassification codelist.
+!Multiplicity: !0..1
+!Stereotypes: !«voidable»
+!===
+
+a|
+*Attribute: shoreStability*
+
+[cols=","]
+!===
+!Name: !shore stability
+!Value type: !ShoreStabilityValue
+!Definition: !The primary stability type of the shore segment, taken from the ShoreStability codelist.
+!Multiplicity: !0..1
 !Stereotypes: !«voidable»
 !===
 
