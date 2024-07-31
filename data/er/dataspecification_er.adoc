@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.20 Data Specification on Energy Resources – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Energy Resources
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Energy Resources
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[logo_ce-en-rvb-lr,width=131,height=90]
 
 image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -32,22 +43,22 @@ image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE** *Infrastructure fo
 
 [width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.20 INSPIRE Data Specification on _Energy Resources_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Energy Resources_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Energy Resources_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Energy Resources_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Energy Resources_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.20_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/er[D2.8.III.20_v3.0.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
+
 
 <<<
 [discrete]
@@ -357,7 +368,7 @@ means a fuel that may consist of many different materials coming from combustibl
 
 === Symbols and abbreviations
 
-[align=center,width="100%",cols="18%,82%"]
+[width="100%",cols="14%,86%"]
 |===
 |AAPG |American Association of Petroleum Geologists
 |AONB |Areas of Outstanding Natural Beauty
@@ -939,7 +950,7 @@ In addition, some themes make reference to the types TimeValuePair and Timeserie
 
 Where possible, only these coverage types (or a subtype thereof) are used in INSPIRE application schemas.
 
-[cols=","]
+[%autowidth]
 |===
 ^a|image::./media/image7.png[./media/image7,width=221,height=207] 
 ^a|image::./media/image8.png[./media/image8,width=308,height=208]
@@ -1053,7 +1064,7 @@ The _Energy Resources Base_ application schema does not require modelling of obj
 |===
 |*VerticalExtentRangeType*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vertical extent range type
 !Definition: !Value indicating the upper and lower bounds of the height/depth range.
@@ -1064,7 +1075,7 @@ a|
 a|
 *Attribute: lowerBound*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Lower bound
 !Value type: !Length
@@ -1077,7 +1088,7 @@ a|
 a|
 *Attribute: upperBound*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Upper bound
 !Value type: !Length
@@ -1089,7 +1100,7 @@ a|
 a|
 *Constraint: LowerBoundUoMShallBeMeter*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Value of lowerBound shall be expressed in meters.
 !OCL: !inv: self.lowerbound.uom.uomSymbol='m'
@@ -1098,7 +1109,7 @@ a|
 a|
 *Constraint: UpperBoundUoMShallBeMeter*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Value of upperBound shall be expressed in meters.
 !OCL: !inv: self.upperBound.uom.uomSymbol='m'
@@ -1112,7 +1123,7 @@ a|
 |===
 |*VerticalExtentType*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vertical extent type
 !Definition: !Vertical dimensional property consisting of an absolute measure or range of measures referenced to a well-defined vertical reference level which is commonly taken as origin (ground level, mean sea level, etc.).
@@ -1122,7 +1133,7 @@ a|
 a|
 *Attribute: verticalExtent*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vertical extent
 !Value type: !VerticalExtentValue
@@ -1133,7 +1144,7 @@ a|
 a|
 *Attribute: verticalReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vertical Reference
 !Value type: !VerticalReferenceValue
@@ -1149,7 +1160,7 @@ a|
 |===
 |*VerticalExtentValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vertical extent value
 !Definition: !Either a single number or a range of height/depth values to describe the height/depth position of an Energy Resource.
@@ -1159,7 +1170,7 @@ a|
 a|
 *Attribute: range*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Range
 !Value type: !VerticalExtentRangeType
@@ -1171,7 +1182,7 @@ a|
 a|
 *Attribute: scalar*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Scalar
 !Value type: !Length
@@ -1183,7 +1194,7 @@ a|
 a|
 *Constraint: ScalarUoMShallBeMeter*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Value of scalar shall be expressed in meters.
 !OCL: !inv: self.scalar.uom.uomSymbol='m'
@@ -1199,7 +1210,7 @@ a|
 |===
 |*ClassificationAndQuantificationFrameworkValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification and quantification framework value
 !Definition: !Values for the most widely used classification schemes to classify and quantify energy resources.
@@ -1217,7 +1228,7 @@ a|
 |===
 |*FossilFuelClassValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Fossil fuel class value
 !Definition: !Different sublevels within a resource for distinguishing real from potential or expected amount of fossil fuel resources.
@@ -1234,7 +1245,7 @@ a|
 |===
 |*FossilFuelValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Fossil fuel value
 !Definition: !Types of fossil fuels.
@@ -1251,7 +1262,7 @@ a|
 |===
 |*RenewableAndWasteValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Renewable and waste value
 !Definition: !Types of renewable and waste resources.
@@ -1269,7 +1280,7 @@ a|
 |===
 |*VerticalReferenceValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vertical reference value
 !Definition: !Values indicating the reference level of the vertical extent.
@@ -1290,7 +1301,7 @@ This section lists definitions for feature types, data types and enumerations an
 |===
 |*Length*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Units of Measure
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1434,7 +1445,7 @@ NOTE 2 The topological relations of two spatial objects based on their specific 
 |===
 |*FossilFuelResource*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Fossil fuel resource
 !Subtype of: !VectorEnergyResource
@@ -1446,7 +1457,7 @@ a|
 a|
 *Attribute: dateOfDiscovery*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Date of discovery
 !Value type: !TM_Position
@@ -1458,7 +1469,7 @@ a|
 a|
 *Attribute: resource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Resource
 !Value type: !FossilFuelResourceType
@@ -1474,7 +1485,7 @@ a|
 |===
 |*RenewableAndWasteResource*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Renewable and waste resource
 !Subtype of: !VectorEnergyResource
@@ -1486,7 +1497,7 @@ a|
 a|
 *Attribute: Capacity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Capacity
 !Value type: !Measure
@@ -1499,7 +1510,7 @@ a|
 a|
 *Attribute: dateOfDetermination*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Date of determination
 !Value type: !TM_Position
@@ -1511,7 +1522,7 @@ a|
 a|
 *Attribute: typeOfResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Type of resource
 !Value type: !RenewableAndWasteValue
@@ -1527,7 +1538,7 @@ a|
 |===
 |*VectorEnergyResource (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vector Energy Resource
 !Definition: !A vector spatial object defining an inferred or observable spatial extent of a resource that can be or has been used as a source of energy.
@@ -1537,7 +1548,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1548,7 +1559,7 @@ a|
 a|
 *Attribute: ClassificationAndQuantificationFramework*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification and quantification framework
 !Value type: !ClassificationAndQuantificationFrameworkValue
@@ -1560,7 +1571,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1571,7 +1582,7 @@ a|
 a|
 *Attribute: exploitationPeriod*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Exploitation period
 !Value type: !ExploitationPeriodType
@@ -1584,7 +1595,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Geometry
 !Value type: !GM_Object
@@ -1595,7 +1606,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -1606,7 +1617,7 @@ a|
 a|
 *Attribute: reportingAuthority*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Reporting authority
 !Value type: !RelatedParty
@@ -1618,7 +1629,7 @@ a|
 a|
 *Attribute: resourceName*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Resource name
 !Value type: !GeographicalName
@@ -1631,7 +1642,7 @@ a|
 a|
 *Attribute: verticalExtent*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vertical extent
 !Value type: !VerticalExtentType
@@ -1651,7 +1662,7 @@ a|
 |===
 |*CalorificRangeType*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Calorific range type
 !Definition: !Value indicating the upper and lower bounds of the calorific range of the energy resource.
@@ -1661,7 +1672,7 @@ a|
 a|
 *Attribute: lowerBound*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Lower bound
 !Value type: !Measure
@@ -1673,7 +1684,7 @@ a|
 a|
 *Attribute: upperBound*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Upper bound
 !Value type: !Measure
@@ -1690,7 +1701,7 @@ a|
 |===
 |*CalorificValueType*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Calorific value type.
 !Definition: !Value or range of values describing the calorific value of an Energy Resource.
@@ -1700,7 +1711,7 @@ a|
 a|
 *Attribute: calorificRange*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Calorific range
 !Value type: !CalorificRangeType
@@ -1711,7 +1722,7 @@ a|
 a|
 *Attribute: calorificScalar*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Calorific scalar
 !Value type: !Measure
@@ -1728,7 +1739,7 @@ a|
 |===
 |*ExploitationPeriodType*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Exploitation period type
 !Definition: !The exploitationPeriod defines the start and, if applicable, the end date of the exploitation or application.
@@ -1738,7 +1749,7 @@ a|
 a|
 *Attribute: beginTime*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Begin time
 !Value type: !TM_Position
@@ -1750,7 +1761,7 @@ a|
 a|
 *Attribute: endTime*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !End time
 !Value type: !TM_Position
@@ -1767,7 +1778,7 @@ a|
 |===
 |*FossilFuelMeasure*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Fossil fuel measure
 !Definition: !Amount of resources according to the specific categorisation.
@@ -1777,7 +1788,7 @@ a|
 a|
 *Attribute: amount*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Amount
 !Value type: !Measure
@@ -1789,7 +1800,7 @@ a|
 a|
 *Attribute: dateOfDetermination*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Date of determination
 !Value type: !TM_Position
@@ -1800,7 +1811,7 @@ a|
 a|
 *Attribute: resourceClass*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Resource class
 !Value type: !FossilFuelClassValue
@@ -1817,7 +1828,7 @@ a|
 |===
 |*FossilFuelResourceType*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Resource type
 !Definition: !Type and amount of resource according to specific categorisation.
@@ -1827,7 +1838,7 @@ a|
 a|
 *Attribute: calorificValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !-- Calorific value
 !Value type: !CalorificValueType
@@ -1840,7 +1851,7 @@ a|
 a|
 *Attribute: quantity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Quantity
 !Value type: !FossilFuelMeasure
@@ -1852,7 +1863,7 @@ a|
 a|
 *Attribute: typeOfResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Type of resource
 !Value type: !FossilFuelValue
@@ -1872,7 +1883,7 @@ This section lists definitions for feature types, data types and enumerations an
 |===
 |*ClassificationAndQuantificationFrameworkValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Energy Resources_ Base
 !Reference: !INSPIRE Data specification on _Energy Resources_ [DS-D2.8.III.20]
@@ -1888,7 +1899,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1902,7 +1913,7 @@ a|
 |===
 |*FossilFuelClassValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Energy Resources_ Base
 !Reference: !INSPIRE Data specification on _Energy Resources_ [DS-D2.8.III.20]
@@ -1917,7 +1928,7 @@ a|
 |===
 |*FossilFuelValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Energy Resources_ Base
 !Reference: !INSPIRE Data specification on _Energy Resources_ [DS-D2.8.III.20]
@@ -1932,7 +1943,7 @@ a|
 |===
 |*GM_Object (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometry root
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1946,7 +1957,7 @@ a|
 |===
 |*GeographicalName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geographical Names
 !Reference: !INSPIRE Data specification on Geographical Names [DS-D2.8.I.3]
@@ -1961,7 +1972,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -1981,7 +1992,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*Measure*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !ProductionAndIndustrialFacilitiesExtension
 !Reference: !INSPIRE Data specification on Production and Industrial Facilities [DS-D2.8.III.8]
@@ -1996,7 +2007,7 @@ a|
 |===
 |*RelatedParty*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types 2
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2012,7 +2023,7 @@ a|
 |===
 |*RenewableAndWasteValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Energy Resources_ Base
 !Reference: !INSPIRE Data specification on _Energy Resources_ [DS-D2.8.III.20]
@@ -2028,7 +2039,7 @@ a|
 |===
 |*TM_Position*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Reference System
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -2042,7 +2053,7 @@ a|
 |===
 |*VerticalExtentType*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Energy Resources_ Base
 !Reference: !INSPIRE Data specification on _Energy Resources_ [DS-D2.8.III.20]
@@ -2174,7 +2185,7 @@ The geometry representation for _Energy Resources_ coverages is identified by th
 |===
 |*RenewableAndWastePotentialCoverage*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Renewable and waste potential coverage
 !Subtype of: !CoverageByDomainAndRange
@@ -2186,7 +2197,7 @@ a|
 a|
 *Attribute: assessmentMethod*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Assessment method
 !Value type: !DocumentCitation
@@ -2198,7 +2209,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -2209,7 +2220,7 @@ a|
 a|
 *Attribute: domainExtent*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Domain extent
 !Value type: !EX_Extent
@@ -2224,7 +2235,7 @@ SOURCE Adapted from [ISO 19123:2005].
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -2235,7 +2246,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -2246,7 +2257,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Name of the coverage.
@@ -2258,7 +2269,7 @@ a|
 a|
 *Attribute: potentialType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Potential type
 !Value type: !PotentialTypeValue
@@ -2270,7 +2281,7 @@ a|
 a|
 *Attribute: typeOfResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Type of resource
 !Value type: !RenewableAndWasteValue
@@ -2282,7 +2293,7 @@ a|
 a|
 *Attribute: validTime*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Valid time
 !Value type: !TM_Period
@@ -2294,7 +2305,7 @@ a|
 a|
 *Attribute: verticalExtent*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vertical extent
 !Value type: !VerticalExtentType
@@ -2306,7 +2317,7 @@ a|
 a|
 *Constraint: domainIsRectifiedGrid*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !the domain shall be a rectified grid.
 !OCL: !inv: domainSet.oclIsKindOf(CV_RectifiedGrid)
@@ -2315,7 +2326,7 @@ a|
 a|
 *Constraint: rangeSetValuesAreOfTypeMeasure*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !the rangeSet values shall be of type Measure.
 !OCL: !inv: rangeSet.forAll(oclIsKindOf(Measure))
@@ -2331,7 +2342,7 @@ a|
 |===
 |*GeothermalPotentialValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Geothermal potential value
 !Definition: !Types of potential geothermal energy.
@@ -2348,7 +2359,7 @@ a|
 |===
 |*HydroPotentialValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydro potential value
 !Definition: !Types of potential hydro energy.
@@ -2365,7 +2376,7 @@ a|
 |===
 |*PotentialTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Potential type value
 !Definition: !Types of potential energy from renewable and waste resources.
@@ -2382,7 +2393,7 @@ a|
 |===
 |*SolarPotentialValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Solar potential value
 !Definition: !Types of potential solar energy.
@@ -2399,7 +2410,7 @@ a|
 |===
 |*TidalPotentialValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Tidal potential value
 !Definition: !Types of potential tidal energy.
@@ -2416,7 +2427,7 @@ a|
 |===
 |*WindPotentialValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Wind potential value
 !Definition: !Types of potential wind energy.
@@ -2437,7 +2448,7 @@ This section lists definitions for feature types, data types and enumerations an
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2451,7 +2462,7 @@ a|
 |===
 |*CoverageByDomainAndRange (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Coverages (Domain and Range)
 !Reference: !INSPIRE Data Specifications – Base Models – Coverage Types, version 1.0 [DS-D2.10.2]
@@ -2466,7 +2477,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2480,7 +2491,7 @@ a|
 |===
 |*DocumentCitation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types 2
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2495,7 +2506,7 @@ a|
 |===
 |*EX_Extent*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Extent information
 !Reference: !Geographic information -- Metadata [ISO 19115:2003/Cor 1:2006]
@@ -2509,7 +2520,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2529,7 +2540,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*RenewableAndWasteValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Energy Resources_ Base
 !Reference: !INSPIRE Data specification on _Energy Resources_ [DS-D2.8.III.20]
@@ -2545,7 +2556,7 @@ a|
 |===
 |*TM_Period*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Objects
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -2559,7 +2570,7 @@ a|
 |===
 |*VerticalExtentType*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Energy Resources_ Base
 !Reference: !INSPIRE Data specification on _Energy Resources_ [DS-D2.8.III.20]
@@ -2661,7 +2672,7 @@ The geometry representation for _Energy Statistics_ support different geometrica
 |===
 |*EnergyStatisticalUnit*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Energy statistical unit
 !Subtype of: !VectorStatisticalUnit
@@ -2672,7 +2683,7 @@ a|
 a|
 *Association role: statisticalValues*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Statistical values
 !Value type: !AggregatedEnergy
@@ -2691,7 +2702,7 @@ a|
 |===
 |*AggregatedEnergy (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aggregated Energy
 !Definition: !Abstract class intended to aggregate values on energy statistics (energy products, consumption, supply, etc...) and energy resources (fossil fuels, renewables and waste).
@@ -2701,7 +2712,7 @@ a|
 a|
 *Attribute: aggregationPeriod*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aggregation period
 !Value type: !TM_Period
@@ -2712,7 +2723,7 @@ a|
 a|
 *Attribute: label*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !label
 !Value type: !CharacterString
@@ -2724,7 +2735,7 @@ a|
 a|
 *Attribute: measureValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Measure value
 !Value type: !Measure
@@ -2745,7 +2756,7 @@ EXAMPLE: proved coal reserves by country, wind energy capacity by region, etc...
 |===
 |*AggregatedResource*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aggregated resource
 !Subtype of: !AggregatedEnergy
@@ -2756,7 +2767,7 @@ a|
 a|
 *Attribute: resourceClass*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Resource class
 !Value type: !FossilFuelClassValue
@@ -2769,7 +2780,7 @@ a|
 a|
 *Attribute: typeOfResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Type of resource
 !Value type: !ResourceType
@@ -2785,7 +2796,7 @@ a|
 |===
 |*EnergyStatistic*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Energy statistic.
 !Subtype of: !AggregatedEnergy
@@ -2796,7 +2807,7 @@ a|
 a|
 *Attribute: energyProduct*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Energy product
 !Value type: !EnergyProductValue
@@ -2807,7 +2818,7 @@ a|
 a|
 *Attribute: energyStatisticsAggregate*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Energy statistics aggregate
 !Value type: !EnergyStatisticsAggregateValue
@@ -2823,7 +2834,7 @@ a|
 |===
 |*ResourceType*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Resource type
 !Definition: !Choice to specify either a fossil fuel or a renewable or waste resource i.e. the type of resource to which the statistic applies. NOTE only one option can be chosen.
@@ -2833,7 +2844,7 @@ a|
 a|
 *Attribute: renewableAndWasteType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Renewable and waste type
 !Value type: !RenewableAndWasteValue
@@ -2844,7 +2855,7 @@ a|
 a|
 *Attribute: fossilFuelType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Fossil fuel type
 !Value type: !FossilFuelValue
@@ -2862,7 +2873,7 @@ a|
 |===
 |*EnergyProductValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Energy product value
 !Definition: !A codelist of energy product values.
@@ -2882,7 +2893,7 @@ energy, electricity, or any other form of energy
 |===
 |*EnergyStatisticsAggregateValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Energy statistics aggregate value
 !Definition: !A codelist of aggregates that the statistical data are representing.
@@ -2905,7 +2916,7 @@ This section lists definitions for feature types, data types and enumerations an
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2919,7 +2930,7 @@ a|
 |===
 |*FossilFuelClassValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Energy Resources_ Base
 !Reference: !INSPIRE Data specification on _Energy Resources_ [DS-D2.8.III.20]
@@ -2934,7 +2945,7 @@ a|
 |===
 |*FossilFuelValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Energy Resources_ Base
 !Reference: !INSPIRE Data specification on _Energy Resources_ [DS-D2.8.III.20]
@@ -2949,7 +2960,7 @@ a|
 |===
 |*Measure*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !ProductionAndIndustrialFacilitiesExtension
 !Reference: !INSPIRE Data specification on Production and Industrial Facilities [DS-D2.8.III.8]
@@ -2964,7 +2975,7 @@ a|
 |===
 |*RenewableAndWasteValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Energy Resources_ Base
 !Reference: !INSPIRE Data specification on _Energy Resources_ [DS-D2.8.III.20]
@@ -2980,7 +2991,7 @@ a|
 |===
 |*TM_Period*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Objects
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -2994,7 +3005,7 @@ a|
 |===
 |*VectorStatisticalUnit*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Statistical Units Vector
 !Reference: !INSPIRE Data specification on Statistical Units [DS-D2.8.III.1]
@@ -6090,7 +6101,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *NPD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Norwegian Petroleum Directorate classification (NPD-2001)
 !Definition: !Norwegian Petroleum Directorate classification (NPD-2001)
@@ -6100,7 +6111,7 @@ a|
 a|
 *PERC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !"Pan-European Code for Reporting of Exploration Results, Mineral Resources and Reserves (PERC)."
 !Definition: !Pan-European Code for Reporting of Exploration Results, Mineral Resources and Reserves (PERC).
@@ -6110,7 +6121,7 @@ a|
 a|
 *RF*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Russian reserve guidelines.
 !Definition: !Russian reserve guidelines.
@@ -6120,7 +6131,7 @@ a|
 a|
 *SPE/WPC/AAPG(PRMS)*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Petroleum Resources Management System
 !Definition: !Petroleum Resources Management System
@@ -6130,7 +6141,7 @@ a|
 a|
 *UNFC1997*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !United Nations Framework Classification (1997).
 !Definition: !United Nations Framework Classification (1997).
@@ -6143,7 +6154,7 @@ a|
 a|
 *UNFC2004*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !United Nations Framework Classification (2004).
 !Definition: !United Nations Framework Classification (2004).
@@ -6156,7 +6167,7 @@ a|
 a|
 *UNFC2009*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !United Nations Framework Classification (2009).
 !Definition: !United Nations Framework Classification (2009).
@@ -6169,7 +6180,7 @@ a|
 a|
 *USGS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !United States Geological Survey
 !Definition: !United States Geological Survey
@@ -6201,7 +6212,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *contingentResources*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !contingent resources
 !Definition: !Contingent resources are those quantities of energy resources estimated, as of a given date, to be potentially recoverable from known accumulations or deposits using established technology or technology under development. For coal organisations this category is often referred to as reserves.
@@ -6211,7 +6222,7 @@ a|
 a|
 *resourcesInitiallyInPlace*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !resources initially in place
 !Definition: !The total amount of a resource initially present in an accumulation or deposit.
@@ -6221,7 +6232,7 @@ a|
 a|
 *provenReserves*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !proven reserves
 !Definition: !The estimated remaining quantities of a resource anticipated to be economically producible, as of a given date, by the application of development projects to known accumulations or deposits.
@@ -6251,7 +6262,7 @@ a|
 a|
 *hardCoal*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !hard coal
 !Definition: !Black, combustible, solid, organic fossil sediment often referred to as High Rank, due to their high calorific value, or Black Coals, given their physical characteristic. This category includes anthracite, coking coal and other bituminous coal.
@@ -6261,7 +6272,7 @@ a|
 a|
 *lowRankCoal*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !low-rank coal
 !Definition: !Combustible brown to black organic fossil sediment which are non-agglomerating and are often referred to as Low Rank Coals due to their lower calorific value or Brown Coals, due to their physical characteristics. This category includes both sub-bituminous coals and lignite.
@@ -6271,7 +6282,7 @@ a|
 a|
 *peat*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !peat
 !Definition: !A combustible soft, porous or compressed, sedimentary deposit of plant origin with high water content (up to 90 % in the raw state), easily cut, of light to dark brown colour.
@@ -6281,7 +6292,7 @@ a|
 a|
 *crudeOil*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !crude oil
 !Definition: !Crude oil is a mineral oil of natural origin comprising a mixture of hydrocarbons and associated impurities, such as sulphur. It exists in the liquid phase under normal surface temperature and pressure and its physical characteristics (density, viscosity, etc.) are highly variable.
@@ -6291,7 +6302,7 @@ a|
 a|
 *naturalGas*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !natural gas
 !Definition: !Gases occurring in underground deposits, whether liquefied or gaseous, consisting mainly of methane.
@@ -6301,7 +6312,7 @@ a|
 a|
 *naturalGasLiquids*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !natural gas liquids
 !Definition: !Liquid or liquefied hydrocarbons recovered from natural gas in separation facilities or gas processing plants.
@@ -6311,7 +6322,7 @@ a|
 a|
 *oilSands*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !oil sands
 !Definition: !Oil sands, tar sands or, more technically, bituminous sands, are loose sand or partially consolidated sandstone saturated with a dense and extremely viscous form of petroleum technically referred to as bitumen.
@@ -6321,7 +6332,7 @@ a|
 a|
 *oilShales*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !oil shales
 !Definition: !Oil shale, also known as kerogen shale, is an organic-rich fine-grained sedimentary rock containing kerogen (immature hydrocarbons).
@@ -6352,7 +6363,7 @@ a|
 a|
 *biogas*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !biogas
 !Definition: !A gas composed principally of methane and carbon dioxide produced by anaerobic digestion of biomass.
@@ -6362,7 +6373,7 @@ a|
 a|
 *geothermal*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !geothermal
 !Definition: !Energy available as heat emitted from within the Earth's crust, usually in the form of hot water or steam. This energy production is the difference between the enthalpy of the fluid produced in the production borehole and that of the fluid eventually disposed of. It is exploited at suitable sites for electricity generation or directly as heat.
@@ -6372,7 +6383,7 @@ a|
 a|
 *hydro*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !hydro power
 !Definition: !Potential and kinetic energy of water converted into electricity in hydroelectric plants.
@@ -6382,7 +6393,7 @@ a|
 a|
 *industrialWaste*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !industrial waste
 !Definition: !Waste of industrial non-renewable origin (solids or liquids) combusted directly for the production of electricity and/or heat.
@@ -6391,7 +6402,7 @@ a|
 a|
 *liquidBiofuels*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !liquid biofuels
 !Definition: !Liquid biofuels are biogasoline, bio-diesels or other biofuels directly used as fuel.
@@ -6400,7 +6411,7 @@ a|
 a|
 *municipalSolidWaste*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !municipal solid waste
 !Definition: !Waste produced by households, industry, hospitals and the tertiary sector which contains biodegradable materials that are incinerated at specific installations.
@@ -6410,7 +6421,7 @@ a|
 a|
 *solarPhotovoltaic*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !solar photovoltaic
 !Definition: !Sunlight converted into electricity by the use of solar cells usually made of semi-conducting material which, when exposed to light, will generate electricity.
@@ -6420,7 +6431,7 @@ a|
 a|
 *solarThermal*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !solar thermal
 !Definition: !Heat from solar radiationthat can consist ofsolar thermal-electric plants or of equipment for the production of heat.
@@ -6430,7 +6441,7 @@ a|
 a|
 *solidBiomass*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !solid biomass
 !Definition: !Covers organic, non-fossil material of biological origin which may be used as fuel for heat production or electricity generation.
@@ -6440,7 +6451,7 @@ a|
 a|
 *tideWaveOcean*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !"tide, wave, ocean"
 !Definition: !Mechanical energy derived from tidal movement, wave motion or ocean current and exploited for electricity generation.
@@ -6450,7 +6461,7 @@ a|
 a|
 *wind*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !wind
 !Definition: !Kinetic energy of wind exploited for electricity generation in wind turbines.
@@ -6482,7 +6493,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *groundLevel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !ground level
 !Definition: !The EarthÆs surface
@@ -6491,7 +6502,7 @@ a|
 a|
 *lowestAstronomicalTide*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !lowest astronomical tide
 !Definition: !The lowest tide level that can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
@@ -6500,7 +6511,7 @@ a|
 a|
 *meanSeaLevel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !mean sea level
 !Definition: !The average height of the sea at a tide station measured from a fixed predetermined reference level.
@@ -6510,7 +6521,7 @@ a|
 a|
 *seafloor*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seafloor
 !Definition: !The bottom of a sea or ocean.
@@ -6564,7 +6575,7 @@ a|
 a|
 *temperature*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !temperature
 !Definition: !Temperature measured in ?C.
@@ -6576,7 +6587,7 @@ a|
 
 [cols=""]
 |===
-a|[cols=","]
+a|[%autowidth]
 !===
 !Name: !Hydro potential value
 !Definition: !Types of potential hydro energy.
@@ -6594,7 +6605,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *potentialHydroPower*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !potential hydro power
 !Definition: !Yearly potential hydro power production.
@@ -6607,7 +6618,7 @@ a|
 [cols=""]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Solar potential value
 !Definition: !Types of potential solar energy.
@@ -6625,7 +6636,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *diffuseIrradiance*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !diffuse irradiance
 !Definition: !Part of solar power (instantaneous rate of radiant energy), falling on a surface on the Earth per unit time, which is scattered by air molecules or atmospheric particles such as aerosols or clouds [W.m-2].
@@ -6634,7 +6645,7 @@ a|
 a|
 *diffuseIrradiation*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !diffuse irradiation
 !Definition: !Amount of solar energy (integrated over a time), falling on a surface on the Earth, which is scattered by air molecules or atmospheric particles such as aerosols or clouds [Wh.m-2].
@@ -6643,7 +6654,7 @@ a|
 a|
 *directNormalIrradiance*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !direct normal irradiation
 !Definition: !Part of solar power (instantaneous rate of radiant energy), falling on a surface perpendicular to the Sun's rays per unit time, which is not scattered or reflected by air molecules or atmospheric particles [Wh.m-2].
@@ -6652,7 +6663,7 @@ a|
 a|
 *directNormalIrradiation*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !direct normal irradiation
 !Definition: !Amount of solar energy (integrated over a time), falling on a surface perpendicular to sunrays, which is not scattered or reflected by air molecules or atmospheric particles [Wh.m-2].
@@ -6661,7 +6672,7 @@ a|
 a|
 *globalHorizontalIrradiance*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !global horizontal irradiance
 !Definition: !Solar power (instantaneous rate of total radiant energy) attenuated by all constituents of the atmosphere and falling on a horizontal surface on the Earth per unit time. Global horizontal irradiance integrates direct, diffuse and reflected components of solar power [W.m-2].
@@ -6670,7 +6681,7 @@ a|
 a|
 *globalHorizontalIrradiation*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !global horizontal irradiation
 !Definition: !Amount of solar energy (integrated over a time) attenuated by all constituents of the atmosphere and falling on a horizontal surface on the Earth. Global horizontal irradiation integrates direct, diffuse and reflected components of solar energy [Wh.m-2].
@@ -6683,7 +6694,7 @@ a|
 [cols=""]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Tidal potential value
 !Definition: !Types of potential tidal energy.
@@ -6701,7 +6712,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *averagePeakFlow*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !average peak flow
 !Definition: !Peak velocity of tidal stream for whole tidal cycle.
@@ -6710,7 +6721,7 @@ a|
 a|
 *averageTidalPower*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !average tidal power
 !Definition: !Average tidal power obtainable over a complete year.
@@ -6719,7 +6730,7 @@ a|
 a|
 *meanNeapTidalPower*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !mean neap tidal power
 !Definition: !Average neap power taking into account the peak only of the neap tidal curve.
@@ -6728,7 +6739,7 @@ a|
 a|
 *meanNeapTidalRange*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !mean neap tidal range
 !Definition: !Vertical distance between high and low tide during neap tidal curve.
@@ -6737,7 +6748,7 @@ a|
 a|
 *meanNeapTidePeakFlow*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !mean neap tide peak flow
 !Definition: !Peak velocity of neap tidal stream.
@@ -6746,7 +6757,7 @@ a|
 a|
 *meanSpringTidalPower*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !mean spring tidal power
 !Definition: !Average spring power taking account the peak only of the spring tidal curve.
@@ -6755,7 +6766,7 @@ a|
 a|
 *meanSpringTidalRange*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !mean spring tidal range
 !Definition: !Vertical distance between high and low tide during spring tidal curve
@@ -6764,7 +6775,7 @@ a|
 a|
 *meanSpringTidePeakFlow*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !mean spring tide peak flow
 !Definition: !Peak velocity of spring tidal stream.
@@ -6777,7 +6788,7 @@ a|
 [cols=""]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Wind potential value
 !Definition: !Types of potential wind energy.
@@ -6795,7 +6806,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *averageMeanWindPowerDensity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !average mean wind power density
 !Definition: !The availability of energy at a location for conversion by a wind turbine.
@@ -6804,7 +6815,7 @@ a|
 a|
 *averageMeanWindSpeed*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !average mean wind speed
 !Definition: !Annual Mean wind speed at a location.
