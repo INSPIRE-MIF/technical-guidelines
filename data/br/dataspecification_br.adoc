@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.17 Data Specification on Bio-geographical Regions – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Bio-geographical Regions
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Bio-geographical Regions
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[logo_ce-en-rvb-lr,width=131,height=90]
 
 image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -32,21 +43,22 @@ image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE** *Infrastructure fo
 
 [width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.17 INSPIRE Data Specification on _Bio-geographical Regions_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Bio-geographical Regions_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Bio-geographical Regions_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Bio-geographical_ Regions
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Bio-geographical Regions_
-|*Format* |Portable Document Format (pdf)
-|*Rights* |Public
-|*Identifier* |D2.8.III.17_v3.0
-|*Language* |En
-|*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Union (INSPIRE)
-|*Coverage* |Project duration
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/XX[D2.8.III.17_v3.0.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
+|*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
 |===
+
 
 <<<
 [discrete]
@@ -334,7 +346,7 @@ The map of Natural Vegetation of Europe was compiled and produced by an internat
 
 === Symbols and abbreviations
 
-[align=center,width="100%",cols="16%,94%"]
+[width="100%",cols="14%,86%"]
 |===
 |Article 17 |Article 17 of the 1992 Habitats Directive
 |ATS |Abstract Test Suite
