@@ -4976,7 +4976,7 @@ referenceSystemIdentifier:
 |Example a|
 name: <Application schema name> GML application schema
 
-version: version 3.0
+version: 4.0
 
 specification: D2.8.III.4 Data Specification on _Land Use_ – Technical Guidelines
 
@@ -4987,7 +4987,7 @@ specification: D2.8.III.4 Data Specification on _Land Use_ – Technical Guideli
 		<gco:CharacterString>SomeApplicationSchema GML application schema</gco:CharacterString>
 	</gmd:name>
 	<gmd:version>
-		<gco:CharacterString>3.0</gco:CharacterString>
+		<gco:CharacterString>4.0</gco:CharacterString>
 	</gmd:version>
 	<gmd:specification>
 		<gco:CharacterString>D2.8.III.4 Data Specification on Land Use – Technical Guidelines</gco:CharacterString>
@@ -5333,30 +5333,30 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 ===== Default encoding(s) for application schema _Land Use_
 
 *Name: Existing _Land Use_ GML Application Schema*
-Version: version 3.0,
+Version: 4.0
 Specification: D2.8.III.4 Data Specification on _Land Use_ – Technical Guidelines
 Character set: UTF-8
-The xml schema document is available from http://inspire.ec.europa.eu/schemas/elu/3.0/ExistingLandUse.xsd.
+The xml schema document is available from http://inspire.ec.europa.eu/schemas/elu/4.0/ExistingLandUse.xsd.
 
 *Name: Gridded _Land Use_ GML Application Schema*
-Version: version 3.0,
+Version: 4.0
 Specification: D2.8.III.4 Data Specification on _Land Use_ – Technical Guidelines
 Character set: UTF-8
-The xml schema document is available from _http://inspire.ec.europa.eu/schemas/glu/3.0/GriddedExistingLandUse.xsd_.
+The xml schema document is available from _https://inspire.ec.europa.eu/schemas/gelu/4.0/GriddedExistingLandUse.xsd_.
 
 *Name: Sampled _Land Use_ Application Schema*
 
-Version: version 3.0,
+Version: 4.0
 Specification: D2.8.III.4 Data Specification on _Land Use_ – Technical Guidelines
 Character set: UTF-8
-The xml schema document is available from http://inspire.ec.europa.eu/schemas/slu/3.0/SampledExistingLandUse.xsd.
+The xml schema document is available from https://inspire.ec.europa.eu/schemas/selu/4.0/SampledExistingLandUse.xsd
 
 *Name: Planned _Land Use_ GML Application Schema*
 
-Version: version 3.0,
+Version: 4.0
 Specification: D2.8.III.4 Data Specification on _Land Use_ – Technical Guidelines
 Character set: UTF-8
-The xml schema document is available from http://inspire.ec.europa.eu/schemas/plu/3.0/PlannedLandUse.xsd.
+The xml schema document is available from https://inspire.ec.europa.eu/schemas/plu/4.0/PlannedLandUse.xsd.
 
 |===
 *Open issue 1:* Encoding of Gridded _Land Use_ should be harmonized with the Land cover theme.
@@ -5606,13 +5606,13 @@ None.
 :sectnums!:
 == Bibliography
 
-[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf_
+[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en_
 
-[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.3, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.5_v3_3.pdf_
+[DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.3, _https://knowledge-base.inspire.ec.europa.eu/publications/inspire-generic-conceptual-model_en_
 
-[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf_
+[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en_
 
-[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.2, _http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/D2.7_v3.2.pdf_
+[DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.2, _https://knowledge-base.inspire.ec.europa.eu/publications/guidelines-encoding-spatial-data_en_
 
 [ISO 19101] EN ISO 19101:2005 Geographic information – Reference model (ISO 19101:2002)
 

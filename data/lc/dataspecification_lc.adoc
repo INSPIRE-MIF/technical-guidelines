@@ -3672,7 +3672,7 @@ The table contains the following information:
 |10.3 |Metadata language |1 |
 |===
 
-Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _http://inspire.jrc.ec.europa.eu/index.cfm/pageid/101_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
+Generic guidelines for implementing these elements using ISO 19115 and 19119 are available at _https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en_. The following sections describe additional theme-specific recommendations and requirements for implementing these elements.
 
 ==== Conformity
 
@@ -4031,7 +4031,7 @@ codeSpace: INSPIRE RS registry
 |Example a|
 name: <Application schema name> GML application schema
 
-version: version 3.0
+version: 4.0
 
 specification: D2.8.II.2 Data Specification on Land Cover – Technical Guidelines
 
@@ -4043,7 +4043,7 @@ specification: D2.8.II.2 Data Specification on Land Cover – Technical Guidelin
 		<gco:CharacterString>SomeApplicationSchema GML application schema</gco:CharacterString>
 	</gmd:name>
 	<gmd:version>
-		<gco:CharacterString>3.0</gco:CharacterString>
+		<gco:CharacterString>4.0</gco:CharacterString>
 	</gmd:version>
 	<gmd:specification>
 		<gco:CharacterString>D2.8.II.2 Data Specification on Land Cover – Technical Guidelines</gco:CharacterString>
@@ -4401,7 +4401,7 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 
 *Name: LandCoverVector GML Application Schema*
 
-Version: version 3.0,
+Version: 5.0
 
 Specification: D2.8.II.2 Data Specification on Land Cover – Technical Guidelines
 
@@ -4409,13 +4409,13 @@ Character set: UTF-8
 
 The xml schema document is available from:
 
-http://inspire.ec.europa.eu/schemas/lcr/3.0/LandCoverVector.xsd
+https://inspire.ec.europa.eu/schemas/lcv/5.0/LandCoverVector.xsd
 
 ===== Default encoding(s) for application schema LandCoverRaster
 
 *Name: LandCoverRaster GML Application Schema (for the coverage domain)*
 
-Version: version 3.0
+Version: 4.0
 
 Specification: D2.8.II.2 Data Specification on Land Cover – Technical Guidelines
 
@@ -4423,7 +4423,7 @@ Character set: UTF-8
 
 The xml schema document is available from:
 
-http://inspire.ec.europa.eu/schemas/lcr/3.0/LandCoverRaster.xsd.
+https://inspire.ec.europa.eu/schemas/lcr/4.0/LandCoverRaster.xsd
 
 *Name: TIFF (for the coverage range)*
 
@@ -4483,7 +4483,7 @@ It is recommended that also the encodings specified in this section be provided 
 
 *Name: LandCoverRaster GML Application Schema (for the coverage domain)*
 
-Version: version 3.0,
+Version: 4.0
 
 Specification: D2.8.II.2 Data Specification on Land Cover – Technical Guidelines
 
@@ -4491,7 +4491,7 @@ Character set: UTF-8
 
 The xml schema document is available from:
 
-http://inspire.ec.europa.eu/schemas/lcr/3.0/LandCoverRaster.xsd.
+http://inspire.ec.europa.eu/schemas/lcr/4.0/LandCoverRaster.xsd.
 
 *Name: JPEG2000 (for the coverage range)*
 
@@ -4856,11 +4856,11 @@ For Land Cover data supported by points (and modelled in this specification thro
 <<<
 == Bibliography
 
-[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.3_Definition_of_Annex_Themes_and_scope_v3.0.pdf_
+[DS-D2.3] INSPIRE DS-D2.3, Definition of Annex Themes and Scope, v3.0, _https://knowledge-base.inspire.ec.europa.eu/publications/definition-annex-themes-and-scope-d-23-version-30_en_
 
 [DS-D2.5] INSPIRE DS-D2.5, Generic Conceptual Model, v3.1, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.5_v3.1.pdf_
 
-[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.6_v3.0.pdf_
+[DS-D2.6] INSPIRE DS-D2.6, Methodology for the development of data specifications, v3.0, _https://knowledge-base.inspire.ec.europa.eu/publications/methodology-development-data-specifications-baseline-version-d-26-version-30_en_
 
 [DS-D2.7] INSPIRE DS-D2.7, Guidelines for the encoding of spatial data, v3.0, _http://inspire.jrc.ec.europa.eu/reports/ImplementingRules/DataSpecifications/D2.7_v3.0.pdf_
 
