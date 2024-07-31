@@ -25,7 +25,7 @@
 
 // Document properties
 :title: Technical Guidance for the implementation of INSPIRE Download Services
-:revdate: 2023-07-31
+:revdate: 2024-01-31
 :keywords: INSPIRE Download Services
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document defines technical guidance for INSPIRE Download Services
