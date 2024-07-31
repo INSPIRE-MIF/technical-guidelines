@@ -1056,7 +1056,7 @@ _Annex II, Section 5.5.2_
 
 The application schema includes a voidable 0...* association from the address object type to the cadastral parcel object type from the INSPIRE Annex I theme "Cadastral parcels". This association represents that the address is assigned to or related with one or more cadastral parcels.
 
-The application schema also includes a voidable 0...* association form the address object type to the INSPIRE Annex III theme "Buildings". The association represents that the address is assigned to or related with one or more buildings. As the application schema for buildings is not yet developed, a temporary placeholder for the building object type has been created.
+The application schema also includes a voidable 0...* association form the address object type to the INSPIRE Annex III theme "Buildings". The association represents that the address is assigned to or related with one or more buildings.
 
 [NOTE]
 ====
@@ -1529,7 +1529,7 @@ a|
 [cols=","]
 !===
 !Name: !building
-!Value type: !AbstractConstruction
+!Value type: !Building of the Buildings Base package
 !Definition: !Building that the address is assigned to or associated with.
 !Description: !NOTE An address could potentially have an association to zero, one or several buildings. Also it is possible (but this is not expressed in this application schema) that several addresses are associated to a single building. 
  
@@ -2510,18 +2510,18 @@ NOTE 2 The status value relates to the real world address or address component a
 
 This section lists definitions for feature types, data types and code lists that are defined in other application schemas. The section is purely informative and should help the reader understand the feature catalogue presented in the previous sections. For the normative documentation of these types, see the given references.
 
-====== AbstractConstruction
+====== Building of the Buildings Base package
 
 [cols="",options="header",]
 |===
-|*AbstractConstruction (abstract)*
+|*Building*
 a|
 [cols=","]
 !===
 !Package: !BuildingsBase
 !Reference: !INSPIRE Data specification on Buildings [DS-D2.8.III.2]
-!Definition: !Abstract spatial object type grouping the semantic properties of buildings, building parts and of some optional spatial object types that may be added in order to provide more information about the theme Buildings.
-!Description: !The optional spatial object types that may be added to core profiles are described in the extended profiles. The ones inheriting from the attributes of AbstractConstruction are Installation and OtherConstruction.
+!Definition: !A Building is an enclosed construction above and/or underground, used or intended for the shelter of humans, animals or things or for the production of economic goods. A building refers to any structure permanently constructed or erected on its site.
+!Description: !
 !===
 
 |===
@@ -4393,10 +4393,6 @@ A *dataset that contain more spatial object and/or data types* may be regarded a
 * all the spatial object / data types that have corresponding types in the source dataset after the necessary transformations fulfil the requirements set out in the ISDSS Regulation and
 * all additional elements of the source model (spatial object types, data types, attributes, constraints and code lists together with their values) do not conflict with any rule defined in the interoperability target specifications defined for any theme within INSPIRE.
 
-====
-*Open issue 1:* Even though the last condition can be derived from Art. 8(4) of the Directive, the ISDSS Regulation does not contain requirements concerning the above issue. Therefore, no specific tests have been included in this abstract suite for testing conformity of extended application schemas. Annex F of the Generic Conceptual Model (D2.5) provides an example how to extend INSPIRE application schemas in a compliant way.
-
-====
 
 The ATS contains a detailed list of abstract tests. It should be noted that some tests in the Application schema conformance class can be automated by utilising xml *schema validation tools.* It should be noted that failing such validation test does not necessary reflect non-compliance to the application schema; it may be the results of erroneous encoding.
 
