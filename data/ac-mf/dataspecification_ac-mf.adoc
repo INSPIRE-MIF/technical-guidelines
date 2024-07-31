@@ -23,31 +23,42 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.13-14 Data Specification on Atmospheric Conditions and Meteorological Geographical Features – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Atmospheric Conditions and Meteorological Geographical Features
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Atmospheric Conditions and Meteorological Geographical Features
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[logo_ce-en-rvb-lr,width=131,height=90]
 
 image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE** *Infrastructure for Spatial Information in Europe*
 
 [discrete]
-= D2.8.III.13-14 Data Specification on Atmospheric Conditions and Meteorological Geographical Features –Technical Guidelines
+= D2.8.III.13-14 Data Specification on _Atmospheric Conditions and Meteorological Geographical Featuress_ –Technical Guidelines
 
 [width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.13-14 INSPIRE Data Specification on _Atmospheric Conditions and Meteorological Geographical Features_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Atmospheric Conditions and Meteorological Geographical Features_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Atmospheric Conditions and Meteorological Geographical Features_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Atmospheric Conditions and Meteorological Geographical Features_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Atmospheric Conditions and Meteorological Geographical Features_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.13-14_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/ac-mf[D2.8.III.13-14_v3.0.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
+
 
 <<<
 [discrete]
@@ -428,7 +439,7 @@ General terms and definitions helpful for understanding the INSPIRE data specifi
 
 === Symbols and abbreviations
 
-[align=center,width="100%",cols="22%,78%"]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |CSML |Climate Science Modelling Language
@@ -950,7 +961,7 @@ In addition, some themes make reference to the types TimeValuePair and Timeserie
 
 Where possible, only these coverage types (or a subtype thereof) are used in INSPIRE application schemas.
 
-[cols=","]
+[%autowidth]
 |===
 a|
 image::./media/image5.png[./media/image5,width=221,height=207] a|
@@ -4785,7 +4796,7 @@ In the longer term, global scale impacts assessments will be provided using both
 
 In the approach described for this use case (which is used by the Met Office Hadley Centre Climate Impacts Analysis team), past climate data are used to 'baseline' the 'climate risk', before the predictions of the future climate are analysed to identify the future risk. The *Climate Impacts and Risk assessment Framework*, or CIRF (pronounced as "serf") [1], represents the standard process of doing a risk assessment for an organisation or system.
 
-[cols=","]
+[%autowidth]
 |===
 a|Step 1: Identify the needs, objectives and extent of the project, including the required outcomes and expectations
 

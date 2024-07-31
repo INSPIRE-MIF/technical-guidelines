@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.21 Data Specification on Mineral Resources – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Mineral Resources
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Mineral Resources
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[logo_ce-en-rvb-lr,width=131,height=90]
 
 image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE***Infrastructure for Spatial Information in Europe*
@@ -32,22 +43,22 @@ image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE***Infrastructure for
 
 [width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.21 INSPIRE Data Specification on _Mineral Resources_ –Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Mineral Resources_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Mineral Resources_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Mineral Resources_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Mineral Resources_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.21_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/mr[D2.8.III.21_v3.0.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
+
 
 <<<
 [discrete]
@@ -383,7 +394,7 @@ The process of extracting metallic or non-metallic mineral deposits from the Ear
 
 === Symbols and abbreviations
 
-[align=center,width="100%",cols="21%,79%"]
+[width="100%",cols="14%,86%"]
 |===
 |AMD |Acid Mine Drainage
 |ARD |Acid Rock Drainage
@@ -982,7 +993,7 @@ The observation location is specified by its coordinates.
 |_ExplorationActivityTypeValue_ |MineralResources |«codeList»
 |_ExplorationResultValue_ |MineralResources |«codeList»
 |_ImportanceValue_ |MineralResources |«codeList»
-|_Mine_ |MineralResources |«featureType»
+|_Mine_ |MineralResources |«featureType»[%autowidth]
 |_MineName_ |MineralResources |«dataType»
 |_MineStatusValue_ |MineralResources |«codeList»
 |_MineralDepositGroupValue_ |MineralResources |«codeList»
@@ -1009,7 +1020,7 @@ The observation location is specified by its coordinates.
 |===
 |*Commodity*
 a|
-[cols=","]
+
 !===
 !Definition: !The material of economic interest in the EarthResource
 !Stereotypes: !«featureType»
@@ -1018,7 +1029,7 @@ a|
 a|
 *Attribute: commodityImportance*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ImportanceValue
 !Definition: !The importance of the deposit for the commodity.
@@ -1030,7 +1041,7 @@ a|
 a|
 *Attribute: commodity*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CommodityCodeValue
 !Definition: !The earth resource commodity.
@@ -1041,7 +1052,7 @@ a|
 a|
 *Attribute: commodityRank*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Integer
 !Definition: !The rank of the commodity.
@@ -1053,7 +1064,7 @@ a|
 a|
 *Association role: source*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !EarthResource
 !Definition: !The deposit/resource from which the commodity comes.
@@ -1068,7 +1079,7 @@ a|
 |===
 |*EarthResource (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeologicFeature
 !Definition: !The kinds of observable or inferred phenomena required to classify economic and non-economic earth resources.
@@ -1078,7 +1089,7 @@ a|
 a|
 *Attribute: dimension*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !EarthResourceDimension
 !Definition: !The size/volume of the earth resource.
@@ -1089,7 +1100,7 @@ a|
 a|
 *Attribute: expression*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Category
 !Definition: !An indicator of whether an EarthResource appears on the surface or has been detected under cover rocks.
@@ -1100,7 +1111,7 @@ a|
 a|
 *Attribute: form*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Category
 !Definition: !The orebody's typical physical and structural relationship to wallrocks and associated rocks.
@@ -1112,7 +1123,7 @@ a|
 a|
 *Attribute: linearOrientation*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CGI_LinearOrientation
 !Definition: !The linear orientation of the Earth Resource.
@@ -1124,7 +1135,7 @@ a|
 a|
 *Attribute: planarOrientation*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CGI_PlanarOrientation
 !Definition: !The planar orientation of the Earth Resource.
@@ -1136,7 +1147,7 @@ a|
 a|
 *Attribute: shape*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Category
 !Definition: !The typical geometrical shape of the Earth Resource.
@@ -1148,7 +1159,7 @@ a|
 a|
 *Attribute: sourceReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DocumentCitation
 !Definition: !The source or reference for the Earth Resource.
@@ -1159,7 +1170,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1170,7 +1181,7 @@ a|
 a|
 *Attribute: endLifespanversion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1181,7 +1192,7 @@ a|
 a|
 *Association role: oreAmount*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !OreMeasure
 !Definition: !The estimated or calculated amount of ore with the identification of the commodities contained and their grade.
@@ -1192,7 +1203,7 @@ a|
 a|
 *Association role: commodityDescription*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Commodity
 !Definition: !The commodities present in the resource ranked by importance order.
@@ -1203,7 +1214,7 @@ a|
 a|
 *Association role: explorationHistory*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ExplorationActivity
 !Definition: !Chronological list of surveys undertaken to better define the potential of a mineral occurrence.
@@ -1215,7 +1226,7 @@ a|
 a|
 *Association role: classification*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MineralDepositModel
 !Definition: !Classification of the EarthResource.
@@ -1227,7 +1238,7 @@ a|
 a|
 *Association role: resourceExtraction*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MiningActivity
 !Definition: !One or more periods of mining activity of the earth resource.
@@ -1244,7 +1255,7 @@ a|
 |===
 |*ExplorationActivity*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A period of exploration activity.
 !Stereotypes: !«featureType»
@@ -1253,7 +1264,7 @@ a|
 a|
 *Attribute: activityDuration*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !TM_Period
 !Definition: !Period, or extent in time, of the exploration activity.
@@ -1264,7 +1275,7 @@ a|
 a|
 *Attribute: activityType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ExplorationActivityTypeValue
 !Definition: !The type of exploration activity.
@@ -1275,7 +1286,7 @@ a|
 a|
 *Attribute: explorationResult*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ExplorationResultValue
 !Definition: !The result of the exploration activity.
@@ -1290,7 +1301,7 @@ a|
 |===
 |*Mine*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !MiningFeature
 !Definition: !An excavation carried out for the extraction of mineral deposits.
@@ -1301,7 +1312,7 @@ a|
 a|
 *Attribute: mineName*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MineName
 !Definition: !Data type indicating the Mine Name and whether it is the preferred name.
@@ -1311,7 +1322,7 @@ a|
 a|
 *Attribute: status*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MineStatusValue
 !Definition: !Operational status value of the mine.
@@ -1322,7 +1333,7 @@ a|
 a|
 *Attribute: sourceReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DocumentCitation
 !Definition: !The source reference for the mine.
@@ -1334,7 +1345,7 @@ a|
 a|
 *Attribute: startDate*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !TM_Instant
 !Definition: !Date on which the mine commenced operation.
@@ -1345,7 +1356,7 @@ a|
 a|
 *Attribute: endDate*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !TM_Instant
 !Definition: !Date on which the mine ceased operation.
@@ -1356,7 +1367,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1367,7 +1378,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1378,7 +1389,7 @@ a|
 a|
 *Association role: relatedMine*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Mine
 !Definition: !A related mine.
@@ -1390,7 +1401,7 @@ a|
 a|
 *Association role: relatedActivity*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MiningActivity
 !Definition: !The MiningActivity associated with the Mine.
@@ -1405,7 +1416,7 @@ a|
 |===
 |*MineralOccurrence*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !EarthResource
 !Definition: !<font color="#400040">A mineral accumulation in the lithosphere.
@@ -1415,7 +1426,7 @@ a|
 a|
 *Attribute: type*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MineralOccurrenceTypeValue
 !Definition: !The type of mineral occurrence.
@@ -1426,7 +1437,7 @@ a|
 a|
 *Attribute: endusePotential*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !EndusePotentialValue
 !Definition: !The end-use potential of the mineral.
@@ -1443,7 +1454,7 @@ a|
 |===
 |*MiningActivity*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !MiningFeature
 !Definition: !The process of extracting metallic, non-metallic mineral, or industrial rock deposits from the Earth.
@@ -1454,7 +1465,7 @@ a|
 a|
 *Attribute: activityDuration*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !TM_Period
 !Definition: !Period, or extent in time, of the mining activity.
@@ -1465,7 +1476,7 @@ a|
 a|
 *Attribute: activityType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MiningActivityTypeValue
 !Definition: !The type of mining activity.
@@ -1477,7 +1488,7 @@ Using activity to distinguish between the extraction, processing and production 
 a|
 *Attribute: oreProcessed*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Quantity
 !Definition: !The amount of ore processed by the activity.
@@ -1488,7 +1499,7 @@ a|
 a|
 *Attribute: processingType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ProcessingActivityTypeValue
 !Definition: !The type of processing carried out during the mining activity.
@@ -1498,7 +1509,7 @@ a|
 a|
 *Association role: associatedMine*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Mine
 !Definition: !The mine where the mining activity takes, or took, place.
@@ -1509,7 +1520,7 @@ a|
 a|
 *Association role: deposit*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !EarthResource
 !Definition: !The deposit to which the mining activity is associated.
@@ -1525,7 +1536,7 @@ a|
 |===
 |*MiningFeature (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Spatial object type grouping the common properties of mines and mining activities.
 !Stereotypes: !«featureType»
@@ -1534,7 +1545,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -1549,7 +1560,7 @@ a|
 |===
 |*MiningFeatureOccurrence*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A spatial representation of a MiningFeature.
 !Description: !A MiningFeatureOccurrence provides a link between a notional feature (description package) and one spatial representation of it, or part of it. The MiningFeatureOccurrence carries a geometry and the association with a Mining Feature provides specification of all the other descriptors.
@@ -1559,7 +1570,7 @@ a|
 a|
 *Attribute: shape*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Object
 !Definition: !The geometry of the MiningFeature.
@@ -1569,7 +1580,7 @@ a|
 a|
 *Association role: specification*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MiningFeature
 !Definition: !Indicates the MiningFeature that the MiningFeatureOccurrence specifies.
@@ -1586,7 +1597,7 @@ a|
 |===
 |*CommodityMeasure*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A measure of the amount of the commodity based on a Reserve, Resource or Endowment calculation.
 !Description: !Where OreMeasure is Resource or Reserve CommodityMeasure is mandatory
@@ -1596,7 +1607,7 @@ a|
 a|
 *Attribute: commodityAmount*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !QuantityRange
 !Definition: !The amount of the commodity.
@@ -1607,7 +1618,7 @@ a|
 a|
 *Attribute: cutOffGrade*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !QuantityRange
 !Definition: !The cut off grade used for calculating the commodity measure.
@@ -1619,7 +1630,7 @@ a|
 a|
 *Attribute: grade*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !QuantityRange
 !Definition: !The grade of the commodity.
@@ -1630,7 +1641,7 @@ a|
 a|
 *Association role: commodityOfInterest*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Commodity
 !Definition: !The commodity to which the CommodityMeasure refers.
@@ -1645,7 +1656,7 @@ a|
 |===
 |*EarthResourceDimension*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The size and volume of the earth resource.
 !Stereotypes: !«dataType»
@@ -1654,7 +1665,7 @@ a|
 a|
 *Attribute: area*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !QuantityRange
 !Definition: !The area of the Earth Resource.
@@ -1665,7 +1676,7 @@ a|
 a|
 *Attribute: depth*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !QuantityRange
 !Definition: !The depth of the Earth Resource.
@@ -1676,7 +1687,7 @@ a|
 a|
 *Attribute: length*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !QuantityRange
 !Definition: !The length of the Earth Resource.
@@ -1687,7 +1698,7 @@ a|
 a|
 *Attribute: width*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !QuantityRange
 !Definition: !The width of the Earth Resource.
@@ -1703,7 +1714,7 @@ a|
 |===
 |*Endowment*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !OreMeasure
 !Definition: !The quantity of a mineral (or a group of minerals for industrial rocks) in accumulations (deposits) meeting specified physical characteristics such as quality, size and depth.
@@ -1714,7 +1725,7 @@ a|
 a|
 *Attribute: includesReserves*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Boolean
 !Definition: !A flag indicating if the estimate includes the reserves value.
@@ -1725,7 +1736,7 @@ a|
 a|
 *Attribute: includesResources*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Boolean
 !Definition: !A flag indicating if the estimate includes the resources value.
@@ -1741,7 +1752,7 @@ a|
 |===
 |*MineName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A data type indicating the Mine Name and whether it is the preferred name.
 !Stereotypes: !«dataType»
@@ -1750,7 +1761,7 @@ a|
 a|
 *Attribute: isPreferred*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Boolean
 !Definition: !A boolean operator indicating if the value in mineName is the preferred name of the mine.
@@ -1760,7 +1771,7 @@ a|
 a|
 *Attribute: mineName*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !The name of the mine.
@@ -1775,7 +1786,7 @@ a|
 |===
 |*MineralDepositModel*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Systematically arranged information describing the essential attributes of a class of mineral deposits. It may be empirical (descriptive) or theoretical (genetic).
 !Stereotypes: !«type»
@@ -1784,7 +1795,7 @@ a|
 a|
 *Attribute: mineralDepositGroup*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MineralDepositGroupValue
 !Definition: !A grouping of mineral deposits defined by generic characteristics
@@ -1795,7 +1806,7 @@ a|
 a|
 *Attribute: mineralDepositType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MineralDepositTypeValue
 !Definition: !Style of mineral occurrence or deposit.
@@ -1812,7 +1823,7 @@ a|
 |===
 |*OreMeasure (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The estimate of the Reserve, Resource or Endowment ore amount.
 !Stereotypes: !«dataType»
@@ -1821,7 +1832,7 @@ a|
 a|
 *Attribute: classificationMethodUsed*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ClassificationMethodUsedValue
 !Definition: !Means of calculating the measurement.
@@ -1832,7 +1843,7 @@ a|
 a|
 *Attribute: date*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !TM_GeometricPrimitive
 !Definition: !Date of calculated or estimated value.
@@ -1843,7 +1854,7 @@ a|
 a|
 *Attribute: dimension*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !EarthResourceDimension
 !Definition: !Size of the body used in the calculation.
@@ -1854,7 +1865,7 @@ a|
 a|
 *Attribute: ore*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !QuantityRange
 !Definition: !Amount of ore.
@@ -1864,7 +1875,7 @@ a|
 a|
 *Attribute: proposedExtractionMethod*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Category
 !Definition: !The method proposed to extract the commodity.
@@ -1875,7 +1886,7 @@ a|
 a|
 *Attribute: sourceReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DocumentCitation
 !Definition: !The reference for the OreMeasure values.
@@ -1885,7 +1896,7 @@ a|
 a|
 *Association role: measureDetails*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CommodityMeasure
 !Definition: !A measure of the amount of each commodity, based on a reserve, resource or endowment calculation.
@@ -1901,7 +1912,7 @@ a|
 |===
 |*Reserve*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !OreMeasure
 !Definition: !The economically mineable part of a Measured and/or Indicated Mineral Resource.
@@ -1913,7 +1924,7 @@ Synonyms: Ore Reserve; Coal Reserve (s); Diamond (or gemstone) Ore Reserve; Mine
 a|
 *Attribute: category*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ReserveCategoryValue
 !Definition: !The level of confidence of the estimate (proved, probable).
@@ -1928,7 +1939,7 @@ a|
 |===
 |*Resource*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !OreMeasure
 !Definition: !An accumulation of material of intrinsic economic interest in or on the Earth's crust in such form, quality and quantity that there are reasonable prospects for economic extraction.
@@ -1939,7 +1950,7 @@ a|
 a|
 *Attribute: category*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ResourceCategoryValue
 !Definition: !Indication of whether the resource is measured, indicated, or inferred.
@@ -1949,7 +1960,7 @@ a|
 a|
 *Attribute: includesReserves*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Boolean
 !Definition: !A flag indicating whether the estimate of resources includes reserve values.
@@ -1967,7 +1978,7 @@ a|
 |===
 |*ClassificationMethodUsedValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Codes indicating the means used to calculate the ore measurement.
 !Description: !EXAMPLE: JORC, PERC, Unspecified, UNESCO/World Bank and the Canadian CIM.
@@ -1984,7 +1995,7 @@ a|
 |===
 |*CommodityCodeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Values indicating the type of commodity.
 !Description: !EXAMPLE: Cu, Au, Dimension Stone etc.
@@ -2001,7 +2012,7 @@ a|
 |===
 |*EndusePotentialValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Values indicating the end-use potential of the mineral.
 !Description: !EXAMPLE: for energy, fertilizer, building raw material etc.
@@ -2018,7 +2029,7 @@ a|
 |===
 |*ExplorationActivityTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Types of exploration activity carried out.
 !Extensibility: !open
@@ -2034,7 +2045,7 @@ a|
 |===
 |*ExplorationResultValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Values indicating the result of the exploration activity.
 !Extensibility: !open
@@ -2050,7 +2061,7 @@ a|
 |===
 |*ImportanceValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Values indicating the importance of the commodity for the Earth Resource.
 !Description: !Such a ranking is based on a statistical study of a large set of deposits throughout the world to ensure that it is valid. It is made using histograms allowing for each commodity to define class boundaries and what is a very large, a large, a medium-sized etc deposit for this commodity.. This classification is based on the potential or endowment: reserves  resources.
@@ -2067,7 +2078,7 @@ a|
 |===
 |*MineralDepositGroupValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Values indicating the grouping of mineral deposits on the basis of their generic characteristics.
 !Description: !EXAMPLE: host rock, host structure, commodity, association with similar mineral processes e.g. porphyry.
@@ -2084,7 +2095,7 @@ a|
 |===
 |*MineralDepositTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Values indicating the style of mineral occurrence or deposit.
 !Description: !Generally a local or regional term. Should be referenced for definitions and descriptions. Single deposit terms may form member of a Mineral Deposit Group in local and regional schemas.
@@ -2101,7 +2112,7 @@ a|
 |===
 |*MineralOccurrenceTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The type of mineral occurrence.
 !Extensibility: !any
@@ -2117,7 +2128,7 @@ a|
 |===
 |*MineStatusValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Values indicating the operational status of the mine.
 !Extensibility: !open
@@ -2133,7 +2144,7 @@ a|
 |===
 |*MiningActivityTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The type of mining activity, processing activity, or production.
 !Extensibility: !open
@@ -2149,7 +2160,7 @@ a|
 |===
 |*ProcessingActivityTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Values indicating the type of processing carried out during a mining activity.
 !Extensibility: !open
@@ -2165,7 +2176,7 @@ a|
 |===
 |*ReserveCategoryValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The level of confidence of the estimate of the reserve.
 !Extensibility: !open
@@ -2181,7 +2192,7 @@ a|
 |===
 |*ResourceCategoryValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Indication whether the resource is measured, indicated, or inferred.
 !Extensibility: !open
@@ -2201,7 +2212,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*Boolean*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Truth
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2215,7 +2226,7 @@ a|
 |===
 |*CGI_LinearOrientation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !CGI_Value
 !Reference: !CGI Interoperability Working Group, Geoscience Markup Language (GeoSciML), version 3.0.0, Commission for the Management and Application of Geoscience Information (CGI) of the International Union of Geological Sciences, 2011 [GeoSciML2]
@@ -2229,7 +2240,7 @@ a|
 |===
 |*CGI_PlanarOrientation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !CGI_Value
 !Reference: !CGI Interoperability Working Group, Geoscience Markup Language (GeoSciML), version 3.0.0, Commission for the Management and Application of Geoscience Information (CGI) of the International Union of Geological Sciences, 2011 [GeoSciML2]
@@ -2243,7 +2254,7 @@ a|
 |===
 |*Category*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !valueObjects
 !Reference: !Geographic information -- Geography Markup Language (GML) [ISO 19136:2007]
@@ -2257,7 +2268,7 @@ a|
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2271,7 +2282,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2285,7 +2296,7 @@ a|
 |===
 |*DocumentCitation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types 2
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2300,7 +2311,7 @@ a|
 |===
 |*GM_Object (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometry root
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -2314,7 +2325,7 @@ a|
 |===
 |*GeologicFeature (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geology
 !Reference: !INSPIRE Data specification on Geology [DS-D2.8.II.4]
@@ -2331,7 +2342,7 @@ The implemented Geologic Feature instance acts as the "description package"
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2351,7 +2362,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*Integer*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Numerics
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2365,7 +2376,7 @@ a|
 |===
 |*Quantity*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !valueObjects
 !Reference: !Geographic information -- Geography Markup Language (GML) [ISO 19136:2007]
@@ -2379,7 +2390,7 @@ a|
 |===
 |*QuantityRange*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Simple Components
 !Reference: !Robin, Alexandre (ed.), OGC®SWE Common Data Model Encoding Standard, version 2.0.0, Open Geospatial Consortium, 2011 [OGC 08-094r1]
@@ -2393,7 +2404,7 @@ a|
 |===
 |*TM_GeometricPrimitive*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Objects
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -2407,7 +2418,7 @@ a|
 |===
 |*TM_Instant*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Objects
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -2421,7 +2432,7 @@ a|
 |===
 |*TM_Period*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Objects
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -4901,14 +4912,18 @@ a|
 
 |===
 
+
 The INSPIRE Registry includes recommended values that may be used by data providers. Before creating new terms, please check if one of them can be used.
 
 *EndusePotentialValue*
 
+
 [width="100%",cols="100%"]
 |===
 a|
+
 [width="100%",cols="17%,83%"]
+
 !===
 !Definition: !Values indicating the end-use potential of the mineral.
 !Description: !EXAMPLE: for energy, fertilizer, building raw material etc.
@@ -4916,6 +4931,7 @@ a|
 !Identifier: !http://inspire.ec.europa.eu/codelist/EndusePotentialValue
 !Values: !The allowed values for this code list comprise the values specified in the INSPIRE Registry and additional values at any level defined by data providers.
 !===
+
 
 |===
 
@@ -4927,6 +4943,7 @@ The INSPIRE Registry includes additional recommended values that may also be use
 |===
 a|
 [width="100%",cols="17%,83%"]
+
 !===
 !Definition: !Types of exploration activity carried out.
 !Extensibility: !open
@@ -4936,12 +4953,16 @@ a|
 
 |===
 
+
 *ExplorationResultValue*
+
 
 [width="100%",cols="100%"]
 |===
 a|
+
 [width="100%",cols="17%,83%"]
+
 !===
 !Definition: !Values indicating the result of the exploration activity.
 !Extensibility: !open

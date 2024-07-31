@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.15 Data Specification on Oceanographic geographical features – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Oceanographic geographical features
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Oceanographic geographical features
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
 
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
@@ -30,24 +41,24 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 [discrete]
 = D2.8.III.15 Data Specification on _Oceanographic geographical features_ – Technical Guidelines
 
-[cols=",",]
+[width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.15 INSPIRE Data Specification on _Oceanographic geographical features_ –Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Oceanographic geographical features and Sea regions_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Oceanographic geographical features_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Oceanographic geographical features_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Oceanographic geographical features_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.15_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/of[D2.8.III.15_v3.0.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
+
 
 <<<
 [discrete]
@@ -300,7 +311,7 @@ General terms and definitions helpful for understanding the INSPIRE data specifi
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |AC-MF a|
 Atmospheric Conditions & Meteorological Geographical Features
@@ -835,7 +846,7 @@ In addition, some themes make reference to the types TimeValuePair and Timeserie
 
 Where possible, only these coverage types (or a subtype thereof) are used in INSPIRE application schemas.
 
-[cols=","]
+[%autowidth]
 |===
 a|image::./media/image5.png[image,width=222,height=207, align=center] a|image::./media/image6.png[image, align=center]
 ^|(Source: ISO 19136:2007) 
@@ -1384,7 +1395,7 @@ There is an important temporal aspect to the Specialised Observations used in OF
 
 Feature catalogue metadata
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema Oceanographic Geographical Features
 |Version number |3.0
@@ -1406,7 +1417,7 @@ Feature catalogue metadata
 |===
 |BODC_P01ParameterUsageValue
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !BODC P01 Parameter Usage
 !Definition: !Definitions of phenomena observed in oceanography.

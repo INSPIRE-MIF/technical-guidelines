@@ -23,31 +23,42 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.I.3 Data Specification on Geographical Names – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Geographical Names
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Geographical Names
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[logo_ce-en-rvb-lr,width=131,height=90]
 
 image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE** *Infrastructure for Spatial Information in Europe*
 
 [discrete]
-= D2.8.I.3 Data Specification on Geographical Names – Technical Guidelines
+= D2.8.I.3 Data Specification on _Geographical Names_ – Technical Guidelines
 
 [width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.I.3 Data Specification on _Geographical_ Names – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Geographical_ Names
-|*Date* |2014-04-17
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Geographical_ Names
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Geographical_ Names
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Geographical_ Names
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.I.3_v3.1
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/gn[D2.8.I.3_v3.1.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
+
 
 <<<
 [discrete]
@@ -257,7 +268,7 @@ NOTE This is an updated version of "EN ISO 19125-1:2004, Geographic information 
 General terms and definitions helpful for understanding the INSPIRE data specification documents are defined in the INSPIRE Glossaryfootnote:[The INSPIRE Glossary is available from http://inspire-registry.jrc.ec.europa.eu/registers/GLOSSARY].
 
 === Symbols and abbreviations
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |EGN |EuroGeoNames
 |ETRS |European Terrestrial Reference System
@@ -882,7 +893,7 @@ See also Recommendation 7 in section 5.3.1.2.2 about _Consistency between differ
 |===
 |*NamedPlace*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Any real world entity referred to by one or several proper nouns.
 !Stereotypes: !«featureType»
@@ -891,7 +902,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -902,7 +913,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -913,7 +924,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Object
 !Definition: !Geometry associated to the named place. This data specification does not restrict the geometry types.
@@ -930,7 +941,7 @@ NOTE 4 3D geometries are not really required for Geographical Names, but the mod
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -941,7 +952,7 @@ a|
 a|
 *Attribute: leastDetailedViewingResolution*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MD_Resolution
 !Description: a!NOTE 1This information may be used to determine if the names of the named place should be displayed at a given scale of display, only in the context of basic viewing services intending to show the content of the data set containing names. Even if this information is a valuable one for mapping in general, it is only approximate; cartographic services intending to produce high quality maps should certainly rely on other criteria and techniques for selecting names for the map. 
@@ -964,7 +975,7 @@ NOTE 2 Even if this attribute is "voidable" for practical reasons linked to its 
 a|
 *Attribute: localType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LocalisedCharacterString
 !Definition: !Characterisation of the kind of entity designated by geographical name(s), as defined by the data provider, given in at least in one official language of the European Union.
@@ -978,7 +989,7 @@ NOTE Local types may be defined in additional European languages, either EU offi
 a|
 *Attribute: mostDetailedViewingResolution*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MD_Resolution
 !Definition: !Resolution, expressed as the inverse of an indicative scale or a ground distance, below which the named place and its associated name(s) should no longer be displayed in a basic viewing service.
@@ -994,7 +1005,7 @@ EXAMPLES The following examples use the equivalentScale attribute of MD_Resoluti
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !Name of the named place.
@@ -1004,7 +1015,7 @@ a|
 a|
 *Attribute: relatedSpatialObject*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !Identifier of a spatial object representing the same entity but appearing in other themes of INSPIRE, if any.
@@ -1016,7 +1027,7 @@ a|
 a|
 *Attribute: type*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !NamedPlaceTypeValue
 !Definition: !Characterisation of the kind of entity designated by geographical name(s).
@@ -1039,7 +1050,7 @@ NOTE 2 Even if this attribute may introduce some redundancy with the attribute '
 |===
 |*GeographicalName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Proper noun applied to a real world entity.
 !Stereotypes: !«dataType»
@@ -1048,7 +1059,7 @@ a|
 a|
 *Attribute: language*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Language of the name, given as a three letters code, in accordance with either ISO 639-3 or ISO 639-5.
@@ -1064,7 +1075,7 @@ NOTE 3 Even if this attribute is "voidable" for pragmatic reasons, it is of firs
 a|
 *Attribute: nativeness*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !NativenessValue
 !Definition: !Information enabling to acknowledge if the name is the one that is/was used in the area where the spatial object is situated at the instant when the name is/was in use.
@@ -1075,7 +1086,7 @@ a|
 a|
 *Attribute: nameStatus*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !NameStatusValue
 !Definition: !Qualitative information enabling to discern which credit should be given to the name with respect to its standardisation and/or its topicality.
@@ -1087,7 +1098,7 @@ a|
 a|
 *Attribute: sourceOfName*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Original data source from which the geographical name is taken from and integrated in the data set providing/publishing it. For some named spatial objects it might refer again to the publishing data set if no other information is available.
@@ -1099,7 +1110,7 @@ a|
 a|
 *Attribute: pronunciation*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !PronunciationOfName
 !Definition: !Proper, correct or standard (standard within the linguistic community concerned) pronunciation of the geographical name.
@@ -1111,7 +1122,7 @@ a|
 a|
 *Attribute: spelling*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SpellingOfName
 !Definition: !A proper way of writing the geographical name.
@@ -1124,7 +1135,7 @@ NOTE 2 While a particular GeographicalName should only have one spelling in a gi
 a|
 *Attribute: grammaticalGender*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GrammaticalGenderValue
 !Definition: !Class of nouns reflected in the behaviour of associated words.
@@ -1136,7 +1147,7 @@ a|
 a|
 *Attribute: grammaticalNumber*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GrammaticalNumberValue
 !Definition: !Grammatical category of nouns that expresses count distinctions.
@@ -1153,7 +1164,7 @@ a|
 |===
 |*PronunciationOfName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Proper, correct or standard (standard within the linguistic community concerned) pronunciation of a name.
 !Description: !SOURCE Adapted from [UNGEGN Manual 2006].
@@ -1163,7 +1174,7 @@ a|
 a|
 *Attribute: pronunciationSoundLink*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !URI
 !Definition: !Proper, correct or standard (standard within the linguistic community concerned) pronunciation of a name, expressed by a link to any sound file.
@@ -1175,7 +1186,7 @@ a|
 a|
 *Attribute: pronunciationIPA*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Proper, correct or standard (standard within the linguistic community concerned) pronunciation of a name, expressed in International Phonetic Alphabet (IPA).
@@ -1187,7 +1198,7 @@ a|
 a|
 *Constraint: pronunciationSoundLink or pronunciationIPA not empty*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !At least one of the two attributes pronunciationSoundLink and pronunciationIPA shall not be void.
 !OCL: !inv: self.pronounciationIPA -> notEmpty() or self.pronounciationSoundLink -> notEmpty()
@@ -1201,7 +1212,7 @@ a|
 |===
 |*SpellingOfName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Proper way of writing a name.
 !Description: !SOURCE Adapted from [UNGEGN Manual 2006]. 
@@ -1213,7 +1224,7 @@ NOTE Proper spelling means the writing of a name with the correct capitalisation
 a|
 *Attribute: text*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Way the name is written.
@@ -1223,7 +1234,7 @@ a|
 a|
 *Attribute: script*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Set of graphic symbols (for example an alphabet) employed in writing the name, expressed using the four letters codes defined in ISO 15924, where applicable.
@@ -1243,7 +1254,7 @@ NOTE 3 This attribute is of first importance in the multi-scriptual context of E
 a|
 *Attribute: transliterationScheme*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Method used for the names conversion between different scripts.
@@ -1264,7 +1275,7 @@ NOTE 1 This attribute should be filled for any transliterated spellings. If the 
 |===
 |*GrammaticalGenderValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The grammatical gender of a geographical name.
 !Extensibility: !none
@@ -1280,7 +1291,7 @@ a|
 |===
 |*GrammaticalNumberValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The grammatical number of a geographical name.
 !Extensibility: !none
@@ -1296,7 +1307,7 @@ a|
 |===
 |*NamedPlaceTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The type of a named place.
 !Extensibility: !none
@@ -1312,7 +1323,7 @@ a|
 |===
 |*NameStatusValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The status of a geographical name, that is the information enabling to discern which credit should be given to the name with respect to its standardisation and/or its topicality.
 !Description: !NOTE The precise definition of the values 'Official', 'Standardised', 'Historical' and 'Other' can only be decided by Member States according to their legislation and practice.
@@ -1329,7 +1340,7 @@ a|
 |===
 |*NativenessValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The nativeness of a geographical name.
 !Extensibility: !none
@@ -1349,7 +1360,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1363,7 +1374,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1377,7 +1388,7 @@ a|
 |===
 |*GM_Object (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometry root
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1391,7 +1402,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -1411,7 +1422,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*LocalisedCharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Cultural and linguistic adapdability
 !Reference: !Geographic information -- Metadata -- XML schema implementation [ISO/TS 19139:2007]
@@ -1425,7 +1436,7 @@ a|
 |===
 |*MD_Resolution*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Identification information
 !Reference: !Geographic information -- Metadata [ISO 19115:2003/Cor 1:2006]
@@ -1439,7 +1450,7 @@ a|
 |===
 |*URI*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !basicTypes
 !Reference: !Geographic information -- Geography Markup Language (GML) [ISO 19136:2007]
@@ -3313,7 +3324,7 @@ a|
 [width="100%",cols="100%"]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The grammatical number of a geographical name.
 !Extensibility: !none
@@ -3328,7 +3339,7 @@ a|
 [width="100%",cols="100%"]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The status of a geographical name, that is the information enabling to discern which credit should be given to the name with respect to its standardisation and/or its topicality.
 !Description: !NOTE The precise definition of the values 'Official', 'Standardised', 'Historical' and 'Other' can only be decided by Member States according to their legislation and practice.
@@ -3359,7 +3370,7 @@ a|
 [width="100%",cols="100%"]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The nativeness of a geographical name.
 !Extensibility: !none

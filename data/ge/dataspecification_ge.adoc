@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.II.4 Data Specification on Geology – Technical Guidelines
-:revdate: 2024-01-31
+:revdate: 2024-07-31
 :keywords: INSPIRE Data Specification for the spatial data theme Geology
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Geology
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
 :lang: en
 
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/ge[D2.8.II.4_v3.2.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/ge[D2.8.II.4_v3.3.0]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -1055,7 +1055,7 @@ MappedFeature can be seen as a container for geometry whereas GeologicFeature is
 
 *Feature catalogue metadata*
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema Geology
 |Version number |3.0
@@ -1107,7 +1107,7 @@ MappedFeature can be seen as a container for geometry whereas GeologicFeature is
 |===
 |*AnthropogenicGeomorphologicFeature*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeomorphologicFeature
 !Definition: !A geomorphologic feature (ie, landform) which has been created by human activity.
@@ -1118,7 +1118,7 @@ a|
 a|
 *Attribute: anthropogenicGeomorphologicFeatureType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !AnthropogenicGeomorphologicFeatureTypeValue
 !Definition: !Terms describing the type of a geomorphologic feature.
@@ -1133,7 +1133,7 @@ a|
 |===
 |*Borehole*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A borehole is the generalized term for any narrow shaft drilled in the ground.
 !Stereotypes: !«featureType»
@@ -1142,7 +1142,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -1152,7 +1152,7 @@ a|
 a|
 *Attribute: downholeGeometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !The downhole geometry of the borehole
 !Value type: !GM_Curve
@@ -1163,7 +1163,7 @@ a|
 a|
 *Attribute: boreholeLength*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Quantity
 !Definition: !The distance along a borehole.
@@ -1175,7 +1175,7 @@ a|
 a|
 *Attribute: elevation*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DirectPosition
 !Definition: !The vertical height above datum of the borehole collar.
@@ -1187,7 +1187,7 @@ a|
 a|
 *Attribute: location*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Point
 !Definition: !The location of the borehole collar.
@@ -1197,7 +1197,7 @@ a|
 a|
 *Attribute: purpose*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !BoreholePurposeValue
 !Definition: !The purpose for which the borehole was drilled.
@@ -1209,7 +1209,7 @@ a|
 a|
 *Association role: logElement*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MappedInterval
 !Definition: !1-D MappedFeature instances that are logged (interpreted) intervals within a borehole.
@@ -1225,7 +1225,7 @@ a|
 |===
 |*Fold*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeologicStructure
 !Definition: !One or more systematically curved layers, surfaces, or lines in a rock body.
@@ -1236,7 +1236,7 @@ a|
 a|
 *Attribute: profileType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !FoldProfileTypeValue
 !Definition: !The type of the fold.
@@ -1254,7 +1254,7 @@ EXAMPLE: antiform, synform, anticline, syncline, etc.
 |===
 |*GeologicCollection*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A collection of geological or geophysical objects.
 !Description: !Geologic objects are commonly grouped into collections such as geological maps, thematic maps, or the required input to a geological model.
@@ -1264,7 +1264,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -1274,7 +1274,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !The name of the collection.
@@ -1284,7 +1284,7 @@ a|
 a|
 *Attribute: collectionType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CollectionTypeValue
 !Definition: !The type of the collection.
@@ -1296,7 +1296,7 @@ EXAMPLE: geological map, thematic map etc.
 a|
 *Attribute: reference*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DocumentCitation
 !Definition: !A reference for the collection.
@@ -1307,7 +1307,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1318,7 +1318,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1329,7 +1329,7 @@ a|
 a|
 *Association role: geophObjectSet*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeophObjectSet
 !Definition: !A GeophObjectSet member of a Geologic Collection.
@@ -1340,7 +1340,7 @@ a|
 a|
 *Association role: geophObjectMember*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeophObject
 !Definition: !A GeophObject member of a Geologic Collection.
@@ -1351,7 +1351,7 @@ a|
 a|
 *Association role: boreholeMember*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Borehole
 !Definition: !A Borehole member of a Geologic Collection.
@@ -1363,7 +1363,7 @@ a|
 a|
 *Association role: mapMember*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MappedFeature
 !Definition: !A Mapped Feature member of a Geologic Collection.
@@ -1380,7 +1380,7 @@ a|
 |===
 |*GeologicEvent*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !An identifiable event during which one or more geological processes act to modify geological entities.
 !Description: !A GeologicEvent should have a specified geologic age and process, and may have a specified environment. An example might be a cratonic uplift event during which erosion, sedimentation, and volcanism all take place. A GeologicEvent age can represent an instant in time or an interval of time.
@@ -1390,7 +1390,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !The name of the Geologic Event.
@@ -1402,7 +1402,7 @@ a|
 a|
 *Attribute: eventEnvironment*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !EventEnvironmentValue
 !Definition: !The physical setting within which the geologic event takes place.
@@ -1414,7 +1414,7 @@ a|
 a|
 *Attribute: eventProcess*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !EventProcessValue
 !Definition: !The process or processes that occurred during the geologic event.
@@ -1426,7 +1426,7 @@ a|
 a|
 *Attribute: olderNamedAge*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeochronologicEraValue
 !Definition: !Older boundary of the age of the event.
@@ -1438,7 +1438,7 @@ a|
 a|
 *Attribute: youngerNamedAge*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeochronologicEraValue
 !Definition: !Younger boundary of the age of the event.
@@ -1455,7 +1455,7 @@ a|
 |===
 |*GeologicFeature (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A conceptual geological feature that is hypothesized to exist coherently in the world.
 !Description: !This corresponds with a "legend item" from a traditional geologic map. While the bounding coordinates of a Geologic Feature may be described, its shape is not. 
@@ -1466,7 +1466,7 @@ The implemented Geologic Feature instance acts as the "description package"
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -1476,7 +1476,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !The name of the geologic feature.
@@ -1489,7 +1489,7 @@ Not all GeologicFeatures will have names, for example minor faults.
 a|
 *Association role: themeClass*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ThematicClass
 !Definition: !A thematic classification of the geologic feature.
@@ -1501,7 +1501,7 @@ a|
 a|
 *Association role: geologicHistory*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeologicEvent
 !Definition: !An association that relates one or more geologic events to a geologic feature to describe their age or geologic history.
@@ -1517,7 +1517,7 @@ a|
 |===
 |*GeologicStructure (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeologicFeature
 !Definition: !A configuration of matter in the Earth based on describable inhomogeneity, pattern, or fracture in an earth material.
@@ -1533,7 +1533,7 @@ a|
 |===
 |*GeologicUnit*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeologicFeature
 !Definition: !A volume of rock with distinct characteristics.
@@ -1545,7 +1545,7 @@ Spatial properties are only available through association with a MappedFeature.
 a|
 *Attribute: geologicUnitType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeologicUnitTypeValue
 !Definition: !The type of geological the unit.
@@ -1556,7 +1556,7 @@ a|
 a|
 *Association role: composition*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CompositionPart
 !Definition: !Describes the composition of the geologic unit.
@@ -1572,7 +1572,7 @@ a|
 |===
 |*GeomorphologicFeature (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeologicFeature
 !Definition: !An abstract spatial object type describing the shape and nature of the Earth's land surface (ie, a landform).
@@ -1588,7 +1588,7 @@ a|
 |===
 |*MappedFeature*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A spatial representation of a GeologicFeature.
 !Description: !A MappedFeature is part of a geological interpretation. 
@@ -1599,7 +1599,7 @@ It provides a link between a notional feature (description package) and one spat
 a|
 *Attribute: shape*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Object
 !Definition: !The geometry of the mapped feature.
@@ -1609,7 +1609,7 @@ a|
 a|
 *Attribute: mappingFrame*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MappingFrameValue
 !Definition: !The surface on which the mapped feature is projected.
@@ -1620,7 +1620,7 @@ a|
 a|
 *Association role: specification*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeologicFeature
 !Definition: !A description association that links a mapped feature to a notional geologic feature.
@@ -1636,7 +1636,7 @@ a|
 |===
 |*MappedInterval*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !MappedFeature
 !Definition: !A special kind of mapped feature whose shape is a 1-D interval and which uses the SRS of the containing borehole.
@@ -1651,7 +1651,7 @@ a|
 |===
 |*NaturalGeomorphologicFeature*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeomorphologicFeature
 !Definition: !A geomorphologic feature (ie, landform) that has been created by natural Earth processes.
@@ -1662,7 +1662,7 @@ a|
 a|
 *Attribute: naturalGeomorphologicFeatureType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !NaturalGeomorphologicFeatureTypeValue
 !Definition: !The type of the natural geomorphologic feature.
@@ -1672,7 +1672,7 @@ a|
 a|
 *Attribute: activity*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeomorphologicActivityValue
 !Definition: !The level of activity of the natural geomorphologic feature.
@@ -1688,7 +1688,7 @@ a|
 |===
 |*ShearDisplacementStructure*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeologicStructure
 !Definition: !Brittle to ductile style structures along which displacement has occurred.
@@ -1699,7 +1699,7 @@ a|
 a|
 *Attribute: faultType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !FaultTypeValue
 !Definition: !Refers to a vocabulary of terms describing the type of shear displacement structure.
@@ -1717,7 +1717,7 @@ a|
 |===
 |*CompositionPart*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The composition of a geologic unit in terms of lithological constituents.
 !Stereotypes: !«dataType»
@@ -1726,7 +1726,7 @@ a|
 a|
 *Attribute: material*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LithologyValue
 !Definition: !The material that comprises part or all of the geologic unit.
@@ -1737,7 +1737,7 @@ a|
 a|
 *Attribute: proportion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !QuantityRange
 !Definition: !Quantity that specifies the fraction of the geologic unit composed of the material.
@@ -1748,7 +1748,7 @@ a|
 a|
 *Attribute: role*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CompositionPartRoleValue
 !Definition: !The relationship of the composition part to the geologic unit composition as a whole.
@@ -1764,7 +1764,7 @@ a|
 |===
 |*ThematicClass*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !A generic thematic classifier to enable the reclassification of Geologic Features with user defined classes appropriate to thematic maps.
 !Description: !This datatype allows Geologic Features to be classified against thematic classes. This provides a generic means of delivering geological thematic map data.
@@ -1774,7 +1774,7 @@ a|
 a|
 *Attribute: themeClassification*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ThematicClassificationValue
 !Definition: !The used classification.
@@ -1784,7 +1784,7 @@ a|
 a|
 *Attribute: themeClass*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ThematicClassValue
 !Definition: !The value of the thematic class.
@@ -1802,7 +1802,7 @@ a|
 |===
 |*AnthropogenicGeomorphologicFeatureTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The types of anthropogenic geomorphologic feature.
 !Extensibility: !open
@@ -1818,7 +1818,7 @@ a|
 |===
 |*BoreholePurposeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Purposes for which a borehole was drilled.
 !Description: !EXAMPLE: mineral exploration, water pumping, site evaluation, stratigraphic research, etc.
@@ -1835,7 +1835,7 @@ a|
 |===
 |*CollectionTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Types of collections of geological and geophysical objects.
 !Description: !EXAMPLE: geological map, thematic map etc.
@@ -1852,7 +1852,7 @@ a|
 |===
 |*CompositionPartRoleValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Roles that a compositional part plays in a geologic unit.
 !Extensibility: !open
@@ -1868,7 +1868,7 @@ a|
 |===
 |*EventEnvironmentValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms for the geologic environments within which geologic events take place.
 !Extensibility: !open
@@ -1884,7 +1884,7 @@ a|
 |===
 |*EventProcessValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms specifying the process or processes that occurred during an event.
 !Description: !EXAMPLE: deposition, extrusion, intrusion, cooling.
@@ -1901,7 +1901,7 @@ a|
 |===
 |*FaultTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms describing the type of shear displacement structure.
 !Description: !EXAMPLE: thrust fault, normal fault, wrench fault.
@@ -1918,7 +1918,7 @@ a|
 |===
 |*FoldProfileTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms specifying the type of fold.
 !Description: !Folds are typed according to the concave/convex geometry of the fold relative to the earth surface, and the relationship to younging direction in folded strata if known. 
@@ -1936,7 +1936,7 @@ EXAMPLE: antiform, synform, anticline, syncline, etc.
 |===
 |*GeochronologicEraValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms specifying recognised geological time units.
 !Extensibility: !open
@@ -1952,7 +1952,7 @@ a|
 |===
 |*GeologicUnitTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms describing the type of geologic unit.
 !Description: !EXAMPLE: GeologicUnit, AllostratigraphicUnit etc
@@ -1969,7 +1969,7 @@ a|
 |===
 |*GeomorphologicActivityValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms indicating the level of activity of a geomorphologic feature.
 !Extensibility: !open
@@ -1985,7 +1985,7 @@ a|
 |===
 |*LithologyValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms describing the lithology.
 !Description: !EXAMPLE: granite, sandstone, schist.
@@ -2002,7 +2002,7 @@ a|
 |===
 |*MappingFrameValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms indicating the surface on which the MappedFeature is projected.
 !Extensibility: !open
@@ -2018,7 +2018,7 @@ a|
 |===
 |*NaturalGeomorphologicFeatureTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms describing the type of natural geomorphologic feature.
 !Extensibility: !open
@@ -2034,7 +2034,7 @@ a|
 |===
 |*ThematicClassificationValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !List of thematic classifications for geologic features.
 !Extensibility: !any
@@ -2050,7 +2050,7 @@ a|
 |===
 |*ThematicClassValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Values for thematic classification of geologic features.
 !Extensibility: !any
@@ -2070,7 +2070,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2084,7 +2084,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2098,7 +2098,7 @@ a|
 |===
 |*DirectPosition*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Coordinate geometry
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -2112,7 +2112,7 @@ a|
 |===
 |*DocumentCitation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types 2
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2127,7 +2127,7 @@ a|
 |===
 |*GM_Curve*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -2141,7 +2141,7 @@ a|
 |===
 |*GM_Object (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometry root
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -2155,7 +2155,7 @@ a|
 |===
 |*GM_Point*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -2169,7 +2169,7 @@ a|
 |===
 |*GeophObject (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geophysics
 !Reference: !INSPIRE Data specification on Geology [DS-D2.8.II.4]
@@ -2185,7 +2185,7 @@ a|
 |===
 |*GeophObjectSet*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geophysics
 !Reference: !INSPIRE Data specification on Geology [DS-D2.8.II.4]
@@ -2201,7 +2201,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2221,7 +2221,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*Quantity*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !valueObjects
 !Reference: !Geographic information -- Geography Markup Language (GML) [ISO 19136:2007]
@@ -2235,7 +2235,7 @@ a|
 |===
 |*QuantityRange*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Simple Components
 !Reference: !Robin, Alexandre (ed.), OGC®SWE Common Data Model Encoding Standard, version 2.0.0, Open Geospatial Consortium, 2011 [OGC 08-094r1]
@@ -2353,7 +2353,7 @@ Based on the different assumptions established in Member States the delineation 
 
 *Feature catalogue metadata*
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema Hydrogeology
 |Version number |3.0
@@ -2396,7 +2396,7 @@ Based on the different assumptions established in Member States the delineation 
 |===
 |*ActiveWell*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Active Well
 !Subtype of: !HydrogeologicalObjectManMade
@@ -2409,7 +2409,7 @@ NOTE ActiveWell by extracting, recharging or dewatering influences and changes t
 a|
 *Attribute: activityType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Active Well Type
 !Value type: !ActiveWellTypeValue
@@ -2421,7 +2421,7 @@ a|
 a|
 *Association role: environmentalMonitoringFacility*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Environmental Monitoring Facility
 !Value type: !EnvironmentalMonitoringFacility
@@ -2434,7 +2434,7 @@ a|
 a|
 *Association role: borehole*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Borehole
 !Value type: !Borehole
@@ -2446,7 +2446,7 @@ a|
 a|
 *Association role: groundWaterBody*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Groundwater Body
 !Value type: !GroundWaterBody
@@ -2463,7 +2463,7 @@ a|
 |===
 |*Aquiclude*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquiclude
 !Subtype of: !HydrogeologicalUnit
@@ -2480,7 +2480,7 @@ a|
 |===
 |*Aquifer*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer
 !Subtype of: !HydrogeologicalUnit
@@ -2492,7 +2492,7 @@ a|
 a|
 *Attribute: aquiferType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Type of Aquifer
 !Value type: !AquiferTypeValue
@@ -2504,7 +2504,7 @@ a|
 a|
 *Attribute: mediaType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Type of Media
 !Value type: !AquiferMediaTypeValue
@@ -2515,7 +2515,7 @@ a|
 a|
 *Attribute: isExploited*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Is Exploited
 !Value type: !Boolean
@@ -2527,7 +2527,7 @@ a|
 a|
 *Attribute: isMainInSystem*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Is Main In System
 !Value type: !Boolean
@@ -2539,7 +2539,7 @@ a|
 a|
 *Attribute: vulnerabilityToPollution*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vulnerability To Pollution
 !Value type: !QuantityValue
@@ -2552,7 +2552,7 @@ a|
 a|
 *Attribute: permeabilityCoefficient*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Permeability Coefficient
 !Value type: !QuantityValue
@@ -2566,7 +2566,7 @@ NOTE Because of their high porosity and permeability, sand and gravel have highe
 a|
 *Attribute: storativityCoefficient*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Storativity Coefficient
 !Value type: !QuantityValue
@@ -2578,7 +2578,7 @@ a|
 a|
 *Attribute: hydroGeochemicalRockType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydrogeochemical Type of Rock
 !Value type: !HydroGeochemicalRockTypeValue
@@ -2591,7 +2591,7 @@ a|
 a|
 *Association role: aquitard*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquitard
 !Value type: !Aquitard
@@ -2603,7 +2603,7 @@ a|
 a|
 *Association role: hydrogeologicalObject*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydrogeological Object
 !Value type: !HydrogeologicalObject
@@ -2615,7 +2615,7 @@ a|
 a|
 *Association role: aquiferSystem*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer System
 !Value type: !AquiferSystem
@@ -2632,7 +2632,7 @@ a|
 |===
 |*AquiferSystem*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer System
 !Subtype of: !HydrogeologicalUnit
@@ -2645,7 +2645,7 @@ NOTE The Aquifer System components and their attributes (including geometry) are
 a|
 *Attribute: isLayered*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Is Layered
 !Value type: !Boolean
@@ -2657,7 +2657,7 @@ a|
 a|
 *Association role: aquitard*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquitard
 !Value type: !Aquitard
@@ -2669,7 +2669,7 @@ a|
 a|
 *Association role: aquiclude*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquiclude
 !Value type: !Aquiclude
@@ -2682,7 +2682,7 @@ a|
 a|
 *Association role: aquifer*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer
 !Value type: !Aquifer
@@ -2699,7 +2699,7 @@ a|
 |===
 |*Aquitard*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquitard
 !Subtype of: !HydrogeologicalUnit
@@ -2711,7 +2711,7 @@ a|
 a|
 *Attribute: approximatePermeabilityCoefficient*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Approximate Permeability Coefficient
 !Value type: !QuantityValue
@@ -2725,7 +2725,7 @@ NOTE Because of their high porosity and permeability, sand and gravel have highe
 a|
 *Attribute: approximateStorativityCoefficient*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Approximate Storativity Coefficient
 !Value type: !QuantityValue
@@ -2737,7 +2737,7 @@ a|
 a|
 *Association role: aquiferSystem*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer System
 !Value type: !AquiferSystem
@@ -2749,7 +2749,7 @@ a|
 a|
 *Association role: aquifer*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer
 !Value type: !Aquifer
@@ -2766,7 +2766,7 @@ a|
 |===
 |*GroundWaterBody*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Groundwater Body
 !Definition: !A distinct volume of groundwater within an aquifer or system of aquifers, which is hydraulically isolated from nearby groundwater bodies.
@@ -2777,7 +2777,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !INSPIRE Identifier
 !Value type: !Identifier
@@ -2789,7 +2789,7 @@ a|
 a|
 *Attribute: approximateHorizontalExtend*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Approximate Horizontal Extend
 !Value type: !GM_Surface
@@ -2801,7 +2801,7 @@ a|
 a|
 *Attribute: conditionOfGroundWaterBody*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Condition of Groundwater Body
 !Value type: !ConditionOfGroundwaterValue
@@ -2812,7 +2812,7 @@ a|
 a|
 *Attribute: mineralization*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Water Type
 !Value type: !WaterSalinityValue
@@ -2824,7 +2824,7 @@ a|
 a|
 *Attribute: piezometricState*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Piezometric State
 !Value type: !PiezometricState
@@ -2836,7 +2836,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Begin Life Span Version
 !Value type: !DateTime
@@ -2848,7 +2848,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !End Life Span Version
 !Value type: !DateTime
@@ -2860,7 +2860,7 @@ a|
 a|
 *Association role: activeWell*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Active Well
 !Value type: !ActiveWell
@@ -2873,7 +2873,7 @@ a|
 a|
 *Association role: aquiferSystem*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer System
 !Value type: !AquiferSystem
@@ -2885,7 +2885,7 @@ a|
 a|
 *Association role: observationWell*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !EnvironmentalMonitoringFacility
 !Definition: !The observation wells which monitor the GroundWaterBody
@@ -2896,7 +2896,7 @@ a|
 a|
 *Association role: hydrogeologicalObjectNatural*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydrogeological Object Natural
 !Value type: !HydrogeologicalObjectNatural
@@ -2913,7 +2913,7 @@ a|
 |===
 |*HydrogeologicalObject (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydrogeological Object
 !Definition: !An abstract class for man-made facilities or natural features that have an interaction with the hydrogeological system.
@@ -2924,7 +2924,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !INSPIRE Identifier
 !Value type: !Identifier
@@ -2936,7 +2936,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Geometry
 !Value type: !GM_Primitive
@@ -2947,7 +2947,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !PT_FreeText
 !Definition: !The name or code of the HydrogeologicalObject.
@@ -2958,7 +2958,7 @@ a|
 a|
 *Attribute: description*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !PT_FreeText
 !Definition: !The description of the HydrogeologicalObject.
@@ -2969,7 +2969,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Begin Life Span Version
 !Value type: !DateTime
@@ -2981,7 +2981,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !End Life Span Version
 !Value type: !DateTime
@@ -2993,7 +2993,7 @@ a|
 a|
 *Association role: aquifer*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer
 !Value type: !Aquifer
@@ -3010,7 +3010,7 @@ a|
 |===
 |*HydrogeologicalObjectManMade (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydrogeological Object Man-made
 !Subtype of: !HydrogeologicalObject
@@ -3022,7 +3022,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Valid From
 !Value type: !DateTime
@@ -3035,7 +3035,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Valid To
 !Value type: !DateTime
@@ -3048,7 +3048,7 @@ a|
 a|
 *Attribute: statusCode*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Status Code
 !Value type: !StatusCodeTypeValue
@@ -3065,7 +3065,7 @@ a|
 |===
 |*HydrogeologicalObjectNatural*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydrogeological Object Natural
 !Subtype of: !HydrogeologicalObject
@@ -3077,7 +3077,7 @@ a|
 a|
 *Attribute: naturalObjectType*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Natural Object Type
 !Value type: !NaturalObjectTypeValue
@@ -3088,7 +3088,7 @@ a|
 a|
 *Attribute: waterPersistence*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Water Persistence
 !Value type: !WaterPersistenceValue
@@ -3100,7 +3100,7 @@ a|
 a|
 *Attribute: approximateQuantityOfFlow*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Approximate Quantity of Flow
 !Value type: !QuantityValue
@@ -3113,7 +3113,7 @@ a|
 a|
 *Association role: groundWaterBody*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Groundwater Body
 !Value type: !GroundWaterBody
@@ -3130,7 +3130,7 @@ a|
 |===
 |*HydrogeologicalUnit (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydrogeological Unit
 !Subtype of: !GeologicUnit
@@ -3141,7 +3141,7 @@ a|
 a|
 *Attribute: description*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !PT_FreeText
 !Definition: !The description of the HydrogeologicalUnit
@@ -3152,7 +3152,7 @@ a|
 a|
 *Attribute: approximateDepth*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Approximate Depth
 !Value type: !QuantityValue
@@ -3164,7 +3164,7 @@ a|
 a|
 *Attribute: approximateThickness*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Approximate Thickness
 !Value type: !QuantityValue
@@ -3176,7 +3176,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Begin Life Span Version
 !Value type: !DateTime
@@ -3188,7 +3188,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !End Life Span Version
 !Value type: !DateTime
@@ -3200,7 +3200,7 @@ a|
 a|
 *Association role: geologicStructure*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Geologic Structure
 !Value type: !GeologicStructure
@@ -3220,7 +3220,7 @@ a|
 |===
 |*HydrogeologicalSurface*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydrogeological Surface
 !Definition: !A surface that represents the interpolated groundwater table, or other surface, for a local or regional area.
@@ -3231,7 +3231,7 @@ a|
 a|
 *Attribute: surfaceRectifiedGrid*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Surface as Rectified Grid
 !Value type: !RectifiedGridCoverage
@@ -3244,7 +3244,7 @@ a|
 a|
 *Attribute: surfaceReferencableGrid*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Surface as Referenceable Grid.
 !Value type: !ReferenceableGridCoverage
@@ -3257,7 +3257,7 @@ a|
 a|
 *Attribute: surfacePointCollection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Surface Point Collection
 !Value type: !PointObservationCollection
@@ -3274,7 +3274,7 @@ a|
 |===
 |*PiezometricState*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Piezometric State
 !Definition: !The piezometric state of a GroundWaterBody
@@ -3285,7 +3285,7 @@ a|
 a|
 *Attribute: observationTime*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Observation Time
 !Value type: !DateTime
@@ -3296,7 +3296,7 @@ a|
 a|
 *Attribute: piezometricSurface*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Piezometric Surface
 !Value type: !HydrogeologicalSurface
@@ -3313,7 +3313,7 @@ a|
 |===
 |*QuantityValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !QuantityValue
 !Definition: !Data container with a single quantity value or a range of quantity values .
@@ -3323,7 +3323,7 @@ a|
 a|
 *Attribute: singleQuantity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Single Quantity
 !Value type: !Quantity
@@ -3334,7 +3334,7 @@ a|
 a|
 *Attribute: quantityInterval*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Quantity Interval
 !Value type: !QuantityRange
@@ -3352,7 +3352,7 @@ a|
 |===
 |*ActiveWellTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Active Well Type
 !Definition: !Types of active wells.
@@ -3369,7 +3369,7 @@ a|
 |===
 |*AquiferMediaTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer Media Type
 !Definition: !Values describing the characteristics of the aquifer medium.
@@ -3386,7 +3386,7 @@ a|
 |===
 |*AquiferTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer Type
 !Definition: !Types of aquifers.
@@ -3403,7 +3403,7 @@ a|
 |===
 |*ConditionOfGroundwaterValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Condition Of Groundwater
 !Definition: !Values indicating the approximate degree of change which has taken place on the natural state of groundwater.
@@ -3421,7 +3421,7 @@ a|
 |===
 |*HydroGeochemicalRockTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydrogeochemical Rock Value
 !Definition: !Values describing the hydrogeochemical condition of the groundwater environment.
@@ -3438,7 +3438,7 @@ a|
 |===
 |*NaturalObjectTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Natural Object Type
 !Definition: !Types of natural hydrogeological objects.
@@ -3455,7 +3455,7 @@ a|
 |===
 |*StatusCodeTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Status Code Type
 !Definition: !Values describing the statuses of man-made hydrogeological objects.
@@ -3472,7 +3472,7 @@ a|
 |===
 |*WaterPersistenceValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Water Persistence Value
 !Definition: !Types of hydrological persistence of water.
@@ -3489,7 +3489,7 @@ a|
 |===
 |*WaterSalinityValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Water Salinity
 !Definition: !A code list indicating salinity classes in water.
@@ -3512,7 +3512,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*Boolean*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Truth
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -3526,7 +3526,7 @@ a|
 |===
 |*Borehole*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geology
 !Reference: !INSPIRE Data specification on Geology [DS-D2.8.II.4]
@@ -3541,7 +3541,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -3555,7 +3555,7 @@ a|
 |===
 |*EnvironmentalMonitoringFacility*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !EnvironmentalMonitoringFacilities
 !Reference: !INSPIRE Data specification on Environmental Monitoring Facilities [DS-D2.8.III.7]
@@ -3574,7 +3574,7 @@ The methodology used in the laboratory should be provided with observational dat
 |===
 |*GM_Primitive (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -3588,7 +3588,7 @@ a|
 |===
 |*GM_Surface*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -3602,7 +3602,7 @@ a|
 |===
 |*GeologicStructure (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geology
 !Reference: !INSPIRE Data specification on Geology [DS-D2.8.II.4]
@@ -3618,7 +3618,7 @@ a|
 |===
 |*GeologicUnit*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geology
 !Reference: !INSPIRE Data specification on Geology [DS-D2.8.II.4]
@@ -3635,7 +3635,7 @@ Spatial properties are only available through association with a MappedFeature.
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -3655,7 +3655,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*PT_FreeText*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Cultural and linguistic adapdability
 !Reference: !Geographic information -- Metadata -- XML schema implementation [ISO/TS 19139:2007]
@@ -3669,7 +3669,7 @@ a|
 |===
 |*PointObservationCollection*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Point Observations
 !Reference: !Guidelines for the use of Observations & Measurements and Sensor Web Enablement-related standards in INSPIRE [DS-D2.9]
@@ -3685,7 +3685,7 @@ a|
 |===
 |*Quantity*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !valueObjects
 !Reference: !Geographic information -- Geography Markup Language (GML) [ISO 19136:2007]
@@ -3699,7 +3699,7 @@ a|
 |===
 |*QuantityRange*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Simple Components
 !Reference: !Robin, Alexandre (ed.), OGC®SWE Common Data Model Encoding Standard, version 2.0.0, Open Geospatial Consortium, 2011 [OGC 08-094r1]
@@ -3713,7 +3713,7 @@ a|
 |===
 |*RectifiedGridCoverage*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Coverages (Domain and Range)
 !Reference: !INSPIRE Data Specifications – Base Models – Coverage Types, version 1.0 [DS-D2.10.2]
@@ -3731,7 +3731,7 @@ NOTE This type can be used for both discrete and continuous coverages.
 |===
 |*ReferenceableGridCoverage*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Coverages (Domain and Range)
 !Reference: !INSPIRE Data Specifications – Base Models – Coverage Types, version 1.0 [DS-D2.10.2]
@@ -3821,7 +3821,7 @@ Using geophysical features object referencing is often required. (eg. largerWork
 
 *Feature catalogue metadata*
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema Geophysics
 |Version number |3.0
@@ -3857,7 +3857,7 @@ Using geophysical features object referencing is often required. (eg. largerWork
 |===
 |*Campaign*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophObjectSet
 !Definition: !Geophysical activity extending over a limited time range and limited area for producing similar geophysical measurements, processing results or models.
@@ -3868,7 +3868,7 @@ a|
 a|
 *Attribute: campaignType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CampaignTypeValue
 !Definition: !Type of activity to produce data
@@ -3879,7 +3879,7 @@ a|
 a|
 *Attribute: surveyType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SurveyTypeValue
 !Definition: !Type of geophysical survey
@@ -3890,7 +3890,7 @@ a|
 a|
 *Attribute: client*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !RelatedParty
 !Definition: !Party for which data was created.
@@ -3901,7 +3901,7 @@ a|
 a|
 *Attribute: contractor*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !RelatedParty
 !Definition: !Party by which data was created
@@ -3913,7 +3913,7 @@ a|
 a|
 *Constraint: shape must be GM_Surface*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !The shape attribute shall be of type GM_Surface
 !OCL: !inv: shape.oclIsKindOf(GM_Surface)
@@ -3927,7 +3927,7 @@ a|
 |===
 |*GeophMeasurement (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophObject
 !Definition: !Generic spatial object type for geophysical measurements.
@@ -3938,7 +3938,7 @@ a|
 a|
 *Attribute: relatedModel*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !Identifier of the geophysical model that was created from the measurement
@@ -3950,7 +3950,7 @@ a|
 a|
 *Attribute: platformType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !PlatformTypeValue
 !Definition: !Platform from which the measurement was carried out
@@ -3961,7 +3961,7 @@ a|
 a|
 *Attribute: relatedNetwork*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !NetworkNameValue
 !Definition: !Name of a national or international observation network to which the facility belongs, or to which measured data is reported.
@@ -3978,7 +3978,7 @@ a|
 |===
 |*GeophObject (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !SF_SpatialSamplingFeature
 !Definition: !A generic class for geophysical objects.
@@ -3989,7 +3989,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the measurement.
@@ -4000,7 +4000,7 @@ a|
 a|
 *Attribute: citation*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DocumentCitation
 !Definition: !Citation of geophysical documentation
@@ -4011,7 +4011,7 @@ a|
 a|
 *Attribute: projectedGeometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Object
 !Definition: !2D projection of the feature to the ground surface (as a representative point, curve or bounding polygon) to be used by an INSPIRE view service to display the spatial object location on a map.
@@ -4022,7 +4022,7 @@ a|
 a|
 *Attribute: verticalExtent*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !EX_VerticalExtent
 !Definition: !Vertical extent of the range of interest.
@@ -4034,7 +4034,7 @@ a|
 a|
 *Attribute: distributionInfo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MD_Distributor
 !Definition: !Distribution metadata
@@ -4046,7 +4046,7 @@ a|
 a|
 *Attribute: largerWork*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !Identifier of a larger work dataset, typically a campaign or project
@@ -4058,7 +4058,7 @@ a|
 a|
 *Constraint: projectedGeometry must be GM_Point, GM_Curve or GM_Surface*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !The projectedGeometry shall be of type GM_Point, GM_Curve or GM_Surface
 !OCL: !inv: projectedGeometry.oclIsKindOf(GM_Point) or projectedGeometry.oclIsKindOf(GM_Curve) or projectedGeometry.oclIsKindOf(GM_Surface)
@@ -4072,7 +4072,7 @@ a|
 |===
 |*GeophObjectSet*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !SF_SpatialSamplingFeature
 !Definition: !Generic class for collections of geophysical objects
@@ -4083,7 +4083,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -4094,7 +4094,7 @@ a|
 a|
 *Attribute: citation*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DocumentCitation
 !Definition: !Citation of geophysical documentation
@@ -4105,7 +4105,7 @@ a|
 a|
 *Attribute: verticalExtent*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !EX_VerticalExtent
 !Definition: !Vertical extent of the range of interest.
@@ -4117,7 +4117,7 @@ a|
 a|
 *Attribute: distributionInfo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !MD_Distributor
 !Definition: !Distribution metadata
@@ -4129,7 +4129,7 @@ a|
 a|
 *Attribute: projectedGeometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Object
 !Definition: !2D projection of the feature to the ground surface (as a representative point, curve or bounding polygon) to be used by an INSPIRE view service to display the spatial object on a map..
@@ -4140,7 +4140,7 @@ a|
 a|
 *Attribute: largerWork*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !Identifier of a larger work dataset
@@ -4152,7 +4152,7 @@ a|
 a|
 *Constraint: projectedGeometry must be GM_Point, GM_Curve or GM_Surface*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !The projectedGeometry shall be of type GM_Point, GM_Curve or GM_Surface
 !OCL: !inv: projectedGeometry.oclIsKindOf(GM_Point) or projectedGeometry.oclIsKindOf(GM_Curve) or projectedGeometry.oclIsKindOf(GM_Surface)
@@ -4166,7 +4166,7 @@ a|
 |===
 |*GeophProfile*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophMeasurement
 !Definition: !Geophysical measurement spatially referenced to a curve
@@ -4179,7 +4179,7 @@ NOTE1. Processing results of geophProfiles are often vertical surface coverages
 a|
 *Attribute: profileType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ProfileTypeValue
 !Definition: !Type of geophysical profile
@@ -4189,7 +4189,7 @@ a|
 a|
 *Constraint: shape must be GM_Curve*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !The shape attribute shall be of type GM_Curve
 !OCL: !inv: shape.oclIsKindOf(GM_Curve)
@@ -4203,7 +4203,7 @@ a|
 |===
 |*GeophSwath*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophMeasurement
 !Definition: !Geophysical measurement spatially referenced to a surface
@@ -4216,7 +4216,7 @@ NOTE1. Processing results of geophSwaths can be both surface and solid coverages
 a|
 *Attribute: swathType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SwathTypeValue
 !Definition: !Type of geophysical swath
@@ -4226,7 +4226,7 @@ a|
 a|
 *Constraint: shape must be GM_Surface*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !The shape attribute shall be of type GM_Surface
 !OCL: !inv: shape.oclIsKindOf(GM_Surface)
@@ -4240,7 +4240,7 @@ a|
 |===
 |*GeophStation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophMeasurement
 !Definition: !Geophysical measurement spatially referenced to a single point location
@@ -4253,7 +4253,7 @@ NOTE 1. Processing results of geophStations are often vertical curve coverages
 a|
 *Attribute: stationType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !StationTypeValue
 !Definition: !Type of geophysical station
@@ -4263,7 +4263,7 @@ a|
 a|
 *Attribute: stationRank*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !StationRankValue
 !Definition: !Geophysical stations may be part of a hierarchical system. Rank is proportional to the importance of a station
@@ -4275,7 +4275,7 @@ a|
 a|
 *Constraint: shape must be GM_Point*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !The shape attribute shall be of type GM_Point
 !OCL: !inv: shape.oclIsKindOf(GM_Point)
@@ -4291,7 +4291,7 @@ a|
 |===
 |*CampaignTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical campaign
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -4308,7 +4308,7 @@ a|
 |===
 |*NetworkNameValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Name of geophysical network
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -4325,7 +4325,7 @@ a|
 |===
 |*PlatformTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Platform on which data acquisision was carried out
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -4342,7 +4342,7 @@ a|
 |===
 |*ProfileTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical profile
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -4359,7 +4359,7 @@ a|
 |===
 |*StationRankValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Rank of geophysical station
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -4376,7 +4376,7 @@ a|
 |===
 |*StationTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical station
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -4393,7 +4393,7 @@ a|
 |===
 |*SurveyTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical survey or dataset
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -4410,7 +4410,7 @@ a|
 |===
 |*SwathTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical swath
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -4431,7 +4431,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*DocumentCitation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types 2
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -4446,7 +4446,7 @@ a|
 |===
 |*EX_VerticalExtent*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Extent information
 !Reference: !Geographic information -- Metadata [ISO 19115:2003/Cor 1:2006]
@@ -4460,7 +4460,7 @@ a|
 |===
 |*GM_Object (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometry root
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -4474,7 +4474,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -4494,7 +4494,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*MD_Distributor*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Distribution information
 !Reference: !Geographic information -- Metadata [ISO 19115:2003/Cor 1:2006]
@@ -4508,7 +4508,7 @@ a|
 |===
 |*RelatedParty*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types 2
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -4524,7 +4524,7 @@ a|
 |===
 |*SF_SpatialSamplingFeature (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !spatialSamplingFeature
 !Reference: !Geographic information -- Observations and measurements [ISO/TS 19156:2011]
@@ -5061,7 +5061,7 @@ The following paragraphs describe which Lineage metadata elements should be used
 
 Digitizing method:
 
-[cols=","]
+[%autowidth]
 |===
 |ISO Number |87
 |Name |description
@@ -5074,7 +5074,7 @@ Digitizing method:
 
 Internal thematic harmonization
 
-[cols=","]
+[%autowidth]
 |===
 |ISO Number |83
 |Name |statement
@@ -5091,7 +5091,7 @@ thematicHarmonizationDescription: unified structured legend
 
 Internal geometric harmonization
 
-[cols=","]
+[%autowidth]
 |===
 |ISO Number |83
 |Name |statement
@@ -5105,7 +5105,7 @@ geometricHarmonizationDescription: seamless map
 
 Source title:
 
-[cols=","]
+[%autowidth]
 |===
 |ISO Number |360
 |Name |sourceCitation
@@ -5122,7 +5122,7 @@ sourceCitation/*/title
 
 Source description:
 
-[cols=","]
+[%autowidth]
 |===
 |ISO Number |93
 |Name |description
@@ -5139,7 +5139,7 @@ description
 
 Source Date:
 
-[cols=","]
+[%autowidth]
 |===
 |ISO Number |362
 |Name |date
@@ -5156,7 +5156,7 @@ sourceCitation/*/date
 
 Source Mapping method (only for geological source):
 
-[cols=","]
+[%autowidth]
 |===
 |ISO Number |87
 |Name |description
@@ -5173,7 +5173,7 @@ _(A predefined code list is available for specifying the source mapping method)_
 
 Source Scale:
 
-[cols=","]
+[%autowidth]
 |===
 |ISO Number |94
 |Name |scaleDenominator
@@ -5190,7 +5190,7 @@ scaleDenominator
 
 Source Reference system:
 
-[cols=","]
+[%autowidth]
 |===
 |ISO Number |95
 |Name |sourceReferenceSystem
@@ -6112,7 +6112,7 @@ A portrayal scheme for lithology, age and faults was developed for OneGeology-Eu
 
 ==== Styles for the layer GE.GeologicUnit - Lithology
 
-[cols=","]
+[%autowidth]
 |===
 |*Style Name* |GE.GeologicUnit.Lithology
 |*Style Title* |Geologic Units - Lithology
@@ -6131,7 +6131,7 @@ image::./media/image22.jpeg[Inspire_Lithology_2,width=623,height=752]
 
 ==== Styles for the layer GE.GeologicUnit – Age of Rocks (olderNamedAge)
 
-[cols=","]
+[%autowidth]
 |===
 |*Style Name* |GE.GeologicUnit.AgeOfRocks
 |*Style Title* |Geologic Units – Age of rocks
@@ -6150,7 +6150,7 @@ image::./media/image24.jpeg[Inspire_Age_rgb_right,width=623,height=845]
 
 ==== Styles for the layer GE.GeologicFault 
 
-[cols=","]
+[%autowidth]
 |===
 |*Style Name* |GE.GeologicFault.
 |*Style Title* |Type of Geologic Fault
@@ -6228,7 +6228,7 @@ Symbols in the downthrown block. (For cartographers: The line should be drawn so
 
 ==== Styles for the layer GE.GeologicFold 
 
-[cols=","]
+[%autowidth]
 |===
 |*Style Name* |GE.GeologicFold
 |*Style Title* |Type of Geologic Fold
@@ -6420,7 +6420,7 @@ image::./media/image67.png[image,align=center]
 
 ==== Styles for the layer GE.Aquifer – Aquifer Type 
 
-[cols=","]
+[%autowidth]
 |===
 |*Style Name* |GE.Aquifer.Type
 |*Style Title* |Type of Aquifers
@@ -8607,7 +8607,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms indicating the level of activity of a geomorphologic feature.
 !Extensibility: !open
@@ -8638,7 +8638,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms indicating the surface on which the MappedFeature is projected.
 !Extensibility: !open
@@ -8653,7 +8653,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Terms describing the type of natural geomorphologic feature.
 !Extensibility: !open
@@ -8684,7 +8684,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Active Well Type
 !Definition: !Types of active wells.
@@ -8701,7 +8701,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer Media Type
 !Definition: !Values describing the characteristics of the aquifer medium.
@@ -8717,7 +8717,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Aquifer Type
 !Definition: !Types of aquifers.
@@ -8733,7 +8733,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Condition Of Groundwater
 !Definition: !Values indicating the approximate degree of change which has taken place on the natural state of groundwater.
@@ -8750,7 +8750,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Hydrogeochemical Rock Value
 !Definition: !Values describing the hydrogeochemical condition of the groundwater environment.
@@ -8766,7 +8766,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Natural Object Type
 !Definition: !Types of natural hydrogeological objects.
@@ -8782,7 +8782,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Status Code Type
 !Definition: !Values describing the statuses of man-made hydrogeological objects.
@@ -8798,7 +8798,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Water Persistence Value
 !Definition: !Types of hydrological persistence of water.
@@ -8814,7 +8814,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Water Salinity
 !Definition: !A code list indicating salinity classes in water.
@@ -8847,7 +8847,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical campaign
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -8863,7 +8863,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Name of geophysical network
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -8879,7 +8879,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Platform on which data acquisision was carried out
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -8895,7 +8895,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical profile
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -8912,7 +8912,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Rank of geophysical station
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -8928,7 +8928,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical station
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -8945,7 +8945,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical survey or dataset
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -8961,7 +8961,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical swath
 !Description: !An initial set of values are provided in the Implementation Rules. The codelist is expected to be extended by the geophysical community. Recommendations can be found in the Technical Guidence.
@@ -9796,7 +9796,7 @@ NOTE In principle gml allows the definition of non spatial coordinate systems an
 
 *Feature catalogue metadata*
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema GeophysicsExtension
 |Version number |3.0
@@ -9835,7 +9835,7 @@ NOTE In principle gml allows the definition of non spatial coordinate systems an
 |===
 |*CurveModel*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophModel
 !Definition: !Geophysical model that represents a curve coverage of some geophysical properties
@@ -9846,7 +9846,7 @@ a|
 a|
 *Attribute: modelType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CurveModelTypeValue
 !Definition: !Type of curve model
@@ -9857,7 +9857,7 @@ a|
 a|
 *Constraint: shape must be GM_Curve*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !shape must be GM_Curve
 !OCL: !inv: shape.oclIsKindOf(GM_Curve)
@@ -9871,7 +9871,7 @@ a|
 |===
 |*GeophModel*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophObject
 !Definition: !Geophysical object that is created as a result of geophysical data processing or interpretation
@@ -9882,7 +9882,7 @@ a|
 a|
 *Attribute: relatedMeasurement*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !Identifier of the geophysical measurement that was used to create the model result.
@@ -9899,7 +9899,7 @@ a|
 |===
 |*OtherGeophMeasurement*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophMeasurement
 !Definition: !Generic class for any geophysical measurement type that is listed in the GeophMeasurementTypeValue code list.
@@ -9909,7 +9909,7 @@ a|
 a|
 *Attribute: measurementType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !OtherMeasurementTypeValue
 !Definition: !Type of geophysical measurement
@@ -9920,7 +9920,7 @@ a|
 a|
 *Constraint: shape must be conformant with the spatial sampling geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !shape must be conformant with the spatial sampling geometry
 !OCL: !
@@ -9934,7 +9934,7 @@ a|
 |===
 |*OtherGeophModel*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophModel
 !Definition: !Geophysical model that represents a coverage of physical or geophysical properties
@@ -9945,7 +9945,7 @@ a|
 a|
 *Attribute: modelType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !OtherGeophModelTypeValue
 !Definition: !Type of geophysical model
@@ -9961,7 +9961,7 @@ a|
 |===
 |*Project*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophObjectSet
 !Definition: !Geophysical activity extending over a longer time range and larger area, containing any number of campaigns or subprojects
@@ -9972,7 +9972,7 @@ a|
 a|
 *Attribute: principalInvestigator*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CI_ResponsibleParty
 !Definition: !Main party responsible for the project
@@ -9988,7 +9988,7 @@ a|
 |===
 |*SolidGridModel*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophModel
 !Definition: !Geophysical model that represents a solid grid coverage of physical or geophysical properties
@@ -9999,7 +9999,7 @@ a|
 a|
 *Attribute: modelType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SolidGridModelTypeValue
 !Definition: !Type of solid grid model
@@ -10010,7 +10010,7 @@ a|
 a|
 *Constraint: shape must be GM_Solid*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !shape must be GM_Solid
 !OCL: !inv: shape.oclIsKindOf(GM_Solid)
@@ -10024,7 +10024,7 @@ a|
 |===
 |*SurfaceGridModel*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Subtype of: !GeophModel
 !Definition: !Geophysical model that represents a surface grid coverage of physical or geophysical properties
@@ -10035,7 +10035,7 @@ a|
 a|
 *Attribute: modelType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SurfaceGridModelTypeValue
 !Definition: !Type of surface grid model
@@ -10046,7 +10046,7 @@ a|
 a|
 *Constraint: shape must be GM_Surface*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !shape must be GM_Surface
 !OCL: !inv: shape.oclIsKindOf(GM_Surface)
@@ -10062,7 +10062,7 @@ a|
 |===
 |*GeophResource*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Resource of any geophysical information
 !Stereotypes: !«dataType»
@@ -10071,7 +10071,7 @@ a|
 a|
 *Attribute: resource*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CI_OnlineResource
 !Definition: !Linkage to online resource with optional description
@@ -10081,7 +10081,7 @@ a|
 a|
 *Attribute: resourceType*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ResourceTypeValue
 !Definition: !Type of geophysical resource
@@ -10098,7 +10098,7 @@ a|
 |===
 |*GeophResult*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Container for geophysical measurement and processing results
 !Description: !To be used in place of OM_Observation result
@@ -10108,7 +10108,7 @@ a|
 a|
 *Attribute: geophResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeophResource
 !Definition: !Resource of any geophysical information
@@ -10126,7 +10126,7 @@ a|
 |===
 |*CurveModelTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of curve model
 !Description: !The codelist is expected to be extended by the geophysical community. Recommendations are provided in the Technical Guidence
@@ -10143,7 +10143,7 @@ a|
 |===
 |*GeophProcessNameValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Proposed names for geophysical processes
 !Extensibility: !open
@@ -10159,7 +10159,7 @@ a|
 |===
 |*GeophProcessParameterNameValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !hierarchical codelist of geophysical process parameter names
 !Extensibility: !open
@@ -10175,7 +10175,7 @@ a|
 |===
 |*GeophPropertyNameValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !hierarchical codelist of geophysical property names
 !Extensibility: !open
@@ -10191,7 +10191,7 @@ a|
 |===
 |*OtherGeophModelTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Other type of geophysical model
 !Description: !none of the following types: curve model, surface grid model solid grid model. The codelist is expected to be extended by the geophysical community. Recommendations are provided in the Technical Guidence
@@ -10208,7 +10208,7 @@ a|
 |===
 |*OtherMeasurementTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical measurement
 !Description: !The codelist is expected to be extended by the geophysical community. Recommendations are provided in the Technical Guidence
@@ -10225,7 +10225,7 @@ a|
 |===
 |*ResourceTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical resource
 !Extensibility: !open
@@ -10241,7 +10241,7 @@ a|
 |===
 |*SolidGridModelTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of solid grid model
 !Description: !The codelist is expected to be extended by the geophysical community. Recommendations are provided in the Technical Guidence
@@ -10258,7 +10258,7 @@ a|
 |===
 |*SurfaceGridModelTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of surface grid model
 !Description: !The codelist is expected to be extended by the geophysical community. Recommendations are provided in the Technical Guidence
@@ -10279,7 +10279,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*CI_OnlineResource*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Citation and responsible party information
 !Reference: !Geographic information -- Metadata [ISO 19115:2003/Cor 1:2006]
@@ -10293,7 +10293,7 @@ a|
 |===
 |*CI_ResponsibleParty*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Citation and responsible party information
 !Reference: !Geographic information -- Metadata [ISO 19115:2003/Cor 1:2006]
@@ -10307,7 +10307,7 @@ a|
 |===
 |*GeophMeasurement (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geophysics
 !Reference: !INSPIRE Data specification on _Geology_ [DS-D2.8.II.4]
@@ -10323,7 +10323,7 @@ a|
 |===
 |*GeophObject (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geophysics
 !Reference: !INSPIRE Data specification on _Geology_ [DS-D2.8.II.4]
@@ -10339,7 +10339,7 @@ a|
 |===
 |*GeophObjectSet*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geophysics
 !Reference: !INSPIRE Data specification on _Geology_ [DS-D2.8.II.4]
@@ -10355,7 +10355,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -10392,7 +10392,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of curve model
 !Description: !The codelist is expected to be extended by the geophysical community. Recommendations are provided in the Technical Guidence
@@ -10408,7 +10408,7 @@ a|
 a|
 *compositLog*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !compositLog
 !Definition: !A set of processed or interpreted physical parameter curves along the axis of a borehole
@@ -10417,7 +10417,7 @@ a|
 a|
 *layerModel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !layerModel
 !Definition: !1D layer model, encoded as discrete curve coverage.
@@ -10426,7 +10426,7 @@ a|
 a|
 *seismicTimeSection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismicTimeSection
 !Definition: !Series of seismic property - two way time functions referenced to CDP locations
@@ -10439,7 +10439,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Proposed names for geophysical processes
 !Extensibility: !open
@@ -10454,7 +10454,7 @@ a|
 a|
 *VES*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !VES
 !Definition: !Procedure to acquire Vertical Electric Sounding data
@@ -10463,7 +10463,7 @@ a|
 a|
 *TDEMSounding*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TDEMSounding
 !Definition: !Procedure to acquire TDEM sounding data
@@ -10472,7 +10472,7 @@ a|
 a|
 *boreholeLogging*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !boreholeLogging
 !Definition: !Procedure to acquire borehole logging data
@@ -10481,7 +10481,7 @@ a|
 a|
 *MT_Sounding*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_Sounding
 !Definition: !Procedure to acquire magnetotelluric Sounding data
@@ -10490,7 +10490,7 @@ a|
 a|
 *MT_Processing*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_Processing
 !Definition: !magnetotelluric data processing
@@ -10499,7 +10499,7 @@ a|
 a|
 *MT_Preprocessing*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_Preprocessing
 !Definition: !calculation of complex impedance tenzor and tipper
@@ -10508,7 +10508,7 @@ a|
 a|
 *2D_MT_Inversion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !2D_MT_Inversion
 !Definition: !2D inversion of magnetotelluric soundings
@@ -10517,7 +10517,7 @@ a|
 a|
 *3D_MT_Inversion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !3D_MT_Inversion
 !Definition: !3D inversion of magnetotelluric soundings
@@ -10526,7 +10526,7 @@ a|
 a|
 *2DseismicDataAcquisition*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !2DseismicDataAcquisition
 !Definition: !Procedure to acquire 2D seismic data
@@ -10535,7 +10535,7 @@ a|
 a|
 *3DseismicDataAcquisition*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !3DseismicDataAcquisition
 !Definition: !Procedure to acquire 3D seismic data
@@ -10544,7 +10544,7 @@ a|
 a|
 *airborneDataAcquisition*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !airborneDataAcquisition
 !Definition: !Procedure to acquire airborne geophysical data
@@ -10553,7 +10553,7 @@ a|
 a|
 *2DseismicProcessing*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !2DseismicProcessing
 !Definition: !2D seismic data processing
@@ -10562,7 +10562,7 @@ a|
 a|
 *staticCorrection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !staticCorrection
 !Definition: !static correction
@@ -10571,7 +10571,7 @@ a|
 a|
 *velocityAnalysis*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !velocityAnalysis
 !Definition: !velocity analysis
@@ -10580,7 +10580,7 @@ a|
 a|
 *timeStacking*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !timeStacking
 !Definition: !time stacking
@@ -10589,7 +10589,7 @@ a|
 a|
 *timeMigration*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !timeMigration
 !Definition: !time migration
@@ -10598,7 +10598,7 @@ a|
 a|
 *depthMigration*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !depthMigration
 !Definition: !depth migration
@@ -10607,7 +10607,7 @@ a|
 a|
 *depthConversion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !depthConversion
 !Definition: !depth conversion
@@ -10616,7 +10616,7 @@ a|
 a|
 *3DseismicProcessing*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !3DseismicProcessing
 !Definition: !3D seismic data processing
@@ -10625,7 +10625,7 @@ a|
 a|
 *inversion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !inversion
 !Definition: !generic geophysical inversion
@@ -10634,7 +10634,7 @@ a|
 a|
 *gravityObservation*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !gravityObservation
 !Definition: !procedures to acquire gravity station data
@@ -10643,7 +10643,7 @@ a|
 a|
 *gravityProcessing*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !gravityProcessing
 !Definition: !gravity data processing
@@ -10652,7 +10652,7 @@ a|
 a|
 *normalCorrection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !normalCorrection
 !Definition: !Correction of gravity field variation due to geographic latitude
@@ -10661,7 +10661,7 @@ a|
 a|
 *heightCorrection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !heightCorrection
 !Definition: !Correction of gravity variation due to elevation difference
@@ -10670,7 +10670,7 @@ a|
 a|
 *topoCorrection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !topoCorrection
 !Definition: !Correction of the gravity effect due to topography
@@ -10679,7 +10679,7 @@ a|
 a|
 *bouguerCorrection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !bouguerCorrection
 !Definition: !Bouguer correction
@@ -10688,7 +10688,7 @@ a|
 a|
 *magneticObservation*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !magneticObservation
 !Definition: !magnetic observation
@@ -10697,7 +10697,7 @@ a|
 a|
 *magneticFieldMonitoring*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !magneticFieldMonitoring
 !Definition: !magnetic field monitoring
@@ -10706,7 +10706,7 @@ a|
 a|
 *earthquakeObservation*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !earthquakeObservation
 !Definition: !earthquake observation
@@ -10715,7 +10715,7 @@ a|
 a|
 *ambientNoiseObservation*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !ambientNoiseObservation
 !Definition: !ambient noise observation
@@ -10724,7 +10724,7 @@ a|
 a|
 *magneticProcessing*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !magneticProcessing
 !Definition: !magnetic processing
@@ -10733,7 +10733,7 @@ a|
 a|
 *normalCorrection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !normalCorrection
 !Definition: !Correction of magnetic field variation due to geographic latitude and longitude
@@ -10746,7 +10746,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !hierarchical codelist of geophysical process parameter names
 !Extensibility: !open
@@ -10761,7 +10761,7 @@ a|
 a|
 *VES_Parameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !VES_Parameter
 !Definition: !Vertical Electric Sounding process parameter
@@ -10770,7 +10770,7 @@ a|
 a|
 *VES_ARR_TYPE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !VES_ARR_TYPE
 !Definition: !Electrode array
@@ -10781,7 +10781,7 @@ a|
 a|
 *schlumberger*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !schlumberger
 !Definition: !Schlumberger array
@@ -10791,7 +10791,7 @@ a|
 a|
 *wenner*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !wenner
 !Definition: !Wenner array
@@ -10801,7 +10801,7 @@ a|
 a|
 *AB_MIN*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !AB_MIN
 !Definition: !minimum distance between A and B electrodes
@@ -10811,7 +10811,7 @@ a|
 a|
 *AB_MAX*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !AB_MAX
 !Definition: !maximum distance between A and B electrodes
@@ -10821,7 +10821,7 @@ a|
 a|
 *AZM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !AZM
 !Definition: !azimuth of the layout,angle between north and the AB line direction (header parameter)
@@ -10831,7 +10831,7 @@ a|
 a|
 *AB_DIST*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !AB_DIST
 !Definition: !Distance between A B current electrodes
@@ -10841,7 +10841,7 @@ a|
 a|
 *MN_DIST*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MN_DIST
 !Definition: !Distance between M N potential electrodes
@@ -10851,7 +10851,7 @@ a|
 a|
 *TDEM_ProcessParameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TDEM_ProcessParameter
 !Definition: !TDEM process parameters
@@ -10860,7 +10860,7 @@ a|
 a|
 *TDEM_ARR_TYPE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TDEM_ARR_TYPE
 !Definition: !Layout array type
@@ -10871,7 +10871,7 @@ a|
 a|
 *CIL*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CIL
 !Definition: !Central Induction Loop sounding array
@@ -10881,7 +10881,7 @@ a|
 a|
 *singleLoop*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !singleLoop
 !Definition: !Singel Loop sounding array
@@ -10891,7 +10891,7 @@ a|
 a|
 *offset*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !offset
 !Definition: !Sounding array, RX loop is separated from Tx loop
@@ -10901,7 +10901,7 @@ a|
 a|
 *AZM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !AZM
 !Definition: !Azimuth of layout
@@ -10911,7 +10911,7 @@ a|
 a|
 *LOOP_SZ_MIN*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LOOP_SZ_MIN
 !Definition: !Smallest TX loop - side length of the equivalent square
@@ -10921,7 +10921,7 @@ a|
 a|
 *LOOP_SZ_MAX*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LOOP_SZ_MAX
 !Definition: !Largest TX loop - side length of the equivalent square
@@ -10931,7 +10931,7 @@ a|
 a|
 *TX_CURR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TX_CURR
 !Definition: !current loaded into to the transmitter loop, or the earth
@@ -10941,7 +10941,7 @@ a|
 a|
 *TM_OFFS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TM_OFFS
 !Definition: !channel time
@@ -10951,7 +10951,7 @@ a|
 a|
 *TOFF_TM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TOFF_TM
 !Definition: !duration of turn off ramp in case of linear ramp
@@ -10961,7 +10961,7 @@ a|
 a|
 *TON_TM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TON_TM
 !Definition: !duration of turn on process
@@ -10971,7 +10971,7 @@ a|
 a|
 *RX_DELAY*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RX_DELAY
 !Definition: !delay of Receiver in transmitter time
@@ -10981,7 +10981,7 @@ a|
 a|
 *BASE_FREQ*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !BASE_FREQ
 !Definition: !current wave base frequency in Hz
@@ -10991,7 +10991,7 @@ a|
 a|
 *LOOP_SZ_X*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LOOP_SZ_X
 !Definition: !transmitter loop side length in X direction
@@ -11001,7 +11001,7 @@ a|
 a|
 *LOOP_SZ_Y*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LOOP_SZ_Y
 !Definition: !transmitter loop side length in Y direction
@@ -11011,7 +11011,7 @@ a|
 a|
 *NUM_OF_TURNS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !NUM_OF_TURNS
 !Definition: !number of turns in the transmitter loop
@@ -11021,7 +11021,7 @@ a|
 a|
 *CURR_WAVE_FORM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CURR_WAVE_FORM
 !Definition: !current wave form in the transmitter loop
@@ -11032,7 +11032,7 @@ a|
 a|
 *rectangularBipolar*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !rectangularBipolar
 !Definition: !bipolar square wave with idle periods
@@ -11042,7 +11042,7 @@ a|
 a|
 *rectangularBipolar*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !rectangularBipolar
 !Definition: !triangular wave
@@ -11052,7 +11052,7 @@ a|
 a|
 *RX_COIL_AREA*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RX_COIL_AREA
 !Definition: !effective area of receiver coil
@@ -11062,7 +11062,7 @@ a|
 a|
 *boreholeLoggingParameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !boreholeLoggingParameter
 !Definition: !Borehole logging process parameters
@@ -11071,7 +11071,7 @@ a|
 a|
 *WELL_ID*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !WELL_ID
 !Definition: !well identifier
@@ -11081,7 +11081,7 @@ a|
 a|
 *WELL_BTM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !WELL_BTM
 !Definition: !bottom of well
@@ -11091,7 +11091,7 @@ a|
 a|
 *DPTH_MIN*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DPTH_MIN
 !Definition: !minimum depth of logging
@@ -11101,7 +11101,7 @@ a|
 a|
 *DPTH_MAX*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DPTH_MAX
 !Definition: !maximum depth of logging
@@ -11111,7 +11111,7 @@ a|
 a|
 *LOG_TYPE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LOG_TYPE
 !Definition: !reference to log parameter name
@@ -11121,7 +11121,7 @@ a|
 a|
 *industryStandardResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !industryStandardResource
 !Definition: !reference to LAS, WITSML etc. files
@@ -11131,7 +11131,7 @@ a|
 a|
 *WTR_LEV*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !WTR_LEV
 !Definition: !water level
@@ -11141,7 +11141,7 @@ a|
 a|
 *DREF*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DREF
 !Definition: !Depth Reference
@@ -11151,7 +11151,7 @@ a|
 a|
 *STRT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !STRT
 !Definition: !First Index Value
@@ -11161,7 +11161,7 @@ a|
 a|
 *STOP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !STOP
 !Definition: !Last Index Value
@@ -11171,7 +11171,7 @@ a|
 a|
 *STEP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !STEP
 !Definition: !STEP
@@ -11181,7 +11181,7 @@ a|
 a|
 *X*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !X
 !Definition: !X or East-West coordinate
@@ -11191,7 +11191,7 @@ a|
 a|
 *Y*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Y
 !Definition: !Y or North South coordinate
@@ -11201,7 +11201,7 @@ a|
 a|
 *LATI*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LATI
 !Definition: !Latitude
@@ -11211,7 +11211,7 @@ a|
 a|
 *LONG*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LONG
 !Definition: !Longitude
@@ -11221,7 +11221,7 @@ a|
 a|
 *RUN_DEPTH*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RUN_DEPTH
 !Definition: !nth Run Depth Interval
@@ -11231,7 +11231,7 @@ a|
 a|
 *NMAT_DEPTH*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !NMAT_DEPTH
 !Definition: !Neutron Matrix Depth interval
@@ -11241,7 +11241,7 @@ a|
 a|
 *DMAT_DEPTH*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DMAT_DEPTH
 !Definition: !Density Matrix Depth interval
@@ -11251,7 +11251,7 @@ a|
 a|
 *SMAT_DEPTH*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SMAT_DEPTH
 !Definition: !Sonic Matrix Depth
@@ -11261,7 +11261,7 @@ a|
 a|
 *DIST*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DIST
 !Definition: !Cumulative increment of drilling.
@@ -11271,7 +11271,7 @@ a|
 a|
 *HRS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !HRS
 !Definition: !Hours of drilling
@@ -11281,7 +11281,7 @@ a|
 a|
 *TBR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TBR
 !Definition: !Total barrels returned
@@ -11291,7 +11291,7 @@ a|
 a|
 *I_RF*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_RF
 !Definition: !Depth Datum Elevation (from MSL)
@@ -11301,7 +11301,7 @@ a|
 a|
 *I_DC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_DC
 !Definition: !Magnetic Declination (if I_AT not magnetic)
@@ -11311,7 +11311,7 @@ a|
 a|
 *I_KO*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_KO
 !Definition: !Kick off Depth (M.D. of kick off point)
@@ -11321,7 +11321,7 @@ a|
 a|
 *I_ONS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_ONS
 !Definition: !N/S Offset of well ref point to top hole
@@ -11331,7 +11331,7 @@ a|
 a|
 *I_OEW*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_OEW
 !Definition: !E/W Offset of well ref point to top hole
@@ -11341,7 +11341,7 @@ a|
 a|
 *CLSR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CLSR
 !Definition: !Closure (horizontal) length
@@ -11351,7 +11351,7 @@ a|
 a|
 *TIEMD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TIEMD
 !Definition: !Tie Point Measured depth
@@ -11361,7 +11361,7 @@ a|
 a|
 *TIETVD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TIETVD
 !Definition: !Tie Point True Vertical depth
@@ -11371,7 +11371,7 @@ a|
 a|
 *TIEDEV*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TIEDEV
 !Definition: !Tie Point Deviation
@@ -11381,7 +11381,7 @@ a|
 a|
 *TSTT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TSTT
 !Definition: !TEST Top Depth
@@ -11391,7 +11391,7 @@ a|
 a|
 *TSTB*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TSTB
 !Definition: !TEST Bottom Depth
@@ -11401,7 +11401,7 @@ a|
 a|
 *ISIP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !ISIP
 !Definition: !Initial Shut in pressure
@@ -11411,7 +11411,7 @@ a|
 a|
 *FSIP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !FSIP
 !Definition: !Final Shut in pressure
@@ -11421,7 +11421,7 @@ a|
 a|
 *RATE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RATE
 !Definition: !Production Rate
@@ -11431,7 +11431,7 @@ a|
 a|
 *RUN*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RUN
 !Definition: !Run Number
@@ -11441,7 +11441,7 @@ a|
 a|
 *RUNS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RUNS
 !Definition: !# of Runs for this well.
@@ -11451,7 +11451,7 @@ a|
 a|
 *TSTN*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TSTN
 !Definition: !TEST Number
@@ -11461,7 +11461,7 @@ a|
 a|
 *BS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !BS
 !Definition: !Bit Size
@@ -11471,7 +11471,7 @@ a|
 a|
 *WRAP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !WRAP
 !Definition: !ONE LINE PER DEPTH STEP
@@ -11481,7 +11481,7 @@ a|
 a|
 *NULL*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !NULL
 !Definition: !NULL VALUE
@@ -11491,7 +11491,7 @@ a|
 a|
 *COMP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !COMP
 !Definition: !COMPANY
@@ -11501,7 +11501,7 @@ a|
 a|
 *WELL*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !WELL
 !Definition: !WELL
@@ -11511,7 +11511,7 @@ a|
 a|
 *FLD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !FLD
 !Definition: !FIELD
@@ -11521,7 +11521,7 @@ a|
 a|
 *LOC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LOC
 !Definition: !LOCATION
@@ -11531,7 +11531,7 @@ a|
 a|
 *STAT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !STAT
 !Definition: !STATE
@@ -11541,7 +11541,7 @@ a|
 a|
 *PROV*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !PROV
 !Definition: !PROVINCE
@@ -11551,7 +11551,7 @@ a|
 a|
 *CTRY*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CTRY
 !Definition: !COUNTRY
@@ -11561,7 +11561,7 @@ a|
 a|
 *CNTY*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CNTY
 !Definition: !County
@@ -11571,7 +11571,7 @@ a|
 a|
 *UWI*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !UWI
 !Definition: !UNIQUE WELL ID
@@ -11581,7 +11581,7 @@ a|
 a|
 *LIC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LIC
 !Definition: !LICENSE NUMBER
@@ -11591,7 +11591,7 @@ a|
 a|
 *SRVC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SRVC
 !Definition: !Service Company
@@ -11601,7 +11601,7 @@ a|
 a|
 *DATE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DATE
 !Definition: !Service Date
@@ -11611,7 +11611,7 @@ a|
 a|
 *GDAT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !GDAT
 !Definition: !Geodetic Datum
@@ -11621,7 +11621,7 @@ a|
 a|
 *HZCS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !HZCS
 !Definition: !Horizontal Co-ordinate System
@@ -11631,7 +11631,7 @@ a|
 a|
 *C_SRS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !C_SRS
 !Definition: !Core Source
@@ -11641,7 +11641,7 @@ a|
 a|
 *C_TY*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !C_TY
 !Definition: !Core Type
@@ -11651,7 +11651,7 @@ a|
 a|
 *C_DATE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !C_DATE
 !Definition: !Recovery Date (Date Core Cut) \{DD/MM/YYYY}
@@ -11661,7 +11661,7 @@ a|
 a|
 *C_FM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !C_FM
 !Definition: !Primary Formation Cored
@@ -11671,7 +11671,7 @@ a|
 a|
 *C_AC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !C_AC
 !Definition: !Analyzing Company
@@ -11681,7 +11681,7 @@ a|
 a|
 *C_AD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !C_AD
 !Definition: !Analysis Date \{DD/MM/YYYY}
@@ -11691,7 +11691,7 @@ a|
 a|
 *CDES*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CDES
 !Definition: !Core description
@@ -11701,7 +11701,7 @@ a|
 a|
 *RIG*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RIG
 !Definition: !Drilling Rig name
@@ -11711,7 +11711,7 @@ a|
 a|
 *CONTR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CONTR
 !Definition: !Contractor
@@ -11721,7 +11721,7 @@ a|
 a|
 *I_DT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_DT
 !Definition: !SURVEY_DATE \{DD/MM/YYYY}
@@ -11731,7 +11731,7 @@ a|
 a|
 *I_CO*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_CO
 !Definition: !Recording Company
@@ -11741,7 +11741,7 @@ a|
 a|
 *I_AT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_AT
 !Definition: !Azimuth North Type (e.g. Grid/ True)
@@ -11751,7 +11751,7 @@ a|
 a|
 *I_GD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_GD
 !Definition: !Geodetic datum
@@ -11761,7 +11761,7 @@ a|
 a|
 *I_CP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_CP
 !Definition: !COMPUTE_METHOD (e.g. Radius of Curvature)
@@ -11771,7 +11771,7 @@ a|
 a|
 *I_CS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !I_CS
 !Definition: !COORDINATE_SYSTEM_NAME e.g. UTM18N
@@ -11781,7 +11781,7 @@ a|
 a|
 *TOPN*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TOPN
 !Definition: !Formation Top Name
@@ -11791,7 +11791,7 @@ a|
 a|
 *TOPSRC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TOPSRC
 !Definition: !Formation Top Source
@@ -11801,7 +11801,7 @@ a|
 a|
 *TOPDR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TOPDR
 !Definition: !Tops Depth Reference
@@ -11811,7 +11811,7 @@ a|
 a|
 *DDES*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DDES
 !Definition: !TEST Recovery Description
@@ -11821,7 +11821,7 @@ a|
 a|
 *BLOWD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !BLOWD
 !Definition: !BLOW DESCRIPTION
@@ -11831,7 +11831,7 @@ a|
 a|
 *TESTT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TESTT
 !Definition: !Test Type
@@ -11841,7 +11841,7 @@ a|
 a|
 *LMF*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LMF
 !Definition: !Log Measured From
@@ -11851,7 +11851,7 @@ a|
 a|
 *API*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !API
 !Definition: !API Number
@@ -11861,7 +11861,7 @@ a|
 a|
 *APD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !APD
 !Definition: !Above Permanent Data
@@ -11871,7 +11871,7 @@ a|
 a|
 *EREF*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !EREF
 !Definition: !Elevation of Depth Reference
@@ -11881,7 +11881,7 @@ a|
 a|
 *PDAT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !PDAT
 !Definition: !Permanent Data
@@ -11891,7 +11891,7 @@ a|
 a|
 *RUN_DATE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RUN_DATE
 !Definition: !Run date
@@ -11901,7 +11901,7 @@ a|
 a|
 *MT_Parameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_Parameter
 !Definition: !Magnetotelluric Sounding process parameters
@@ -11910,7 +11910,7 @@ a|
 a|
 *AZM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !AZM
 !Definition: !azimuth of the layout (direction of Ex)
@@ -11920,7 +11920,7 @@ a|
 a|
 *FREQ_MIN*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !FREQ_MIN
 !Definition: !smallest frequency
@@ -11930,7 +11930,7 @@ a|
 a|
 *FREQ_MAX*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !FREQ_MAX
 !Definition: !largest frequency
@@ -11940,7 +11940,7 @@ a|
 a|
 *MT_MEAS_TYPE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_MEAS_TYPE
 !Definition: !MT measurement type
@@ -11951,7 +11951,7 @@ a|
 a|
 *LMT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LMT
 !Definition: !Long period Magnetotelluric Sounding
@@ -11961,7 +11961,7 @@ a|
 a|
 *BBMT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !BBMT
 !Definition: !Broad band Magnetotelluric Sounding
@@ -11971,7 +11971,7 @@ a|
 a|
 *AMT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !AMT
 !Definition: !Audio frequency Magnetotelluric Sounding
@@ -11981,7 +11981,7 @@ a|
 a|
 *RMT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RMT
 !Definition: !Radio frequency Magnetotelluric Sounding
@@ -11991,7 +11991,7 @@ a|
 a|
 *industryStandardResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !industryStandardResource
 !Definition: !reference to SEG-EDI file GeophResource
@@ -12001,7 +12001,7 @@ a|
 a|
 *2DseismicDAQ_Parameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !2DseismicDAQ_Parameter
 !Definition: !2D seismic data acquisition process parameters
@@ -12010,7 +12010,7 @@ a|
 a|
 *SRC_TYPE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SRC_TYPE
 !Definition: !type of acoustic source
@@ -12021,7 +12021,7 @@ a|
 a|
 *vibrator*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !vibrator
 !Definition: !vibrator
@@ -12031,7 +12031,7 @@ a|
 a|
 *explosive*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !explosive
 !Definition: !explosive
@@ -12041,7 +12041,7 @@ a|
 a|
 *hammer*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !hammer
 !Definition: !hammer
@@ -12051,7 +12051,7 @@ a|
 a|
 *airgun*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !airgun
 !Definition: !airgun
@@ -12061,7 +12061,7 @@ a|
 a|
 *SEN_TYPE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SEN_TYPE
 !Definition: !type of acoustic sensor
@@ -12072,7 +12072,7 @@ a|
 a|
 *geophone*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !geophone
 !Definition: !geophone
@@ -12082,7 +12082,7 @@ a|
 a|
 *hydrophone*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !hydrophone
 !Definition: !hydrophone
@@ -12092,7 +12092,7 @@ a|
 a|
 *seismograph*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismograph
 !Definition: !seismograph
@@ -12102,7 +12102,7 @@ a|
 a|
 *SEN_SPACING*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SEN_SPACING
 !Definition: !distance between sensors (geophones)
@@ -12112,7 +12112,7 @@ a|
 a|
 *SRC_SPACING*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SRC_SPACING
 !Definition: !distance between sources
@@ -12122,7 +12122,7 @@ a|
 a|
 *NUM_CH*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !NUM_CH
 !Definition: !number of channels
@@ -12132,7 +12132,7 @@ a|
 a|
 *CVRG*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CVRG
 !Definition: !coverage
@@ -12142,7 +12142,7 @@ a|
 a|
 *SAMP_RATE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SAMP_RATE
 !Definition: !Time distance between samples
@@ -12152,7 +12152,7 @@ a|
 a|
 *TM_OFFS_MIN*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TM_OFFS_MIN
 !Definition: !time offset of the earliest sample
@@ -12162,7 +12162,7 @@ a|
 a|
 *TM_OFFS_MAX*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TM_OFFS_MAX
 !Definition: !time offset of the latest sample
@@ -12172,7 +12172,7 @@ a|
 a|
 *NRST_OFFS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !NRST_OFFS
 !Definition: !distance between the source and the nearest sensor
@@ -12182,7 +12182,7 @@ a|
 a|
 *SEIS_METHOD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SEIS_METHOD
 !Definition: !type of seismic method
@@ -12193,7 +12193,7 @@ a|
 a|
 *refraction*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !refraction
 !Definition: !refraction
@@ -12203,7 +12203,7 @@ a|
 a|
 *reflection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !reflection
 !Definition: !reflection
@@ -12213,7 +12213,7 @@ a|
 a|
 *SEIS_WAVE_TYPE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SEIS_WAVE_TYPE
 !Definition: !seismic wave type
@@ -12224,7 +12224,7 @@ a|
 a|
 *P*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !P
 !Definition: !Primary wave
@@ -12234,7 +12234,7 @@ a|
 a|
 *S*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !S
 !Definition: !Secondary wave
@@ -12244,7 +12244,7 @@ a|
 a|
 *industryStandardResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !industryStandardResource
 !Definition: !reference to SPS, UKOOA,SEG-Y etc. files
@@ -12254,7 +12254,7 @@ a|
 a|
 *airborneDAQ_Parameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !airborneDAQ_Parameter
 !Definition: !Airborne geophysical data acquisition process parameter
@@ -12263,7 +12263,7 @@ a|
 a|
 *PAR_TYPE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !PAR_TYPE
 !Definition: !measured geophysical parameter
@@ -12273,7 +12273,7 @@ a|
 a|
 *AVG_SPACING*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !AVG_SPACING
 !Definition: !average distance between data points
@@ -12283,7 +12283,7 @@ a|
 a|
 *LINE_DIST*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !LINE_DIST
 !Definition: !average distance between flight lines
@@ -12293,7 +12293,7 @@ a|
 a|
 *TIELINE_DIST*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TIELINE_DIST
 !Definition: !average distance between tielines
@@ -12303,7 +12303,7 @@ a|
 a|
 *FLGT_HGT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !FLGT_HGT
 !Definition: !average flight height
@@ -12313,7 +12313,7 @@ a|
 a|
 *NAV_MODE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !NAV_MODE
 !Definition: !navigation mode
@@ -12324,7 +12324,7 @@ a|
 a|
 *visual*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !visual
 !Definition: !visual navigation
@@ -12334,7 +12334,7 @@ a|
 a|
 *microfix*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !microfix
 !Definition: !navigation by microfix
@@ -12344,7 +12344,7 @@ a|
 a|
 *video*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !video
 !Definition: !navigation by video
@@ -12354,7 +12354,7 @@ a|
 a|
 *DGPS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DGPS
 !Definition: !navigation by differencial GPS
@@ -12364,7 +12364,7 @@ a|
 a|
 *FLGT_SPD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !FLGT_SPD
 !Definition: !average flight speed
@@ -12374,7 +12374,7 @@ a|
 a|
 *2DseismicProcParameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !2DseismicProcParameter
 !Definition: !2D seismic data processing parameters
@@ -12383,7 +12383,7 @@ a|
 a|
 *CDP_SPACING*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CDP_SPACING
 !Definition: !distance between CDP-s
@@ -12393,7 +12393,7 @@ a|
 a|
 *CDP_FRST*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CDP_FRST
 !Definition: !serial num of first CDP
@@ -12403,7 +12403,7 @@ a|
 a|
 *CDP_LST*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CDP_LST
 !Definition: !serial num of last CDP
@@ -12413,7 +12413,7 @@ a|
 a|
 *CORR_STATIC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CORR_STATIC
 !Definition: !static correction
@@ -12424,7 +12424,7 @@ a|
 a|
 *shallowRefraction*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !shallowRefraction
 !Definition: !static correction by shallow refraction seismics
@@ -12434,7 +12434,7 @@ a|
 a|
 *acousticLog*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !acousticLog
 !Definition: !static correction by acoustic log
@@ -12444,7 +12444,7 @@ a|
 a|
 *automatic*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !automatic
 !Definition: !automatic static correction
@@ -12454,7 +12454,7 @@ a|
 a|
 *industryStandardResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !industryStandardResource
 !Definition: !reference to SPS, UKOOA,SEG-Y etc. Files
@@ -12464,7 +12464,7 @@ a|
 a|
 *inversionProcParameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !inversionProcParameter
 !Definition: !Inversion process parameters
@@ -12473,7 +12473,7 @@ a|
 a|
 *MOD_DIM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MOD_DIM
 !Definition: !number of model dimensions
@@ -12483,7 +12483,7 @@ a|
 a|
 *INV_METHOD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !INV_METHOD
 !Definition: !type of optimization method
@@ -12494,7 +12494,7 @@ a|
 a|
 *leastSquares*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !leastSquares
 !Definition: !inversion by least squares method
@@ -12504,7 +12504,7 @@ a|
 a|
 *marquardt*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !marquardt
 !Definition: !Marquardt inversion
@@ -12514,7 +12514,7 @@ a|
 a|
 *simulatedAnnealing*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !simulatedAnnealing
 !Definition: !inversion by simulated annealing
@@ -12524,7 +12524,7 @@ a|
 a|
 *geneticAlgorithm*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !geneticAlgorithm
 !Definition: !inversion by genetic algorithm
@@ -12534,7 +12534,7 @@ a|
 a|
 *INV_TYPE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !INV_TYPE
 !Definition: !type of inversion
@@ -12545,7 +12545,7 @@ a|
 a|
 *single*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !single
 !Definition: !single inversion
@@ -12556,7 +12556,7 @@ a|
 a|
 *joint*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !joint
 !Definition: !joint inversion
@@ -12567,7 +12567,7 @@ a|
 a|
 *gravityProcessParameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !gravityProcessParameter
 !Definition: !Gravity station process parameters
@@ -12576,7 +12576,7 @@ a|
 a|
 *errorOfClosure*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !errorOfClosure
 !Definition: !error of closure
@@ -12586,7 +12586,7 @@ a|
 a|
 *gravityDatum*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !gravityDatum
 !Definition: !gravity datum
@@ -12597,7 +12597,7 @@ a|
 a|
 *IGSN71*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !IGSN71
 !Definition: !IGSN71
@@ -12607,7 +12607,7 @@ a|
 a|
 *Potsdam*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Potsdam
 !Definition: !Potsdam
@@ -12617,7 +12617,7 @@ a|
 a|
 *MGH50*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MGH50
 !Definition: !Hungarian gravity datum 1950
@@ -12627,7 +12627,7 @@ a|
 a|
 *MGH2000*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MGH2000
 !Definition: !Hungarian gravity datum 2000
@@ -12637,7 +12637,7 @@ a|
 a|
 *normalCorrectionFormula*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !normalCorrectionFormula
 !Definition: !Type of equation used for normal correction
@@ -12648,7 +12648,7 @@ a|
 a|
 *somigliana*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !somigliana
 !Definition: !correction formula by Somigliana
@@ -12658,7 +12658,7 @@ a|
 a|
 *cassinis*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !cassinis
 !Definition: !correction formula by Cassinis
@@ -12668,7 +12668,7 @@ a|
 a|
 *helmert*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !helmert
 !Definition: !correction formula by Helmert
@@ -12678,7 +12678,7 @@ a|
 a|
 *heiskanen*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !heiskanen
 !Definition: !correction formula by Heiskanen
@@ -12688,7 +12688,7 @@ a|
 a|
 *heightCorrectionFormula*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !heightCorrectionFormula
 !Definition: !Type of equation used for normal correction
@@ -12699,7 +12699,7 @@ a|
 a|
 *firstOrderFormula*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !firstOrderFormula
 !Definition: !first order formula
@@ -12709,7 +12709,7 @@ a|
 a|
 *SecondOrderFormula*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SecondOrderFormula
 !Definition: !second order formula
@@ -12719,7 +12719,7 @@ a|
 a|
 *bouguerCorrectionFormula*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !bouguerCorrectionFormula
 !Definition: !Type of equation used for normal correction
@@ -12730,7 +12730,7 @@ a|
 a|
 *bouguerPlate*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !bouguerPlate
 !Definition: !correction using Bouguer plate
@@ -12740,7 +12740,7 @@ a|
 a|
 *sphericalCap*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !sphericalCap
 !Definition: !correction using spherical cap
@@ -12750,7 +12750,7 @@ a|
 a|
 *bouguerCorrectionDensity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !bouguerCorrectionDensity
 !Definition: !density used for Bouguer correction
@@ -12760,7 +12760,7 @@ a|
 a|
 *topoCorrectionDensity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !topoCorrectionDensity
 !Definition: !density used for topographic correction
@@ -12770,7 +12770,7 @@ a|
 a|
 *topoCorrection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !topoCorrection
 !Definition: !topoCorrection process parameters
@@ -12781,7 +12781,7 @@ a|
 a|
 *innerTopoCorrection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !innerTopoCorrection
 !Definition: !value of inner zone topo correction
@@ -12791,7 +12791,7 @@ a|
 a|
 *totalTopoCorrection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !totalTopoCorrection
 !Definition: !value of total topo correction
@@ -12801,7 +12801,7 @@ a|
 a|
 *magneticProcessParameter*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !magneticProcessParameter
 !Definition: !Magnetic station process parameters
@@ -12810,7 +12810,7 @@ a|
 a|
 *IGRF_SYS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !IGRF_SYS
 !Definition: !Reference to IGRF coefficients that were used to calculate the normal magnetic field
@@ -12821,7 +12821,7 @@ a|
 a|
 *SAMP_RATE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SAMP_RATE
 !Definition: !frequency of sampling in hertz for magnetic observatory time series
@@ -12831,7 +12831,7 @@ a|
 a|
 *MAG_RESOL*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_RESOL
 !Definition: !resolution of magnetic field measurement in picoTesla
@@ -12841,7 +12841,7 @@ a|
 a|
 *GAUSS_FILT_WDTH*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !GAUSS_FILT_WDTH
 !Definition: !width of convolution filter time window for magneticobservatory time series
@@ -12851,7 +12851,7 @@ a|
 a|
 *GAUSS_FILT_SIGMA*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !GAUSS_FILT_SIGMA
 !Definition: !scale factor (standard deviation) of Gauss convolution filter for magnetic observatory time series
@@ -12861,7 +12861,7 @@ a|
 a|
 *HIGH_CUT_FREQ*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !HIGH_CUT_FREQ
 !Definition: !HighCut frequency of analogue filter for magnetic observatory time series
@@ -12875,7 +12875,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !hierarchical codelist of geophysical property names
 !Extensibility: !open
@@ -12891,7 +12891,7 @@ a|
 a|
 *VES_Property*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !VES_Property
 !Definition: !Vertical Electric Sounding property
@@ -12900,7 +12900,7 @@ a|
 a|
 *APP_RES*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !APP_RES
 !Definition: !apparent resistivity calculated by Ohms law
@@ -12910,7 +12910,7 @@ a|
 a|
 *APP_CHRG*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !APP_CHRG
 !Definition: !apparent chargeability
@@ -12920,7 +12920,7 @@ a|
 a|
 *CURR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CURR
 !Definition: !current of the AB current dipole
@@ -12930,7 +12930,7 @@ a|
 a|
 *VOLTAGE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !VOLTAGE
 !Definition: !voltage measured no the MN electric dipole
@@ -12940,7 +12940,7 @@ a|
 a|
 *TDEM_Property*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TDEM_Property
 !Definition: !TDEM sounding property
@@ -12949,7 +12949,7 @@ a|
 a|
 *APP_RES_LT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !APP_RES_LT
 !Definition: !apparent resistivity calculated by late time approximation
@@ -12959,7 +12959,7 @@ a|
 a|
 *APP_RES_ET*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !APP_RES_ET
 !Definition: !apparent resistivity calculated by early time approximation
@@ -12969,7 +12969,7 @@ a|
 a|
 *APP_RES*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !APP_RES
 !Definition: !apparent resistivity
@@ -12979,7 +12979,7 @@ a|
 a|
 *VOLTAGE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !VOLTAGE
 !Definition: !voltage measured by the receiver loop or potential electrodes
@@ -12989,7 +12989,7 @@ a|
 a|
 *DHDT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DHDT
 !Definition: !time derivative of the magnetic field in the direction of the Rx loop axis
@@ -12999,7 +12999,7 @@ a|
 a|
 *DHXDT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DHXDT
 !Definition: !time derivative of the magnetic field X component
@@ -13009,7 +13009,7 @@ a|
 a|
 *DHYDT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DHYDT
 !Definition: !time derivative of the magnetic field Y component
@@ -13019,7 +13019,7 @@ a|
 a|
 *DHZDT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DHZDT
 !Definition: !time derivative of the magnetic field Z component
@@ -13029,7 +13029,7 @@ a|
 a|
 *boreholeLoggingProperty*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !boreholeLoggingProperty
 !Definition: !borehole looging property
@@ -13038,7 +13038,7 @@ a|
 a|
 *MATR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MATR
 !Definition: !Neutron Porosity Matrix
@@ -13048,7 +13048,7 @@ a|
 a|
 *C_TP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !C_TP
 !Definition: !Core Top Depth
@@ -13058,7 +13058,7 @@ a|
 a|
 *C_BS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !C_BS
 !Definition: !Core Base Depth
@@ -13068,7 +13068,7 @@ a|
 a|
 *C_RC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !C_RC
 !Definition: !Recovered Amount (Length)
@@ -13078,7 +13078,7 @@ a|
 a|
 *C_DI*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !C_DI
 !Definition: !Core Diameter
@@ -13088,7 +13088,7 @@ a|
 a|
 *CORT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CORT
 !Definition: !Core top depth
@@ -13098,7 +13098,7 @@ a|
 a|
 *CORB*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CORB
 !Definition: !Core Bottom Depth
@@ -13108,7 +13108,7 @@ a|
 a|
 *DDEP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DDEP
 !Definition: !Depth
@@ -13118,7 +13118,7 @@ a|
 a|
 *ROP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !ROP
 !Definition: !Rate of Penetration
@@ -13128,7 +13128,7 @@ a|
 a|
 *WOB*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !WOB
 !Definition: !Weight on bit
@@ -13138,7 +13138,7 @@ a|
 a|
 *RPM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RPM
 !Definition: !Rotations per minute
@@ -13148,7 +13148,7 @@ a|
 a|
 *TQ*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TQ
 !Definition: !Torque on bit in amps
@@ -13158,7 +13158,7 @@ a|
 a|
 *PUMP*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !PUMP
 !Definition: !Mud pump pressure
@@ -13168,7 +13168,7 @@ a|
 a|
 *TSPM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TSPM
 !Definition: !Total strokes per minute
@@ -13178,7 +13178,7 @@ a|
 a|
 *GPM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !GPM
 !Definition: !Gallons per minute
@@ -13188,7 +13188,7 @@ a|
 a|
 *ECD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !ECD
 !Definition: !Effective circulation density
@@ -13198,7 +13198,7 @@ a|
 a|
 *MD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MD
 !Definition: !Measured Depth
@@ -13208,7 +13208,7 @@ a|
 a|
 *TVD*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TVD
 !Definition: !True Vertical Depth
@@ -13218,7 +13218,7 @@ a|
 a|
 *AZIM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !AZIM
 !Definition: !Borehole Azimuth
@@ -13228,7 +13228,7 @@ a|
 a|
 *DEVI*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DEVI
 !Definition: !Borehole Deviation
@@ -13238,7 +13238,7 @@ a|
 a|
 *RB*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RB
 !Definition: !Relative Bearing
@@ -13248,7 +13248,7 @@ a|
 a|
 *NSDR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !NSDR
 !Definition: !North South drift
@@ -13258,7 +13258,7 @@ a|
 a|
 *EWDR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !EWDR
 !Definition: !East West drift
@@ -13268,7 +13268,7 @@ a|
 a|
 *TOPT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TOPT
 !Definition: !Formation Top Depth
@@ -13278,7 +13278,7 @@ a|
 a|
 *TOPB*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !TOPB
 !Definition: !Formation Base Depth
@@ -13288,7 +13288,7 @@ a|
 a|
 *DEPT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DEPT
 !Definition: !Depth
@@ -13298,7 +13298,7 @@ a|
 a|
 *DPHI*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DPHI
 !Definition: !Density Porosity
@@ -13308,7 +13308,7 @@ a|
 a|
 *GR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !GR
 !Definition: !Gamma Ray
@@ -13318,7 +13318,7 @@ a|
 a|
 *PEF*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !PEF
 !Definition: !Photoelectric Factor
@@ -13328,7 +13328,7 @@ a|
 a|
 *RHOB*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RHOB
 !Definition: !Bulk Density
@@ -13338,7 +13338,7 @@ a|
 a|
 *NEUT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !NEUT
 !Definition: !Neutron Porosity
@@ -13348,7 +13348,7 @@ a|
 a|
 *DEN*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DEN
 !Definition: !Density Porosity
@@ -13358,7 +13358,7 @@ a|
 a|
 *SPOR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SPOR
 !Definition: !Sonic Porosity
@@ -13368,7 +13368,7 @@ a|
 a|
 *PERM*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !PERM
 !Definition: !Core permeability
@@ -13378,7 +13378,7 @@ a|
 a|
 *CPOR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !CPOR
 !Definition: !Core porosity
@@ -13388,7 +13388,7 @@ a|
 a|
 *OIL*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !OIL
 !Definition: !Core Oil saturation
@@ -13398,7 +13398,7 @@ a|
 a|
 *SWTR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !SWTR
 !Definition: !Core water saturation
@@ -13408,7 +13408,7 @@ a|
 a|
 *OILVOL*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !OILVOL
 !Definition: !Core oil volume
@@ -13418,7 +13418,7 @@ a|
 a|
 *WTR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !WTR
 !Definition: !Core water volume
@@ -13428,7 +13428,7 @@ a|
 a|
 *MDEN*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MDEN
 !Definition: !Density Porosity Matrix
@@ -13438,7 +13438,7 @@ a|
 a|
 *DTMA*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !DTMA
 !Definition: !Sonic Porosity Matrix
@@ -13448,7 +13448,7 @@ a|
 a|
 *seismicProperty*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismicProperty
 !Definition: !seismic property
@@ -13457,7 +13457,7 @@ a|
 a|
 *seismicReflectivity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismicReflectivity
 !Definition: !seismic reflectivity
@@ -13467,7 +13467,7 @@ a|
 a|
 *seismicVelocity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismicVelocity
 !Definition: !seismic velocity type
@@ -13477,7 +13477,7 @@ a|
 a|
 *Vp*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vp
 !Definition: !primary wave velocity
@@ -13487,7 +13487,7 @@ a|
 a|
 *Vs*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Vs
 !Definition: !secondary wave velocity
@@ -13497,7 +13497,7 @@ a|
 a|
 *seismicAmplitude*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismicAmplitude
 !Definition: !seismic amplitude
@@ -13507,7 +13507,7 @@ a|
 a|
 *gravimetricProperty*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !gravimetricProperty
 !Definition: !gravimetric property
@@ -13516,7 +13516,7 @@ a|
 a|
 *density*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !density
 !Definition: !density used for gravity corrections
@@ -13526,7 +13526,7 @@ a|
 a|
 *gravityBouguerAnomaly*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !gravityBouguerAnomaly
 !Definition: !Bouguer anomaly
@@ -13536,7 +13536,7 @@ a|
 a|
 *gravityFreeAirAnomaly*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !gravityFreeAirAnomaly
 !Definition: !Observed gravity corrected for latitude and elevation of the station
@@ -13546,7 +13546,7 @@ a|
 a|
 *observedGravity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !observedGravity
 !Definition: !Observed gravity field
@@ -13556,7 +13556,7 @@ a|
 a|
 *magneticProperty*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !magneticProperty
 !Definition: !magnetometric property
@@ -13565,7 +13565,7 @@ a|
 a|
 *IGRF*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !IGRF
 !Definition: !Magnetic scalar potential (V) calculated by International Geomagnetic Reference Field coefficients
@@ -13575,7 +13575,7 @@ a|
 a|
 *magneticFieldVector*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !magneticFieldVector
 !Definition: !magnetic field vector
@@ -13585,7 +13585,7 @@ a|
 a|
 *MAG_X*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_X
 !Definition: !X (north) component of the magnetic field.
@@ -13595,7 +13595,7 @@ a|
 a|
 *MAG_Y*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_Y
 !Definition: !Y (east) component of the magnetic field.
@@ -13605,7 +13605,7 @@ a|
 a|
 *MAG_Z*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_Z
 !Definition: !Vertical magnetic field
@@ -13615,7 +13615,7 @@ a|
 a|
 *MAG_T*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_T
 !Definition: !magnetic total field
@@ -13625,7 +13625,7 @@ a|
 a|
 *MAG_H*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_H
 !Definition: !Horizontal magnetic field
@@ -13635,7 +13635,7 @@ a|
 a|
 *MAG_INCL*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_INCL
 !Definition: !Inclination of magnetic field, downward deviation from horizontal.
@@ -13645,7 +13645,7 @@ a|
 a|
 *MAG_DECL*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_DECL
 !Definition: !Declination of magnetic field, clockwise deviation from true North
@@ -13655,7 +13655,7 @@ a|
 a|
 *magneticFieldAnomaly*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !magneticFieldAnomaly
 !Definition: !magnetic field anomaly
@@ -13665,7 +13665,7 @@ a|
 a|
 *MAG_DT*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_DT
 !Definition: !Total magnetic field anomaly, relativ to normal magnetic field
@@ -13675,7 +13675,7 @@ a|
 a|
 *MAG_DZ*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_DZ
 !Definition: !Vertical magnetic field anomaly , relative to normal magnetic field
@@ -13685,7 +13685,7 @@ a|
 a|
 *MAG_DH*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MAG_DH
 !Definition: !Horizontal magnetic field anomaly, relative to normal magnetic field
@@ -13695,7 +13695,7 @@ a|
 a|
 *electromagneticProperty*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !electromagneticProperty
 !Definition: !electromagnetic property
@@ -13704,7 +13704,7 @@ a|
 a|
 *conductivity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !conductivity
 !Definition: !Electric conductivity
@@ -13714,7 +13714,7 @@ a|
 a|
 *resistivity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !resistivity
 !Definition: !Electric resistivity
@@ -13724,7 +13724,7 @@ a|
 a|
 *chargeability*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !chargeability
 !Definition: !Electric chargeability
@@ -13734,7 +13734,7 @@ a|
 a|
 *radiometricProperty*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !radiometricProperty
 !Definition: !radiometric property
@@ -13743,7 +13743,7 @@ a|
 a|
 *totalGammaRadiation*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !totalGammaRadiation
 !Definition: !Intensity of total gamma radiation
@@ -13753,7 +13753,7 @@ a|
 a|
 *RAD_TC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RAD_TC
 !Definition: !total count
@@ -13763,7 +13763,7 @@ a|
 a|
 *RAD_EQ_TH*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RAD_EQ_TH
 !Definition: !equivalent thorium intensity
@@ -13773,7 +13773,7 @@ a|
 a|
 *RAD_EQ_U*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RAD_EQ_U
 !Definition: !equivalent uranium intensity
@@ -13783,7 +13783,7 @@ a|
 a|
 *RAD_K*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RAD_K
 !Definition: !kalium intensity
@@ -13793,7 +13793,7 @@ a|
 a|
 *RAD_TH*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RAD_TH
 !Definition: !thorium intensity
@@ -13803,7 +13803,7 @@ a|
 a|
 *RAD_U*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RAD_U
 !Definition: !uranium intensity
@@ -13813,7 +13813,7 @@ a|
 a|
 *RAD_DR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RAD_DR
 !Definition: !dose rate
@@ -13823,7 +13823,7 @@ a|
 a|
 *RAD_TR*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RAD_TR
 !Definition: !total radioactivity
@@ -13833,7 +13833,7 @@ a|
 a|
 *RAD_CS137*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !RAD_CS137
 !Definition: !caesium137 intensity
@@ -13843,7 +13843,7 @@ a|
 a|
 *seismologicProperty*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismologicProperty
 !Definition: !seismologic property
@@ -13852,7 +13852,7 @@ a|
 a|
 *seismologyMagnitude*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismologyMagnitude
 !Definition: !Earthquake magnitude
@@ -13862,7 +13862,7 @@ a|
 a|
 *seismologyfocalDistribution*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismologyfocalDistribution
 !Definition: !Distribution of earthquake focuses
@@ -13872,7 +13872,7 @@ a|
 a|
 *MT_Property*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_Property
 !Definition: !MT property
@@ -13881,7 +13881,7 @@ a|
 a|
 *MT_Ex*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_Ex
 !Definition: !X (north) component of the electric field.
@@ -13891,7 +13891,7 @@ a|
 a|
 *MT_Ey*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_Ey
 !Definition: !Y (east) component of the electric field.
@@ -13901,7 +13901,7 @@ a|
 a|
 *MT_Hx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_Hx
 !Definition: !X (north) component of the magnetic field.
@@ -13911,7 +13911,7 @@ a|
 a|
 *MT_Hy*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_Hy
 !Definition: !Y (east) component of the magnetic field.
@@ -13921,7 +13921,7 @@ a|
 a|
 *MT_Hz*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_Hz
 !Definition: !Z (vertical) component of the magnetic field.
@@ -13931,7 +13931,7 @@ a|
 a|
 *MT_impedanceTensor*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_impedanceTensor
 !Definition: !MT impedance tensor
@@ -13941,7 +13941,7 @@ a|
 a|
 *MT_RE_Zxx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_RE_Zxx
 !Definition: !Real part of the complex Zxx diagonal element that couples parallel electric(Ex) and magnetic(Hx) field
@@ -13951,7 +13951,7 @@ a|
 a|
 *MT_IM_Zxx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_IM_Zxx
 !Definition: !Imaginary part of the complex Zxx diagonal element that couples parallel electric(Ex) and magnetic(Hx) field
@@ -13961,7 +13961,7 @@ a|
 a|
 *MT_RE_Zxy*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_RE_Zxy
 !Definition: !Real part of the complex Zxy off-diagonal element that couples orthogonal electric(Ex) and magnetic(Hy) field
@@ -13971,7 +13971,7 @@ a|
 a|
 *MT_IM_Zxy*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_IM_Zxy
 !Definition: !Imaginary part of the complex Zxy off-diagonal element that couples orthogonal electric(Ex) and magnetic(Hy) field
@@ -13981,7 +13981,7 @@ a|
 a|
 *MT_RE_Zyx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_RE_Zyx
 !Definition: !Real part of the complex Zyx off-diagonal element that couples orthogonal electric(Ey) and magnetic(Hx) field
@@ -13991,7 +13991,7 @@ a|
 a|
 *MT_IM_Zyx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_IM_Zyx
 !Definition: !Imaginary part of the complex Zyx off-diagonal element that couples orthogonal electric(Ey) and magnetic(Hx) field
@@ -14001,7 +14001,7 @@ a|
 a|
 *MT_RE_Zyy*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_RE_Zyy
 !Definition: !Real part of the complex Zyy diagonal element that couples parallel electric(Ey) and magnetic(Hy) field
@@ -14011,7 +14011,7 @@ a|
 a|
 *MT_IM_Zyy*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_IM_Zyy
 !Definition: !Imaginary part of the complex Zyy diagonal element that couples parallel electric(Ey) and magnetic(Hy) field
@@ -14021,7 +14021,7 @@ a|
 a|
 *MT_RE_Tx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_RE_Tx
 !Definition: !Real part of tipper Tx element, that couples Hz and Hx magnetic field
@@ -14031,7 +14031,7 @@ a|
 a|
 *MT_IM_Tx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_IM_Tx
 !Definition: !Imaginary part of tipper Tx element that couples Hz and Hx magnetic field
@@ -14041,7 +14041,7 @@ a|
 a|
 *MT_RE_Ty*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_RE_Ty
 !Definition: !Real part of tipper Ty element that couples Hz and Hy magnetic field
@@ -14051,7 +14051,7 @@ a|
 a|
 *MT_IM_Ty*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_IM_Ty
 !Definition: !Imaginary part of tipper Tx element that couples Hz and Hy magnetic field
@@ -14061,7 +14061,7 @@ a|
 a|
 *MT_resistivity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_resistivity
 !Definition: !MT apparent resistivity
@@ -14071,7 +14071,7 @@ a|
 a|
 *MT_ROxx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_ROxx
 !Definition: !MT resistivity calculated from Zxx
@@ -14081,7 +14081,7 @@ a|
 a|
 *MT_ROxy*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_ROxy
 !Definition: !apparent resistivity calculated from Zxy
@@ -14091,7 +14091,7 @@ a|
 a|
 *MT_ROyx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_ROyx
 !Definition: !apparent resistivity calculated from Zyx
@@ -14101,7 +14101,7 @@ a|
 a|
 *MT_ROyy*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_ROyy
 !Definition: !apparent resistivity calculated from Zyy
@@ -14111,7 +14111,7 @@ a|
 a|
 *MT_phase*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_phase
 !Definition: !MT phase
@@ -14121,7 +14121,7 @@ a|
 a|
 *MT_PHxx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_PHxx
 !Definition: !phase of Zxx
@@ -14131,7 +14131,7 @@ a|
 a|
 *MT_PHxy*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_PHxy
 !Definition: !phase of Zxy
@@ -14141,7 +14141,7 @@ a|
 a|
 *MT_PHyx*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_PHyx
 !Definition: !phase of Zyx
@@ -14151,7 +14151,7 @@ a|
 a|
 *MT_PHyy*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !MT_PHyy
 !Definition: !phase of Zyy
@@ -14165,7 +14165,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Other type of geophysical model
 !Description: !none of the following types: curve model, surface grid model solid grid model. The codelist is expected to be extended by the geophysical community. Recommendations are provided in the Technical Guidence
@@ -14181,7 +14181,7 @@ a|
 a|
 *spotModel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !spotModel
 !Definition: !Geophysical model constructed from elements with point geometry
@@ -14191,7 +14191,7 @@ a|
 a|
 *earthquakeFocalPoint*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !earthquakeFocalPoint
 !Definition: !Geophysical model representing distribution of earthquake focal points
@@ -14201,7 +14201,7 @@ a|
 a|
 *persistantScatterer*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !persistantScatterer
 !Definition: !Geophysical model representing distribution of persistant scatterers identified by radar interferometry
@@ -14211,7 +14211,7 @@ a|
 a|
 *discreteSurfaceModel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !discreteSurfaceModel
 !Definition: !Geophysical model constructed from discrete elements with surface geometry
@@ -14221,7 +14221,7 @@ a|
 a|
 *horizontalCrossSection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !horizontalCrossSection
 !Definition: !Geophysical model constructed from discrete surface elements in a horizontal cross section
@@ -14231,7 +14231,7 @@ a|
 a|
 *verticalCrossSection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !verticalCrossSection
 !Definition: !Geophysical model constructed from discrete surface elements in a vertical cross section
@@ -14241,7 +14241,7 @@ a|
 a|
 *discreteSolidModel*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !discreteSolidModel
 !Definition: !Geophysical model constructed from discrete elements with solid geometry
@@ -14251,7 +14251,7 @@ a|
 a|
 *geophysicalBodyReconstruction*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !geophysicalBodyReconstruction
 !Definition: !Geophysical model of reconstructed 3D bodies, as a result of complex interpretation.
@@ -14265,7 +14265,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical measurement
 !Description: !The codelist is expected to be extended by the geophysical community. Recommendations are provided in the Technical Guidence
@@ -14281,7 +14281,7 @@ a|
 a|
 *3DMultielectrodeDC*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !3dmultielectrodedc
 !Definition: !DC resistivity and/or chargeability (IP) measurement carried out with a larger set of electrodes in order to define 3D electric property distribution in a volume of the earth. Also known as 3D resistivity tomography.
@@ -14294,7 +14294,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of geophysical resource
 !Extensibility: !open
@@ -14309,7 +14309,7 @@ a|
 a|
 *boreholeLoggingResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !boreholeloggingresource
 !Definition: !borehole logging resource
@@ -14318,7 +14318,7 @@ a|
 a|
 *coverage*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !coverage
 !Definition: !standard coverage defined by geometry value pairs, or domain set and range set.
@@ -14327,7 +14327,7 @@ a|
 a|
 *EDI*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !edi
 !Definition: !SEG standard for magnetotelluric data
@@ -14336,7 +14336,7 @@ a|
 a|
 *IAGA2002*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !iaga2002
 !Definition: !IAGA2002 data exchange format
@@ -14345,7 +14345,7 @@ a|
 a|
 *IMFV1.22*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !imfv1.22
 !Definition: !GIN Dissemination Format for Minute Values
@@ -14354,7 +14354,7 @@ a|
 a|
 *INTERMAGNETResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !intermagnetresource
 !Definition: !INTERMAGNET data resource
@@ -14363,7 +14363,7 @@ a|
 a|
 *LAS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !las
 !Definition: !Log ASCII Standard
@@ -14372,7 +14372,7 @@ a|
 a|
 *magneticResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !magneticresource
 !Definition: !magnetic resource
@@ -14381,7 +14381,7 @@ a|
 a|
 *magnetotelluricResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !magnetotelluricresource
 !Definition: !magnetotelluric resource
@@ -14390,7 +14390,7 @@ a|
 a|
 *OGC_Resource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !ogc_resource
 !Definition: !OGC standard resource
@@ -14399,7 +14399,7 @@ a|
 a|
 *SEG-D*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seg-d
 !Definition: !SEG standard for seismic data
@@ -14408,7 +14408,7 @@ a|
 a|
 *SEG-Y*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seg-y
 !Definition: !SEG standard for seismic data
@@ -14417,7 +14417,7 @@ a|
 a|
 *seismicResource*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismicresource
 !Definition: !seismic resource
@@ -14426,7 +14426,7 @@ a|
 a|
 *SensorML*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !sensorml
 !Definition: !Sensor Model Language resource
@@ -14435,7 +14435,7 @@ a|
 a|
 *SPS*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !sps
 !Definition: !SHELL Processing Support File
@@ -14444,7 +14444,7 @@ a|
 a|
 *SWE*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !swe
 !Definition: !Sensor Web Enablement resource
@@ -14453,7 +14453,7 @@ a|
 a|
 *UKOOA*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !ukooa
 !Definition: !seismic navigation file
@@ -14462,7 +14462,7 @@ a|
 a|
 *WITSML*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !witsml
 !Definition: !Well site Information Transfer Standard Markup Language
@@ -14475,7 +14475,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of solid grid model
 !Description: !The codelist is expected to be extended by the geophysical community. Recommendations are provided in the Technical Guidence
@@ -14491,7 +14491,7 @@ a|
 a|
 *parameterBlock*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !parameterblock
 !Definition: !Gridded distribution of physical or geophysical properties in a volume of the earth
@@ -14500,7 +14500,7 @@ a|
 a|
 *seismicVolume*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismicvolume
 !Definition: !Gridded distribution of seismic properties in a volume of the earth
@@ -14513,7 +14513,7 @@ a|
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Type of surface grid model
 !Description: !The codelist is expected to be extended by the geophysical community. Recommendations are provided in the Technical Guidence
@@ -14529,7 +14529,7 @@ a|
 a|
 *horizontalParameterGrid*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !horizontalparametergrid
 !Definition: !Gridded distribution of physical or geophysical properties over a horizontal cross section of the earth
@@ -14538,7 +14538,7 @@ a|
 a|
 *seismicDepthSection*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismicdepthsection
 !Definition: !Seimic property distribution over a vertical cross section of the earth
@@ -14547,7 +14547,7 @@ a|
 a|
 *seismicHorizon*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !seismichorizon
 !Definition: !3D surface identified by some pattern within a 3D seismic volume.
@@ -14556,7 +14556,7 @@ a|
 a|
 *verticalParameterGrid*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !verticalparametergrid
 !Definition: !Gridded distribution of physical or geophysical properties over a vertical cross section of the earth

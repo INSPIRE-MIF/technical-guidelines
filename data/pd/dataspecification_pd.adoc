@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.10 Data Specification on Population Distribution – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Population Distribution
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Population Distribution
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[logo_ce-en-rvb-lr,width=131,height=90]
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
 
@@ -31,22 +42,22 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 
 [width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.10 INSPIRE Data Specification on _Population Distribution_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Population Distribution_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Population Distribution_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Population Distribution_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Population Distribution_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.10_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/pd[D2.8.III.10_v3.0.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
+
 
 <<<
 [discrete]
@@ -291,7 +302,7 @@ General terms and definitions helpful for understanding the INSPIRE data specifi
 
 === Symbols and abbreviations
 
-[align=center,width="100%",cols="21%,79%"]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |EC |European Commission
@@ -1159,7 +1170,7 @@ If no ID is included some other data about the provider and base has to be provi
 |===
 |*StatisticalDistribution*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Statistical distribution
 !Definition: !Set of measures describing how a phenomenon is spread within some part of the 2D world.
@@ -1169,7 +1180,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !INSPIRE identifier
 !Value type: !Identifier
@@ -1181,7 +1192,7 @@ a|
 a|
 *Attribute: areaOfDissemination*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Area of dissemination
 !Value type: !GM_Surface
@@ -1192,7 +1203,7 @@ a|
 a|
 *Attribute: universe*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Universe
 !Value type: !PT_FreeText
@@ -1203,7 +1214,7 @@ a|
 a|
 *Attribute: domain*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Domain
 !Value type: !PT_FreeText
@@ -1215,7 +1226,7 @@ a|
 a|
 *Attribute: measure*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Measure
 !Value type: !VariableValue
@@ -1227,7 +1238,7 @@ a|
 a|
 *Attribute: measurementMethod*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Measurement method
 !Value type: !StatisticsMeasurementMethodValue
@@ -1238,7 +1249,7 @@ a|
 a|
 *Attribute: measurementUnit*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Measurement unit
 !Value type: !UnitOfMeasure
@@ -1249,7 +1260,7 @@ a|
 a|
 *Attribute: notCountedProportion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Not counted proportion
 !Value type: !Number
@@ -1261,7 +1272,7 @@ a|
 a|
 *Attribute: periodOfMeasurement*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Period of measurement
 !Value type: !TM_Period
@@ -1272,7 +1283,7 @@ a|
 a|
 *Attribute: periodOfReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Period of reference
 !Value type: !TM_Period
@@ -1283,7 +1294,7 @@ a|
 a|
 *Attribute: periodOfValidity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Period of validity
 !Value type: !TM_Period
@@ -1295,7 +1306,7 @@ a|
 a|
 *Attribute: beginLifeSpanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Begin life span version
 !Value type: !DateTime
@@ -1307,7 +1318,7 @@ a|
 a|
 *Attribute: endLifeSpanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !End life span version
 !Value type: !DateTime
@@ -1319,7 +1330,7 @@ a|
 a|
 *Attribute: generalStatus*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !general status
 !Value type: !StatisticalDataStatusValue
@@ -1330,7 +1341,7 @@ a|
 a|
 *Association role: value*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Value
 !Value type: !StatisticalValue
@@ -1341,7 +1352,7 @@ a|
 a|
 *Association role: classification*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification
 !Value type: !Classification
@@ -1359,7 +1370,7 @@ a|
 |===
 |*Classification*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification
 !Definition: !A classification used for a statistical distribution.
@@ -1370,7 +1381,7 @@ a|
 a|
 *Attribute: type*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Type
 !Value type: !ClassificationTypeValue
@@ -1381,7 +1392,7 @@ a|
 a|
 *Association role: item*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Item
 !Value type: !ClassificationItem
@@ -1398,7 +1409,7 @@ a|
 |===
 |*ClassificationItem*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification item
 !Definition: !An item composing a classification.
@@ -1409,7 +1420,7 @@ a|
 a|
 *Attribute: type*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Type
 !Value type: !ClassificationItemTypeValue
@@ -1425,7 +1436,7 @@ a|
 |===
 |*Dimensions*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Dimensions
 !Definition: !The identification of what the piece of datum refers to in terms of geographic location or individual characteristics.
@@ -1435,7 +1446,7 @@ a|
 a|
 *Association role: spatial*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Spatial
 !Value type: !StatisticalUnit
@@ -1446,7 +1457,7 @@ a|
 a|
 *Association role: thematic*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Thematic
 !Value type: !ClassificationItem
@@ -1462,7 +1473,7 @@ a|
 |===
 |*StatisticalValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Statistical value
 !Definition: !The pieces of datum of the distribution.
@@ -1472,7 +1483,7 @@ a|
 a|
 *Attribute: value*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Value
 !Value type: !Number
@@ -1483,7 +1494,7 @@ a|
 a|
 *Attribute: specialValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Special value
 !Value type: !SpecialValue
@@ -1494,7 +1505,7 @@ a|
 a|
 *Attribute: conventionallyLocatedProportion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Conventionally located proportion
 !Value type: !Number
@@ -1505,7 +1516,7 @@ a|
 a|
 *Attribute: approximatelyLocatedPopulationProportion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Approximately located proportion
 !Value type: !Number
@@ -1516,7 +1527,7 @@ a|
 a|
 *Attribute: comment*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Comment
 !Value type: !PT_FreeText
@@ -1527,7 +1538,7 @@ a|
 a|
 *Attribute: flags*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Flags
 !Value type: !PT_FreeText
@@ -1538,7 +1549,7 @@ a|
 a|
 *Attribute: periodOfMeasurement*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Period of measurement
 !Value type: !TM_Period
@@ -1550,7 +1561,7 @@ a|
 a|
 *Attribute: status*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Status
 !Value type: !StatisticalDataStatusValue
@@ -1561,7 +1572,7 @@ a|
 a|
 *Association role: dimensions*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Dimensions
 !Value type: !Dimensions
@@ -1572,7 +1583,7 @@ a|
 a|
 *Constraint: valueOrSpecialValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Either the value or the specialValue attribute shall be provided.
 !OCL: !
@@ -1588,7 +1599,7 @@ a|
 |===
 |*AgeBy5YearsValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Age by 5 years value
 !Definition: !Code values for age by 5 years classification items.
@@ -1605,7 +1616,7 @@ a|
 |===
 |*AgeByYearValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Age by year value
 !Definition: !Code values for age by year classification items.
@@ -1622,7 +1633,7 @@ a|
 |===
 |*AgeGroupValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Age group value
 !Definition: !Code values for age group classification items.
@@ -1639,7 +1650,7 @@ a|
 |===
 |*ClassificationItemTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification item type value
 !Definition: !Code values for classification items.
@@ -1656,7 +1667,7 @@ a|
 |===
 |*ClassificationTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification type value
 !Definition: !Code values for classification types.
@@ -1673,7 +1684,7 @@ a|
 |===
 |*NACECodeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !NACE code value
 !Code values for NACE classification items.
@@ -1690,7 +1701,7 @@ a|
 |===
 |*SpecialValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Special value
 !Definition: !Code values for special values.
@@ -1707,7 +1718,7 @@ a|
 |===
 |*StatisticalDataStatusValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Statistical data status value
 !Definition: !Code values for statistical data status.
@@ -1724,7 +1735,7 @@ a|
 |===
 |*StatisticsMeasurementMethodValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Statistics measurement method value
 !Definition: !Code values for statistics measurement method.
@@ -1741,7 +1752,7 @@ a|
 |===
 |*VariableValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Variable value
 !Definition: !Code values for variable names.
@@ -1762,7 +1773,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1776,7 +1787,7 @@ a|
 |===
 |*GM_Surface*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1790,7 +1801,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -1810,7 +1821,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*Number (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Numerics
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1824,7 +1835,7 @@ a|
 |===
 |*PT_FreeText*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Cultural and linguistic adapdability
 !Reference: !Geographic information -- Metadata -- XML schema implementation [ISO/TS 19139:2007]
@@ -1838,7 +1849,7 @@ a|
 |===
 |*StatisticalUnit (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Statistical Units Base
 !Reference: !INSPIRE Data specification on Statistical Units [DS-D2.8.III.1]
@@ -1858,7 +1869,7 @@ NOTE Spatial features of any INSPIRE application schema can be considered as a s
 |===
 |*TM_Period*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Objects
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -1872,7 +1883,7 @@ a|
 |===
 |*UnitOfMeasure (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Units of Measure
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2992,7 +3003,6 @@ a|
 |===
 
 *StatisticsMeasurementMethodValue*
-
 [width="100%",cols="100%"]
 |===
 a|

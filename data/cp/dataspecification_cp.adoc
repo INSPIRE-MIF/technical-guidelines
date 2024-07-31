@@ -23,30 +23,40 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.I.6 Data Specification on Cadastral Parcels – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Cadastral Parcels
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Cadastral Parcels
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[logo_ce-en-rvb-lr,width=131,height=90]
 
 image:./media/image3.png[ESEC,width=93,height=93] **INSPIRE***Infrastructure for Spatial Information in Europe*
 
 [discrete]
-== D2.8.I.6 Data Specification on Cadastral Parcels – Technical Guidelines
+== D2.8.I.6 Data Specification on _Cadastral Parcels_ – Technical Guidelines
 
 [width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.I.6 Data Specification on _Cadastral_ Parcels – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Cadastral_ Parcels
-|*Date* |2014-04-17
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Cadastral_ Parcels
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}Symbols and abbreviations
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Cadastral_ Parcels
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Cadastral_ Parcels
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.I.6_v3.1
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/cp[D2.8.I.6_v3.1.1]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
 
 <<<
@@ -307,7 +317,7 @@ EXAMPLE topological overlaps may occur when assembling cadastral parcels coming 
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |FIG |International Federation of Surveyors
 |GCM |Generic Conceptual Model
@@ -1123,7 +1133,7 @@ EXAMPLE In most countries, there are parcels under dispute for which a provisory
 |===
 |*BasicPropertyUnit*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !The basic unit of ownership that is recorded in the land books, land registers or equivalent. It is defined by unique ownership and homogeneous real property rights, and may consist of one or more adjacent or geographically separate parcels.
 !Description: !SOURCE Adapted from UN ECE 2004. 
@@ -1141,7 +1151,7 @@ NOTE 4 Some countries, such as Norway, may have parcels which belong to several 
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -1152,7 +1162,7 @@ a|
 a|
 *Attribute: nationalCadastralReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Thematic identifier at national level, generally the full national code of the basic property unit. Must ensure the link to the national cadastral register or equivalent.
@@ -1163,7 +1173,7 @@ a|
 a|
 *Attribute: areaValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Area
 !Definition: !Registered area value giving quantification of the area projected on the horizontal plane of the cadastral parcels composing the basic property unit.
@@ -1174,7 +1184,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Official date and time the basic property unit was/will be legally established.
@@ -1186,7 +1196,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which the basic property unit legally ceased/will cease to be used.
@@ -1198,7 +1208,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1209,7 +1219,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1220,7 +1230,7 @@ a|
 a|
 *Association role: administrativeUnit*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !AdministrativeUnit
 !Definition: !The administrative unit of lowest administrative level containing this basic property unit.
@@ -1231,7 +1241,7 @@ a|
 a|
 *Constraint: areaValueUoM*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Value of areaValue shall be given in square meters
 !OCL: !inv: self.areaValue.uom.uomSymbol='m2'
@@ -1240,7 +1250,7 @@ a|
 a|
 *Constraint: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If set, the date endLifespanVersion shall be later than beginLifespanVersion.
 !OCL: !inv: self.endLifespanVersion .isAfter(self.beginLifespanVersion)
@@ -1249,7 +1259,7 @@ a|
 a|
 *Constraint: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If set, the date validTo shall be equal or later than validFrom.
 !OCL: !inv: self.validTo .isEqual(self.validFrom) or self.validTo .isAfter(self.validFrom)
@@ -1263,7 +1273,7 @@ a|
 |===
 |*CadastralBoundary*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Part of the outline of a cadastral parcel. One cadastral boundary may be shared by two neighbouring cadastral parcels.
 !Description: !NOTE In the INSPIRE context, cadastral boundaries are to be made available by member states where absolute positional accuracy information is recorded for the cadastral boundary (attribute estimated accuracy).
@@ -1273,7 +1283,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1284,7 +1294,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1295,7 +1305,7 @@ a|
 a|
 *Attribute: estimatedAccuracy*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Length
 !Definition: !Estimated absolute positional accuracy of the cadastral boundary in the used INSPIRE coordinate reference system. Absolute positional accuracy is the mean value of the positional uncertainties for a set of positions, where the positional uncertainties are the distance between a measured position and what is considered as the corresponding true position.
@@ -1307,7 +1317,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Curve
 !Definition: !Geometry of the cadastral boundary.
@@ -1317,7 +1327,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -1328,7 +1338,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Official date and time the cadastral boundary was/will be legally established.
@@ -1339,7 +1349,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which the cadastral boundary legally ceased/will cease to be used.
@@ -1350,7 +1360,7 @@ a|
 a|
 *Association role: parcel*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CadastralParcel
 !Definition: !The cadastral parcel(s) outlined by this cadastral boundary. A cadastral boundary may outline one or two cadastral parcels.
@@ -1361,7 +1371,7 @@ a|
 a|
 *Constraint: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If set, the date endLifespanVersion shall be later than beginLifespanVersion.
 !OCL: !inv: self.endLifespanVersion .isAfter(self.beginLifespanVersion)
@@ -1370,7 +1380,7 @@ a|
 a|
 *Constraint: estimatedAccuracyUoM*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Value of estimatedAccuracy shall be given in meters.
 !OCL: !inv: self.estimatedAccuracy.uom.uomSymbol='m'
@@ -1379,7 +1389,7 @@ a|
 a|
 *Constraint: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If set, the date validTo shall be equal or later than validFrom.
 !OCL: !inv: self.validTo .isEqual(self.validFrom) or self.validTo .isAfter(self.validFrom)
@@ -1393,7 +1403,7 @@ a|
 |===
 |*CadastralParcel*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Areas defined by cadastral registers or equivalent.
 !Description: !SOURCE [INSPIRE Directive:2007]. 
@@ -1405,7 +1415,7 @@ NOTE As much as possible, in the INSPIRE context, cadastral parcels should be fo
 a|
 *Attribute: areaValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Area
 !Definition: !Registered area value giving quantification of the area projected on the horizontal plane of the cadastral parcel.
@@ -1416,7 +1426,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1427,7 +1437,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1438,7 +1448,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Object
 !Definition: !Geometry of the cadastral parcel.
@@ -1449,7 +1459,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -1460,7 +1470,7 @@ a|
 a|
 *Attribute: label*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Text commonly used to display the cadastral parcel identification.
@@ -1473,7 +1483,7 @@ NOTE 2 The label can be used for label in portrayal.
 a|
 *Attribute: nationalCadastralReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Thematic identifier at national level, generally the full national code of the cadastral parcel. Must ensure the link to the national cadastral register or equivalent.
@@ -1484,7 +1494,7 @@ a|
 a|
 *Attribute: referencePoint*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Point
 !Definition: !A point within the cadastral parcel.
@@ -1496,7 +1506,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Official date and time the cadastral parcel was/will be legally established.
@@ -1508,7 +1518,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which the cadastral parcel legally ceased/will cease to be used.
@@ -1520,7 +1530,7 @@ a|
 a|
 *Association role: administrativeUnit*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !AdministrativeUnit
 !Definition: !The administrative unit of lowest administrative level containing this cadastral parcel.
@@ -1531,7 +1541,7 @@ a|
 a|
 *Association role: basicPropertyUnit*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !BasicPropertyUnit
 !Definition: !The basic property unit(s) containing this cadastral parcel.
@@ -1542,7 +1552,7 @@ a|
 a|
 *Association role: zoning*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CadastralZoning
 !Definition: !The cadastral zoning of lowest level containing this cadastral parcel.
@@ -1553,7 +1563,7 @@ a|
 a|
 *Constraint: areaValueUoM*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Value of areaValue shall be given in square meters.
 !OCL: !inv: self.areaValue.uom.uomSymbol='m2'
@@ -1562,7 +1572,7 @@ a|
 a|
 *Constraint: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If set, the date endLifespanVersion shall be later than beginLifespanVersion.
 !OCL: !inv: self.endLifespanVersion .isAfter(self.beginLifespanVersion)
@@ -1571,7 +1581,7 @@ a|
 a|
 *Constraint: geometryType*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Type of geometry shall be GM_Surface or GM_MultiSurface
 !OCL: !inv: geometry.oclIsKindOf(GM_Surface) or geometry.oclIsKindOf(GM_MultiSurface)
@@ -1580,7 +1590,7 @@ a|
 a|
 *Constraint: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If set, the date validTo shall be equal or later than validFrom.
 !OCL: !inv: self.validTo .isEqual(self.validFrom) or self.validTo .isAfter(self.validFrom)
@@ -1594,7 +1604,7 @@ a|
 |===
 |*CadastralZoning*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Intermediary areas used in order to divide national territory into cadastral parcels.
 !Description: !NOTE 1 In the INSPIRE context, cadastral zonings are to be used to carry metadata information and to facilitate portrayal and search of data. 
@@ -1608,7 +1618,7 @@ EXAMPLE Municipality, section, parish, district, block.
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1619,7 +1629,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1630,7 +1640,7 @@ a|
 a|
 *Attribute: estimatedAccuracy*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Length
 !Definition: !The estimated absolute positional accuracy of cadastral parcels within the cadastral zoning in the used INSPIRE coordinate reference system. Absolute positional accuracy is the mean value of the positional uncertainties for a set of positions, where the positional uncertainties are the distance between a measured position and what is considered as the corresponding true position.
@@ -1642,7 +1652,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_MultiSurface
 !Definition: !Geometry of the cadastral zoning.
@@ -1652,7 +1662,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of spatial object.
@@ -1664,7 +1674,7 @@ An external object identifier is a unique object identifier published by the res
 a|
 *Attribute: label*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Text commonly used to display the cadastral zoning identification.
@@ -1677,7 +1687,7 @@ NOTE 2 The label can be used for label in portrayal.
 a|
 *Attribute: level*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CadastralZoningLevelValue
 !Definition: !Level of the cadastral zoning in the national cadastral hierarchy.
@@ -1688,7 +1698,7 @@ a|
 a|
 *Attribute: levelName*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LocalisedCharacterString
 !Definition: !Name of the level of the cadastral zoning in the national cadastral hierarchy, in at least one official language of the European Union.
@@ -1700,7 +1710,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GeographicalName
 !Definition: !Name of the cadastral zoning.
@@ -1716,7 +1726,7 @@ NOTE 2 The language of the name should be filled in most cases, except if the da
 a|
 *Attribute: nationalCadastalZoningReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Thematic identifier at national level, generally the full national code of the cadastral zoning.
@@ -1727,7 +1737,7 @@ a|
 a|
 *Attribute: originalMapScaleDenominator*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Integer
 !Definition: !The denominator in the scale of the original paper map (if any) to whose extent the cadastral zoning corresponds.
@@ -1739,7 +1749,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Official date and time the cadastral zoning was/will be legally established.
@@ -1750,7 +1760,7 @@ a|
 a|
 *Attribute: referencePoint*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Point
 !Definition: !A point within the cadastral zoning.
@@ -1762,7 +1772,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which the cadastral zoning legally ceased/will cease to be used.
@@ -1773,7 +1783,7 @@ a|
 a|
 *Association role: upperLevelUnit*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CadastralZoning
 !Definition: !The next upper level cadastral zoning containing this cadastral zoning.
@@ -1784,7 +1794,7 @@ a|
 a|
 *Constraint: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If set, the date endLifespanVersion shall be later than beginLifespanVersion.
 !OCL: !inv: self.endLifespanVersion .isAfter(self.beginLifespanVersion)
@@ -1793,7 +1803,7 @@ a|
 a|
 *Constraint: estimatedAccuracyUoM*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Value of estimatedAccuracy shall be given in meters.
 !OCL: !inv: self.estimatedAccuracy.uom.uomSymbol='m'
@@ -1802,7 +1812,7 @@ a|
 a|
 *Constraint: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !If set, the date validTo shall be equal or later than validFrom.
 !OCL: !inv: self.validTo .isEqual(self.validFrom) or self.validTo .isAfter(self.validFrom)
@@ -1811,7 +1821,7 @@ a|
 a|
 *Constraint: zoningLevelHierarchy*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !A lower level cadastral zoning shall be part of an upper level zoning.
 !OCL: !inv: self.nationalLevel <> '1stOrder' implies self.level < self.upperLevelUnit.level
@@ -1827,7 +1837,7 @@ a|
 |===
 |*CadastralZoningLevelValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Levels of hierarchy of the cadastral zonings.
 !Description: !NOTE The higher levels in the administrative units theme (province, state) are not repeated in this code list.
@@ -1848,7 +1858,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*AdministrativeUnit*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !AdministrativeUnits
 !Reference: !INSPIRE Data specification on Administrative Units [DS-D2.8.I.4]
@@ -1863,7 +1873,7 @@ a|
 |===
 |*Area*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Units of Measure
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1877,7 +1887,7 @@ a|
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1891,7 +1901,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1905,7 +1915,7 @@ a|
 |===
 |*GM_Curve*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1919,7 +1929,7 @@ a|
 |===
 |*GM_MultiSurface*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric aggregates
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1933,7 +1943,7 @@ a|
 |===
 |*GM_Object (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometry root
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1947,7 +1957,7 @@ a|
 |===
 |*GM_Point*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1961,7 +1971,7 @@ a|
 |===
 |*GeographicalName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geographical Names
 !Reference: !INSPIRE Data specification on Geographical Names [DS-D2.8.I.3]
@@ -1976,7 +1986,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -1996,7 +2006,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*Integer*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Numerics
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2010,7 +2020,7 @@ a|
 |===
 |*Length*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Units of Measure
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2024,7 +2034,7 @@ a|
 |===
 |*LocalisedCharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Cultural and linguistic adapdability
 !Reference: !Geographic information -- Metadata -- XML schema implementation [ISO/TS 19139:2007]
@@ -6662,7 +6672,7 @@ In cases where the cartography were not good enough the Spanish Cadastre have pr
 
 === Abbreviations
 
-[cols=","]
+[%autowidth]
 |===
 |CRS |Coordinate Reference System
 |DPS |Data Product Specification
