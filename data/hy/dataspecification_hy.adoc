@@ -3068,23 +3068,9 @@ a|
 [cols=","]
 !===
 !Definition: !A code list type specifying a set of hydrographic 'origin' categories (natural, man-made) for various hydrographic objects.
-!URI: !
+!URI: !http://inspire.ec.europa.eu/codelist/OriginValue
 !===
 
-a|
-[cols=","]
-!===
-!Value: !*natural*
-!Definition: !An indication that a spatial object is natural.
-!===
-
-a|
-[cols=","]
-!===
-!Value: !*manMade*
-!Definition: !An indication that a spatial object is man-made.
-!Description: !SOURCE [DFDD].
-!===
 
 |===
 
