@@ -2493,7 +2493,7 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 ===== Default encoding(s) for application schema Atmospheric Conditions and Meteorological Geographical Features
 
 *Name: Atmospheric Conditions and Meteorological Geographical Features GML Application Schema*
-Version: 3.0,
+Version: 4.0,
 Specification: D2.8.III.13-14 Data Specification on Atmospheric Conditions and Meteorological Geographical Features – Technical Guidelines
 Character set: UTF-8
 All the AC-MF data offered using INSPIRE Download Services must follow this GML Application Schema for encoding the Observation instances within the feature collection results of the Get Spatial Objects operations.
@@ -2501,7 +2501,7 @@ All the AC-MF data offered using INSPIRE Download Services must follow this GML 
 The xml schema document is available on the INSPIRE website _http://inspire.ec.europa.eu_
 
 *Name: Atmospheric Conditions and Meteorological Geographical Features GML Application Schema (for the coverage domain)*
-Version: version 3.0, OGC Coverages version 1.0.0
+Version: 4.0, OGC Coverages version 1.0.0
 Specification: D2.8.III.13-14 Data Specification on Atmospheric Conditions and Meteorological Geographical Features – Technical Guidelines; OGC GML Application Schema – Coverages [OGC 09-146r2]
 Character set: UTF-8
 All the AC-MF data offered using INSPIRE Download Services providing data using the Specialised Observation types with coverage valued results, must follow this GML Application Schema for encoding at least the domain parts of those coverages.
