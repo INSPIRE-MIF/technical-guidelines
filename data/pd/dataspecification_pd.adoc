@@ -23,6 +23,17 @@
 
 :appendix-caption: Annex
 
+// Document properties
+:title: D2.8.III.10 Data Specification on Population Distribution – Technical Guidelines
+:revdate: 2024-07-31
+:keywords: INSPIRE Data Specification for the spatial data theme Population Distribution
+:producer: INSPIRE Maintenance and Implementation Group (MIG)
+:description: This document describes the INSPIRE Data Specification for the spatial data theme Population Distribution
+:author: Temporary MIWP 2021-2024 sub-group 2.3.1
+:copyright: Public
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.2
+:lang: en
+
 image::./media/image2.jpeg[logo_ce-en-rvb-lr,width=131,height=90]
 image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *Infrastructure for Spatial Information in Europe*
 
@@ -31,22 +42,22 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 
 [width="100%",cols="17%,83%",]
 |===
-|*Title* |D2.8.III.10 INSPIRE Data Specification on _Population Distribution_ – Technical Guidelines
-|*Creator* |INSPIRE Thematic Working Group _Population Distribution_
-|*Date* |2013-12-10
-|*Subject* |INSPIRE Data Specification for the spatial data theme _Population Distribution_
-|*Publisher* |European Commission Joint Research Centre
+|*Title* |{doctitle}
+|*Creator* |{author}
+|*Date of publication* |{revdate}
+|*Subject* |{keywords}
+|*Publisher* |{producer}
 |*Type* |Text
-|*Description* |This document describes the INSPIRE Data Specification for the spatial data theme _Population Distribution_
-|*Contributor* |Members of the INSPIRE Thematic Working Group _Population Distribution_
-|*Format* |Portable Document Format (pdf)
-|*Source* |
-|*Rights* |Public
-|*Identifier* |D2.8.III.10_v3.0
-|*Language* |En
+|*Description* |{description}
+|*Format* |AsciiDoc
+|*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
+|*Rights* |{copyright}
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/pd[D2.8.III.10_v3.0.0]
+|*Changelog* |{revremark}
+|*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
-|*Coverage* |Project duration
 |===
+
 
 <<<
 [discrete]
@@ -291,7 +302,7 @@ General terms and definitions helpful for understanding the INSPIRE data specifi
 
 === Symbols and abbreviations
 
-[align=center,width="100%",cols="21%,79%"]
+[width="100%",cols="14%,86%"]
 |===
 |ATS |Abstract Test Suite
 |EC |European Commission
@@ -1178,7 +1189,7 @@ If no ID is included some other data about the provider and base has to be provi
 |===
 |*StatisticalDistribution*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Statistical distribution
 !Definition: !Set of measures describing how a phenomenon is spread within some part of the 2D world.
@@ -1188,7 +1199,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !INSPIRE identifier
 !Value type: !Identifier
@@ -1200,7 +1211,7 @@ a|
 a|
 *Attribute: areaOfDissemination*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Area of dissemination
 !Value type: !GM_Surface
@@ -1211,7 +1222,7 @@ a|
 a|
 *Attribute: universe*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Universe
 !Value type: !PT_FreeText
@@ -1222,7 +1233,7 @@ a|
 a|
 *Attribute: domain*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Domain
 !Value type: !PT_FreeText
@@ -1234,7 +1245,7 @@ a|
 a|
 *Attribute: measure*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Measure
 !Value type: !VariableValue
@@ -1246,7 +1257,7 @@ a|
 a|
 *Attribute: measurementMethod*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Measurement method
 !Value type: !StatisticsMeasurementMethodValue
@@ -1257,7 +1268,7 @@ a|
 a|
 *Attribute: measurementUnit*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Measurement unit
 !Value type: !UnitOfMeasure
@@ -1268,7 +1279,7 @@ a|
 a|
 *Attribute: notCountedProportion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Not counted proportion
 !Value type: !Number
@@ -1280,7 +1291,7 @@ a|
 a|
 *Attribute: periodOfMeasurement*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Period of measurement
 !Value type: !TM_Period
@@ -1291,7 +1302,7 @@ a|
 a|
 *Attribute: periodOfReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Period of reference
 !Value type: !TM_Period
@@ -1302,7 +1313,7 @@ a|
 a|
 *Attribute: periodOfValidity*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Period of validity
 !Value type: !TM_Period
@@ -1314,7 +1325,7 @@ a|
 a|
 *Attribute: beginLifeSpanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Begin life span version
 !Value type: !DateTime
@@ -1326,7 +1337,7 @@ a|
 a|
 *Attribute: endLifeSpanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !End life span version
 !Value type: !DateTime
@@ -1338,7 +1349,7 @@ a|
 a|
 *Attribute: generalStatus*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !general status
 !Value type: !StatisticalDataStatusValue
@@ -1349,7 +1360,7 @@ a|
 a|
 *Association role: value*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Value
 !Value type: !StatisticalValue
@@ -1360,7 +1371,7 @@ a|
 a|
 *Association role: classification*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification
 !Value type: !Classification
@@ -1378,7 +1389,7 @@ a|
 |===
 |*Classification*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification
 !Definition: !A classification used for a statistical distribution.
@@ -1389,7 +1400,7 @@ a|
 a|
 *Attribute: type*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Type
 !Value type: !ClassificationTypeValue
@@ -1400,7 +1411,7 @@ a|
 a|
 *Association role: item*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Item
 !Value type: !ClassificationItem
@@ -1417,7 +1428,7 @@ a|
 |===
 |*ClassificationItem*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification item
 !Definition: !An item composing a classification.
@@ -1428,7 +1439,7 @@ a|
 a|
 *Attribute: type*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Type
 !Value type: !ClassificationItemTypeValue
@@ -1444,7 +1455,7 @@ a|
 |===
 |*Dimensions*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Dimensions
 !Definition: !The identification of what the piece of datum refers to in terms of geographic location or individual characteristics.
@@ -1454,7 +1465,7 @@ a|
 a|
 *Association role: spatial*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Spatial
 !Value type: !StatisticalUnit
@@ -1465,7 +1476,7 @@ a|
 a|
 *Association role: thematic*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Thematic
 !Value type: !ClassificationItem
@@ -1481,7 +1492,7 @@ a|
 |===
 |*StatisticalValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Statistical value
 !Definition: !The pieces of datum of the distribution.
@@ -1491,7 +1502,7 @@ a|
 a|
 *Attribute: value*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Value
 !Value type: !Number
@@ -1502,7 +1513,7 @@ a|
 a|
 *Attribute: specialValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Special value
 !Value type: !SpecialValue
@@ -1513,7 +1524,7 @@ a|
 a|
 *Attribute: conventionallyLocatedProportion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Conventionally located proportion
 !Value type: !Number
@@ -1524,7 +1535,7 @@ a|
 a|
 *Attribute: approximatelyLocatedPopulationProportion*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Approximately located proportion
 !Value type: !Number
@@ -1535,7 +1546,7 @@ a|
 a|
 *Attribute: comment*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Comment
 !Value type: !PT_FreeText
@@ -1546,7 +1557,7 @@ a|
 a|
 *Attribute: flags*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Flags
 !Value type: !PT_FreeText
@@ -1557,7 +1568,7 @@ a|
 a|
 *Attribute: periodOfMeasurement*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Period of measurement
 !Value type: !TM_Period
@@ -1569,7 +1580,7 @@ a|
 a|
 *Attribute: status*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Status
 !Value type: !StatisticalDataStatusValue
@@ -1580,7 +1591,7 @@ a|
 a|
 *Association role: dimensions*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Dimensions
 !Value type: !Dimensions
@@ -1591,7 +1602,7 @@ a|
 a|
 *Constraint: valueOrSpecialValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !Either the value or the specialValue attribute shall be provided.
 !OCL: !
@@ -1607,7 +1618,7 @@ a|
 |===
 |*AgeBy5YearsValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Age by 5 years value
 !Definition: !Code values for age by 5 years classification items.
@@ -1624,7 +1635,7 @@ a|
 |===
 |*AgeByYearValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Age by year value
 !Definition: !Code values for age by year classification items.
@@ -1641,7 +1652,7 @@ a|
 |===
 |*AgeGroupValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Age group value
 !Definition: !Code values for age group classification items.
@@ -1658,7 +1669,7 @@ a|
 |===
 |*ClassificationItemTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification item type value
 !Definition: !Code values for classification items.
@@ -1675,7 +1686,7 @@ a|
 |===
 |*ClassificationTypeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Classification type value
 !Definition: !Code values for classification types.
@@ -1692,7 +1703,7 @@ a|
 |===
 |*NACECodeValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !NACE code value
 !Code values for NACE classification items.
@@ -1709,7 +1720,7 @@ a|
 |===
 |*SpecialValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Special value
 !Definition: !Code values for special values.
@@ -1726,7 +1737,7 @@ a|
 |===
 |*StatisticalDataStatusValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Statistical data status value
 !Definition: !Code values for statistical data status.
@@ -1743,7 +1754,7 @@ a|
 |===
 |*StatisticsMeasurementMethodValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Statistics measurement method value
 !Definition: !Code values for statistics measurement method.
@@ -1760,7 +1771,7 @@ a|
 |===
 |*VariableValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Variable value
 !Definition: !Code values for variable names.
@@ -1781,7 +1792,7 @@ This section lists definitions for feature types, data types and enumerations an
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1795,7 +1806,7 @@ a|
 |===
 |*GM_Surface*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1809,7 +1820,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -1829,7 +1840,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*Number (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Numerics
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1843,7 +1854,7 @@ a|
 |===
 |*PT_FreeText*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Cultural and linguistic adapdability
 !Reference: !Geographic information -- Metadata -- XML schema implementation [ISO/TS 19139:2007]
@@ -1857,7 +1868,7 @@ a|
 |===
 |*StatisticalUnit (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Statistical Units Base
 !Reference: !INSPIRE Data specification on Statistical Units [DS-D2.8.III.1]
@@ -1877,7 +1888,7 @@ NOTE Spatial features of any INSPIRE application schema can be considered as a s
 |===
 |*TM_Period*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Temporal Objects
 !Reference: !Geographic information -- Temporal schema [ISO 19108:2002/Cor 1:2006]
@@ -1891,7 +1902,7 @@ a|
 |===
 |*UnitOfMeasure (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Units of Measure
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2938,7 +2949,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *0-5*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !0-5
 !Definition: !0 to less than 5
@@ -2947,7 +2958,7 @@ a|
 a|
 *10-May*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !10-May
 !Definition: !5 to less than 10
@@ -2956,7 +2967,7 @@ a|
 a|
 *15-Oct*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !15-Oct
 !Definition: !10 to less than 15
@@ -2965,7 +2976,7 @@ a|
 a|
 *15-20*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !15-20
 !Definition: !15 to less than 20
@@ -2974,7 +2985,7 @@ a|
 a|
 *20-25*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !20-25
 !Definition: !20 to less than 25
@@ -2983,7 +2994,7 @@ a|
 a|
 *25-30*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !25-30
 !Definition: !25 to less than 30
@@ -2992,7 +3003,7 @@ a|
 a|
 *30-35*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !30-35
 !Definition: !30 to less than 35
@@ -3001,7 +3012,7 @@ a|
 a|
 *35-40*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !35-40
 !Definition: !35 to less than 40
@@ -3010,7 +3021,7 @@ a|
 a|
 *40-45*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !40-45
 !Definition: !40 to less than 45
@@ -3019,7 +3030,7 @@ a|
 a|
 *45-50*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !45-50
 !Definition: !45 to less than 50
@@ -3028,7 +3039,7 @@ a|
 a|
 *50-55*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !50-55
 !Definition: !50 to less than 55
@@ -3037,7 +3048,7 @@ a|
 a|
 *55-60*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !55-60
 !Definition: !55 to less than 60
@@ -3046,7 +3057,7 @@ a|
 a|
 *60-65*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !60-65
 !Definition: !60 to less than 65
@@ -3055,7 +3066,7 @@ a|
 a|
 *65-70*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !65-70
 !Definition: !65 to less than 70
@@ -3064,7 +3075,7 @@ a|
 a|
 *70-75*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !70-75
 !Definition: !70 to less than 75
@@ -3073,7 +3084,7 @@ a|
 a|
 *75-80*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !75-80
 !Definition: !75 to less than 80
@@ -3082,7 +3093,7 @@ a|
 a|
 *80-85*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !80-85
 !Definition: !80 to less than 85
@@ -3091,7 +3102,7 @@ a|
 a|
 *85-90*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !85-90
 !Definition: !85 to less than 90
@@ -3100,7 +3111,7 @@ a|
 a|
 *90*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !90
 !Definition: !90 and more
@@ -3109,7 +3120,7 @@ a|
 a|
 *90-95*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !90-95
 !Definition: !90 to less than 95
@@ -3118,7 +3129,7 @@ a|
 a|
 *95*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !95
 !Definition: !95 and more
@@ -3127,7 +3138,7 @@ a|
 a|
 *95-100*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !95-100
 !Definition: !95 to less than 100
@@ -3136,7 +3147,7 @@ a|
 a|
 *100*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !100
 !Definition: !100 and more
@@ -3167,7 +3178,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *0_1*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !0_1
 !Definition: !0 to less than 1
@@ -3176,7 +3187,7 @@ a|
 a|
 *1_2*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !1_2
 !Definition: !1 to less than 2
@@ -3185,7 +3196,7 @@ a|
 a|
 *2_3*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !2_3
 !Definition: !2 to less than 3
@@ -3194,7 +3205,7 @@ a|
 a|
 *3_4*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !3_4
 !Definition: !3 to less than 4
@@ -3203,7 +3214,7 @@ a|
 a|
 *4_5*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !4_5
 !Definition: !4 to less than 5
@@ -3212,7 +3223,7 @@ a|
 a|
 *5_6*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !5_6
 !Definition: !5 to less than 6
@@ -3221,7 +3232,7 @@ a|
 a|
 *6_7*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !6_7
 !Definition: !6 to less than 7
@@ -3230,7 +3241,7 @@ a|
 a|
 *7_8*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !7_8
 !Definition: !7 to less than 8
@@ -3239,7 +3250,7 @@ a|
 a|
 *8_9*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !8_9
 !Definition: !8 to less than 9
@@ -3248,7 +3259,7 @@ a|
 a|
 *9_10*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !9_10
 !Definition: !9 to less than 10
@@ -3257,7 +3268,7 @@ a|
 a|
 *10_11*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !10_11
 !Definition: !10 to less than 11
@@ -3266,7 +3277,7 @@ a|
 a|
 *11_12*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !11_12
 !Definition: !11 to less than 12
@@ -3275,7 +3286,7 @@ a|
 a|
 *12_13*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !12_13
 !Definition: !12 to less than 13
@@ -3284,7 +3295,7 @@ a|
 a|
 *13_14*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !13_14
 !Definition: !13 to less than 14
@@ -3293,7 +3304,7 @@ a|
 a|
 *14_15*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !14_15
 !Definition: !14 to less than 15
@@ -3302,7 +3313,7 @@ a|
 a|
 *15_16*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !15_16
 !Definition: !15 to less than 16
@@ -3311,7 +3322,7 @@ a|
 a|
 *16_17*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !16_17
 !Definition: !16 to less than 17
@@ -3320,7 +3331,7 @@ a|
 a|
 *17_18*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !17_18
 !Definition: !17 to less than 18
@@ -3329,7 +3340,7 @@ a|
 a|
 *18_19*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !18_19
 !Definition: !18 to less than 19
@@ -3338,7 +3349,7 @@ a|
 a|
 *19_20*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !19_20
 !Definition: !19 to less than 20
@@ -3347,7 +3358,7 @@ a|
 a|
 *20_21*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !20_21
 !Definition: !20 to less than 21
@@ -3356,7 +3367,7 @@ a|
 a|
 *21_22*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !21_22
 !Definition: !21 to less than 22
@@ -3365,7 +3376,7 @@ a|
 a|
 *22_23*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !22_23
 !Definition: !22 to less than 23
@@ -3374,7 +3385,7 @@ a|
 a|
 *23_24*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !23_24
 !Definition: !23 to less than 24
@@ -3383,7 +3394,7 @@ a|
 a|
 *24_25*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !24_25
 !Definition: !24 to less than 25
@@ -3392,7 +3403,7 @@ a|
 a|
 *25_26*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !25_26
 !Definition: !25 to less than 26
@@ -3401,7 +3412,7 @@ a|
 a|
 *26_27*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !26_27
 !Definition: !26 to less than 27
@@ -3410,7 +3421,7 @@ a|
 a|
 *27_28*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !27_28
 !Definition: !27 to less than 28
@@ -3419,7 +3430,7 @@ a|
 a|
 *28_29*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !28_29
 !Definition: !28 to less than 29
@@ -3428,7 +3439,7 @@ a|
 a|
 *29_30*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !29_30
 !Definition: !29 to less than 30
@@ -3437,7 +3448,7 @@ a|
 a|
 *30_31*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !30_31
 !Definition: !30 to less than 31
@@ -3446,7 +3457,7 @@ a|
 a|
 *31_32*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !31_32
 !Definition: !31 to less than 32
@@ -3455,7 +3466,7 @@ a|
 a|
 *32_33*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !32_33
 !Definition: !32 to less than 33
@@ -3464,7 +3475,7 @@ a|
 a|
 *33_34*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !33_34
 !Definition: !33 to less than 34
@@ -3473,7 +3484,7 @@ a|
 a|
 *34_35*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !34_35
 !Definition: !34 to less than 35
@@ -3482,7 +3493,7 @@ a|
 a|
 *35_36*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !35_36
 !Definition: !35 to less than 36
@@ -3491,7 +3502,7 @@ a|
 a|
 *36_37*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !36_37
 !Definition: !36 to less than 37
@@ -3500,7 +3511,7 @@ a|
 a|
 *37_38*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !37_38
 !Definition: !37 to less than 38
@@ -3509,7 +3520,7 @@ a|
 a|
 *38_39*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !38_39
 !Definition: !38 to less than 39
@@ -3518,7 +3529,7 @@ a|
 a|
 *39_40*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !39_40
 !Definition: !39 to less than 40
@@ -3527,7 +3538,7 @@ a|
 a|
 *40_41*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !40_41
 !Definition: !40 to less than 41
@@ -3536,7 +3547,7 @@ a|
 a|
 *41_42*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !41_42
 !Definition: !41 to less than 42
@@ -3545,7 +3556,7 @@ a|
 a|
 *42_43*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !42_43
 !Definition: !42 to less than 43
@@ -3554,7 +3565,7 @@ a|
 a|
 *43_44*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !43_44
 !Definition: !43 to less than 44
@@ -3563,7 +3574,7 @@ a|
 a|
 *44_45*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !44_45
 !Definition: !44 to less than 45
@@ -3572,7 +3583,7 @@ a|
 a|
 *45_46*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !45_46
 !Definition: !45 to less than 46
@@ -3581,7 +3592,7 @@ a|
 a|
 *46_47*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !46_47
 !Definition: !46 to less than 47
@@ -3590,7 +3601,7 @@ a|
 a|
 *47_48*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !47_48
 !Definition: !47 to less than 48
@@ -3599,7 +3610,7 @@ a|
 a|
 *48_49*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !48_49
 !Definition: !48 to less than 49
@@ -3608,7 +3619,7 @@ a|
 a|
 *49_50*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !49_50
 !Definition: !49 to less than 50
@@ -3617,7 +3628,7 @@ a|
 a|
 *50_51*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !50_51
 !Definition: !50 to less than 51
@@ -3626,7 +3637,7 @@ a|
 a|
 *51_52*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !51_52
 !Definition: !51 to less than 52
@@ -3635,7 +3646,7 @@ a|
 a|
 *52_53*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !52_53
 !Definition: !52 to less than 53
@@ -3644,7 +3655,7 @@ a|
 a|
 *53_54*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !53_54
 !Definition: !53 to less than 54
@@ -3653,7 +3664,7 @@ a|
 a|
 *54_55*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !54_55
 !Definition: !54 to less than 55
@@ -3662,7 +3673,7 @@ a|
 a|
 *55_56*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !55_56
 !Definition: !55 to less than 56
@@ -3671,7 +3682,7 @@ a|
 a|
 *56_57*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !56_57
 !Definition: !56 to less than 57
@@ -3680,7 +3691,7 @@ a|
 a|
 *57_58*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !57_58
 !Definition: !57 to less than 58
@@ -3689,7 +3700,7 @@ a|
 a|
 *58_59*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !58_59
 !Definition: !58 to less than 59
@@ -3698,7 +3709,7 @@ a|
 a|
 *59_60*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !59_60
 !Definition: !59 to less than 60
@@ -3707,7 +3718,7 @@ a|
 a|
 *60_61*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !60_61
 !Definition: !60 to less than 61
@@ -3716,7 +3727,7 @@ a|
 a|
 *61_62*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !61_62
 !Definition: !61 to less than 62
@@ -3725,7 +3736,7 @@ a|
 a|
 *62_63*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !62_63
 !Definition: !62 to less than 63
@@ -3734,7 +3745,7 @@ a|
 a|
 *63_64*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !63_64
 !Definition: !63 to less than 64
@@ -3743,7 +3754,7 @@ a|
 a|
 *64_65*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !64_65
 !Definition: !64 to less than 65
@@ -3752,7 +3763,7 @@ a|
 a|
 *65_66*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !65_66
 !Definition: !65 to less than 66
@@ -3761,7 +3772,7 @@ a|
 a|
 *66_67*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !66_67
 !Definition: !66 to less than 67
@@ -3770,7 +3781,7 @@ a|
 a|
 *67_68*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !67_68
 !Definition: !67 to less than 68
@@ -3779,7 +3790,7 @@ a|
 a|
 *68_69*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !68_69
 !Definition: !68 to less than 69
@@ -3788,7 +3799,7 @@ a|
 a|
 *69_70*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !69_70
 !Definition: !69 to less than 70
@@ -3797,7 +3808,7 @@ a|
 a|
 *70_71*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !70_71
 !Definition: !70 to less than 71
@@ -3806,7 +3817,7 @@ a|
 a|
 *71_72*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !71_72
 !Definition: !71 to less than 72
@@ -3815,7 +3826,7 @@ a|
 a|
 *72_73*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !72_73
 !Definition: !72 to less than 73
@@ -3824,7 +3835,7 @@ a|
 a|
 *73_74*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !73_74
 !Definition: !73 to less than 74
@@ -3833,7 +3844,7 @@ a|
 a|
 *74_75*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !74_75
 !Definition: !74 to less than 75
@@ -3842,7 +3853,7 @@ a|
 a|
 *75_76*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !75_76
 !Definition: !75 to less than 76
@@ -3851,7 +3862,7 @@ a|
 a|
 *76_77*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !76_77
 !Definition: !76 to less than 77
@@ -3860,7 +3871,7 @@ a|
 a|
 *77_78*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !77_78
 !Definition: !77 to less than 78
@@ -3869,7 +3880,7 @@ a|
 a|
 *78_79*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !78_79
 !Definition: !78 to less than 79
@@ -3878,7 +3889,7 @@ a|
 a|
 *79_80*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !79_80
 !Definition: !79 to less than 80
@@ -3887,7 +3898,7 @@ a|
 a|
 *80_81*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !80_81
 !Definition: !80 to less than 81
@@ -3896,7 +3907,7 @@ a|
 a|
 *81_82*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !81_82
 !Definition: !81 to less than 82
@@ -3905,7 +3916,7 @@ a|
 a|
 *82_83*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !82_83
 !Definition: !82 to less than 83
@@ -3914,7 +3925,7 @@ a|
 a|
 *83_84*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !83_84
 !Definition: !83 to less than 84
@@ -3923,7 +3934,7 @@ a|
 a|
 *84_85*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !84_85
 !Definition: !84 to less than 85
@@ -3932,7 +3943,7 @@ a|
 a|
 *85_86*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !85_86
 !Definition: !85 to less than 86
@@ -3941,7 +3952,7 @@ a|
 a|
 *86_87*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !86_87
 !Definition: !86 to less than 87
@@ -3950,7 +3961,7 @@ a|
 a|
 *87_88*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !87_88
 !Definition: !87 to less than 88
@@ -3959,7 +3970,7 @@ a|
 a|
 *88_89*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !88_89
 !Definition: !88 to less than 89
@@ -3968,7 +3979,7 @@ a|
 a|
 *89_90*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !89_90
 !Definition: !89 to less than 90
@@ -3977,7 +3988,7 @@ a|
 a|
 *90_91*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !90_91
 !Definition: !90 to less than 91
@@ -3986,7 +3997,7 @@ a|
 a|
 *91_92*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !91_92
 !Definition: !91 to less than 92
@@ -3995,7 +4006,7 @@ a|
 a|
 *92_93*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !92_93
 !Definition: !92 to less than 93
@@ -4004,7 +4015,7 @@ a|
 a|
 *93_94*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !93_94
 !Definition: !93 to less than 94
@@ -4013,7 +4024,7 @@ a|
 a|
 *94_95*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !94_95
 !Definition: !94 to less than 95
@@ -4022,7 +4033,7 @@ a|
 a|
 *95_96*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !95_96
 !Definition: !95 to less than 96
@@ -4031,7 +4042,7 @@ a|
 a|
 *96_97*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !96_97
 !Definition: !96 to less than 97
@@ -4040,7 +4051,7 @@ a|
 a|
 *97_98*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !97_98
 !Definition: !97 to less than 98
@@ -4049,7 +4060,7 @@ a|
 a|
 *98_99*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !98_99
 !Definition: !98 to less than 99
@@ -4058,7 +4069,7 @@ a|
 a|
 *99_100*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !99_100
 !Definition: !99 to less than 100
@@ -4067,7 +4078,7 @@ a|
 a|
 *100*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !100
 !Definition: !100 and more
@@ -4145,7 +4156,7 @@ a|
 a|
 *0-5*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !0-5
 !Definition: !0 to less than 5
@@ -4154,7 +4165,7 @@ a|
 a|
 *10-May*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !10-May
 !Definition: !5 to less than 10
@@ -4163,7 +4174,7 @@ a|
 a|
 *15-Oct*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !15-Oct
 !Definition: !10 to less than 15
@@ -4172,7 +4183,7 @@ a|
 a|
 *15-20*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !15-20
 !Definition: !15 to less than 20
@@ -4181,7 +4192,7 @@ a|
 a|
 *20-25*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !20-25
 !Definition: !20 to less than 25
@@ -4190,7 +4201,7 @@ a|
 a|
 *25-30*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !25-30
 !Definition: !25 to less than 30
@@ -4199,7 +4210,7 @@ a|
 a|
 *30-35*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !30-35
 !Definition: !30 to less than 35
@@ -4208,7 +4219,7 @@ a|
 a|
 *35-40*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !35-40
 !Definition: !35 to less than 40
@@ -4217,7 +4228,7 @@ a|
 a|
 *40-45*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !40-45
 !Definition: !40 to less than 45
@@ -4226,7 +4237,7 @@ a|
 a|
 *45-50*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !45-50
 !Definition: !45 to less than 50
@@ -4235,7 +4246,7 @@ a|
 a|
 *50-55*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !50-55
 !Definition: !50 to less than 55
@@ -4244,7 +4255,7 @@ a|
 a|
 *55-60*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !55-60
 !Definition: !55 to less than 60
@@ -4253,7 +4264,7 @@ a|
 a|
 *60-65*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !60-65
 !Definition: !60 to less than 65
@@ -4262,7 +4273,7 @@ a|
 a|
 *65-70*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !65-70
 !Definition: !65 to less than 70
@@ -4271,7 +4282,7 @@ a|
 a|
 *70-75*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !70-75
 !Definition: !70 to less than 75
@@ -4280,7 +4291,7 @@ a|
 a|
 *75-80*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !75-80
 !Definition: !75 to less than 80
@@ -4289,7 +4300,7 @@ a|
 a|
 *80-85*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !80-85
 !Definition: !80 to less than 85
@@ -4298,7 +4309,7 @@ a|
 a|
 *85-90*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !85-90
 !Definition: !85 to less than 90
@@ -4307,7 +4318,7 @@ a|
 a|
 *90*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !90
 !Definition: !90 and more
@@ -4316,7 +4327,7 @@ a|
 a|
 *90-95*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !90-95
 !Definition: !90 to less than 95
@@ -4325,7 +4336,7 @@ a|
 a|
 *95*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !95
 !Definition: !95 and more
@@ -4334,7 +4345,7 @@ a|
 a|
 *95-100*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !95-100
 !Definition: !95 to less than 100
@@ -4343,7 +4354,7 @@ a|
 a|
 *100*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !100
 !Definition: !100 and more
@@ -4374,7 +4385,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *ageBy5Years*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !age by 5 years
 !Definition: !Age by 5 years periods.
@@ -4383,7 +4394,7 @@ a|
 a|
 *ageGroup*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !age by group
 !Definition: !Age by group
@@ -4392,7 +4403,7 @@ a|
 a|
 *ageByYear*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !age by year
 !Definition: !Age by year.
@@ -4401,7 +4412,7 @@ a|
 a|
 *gender*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !gender
 !Definition: !Female, male or unknown
@@ -4410,7 +4421,7 @@ a|
 a|
 *Nace2*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !NACE
 !Definition: !The economic activity classification NACE Version 2 (Classification of Economic Activities in the European Community).
@@ -4439,7 +4450,7 @@ a|
 a|
 *confidential*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !confidential
 !Definition: !The value is not provided for confidentiality reasons.
@@ -4448,7 +4459,7 @@ a|
 a|
 *unknown*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !unknown
 !Definition: !The value could have been measured but was not.
@@ -4457,7 +4468,7 @@ a|
 a|
 *notApplicable*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !not applicable
 !Definition: !The value would not have any sense.
@@ -4486,7 +4497,7 @@ a|
 a|
 *definitive*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !definitive
 !Definition: !A definitive statistical data value.
@@ -4495,7 +4506,7 @@ a|
 a|
 *final*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !final
 !Definition: !A final statistical data value.
@@ -4504,7 +4515,7 @@ a|
 a|
 *preliminary*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !preliminary
 !Definition: !A preliminary statistical data value.
@@ -4513,7 +4524,7 @@ a|
 a|
 *provisional*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !provisional
 !Definition: !A provisional statistical data value.
@@ -4522,7 +4533,7 @@ a|
 a|
 *semiDefinitive*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !semi-definitive
 !Definition: !A semi-definitive statistical data value.
@@ -4551,7 +4562,7 @@ a|
 a|
 *count*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !count
 !Definition: !A simple count.
@@ -4561,7 +4572,7 @@ a|
 a|
 *relativeCount*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !relative count
 !Definition: !A ratio combining two different kinds of statistical population.
@@ -4571,7 +4582,7 @@ a|
 a|
 *percentage*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !percentage
 !Definition: !A proportion expressed as a ratio whose denominator is 100.
@@ -4581,7 +4592,7 @@ a|
 a|
 *median*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !median
 !Definition: !The median.
@@ -4613,7 +4624,7 @@ The table below includes recommended values that may be used by data providers. 
 a|
 *births*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !births
 !Definition: !The number of births.
@@ -4622,7 +4633,7 @@ a|
 a|
 *income*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !income
 !Definition: !The income.
@@ -4631,7 +4642,7 @@ a|
 a|
 *populationAtResidencePlace*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !population at residence place
 !Definition: !The number of people measured in the place where they sleep.
@@ -4640,7 +4651,7 @@ a|
 a|
 *populationAtWorkPlace*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !population at work place
 !Definition: !The number of people measured in the place they where they work.
@@ -4649,7 +4660,7 @@ a|
 a|
 *unemployedPopulation*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !unemployed population
 !Definition: !The unemployed population.
@@ -4658,7 +4669,7 @@ a|
 a|
 *employedPopulation*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !employed population
 !Definition: !The employed population.
