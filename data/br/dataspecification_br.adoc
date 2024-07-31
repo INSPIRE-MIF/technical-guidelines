@@ -2314,11 +2314,11 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 ===== Default encoding(s) for application schema Bio-geographicalRegions
 
 Name: Bio-geographicalRegions GML Application Schema
-Version: version 3.0
+Version: 4.0
 Specification: D2.8.III.17 Data Specification on Bio-geographical Regions – Technical Guidelines
 Character set: UTF-8
 
-The xml schema document is available from http://inspire.ec.europa.eu/schemas/br/3.0/Bio-geographicalRegions.xsd
+The xml schema document is available from _https://inspire.ec.europa.eu/schemas/br/4.0/Bio-geographicalRegions.xsd_
 
 <<<
 == Data Capture
