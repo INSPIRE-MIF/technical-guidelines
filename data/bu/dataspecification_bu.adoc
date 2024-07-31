@@ -8106,7 +8106,7 @@ codeSpace: INSPIRE RS registry
 |Implementing instructions |
 |Example a|
 name: <Application schema name> GML application schema
-version: version 3.0
+Version: 4.0
 specification: D2.8.III.2 Data Specification on _Buildings_ – Technical Guidelines
 |Example XML encoding a|
 [source, xml]
@@ -8489,31 +8489,31 @@ NOTE 2 The obligation to use only the allowed code list values specified for att
 ===== Default encoding(s) for application schema BuildingsBase
 
 *Name: BuildingsBase GML Application Schema*
-Version: version 3.0
+Version: 4.0
 Specification: D2.8.III.2 Data Specification on _Buildings_ – Technical Guidelines
 Character set: UTF-8
 
-The xml schema document is available on the INSPIRE website _http://inspire.ec.europa.eu/schemas/bu-base/3.0/BuildingsBase.xsd_.
+The xml schema document is available on the INSPIRE website _https://inspire.ec.europa.eu/schemas/bu-base/4.0/BuildingsBase.xsd_.
 
 ===== Default encoding(s) for application schema Buildings2D
 
 *Name: Buildings2D GML Application Schema*
-Version: version 3.0
+Version: 4.0
 Specification: D2.8.III.2 Data Specification on _Buildings_ – Technical Guidelines
 Character set: UTF-8
 
 The xml schema document is available on the INSPIRE website
-_http://inspire.ec.europa.eu/schemas/bu-core2d/3.0/BuildingsCore2D.xsd_.
+_http://inspire.ec.europa.eu/schemas/bu-core2d/4.0/BuildingsCore2D.xsd_.
 
 ===== Default encoding(s) for application schema Buildings3D
 
 *Name: Buildings3D GML Application Schema*
-Version: version 3.0
+Version: 4.0
 Specification: D2.8.III.2 Data Specification on _Buildings_ – Technical Guidelines
 Character set: UTF-8
 
 The xml schema document is available on the INSPIRE website
-_http://inspire.ec.europa.eu/schemas/bu-core3d/3.0/BuildingsCore3D.xsd_.
+_http://inspire.ec.europa.eu/schemas/bu-core3d/4.0/BuildingsCore3D.xsd_.
 
 ===== Default encoding(s) for application schema BuildingsExtendedBase
 
