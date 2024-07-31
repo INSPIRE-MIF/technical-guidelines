@@ -2607,8 +2607,8 @@ data service category]:
 *TG Requirement 53*
 The INSPIRE Download Service metadata elements shall be available in one of the following ways:
 
-1. The extended capabilities section of the Download Service is in accordance with the schema at https://inspire.ec.europa.eu/schemas/inspire_ds/1.0/inspire_ds.xsd and contains a link to the metadata record of the service in an INSPIRE Discovery catalogue in element <inspire_common:MetadataURL>;
-2. The capabilities section of the Download Service contains the Download Service metadata elements in accordance with Table 19a and the schema at https://inspire.ec.europa.eu/schemas/inspire_ds/1.0/inspire_ds.xsd;
+1. The extended capabilities section of the Download Service is in accordance with the schema at https://inspire.ec.europa.eu/schemas/inspire_dls/1.0/inspire_dls.xsd and contains a link to the metadata record of the service in an INSPIRE Discovery catalogue in element <inspire_common:MetadataURL>;
+2. The capabilities section of the Download Service contains the Download Service metadata elements in accordance with Table 19a and the schema at https://inspire.ec.europa.eu/schemas/inspire_dls/1.0/inspire_dls.xsd;
 3. The capabilities section of the Download Service contains the Download Service metadata elements in accordance with Table 19b.
 ====
 
