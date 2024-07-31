@@ -2060,8 +2060,8 @@ The externally governed code lists included in this application schema are speci
 [width="100%",cols="20%,26%,54%",options="header",]
 |===
 |*Code list* |*Identifiers* |*Examples*
-|EUCountryCode |Append the upper-case two-letter code in the "Code" column of Annex A6 to the URI prefix http://inspire.ec.europa.eu/codeList/CountryCode/ |http://inspire.ec.europa.eu/codeList/CountryCode/DE 
-http://inspire.ec.europa.eu/codeList/CountryCode/UK
+|EUCountryCode |Append the upper-case two-letter code in the "Code" column of Annex A6 to the URI prefix http://inspire.ec.europa.eu/codelist/CountryCode/ |http://inspire.ec.europa.eu/codelist/CountryCode/DE 
+http://inspire.ec.europa.eu/codelist/CountryCode/UK
 | | |
 |===
 
