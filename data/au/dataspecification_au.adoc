@@ -3904,7 +3904,7 @@ Data related to the theme Administrative Units shall be made available in at lea
 
 *Name: AdministrativeUnits GML Application Schema*
 
-Version: version 3.1
+Version: 5.0
 
 Specification: D2.8.I.4 Data Specification on Administrative Units – Technical Guidelines
 
@@ -3912,7 +3912,7 @@ Character set: UTF-8
 
 The xml schema document is available from:
 
-_http://inspire.ec.europa.eu/schemas/au/3.1/AdministrativeUnits.xsd_
+_https://inspire.ec.europa.eu/schemas/au/5.0/AdministrativeUnits.xsd_
 
 
 ====
@@ -3934,7 +3934,7 @@ NOTE Annex B of [DS-D2.7], version 3.3rc3, requires that the "encoding rule spec
 
 *Name: MaritimeUnits GML Application Schema*
 
-Version: version 3.1
+Version: 4.0
 
 Specification: D2.8.I.4 Data Specification on Administrative Units – Technical Guidelines
 
@@ -3942,7 +3942,7 @@ Character set: UTF-8
 
 The xml schema document is available from:
 
-http://inspire.ec.europa.eu/schemas/au-mu/3.1/MaritimeUnits.xsd
+_https://inspire.ec.europa.eu/schemas/mu/4.0/MaritimeUnits.xsd_
 
 ====== Encoding rules used
 
