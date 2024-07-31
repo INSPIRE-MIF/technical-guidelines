@@ -396,7 +396,7 @@ Geophysical activity extending over a limited time range and limited area for pr
 
 === Symbols and abbreviations
 
-[cols=","]
+[width="100%",cols="14%,86%"]
 |===
 |AM |Area management/restriction/regulation zones and reporting units
 |AP |Assessment Point
