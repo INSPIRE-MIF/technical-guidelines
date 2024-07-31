@@ -2256,7 +2256,7 @@ a|
 
 [cols="",options="header",]
 |===
-|*MatrixValue*
+|*MeasureCategoryTypeValue*
 a|
 [cols=","]
 !===
