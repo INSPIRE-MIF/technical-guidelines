@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.III.4 Data Specification on Land Use – Technical Guidelines
-:revdate: 2024-01-31
+:revdate: 2024-07-31
 :keywords: INSPIRE Data Specification for the spatial data theme Land Us
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Land Us
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.
 :lang: en
 
 image:./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/lu[D2.8.III.4_v3.1.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/lu[D2.8.III.4_v3.1.1]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -1426,7 +1426,7 @@ The application schemas also are usable for archived datasets although data prov
 
 *Feature catalogue metadata*
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema _Land Use_ Nomenclature
 |Version number |3.0
@@ -1453,7 +1453,7 @@ The application schemas also are usable for archived datasets although data prov
 |===
 |*HILUCSPercentage*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !HILUCS percentage
 !Definition: !Percentage of land use object that is covered by this HILUCS presence.
@@ -1466,7 +1466,7 @@ NOTE2:examples are provided in the narrative description part of the data specif
 a|
 *Attribute: hilucsValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !HILUCSValue
 !Definition: !HILUCS category for this HILUCS percentage.
@@ -1476,7 +1476,7 @@ a|
 a|
 *Attribute: percentage*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Integer
 !Definition: !Percentage of land use object that is covered by this specific presence.
@@ -1492,7 +1492,7 @@ a|
 |===
 |*HILUCSPresence*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !HILUCS presence
 !Definition: !Presence of one or several HILUCS values in an area, indicated either as the percentage covered for each value or as the values listed in their order of importance.
@@ -1505,7 +1505,7 @@ NOTE 2: The sum of the percentages can be below 100%, or above. The order is pro
 a|
 *Attribute: orderedList*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !HILUCSValue
 !Multiplicity: !1..*
@@ -1514,7 +1514,7 @@ a|
 a|
 *Attribute: percentageList*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !HILUCSPercentage
 !Multiplicity: !1..*
@@ -1528,7 +1528,7 @@ a|
 |===
 |*SpecificPercentage*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !specific percentage
 !Definition: !Percentage of land use object that is covered by this specific presence.
@@ -1538,7 +1538,7 @@ a|
 a|
 *Attribute: specificValue*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LandUseClassificationValue
 !Definition: !specific value category for this specific percentage.
@@ -1548,7 +1548,7 @@ a|
 a|
 *Attribute: percentage*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Integer
 !Definition: !Percentage of land use object that is covered by a specific presence.
@@ -1564,7 +1564,7 @@ a|
 |===
 |*SpecificPresence*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !specific presence
 !Definition: !Presence of one or several land use classification values in an area according to the code list provided by the data provider, indicated either as the percentage covered for each value or as the values listed in their order of importance.
@@ -1576,7 +1576,7 @@ NOTE 2: The sum of the percentages can be below 100%, or above. The order is pro
 a|
 *Attribute: orderedList*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LandUseClassificationValue
 !Multiplicity: !1..*
@@ -1585,7 +1585,7 @@ a|
 a|
 *Attribute: percentageList*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SpecificPercentage
 !Multiplicity: !1..*
@@ -1601,7 +1601,7 @@ a|
 |===
 |*HILUCSValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !HILUCS value
 !Definition: !List of land use categories to be used in INSPIRE _Land Use_ and agreed at the European level.
@@ -1621,7 +1621,7 @@ The elements of the list should be both applicable to existing land use and plan
 |===
 |*LandUseClassificationValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !land use classification value
 !Definition: !List of land use categories to be used in INSPIRE _Land Use_ and agreed at a national or local level.
@@ -1643,7 +1643,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*Integer*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Numerics
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1655,7 +1655,7 @@ a|
 
 *Feature catalogue metadata*
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema Existing _Land Use_
 |Version number |3.0
@@ -1678,7 +1678,7 @@ a|
 |===
 |*ExistingLandUseDataSet*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !existing land use data set
 !Definition: !An existing land use data set is a collection of areas for which information on existing (present or past) land uses is provided.
@@ -1688,7 +1688,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the existing land use dataset.
@@ -1699,7 +1699,7 @@ a|
 a|
 *Attribute: extent*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !existing land use data set
 !Value type: !GM_MultiSurface
@@ -1710,7 +1710,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the existing land use data set was inserted or changed in the provided set of data.
@@ -1721,7 +1721,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the existing land use data set was superseded or retired in the provided set of data.
@@ -1732,7 +1732,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Human readable name of the data set.
@@ -1742,7 +1742,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !the time when the existing land use data set started to exist in the real world
@@ -1753,7 +1753,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The time from which this existing land use data set no longer exists in the real world.
@@ -1764,7 +1764,7 @@ a|
 a|
 *Association role: member*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ExistingLandUseObject
 !Definition: !Existing land use objects that belong to this existing land use data set.
@@ -1779,7 +1779,7 @@ a|
 |===
 |*ExistingLandUseObject*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !existing land use object
 !Definition: !An existing land use object describes the land use of an area having a homogeneous combination of land use types.
@@ -1789,7 +1789,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the existing land use object.
@@ -1800,7 +1800,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -1811,7 +1811,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -1822,7 +1822,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_MultiSurface
 !Definition: !Geometric representation of spatial area covered by this spatial object.
@@ -1832,7 +1832,7 @@ a|
 a|
 *Attribute: hilucsLandUse*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !HILUCSValue
 !Definition: !Land use HILUCS classes that are present in this existing land use object.
@@ -1843,7 +1843,7 @@ a|
 a|
 *Attribute: hilucsPresence*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !land use presence
 !Value type: !HILUCSPresence
@@ -1855,7 +1855,7 @@ a|
 a|
 *Attribute: specificLandUse*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LandUseClassificationValue
 !Definition: !_Land Use_ Category according to the nomenclature specific to this data set.
@@ -1867,7 +1867,7 @@ a|
 a|
 *Attribute: specificPresence*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !land use presence
 !Value type: !SpecificPresence
@@ -1879,7 +1879,7 @@ a|
 a|
 *Attribute: observationDate*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Observation Date.
 !Value type: !Date
@@ -1892,7 +1892,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The time when the phenomenon started to exist in the real world.
@@ -1903,7 +1903,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The time from which the phenomenon no longer exists in the real world.
@@ -1914,7 +1914,7 @@ a|
 a|
 *Association role: dataset*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ExistingLandUseDataSet
 !Definition: !Existing land use data set to which this land use object belongs.
@@ -1933,7 +1933,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1947,7 +1947,7 @@ a|
 |===
 |*Date*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1961,7 +1961,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -1975,7 +1975,7 @@ a|
 |===
 |*GM_MultiSurface*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric aggregates
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -1989,7 +1989,7 @@ a|
 |===
 |*HILUCSPresence*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -2007,7 +2007,7 @@ NOTE 2: The sum of the percentages can be below 100%, or above. The order is pro
 |===
 |*HILUCSValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -2025,7 +2025,7 @@ The elements of the list should be both applicable to existing land use and plan
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2045,7 +2045,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*LandUseClassificationValue (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -2061,7 +2061,7 @@ a|
 |===
 |*SpecificPresence*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -2076,7 +2076,7 @@ NOTE 2: The sum of the percentages can be below 100%, or above. The order is pro
 
 *Feature catalogue metadata*
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema Gridded _Land Use_
 |Version number |3.0
@@ -2098,7 +2098,7 @@ NOTE 2: The sum of the percentages can be below 100%, or above. The order is pro
 |===
 |*ExistingLandUseGrid*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !existing land use grid
 !Subtype of: !RectifiedGridCoverage
@@ -2109,7 +2109,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Human readable name of the data set.
@@ -2119,7 +2119,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the sampled land use data grid.
@@ -2130,7 +2130,7 @@ a|
 a|
 *Attribute: extent*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !extent
 !Value type: !EX_Extent
@@ -2142,7 +2142,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -2153,7 +2153,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -2164,7 +2164,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !First date at which this grid is a valid representation of reality.
@@ -2175,7 +2175,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The time from which the grid is no longer a valid representation of reality.
@@ -2186,7 +2186,7 @@ a|
 a|
 *Constraint: rangeIsCategoryOrNill*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !rangeSet values shall be of type CategoryOrNilReason NOTERange is based on either HILUCS or on a specific land use classification sytem defined by the data provider
 !OCL: !inv: rangeSet.forAll(oclIsKindOf(CategoryOrNilReason))
@@ -2204,7 +2204,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2218,7 +2218,7 @@ a|
 |===
 |*Date*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2232,7 +2232,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2246,7 +2246,7 @@ a|
 |===
 |*EX_Extent*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Extent information
 !Reference: !Geographic information -- Metadata [ISO 19115:2003/Cor 1:2006]
@@ -2260,7 +2260,7 @@ a|
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2280,7 +2280,7 @@ RectifiedGridCoverage
 |===
 |*RectifiedGridCoverage*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Coverages (Domain and Range)
 !Reference: !INSPIRE Data Specifications – Base Models – Coverage Types, version 1.0 [DS-D2.10.2]
@@ -2296,7 +2296,7 @@ NOTE This type can be used for both discrete and continuous coverages.
 
 *Feature catalogue metadata*
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema Sampled _Land Use_
 |Version number |3.0
@@ -2319,7 +2319,7 @@ NOTE This type can be used for both discrete and continuous coverages.
 |===
 |*ExistingLandUseSample*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !existing land use sample
 !Definition: !Description of the existing land use that is present at the specific location.
@@ -2329,7 +2329,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the land use sample.
@@ -2340,7 +2340,7 @@ a|
 a|
 *Attribute: location*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Point
 !Definition: !Location where the land use sample is taken.
@@ -2350,7 +2350,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -2361,7 +2361,7 @@ a|
 a|
 *Attribute: hilucsLandUse*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !HILUCSValue
 !Definition: !Land use HILUCS classes that are present in this existing land use sample.
@@ -2372,7 +2372,7 @@ a|
 a|
 *Attribute: hilucsPresence*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !land use presence
 !Value type: !HILUCSPresence
@@ -2384,7 +2384,7 @@ a|
 a|
 *Attribute: specificLandUse*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LandUseClassificationValue
 !Definition: !_Land Use_ Category according to the nomenclature specific to this data set.
@@ -2396,7 +2396,7 @@ a|
 a|
 *Attribute: observationDate*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !Observation Date.
 !Value type: !Date
@@ -2409,7 +2409,7 @@ a|
 a|
 *Attribute: specificPresence*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SpecificPresence
 !Definition: !Actual presence of a land use category within the object.
@@ -2420,7 +2420,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -2431,7 +2431,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The time when the phenomenon started to exist in the real world.
@@ -2442,7 +2442,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The time from which the phenomenon no longer exists in the real world.
@@ -2453,7 +2453,7 @@ a|
 a|
 *Association role: dataset*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SampledExistingLandUseDataSet
 !Definition: !Data set to which this sample belongs.
@@ -2468,7 +2468,7 @@ a|
 |===
 |*SampledExistingLandUseDataSet*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !sampled existing land use data set
 !Definition: !A sampled existing land use data set is a collection of locations for which information on existing (present or past) land uses is provided.
@@ -2478,7 +2478,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the sampled land use data set.
@@ -2489,7 +2489,7 @@ a|
 a|
 *Attribute: extent*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_MultiSurface
 !Definition: !The convex hull of all the instances of the spatial object type ExistingLandUseSample.
@@ -2499,7 +2499,7 @@ a|
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Human readable name of the data set.
@@ -2509,7 +2509,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -2520,7 +2520,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -2531,7 +2531,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !First date at which this data set is valid in reality.
@@ -2542,7 +2542,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The time from which the data set no longer exists in the real world.
@@ -2553,7 +2553,7 @@ a|
 a|
 *Association role: member*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ExistingLandUseSample
 !Definition: !Reference to the members of the sampled existing land use data set.
@@ -2572,7 +2572,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2586,7 +2586,7 @@ a|
 |===
 |*Date*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2600,7 +2600,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -2614,7 +2614,7 @@ a|
 |===
 |*GM_MultiSurface*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric aggregates
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -2628,7 +2628,7 @@ a|
 |===
 |*GM_Point*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric primitive
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -2642,7 +2642,7 @@ a|
 |===
 |*HILUCSPresence*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -2660,7 +2660,7 @@ NOTE 2: The sum of the percentages can be below 100%, or above. The order is pro
 |===
 |*HILUCSValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -2678,7 +2678,7 @@ The elements of the list should be both applicable to existing land use and plan
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -2698,7 +2698,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*LandUseClassificationValue (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -2714,7 +2714,7 @@ a|
 |===
 |*SpecificPresence*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -2729,7 +2729,7 @@ NOTE 2: The sum of the percentages can be below 100%, or above. The order is pro
 
 *Feature catalogue metadata*
 
-[cols=","]
+[%autowidth]
 |===
 |Application Schema |INSPIRE Application Schema Planned _Land Use_
 |Version number |3.0
@@ -2767,7 +2767,7 @@ NOTE 2: The sum of the percentages can be below 100%, or above. The order is pro
 |===
 |*OfficialDocumentation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !official documentation
 !Definition: !The official documentation that composes the spatial plan; it may be composed of, the applicable legislation, the regulations, cartographic elements, descriptive elements that may be associated with the complete spatial plan, a zoning element or a supplementary regulation . In some Member States the actual textual regulation will be part of the data set (and can be put in the regulationText attribute), in other Member States the text will not be part of the data set and will be referenced via a reference to a document or a legal act. At least one of the three voidable values shall be provided.
@@ -2778,7 +2778,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of this spatial textual regulation.
@@ -2789,7 +2789,7 @@ a|
 a|
 *Attribute: legislationCitation*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LegislationCitation
 !Definition: !Reference to the document that contains the text of the regulation.
@@ -2800,7 +2800,7 @@ a|
 a|
 *Attribute: regulationText*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Text of the regulation.
@@ -2811,7 +2811,7 @@ a|
 a|
 *Attribute: planDocument*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DocumentCitation
 !Definition: !Citation of scanned plans and structural drawings which may sometimes be geo-referenced or not,. E.g. raster images, vector drawings or scanned text.
@@ -2822,7 +2822,7 @@ a|
 a|
 *Constraint: OneMustBeFilled*
 
-[cols=","]
+[%autowidth]
 !===
 !Natural language: !** At least one of the values must be populated with a non-void value
 !OCL: !
@@ -2836,7 +2836,7 @@ a|
 |===
 |*SpatialPlan*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !spatial plan
 !Definition: !A set of documents that indicates a strategic direction for the development of a given geographic area, states the policies, priorities, programmes and land allocations that will implement the strategic direction and influences the distribution of people and activities in spaces of various scales. Spatial plans may be developed for urban planning, regional planning, environmental planning, landscape planning, national spatial plans, or spatial planning at the Union level.
@@ -2846,7 +2846,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial plan.
@@ -2857,7 +2857,7 @@ a|
 a|
 *Attribute: extent*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_MultiSurface
 !Definition: !Geometrical union of all the instances of the spatial objects ZoningElement and SupplementaryRegulation. When a SpatialPlan is only composed of a document, the attribute extent is the border of the cartographic image that contains the land use information (i.e. the land use map extent).
@@ -2867,7 +2867,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -2878,7 +2878,7 @@ a|
 a|
 *Attribute: officialTitle*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Official title of the spatial plan.
@@ -2888,7 +2888,7 @@ a|
 a|
 *Attribute: levelOfSpatialPlan*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !level of spatial plan
 !Value type: !LevelOfSpatialPlanValue
@@ -2900,7 +2900,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -2911,7 +2911,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !First date at which this spatial plan is valid in reality.
@@ -2922,7 +2922,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The time from which the spatial plan no longer exists in the real world.
@@ -2933,7 +2933,7 @@ a|
 a|
 *Attribute: alternativeTitle*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Alternative (unofficial) title of the spatial plan.
@@ -2944,7 +2944,7 @@ a|
 a|
 *Attribute: planTypeName*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !PlanTypeName
 !Definition: !Name of the type of plan that the Member State has given to the plan.
@@ -2960,7 +2960,7 @@ NL: bestemmingsplan, structuurvisie.
 a|
 *Attribute: processStepGeneral*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ProcessStepGeneralValue
 !Definition: !General indication of the step of the planning process that the plan is undergoing.
@@ -2972,7 +2972,7 @@ a|
 a|
 *Attribute: backgroundMap*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !background map
 !Value type: !BackgroundMapValue
@@ -2984,7 +2984,7 @@ a|
 a|
 *Attribute: ordinance*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !OrdinanceValue
 !Definition: !Reference to relevant administrative ordinance.
@@ -2996,7 +2996,7 @@ a|
 a|
 *Association role: officialDocument*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !OfficialDocumentation
 !Definition: !Link to the official documents that relate to the spatial plan.
@@ -3007,7 +3007,7 @@ a|
 a|
 *Association role: member*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ZoningElement
 !Definition: !Reference to the ZoningElements which belong to this SpatialPlan.
@@ -3017,7 +3017,7 @@ a|
 a|
 *Association role: restriction*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SupplementaryRegulation
 !Definition: !Links to supplementary regulations providing information and/or limitations on the use of land/water that supplements the zoning as part of this spatial plan.
@@ -3032,7 +3032,7 @@ a|
 |===
 |*SupplementaryRegulation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !supplementary regulation
 !Definition: !A spatial object (point, line or polygon) of a spatial plan that provides supplementary information and/or limitation of the use of land/water necessary for spatial planning reasons or to formalise external rules defined in legal text.
@@ -3044,7 +3044,7 @@ EXAMPLE an air field generates restriction in its surroundings regarding aircraf
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !First date at which this version of this supplementary regulation is valid in reality.
@@ -3055,7 +3055,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The time from which the supplementary regulation is no longer valid.
@@ -3066,7 +3066,7 @@ a|
 a|
 *Attribute: specificSupplementaryRegulation*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SpecificSupplementaryRegulationValue
 !Definition: !Reference to a category of supplementary regulation provided in a specific nomenclature of supplementary regulations provided by the data provider.
@@ -3077,7 +3077,7 @@ a|
 a|
 *Attribute: processStepGeneral*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ProcessStepGeneralValue
 !Definition: !General indication of the step of the planning process that the supplementary regulation is undergoing.
@@ -3089,7 +3089,7 @@ a|
 a|
 *Attribute: backgroundMap*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !background map
 !Value type: !BackgroundMapValue
@@ -3101,7 +3101,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -3112,7 +3112,7 @@ a|
 a|
 *Attribute: dimensioningIndication*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DimensioningIndicationValue
 !Definition: !Specifications about the dimensioning that are added to the dimensioning of the zoning elements that overlap the geometry of the supplementary regulation.
@@ -3123,7 +3123,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -3134,7 +3134,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -3145,7 +3145,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_Object
 !Definition: !Geometry of the piece of land on which the supplementary regulation applies.
@@ -3155,7 +3155,7 @@ a|
 a|
 *Attribute: inheritedFromOtherPlans*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !inherited from other plans
 !Value type: !Boolean
@@ -3167,7 +3167,7 @@ a|
 a|
 *Attribute: specificRegulationNature*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !specific regulation nature
 !Value type: !CharacterString
@@ -3182,7 +3182,7 @@ NOTE This attribute complements the information provided by the attribute regula
 a|
 *Attribute: name*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Official name of the supplementary regulation
@@ -3193,7 +3193,7 @@ a|
 a|
 *Attribute: regulationNature*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !RegulationNatureValue
 !Definition: !Legal nature of the land use regulation.
@@ -3204,7 +3204,7 @@ a|
 a|
 *Attribute: supplementaryRegulation*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SupplementaryRegulationValue
 !Definition: !Code of the supplementary regulation from the hierarchical supplementary regulation code list agreed at the European level.
@@ -3214,7 +3214,7 @@ a|
 a|
 *Association role: plan*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SpatialPlan
 !Definition: !Link to the plan this supplementary regulation is part of.
@@ -3224,7 +3224,7 @@ a|
 a|
 *Association role: officialDocument*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !OfficialDocumentation
 !Definition: !Link to the Textual regulations that correspond to this supplementary regulation.
@@ -3240,7 +3240,7 @@ a|
 |===
 |*ZoningElement*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !zoning element
 !Definition: !A spatial object which is homogeneous regarding the permitted uses of land based on zoning which separate one set of land uses from another.
@@ -3251,7 +3251,7 @@ a|
 a|
 *Attribute: inspireId*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Identifier
 !Definition: !External object identifier of the spatial object.
@@ -3262,7 +3262,7 @@ a|
 a|
 *Attribute: geometry*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !GM_MultiSurface
 !Definition: !Geometry of this zoning element
@@ -3272,7 +3272,7 @@ a|
 a|
 *Attribute: validFrom*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The date when the phenomenon started to exist in the real world.
@@ -3283,7 +3283,7 @@ a|
 a|
 *Attribute: validTo*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Date
 !Definition: !The time from which the phenomenon no longer exists in the real world.
@@ -3294,7 +3294,7 @@ a|
 a|
 *Attribute: hilucsLandUse*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !HILUCSValue
 !Definition: !Land use HILUCS class that is dominant in this land use object.
@@ -3304,7 +3304,7 @@ a|
 a|
 *Attribute: beginLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was inserted or changed in the spatial data set.
@@ -3315,7 +3315,7 @@ a|
 a|
 *Attribute: hilucsPresence*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !land use presence
 !Value type: !HILUCSPresence
@@ -3327,7 +3327,7 @@ a|
 a|
 *Attribute: specificLandUse*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !LandUseClassificationValue
 !Definition: !_Land Use_ Category according to the nomenclature specific to this data set.
@@ -3339,7 +3339,7 @@ a|
 a|
 *Attribute: specificPresence*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !land use presence
 !Value type: !SpecificPresence
@@ -3351,7 +3351,7 @@ a|
 a|
 *Attribute: regulationNature*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !RegulationNatureValue
 !Definition: !Legal nature of the land use indication.
@@ -3362,7 +3362,7 @@ a|
 a|
 *Attribute: endLifespanVersion*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date and time at which this version of the spatial object was superseded or retired in the spatial data set.
@@ -3373,7 +3373,7 @@ a|
 a|
 *Attribute: processStepGeneral*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !ProcessStepGeneralValue
 !Definition: !General indication of the step of the planning process that the zoning element is undergoing.
@@ -3385,7 +3385,7 @@ a|
 a|
 *Attribute: backgroundMap*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !background map
 !Value type: !BackgroundMapValue
@@ -3397,7 +3397,7 @@ a|
 a|
 *Attribute: dimensioningIndication*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DimensioningIndicationValue
 !Definition: !Specifications about the dimensioning of the urban developments.
@@ -3408,7 +3408,7 @@ a|
 a|
 *Association role: plan*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !SpatialPlan
 !Definition: !SpatialPlan which this ZoningElement belongs to.
@@ -3418,7 +3418,7 @@ a|
 a|
 *Association role: officialDocument*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !OfficialDocumentation
 !Definition: !Textual Regulation that is part of this zoning element.
@@ -3436,7 +3436,7 @@ a|
 |===
 |*BackgroundMapValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Information regarding the map that has been used as a background in the definition of a spatial plan, a zoning element or a supplementary regulation.
 !Stereotypes: !«dataType»
@@ -3445,7 +3445,7 @@ a|
 a|
 *Attribute: backgroundMapDate*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !background map date
 !Value type: !DateTime
@@ -3456,7 +3456,7 @@ a|
 a|
 *Attribute: backgroundMapReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Reference to the background map that has been used.
@@ -3466,7 +3466,7 @@ a|
 a|
 *Attribute: backgroundMapURI*
 
-[cols=","]
+[%autowidth]
 !===
 !Name: !background map URI
 !Value type: !URI
@@ -3483,7 +3483,7 @@ a|
 |===
 |*DimensioningIndicationCharacterValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !dimension indication character value
 !Subtype of: !DimensioningIndicationValue
@@ -3494,7 +3494,7 @@ a|
 a|
 *Attribute: value*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !value of the dimension indications.
@@ -3509,7 +3509,7 @@ a|
 |===
 |*DimensioningIndicationIntegerValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !dimension indication integer value
 !Subtype of: !DimensioningIndicationValue
@@ -3520,7 +3520,7 @@ a|
 a|
 *Attribute: value*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Integer
 !Multiplicity: !1
@@ -3534,7 +3534,7 @@ a|
 |===
 |*DimensioningIndicationMeasureValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !dimension indication measure value
 !Subtype of: !DimensioningIndicationValue
@@ -3545,7 +3545,7 @@ a|
 a|
 *Attribute: value*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Measure
 !Multiplicity: !1
@@ -3559,7 +3559,7 @@ a|
 |===
 |*DimensioningIndicationRealValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !dimension indication real value
 !Subtype of: !DimensioningIndicationValue
@@ -3570,7 +3570,7 @@ a|
 a|
 *Attribute: value*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !Real
 !Multiplicity: !1
@@ -3584,7 +3584,7 @@ a|
 |===
 |*DimensioningIndicationValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !Dimension Indication
 !Definition: !Specifications about the dimensioning of the urban developments.
@@ -3594,7 +3594,7 @@ a|
 a|
 *Attribute: indicationReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Description of the dimension indication.
@@ -3609,7 +3609,7 @@ a|
 |===
 |*OrdinanceValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Definition: !Reference to administrative ordinance. Ordinance is a regulation/rule that is adopted by an authority that is legally mandated to take such ordinance.
 !Stereotypes: !«dataType»
@@ -3618,7 +3618,7 @@ a|
 a|
 *Attribute: ordinanceDate*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !DateTime
 !Definition: !Date of the relevant administrative ordinance.
@@ -3629,7 +3629,7 @@ a|
 a|
 *Attribute: ordinanceReference*
 
-[cols=","]
+[%autowidth]
 !===
 !Value type: !CharacterString
 !Definition: !Reference to relevant administrative ordinance.
@@ -3647,7 +3647,7 @@ a|
 |===
 |*LevelOfSpatialPlanValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !level of spatial plan
 !Definition: !Territorial hierarchy of plan.
@@ -3664,7 +3664,7 @@ a|
 |===
 |*PlanTypeNameValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !plan type name value
 !Definition: !Types of plans as defined in the Member States. The allowed values for this code list comprise any values defined by data providers.
@@ -3682,7 +3682,7 @@ a|
 |===
 |*ProcessStepGeneralValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !process step general
 !Definition: !General indication of the step of the planning process that the plan is undergoing.
@@ -3700,7 +3700,7 @@ a|
 |===
 |*RegulationNatureValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !regulation nature
 !Definition: !Legal nature of the land use indication.
@@ -3717,7 +3717,7 @@ a|
 |===
 |*SpecificSupplementaryRegulationValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !specific supplementary regulation value
 !Definition: !Category of supplementary regulation provided in a specific nomenclature of supplementary regulations provided by the data provider. The allowed values for this code list comprise any values defined by data providers.
@@ -3734,7 +3734,7 @@ a|
 |===
 |*SupplementaryRegulationValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !supplementary regulation value
 !Definition: !Types of conditions and constraints in spatial plans.
@@ -3756,7 +3756,7 @@ This section lists definitions for feature types, data types and code lists that
 |===
 |*Boolean*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Truth
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -3770,7 +3770,7 @@ a|
 |===
 |*CharacterString*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Text
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -3784,7 +3784,7 @@ a|
 |===
 |*Date*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -3798,7 +3798,7 @@ a|
 |===
 |*DateTime*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Date and Time
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -3812,7 +3812,7 @@ a|
 |===
 |*DocumentCitation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types 2
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -3827,7 +3827,7 @@ a|
 |===
 |*GM_MultiSurface*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometric aggregates
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -3841,7 +3841,7 @@ a|
 |===
 |*GM_Object (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Geometry root
 !Reference: !Geographic information -- Spatial schema [ISO 19107:2003]
@@ -3855,7 +3855,7 @@ a|
 |===
 |*HILUCSPresence*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -3873,7 +3873,7 @@ NOTE 2: The sum of the percentages can be below 100%, or above. The order is pro
 |===
 |*HILUCSValue*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -3891,7 +3891,7 @@ The elements of the list should be both applicable to existing land use and plan
 |===
 |*Identifier*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -3911,7 +3911,7 @@ NOTE 3 The unique identifier will not change during the life-time of a spatial o
 |===
 |*Integer*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Numerics
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -3925,7 +3925,7 @@ a|
 |===
 |*LandUseClassificationValue (abstract)*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -3941,7 +3941,7 @@ a|
 |===
 |*LegislationCitation*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Base Types 2
 !Reference: !INSPIRE Generic Conceptual Model, version 3.4 [DS-D2.5]
@@ -3956,7 +3956,7 @@ a|
 |===
 |*Measure*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !ProductionAndIndustrialFacilitiesExtension
 !Reference: !INSPIRE Data specification on Production and Industrial Facilities [DS-D2.8.III.8]
@@ -3971,7 +3971,7 @@ a|
 |===
 |*PlanTypeName*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !NOT FOUND PlanTypeName
 !===
@@ -3984,7 +3984,7 @@ a|
 |===
 |*Real*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !Numerics
 !Reference: !Geographic information -- Conceptual schema language [ISO/TS 19103:2005]
@@ -3998,7 +3998,7 @@ a|
 |===
 |*SpecificPresence*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !_Land Use_ Nomenclature
 !Reference: !INSPIRE Data specification on _Land Use_ [DS-D2.8.III.4]
@@ -4015,7 +4015,7 @@ URI
 |===
 |*URI*
 a|
-[cols=","]
+[%autowidth]
 !===
 !Package: !basicTypes
 !Reference: !Geographic information -- Geography Markup Language (GML) [ISO 19136:2007]
@@ -6939,7 +6939,7 @@ HILUCSValue
 [cols="",]
 |===
 a|
-[cols=","]
+[%autowidth]
 !===
 !Name: !HILUCS value
 !Definition: !List of land use categories to be used in INSPIRE _Land Use_ and agreed at the European level.
@@ -6975,7 +6975,7 @@ The elements of the list should be both applicable to existing land use and plan
 |===
 
 *ProcessStepGeneralValue*
-[cols=","]
+[%autowidth]
 |===
 |Name: |process step general
 |Definition: |General indication of the step of the planning process that the plan is undergoing.
@@ -6987,7 +6987,7 @@ The elements of the list should be both applicable to existing land use and plan
 
 *RegulationNatureValue*
 
-[cols=","]
+[%autowidth]
 |===
 |Name: |regulation nature
 |Definition: |Legal nature of the land use indication.
@@ -6998,7 +6998,7 @@ The elements of the list should be both applicable to existing land use and plan
 
 *SupplementaryRegulationValue*
 
-[cols=","]
+[%autowidth]
 |===
 |Name: |supplementary regulation value
 |Definition: |Types of conditions and constraints in spatial plans.
@@ -7024,7 +7024,7 @@ The ISIC classification was drawn up by the United Nations (approved by the Stat
 
 The ISIC system is however not in use within the spatial planners community mainly because it does not provide entries for "residential area", "recreation areas", "mix residential-activity area" that are common in spatial planning documents.
 
-[cols=","]
+[%autowidth]
 |===
 |SECTION A |Agriculture, Hunting and Forestry
 |SECTION B |Fishing
@@ -7051,7 +7051,7 @@ The LUCAS nomenclature used to be applied for surveys focused on agriculture. Si
 
 The LUCAS classification is used for statistical purposes and is therefore more difficult to adopt for planned land use. The biggest problem seems to be the lack of mixed land uses.
 
-[cols=","]
+[%autowidth]
 |===
 |U110 |AGRICULTURE
 |U120 |FORESTRY
@@ -7077,7 +7077,7 @@ Earth observation data are the basis for interpretation. Topographic maps in dig
 
 The Urban Atlas nomenclature mixes land use classes with land cover classes. It has a hierarchical nature.
 
-[cols=","]
+[%autowidth]
 |===
 |1 |Artificial surfaces
 |1.1 |Urban fabric
@@ -7166,7 +7166,7 @@ Since the 1940's the statistics department of The Netherlands is periodically co
 
 The classification seems to be quite generic, grouping residential areas, service oriented areas and industry into one category of built-up area. BBG also gives great attention to the main class of water.
 
-[cols=","]
+[%autowidth]
 |===
 |1 |Transport
 |2 |Built-up area
@@ -7185,7 +7185,7 @@ The NLUD classification is intended to provide in the United Kingdom a framework
 
 This approach is similar to the LUCAS classification. It is also mainly used for statistical purposes and is therefore more difficult to adopt for planned land use. The biggest problem seems to be the lack of mixed land uses.
 
-[cols=","]
+[%autowidth]
 |===
 |U010 |U110 AGRICULTURE
 |U120 |FORESTRY
@@ -7212,7 +7212,7 @@ LBCS is an interesting model for land use classification. Because of the differe
 Overall there is too much detail and the whole system is too complex.
 
 
-[cols=","]
+[%autowidth]
 |===
 |1000 |Residence or accommodation function
 |2000 |General sales or services
