@@ -25,13 +25,13 @@
 
 // Document properties
 :title: D2.8.III.11 Data Specification on Area Management/Restriction/Regulation Zones and Reporting Units – Technical Guidelines
-:revdate: 2024-01-31
+:revdate: 2025-01-31
 :keywords: INSPIRE Data Specification for the spatial data theme Area Management/Restriction/Regulation Zones and Reporting Units
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: This document describes the INSPIRE Data Specification for the spatial data theme Area Management/Restriction/Regulation Zones and Reporting Units
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: Public
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2025.1
 :lang: en
 
 image::./media/image2.jpeg[image,width=131,height=90, align=center]
@@ -53,7 +53,7 @@ image:./media/image3.png[image,width=93,height=93, align=center] **INSPIRE** *In
 |*Format* |AsciiDoc
 |*Licence* |https://creativecommons.org/licenses/by/4.0[Creative Commons Attribution (cc-by) 4.0]
 |*Rights* |{copyright}
-|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/am[D2.8.III.11_v3.1.0]
+|*Identifier* |https://inspire.ec.europa.eu/id/document/tg/am[D2.8.III.11_v3.1.1]
 |*Changelog* |{revremark}
 |*Language* |{lang}
 |*Relation* |Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)
@@ -1489,7 +1489,7 @@ a|
 !Value type: !SpecialisedZoneTypeCode
 !Definition: !Additional classification value which further specialises the type of management, regulation or restriction zone relevant to the domain.
 !Description: !
-!Multiplicity: !0..1
+!Multiplicity: !0..*
 !Stereotypes: !«voidable»
 !Values: !The allowed values for this code list comprise any values defined by data providers.
 !===
