@@ -14,13 +14,13 @@
 
 // Document properties
 :title: Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
-:revdate: 2024-01-31
+:revdate: 2025-01-31
 :keywords: Technical Guidance for INSPIRE metadata for datasets and services
 :producer: INSPIRE Maintenance and Implementation Group (MIG)
 :description: Implementation specification for defining metadata for INSPIRE datasets and services in ISO/TS 19139 based XML format in compliance with the INSPIRE Implementing Rules for metadata.
 :author: Temporary MIWP 2021-2024 sub-group 2.3.1
 :copyright: https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution (cc-by) 4.0]
-:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2024.1
+:revremark: https://github.com/INSPIRE-MIF/technical-guidelines/releases/tag/v2025.1
 :lang: EN
 
 image:./media/image1.png[image,width=107,height=107] **INSPIRE** - *Infrastructure for Spatial Information in Europe*
@@ -34,7 +34,7 @@ image:./media/image1.png[image,width=107,height=107] **INSPIRE** - *Infrastructu
 |*Creator* |{author}
 |*Date of publication* |{revdate}
 |*Subject* |{keywords}
-|*Status* a|Version 2.2.0
+|*Status* a|Version 2.2.1
 
 This document has been endorsed by the INSPIRE maintenance and implementation group (MIG).
 |*Publisher* |{producer}
@@ -2572,7 +2572,7 @@ Metadata for an INSPIRE data set or data set series shall declare conformity to 
 ====
 *TG Recommendation 1.11: metadata/2.0/rec/datasets-and-series/uri-for-regulation-1089-2010*
 
-If providing the specification title as an _gmx:Anchor_ element (as recommended in TG Recommendation C.10), the following URI should be used to refer to [Regulation 1089/2010]: http://data.europa.eu/eli/reg/2010/1089.
+If providing the specification title as an _gmx:Anchor_ element (as recommended in TG Recommendation C.11), the following URI should be used to refer to [Regulation 1089/2010]: http://data.europa.eu/eli/reg/2010/1089.
 ====
 
 NOTE A pre-defined XML fragment containing the corresponding _CI_Citation_ element for [Regulation 1089/2010] will be provided at http://inspire.ec.europa.eu/id/citation/ir/reg-1089-2010.
