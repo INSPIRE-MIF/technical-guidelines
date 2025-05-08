@@ -5565,7 +5565,7 @@ identificationInfo[1]/\*/extent/*/geographicElement/*/northBoundLatitude
 |Reference |Part B 5.3
 |Definition |Reference date for the cited resource - revision
 |ISO 19115 number and name |362. date
-|ISO/TS 19139 path |identificationInfo[1]/\*/citation/*/date[./*/dateType/*/text()='publication']/*/date
+|ISO/TS 19139 path |identificationInfo[1]/\*/citation/*/date[./*/dateType/*/text()='revision']/*/date
 |INSPIRE obligation / condition |Conditional: at least one date of publication / date of creation / date of revision is required
 |INSPIRE multiplicity |[0..1] but at least one date of publication / date of creation / date of revision or one temporal extent is required
 |Data type (and ISO 19115 no.) |393. CI_Date
@@ -5586,7 +5586,7 @@ identificationInfo[1]/\*/extent/*/geographicElement/*/northBoundLatitude
 |Reference |Part B 5.4
 |Definition |Reference date for the cited resource - creation
 |ISO 19115 number and name |362. date
-|ISO/TS 19139 path |identificationInfo[1]/\*/citation/*/date[./*/dateType/*/text()='publication']/*/date
+|ISO/TS 19139 path |identificationInfo[1]/\*/citation/*/date[./*/dateType/*/text()='creation']/*/date
 |INSPIRE obligation / condition |Conditional: at least one date of publication / date of creation / date of revision is required
 |INSPIRE multiplicity |[0..1] but at least one date of publication / date of creation / date of revision or one temporal extent is required
 |Data type (and ISO 19115 no.) |393. CI_Date
