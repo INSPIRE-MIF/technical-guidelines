@@ -2475,7 +2475,7 @@ A Resource locator linking to the service(s) providing online access to the desc
 
 If no online access for the data set or data set series is available, but there is a publicly available online resource providing additional information about the described data set or data set series, the URL pointing to this resource shall be given instead.
 
-These links shall be encoded using _gmd:transferOptions_/_gmd:MD_DigitalTransferOptions_/_gmd:onLine_/_gmd:CI_OnlineResource_/_gmd_: _linkage_/_gmd:URL_ element.
+These links shall be encoded using _gmd:transferOptions_/_gmd:MD_DigitalTransferOptions_/_gmd:onLine_/_gmd:CI_OnlineResource_/_gmd:linkage_/_gmd:URL_ element or _gmd:distributorTransferOptions_/_gmd:MD_DigitalTransferOptions_/_gmd:onLine_/_gmd:CI_OnlineResource_/_gmd:linkage_/_gmd:URL_ element.
 
 The multiplicity of this element is 0..n.
 ====
