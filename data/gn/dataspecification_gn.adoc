@@ -243,8 +243,6 @@ Geographical names serve as a means to identify locations. They may be used, tog
 
 [ISO 19136] EN ISO 19136:2007, Geographic information - Geography Markup Language (GML)
 
-[ISO 19137] EN ISO 19137:2007, Geographic information -- Core profile of the spatial schema. [.mark]##
-
 [ISO 19138] ISO/TS 19138:2006, Geographic Information – Data quality measures
 
 [ISO 19139] ISO/TS 19139:2007, Geographic information – Metadata – XML schema implementation
@@ -2725,8 +2723,6 @@ The typefaces and fonts used for the portrayal of geographical names should full
 [ISO 19135] EN ISO 19135:2007 Geographic information – Procedures for item registration (ISO 19135:2005)
 
 [ISO 19136] EN ISO 19136:2007, Geographic information - Geography Markup Language (GML)
-
-[ISO 19137] EN ISO 19137:2007, Geographic information -- Core profile of the spatial schema. [.mark]##
 
 [ISO 19139] ISO/TS 19139:2007, Geographic information – Metadata – XML schema implementation
 
