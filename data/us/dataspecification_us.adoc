@@ -6957,7 +6957,7 @@ a) [.underline]#Purpose#: Verify whether the metadata elements follow the path s
 
 b) [.underline]#Reference#: Section 8 of this technical guideline, ISO/TS 19139
 
-c) [.underline]#Test Method#: Compare the XML schema of each metadata element with the path provide in ISO/TS 19137.
+c) [.underline]#Test Method#: Compare the XML schema of each metadata element with the path provide in ISO/TS 19139.
 
 NOTE 1 This test does not apply to the metadata elements that are not included in ISO/TS 19139.
 
